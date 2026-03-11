@@ -1,20 +1,33 @@
 (function () {
   "use strict";
 
+  // ===== Category Mapping =====
+  var CATEGORIES = {
+    "Compute": ["azurecompute", "aksblog", "azurevirtualdesktopblog", "azurehighperformancecomputingblog"],
+    "Data & AI": ["analyticsonazure", "azure-databricks", "oracleonazureblog"],
+    "Infrastructure": ["azureinfrastructureblog", "azurearcblog", "azurestackblog", "azurenetworkingblog", "azurestorageblog"],
+    "Architecture": ["azurearchitectureblog", "azure-customer-innovation-blog"],
+    "Apps & Platform": ["appsonazureblog", "azurepaasblog", "integrationsonazureblog", "messagingonazureblog"],
+    "Operations": ["azuregovernanceandmanagementblog", "azureobservabilityblog", "finopsblog", "azuretoolsblog", "azuremigrationblog"],
+    "Community": ["azuredevcommunityblog", "azure-events", "linuxandopensourceblog"],
+    "Specialized": ["azurecommunicationservicesblog", "azureconfidentialcomputingblog", "azuremapsblog", "telecommunications-industry-blog", "microsoft-planetary-computer-blog"]
+  };
+
   // ===== State =====
-  let articles = [];
-  let filteredArticles = [];
-  let currentFilter = "all";
-  let searchQuery = "";
-  let sortBy = "date-desc";
-  let bookmarks = new Set(
+  var articles = [];
+  var filteredArticles = [];
+  var currentCategory = "all";
+  var currentFilter = "all";
+  var searchQuery = "";
+  var sortBy = "date-desc";
+  var bookmarks = new Set(
     JSON.parse(localStorage.getItem("azurefeed-bookmarks") || "[]")
   );
-  let showBookmarksOnly = false;
+  var showBookmarksOnly = false;
 
   // Color palette for blog tags
-  const blogColors = {};
-  const colorPalette = [
+  var blogColors = {};
+  var colorPalette = [
     "#0078D4", "#00BCF2", "#7719AA", "#E3008C", "#D83B01",
     "#107C10", "#008575", "#4F6BED", "#B4009E", "#C239B3",
     "#E81123", "#FF8C00", "#00B294", "#68217A", "#0063B1",
@@ -25,45 +38,61 @@
   ];
 
   // ===== DOM Elements =====
-  const articlesGrid = document.getElementById("articles-grid");
-  const loadingEl = document.getElementById("loading");
-  const noResultsEl = document.getElementById("no-results");
-  const searchInput = document.getElementById("search-input");
-  const sortSelect = document.getElementById("sort-by");
-  const dateFilter = document.getElementById("date-filter");
-  const themeToggle = document.getElementById("theme-toggle");
-  const filterPills = document.getElementById("filter-pills");
-  const showingCount = document.getElementById("showing-count");
-  const lastUpdated = document.getElementById("last-updated");
-  const totalCount = document.getElementById("total-count");
-  const toastEl = document.getElementById("toast");
-  const bookmarksToggle = document.getElementById("bookmarks-toggle");
+  var articlesGrid = document.getElementById("articles-grid");
+  var loadingEl = document.getElementById("loading");
+  var noResultsEl = document.getElementById("no-results");
+  var searchInput = document.getElementById("search-input");
+  var sortSelect = document.getElementById("sort-by");
+  var dateFilter = document.getElementById("date-filter");
+  var themeToggle = document.getElementById("theme-toggle");
+  var filterPills = document.getElementById("filter-pills");
+  var showingCount = document.getElementById("showing-count");
+  var lastUpdated = document.getElementById("last-updated");
+  var totalCount = document.getElementById("total-count");
+  var toastEl = document.getElementById("toast");
+  var bookmarksToggle = document.getElementById("bookmarks-toggle");
+  var aiSummaryEl = document.getElementById("ai-summary");
 
   // ===== Initialize =====
   async function init() {
     loadTheme();
+    registerServiceWorker();
     await loadData();
     setupEventListeners();
+  }
+
+  // ===== Service Worker =====
+  function registerServiceWorker() {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js").catch(function () {});
+    }
   }
 
   // ===== Load Data =====
   async function loadData() {
     showLoading(true);
     try {
-      const response = await fetch("data/feeds.json");
+      var response = await fetch("data/feeds.json");
       if (!response.ok) throw new Error("Failed to load feeds");
-      const data = await response.json();
+      var data = await response.json();
       articles = data.articles || [];
 
       // Assign colors to blogs
-      const blogs = [...new Set(articles.map((a) => a.blogId))];
-      blogs.forEach((blogId, i) => {
+      var blogs = [];
+      var seen = {};
+      articles.forEach(function (a) {
+        if (!seen[a.blogId]) {
+          seen[a.blogId] = true;
+          blogs.push(a.blogId);
+        }
+      });
+      blogs.forEach(function (blogId, i) {
         blogColors[blogId] = colorPalette[i % colorPalette.length];
       });
 
       // Update header stats
       if (data.lastUpdated) {
-        const date = new Date(data.lastUpdated);
+        var date = new Date(data.lastUpdated);
         lastUpdated.textContent =
           "Last updated: " +
           date.toLocaleDateString("en-US", {
@@ -76,6 +105,14 @@
           });
       }
       totalCount.textContent = articles.length + " articles";
+
+      // Render AI summary if available
+      if (data.summary) {
+        aiSummaryEl.innerHTML =
+          "<h2>🤖 Today's Highlights</h2>" +
+          "<p>" + escapeHtml(data.summary) + "</p>";
+        aiSummaryEl.style.display = "block";
+      }
 
       renderFilters();
       applyFilters();
@@ -90,57 +127,106 @@
     showLoading(false);
   }
 
-  // ===== Render Filter Pills =====
+  // ===== Render Filter Pills (with category grouping) =====
   function renderFilters() {
-    const blogCounts = {};
-    articles.forEach((a) => {
+    var blogCounts = {};
+    articles.forEach(function (a) {
       if (!blogCounts[a.blogId]) {
         blogCounts[a.blogId] = { name: a.blog, count: 0 };
       }
       blogCounts[a.blogId].count++;
     });
 
-    const sorted = Object.entries(blogCounts).sort(
-      (a, b) => b[1].count - a[1].count
-    );
+    // Category bar
+    var catHtml =
+      '<div class="category-bar" id="category-bar">' +
+      '<button class="category-pill active" data-category="all">All <span class="count">' +
+      articles.length + "</span></button>";
 
-    let html =
-      '<button class="pill active" data-filter="all">All <span class="count">' +
-      articles.length +
-      "</span></button>";
-    sorted.forEach(([blogId, info]) => {
-      html +=
-        '<button class="pill" data-filter="' +
-        blogId +
-        '">' +
-        escapeHtml(info.name) +
-        ' <span class="count">' +
-        info.count +
-        "</span></button>";
+    Object.keys(CATEGORIES).forEach(function (catName) {
+      var catBlogs = CATEGORIES[catName];
+      var catCount = 0;
+      catBlogs.forEach(function (blogId) {
+        if (blogCounts[blogId]) catCount += blogCounts[blogId].count;
+      });
+      if (catCount > 0) {
+        catHtml +=
+          '<button class="category-pill" data-category="' + catName + '">' +
+          catName + ' <span class="count">' + catCount + "</span></button>";
+      }
+    });
+    catHtml += "</div>";
+
+    // Blog pills (shown below categories)
+    var blogHtml = '<div class="blog-pills-row" id="blog-pills-row" style="display:none;">';
+    blogHtml += '<div class="filter-pills" id="blog-filter-pills"></div></div>';
+
+    filterPills.innerHTML = catHtml + blogHtml;
+  }
+
+  // Render blog pills for a specific category
+  function renderBlogPills(categoryName) {
+    var blogPillsRow = document.getElementById("blog-pills-row");
+    var blogFilterPills = document.getElementById("blog-filter-pills");
+    if (!blogFilterPills) return;
+
+    if (categoryName === "all") {
+      blogPillsRow.style.display = "none";
+      return;
+    }
+
+    var blogCounts = {};
+    articles.forEach(function (a) {
+      if (!blogCounts[a.blogId]) {
+        blogCounts[a.blogId] = { name: a.blog, count: 0 };
+      }
+      blogCounts[a.blogId].count++;
     });
 
-    filterPills.innerHTML = html;
+    var catBlogs = CATEGORIES[categoryName] || [];
+    var html = '<button class="pill active" data-filter="all">All in ' +
+      escapeHtml(categoryName) + "</button>";
+    catBlogs.forEach(function (blogId) {
+      if (blogCounts[blogId]) {
+        html +=
+          '<button class="pill" data-filter="' + blogId + '">' +
+          escapeHtml(blogCounts[blogId].name) +
+          ' <span class="count">' + blogCounts[blogId].count + "</span></button>";
+      }
+    });
+
+    blogFilterPills.innerHTML = html;
+    blogPillsRow.style.display = "block";
   }
 
   // ===== Apply Filters & Sort =====
   function applyFilters() {
-    let result = articles.slice();
+    var result = articles.slice();
 
-    // Blog filter
+    // Category filter
+    if (currentCategory !== "all") {
+      var catBlogs = CATEGORIES[currentCategory] || [];
+      result = result.filter(function (a) {
+        return catBlogs.indexOf(a.blogId) !== -1;
+      });
+    }
+
+    // Blog filter (within category)
     if (currentFilter !== "all") {
-      result = result.filter((a) => a.blogId === currentFilter);
+      result = result.filter(function (a) { return a.blogId === currentFilter; });
     }
 
     // Search filter
     if (searchQuery) {
-      const q = searchQuery.toLowerCase();
-      result = result.filter(
-        (a) =>
+      var q = searchQuery.toLowerCase();
+      result = result.filter(function (a) {
+        return (
           a.title.toLowerCase().includes(q) ||
           a.summary.toLowerCase().includes(q) ||
           a.blog.toLowerCase().includes(q) ||
           a.author.toLowerCase().includes(q)
-      );
+        );
+      });
     }
 
     // Date filter
@@ -149,42 +235,30 @@
       var now = new Date();
       var cutoff = new Date();
       switch (dateVal) {
-        case "today":
-          cutoff.setHours(0, 0, 0, 0);
-          break;
-        case "week":
-          cutoff.setDate(now.getDate() - 7);
-          break;
-        case "month":
-          cutoff.setMonth(now.getMonth() - 1);
-          break;
+        case "today": cutoff.setHours(0, 0, 0, 0); break;
+        case "week": cutoff.setDate(now.getDate() - 7); break;
+        case "month": cutoff.setMonth(now.getMonth() - 1); break;
       }
-      result = result.filter((a) => new Date(a.published) >= cutoff);
+      result = result.filter(function (a) { return new Date(a.published) >= cutoff; });
     }
 
     // Bookmarks filter
     if (showBookmarksOnly) {
-      result = result.filter((a) => bookmarks.has(a.link));
+      result = result.filter(function (a) { return bookmarks.has(a.link); });
     }
 
     // Sort
     switch (sortBy) {
       case "date-desc":
-        result.sort(
-          (a, b) => new Date(b.published) - new Date(a.published)
-        );
+        result.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
         break;
       case "date-asc":
-        result.sort(
-          (a, b) => new Date(a.published) - new Date(b.published)
-        );
+        result.sort(function (a, b) { return new Date(a.published) - new Date(b.published); });
         break;
       case "blog":
-        result.sort(
-          (a, b) =>
-            a.blog.localeCompare(b.blog) ||
-            new Date(b.published) - new Date(a.published)
-        );
+        result.sort(function (a, b) {
+          return a.blog.localeCompare(b.blog) || new Date(b.published) - new Date(a.published);
+        });
         break;
     }
 
@@ -205,7 +279,6 @@
 
     var groups = groupByDate(filteredArticles);
     var html = "";
-    var idx = 0;
     for (var groupName in groups) {
       if (!groups.hasOwnProperty(groupName)) continue;
       html +=
@@ -213,8 +286,7 @@
         escapeHtml(groupName) +
         "</div>";
       groups[groupName].forEach(function (article) {
-        html += renderCard(article, idx);
-        idx++;
+        html += renderCard(article);
       });
     }
 
@@ -230,8 +302,6 @@
     yesterday.setDate(yesterday.getDate() - 1);
     var weekAgo = new Date(today);
     weekAgo.setDate(weekAgo.getDate() - 7);
-
-    // Use an ordered approach to maintain group insertion order
     var orderedKeys = [];
 
     list.forEach(function (article) {
@@ -256,7 +326,6 @@
       groups[group].push(article);
     });
 
-    // Rebuild as ordered object
     var ordered = {};
     orderedKeys.forEach(function (key) {
       ordered[key] = groups[key];
@@ -264,8 +333,15 @@
     return ordered;
   }
 
+  // ===== Check if article is new (last 24h) =====
+  function isNew(article) {
+    var now = new Date();
+    var published = new Date(article.published);
+    return (now - published) < 24 * 60 * 60 * 1000;
+  }
+
   // ===== Render Single Card =====
-  function renderCard(article, index) {
+  function renderCard(article) {
     var color = blogColors[article.blogId] || "#0078D4";
     var isBookmarked = bookmarks.has(article.link);
     var date = new Date(article.published);
@@ -275,81 +351,41 @@
       year: "numeric",
     });
     var encodedLink = encodeURIComponent(article.link);
+    var newBadge = isNew(article) ? '<span class="new-badge">NEW</span>' : "";
+
+    var shareUrl = encodeURIComponent(article.link);
+    var shareTitle = encodeURIComponent(article.title);
 
     return (
       '<article class="article-card">' +
       '<div class="card-header">' +
-      '<span class="blog-tag" style="background:' +
-      color +
-      "18;color:" +
-      color +
-      ';">' +
-      escapeHtml(article.blog) +
-      "</span>" +
-      '<button class="bookmark-btn ' +
-      (isBookmarked ? "bookmarked" : "") +
-      '" data-action="bookmark" data-link="' +
-      encodedLink +
-      '" title="' +
-      (isBookmarked ? "Remove bookmark" : "Bookmark this article") +
-      '">' +
-      (isBookmarked ? "⭐" : "☆") +
-      "</button>" +
+      '<span class="blog-tag" style="background:' + color + "18;color:" + color + ';">' +
+      escapeHtml(article.blog) + "</span>" +
+      '<button class="bookmark-btn ' + (isBookmarked ? "bookmarked" : "") +
+      '" data-action="bookmark" data-link="' + encodedLink +
+      '" title="' + (isBookmarked ? "Remove bookmark" : "Bookmark this article") + '">' +
+      (isBookmarked ? "⭐" : "☆") + "</button>" +
       "</div>" +
       '<h3 class="article-title">' +
-      '<a href="' +
-      escapeHtml(article.link) +
-      '" target="_blank" rel="noopener">' +
-      escapeHtml(article.title) +
-      "</a>" +
+      '<a href="' + escapeHtml(article.link) + '" target="_blank" rel="noopener">' +
+      escapeHtml(article.title) + "</a>" + newBadge +
       "</h3>" +
       '<div class="article-meta">' +
-      "<span>✍️ " +
-      escapeHtml(article.author) +
-      "</span>" +
-      "<span>📅 " +
-      dateStr +
-      "</span>" +
+      "<span>✍️ " + escapeHtml(article.author) + "</span>" +
+      "<span>📅 " + dateStr + "</span>" +
       "</div>" +
-      '<p class="article-summary">' +
-      escapeHtml(article.summary) +
-      "</p>" +
+      '<p class="article-summary">' + escapeHtml(article.summary) + "</p>" +
+      '<div class="share-buttons">' +
+      '<a class="share-btn linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl +
+      '" target="_blank" rel="noopener" title="Share on LinkedIn">in</a>' +
+      '<a class="share-btn teams" href="https://teams.microsoft.com/share?href=' + shareUrl +
+      '&msgText=' + shareTitle +
+      '" target="_blank" rel="noopener" title="Share on Teams">🟣</a>' +
+      '<a class="share-btn x" href="https://x.com/intent/tweet?url=' + shareUrl +
+      '&text=' + shareTitle +
+      '" target="_blank" rel="noopener" title="Share on X">𝕏</a>' +
+      "</div>" +
       "</article>"
-    );
-  }
-
-  // ===== Copy for LinkedIn =====
-  function copyForLinkedIn(article) {
-    var hashtag = article.blog.replace(/[^a-zA-Z0-9]/g, "");
-    var text =
-      "🚀 " +
-      article.title +
-      "\n\n" +
-      "Check out this article from the " +
-      article.blog +
-      " blog:\n\n" +
-      "🔗 " +
-      article.link +
-      "\n\n" +
-      "#Azure #Cloud #Microsoft #" +
-      hashtag;
-
-    navigator.clipboard.writeText(text).then(
-      function () {
-        showToast("📋 Copied to clipboard! Ready for LinkedIn.");
-      },
-      function () {
-        // Fallback for older browsers
-        var textarea = document.createElement("textarea");
-        textarea.value = text;
-        textarea.style.position = "fixed";
-        textarea.style.opacity = "0";
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-        showToast("📋 Copied to clipboard!");
-      }
     );
   }
 
@@ -442,18 +478,35 @@
     // Theme toggle
     themeToggle.addEventListener("click", toggleTheme);
 
-    // Filter pills (event delegation)
+    // Category and blog pills (event delegation)
     filterPills.addEventListener("click", function (e) {
-      var pill = e.target.closest(".pill");
-      if (!pill) return;
-      filterPills
-        .querySelectorAll(".pill")
-        .forEach(function (p) {
+      // Category pill click
+      var catPill = e.target.closest(".category-pill");
+      if (catPill) {
+        filterPills.querySelectorAll(".category-pill").forEach(function (p) {
           p.classList.remove("active");
         });
-      pill.classList.add("active");
-      currentFilter = pill.dataset.filter;
-      applyFilters();
+        catPill.classList.add("active");
+        currentCategory = catPill.dataset.category;
+        currentFilter = "all";
+        renderBlogPills(currentCategory);
+        applyFilters();
+        return;
+      }
+
+      // Blog pill click
+      var pill = e.target.closest(".pill");
+      if (pill) {
+        var blogPillsContainer = document.getElementById("blog-filter-pills");
+        if (blogPillsContainer) {
+          blogPillsContainer.querySelectorAll(".pill").forEach(function (p) {
+            p.classList.remove("active");
+          });
+        }
+        pill.classList.add("active");
+        currentFilter = pill.dataset.filter;
+        applyFilters();
+      }
     });
 
     // Bookmarks toggle
@@ -475,9 +528,7 @@
       var article = findArticleByEncodedLink(encodedLink);
       if (!article) return;
 
-      if (btn.dataset.action === "linkedin") {
-        copyForLinkedIn(article);
-      } else if (btn.dataset.action === "bookmark") {
+      if (btn.dataset.action === "bookmark") {
         toggleBookmark(article.link);
       }
     });

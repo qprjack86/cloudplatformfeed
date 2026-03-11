@@ -4,7 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Azure News Feed</title>
-  <meta name="description" content="Daily aggregated news from 31 Azure blogs — search, filter, bookmark, and share.">
+  <meta name="description" content="Daily aggregated news from Azure blogs — search, filter, bookmark, and share. Updated every day.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Azure News Feed">
+  <meta property="og:description" content="Daily aggregated news from Azure blogs — search, filter, bookmark, and share.">
+  <meta property="og:url" content="https://azurefeed.news">
+  <meta property="og:image" content="https://azurefeed.news/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Azure News Feed">
+  <meta name="twitter:description" content="Daily aggregated news from Azure blogs — search, filter, bookmark, and share.">
+  <meta name="twitter:image" content="https://azurefeed.news/og-image.png">
+  <!-- PWA -->
+  <meta name="theme-color" content="#0078D4">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="Azure News Feed" href="data/feed.xml">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -44,6 +63,8 @@
   </div>
 
   <main>
+    <div id="ai-summary" class="ai-summary" style="display:none;"></div>
+
     <div class="controls">
       <span id="showing-count"></span>
       <div class="controls-right">
@@ -77,7 +98,7 @@
   <div class="toast" id="toast"></div>
 
   <footer>
-    <p>☁️ Azure News Feed &bull; Updated daily via <a href="https://github.com/ricmmartins/azurenewsfeed" target="_blank" rel="noopener">GitHub Actions</a></p>
+    <p>☁️ Azure News Feed &bull; Updated daily via <a href="https://github.com/ricmmartins/azurenewsfeed" target="_blank" rel="noopener">GitHub Actions</a> &bull; <a href="data/feed.xml" target="_blank" rel="noopener">📡 RSS Feed</a></p>
   </footer>
 
   <script src="js/app.js"></script>

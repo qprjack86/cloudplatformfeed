@@ -166,6 +166,93 @@ def fetch_aks_blog():
     return articles
 
 
+def generate_rss_feed(articles):
+    """Generate an RSS feed XML file from the aggregated articles."""
+    from xml.etree.ElementTree import Element, SubElement, tostring
+
+    rss = Element("rss", version="2.0")
+    rss.set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
+    channel = SubElement(rss, "channel")
+    SubElement(channel, "title").text = "Azure News Feed"
+    SubElement(channel, "link").text = "https://azurefeed.news"
+    SubElement(channel, "description").text = (
+        "Aggregated daily news from Azure blogs"
+    )
+    SubElement(channel, "lastBuildDate").text = datetime.now(
+        timezone.utc
+    ).strftime("%a, %d %b %Y %H:%M:%S GMT")
+    SubElement(channel, "generator").text = "Azure News Feed"
+    SubElement(channel, "language").text = "en"
+
+    for article in articles[:50]:
+        item = SubElement(channel, "item")
+        SubElement(item, "title").text = article["title"]
+        SubElement(item, "link").text = article["link"]
+        SubElement(item, "guid").text = article["link"]
+        SubElement(item, "description").text = article["summary"]
+        SubElement(item, "dc:creator").text = article["author"]
+        try:
+            dt = datetime.fromisoformat(article["published"])
+            SubElement(item, "pubDate").text = dt.strftime(
+                "%a, %d %b %Y %H:%M:%S GMT"
+            )
+        except (ValueError, TypeError):
+            pass
+        SubElement(item, "category").text = article["blog"]
+
+    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n' + tostring(
+        rss, encoding="unicode"
+    )
+    output_path = os.path.join("data", "feed.xml")
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(xml_str)
+    print(f"RSS feed saved to {output_path}")
+
+
+def generate_ai_summary(articles):
+    """Generate an AI summary of today's articles using OpenAI (optional)."""
+    api_key = os.environ.get("OPENAI_API_KEY", "")
+    if not api_key:
+        print("No OPENAI_API_KEY set, skipping AI summary")
+        return None
+
+    try:
+        import openai
+
+        today = datetime.now(timezone.utc).date().isoformat()
+        today_articles = [
+            a for a in articles if a.get("published", "").startswith(today)
+        ]
+
+        if not today_articles:
+            print("No articles published today, skipping AI summary")
+            return None
+
+        titles = "\n".join(
+            ["- " + a["title"] + " (" + a["blog"] + ")" for a in today_articles[:20]]
+        )
+        prompt = (
+            "You are a concise tech news editor. Summarize today's Azure blog posts "
+            "in 2-3 sentences highlighting the most important themes and announcements. "
+            "Be specific about technologies mentioned. Here are the articles:\n\n"
+            + titles
+        )
+
+        client = openai.OpenAI(api_key=api_key)
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=200,
+        )
+        summary = response.choices[0].message.content.strip()
+        print(f"AI summary generated: {summary[:100]}...")
+        return summary
+
+    except Exception as e:
+        print(f"AI summary failed: {e}")
+        return None
+
+
 def main():
     print("=" * 60)
     print("Azure News Feed - Fetching RSS Feeds")
@@ -192,16 +279,24 @@ def main():
     if discarded:
         print(f"Filtered out {discarded} duplicate/older-than-30-days articles")
 
+    # Generate AI summary (optional)
+    summary = generate_ai_summary(unique_articles)
+
     data = {
         "lastUpdated": datetime.now(timezone.utc).isoformat(),
         "totalArticles": len(unique_articles),
         "articles": unique_articles,
     }
+    if summary:
+        data["summary"] = summary
 
     os.makedirs("data", exist_ok=True)
     output_path = os.path.join("data", "feeds.json")
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+    # Generate RSS feed
+    generate_rss_feed(unique_articles)
 
     print(f"\n{'=' * 60}")
     print(f"Done! {len(unique_articles)} unique articles saved to {output_path}")

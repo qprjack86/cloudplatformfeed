@@ -616,3 +616,126 @@ footer a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
 }
+
+/* ===== NEW Badge ===== */
+.new-badge {
+  display: inline-block;
+  background: #E81123;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ===== Category Groups ===== */
+.category-bar {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+
+.category-pill {
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+
+.category-pill:hover {
+  border-color: var(--azure-blue);
+  color: var(--azure-blue);
+}
+
+.category-pill.active {
+  background: var(--azure-blue-dark);
+  color: white;
+  border-color: var(--azure-blue-dark);
+}
+
+.blog-pills-row {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ===== Share Buttons ===== */
+.share-buttons {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.share-btn {
+  background: var(--bg-tertiary);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  opacity: 0.6;
+}
+
+.share-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.share-btn.linkedin:hover { background: #0A66C2; color: white; }
+.share-btn.teams:hover { background: #6264A7; color: white; }
+.share-btn.x:hover { background: #000; color: white; }
+
+/* ===== AI Summary ===== */
+.ai-summary {
+  background: linear-gradient(135deg, #0078D410 0%, #50E6FF10 100%);
+  border: 1px solid var(--azure-blue);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-summary h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--azure-blue);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ai-summary p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.ai-summary p:last-child {
+  margin-bottom: 0;
+}
