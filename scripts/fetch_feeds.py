@@ -47,10 +47,9 @@ BLOGS = {
 }
 
 TC_RSS_URL = (
-    "https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/"
-    "custom-blog-rss?board={board}&size=25"
+    "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id={board}"
 )
-AKS_BLOG_FEED = "https://blog.aks.azure.com/feed/"
+AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
 
 
 def clean_html(text):
