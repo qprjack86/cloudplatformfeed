@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-12T12:57:37.888245+00:00",
-  "totalArticles": 96,
+  "lastUpdated": "2026-03-12T14:43:51.305739+00:00",
+  "totalArticles": 136,
   "articles": [
     {
       "title": "Building a Multi-Agent On-Call Copilot with Microsoft Agent Framework",
@@ -12,6 +12,15 @@
       "author": "Lee_Stott"
     },
     {
+      "title": "Temporary rollback: build identities can access Advanced Security: read alerts again",
+      "link": "https://devblogs.microsoft.com/devops/temporary-rollback-build-identities-can-access-advanced-security-read-alerts-again/",
+      "published": "2026-03-11T23:46:28+00:00",
+      "summary": "If you use build service identities like Project Collection Build Service to call Advanced Security APIs, the Advanced Security permission changes in Sprint 269 broke that. We restricted API access for build identities as a security improvement but failed to provide an early notice for customers...",
+      "blog": "Azure DevOps Blog",
+      "blogId": "azuredevops",
+      "author": "Laura Jiang"
+    },
+    {
       "title": "Azure Copilot Migration Agent",
       "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent/ba-p/4501292",
       "published": "2026-03-11T17:13:06+00:00",
@@ -19,6 +28,15 @@
       "blog": "Azure Migration",
       "blogId": "azuremigrationblog",
       "author": "shashban"
+    },
+    {
+      "title": "A Look Ahead at Azure Cosmos DB Conf 2026: From AI Agents to Global Scale",
+      "link": "https://devblogs.microsoft.com/cosmosdb/azure-cosmos-db-conf-2026-preview/",
+      "published": "2026-03-11T16:07:38+00:00",
+      "summary": "Join us for Azure Cosmos DB Conf 2026, a free global, virtual developer event focused on building modern applications with Azure Cosmos DB. Date: April 28, 2026 Time: 9:00 AM–2:00 PM PT Where: Streaming live on the Microsoft Developer YouTube channel, with additional sessions available on demand....",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Jay Gordon"
     },
     {
       "title": "From Single Apps to Scale Solutions: How AI Agents Scale Modernization",
@@ -55,6 +73,15 @@
       "blog": "Azure Storage",
       "blogId": "azurestorageblog",
       "author": "austin-ma"
+    },
+    {
+      "title": "Aspire Conf is Coming! Join us Live on March 23",
+      "link": "https://devblogs.microsoft.com/aspire/join-us-march-23-for-aspire-conf/",
+      "published": "2026-03-10T17:05:00+00:00",
+      "summary": "Save the date and tune in for our free, livestream event on March 23. Discover Aspire and learn how it can transform the way you build and deploy your distributed apps and agents. The post Aspire Conf is Coming! Join us Live on March 23 appeared first on Aspire Blog.",
+      "blog": "Aspire Blog",
+      "blogId": "aspireblog",
+      "author": "Maddy Montaquila"
     },
     {
       "title": "What It Takes to Give SRE Agent a Useful Starting Point",
@@ -183,6 +210,15 @@
       "author": "Rafia_Aqil"
     },
     {
+      "title": "Announcing the Azure Skills Plugin",
+      "link": "https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/",
+      "published": "2026-03-09T20:02:13+00:00",
+      "summary": "Part 1 of the Azure Skills Plugin series Coding agents like GitHub Copilot and Claude Code are great at code, but getting your app to production on Azure is not just about writing code. Really, it is about making the right calls. Which service fits this app? Which SKU fits this workload? Should...",
+      "blog": "All Things Azure",
+      "blogId": "allthingsazure",
+      "author": "Chris Harris"
+    },
+    {
       "title": "On-demand webinar: Maximize the Cost Efficiency of AI Agents on Azure",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-demand-webinar-maximize-the-cost-efficiency-of-ai-agents-on/ba-p/4493923",
       "published": "2026-03-09T19:12:13+00:00",
@@ -208,6 +244,15 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "justinyoo"
+    },
+    {
+      "title": "Visual Studio Dev Essentials: Free, Practical Tools for Every Developer",
+      "link": "https://devblogs.microsoft.com/visualstudio/visual-studio-dev-essentials-free-practical-tools-for-every-developer/",
+      "published": "2026-03-09T15:35:00+00:00",
+      "summary": "When I first found Visual Studio Dev Essentials, it felt like discovering a hidden door in the developer toolkit world. I’d heard about free tools and cloud credits, but I wasn’t sure if it would really matter in day-to-day coding life. The short answer: it absolutely does. What struck me most was...",
+      "blog": "Visual Studio Blog",
+      "blogId": "visualstudio",
+      "author": "Jim Harrer"
     },
     {
       "title": "Upcoming Compute API Change: Always return non-null securityType",
@@ -264,6 +309,15 @@
       "author": "Fernando_Aznar"
     },
     {
+      "title": "What’s new in Microsoft Foundry | February 2026",
+      "link": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-feb-2026/",
+      "published": "2026-03-06T23:08:31+00:00",
+      "summary": "February brings Anthropic's Claude Opus 4.6 and Sonnet 4.6 with 1M-token context, GPT-Realtime-1.5 and GPT-Audio-1.5, Grok 4.0 GA, the Microsoft Agent Framework reaching Release Candidate, and the Foundry REST API quietly going GA — laying the foundation for imminent SDK GA announcements across...",
+      "blog": "Microsoft Foundry Blog",
+      "blogId": "foundryblog",
+      "author": "Nick Brady"
+    },
+    {
       "title": "MCP vs mcp-cli: Dynamic Tool Discovery for Token-Efficient AI Agents",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-vs-mcp-cli-dynamic-tool-discovery-for-token-efficient-ai/ba-p/4494272",
       "published": "2026-03-06T08:00:00+00:00",
@@ -271,6 +325,15 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "anbonagi"
+    },
+    {
+      "title": "Using Agents to Setup Experiments",
+      "link": "https://devblogs.microsoft.com/ise/using-agents-to-setup-experiments/",
+      "published": "2026-03-06T08:00:00+00:00",
+      "summary": "When setting up an experiment is complex, agents can automate the process to make it faster and more reliable. The post Using Agents to Setup Experiments appeared first on ISE Developer Blog.",
+      "blog": "ISE Developer Blog",
+      "blogId": "iseblog",
+      "author": "Peter Lasne"
     },
     {
       "title": "Decision Matrix: API vs MCP Tools — The Great Integration Showdown 🥊",
@@ -289,6 +352,15 @@
       "blog": "AKS Blog",
       "blogId": "aksblog",
       "author": "Microsoft"
+    },
+    {
+      "title": "Windows Terminal Preview 1.25 Release",
+      "link": "https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-25-release/",
+      "published": "2026-03-05T22:28:49+00:00",
+      "summary": "We briefly paused our quarterly release cycle to focus on reliability and performance, but now we’re back with Windows Terminal 1.25! We are also updating Windows Terminal stable to version 1.24, which will include all of the features from this previous blog post. Some notable features to call out...",
+      "blog": "Windows Command Line",
+      "blogId": "commandline",
+      "author": "Dustin Howett"
     },
     {
       "title": "Even simpler to Safely Execute AI-generated Code with Azure Container Apps Dynamic Sessions",
@@ -325,6 +397,24 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "sgangaramani"
+    },
+    {
+      "title": "Platform Engineering for the Agentic AI era",
+      "link": "https://devblogs.microsoft.com/all-things-azure/platform-engineering-for-the-agentic-ai-era/",
+      "published": "2026-03-05T05:47:29+00:00",
+      "summary": "For the last decade, platform engineering has relied on explicit API interaction layers: CLIs, SDKs, pipelines, wrappers, and UI workflows that translate human intent into machine‑safe API calls. AI agents are now short‑circuiting much of that stack. By combining natural language understanding,...",
+      "blog": "All Things Azure",
+      "blogId": "allthingsazure",
+      "author": "Arnaud Lheureux, davidwright"
+    },
+    {
+      "title": "The Polyglot tax – Part 2",
+      "link": "https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-2/",
+      "published": "2026-03-04T23:28:21+00:00",
+      "summary": "When JSON Met Graph Part 2 of 4 – The Multimodal Database Series A note on naming. Throughout this series, when we say “SQL Server 2025” we also mean Azure SQL. The multimodal capabilities we discuss – native JSON, graph, vector, and columnstore – are available across both the on-premises engine...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Aditya Badramraju"
     },
     {
       "title": "Phi-4-Reasoning-Vision-15B: Use Cases In-Depth",
@@ -390,6 +480,15 @@
       "author": "dbandaru"
     },
     {
+      "title": "Azure Developer CLI (azd): One command to swap Azure App Service slots",
+      "link": "https://devblogs.microsoft.com/azure-sdk/azd-appservice-swap/",
+      "published": "2026-03-03T21:10:01+00:00",
+      "summary": "The new azd appservice swap command makes deployment slot swaps fast and intuitive. The post Azure Developer CLI (azd): One command to swap Azure App Service slots appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "PuiChee (PC) Chan"
+    },
+    {
       "title": "Implementing / Migrating the BizTalk Server Aggregator Pattern to Azure Logic Apps Standard",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/implementing-migrating-the-biztalk-server-aggregator-pattern-to/ba-p/4495107",
       "published": "2026-03-03T16:08:08+00:00",
@@ -435,6 +534,15 @@
       "author": "Microsoft"
     },
     {
+      "title": "What questions will you ask your data agent?",
+      "link": "https://devblogs.microsoft.com/azure-sql/data-api-builder-mcp-questions/",
+      "published": "2026-03-02T21:18:18+00:00",
+      "summary": "Data API builder (DAB) 1.7+ delivers secure MCP-based CRUD access with deterministic, policy-enforced query generation and an upcoming aggregate tool that enables complex, production-safe analytical questions without exposing raw SQL to AI agents. The post What questions will you ask your data...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Jerry Nixon"
+    },
+    {
       "title": "Logic Apps Aviators Newsletter - March 2026",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-march-2026/ba-p/4498260",
       "published": "2026-03-02T16:00:00+00:00",
@@ -451,6 +559,15 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "juneesingh"
+    },
+    {
+      "title": "Updates to Team Calendar extension",
+      "link": "https://devblogs.microsoft.com/devops/updates-to-team-calendar-extension/",
+      "published": "2026-02-27T18:30:30+00:00",
+      "summary": "We are excited to release a new update to the Team Calendar extension. This update includes a series of visual refinements across the extension, introducing a more consistent design language, smoother transitions when expanding and collapsing sections, improved contrast for better readability, an...",
+      "blog": "Azure DevOps Blog",
+      "blogId": "azuredevops",
+      "author": "Dan Hellem"
     },
     {
       "title": "Evolving the Network Operations Agent Framework: Driving the Next Wave of Autonomous Networks",
@@ -487,6 +604,15 @@
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "dbandaru"
+    },
+    {
+      "title": "Azure DocumentDB: A Fully Managed MongoDB-Compatible Database",
+      "link": "https://devblogs.microsoft.com/cosmosdb/azure-documentdb-mongodb-compatible/",
+      "published": "2026-02-27T00:58:03+00:00",
+      "summary": "Running MongoDB at scale eventually forces a trade-off: invest heavily in managing your own infrastructure or move to a managed service and risk losing the compatibility and portability your team depends on. Azure DocumentDB is a fully managed, MongoDB-compatible database on Azure, built on an...",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Khelan Modi"
     },
     {
       "title": "Announcing new public preview capabilities in Azure Monitor pipeline",
@@ -561,6 +687,15 @@
       "author": "PragyaDwivedi"
     },
     {
+      "title": "Azure SDK Release (February 2026)",
+      "link": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2026/",
+      "published": "2026-02-26T16:00:26+00:00",
+      "summary": "Azure SDK releases every month. In this post, you'll find this month's highlights and release notes. The post Azure SDK Release (February 2026) appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Ronnie Geraghty"
+    },
+    {
       "title": "Exploring Azure Face API: Facial Landmark Detection and Real-Time Analysis with C#",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-azure-face-api-facial-landmark-detection-and-real-time/ba-p/4495335",
       "published": "2026-02-26T11:09:25+00:00",
@@ -568,6 +703,15 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "ravimodi"
+    },
+    {
+      "title": "Measuring actual AI Impact for Engineering with Apache DevLake",
+      "link": "https://devblogs.microsoft.com/all-things-azure/measuring-actual-ai-impact-for-engineering-with-apache-devlake/",
+      "published": "2026-02-26T10:06:19+00:00",
+      "summary": "If you want to skip the explain and get started super quick with adoption + impact insights, use gh-devlake to deploy a GitHub Copilot impact dashboard in a few CLI commands. So! You’ve rolled out GitHub Copilot to your engineering teams. You’ve got the built-in dashboards. You know how many seats...",
+      "blog": "All Things Azure",
+      "blogId": "allthingsazure",
+      "author": "Eldrick Wega"
     },
     {
       "title": "Building a Privacy-First Hybrid AI Briefing Tool with Foundry Local and Azure OpenAI",
@@ -586,6 +730,42 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "kinfey"
+    },
+    {
+      "title": "Building a Secure MCP Server with OAuth 2.1 and Azure AD: Lessons from the Field",
+      "link": "https://devblogs.microsoft.com/ise/aca-secure-mcp-server-oauth21-azure-ad/",
+      "published": "2026-02-26T08:00:00+00:00",
+      "summary": "How we built a production-ready MCP server with OAuth 2.1 authentication and On-Behalf-Of flow for Microsoft Graph, navigating a rapidly evolving specification. The post Building a Secure MCP Server with OAuth 2.1 and Azure AD: Lessons from the Field appeared first on ISE Developer Blog.",
+      "blog": "ISE Developer Blog",
+      "blogId": "iseblog",
+      "author": "Juan Burckhardt"
+    },
+    {
+      "title": "The Polyglot Tax",
+      "link": "https://devblogs.microsoft.com/azure-sql/the-polyglot-tax/",
+      "published": "2026-02-26T01:09:47+00:00",
+      "summary": "Part 1 of 4 – The Multimodal Database Series This is a four-part series about what happens when a single database engine handles relational, document, graph, vector, and analytical workloads natively – and what you stop paying for when it does. You spin up a database, point an agent at it, and...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Aditya Badramraju"
+    },
+    {
+      "title": "MSSQL Extension for VS Code: Query Profiler, ADS Migration Toolkit & More",
+      "link": "https://devblogs.microsoft.com/azure-sql/vscode-mssql-feb-2026/",
+      "published": "2026-02-25T17:00:27+00:00",
+      "summary": "The MSSQL Extension for VS Code continues to evolve, delivering features that make SQL development more integrated, more powerful, and more developer-friendly. In version v1.40.0, we’re introducing the ADS Migration Toolkit, Basic Database Management, Flat File Import, Database Backup & Restore,...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Carlos Robles, Tauseef Siddique, Yo-Lei Chen"
+    },
+    {
+      "title": "Azure Developer CLI (azd) – February 2026: JMESPath Queries & Deployment Slots",
+      "link": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2026/",
+      "published": "2026-02-25T16:00:38+00:00",
+      "summary": "This post announces the February 2026 release of the Azure Developer CLI (`azd`). The post Azure Developer CLI (azd) – February 2026: JMESPath Queries & Deployment Slots appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "PuiChee (PC) Chan"
     },
     {
       "title": "The JavaScript AI Build-a-thon Season 2 starts March 2!",
@@ -624,6 +804,15 @@
       "author": "lily-ma"
     },
     {
+      "title": "Visual Studio February Update",
+      "link": "https://devblogs.microsoft.com/visualstudio/visual-studio-february-update/",
+      "published": "2026-02-24T22:16:30+00:00",
+      "summary": "This month’s Visual Studio update continues our focus on helping you move faster and stay in flow, with practical improvements across AI assistance, debugging, testing, and modernization. Building on the momentum from January’s editor updates, the February release brings smarter diagnostics and...",
+      "blog": "Visual Studio Blog",
+      "blogId": "visualstudio",
+      "author": "Mark Downie"
+    },
+    {
       "title": "Introducing Run Oracle Your Way on Oracle Database@Azure – a new technical webinar series",
       "link": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/introducing-run-oracle-your-way-on-oracle-database-azure-a-new/ba-p/4496593",
       "published": "2026-02-24T17:12:37+00:00",
@@ -640,6 +829,15 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "Lee_Stott"
+    },
+    {
+      "title": "Improved Python (PyPi/uvx) support in Azure MCP Server",
+      "link": "https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-better-python-support/",
+      "published": "2026-02-24T16:00:21+00:00",
+      "summary": "Azure MCP Server now offers first-class Python support via PyPI and uvx, making it easier than ever for Python developers to integrate Azure into their agentic workflows. The post Improved Python (PyPi/uvx) support in Azure MCP Server appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Xiang Yan"
     },
     {
       "title": "Rethinking Ingress on Azure: Application Gateway for Containers Explained",
@@ -678,6 +876,15 @@
       "author": "kyleikeda"
     },
     {
+      "title": "Light up Multiple Databases with a Single API with Data API builder’s multi-source configuration",
+      "link": "https://devblogs.microsoft.com/azure-sql/multi-source-data-api-builder/",
+      "published": "2026-02-20T17:30:27+00:00",
+      "summary": "Data API builder (DAB) supports multi-source configurations Data API builder (DAB) connects to your database with a safe REST or GraphQL endpoint. But DAB is not limited to just one database. Using a multi-source configuration, you can connect to more than one database simultaneously. Learn more...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Jerry Nixon"
+    },
+    {
       "title": "The Rise of Agentic BSS in the IQ Era: from Systems of Record to Systems of Outcome",
       "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/the-rise-of-agentic-bss-in-the-iq-era-from-systems-of-record-to/ba-p/4495499",
       "published": "2026-02-20T16:14:52+00:00",
@@ -685,6 +892,33 @@
       "blog": "Telecommunications",
       "blogId": "telecommunications-industry-blog",
       "author": "rodekirk"
+    },
+    {
+      "title": "Using Codes to Increase Adherence to Prompts",
+      "link": "https://devblogs.microsoft.com/ise/using-codes-to-increase-adherence-to-prompts/",
+      "published": "2026-02-20T08:00:00+00:00",
+      "summary": "Agentic systems have some discretion in the parameters they sent to tooling, but there are cases, such as experimentation, when you need 100% adherence to a set of parameters. The post Using Codes to Increase Adherence to Prompts appeared first on ISE Developer Blog.",
+      "blog": "ISE Developer Blog",
+      "blogId": "iseblog",
+      "author": "Peter Lasne"
+    },
+    {
+      "title": "Microsoft Agent Framework Reaches Release Candidate",
+      "link": "https://devblogs.microsoft.com/foundry/microsoft-agent-framework-reaches-release-candidate/",
+      "published": "2026-02-20T05:51:29+00:00",
+      "summary": "We’re happy to announce that Microsoft Agent Framework is now in Release Candidate status for both .NET and Python. Release Candidate is an important milestone on the road to General Availability — it means the API surface is stable, and all features that we intend to release with version 1.0 are...",
+      "blog": "Microsoft Foundry Blog",
+      "blogId": "foundryblog",
+      "author": "Shawn Henry"
+    },
+    {
+      "title": "Custom Agents in Visual Studio: Built in and Build-Your-Own agents",
+      "link": "https://devblogs.microsoft.com/visualstudio/custom-agents-in-visual-studio-built-in-and-build-your-own-agents/",
+      "published": "2026-02-19T21:02:13+00:00",
+      "summary": "Agents in Visual Studio now go beyond a single general-purpose assistant. We’re shipping a set of curated preset agents that tap into deep IDE capabilities; debugging, profiling, testing alongside a framework for building your own custom agents tailored to how your team works. Built in agents Each...",
+      "blog": "Visual Studio Blog",
+      "blogId": "visualstudio",
+      "author": "Rhea Patel, Kelly Fam"
     },
     {
       "title": "Building HIPAA-Compliant Medical Transcription with Local AI",
@@ -714,6 +948,15 @@
       "author": "Sabyasachi-Samaddar"
     },
     {
+      "title": "What’s new in Microsoft Foundry | Dec 2025 & Jan 2026",
+      "link": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/",
+      "published": "2026-02-19T01:01:09+00:00",
+      "summary": "Catch up on all the new models, audio updates, fine-tuning expansions, and SDK updates from Microsoft Foundry spanning December 2025 and January 2026 — including GPT-5.2, Codex Max, DeepSeek V3.2, FLUX.2, and the azure-ai-projects v2 beta consolidation. The post What’s new in Microsoft Foundry |...",
+      "blog": "Microsoft Foundry Blog",
+      "blogId": "foundryblog",
+      "author": "Nick Brady"
+    },
+    {
       "title": "Azure Recognized as an NVIDIA Cloud Exemplar, Setting the Bar for AI Performance in the Cloud",
       "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-recognized-as-an-nvidia-cloud-exemplar-setting-the-bar-for/ba-p/4495747",
       "published": "2026-02-18T22:31:25+00:00",
@@ -741,6 +984,24 @@
       "author": "Lakshya_Jalan"
     },
     {
+      "title": "Federating Databases with Data API Builder Chaining",
+      "link": "https://devblogs.microsoft.com/azure-sql/data-api-builder-chaining/",
+      "published": "2026-02-18T17:00:17+00:00",
+      "summary": "For decades, DBAs relied on linked servers to stitch data together. If you needed data from two places, you wired them up and moved on. It worked. It was straightforward. It felt native to SQL. But what if linked servers are not an option? What if policy blocks them? What if one of the systems […]...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Jerry Nixon"
+    },
+    {
+      "title": "TFVC Remove Existing Obsolete Policies ASAP",
+      "link": "https://devblogs.microsoft.com/devops/tfvc-remove-existing-obsolete-policies-asap/",
+      "published": "2026-02-18T16:35:23+00:00",
+      "summary": "In April 2025, we announced the deprecation schedule for legacy TFVC check-in policies. This change was required due to limitations in how those policies were previously implemented and stored. The old policies have been marked as obsolete, and you can replace them by selecting the equivalent...",
+      "blog": "Azure DevOps Blog",
+      "blogId": "azuredevops",
+      "author": "Dan Hellem"
+    },
+    {
       "title": "AI-Powered RAN and the Intelligent Edge: Microsoft’s Vision for the Future of Telecom",
       "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/ai-powered-ran-and-the-intelligent-edge-microsoft-s-vision-for/ba-p/4495554",
       "published": "2026-02-18T16:15:41+00:00",
@@ -759,6 +1020,15 @@
       "author": "rickliev"
     },
     {
+      "title": "JMESPath support comes to azd JSON output",
+      "link": "https://devblogs.microsoft.com/azure-sdk/azd-jmespath-query-support/",
+      "published": "2026-02-17T18:19:18+00:00",
+      "summary": "Run JMESPath queries on azd JSON output, including error messages. The post JMESPath support comes to azd JSON output appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Scott Addie"
+    },
+    {
       "title": "Public Preview: Automatic zone balance for Virtual Machine Scale Sets",
       "link": "https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-automatic-zone-balance-for-virtual-machine-scale/ba-p/4494476",
       "published": "2026-02-17T17:30:00+00:00",
@@ -766,6 +1036,15 @@
       "blog": "Azure Compute",
       "blogId": "azurecompute",
       "author": "HilaryWang"
+    },
+    {
+      "title": "Dear Copilot, can you help me with SQL?",
+      "link": "https://devblogs.microsoft.com/azure-sql/dear-copilot-azure-sql/",
+      "published": "2026-02-17T17:00:59+00:00",
+      "summary": "Perhaps we missed it at first, but Copilot is more than comfortable with SQL. This goes beyond autocomplete. This is moving from nothing to a working database without leaving our tools. Have we really arrived? Yes, sort of. For database engineers and app engineers alike, we have crossed an...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Jerry Nixon"
     },
     {
       "title": "RDP Shortpath (UDP) over Private Link is now generally available",
@@ -804,6 +1083,24 @@
       "author": "Rakeshginjupalli"
     },
     {
+      "title": "Condensed views on Kanban and Sprint boards",
+      "link": "https://devblogs.microsoft.com/devops/condensed-views-on-kanban-and-sprint-boards/",
+      "published": "2026-02-16T20:53:30+00:00",
+      "summary": "One of the challenges teams face when working with large boards or displaying multiple fields on work item cards is limited screen space. This became even more noticeable with the rollout of the New Boards hub, which introduced additional spacing and padding for improved readability. While this...",
+      "blog": "Azure DevOps Blog",
+      "blogId": "azuredevops",
+      "author": "Dan Hellem"
+    },
+    {
+      "title": "DPO Fine-Tuning Using Microsoft Foundry SDK",
+      "link": "https://devblogs.microsoft.com/foundry/dpo-fine-tuning-using-microsoft-foundry-sdk/",
+      "published": "2026-02-13T23:13:44+00:00",
+      "summary": "In the rapidly evolving landscape of large language models (LLMs), achieving precise control over model behavior while maintaining quality has become a critical challenge. While models like GPT-4 demonstrate impressive capabilities, ensuring their outputs align with human preferences—whether for...",
+      "blog": "Microsoft Foundry Blog",
+      "blogId": "foundryblog",
+      "author": "Jayesh Tanna"
+    },
+    {
       "title": "A BizTalk Migration Tool: From Orchestrations to Logic Apps Workflows",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/a-biztalk-migration-tool-from-orchestrations-to-logic-apps/ba-p/4494876",
       "published": "2026-02-13T19:03:08+00:00",
@@ -840,6 +1137,15 @@
       "author": "srhulsus"
     },
     {
+      "title": "Build Intelligent Apps with SQL: Join the SQL + AI Datathon",
+      "link": "https://devblogs.microsoft.com/azure-sql/build-intelligent-apps-with-sql-join-the-sql-ai-datathon/",
+      "published": "2026-02-12T17:35:41+00:00",
+      "summary": "The SQL + AI Datathon is a hands‑on challenge designed to show how the foundations for building modern, intelligent applications with SQL. Over a set of guided missions and a focused open hack, you’ll learn how to combine SQL with embeddings, semantic search, and Retrieval Augmented Generation...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Jasmine Greenaway"
+    },
+    {
       "title": "Securing A Multi-Agent AI Solution Focused on User Context & the Complexities of On-Behalf-Of.",
       "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-a-multi-agent-ai-solution-focused-on-user-context-the/ba-p/4493308",
       "published": "2026-02-12T07:47:13+00:00",
@@ -849,6 +1155,42 @@
       "author": "Charles_Chukwudozie"
     },
     {
+      "title": "Beyond the Prompt – Why and How to Fine-tune Your Own Models",
+      "link": "https://devblogs.microsoft.com/foundry/beyond-the-prompt-why-and-how-to-fine-tune-your-own-models/",
+      "published": "2026-02-11T17:29:15+00:00",
+      "summary": "Large Language Models (LLMs) have reached a point where general intelligence is no longer the bottleneck. The real challenge in enterprise AI systems behavioral alignment ensuring models that produce consistent, reliable, policy-compliant outputs on a scale. Prompt engineering and...",
+      "blog": "Microsoft Foundry Blog",
+      "blogId": "foundryblog",
+      "author": "Radhika Bollineni"
+    },
+    {
+      "title": "Unlock language-specific rich symbol context using new find_symbol tool",
+      "link": "https://devblogs.microsoft.com/visualstudio/unlock-language-specific-rich-symbol-context-using-new-find_symbol-tool/",
+      "published": "2026-02-11T15:29:15+00:00",
+      "summary": "Refactoring at scale is a time-consuming and error-prone process for developers. In large codebases, developers have relied on manual searches and incremental edits across multiple files to accomplish these tasks. Modern development workflows depend on fast and accurate code navigation to avoid...",
+      "blog": "Visual Studio Blog",
+      "blogId": "visualstudio",
+      "author": "Sinem Akinci, Hannah Hong (SHE/HER)"
+    },
+    {
+      "title": "Deploy to Azure App Service deployment slots with azd",
+      "link": "https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/",
+      "published": "2026-02-11T14:59:15+00:00",
+      "summary": "azd now supports direct deployments to Azure App Service slots—quick, clear, and slot-aware for the first time. The post Deploy to Azure App Service deployment slots with azd appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "PuiChee (PC) Chan"
+    },
+    {
+      "title": "Maximize Azure Cosmos DB Performance with Azure Advisor Recommendations",
+      "link": "https://devblogs.microsoft.com/cosmosdb/maximize-azure-cosmos-db-performance-with-azure-advisor-recommendations/",
+      "published": "2026-02-11T13:00:43+00:00",
+      "summary": "In the first post of this series, we introduced how Azure Advisor helps Azure Cosmos DB users uncover opportunities to optimize efficiency and make smarter decisions. This follow-up dives deeper into one of the most important categories of guidance: performance. If you’ve ever dealt with skewed...",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Iria Osara"
+    },
+    {
       "title": "Accelerating SCOM to Azure Monitor Migrations with Automated Analysis and ARM Template Generation",
       "link": "https://techcommunity.microsoft.com/t5/azure-observability-blog/accelerating-scom-to-azure-monitor-migrations-with-automated/ba-p/4493593",
       "published": "2026-02-11T08:59:53+00:00",
@@ -856,6 +1198,24 @@
       "blog": "Azure Observability",
       "blogId": "azureobservabilityblog",
       "author": "OREN_SALZBERG"
+    },
+    {
+      "title": "February Patches for Azure DevOps Server",
+      "link": "https://devblogs.microsoft.com/devops/february-patches-for-azure-devops-server-5/",
+      "published": "2026-02-10T20:21:41+00:00",
+      "summary": "We are releasing patches for our self‑hosted product, Azure DevOps Server. We strongly recommend that all customers stay on the latest, most secure version of Azure DevOps Server. The latest release, Azure DevOps Server, is available from the download page. To make it easier to find and apply the...",
+      "blog": "Azure DevOps Blog",
+      "blogId": "azuredevops",
+      "author": "Gloridel Morales"
+    },
+    {
+      "title": "Building AI-Powered Apps with Azure Cosmos DB and the Vercel AI SDK",
+      "link": "https://devblogs.microsoft.com/cosmosdb/building-ai-powered-apps-azure-cosmos-db-vercel-ai-sdk/",
+      "published": "2026-02-10T18:27:15+00:00",
+      "summary": "The Vercel AI SDK is an open-source TypeScript toolkit that provides the core building blocks for integrating AI into any JavaScript application. It works with 20+ AI providers out of the box—including OpenAI, Azure OpenAI, Anthropic, Google, Mistral, and more—so you can write your code once and...",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Sajeetharan Sinnathurai"
     },
     {
       "title": "Unlocking Advanced Data Analytics & AI with Azure NetApp Files object REST API",
