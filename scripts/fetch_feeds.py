@@ -51,6 +51,23 @@ TC_RSS_URL = (
 )
 AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
 
+# DevBlogs definitions: slug -> (display name, feed URL)
+DEVBLOGS = {
+    "allthingsazure": ("All Things Azure", "https://devblogs.microsoft.com/all-things-azure/feed/"),
+    "msdevblog": ("Microsoft Developers Blog", "https://developer.microsoft.com/blog/feed/"),
+    "visualstudio": ("Visual Studio Blog", "https://devblogs.microsoft.com/visualstudio/feed/"),
+    "vscodeblog": ("VS Code Blog", "https://devblogs.microsoft.com/vscode-blog/feed/"),
+    "developfromthecloud": ("Develop from the Cloud", "https://devblogs.microsoft.com/develop-from-the-cloud/feed/"),
+    "azuredevops": ("Azure DevOps Blog", "https://devblogs.microsoft.com/devops/feed/"),
+    "iseblog": ("ISE Developer Blog", "https://devblogs.microsoft.com/ise/feed/"),
+    "azuresdkblog": ("Azure SDK Blog", "https://devblogs.microsoft.com/azure-sdk/feed/"),
+    "commandline": ("Windows Command Line", "https://devblogs.microsoft.com/commandline/feed/"),
+    "aspireblog": ("Aspire Blog", "https://devblogs.microsoft.com/aspire/feed/"),
+    "foundryblog": ("Microsoft Foundry Blog", "https://devblogs.microsoft.com/foundry/feed/"),
+    "cosmosdbblog": ("Azure Cosmos DB Blog", "https://devblogs.microsoft.com/cosmosdb/feed/"),
+    "azuresqlblog": ("Azure SQL Dev Corner", "https://devblogs.microsoft.com/azure-sql/feed/"),
+}
+
 
 def clean_html(text):
     """Remove HTML tags and clean up text."""
@@ -166,6 +183,46 @@ def fetch_aks_blog():
     return articles
 
 
+def fetch_devblogs_feeds():
+    """Fetch articles from Microsoft DevBlogs."""
+    articles = []
+
+    for blog_id, (blog_name, feed_url) in DEVBLOGS.items():
+        print(f"Fetching: {blog_name}...")
+
+        try:
+            feed = feedparser.parse(feed_url)
+
+            if feed.bozo and not feed.entries:
+                print(f"  Warning: Could not parse {blog_name} feed")
+                continue
+
+            count = 0
+            for entry in feed.entries:
+                summary = clean_html(entry.get("summary", ""))
+                articles.append(
+                    {
+                        "title": clean_html(entry.get("title", "Untitled")),
+                        "link": entry.get("link", ""),
+                        "published": parse_date(entry),
+                        "summary": truncate(summary),
+                        "blog": blog_name,
+                        "blogId": blog_id,
+                        "author": entry.get("author", "Microsoft"),
+                    }
+                )
+                count += 1
+
+            print(f"  Found {count} articles")
+
+        except Exception as e:
+            print(f"  Error fetching {blog_name}: {e}")
+
+        time.sleep(0.5)
+
+    return articles
+
+
 def generate_rss_feed(articles):
     """Generate an RSS feed XML file from the aggregated articles."""
     from xml.etree.ElementTree import Element, SubElement, tostring
@@ -261,6 +318,7 @@ def main():
     all_articles = []
     all_articles.extend(fetch_tech_community_feeds())
     all_articles.extend(fetch_aks_blog())
+    all_articles.extend(fetch_devblogs_feeds())
 
     # Sort by date, newest first
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)

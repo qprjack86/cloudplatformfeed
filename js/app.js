@@ -4,12 +4,13 @@
   // ===== Category Mapping =====
   var CATEGORIES = {
     "Compute": ["azurecompute", "aksblog", "azurevirtualdesktopblog", "azurehighperformancecomputingblog"],
-    "Data & AI": ["analyticsonazure", "azure-databricks", "oracleonazureblog"],
+    "Data & AI": ["analyticsonazure", "azure-databricks", "oracleonazureblog", "cosmosdbblog", "azuresqlblog", "foundryblog"],
     "Infrastructure": ["azureinfrastructureblog", "azurearcblog", "azurestackblog", "azurenetworkingblog", "azurestorageblog"],
-    "Architecture": ["azurearchitectureblog", "azure-customer-innovation-blog"],
-    "Apps & Platform": ["appsonazureblog", "azurepaasblog", "integrationsonazureblog", "messagingonazureblog"],
-    "Operations": ["azuregovernanceandmanagementblog", "azureobservabilityblog", "finopsblog", "azuretoolsblog", "azuremigrationblog"],
-    "Community": ["azuredevcommunityblog", "azure-events", "linuxandopensourceblog"],
+    "Architecture": ["azurearchitectureblog", "azure-customer-innovation-blog", "iseblog"],
+    "Apps & Platform": ["appsonazureblog", "azurepaasblog", "integrationsonazureblog", "messagingonazureblog", "aspireblog", "azuresdkblog"],
+    "Operations": ["azuregovernanceandmanagementblog", "azureobservabilityblog", "finopsblog", "azuretoolsblog", "azuremigrationblog", "azuredevops"],
+    "Community": ["azuredevcommunityblog", "azure-events", "linuxandopensourceblog", "allthingsazure", "msdevblog"],
+    "Developer Tools": ["visualstudio", "vscodeblog", "commandline", "developfromthecloud"],
     "Specialized": ["azurecommunicationservicesblog", "azureconfidentialcomputingblog", "azuremapsblog", "telecommunications-industry-blog", "microsoft-planetary-computer-blog"]
   };
 
