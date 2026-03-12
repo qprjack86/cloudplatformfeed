@@ -706,9 +706,7 @@ footer a:hover {
   transform: scale(1.1);
 }
 
-.share-btn.linkedin:hover { background: #0A66C2; color: white; }
-.share-btn.teams:hover { background: #6264A7; color: white; }
-.share-btn.x:hover { background: #000; color: white; }
+
 
 /* ===== AI Summary ===== */
 .ai-summary {

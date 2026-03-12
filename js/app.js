@@ -376,14 +376,6 @@
       "</div>" +
       '<p class="article-summary">' + escapeHtml(article.summary) + "</p>" +
       '<div class="share-buttons">' +
-      '<a class="share-btn linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl +
-      '" target="_blank" rel="noopener" title="Share on LinkedIn">in</a>' +
-      '<a class="share-btn teams" href="https://teams.microsoft.com/share?href=' + shareUrl +
-      '&msgText=' + shareTitle +
-      '" target="_blank" rel="noopener" title="Share on Teams">🟣</a>' +
-      '<a class="share-btn x" href="https://x.com/intent/tweet?url=' + shareUrl +
-      '&text=' + shareTitle +
-      '" target="_blank" rel="noopener" title="Share on X">𝕏</a>' +
       "</div>" +
       "</article>"
     );
