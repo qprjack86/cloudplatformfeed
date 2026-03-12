@@ -31,6 +31,7 @@ BLOGS = {
     "azuremapsblog": "Azure Maps",
     "azuremigrationblog": "Azure Migration",
     "azurenetworkingblog": "Azure Networking",
+    "azurenetworksecurityblog": "Azure Network Security",
     "azureobservabilityblog": "Azure Observability",
     "azurepaasblog": "Azure PaaS",
     "azurestackblog": "Azure Stack",
