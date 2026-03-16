@@ -45,6 +45,9 @@ BLOGS = {
     "azuredevcommunityblog": "Azure Dev Community",
     "oracleonazureblog": "Oracle on Azure",
     "microsoft-planetary-computer-blog": "Planetary Computer",
+    "microsoftsentinelblog": "Microsoft Sentinel",
+    "microsoftdefendercloudblog": "Microsoft Defender for Cloud",
+    "azureadvancedthreatprotection": "Azure Advanced Threat Protection",
 }
 
 TC_RSS_URL = (
