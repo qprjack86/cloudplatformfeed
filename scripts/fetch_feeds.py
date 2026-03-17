@@ -308,14 +308,29 @@ def generate_rss_feed(articles):
 
 
 def generate_ai_summary(articles):
-    """Generate an AI summary of today's articles using OpenAI (optional)."""
-    api_key = os.environ.get("OPENAI_API_KEY", "")
-    if not api_key:
-        print("No OPENAI_API_KEY set, skipping AI summary")
+    """Generate an AI summary of today's articles using Azure OpenAI (optional)."""
+    api_key = os.environ.get("AZURE_OPENAI_API_KEY", "")
+    endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", "")
+    api_version = os.environ.get("AZURE_OPENAI_API_VERSION", "")
+    deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT", "")
+
+    required = {
+        "AZURE_OPENAI_API_KEY": api_key,
+        "AZURE_OPENAI_ENDPOINT": endpoint,
+        "AZURE_OPENAI_API_VERSION": api_version,
+        "AZURE_OPENAI_DEPLOYMENT": deployment,
+    }
+    missing = [name for name, value in required.items() if not value]
+    if missing:
+        print(
+            "Missing Azure OpenAI config ("
+            + ", ".join(missing)
+            + "), skipping AI summary"
+        )
         return None
 
     try:
-        import openai
+        from openai import AzureOpenAI
 
         today = datetime.now(timezone.utc).date().isoformat()
         today_articles = [
@@ -336,9 +351,13 @@ def generate_ai_summary(articles):
             + titles
         )
 
-        client = openai.OpenAI(api_key=api_key)
+        client = AzureOpenAI(
+            api_key=api_key,
+            azure_endpoint=endpoint,
+            api_version=api_version,
+        )
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=deployment,
             messages=[{"role": "user", "content": prompt}],
             max_tokens=200,
         )

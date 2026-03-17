@@ -59,12 +59,25 @@ Your feed will be live at `https://azurefeed.news`
 
 ## Local Development
 
-To test the feed fetcher locally:
+To test the feed fetcher locally, configure Azure OpenAI for optional AI summaries:
+
+```bash
+export AZURE_OPENAI_API_KEY="<your-azure-openai-key>"
+export AZURE_OPENAI_ENDPOINT="https://<your-resource-name>.openai.azure.com"
+export AZURE_OPENAI_API_VERSION="2024-02-15-preview"
+export AZURE_OPENAI_DEPLOYMENT="gpt-4o-mini"
+```
+
+Then run the fetcher:
 
 ```bash
 pip install -r scripts/requirements.txt
 python scripts/fetch_feeds.py
 ```
+
+If these variables are not set, feed fetching still works and only the AI summary is skipped.
+
+For GitHub Actions, add the same values as repository secrets: `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_VERSION`, and `AZURE_OPENAI_DEPLOYMENT`.
 
 Then serve the site:
 
