@@ -309,9 +309,17 @@ def generate_rss_feed(articles):
 
 def generate_ai_summary(articles):
     """Generate an AI summary of today's articles using OpenAI (optional)."""
-    api_key = os.environ.get("OPENAI_API_KEY", "")
-    if not api_key:
-        print("No OPENAI_API_KEY set, skipping AI summary")
+    api_key = os.environ.get("AZURE_OPENAI_API_KEY", "")
+    endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", "")
+    api_version = os.environ.get("AZURE_OPENAI_API_VERSION", "")
+    deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT", "")
+
+    if not all([api_key, endpoint, api_version, deployment]):
+        print(
+            "Missing Azure OpenAI config (AZURE_OPENAI_API_KEY, "
+            "AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_VERSION, "
+            "AZURE_OPENAI_DEPLOYMENT), skipping AI summary"
+        )
         return None
 
     try:
@@ -336,9 +344,13 @@ def generate_ai_summary(articles):
             + titles
         )
 
-        client = openai.OpenAI(api_key=api_key)
+        client = openai.AzureOpenAI(
+            api_key=api_key,
+            azure_endpoint=endpoint,
+            api_version=api_version,
+        )
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=deployment,
             messages=[{"role": "user", "content": prompt}],
             max_tokens=200,
         )
@@ -347,7 +359,11 @@ def generate_ai_summary(articles):
         return summary
 
     except Exception as e:
-        print(f"AI summary failed: {e}")
+        print(
+            "AI summary failed "
+            "(check Azure OpenAI auth, AZURE_OPENAI_API_VERSION, "
+            f"and AZURE_OPENAI_DEPLOYMENT): {e}"
+        )
         return None
 
 
