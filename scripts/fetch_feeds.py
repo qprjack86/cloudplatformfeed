@@ -308,17 +308,26 @@ def generate_rss_feed(articles):
 
 
 def generate_ai_summary(articles):
-    """Generate an AI summary of today's articles using OpenAI (optional)."""
+    """Generate an AI summary of today's articles using Azure OpenAI (optional)."""
     api_key = os.environ.get("AZURE_OPENAI_API_KEY", "")
     endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", "")
     api_version = os.environ.get("AZURE_OPENAI_API_VERSION", "")
     deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT", "")
 
-    if not all([api_key, endpoint, api_version, deployment]):
+    missing_vars = [
+        var_name
+        for var_name, var_value in [
+            ("AZURE_OPENAI_API_KEY", api_key),
+            ("AZURE_OPENAI_ENDPOINT", endpoint),
+            ("AZURE_OPENAI_API_VERSION", api_version),
+            ("AZURE_OPENAI_DEPLOYMENT", deployment),
+        ]
+        if not var_value
+    ]
+    if missing_vars:
         print(
-            "Missing Azure OpenAI config (AZURE_OPENAI_API_KEY, "
-            "AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_VERSION, "
-            "AZURE_OPENAI_DEPLOYMENT), skipping AI summary"
+            "Skipping AI summary: missing required Azure OpenAI settings: "
+            + ", ".join(missing_vars)
         )
         return None
 
