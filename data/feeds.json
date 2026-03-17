@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-17T14:58:14.887577+00:00",
-  "totalArticles": 153,
+  "lastUpdated": "2026-03-17T15:29:50.022919+00:00",
+  "totalArticles": 190,
   "articles": [
     {
       "title": "Azure DevOps Remote MCP Server (public preview)",
@@ -73,6 +73,51 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "junjieli"
+    },
+    {
+      "title": "Retirement: Support for Windows Server 2016 Marketplace images on Azure Batch pools will end on January 12, 2027",
+      "link": "https://azure.microsoft.com/updates?id=549077",
+      "published": "2026-03-16T18:45:11+00:00",
+      "summary": "Azure Batch periodically retires support for operating systems that reach end-of-life status. Support for Windows Server 2016 concluded on January 11, 2022, with extended support scheduled to end on January 12, 2027. Marketplace images for Windows Server",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Retirement: Migration of Azure Batch Low-Priority VMs to Spot VMs in early March",
+      "link": "https://azure.microsoft.com/updates?id=543279",
+      "published": "2026-03-16T18:45:11+00:00",
+      "summary": "Azure Batch had retired Low-Priority VMs on September 30, 2025 and will begin a system-initiated migration to Spot VMs beginning March 1, 2026. This change aligns Batch with the broader Azure Spot infrastructure and simplifies the platform’s VM offering.",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Entra ID-Based Access for Azure Blob Storage SFTP",
+      "link": "https://azure.microsoft.com/updates?id=558662",
+      "published": "2026-03-16T18:30:34+00:00",
+      "summary": "Microsoft Entra ID-based access for Azure Blob Storage SFTP is now in public preview. This new capability empowers you to use Microsoft Entra ID identities (including guest users via Entra External Identities) to securely connect to Azure Blob Storage via",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Retirement: End of life reminder of NVv3 and NVv4-series Azure virtual machine in Azure Batch pools",
+      "link": "https://azure.microsoft.com/updates?id=516070",
+      "published": "2026-03-16T18:30:34+00:00",
+      "summary": "Microsoft Azure will retire support for NVv3 or NVv4-series VMs on September 30th, 2026, including NVv3 Series (NVIDIA Tesla M60 GPU): Standard_NV12s_v3, Standard_NV12hs_v3, Standard_NV24s_v3, Standard_NV24ms_v3, Standard_NV32ms_v3, Standard_NV48s_v3 NVv4",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Retirement: Flatcar Container Linux for AKS (preview)",
+      "link": "https://azure.microsoft.com/updates?id=557929",
+      "published": "2026-03-16T18:15:54+00:00",
+      "summary": "Azure Kubernetes Service support for Flatcar Container Linux for AKS (preview) will be retired on June 8, 2026, transition to a supported alternative by that date. From now to June 7, 2026, you can continue to use Flatcar Container Linux for AKS (preview)",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "Health-Aware Failover for Azure Container Registry Geo-Replication",
@@ -228,6 +273,24 @@
       "author": "FeynmanZhou"
     },
     {
+      "title": "[Launched] Generally Available: Summary rules in Log Analytics workspace now support manual “Retry bin”",
+      "link": "https://azure.microsoft.com/updates?id=558656",
+      "published": "2026-03-12T21:15:25+00:00",
+      "summary": "Summary rules run batch aggregation inside your Log Analytics workspace and re-ingest the summarized results into a custom destination table. When a bin fails, that can create gaps in your summarized dataset. “Retry bin” helps you remediate bin-level fail",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Azure Storage Mover enables private data transfers from AWS S3 to Azure Blob",
+      "link": "https://azure.microsoft.com/updates?id=558651",
+      "published": "2026-03-12T21:15:25+00:00",
+      "summary": "Azure Storage Mover now enables direct, secure data migration from AWS S3 data in Virtual Private Cloud to Azure Blob Storage with private networking. This update removes the need for manual pipelines or third-party tools, supports automation through the",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "Azure Copilot Migration Agent",
       "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent/ba-p/4501292",
       "published": "2026-03-12T17:21:59+00:00",
@@ -255,6 +318,33 @@
       "author": "Laura Jiang"
     },
     {
+      "title": "[Launched] Generally Available: Terraform, Bicep, Ansible support for elastic clusters on Azure Database for PostgreSQL",
+      "link": "https://azure.microsoft.com/updates?id=558145",
+      "published": "2026-03-11T18:00:35+00:00",
+      "summary": "You can now provision and manage Azure Database for PostgreSQL elastic clusters using Terraform, Bicep, and Ansible, with full General Availability support. With native infrastructure-as-code support, you can consistently create, scale, and manage elastic",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: Azure Database for PostgreSQL dashboards with Grafana",
+      "link": "https://azure.microsoft.com/updates?id=558140",
+      "published": "2026-03-11T18:00:35+00:00",
+      "summary": "You can now monitor your Azure Database for PostgreSQL with rich, built-in Grafana dashboards—right from the Azure portal. This native integration with Azure Monitor means you no longer need to set up or manage a separate Grafana instance to get deep visi",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Customer‑managed encryption keys now supported on Premium SSD v2 disks for Azure Database for PostgreSQL",
+      "link": "https://azure.microsoft.com/updates?id=557527",
+      "published": "2026-03-11T18:00:35+00:00",
+      "summary": "You can now enhance data security for your Azure Database for PostgreSQL workloads by using customer managed keys (CMKs) with Premium SSD v2 disks. Available in public preview, this update gives you greater control over how your data at rest is encrypted,",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "Modern Database Protection: From Visibility to Threat Detection with Microsoft Defender for Cloud",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/modern-database-protection-from-visibility-to-threat-detection/ba-p/4501289",
       "published": "2026-03-11T17:51:24+00:00",
@@ -262,6 +352,24 @@
       "blog": "Microsoft Defender for Cloud",
       "blogId": "microsoftdefendercloudblog",
       "author": "Yura_Lee"
+    },
+    {
+      "title": "[Launched] Generally Available: Azure SRE Agent with new capabilities",
+      "link": "https://azure.microsoft.com/updates?id=558321",
+      "published": "2026-03-11T17:45:49+00:00",
+      "summary": "Azure SRE Agent is now generally available. This AI-powered operations agent helps teams improve uptime, reduce incident impact, and cut operational toil by accelerating diagnosis and automating response workflows. The GA release introduces deep context g",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Query Profiler in MSSQL extension for Visual Studio Code",
+      "link": "https://azure.microsoft.com/updates?id=558164",
+      "published": "2026-03-11T17:45:49+00:00",
+      "summary": "The MSSQL extension for Visual Studio Code now introduces Query Profiler in public preview, bringing real-time insight into your database activity directly inside Visual Studio Code. With Query Profiler, you can capture query and database activity as it h",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "A Look Ahead at Azure Cosmos DB Conf 2026: From AI Agents to Global Scale",
@@ -633,6 +741,15 @@
       "author": "Aditya Badramraju"
     },
     {
+      "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
+      "link": "https://azure.microsoft.com/updates?id=558102",
+      "published": "2026-03-04T21:15:02+00:00",
+      "summary": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now get enforced within 5 minutes.In light of cache refres",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "What’s New in Microsoft Sentinel: March 2026",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-march-2026/ba-p/4499508",
       "published": "2026-03-04T20:21:05+00:00",
@@ -768,6 +885,15 @@
       "author": "AnaviNahar"
     },
     {
+      "title": "[Launched] Generally Available: Draft & Deploy on Azure Firewall",
+      "link": "https://azure.microsoft.com/updates?id=558072",
+      "published": "2026-03-03T01:00:04+00:00",
+      "summary": "The new Draft & Deploy feature for Azure Firewall Policy introduces a streamlined, two-phase approach to managing firewall policies, significantly reducing deployment time and disruption. Traditionally, any policy update would trigger a full deployment of",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "ExpressRoute Gateway Microsoft initiated migration",
       "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/expressroute-gateway-microsoft-initiated-migration/ba-p/4497689",
       "published": "2026-03-03T00:58:14+00:00",
@@ -795,6 +921,24 @@
       "author": "Jerry Nixon"
     },
     {
+      "title": "[Launched] Generally Available: Azure Databricks update workspace network configuration",
+      "link": "https://azure.microsoft.com/updates?id=558060",
+      "published": "2026-03-02T19:15:14+00:00",
+      "summary": "Azure Databricks workspaces have two network configurations – Azure Databricks-managed VNet and VNet Injection. The ability to update the Network Configuration of your workspace is now generally available. This enhancement provides greater flexibility and",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: Azure Databricks Lakebase",
+      "link": "https://azure.microsoft.com/updates?id=557991",
+      "published": "2026-03-02T19:15:14+00:00",
+      "summary": "Today we’re announcing the General Availability of Azure Databricks Lakebase, a managed PostgreSQL environment with next generation separation of storage and compute for OLTP, providing instant availability, instant clones, and scale-to-zero. Lakebase let",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "Logic Apps Aviators Newsletter - March 2026",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-march-2026/ba-p/4498260",
       "published": "2026-03-02T16:00:00+00:00",
@@ -804,6 +948,33 @@
       "author": "WSilveira"
     },
     {
+      "title": "[Launched] Generally Available: Azure Premium SSD v2 Disk Storage is now available in a third Availability Zone in New Zealan North",
+      "link": "https://azure.microsoft.com/updates?id=558078",
+      "published": "2026-02-27T23:15:13+00:00",
+      "summary": "Azure Premium SSD v2 is now available in a third Availability Zone in New Zealand North. Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, offers sub-millisecond latencies and exceptional price",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: DCesv6, DCedsv6, ECesv6, and ECedsv6 confidential VMs",
+      "link": "https://azure.microsoft.com/updates?id=558051",
+      "published": "2026-02-27T23:15:13+00:00",
+      "summary": "The DCesv6, DCedsv6, ECesv6, and ECedsv6 series are Azure’s next generation of confidential Virtual Machines (VMs) based on 5th Gen Intel® Xeon® processors with Intel® Trust Domain Extensions (Intel® TDX). These new confidential VMs help organizations to",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Retirement: Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
+      "link": "https://azure.microsoft.com/updates?id=555839",
+      "published": "2026-02-27T21:45:03+00:00",
+      "summary": "The upstream Ingress-NGINX project is being deprecated and will stop receiving updates after March 2026. Microsoft will continue providing critical security patches through 30 November 2026, after which the NGINX ingress controller will no longer be suppo",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "Updates to Team Calendar extension",
       "link": "https://devblogs.microsoft.com/devops/updates-to-team-calendar-extension/",
       "published": "2026-02-27T18:30:30+00:00",
@@ -811,6 +982,15 @@
       "blog": "Azure DevOps Blog",
       "blogId": "azuredevops",
       "author": "Dan Hellem"
+    },
+    {
+      "title": "[Launched] Generally Available: Azure Red Hat OpenShift is now available in Malaysia West, New Zealand North, and Mexico Central",
+      "link": "https://azure.microsoft.com/updates?id=557897",
+      "published": "2026-02-27T17:30:41+00:00",
+      "summary": "Azure Red Hat OpenShift is now generally available in three additional Azure regions: Malaysia West, New Zealand North, and Mexico Central. This expansion strengthens Azure Red Hat OpenShift’s presence across Asia Pacific and Latin America, enabling custo",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "Top 5 Microsoft Sentinel Queries for Threat Hunting",
@@ -912,6 +1092,15 @@
       "author": "johnsonshi_msft"
     },
     {
+      "title": "[In preview] Public Preview: Restrict usage of user delegation SAS to an Entra ID identity",
+      "link": "https://azure.microsoft.com/updates?id=557694",
+      "published": "2026-02-26T19:45:06+00:00",
+      "summary": "We’re excited to announce the addition of enhanced secure authentication in Azure Storage that combines the flexibility of user-delegation shared access signature (SAS) with the user-bound access of Entra ID. User-bound user delegation SAS is now in previ",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "Accelerating revenue in telecommunications through Agentic Sales Processes",
       "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/accelerating-revenue-in-telecommunications-through-agentic-sales/ba-p/4496523",
       "published": "2026-02-26T19:06:30+00:00",
@@ -1000,6 +1189,42 @@
       "blog": "Azure SQL Dev Corner",
       "blogId": "azuresqlblog",
       "author": "Aditya Badramraju"
+    },
+    {
+      "title": "[In preview] Public Preview: Secure ingestion and pod placement for Azure Monitor pipeline",
+      "link": "https://azure.microsoft.com/updates?id=552808",
+      "published": "2026-02-26T00:30:50+00:00",
+      "summary": "We are announcing several capabilities in public preview with Azure Monitor pipeline. Secure Ingress to Azure Monitor pipeline from external endpoints (TLS/mTLS) with Bring Your Own Certificates: BYOC empowers enterprises to maintain contro",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: Azure SQL updates for late-February 2026",
+      "link": "https://azure.microsoft.com/updates?id=557517",
+      "published": "2026-02-25T19:00:32+00:00",
+      "summary": "In late-February 2026, the following updates and enhancements were made to Azure SQL: Introducing Search Database Objects in the MSSQL extension for Visual Studio Code. Instantly find tables, views, functions, and procedures with full scripti",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Azure SQL updates for late-February 2026",
+      "link": "https://azure.microsoft.com/updates?id=557522",
+      "published": "2026-02-25T18:45:40+00:00",
+      "summary": "In late-February 2026, the following updates and enhancements were made to Azure SQL: Manage your databases directly from the dialog using actions such as Name, Rename, and Drop. Import a flat file to your database in the MSSQL Extension fo",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Geo‑redundant backups for Premium SSD v2 in Azure Database for PostgreSQL",
+      "link": "https://azure.microsoft.com/updates?id=557532",
+      "published": "2026-02-25T18:30:06+00:00",
+      "summary": "You can now configure geo‑redundant backups with Premium SSD v2 disks for Azure Database for PostgreSQL, giving you an additional layer of disaster recovery for mission‑critical workloads. With this release, your automated backups are securely stored in a",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "MSSQL Extension for VS Code: Query Profiler, ADS Migration Toolkit & More",
@@ -1110,6 +1335,24 @@
       "author": "ShiranShuster"
     },
     {
+      "title": "Retirement: Windows Server Annual Channel (preview)",
+      "link": "https://azure.microsoft.com/updates?id=557224",
+      "published": "2026-02-23T18:15:17+00:00",
+      "summary": "Windows Server Annual Channel (Preview) on AKS will be retired on May 15, 2026, please transition to Long Term Servicing Channel (LTSC) by that date. We encourage you to transition to Long Term Servicing Channel (LTSC) prior to the retirement date to exp",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: WAF Insights for Application Gateway",
+      "link": "https://azure.microsoft.com/updates?id=557416",
+      "published": "2026-02-23T16:15:47+00:00",
+      "summary": "Announcing the public preview of Application Gateway WAF Insights. Azure Application Gateway WAF now offers WAF Insights, providing an interactive view of logs and metrics. WAF Insights enables quick investigation of blocked requests, analysis of attack p",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "Logic Apps Agentic Workflows with SAP - Part 2: AI Agents",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-agentic-workflows-with-sap-part-2-ai-agents/ba-p/4492362",
       "published": "2026-02-23T07:15:00+00:00",
@@ -1126,6 +1369,15 @@
       "blog": "Integrations on Azure",
       "blogId": "integrationsonazureblog",
       "author": "Emmanuel_Abram_Profeta"
+    },
+    {
+      "title": "[Launched] Generally Available: Azure Premium SSD v2 Disk is now available in Brazil Southeast, and in a third Availability Zone in Malaysia West and Indonesia Central",
+      "link": "https://azure.microsoft.com/updates?id=557623",
+      "published": "2026-02-20T19:00:04+00:00",
+      "summary": "Azure Premium SSD v2 is now available in Brazil Southeast (a region without Availability Zone), and in a third Availability Zone in Malaysia West and Indonesia Central.Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for A",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "Microsoft Agent Pre-Purchase Plan: One Unified Path to Scale AI Agents",
@@ -1245,6 +1497,51 @@
       "author": "Daramfon"
     },
     {
+      "title": "[Launched] Generally Available: Anthropic Claude Sonnet 4.6 is now available on Azure Databricks",
+      "link": "https://azure.microsoft.com/updates?id=557595",
+      "published": "2026-02-18T18:00:55+00:00",
+      "summary": "Azure Databricks now supports Anthropic Claude Sonnet 4.6 through Azure Databricks AI Model Serving. Claude Sonnet 4.6 delivers frontier-level performance on complex coding, agentic workflows, and professional knowledge work including reasoning at a lower",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Unified tooling in the AKS MCP server",
+      "link": "https://azure.microsoft.com/updates?id=557223",
+      "published": "2026-02-18T18:00:55+00:00",
+      "summary": "Managing AKS MCP servers can be affected by the number of tools and the amount of context required, which can increase latency and cost. The unified tooling for the AKS MCP Server introduces two new tools in public preview, call_az and call_kubectl, that",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Cluster mode for the agentic CLI for AKS",
+      "link": "https://azure.microsoft.com/updates?id=557218",
+      "published": "2026-02-18T18:00:55+00:00",
+      "summary": "Users often face security and manageability challenges when diagnostic agents inherit broad user permissions, such as cluster-admin rights, and when each user must deploy their own instance. Cluster mode for the agentic CLI for AKS, now in public preview,",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: Quota and deployment troubleshooting tools for Azure Functions Flex Consumption",
+      "link": "https://azure.microsoft.com/updates?id=556008",
+      "published": "2026-02-18T18:00:55+00:00",
+      "summary": "Azure Functions Flex Consumption introduces new platform‑integrated tools that provide clearer insight into quota availability and deployment behavior. The quota troubleshooting experience surfaces Flex Consumption quota limits and related constraints,",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: Azure Functions .NET 10 support",
+      "link": "https://azure.microsoft.com/updates?id=556003",
+      "published": "2026-02-18T18:00:55+00:00",
+      "summary": "Azure Functions support for .NET 10 is generally available, enabling production use of the latest .NET runtime for serverless applications. This support was introduced as part of the Azure Functions Ignite 2025 updates. .NET 10 is supported using the iso",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "Azure Migrate: Now Supporting Premium SSD V2, Ultra and ZRS Disks as Targets",
       "link": "https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-migrate-now-supporting-premium-ssd-v2-ultra-and-zrs-disks/ba-p/4495332",
       "published": "2026-02-18T17:22:53+00:00",
@@ -1252,6 +1549,15 @@
       "blog": "Azure Storage",
       "blogId": "azurestorageblog",
       "author": "Lakshya_Jalan"
+    },
+    {
+      "title": "[Launched] Generally Available: Node auto-provisioning support in Sovereign Cloud",
+      "link": "https://azure.microsoft.com/updates?id=557208",
+      "published": "2026-02-18T17:15:17+00:00",
+      "summary": "Node auto‑provisioning removes the need for teams to manually size and manage compute resources for Kubernetes workloads. Azure Kubernetes Service (AKS) now provides general availability support for node auto‑provisioning in Sovereign Cloud. This capabili",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "Federating Databases with Data API Builder Chaining",
@@ -1272,6 +1578,15 @@
       "author": "Zeinab Mokhtarian Koorabbasloo"
     },
     {
+      "title": "[Launched] Generally Available: Node auto-provisioning enabled clusters in AKS now support LocalDNS",
+      "link": "https://azure.microsoft.com/updates?id=557203",
+      "published": "2026-02-18T16:45:58+00:00",
+      "summary": "Customers previously could not enable LocalDNS on clusters that used Node auto‑provisioning in AKS, limiting their ability to use this feature in those environments. LocalDNS is now generally available for AKS clusters with Node auto‑provisioning, providi",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
       "title": "TFVC Remove Existing Obsolete Policies ASAP",
       "link": "https://devblogs.microsoft.com/devops/tfvc-remove-existing-obsolete-policies-asap/",
       "published": "2026-02-18T16:35:23+00:00",
@@ -1279,6 +1594,15 @@
       "blog": "Azure DevOps Blog",
       "blogId": "azuredevops",
       "author": "Dan Hellem"
+    },
+    {
+      "title": "[Launched] Generally Available: Encryption at host & disk encryption sets support in node auto-provisioning",
+      "link": "https://azure.microsoft.com/updates?id=557213",
+      "published": "2026-02-18T16:30:06+00:00",
+      "summary": "Node auto-provisioning enabled clusters previously did not have support for Encryption at Host and disk encryption sets. This limited users with certain security requirements for their cluster to not be able to use node auto-provisioning. Node auto-pro",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "AI-Powered RAN and the Intelligent Edge: Microsoft’s Vision for the Future of Telecom",
@@ -1333,6 +1657,15 @@
       "blog": "Azure SQL Dev Corner",
       "blogId": "azuresqlblog",
       "author": "Jerry Nixon"
+    },
+    {
+      "title": "[Launched] Generally Available: Instant access support for incremental snapshots of Azure Premium SSD v2 and Ultra Disk",
+      "link": "https://azure.microsoft.com/updates?id=545784",
+      "published": "2026-02-17T17:00:32+00:00",
+      "summary": "Announcing the General Availability of instant access support for incremental snapshots of Premium SSD v2 (Pv2) and Ultra Disk. This new capability enables you to restore new disks immediately after creating snapshots of Pv2 and Ultra disks. Newly restore",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "RDP Shortpath (UDP) over Private Link is now generally available",
