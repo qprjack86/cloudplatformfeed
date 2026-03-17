@@ -144,12 +144,26 @@
   // ===== Render Filter Pills (with category grouping) =====
   function renderFilters() {
     var blogCounts = {};
+<<<<<<< codex/update-azure-updates-visibility-settings
+=======
+    var azureUpdatesCategoryCounts = {};
+>>>>>>> master
     articles.forEach(function (a) {
       if (!blogCounts[a.blogId]) {
         blogCounts[a.blogId] = { name: a.blog, count: 0 };
       }
       blogCounts[a.blogId].count++;
 
+<<<<<<< codex/update-azure-updates-visibility-settings
+=======
+      if (a.blogId === AZURE_UPDATES_BLOG_ID) {
+        Object.keys(CATEGORIES).forEach(function (catName) {
+          if (articleMatchesCategory(a, catName)) {
+            azureUpdatesCategoryCounts[catName] = (azureUpdatesCategoryCounts[catName] || 0) + 1;
+          }
+        });
+      }
+>>>>>>> master
     });
 
     // Category bar
@@ -164,6 +178,10 @@
       catBlogs.forEach(function (blogId) {
         if (blogCounts[blogId]) catCount += blogCounts[blogId].count;
       });
+<<<<<<< codex/update-azure-updates-visibility-settings
+=======
+      catCount += azureUpdatesCategoryCounts[catName] || 0;
+>>>>>>> master
       if (catCount > 0) {
         catHtml +=
           '<button class="category-pill" data-category="' + catName + '">' +
@@ -220,9 +238,14 @@
 
     // Category filter
     if (currentCategory !== "all") {
+<<<<<<< codex/update-azure-updates-visibility-settings
       var catBlogs = CATEGORIES[currentCategory] || [];
       result = result.filter(function (a) {
         return catBlogs.indexOf(a.blogId) !== -1;
+=======
+      result = result.filter(function (a) {
+        return articleMatchesCategory(a, currentCategory);
+>>>>>>> master
       });
     }
 

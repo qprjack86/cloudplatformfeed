@@ -1,7 +1,124 @@
 {
-  "lastUpdated": "2026-03-17T16:25:55.360396+00:00",
-  "totalArticles": 190,
+  "lastUpdated": "2026-03-17T22:41:39.275552+00:00",
+  "totalArticles": 200,
   "articles": [
+    {
+      "title": "From 150 Unread to Zero Stress: Automating Inbox Triage with MCP and GitHub Copilot",
+      "link": "https://devblogs.microsoft.com/all-things-azure/from-150-unread-to-zero-stress-automating-inbox-triage-with-mcp-and-github-copilot/",
+      "published": "2026-03-17T21:54:09+00:00",
+      "summary": "Taming the Noisy Inbox: How I Used MCP to Automate Email and Teams Triage How the Model Context Protocol (MCP) turns your AI coding assistant into a workplace productivity engine — connecting Microsoft 365 data to your terminal workflow. The Problem We All Share If you work in a customer-facing...",
+      "blog": "All Things Azure",
+      "blogId": "allthingsazure",
+      "author": "Desi Villanueva"
+    },
+    {
+      "title": "Announcing Microsoft Azure Network Adapter (MANA) support for Existing VM SKUs",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-microsoft-azure-network-adapter-mana-support-for/ba-p/4493279",
+      "published": "2026-03-17T21:32:59+00:00",
+      "summary": "As a leader in cloud infrastructure, Microsoft ensures that Azure’s IaaS customers always have access to the latest hardware. Our goal is to consistently deliver technology to support business critical workloads with world class efficiency, reliability, and security. Customers benefit from...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "ali_sheriff"
+    },
+    {
+      "title": "Azure Skills Plugin – Let’s Get Started!",
+      "link": "https://devblogs.microsoft.com/all-things-azure/azure-skills-plugin-lets-get-started/",
+      "published": "2026-03-17T21:05:08+00:00",
+      "summary": "Part 2 of the Azure Skills Plugin series Previously: Announcing the Azure Skills Plugin This post is all about getting you up and running. I won’t go deep on capabilities, architecture or anything like that here – that’s coming in future posts in this series. The goal is to get the plugin...",
+      "blog": "All Things Azure",
+      "blogId": "allthingsazure",
+      "author": "Chris Harris"
+    },
+    {
+      "title": "After Ingress NGINX: Migrating to Application Gateway for Containers",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/after-ingress-nginx-migrating-to-application-gateway-for/ba-p/4503110",
+      "published": "2026-03-17T21:03:22+00:00",
+      "summary": "If you're running Ingress NGINX on AKS, you've probably seen the announcements by now. The community Ingress Nginx project is being retired, upstream maintenance ends in March 2026, and Microsoft's extended support for the Application Routing add-on runs out in November 2026. A requirement to...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "samcogan"
+    },
+    {
+      "title": "Orchestrating Intrusion Detection and Prevention Signature overrides in Azure Firewall Premium",
+      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/orchestrating-intrusion-detection-and-prevention-signature/ba-p/4502213",
+      "published": "2026-03-17T20:13:25+00:00",
+      "summary": "Introduction: Azure Firewall Premium provides strong protection with a built-in Intrusion Detection and Prevention System (IDPS). It inspects inbound, outbound, and east-west traffic against Microsoft’s continuously updated signature set and can block threats before they reach your workloads. IDPS...",
+      "blog": "Azure Network Security",
+      "blogId": "azurenetworksecurityblog",
+      "author": "saikishor"
+    },
+    {
+      "title": "The LLM Inference Optimization Stack: A Prioritized Playbook for Enterprise Teams",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-llm-inference-optimization-stack-a-prioritized-playbook-for/ba-p/4498818",
+      "published": "2026-03-17T18:29:02+00:00",
+      "summary": "The Solutions — An Optimization Stack for Enterprise Inference The optimizations below are ordered by implementation priority — starting with the highest-leverage. The Three-Layer Serving Stack Most enterprise LLM deployments operate across three layers, each responsible for a different part of the...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "bobmital"
+    },
+    {
+      "title": "Building an Enterprise Platform for Inference at Scale",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-an-enterprise-platform-for-inference-at-scale/ba-p/4498820",
+      "published": "2026-03-17T18:28:24+00:00",
+      "summary": "Architecture Decisions With the optimization stack in place, the next layer of decisions is architectural — how you distribute compute across GPUs, nodes, and deployment environments to match your model size and traffic profile. GPU Parallelism Strategy on AKS Strategy How It Works When to Use...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "bobmital"
+    },
+    {
+      "title": "Detect, correlate, contain: New Azure Firewall IDPS detections in Microsoft Sentinel and XDR",
+      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/detect-correlate-contain-new-azure-firewall-idps-detections-in/ba-p/4502128",
+      "published": "2026-03-17T18:02:43+00:00",
+      "summary": "As threat actors continue to blend reconnaissance, exploitation, and post-compromise activity, network-level signals remain critical for early detection and correlated response. To strengthen this layer, we're introducing five new Azure Firewall IDPS detections, now available out of the box in the...",
+      "blog": "Azure Network Security",
+      "blogId": "azurenetworksecurityblog",
+      "author": "Mohit_Kumar"
+    },
+    {
+      "title": "PowerToys 0.98 is here: new Keyboard Manager UX, the Command Palette Dock and better CursorWrap!",
+      "link": "https://devblogs.microsoft.com/commandline/powertoys-0-98-is-here-new-keyboard-manager-ux-the-command-palette-dock-and-better-cursorwrap/",
+      "published": "2026-03-17T17:47:43+00:00",
+      "summary": "We’re back with a fresh PowerToys release – PowerToys 0.98! This month introduces the new Command Palette Dock, along with a refreshed Keyboard Manager experience and many other improvements across the utilities. You can grab the update by checking for updates in PowerToys or by heading to the...",
+      "blog": "Windows Command Line",
+      "blogId": "commandline",
+      "author": "Niels Laute"
+    },
+    {
+      "title": "[Launched] Generally Available: Default Rule Set 2.2 and updates to ruleset support policy",
+      "link": "https://azure.microsoft.com/updates?id=558016",
+      "published": "2026-03-17T17:45:45+00:00",
+      "summary": "We are updating the managed ruleset support policy for Azure Web Application Firewall (WAF) following the general availability of Default Rule Set (DRS) 2.2 on Azure Application Gateway and Azure Front Door. This update provides a clearer, more predictabl",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: Foundry Agent Service",
+      "link": "https://azure.microsoft.com/updates?id=557141",
+      "published": "2026-03-17T17:45:45+00:00",
+      "summary": "Announcing general availability (GA) of the next-gen Foundry Agent Service—a redesigned API format and runtime experience designed to help teams build and operate agents that can move from prototype to production with confidence. This GA moment is anchore",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Retirement: Azure VMware Solution AV36P and AV52 node retirement on June 30, 2029",
+      "link": "https://azure.microsoft.com/updates?id=557094",
+      "published": "2026-03-17T17:30:11+00:00",
+      "summary": "Microsoft is announcing the retirement of the AV36P and AV52 Nodes on June 30, 2029. The terms of your current AV36P and AV52 Reserved Instance (RI) are not affected by this announcement. At this time, we recommend that you review your current RI expirati",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Introducing the Azure Cosmos DB Plugin for Cursor",
+      "link": "https://devblogs.microsoft.com/cosmosdb/introducing-the-azure-cosmos-db-plugin-for-cursor/",
+      "published": "2026-03-17T17:03:09+00:00",
+      "summary": "We’re excited to announce the Cursor plugin for Azure Cosmos DB bringing AI-powered database expertise, best practices guidance, and live database connectivity directly into your coding workflow. Whether you’re designing a new data model, optimizing queries, or building a RAG application with...",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Sajeetharan Sinnathurai"
+    },
     {
       "title": "Azure DevOps Remote MCP Server (public preview)",
       "link": "https://devblogs.microsoft.com/devops/azure-devops-remote-mcp-server-public-preview/",
@@ -177,7 +294,7 @@
       "title": "Scaling multi-node LLM inference with NVIDIA Dynamo and NVIDIA GPUs on AKS (Part 3)",
       "link": "https://blog.aks.azure.com/2026/03/16/dynamo-on-aks-part-3",
       "published": "2026-03-16T00:00:00+00:00",
-      "summary": "Learn how NVIDIA Dynamo's KV Router optimizes multi-worker LLM inference on AKS with H100 GPUs, achieving 25% lower p99 latency through intelligent routing.",
+      "summary": "Learn how NVIDIA Dynamo's KV Router optimizes multi-worker LLM inference on AKS with H100 GPUs, achieving lower latency through intelligent routing.",
       "blog": "AKS Blog",
       "blogId": "aksblog",
       "author": "Microsoft"
@@ -615,15 +732,6 @@
       "author": "Sabyasachi-Samaddar"
     },
     {
-      "title": "The LLM Inference Optimization Stack: A Prioritized Playbook for Enterprise Teams",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-llm-inference-optimization-stack-a-prioritized-playbook-for/ba-p/4498818",
-      "published": "2026-03-08T15:43:12+00:00",
-      "summary": "The Solutions — An Optimization Stack for Enterprise Inference The optimizations below are ordered by implementation priority — starting with the highest-leverage. The Three-Layer Serving Stack Most enterprise LLM deployments operate across three layers, each responsible for a different part of the...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "bobmital"
-    },
-    {
       "title": "Microsoft at NVIDIA GTC 2026",
       "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/microsoft-at-nvidia-gtc-2026/ba-p/4497670",
       "published": "2026-03-06T23:44:35+00:00",
@@ -1056,15 +1164,6 @@
       "author": "susaraswat4"
     },
     {
-      "title": "Get started with Atlassian Rovo MCP server in Azure SRE Agent",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-atlassian-rovo-mcp-server-in-azure-sre-agent/ba-p/4497122",
-      "published": "2026-02-26T23:01:46+00:00",
-      "summary": "Get started with Atlassian Rovo MCP server in Azure SRE Agent Connect Azure SRE Agent to Jira, Confluence, Compass, and Jira Service Management using the official Atlassian Rovo MCP server. Overview The Atlassian Rovo MCP server is a cloud-hosted bridge between your Atlassian Cloud site and Azure...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "dbandaru"
-    },
-    {
       "title": "Unlocking value with Microsoft Sentinel data lake",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/unlocking-value-with-microsoft-sentinel-data-lake/ba-p/4497660",
       "published": "2026-02-26T22:28:54+00:00",
@@ -1261,15 +1360,6 @@
       "blog": "Integrations on Azure",
       "blogId": "integrationsonazureblog",
       "author": "KentWeareMSFT"
-    },
-    {
-      "title": "Best Practice: Using Self-Signed Certificates with Java on Azure Functions (Linux)",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/best-practice-using-self-signed-certificates-with-java-on-azure/ba-p/4496900",
-      "published": "2026-02-25T08:08:28+00:00",
-      "summary": "If you are developing Java applications on Azure Functions (Linux dedicated plan) and need to connect to services secured by self-signed certificates, you have likely encountered the dreaded SSL handshake error: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException:...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "wanjing"
     },
     {
       "title": "Visual Studio February Update",
