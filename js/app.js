@@ -14,6 +14,19 @@
     "Specialized": ["azurecommunicationservicesblog", "azureconfidentialcomputingblog", "azuremapsblog", "telecommunications-industry-blog", "microsoft-planetary-computer-blog"]
   };
 
+  var AZURE_UPDATES_BLOG_ID = "azureupdates";
+  var AZURE_UPDATES_CATEGORY_KEYWORDS = {
+    "Compute": ["batch", "virtual machine", "vm", "aks", "kubernetes", "gpu", "container", "app service"],
+    "Data & AI": ["sql", "database", "cosmos", "databricks", "ai", "openai", "machine learning", "fabric", "synapse"],
+    "Infrastructure": ["network", "vnet", "storage", "backup", "disaster recovery", "firewall", "load balancer", "vpn", "expressroute"],
+    "Architecture": ["architecture", "well-architected", "reference architecture", "design pattern"],
+    "Apps & Platform": ["api management", "functions", "logic apps", "service bus", "event grid", "web app", "integration"],
+    "Operations": ["monitor", "observability", "policy", "governance", "cost", "finops", "devops", "migration", "retirement", "support"],
+    "Community": ["event", "community", "conference", "meetup", "hackathon"],
+    "Developer Tools": ["visual studio", "vscode", "sdk", "cli", "powershell", "bicep", "terraform", "github"],
+    "Specialized": ["iot", "maps", "quantum", "confidential", "communication services", "telecommunications", "planetary"]
+  };
+
   // ===== State =====
   var articles = [];
   var filteredArticles = [];
@@ -131,11 +144,20 @@
   // ===== Render Filter Pills (with category grouping) =====
   function renderFilters() {
     var blogCounts = {};
+    var azureUpdatesCategoryCounts = {};
     articles.forEach(function (a) {
       if (!blogCounts[a.blogId]) {
         blogCounts[a.blogId] = { name: a.blog, count: 0 };
       }
       blogCounts[a.blogId].count++;
+
+      if (a.blogId === AZURE_UPDATES_BLOG_ID) {
+        Object.keys(CATEGORIES).forEach(function (catName) {
+          if (articleMatchesCategory(a, catName)) {
+            azureUpdatesCategoryCounts[catName] = (azureUpdatesCategoryCounts[catName] || 0) + 1;
+          }
+        });
+      }
     });
 
     // Category bar
@@ -150,6 +172,7 @@
       catBlogs.forEach(function (blogId) {
         if (blogCounts[blogId]) catCount += blogCounts[blogId].count;
       });
+      catCount += azureUpdatesCategoryCounts[catName] || 0;
       if (catCount > 0) {
         catHtml +=
           '<button class="category-pill" data-category="' + catName + '">' +
@@ -206,9 +229,8 @@
 
     // Category filter
     if (currentCategory !== "all") {
-      var catBlogs = CATEGORIES[currentCategory] || [];
       result = result.filter(function (a) {
-        return catBlogs.indexOf(a.blogId) !== -1;
+        return articleMatchesCategory(a, currentCategory);
       });
     }
 
@@ -292,6 +314,24 @@
     }
 
     articlesGrid.innerHTML = html;
+  }
+
+  function articleMatchesCategory(article, categoryName) {
+    var catBlogs = CATEGORIES[categoryName] || [];
+    if (catBlogs.indexOf(article.blogId) !== -1) {
+      return true;
+    }
+
+    if (article.blogId !== AZURE_UPDATES_BLOG_ID) {
+      return false;
+    }
+
+    var text = (article.title + " " + article.summary).toLowerCase();
+    var keywords = AZURE_UPDATES_CATEGORY_KEYWORDS[categoryName] || [];
+
+    return keywords.some(function (keyword) {
+      return text.indexOf(keyword) !== -1;
+    });
   }
 
   // ===== Group by Date =====
