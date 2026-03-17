@@ -368,7 +368,11 @@ def generate_ai_summary(articles):
         return summary
 
     except Exception as e:
-        print(f"AI summary failed: {e}")
+        print(
+            "AI summary failed "
+            "(check Azure OpenAI auth, AZURE_OPENAI_API_VERSION, "
+            f"and AZURE_OPENAI_DEPLOYMENT): {e}"
+        )
         return None
 
 
