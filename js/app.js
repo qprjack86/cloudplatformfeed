@@ -8,10 +8,23 @@
     "Infrastructure": ["azureinfrastructureblog", "azurearcblog", "azurestackblog", "azurenetworkingblog", "azurenetworksecurityblog", "azurestorageblog"],
     "Architecture": ["azurearchitectureblog", "azure-customer-innovation-blog", "iseblog"],
     "Apps & Platform": ["appsonazureblog", "azurepaasblog", "integrationsonazureblog", "messagingonazureblog", "aspireblog", "azuresdkblog"],
-    "Operations": ["azuregovernanceandmanagementblog", "azureobservabilityblog", "finopsblog", "azuretoolsblog", "azuremigrationblog", "azuredevops"],
+    "Operations": ["azuregovernanceandmanagementblog", "azureobservabilityblog", "finopsblog", "azuretoolsblog", "azuremigrationblog", "azuredevops", "azureupdates"],
     "Community": ["azuredevcommunityblog", "azure-events", "linuxandopensourceblog", "allthingsazure", "msdevblog"],
     "Developer Tools": ["visualstudio", "vscodeblog", "commandline", "developfromthecloud"],
     "Specialized": ["azurecommunicationservicesblog", "azureconfidentialcomputingblog", "azuremapsblog", "telecommunications-industry-blog", "microsoft-planetary-computer-blog"]
+  };
+
+  var AZURE_UPDATES_BLOG_ID = "azureupdates";
+  var AZURE_UPDATES_CATEGORY_KEYWORDS = {
+    "Compute": ["batch", "virtual machine", "vm", "aks", "kubernetes", "gpu", "container", "app service"],
+    "Data & AI": ["sql", "database", "cosmos", "databricks", "ai", "openai", "machine learning", "fabric", "synapse"],
+    "Infrastructure": ["network", "vnet", "storage", "backup", "disaster recovery", "firewall", "load balancer", "vpn", "expressroute"],
+    "Architecture": ["architecture", "well-architected", "reference architecture", "design pattern"],
+    "Apps & Platform": ["api management", "functions", "logic apps", "service bus", "event grid", "web app", "integration"],
+    "Operations": ["monitor", "observability", "policy", "governance", "cost", "finops", "devops", "migration", "retirement", "support"],
+    "Community": ["event", "community", "conference", "meetup", "hackathon"],
+    "Developer Tools": ["visual studio", "vscode", "sdk", "cli", "powershell", "bicep", "terraform", "github"],
+    "Specialized": ["iot", "maps", "quantum", "confidential", "communication services", "telecommunications", "planetary"]
   };
 
   // ===== State =====
@@ -136,6 +149,7 @@
         blogCounts[a.blogId] = { name: a.blog, count: 0 };
       }
       blogCounts[a.blogId].count++;
+
     });
 
     // Category bar
@@ -292,6 +306,24 @@
     }
 
     articlesGrid.innerHTML = html;
+  }
+
+  function articleMatchesCategory(article, categoryName) {
+    var catBlogs = CATEGORIES[categoryName] || [];
+    if (catBlogs.indexOf(article.blogId) !== -1) {
+      return true;
+    }
+
+    if (article.blogId !== AZURE_UPDATES_BLOG_ID) {
+      return false;
+    }
+
+    var text = (article.title + " " + article.summary).toLowerCase();
+    var keywords = AZURE_UPDATES_CATEGORY_KEYWORDS[categoryName] || [];
+
+    return keywords.some(function (keyword) {
+      return text.indexOf(keyword) !== -1;
+    });
   }
 
   // ===== Group by Date =====
