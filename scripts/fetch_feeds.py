@@ -359,7 +359,7 @@ def generate_ai_summary(articles):
         response = client.chat.completions.create(
             model=deployment,
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=200,
+            max_completion_tokens=200,
         )
         summary = response.choices[0].message.content.strip()
         print(f"AI summary generated: {summary[:100]}...")
