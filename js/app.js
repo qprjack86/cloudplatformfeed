@@ -70,6 +70,7 @@
   var bookmarksToggle = document.getElementById("bookmarks-toggle");
   var otherBlogsToggle = document.getElementById("other-blogs-toggle");
   var aiSummaryEl = document.getElementById("ai-summary");
+  var savillVideoEl = document.getElementById("savill-video");
 
   // ===== Initialize =====
   async function init() {
@@ -210,6 +211,34 @@
       }
 
       updateOtherBlogsToggleUI();
+
+      // Render John Savill video card if available
+      if (savillVideoEl && data.savillVideo) {
+        var sv = data.savillVideo;
+        var svDate = "";
+        if (sv.published) {
+          var svd = new Date(sv.published);
+          svDate = svd.toLocaleDateString("en-GB", {
+            day: "numeric", month: "short", year: "numeric", timeZone: "UTC"
+          });
+        }
+        var thumbHtml = sv.thumbnail
+          ? '<img class="savill-thumb" src="' + escapeHtml(sv.thumbnail) +
+            '" alt="Video thumbnail" loading="lazy" onerror="this.style.display=\'none\'" />'
+          : '<div class="savill-thumb savill-thumb-placeholder">▶</div>';
+        savillVideoEl.innerHTML =
+          '<a class="savill-card" href="' + escapeHtml(sv.url) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          '<div class="savill-label">🎬 Latest John Savill Azure Update</div>' +
+          '<div class="savill-body">' +
+          '<div class="savill-thumb-wrap">' + thumbHtml + '<span class="savill-play">▶</span></div>' +
+          '<div class="savill-info">' +
+          '<div class="savill-title">' + escapeHtml(sv.title) + '</div>' +
+          (svDate ? '<div class="savill-date">' + escapeHtml(svDate) + '</div>' : '') +
+          '</div></div></a>';
+        savillVideoEl.style.display = "block";
+      }
+
       renderFilters();
       applyFilters();
     } catch (err) {

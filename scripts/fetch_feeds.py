@@ -56,6 +56,10 @@ TC_RSS_URL = (
 )
 AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
 AZURE_UPDATES_FEED = "https://www.microsoft.com/releasecommunications/api/v2/azure/rss"
+SAVILL_YOUTUBE_RSS = (
+    "https://www.youtube.com/feeds/videos.xml"
+    "?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+)
 SUMMARY_WINDOW_DAYS = 7
 SUMMARY_MAX_ARTICLES = 20
 
@@ -339,6 +343,56 @@ def fetch_devblogs_feeds():
         time.sleep(0.5)
 
     return articles
+
+
+def fetch_savill_video():
+    """Fetch John Savill's latest Azure Infrastructure Update video from YouTube RSS."""
+    print("Fetching: John Savill YouTube channel...")
+    try:
+        feed = feedparser.parse(SAVILL_YOUTUBE_RSS)
+        if not feed.entries:
+            print("  Warning: No entries in Savill YouTube feed")
+            return None
+
+        def match_score(entry):
+            t = entry.get("title", "").lower()
+            if "azure infrastructure update" in t:
+                return 3
+            if "azure" in t and "infrastructure" in t:
+                return 2
+            if "azure" in t and "update" in t:
+                return 1
+            return 0
+
+        # Sort by score descending; entries are already newest-first so first
+        # high-scoring entry wins when scores are equal.
+        best = max(feed.entries, key=match_score)
+        if match_score(best) == 0:
+            best = feed.entries[0]  # fallback: latest video regardless of topic
+
+        link = best.get("link", "")
+
+        # Extract thumbnail: prefer media:thumbnail element, fall back to ytimg URL
+        thumbnail = ""
+        media_thumbs = getattr(best, "media_thumbnail", None) or best.get("media_thumbnail", [])
+        if media_thumbs:
+            thumbnail = media_thumbs[0].get("url", "")
+        if not thumbnail:
+            m = re.search(r"[?&]v=([A-Za-z0-9_-]+)", link)
+            if m:
+                thumbnail = f"https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg"
+
+        result = {
+            "title": clean_html(best.get("title", "")),
+            "url": link,
+            "published": parse_date(best),
+            "thumbnail": thumbnail,
+        }
+        print(f"  Found: {result['title'][:70]}")
+        return result
+    except Exception as e:
+        print(f"  Error fetching Savill YouTube: {e}")
+        return None
 
 
 def fetch_azure_updates_feed():
@@ -625,6 +679,9 @@ def main():
     all_articles.extend(fetch_devblogs_feeds())
     all_articles.extend(fetch_azure_updates_feed())
 
+    # Fetch Savill video (independent of article feeds)
+    savill_video = fetch_savill_video()
+
     # Sort by date, newest first
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
@@ -665,6 +722,8 @@ def main():
         data["summaryError"] = summary_payload["error"]
     if summary_payload.get("summary"):
         data["summary"] = summary_payload["summary"]
+    if savill_video:
+        data["savillVideo"] = savill_video
 
     os.makedirs("data", exist_ok=True)
     output_path = os.path.join("data", "feeds.json")
