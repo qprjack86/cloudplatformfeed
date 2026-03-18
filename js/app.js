@@ -127,12 +127,17 @@
         var publishingDays = Array.isArray(data.summaryPublishingDays)
           ? data.summaryPublishingDays
           : [];
-        var summaryWindowDays = typeof data.summaryWindowDays === "number"
-          ? data.summaryWindowDays
-          : publishingDays.length;
+        var summaryWindowDays =
+          typeof data.summaryWindowDays === "number" && data.summaryWindowDays > 0
+            ? data.summaryWindowDays
+            : publishingDays.length > 0
+              ? publishingDays.length
+              : null;
         var summaryLabel = summaryWindowDays === 1
           ? "AI Highlights: Latest Publishing Day"
-          : "AI Highlights: Last " + summaryWindowDays + " Publishing Days";
+          : summaryWindowDays
+            ? "AI Highlights: Last " + summaryWindowDays + " Publishing Days"
+            : "AI Highlights";
         var summaryMeta = publishingDays.length > 0
           ? '<p class="ai-summary-meta">Covering: ' + escapeHtml(publishingDays.join(", ")) + "</p>"
           : "";
