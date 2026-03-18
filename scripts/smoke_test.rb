@@ -85,4 +85,18 @@ articles.each_with_index do |article, index|
   end
 end
 
+# Regression guard: Tech Community articles should always be present.
+# If this drops to zero, the feed parser likely regressed for those sources.
+techcommunity_articles = articles.select do |article|
+  article["link"].include?("techcommunity.microsoft.com/t5/")
+end
+assert(!techcommunity_articles.empty?, "expected at least one Tech Community article in feeds.json")
+
+techcommunity_articles.each_with_index do |article, index|
+  assert(
+    article["published"].match?(/^\d{4}-\d{2}-\d{2}T/),
+    "Tech Community article #{index} has non-ISO published timestamp"
+  )
+end
+
 puts "Smoke tests passed"
