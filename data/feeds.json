@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-18T15:35:15.632189+00:00",
+  "lastUpdated": "2026-03-18T15:37:30.899885+00:00",
   "totalArticles": 87,
   "articles": [
     {
@@ -799,7 +799,7 @@
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 33,
-  "summary": "- In preview:\n  • [Entra ID‑based access for Azure Blob Storage SFTP](https://azure.microsoft.com/updates?id=558662)\n  • [Azure Storage Mover private data transfers from AWS S3 to Azure Blob](https://azure.microsoft.com/updates?id=558651)\n  • [Customer‑managed keys on Premium SSD v2 disks for Azure Database for PostgreSQL](https://azure.microsoft.com/updates?id=557527)\n  • [Query Profiler in MSSQL extension for Visual Studio Code](https://azure.microsoft.com/updates?id=558164)\n\n- Launched / Generally Available:\n  • [Default Rule Set 2.2 and updates to ruleset support policy](https://azure.microsoft.com/updates?id=558016)\n  • [Foundry Agent Service](https://azure.microsoft.com/updates?id=557141)\n  • [Log Analytics summary rules manual “Retry bin” capability](https://azure.microsoft.com/updates?id=558656)\n  • [Terraform, Bicep, and Ansible support for elastic clusters on Azure Database for PostgreSQL](https://azure.microsoft.com/updates?id=558145)\n  • [Azure Database for PostgreSQL dashboards with Grafana](https://azure.microsoft.com/updates?id=558140)\n  • [Azure SRE Agent with new capabilities](https://azure.microsoft.com/updates?id=558321)\n\n- In development:\n  • none noted in selected window",
+  "summary": "- In preview:\n  • [Entra ID‑based access for Azure Blob Storage SFTP](https://azure.microsoft.com/updates?id=558662)\n  • [Azure Storage Mover private data transfers from AWS S3 to Azure Blob](https://azure.microsoft.com/updates?id=558651)\n  • [Customer‑managed keys for Premium SSD v2 disks with Azure Database for PostgreSQL](https://azure.microsoft.com/updates?id=557527)\n  • [Query Profiler in the MSSQL extension for Visual Studio Code](https://azure.microsoft.com/updates?id=558164)\n\n- Launched / Generally Available:\n  • [Azure Front Door and WAF Default Rule Set 2.2 with updated ruleset support policy](https://azure.microsoft.com/updates?id=558016)\n  • [Foundry Agent Service for enterprise AI agents with private networking and evaluations](https://devblogs.microsoft.com/foundry/foundry-agent-service-ga/)\n  • [Log Analytics summary rules add manual “Retry bin” capability](https://azure.microsoft.com/updates?id=558656)\n  • [Azure Database for PostgreSQL elastic clusters now support Terraform, Bicep, and Ansible](https://azure.microsoft.com/updates?id=558140)\n  • [Azure Database for PostgreSQL dashboards integration with Grafana](https://azure.microsoft.com/updates?id=558140)\n  • [Azure SRE Agent with expanded reliability and operations capabilities](https://azure.microsoft.com/updates?id=558321)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 13th March 2026",
     "url": "https://www.youtube.com/watch?v=17uHDPjdkto",
