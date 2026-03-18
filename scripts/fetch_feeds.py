@@ -476,7 +476,6 @@ def generate_ai_summary(articles):
                 {"role": "user", "content": prompt},
             ],
             max_completion_tokens=max_tokens,
-            temperature=0.2,
         )
         summary = normalize_summary_text(response.choices[0].message.content.strip())
         print(f"AI summary generated: {summary[:100]}...")
