@@ -489,14 +489,16 @@ def generate_ai_summary(articles):
         }
 
     except Exception as e:
+        error_msg = str(e)
         print(
             "AI summary failed "
             "(check Azure OpenAI auth, AZURE_OPENAI_API_VERSION, "
-            f"and AZURE_OPENAI_DEPLOYMENT): {e}"
+            f"and AZURE_OPENAI_DEPLOYMENT): {error_msg}"
         )
         return {
             "status": "unavailable",
             "reason": "azure_openai_failed",
+            "error": error_msg,
             "windowDays": SUMMARY_WINDOW_DAYS,
             "publishingDays": summary_days,
         }
@@ -549,6 +551,8 @@ def main():
         data["summaryArticleCount"] = summary_payload["articleCount"]
     if summary_payload.get("reason"):
         data["summaryReason"] = summary_payload["reason"]
+    if summary_payload.get("error"):
+        data["summaryError"] = summary_payload["error"]
     if summary_payload.get("summary"):
         data["summary"] = summary_payload["summary"]
 

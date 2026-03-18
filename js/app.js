@@ -148,9 +148,15 @@
         aiSummaryEl.classList.remove("is-unavailable");
         aiSummaryEl.style.display = "block";
       } else if (data.summaryStatus === "unavailable") {
+        var unavailMsg = "Azure OpenAI did not return a summary for this update.";
+        if (data.summaryError) {
+          unavailMsg += "<br><small style='opacity:0.7'>" + escapeHtml(data.summaryError) + "</small>";
+        } else if (data.summaryReason) {
+          unavailMsg += "<br><small style='opacity:0.7'>Reason: " + escapeHtml(data.summaryReason) + "</small>";
+        }
         aiSummaryEl.innerHTML =
           "<h2>🤖 AI Summary Unavailable</h2>" +
-          "<p>Azure OpenAI did not return a summary for this update.</p>";
+          "<p>" + unavailMsg + "</p>";
         aiSummaryEl.classList.add("is-unavailable");
         aiSummaryEl.style.display = "block";
       }
