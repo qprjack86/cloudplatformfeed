@@ -229,7 +229,7 @@
         savillVideoEl.innerHTML =
           '<a class="savill-card" href="' + escapeHtml(sv.url) +
           '" target="_blank" rel="noopener noreferrer">' +
-          '<div class="savill-label">🎬 Latest John Savill Azure Update</div>' +
+          '<div class="savill-label">🎬 Latest Azure Update Video</div>' +
           '<div class="savill-body">' +
           '<div class="savill-thumb-wrap">' + thumbHtml + '<span class="savill-play">▶</span></div>' +
           '<div class="savill-info">' +
