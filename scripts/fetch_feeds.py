@@ -382,6 +382,10 @@ def generate_ai_summary(articles):
     try:
         from openai import AzureOpenAI
 
+        # Scale article cap and token budget with the number of days being summarised
+        max_articles = SUMMARY_MAX_ARTICLES * len(summary_days)
+        max_tokens = min(200 * len(summary_days), 600)
+
         azure_updates_articles = [
             a for a in day_articles if a.get("blogId") == "azureupdates"
         ]
@@ -392,8 +396,8 @@ def generate_ai_summary(articles):
                 if article.get("blogId") != "azureupdates"
             ]
             summary_articles = (
-                azure_updates_articles[:SUMMARY_MAX_ARTICLES]
-                + remaining_articles[: max(0, SUMMARY_MAX_ARTICLES - len(azure_updates_articles[:SUMMARY_MAX_ARTICLES]))]
+                azure_updates_articles[:max_articles]
+                + remaining_articles[: max(0, max_articles - len(azure_updates_articles[:max_articles]))]
             )
             prompt = (
                 "You are an Azure Updates lifecycle editor. Summarize only items from Azure "
@@ -411,7 +415,7 @@ def generate_ai_summary(articles):
             print(
                 "No Azure Updates entries found in configured publishing-day window; summarizing recent articles"
             )
-            summary_articles = day_articles[:SUMMARY_MAX_ARTICLES]
+            summary_articles = day_articles[:max_articles]
             prompt = (
                 "You are an Azure cloud editor. Create a concise AI summary over the selected "
                 "recent publishing days with exactly 3 bullets under these headings: 'Platform "
@@ -444,7 +448,7 @@ def generate_ai_summary(articles):
         response = client.chat.completions.create(
             model=deployment,
             messages=[{"role": "user", "content": prompt}],
-            max_completion_tokens=200,
+            max_completion_tokens=max_tokens,
         )
         summary = response.choices[0].message.content.strip()
         print(f"AI summary generated: {summary[:100]}...")
