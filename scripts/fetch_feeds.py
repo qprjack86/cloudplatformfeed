@@ -384,6 +384,24 @@ def generate_ai_summary(articles):
             + ", ".join(missing)
             + "), skipping AI summary"
         )
+        # Preserve the last known good summary so a local run without credentials
+        # never erases the summary that CI previously generated.
+        existing_output = os.path.join("data", "feeds.json")
+        try:
+            with open(existing_output, "r", encoding="utf-8") as f:
+                existing = json.load(f)
+            if existing.get("summaryStatus") == "available" and existing.get("summary"):
+                print("  Preserving existing AI summary from previous CI run")
+                return {
+                    "status": "available",
+                    "summary": existing["summary"],
+                    "source": existing.get("summarySource", "azure-openai"),
+                    "windowDays": existing.get("summaryWindowDays", SUMMARY_WINDOW_DAYS),
+                    "publishingDays": existing.get("summaryPublishingDays", []),
+                    "articleCount": existing.get("summaryArticleCount", 0),
+                }
+        except (OSError, json.JSONDecodeError, KeyError):
+            pass
         return {
             "status": "unavailable",
             "reason": "missing_azure_openai_config",
