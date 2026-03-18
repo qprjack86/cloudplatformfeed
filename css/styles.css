@@ -767,9 +767,48 @@ footer a:hover {
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.4rem;
-  white-space: pre-line;
 }
 
 .ai-summary p:last-child {
   margin-bottom: 0;
+}
+
+.ai-section {
+  margin-bottom: 0.75rem;
+}
+
+.ai-section:last-child {
+  margin-bottom: 0;
+}
+
+.ai-section h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--azure-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.3rem 0;
+}
+
+.ai-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ai-section ul li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding: 0.15rem 0 0.15rem 1.1rem;
+  position: relative;
+}
+
+.ai-section ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--azure-blue);
+  font-size: 0.75rem;
+  top: 0.22rem;
 }

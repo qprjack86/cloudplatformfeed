@@ -129,24 +129,51 @@
         var publishingDays = Array.isArray(data.summaryPublishingDays)
           ? data.summaryPublishingDays
           : [];
-        var summaryWindowDays =
-          typeof data.summaryWindowDays === "number" && data.summaryWindowDays > 0
-            ? data.summaryWindowDays
-            : publishingDays.length > 0
-              ? publishingDays.length
-              : null;
-        var summaryLabel = summaryWindowDays === 1
-          ? "AI Highlights: Latest Publishing Day"
-          : summaryWindowDays
-            ? "AI Highlights: Last " + summaryWindowDays + " Publishing Days"
-            : "AI Highlights";
-        var summaryMeta = publishingDays.length > 0
-          ? '<p class="ai-summary-meta">Covering: ' + escapeHtml(publishingDays.join(", ")) + "</p>"
-          : "";
+
+        // Build UK date range label, e.g. "12 Mar – 18 Mar 2026"
+        function toUKDate(iso) {
+          var d = new Date(iso + "T00:00:00Z");
+          return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+        }
+        var dateLabel = "";
+        if (publishingDays.length >= 2) {
+          var oldest = publishingDays[publishingDays.length - 1];
+          var newest = publishingDays[0];
+          dateLabel = toUKDate(oldest) + " – " + toUKDate(newest);
+        } else if (publishingDays.length === 1) {
+          dateLabel = toUKDate(publishingDays[0]);
+        }
+        var summaryLabel = "Azure Updates" + (dateLabel ? ": " + dateLabel : "");
+
+        // Parse structured sections: "- Heading:\n  • item" into <h3>+<ul>
+        function renderSummaryHtml(text) {
+          var html = "";
+          var sectionRe = /^- (.+?):[ \t]*$/;
+          var bulletRe = /^[ \t]+[•\-\*] (.+)$/;
+          var lines = text.split(/\n/);
+          var inList = false;
+          lines.forEach(function (line) {
+            var sec = line.match(sectionRe);
+            var bul = line.match(bulletRe);
+            if (sec) {
+              if (inList) { html += "</ul>"; inList = false; }
+              html += '<div class="ai-section"><h3>' + escapeHtml(sec[1]) + "</h3><ul>";
+              inList = true;
+            } else if (bul && inList) {
+              html += "<li>" + escapeHtml(bul[1]) + "</li>";
+            } else if (line.trim()) {
+              // fallback plain line
+              if (inList) { html += "</ul>"; inList = false; html += "</div>"; }
+              html += "<p>" + escapeHtml(line) + "</p>";
+            }
+          });
+          if (inList) { html += "</ul></div>"; }
+          return html || "<p>" + escapeHtml(text) + "</p>";
+        }
+
         aiSummaryEl.innerHTML =
           "<h2>🤖 " + escapeHtml(summaryLabel) + "</h2>" +
-          summaryMeta +
-          "<p>" + escapeHtml(data.summary).replace(/\n/g, "<br>") + "</p>";
+          renderSummaryHtml(data.summary);
         aiSummaryEl.classList.remove("is-unavailable");
         aiSummaryEl.style.display = "block";
       } else if (data.summaryStatus === "unavailable") {
