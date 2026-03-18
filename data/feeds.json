@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-17T22:41:39.275552+00:00",
-  "totalArticles": 200,
+  "lastUpdated": "2026-03-18T00:17:39.834970+00:00",
+  "totalArticles": 201,
   "articles": [
+    {
+      "title": "Azure Front Door: Resiliency Series – Part 2: Faster recovery (RTO)",
+      "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-resiliency-series-part-2-faster-recovery-rto/ba-p/4503091",
+      "published": "2026-03-17T23:40:48+00:00",
+      "summary": "In Part 1 of this blog series, we outlined our four‑pillar strategy for resiliency in Azure Front Door: configuration resiliency, data plane resiliency, tenant isolation, and accelerated Recovery Time Objective (RTO). Together, these pillars help Azure Front Door remain continuously available and...",
+      "blog": "Azure Networking",
+      "blogId": "azurenetworkingblog",
+      "author": "AbhishekTiwari"
+    },
     {
       "title": "From 150 Unread to Zero Stress: Automating Inbox Triage with MCP and GitHub Copilot",
       "link": "https://devblogs.microsoft.com/all-things-azure/from-150-unread-to-zero-stress-automating-inbox-triage-with-mcp-and-github-copilot/",
@@ -1802,5 +1811,6 @@
       "blogId": "azuredevops",
       "author": "Dan Hellem"
     }
-  ]
+  ],
+  "summary": "- In preview: none today\n\n- Launched / Generally Available: [Launched] Default Rule Set 2.2 for Azure Web Application Firewall is now generally available with updated ruleset support policy; [Launched] Foundry Agent Service is now generally available; [Retirement notice] Azure VMware Solution AV36P and AV52 nodes will retire on June 30, 2029.\n\n- In development: none today"
 }
