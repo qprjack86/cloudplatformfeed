@@ -81,6 +81,12 @@ pip install -r scripts/requirements.txt
 python scripts/fetch_feeds.py
 ```
 
+Run targeted fetch-logic unit tests:
+
+```bash
+python -m unittest discover -s tests -p "test_*.py"
+```
+
 ### Python dependency locking (maintainers)
 
 - `scripts/requirements.in` is the source of truth for direct Python dependencies.
