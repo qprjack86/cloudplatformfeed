@@ -1,20 +1,21 @@
 name: Fetch Azure Blog Feeds
 
 on:
-  push:
-    branches: [master]
   schedule:
     - cron: '0 12 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: fetch-feeds-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
 
 jobs:
   fetch-feeds:
-    # Skip when the bot itself pushes regenerated data back, to prevent an infinite loop
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repository

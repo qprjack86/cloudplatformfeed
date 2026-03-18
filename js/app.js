@@ -71,6 +71,51 @@
   var otherBlogsToggle = document.getElementById("other-blogs-toggle");
   var aiSummaryEl = document.getElementById("ai-summary");
   var savillVideoEl = document.getElementById("savill-video");
+  var SUMMARY_REASON_MESSAGES = {
+    no_dated_articles: "No recent dated articles were available to summarize.",
+    no_articles_in_window: "No recent articles were available in the current summary window.",
+    missing_azure_openai_config: "AI summary generation is not configured for this refresh.",
+    azure_openai_failed: "AI summary generation was temporarily unavailable for this refresh."
+  };
+
+  function parseDateValue(value) {
+    if (!value) return null;
+    var date = new Date(value);
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+
+  function parsePublishingDay(day) {
+    var match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(day || "");
+    if (!match) return null;
+    return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  }
+
+  function formatLocalDate(date, options) {
+    return date ? date.toLocaleDateString(undefined, options) : "";
+  }
+
+  function formatLocalDateTime(date) {
+    return date
+      ? date.toLocaleDateString(undefined, {
+          weekday: "short",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit"
+        })
+      : "";
+  }
+
+  function startOfLocalDay(date) {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  }
+
+  function localDaysAgo(dayCount) {
+    var date = startOfLocalDay(new Date());
+    date.setDate(date.getDate() - dayCount);
+    return date;
+  }
 
   // ===== Initialize =====
   async function init() {
@@ -111,17 +156,8 @@
 
       // Update header stats
       if (data.lastUpdated) {
-        var date = new Date(data.lastUpdated);
-        lastUpdated.textContent =
-          "Last updated: " +
-          date.toLocaleDateString("en-US", {
-            weekday: "short",
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-          });
+        var date = parseDateValue(data.lastUpdated);
+        lastUpdated.textContent = "Last updated: " + formatLocalDateTime(date);
       }
       totalCount.textContent = articles.length + " articles";
 
@@ -131,18 +167,20 @@
           ? data.summaryPublishingDays
           : [];
 
-        // Build UK date range label, e.g. "12 Mar – 18 Mar 2026"
-        function toUKDate(iso) {
-          var d = new Date(iso + "T00:00:00Z");
-          return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+        function toLocalPublishingDate(day) {
+          return formatLocalDate(parsePublishingDay(day), {
+            day: "numeric",
+            month: "short",
+            year: "numeric"
+          });
         }
         var dateLabel = "";
         if (publishingDays.length >= 2) {
           var oldest = publishingDays[publishingDays.length - 1];
           var newest = publishingDays[0];
-          dateLabel = toUKDate(oldest) + " – " + toUKDate(newest);
+          dateLabel = toLocalPublishingDate(oldest) + " – " + toLocalPublishingDate(newest);
         } else if (publishingDays.length === 1) {
-          dateLabel = toUKDate(publishingDays[0]);
+          dateLabel = toLocalPublishingDate(publishingDays[0]);
         }
         var summaryLabel = "Azure Updates" + (dateLabel ? ": " + dateLabel : "");
 
@@ -198,10 +236,9 @@
         aiSummaryEl.style.display = "block";
       } else if (data.summaryStatus === "unavailable") {
         var unavailMsg = "Azure OpenAI did not return a summary for this update.";
-        if (data.summaryError) {
-          unavailMsg += "<br><small style='opacity:0.7'>" + escapeHtml(data.summaryError) + "</small>";
-        } else if (data.summaryReason) {
-          unavailMsg += "<br><small style='opacity:0.7'>Reason: " + escapeHtml(data.summaryReason) + "</small>";
+        if (data.summaryReason && SUMMARY_REASON_MESSAGES[data.summaryReason]) {
+          unavailMsg += "<br><small style='opacity:0.7'>" +
+            escapeHtml(SUMMARY_REASON_MESSAGES[data.summaryReason]) + "</small>";
         }
         aiSummaryEl.innerHTML =
           "<h2>🤖 AI Summary Unavailable</h2>" +
@@ -217,14 +254,16 @@
         var sv = data.savillVideo;
         var svDate = "";
         if (sv.published) {
-          var svd = new Date(sv.published);
-          svDate = svd.toLocaleDateString("en-GB", {
-            day: "numeric", month: "short", year: "numeric", timeZone: "UTC"
+          var svd = parseDateValue(sv.published);
+          svDate = formatLocalDate(svd, {
+            day: "numeric",
+            month: "short",
+            year: "numeric"
           });
         }
         var thumbHtml = sv.thumbnail
           ? '<img class="savill-thumb" src="' + escapeHtml(sv.thumbnail) +
-            '" alt="Video thumbnail" loading="lazy" onerror="this.style.display=\'none\'" />'
+            '" alt="Video thumbnail" loading="lazy" />'
           : '<div class="savill-thumb savill-thumb-placeholder">▶</div>';
         savillVideoEl.innerHTML =
           '<a class="savill-card" href="' + escapeHtml(sv.url) +
@@ -428,13 +467,16 @@
     var dateVal = dateFilter ? dateFilter.value : "all";
     if (dateVal !== "all") {
       var now = new Date();
-      var cutoff = new Date();
+      var cutoff = startOfLocalDay(now);
       switch (dateVal) {
-        case "today": cutoff.setHours(0, 0, 0, 0); break;
-        case "week": cutoff.setDate(now.getDate() - 7); break;
-        case "month": cutoff.setMonth(now.getMonth() - 1); break;
+        case "today": break;
+        case "week": cutoff = localDaysAgo(7); break;
+        case "month": cutoff = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate()); break;
       }
-      result = result.filter(function (a) { return new Date(a.published) >= cutoff; });
+      result = result.filter(function (a) {
+        var published = parseDateValue(a.published);
+        return published && published >= cutoff;
+      });
     }
 
     // Bookmarks filter
@@ -510,8 +552,7 @@
   // ===== Group by Date =====
   function groupByDate(list) {
     var groups = {};
-    var now = new Date();
-    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var today = startOfLocalDay(new Date());
     var yesterday = new Date(today);
     yesterday.setDate(yesterday.getDate() - 1);
     var weekAgo = new Date(today);
@@ -519,7 +560,8 @@
     var orderedKeys = [];
 
     list.forEach(function (article) {
-      var date = new Date(article.published);
+      var date = parseDateValue(article.published);
+      if (!date) return;
       var group;
       if (date >= today) {
         group = "Today";
@@ -528,9 +570,9 @@
       } else if (date >= weekAgo) {
         group = "This Week";
       } else {
-        group = date.toLocaleDateString("en-US", {
+        group = formatLocalDate(date, {
           year: "numeric",
-          month: "long",
+          month: "long"
         });
       }
       if (!groups[group]) {
@@ -550,7 +592,8 @@
   // ===== Check if article is new (last 24h) =====
   function isNew(article) {
     var now = new Date();
-    var published = new Date(article.published);
+    var published = parseDateValue(article.published);
+    if (!published) return false;
     return (now - published) < 24 * 60 * 60 * 1000;
   }
 
@@ -558,11 +601,11 @@
   function renderCard(article) {
     var color = blogColors[article.blogId] || "#0078D4";
     var isBookmarked = bookmarks.has(article.link);
-    var date = new Date(article.published);
-    var dateStr = date.toLocaleDateString("en-US", {
+    var date = parseDateValue(article.published);
+    var dateStr = formatLocalDate(date, {
       month: "short",
       day: "numeric",
-      year: "numeric",
+      year: "numeric"
     });
     var encodedLink = encodeURIComponent(article.link);
     var newBadge = isNew(article) ? '<span class="new-badge">NEW</span>' : "";
@@ -736,6 +779,15 @@
         renderBlogPills(currentCategory);
         applyFilters();
       });
+    }
+
+    if (savillVideoEl) {
+      savillVideoEl.addEventListener("error", function (e) {
+        var target = e.target;
+        if (target && target.classList && target.classList.contains("savill-thumb")) {
+          target.style.display = "none";
+        }
+      }, true);
     }
 
     // Article actions (event delegation on grid)

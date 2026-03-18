@@ -13,6 +13,8 @@ A daily-updated Azure blog aggregator hosted on GitHub Pages. Collects articles 
 - 📱 **Responsive** — Works on desktop, tablet, and mobile
 - 🤖 **Auto-updated** — GitHub Actions fetches new articles daily at 7 AM EST (12 PM UTC)
 - 📅 **Last 30 days** — Keeps only recent articles for a lean, fast experience
+- 🔒 **Hardened publish surface** — AI summary failures expose only safe status codes, not raw Azure OpenAI diagnostics
+- 🛡️ **Browser hardening** — CSP and referrer policy limit third-party script and data exposure while preserving Microsoft Clarity
 
 ## Blog Sources
 
@@ -53,6 +55,7 @@ Go to **Settings → Pages → Source** and select **Deploy from a branch** → 
 ### 4. Trigger the first data fetch
 
 Go to **Actions → Fetch Azure Blog Feeds → Run workflow** to populate the initial data.
+The regeneration workflow now runs only on its daily schedule or from manual dispatch. It no longer writes generated files back on every source push.
 
 ### 5. Visit your site
 
@@ -78,7 +81,9 @@ pip install -r scripts/requirements.txt
 python scripts/fetch_feeds.py
 ```
 
-If these variables are not set, feed fetching still works and the site will show that the AI summary is unavailable for that update.
+If these variables are not set, feed fetching still works and the site will show that the AI summary is unavailable for that update. The published JSON now exposes only a safe summary status and reason code, never raw Azure OpenAI error text.
+
+Feed retrieval is also hardened before parsing: only the configured HTTPS feed hosts are requested, requests use explicit timeouts and bounded retries, and article deduplication normalizes URLs to drop common tracking parameters before duplicate checks.
 
 For GitHub Actions, add the same values as repository secrets: `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_VERSION`, and `AZURE_OPENAI_DEPLOYMENT`.
 
@@ -93,10 +98,16 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 ## How It Works
 
 1. **GitHub Actions** runs daily at 7 AM EST / 12 PM UTC (or manually)
-2. **Python script** fetches RSS feeds from Azure and Microsoft developer blogs plus Azure Updates
-3. Articles from the last 30 days are deduplicated, sorted, and saved to `data/feeds.json`
+2. **Python script** fetches RSS feeds from Azure and Microsoft developer blogs plus Azure Updates using allowlisted HTTPS requests with explicit timeouts and retries
+3. Articles from the last 30 days are deduplicated with canonical URL normalization, sorted, and saved to `data/feeds.json`
 4. The commit triggers **GitHub Pages** to redeploy
-5. The **static frontend** loads the JSON and renders the feed
+5. The **static frontend** loads the JSON, applies viewer-local date grouping/filtering, and renders the feed
+
+## Security Notes
+
+- The site uses a meta Content Security Policy and referrer policy because GitHub Pages does not provide a native way to set custom response headers for this static site.
+- Microsoft Clarity is loaded from a first-party bootstrap file so the page does not need inline scripts.
+- AI summary failures are logged in CI, but public feed data includes only safe summary reason codes.
 
 ## License
 

@@ -9,9 +9,14 @@ import json
 import os
 import re
 import time
+import requests
 from difflib import SequenceMatcher
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from html import unescape
+from requests.adapters import HTTPAdapter
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+from urllib3.util.retry import Retry
 
 # Blog definitions: board_id -> display name
 BLOGS = {
@@ -62,6 +67,29 @@ SAVILL_YOUTUBE_RSS = (
 )
 SUMMARY_WINDOW_DAYS = 7
 SUMMARY_MAX_ARTICLES = 20
+FEED_REQUEST_TIMEOUT = (5, 20)
+FEED_RETRY_TOTAL = 2
+FEED_BACKOFF_FACTOR = 1
+FEED_USER_AGENT = "AzureFeedBot/1.0 (+https://azurefeed.news)"
+TRACKING_QUERY_PREFIXES = ("utm_",)
+TRACKING_QUERY_KEYS = {
+    "fbclid",
+    "gclid",
+    "mc_cid",
+    "mc_eid",
+    "mkt_tok",
+    "ocid",
+    "spm",
+    "trk",
+    "wt.mc_id",
+}
+DEFAULT_PORTS = {"http": 80, "https": 443}
+PUBLIC_SUMMARY_REASONS = {
+    "no_dated_articles",
+    "no_articles_in_window",
+    "missing_azure_openai_config",
+    "azure_openai_failed",
+}
 
 # DevBlogs definitions: slug -> (display name, feed URL)
 DEVBLOGS = {
@@ -79,6 +107,80 @@ DEVBLOGS = {
     "cosmosdbblog": ("Azure Cosmos DB Blog", "https://devblogs.microsoft.com/cosmosdb/feed/"),
     "azuresqlblog": ("Azure SQL Dev Corner", "https://devblogs.microsoft.com/azure-sql/feed/"),
 }
+
+
+def normalize_host(hostname):
+    """Normalize hostnames used for feed allowlisting and URL dedupe."""
+    host = (hostname or "").strip().lower().rstrip(".")
+    if host.startswith("www."):
+        host = host[4:]
+    return host
+
+
+def build_allowed_feed_hosts():
+    """Return the set of remote hosts that are allowed for feed retrieval."""
+    source_urls = [
+        TC_RSS_URL.format(board="azurecompute"),
+        AKS_BLOG_FEED,
+        AZURE_UPDATES_FEED,
+        SAVILL_YOUTUBE_RSS,
+    ]
+    source_urls.extend(feed_url for _, feed_url in DEVBLOGS.values())
+
+    hosts = set()
+    for url in source_urls:
+        host = normalize_host(urlsplit(url).hostname)
+        if host:
+            hosts.add(host)
+    return hosts
+
+
+ALLOWED_FEED_HOSTS = build_allowed_feed_hosts()
+
+
+def create_http_session():
+    """Create a session with bounded retries for transient feed failures."""
+    retry = Retry(
+        total=FEED_RETRY_TOTAL,
+        connect=FEED_RETRY_TOTAL,
+        read=FEED_RETRY_TOTAL,
+        status=FEED_RETRY_TOTAL,
+        backoff_factor=FEED_BACKOFF_FACTOR,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=frozenset(["GET"]),
+        respect_retry_after_header=True,
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session = requests.Session()
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    session.headers.update({"User-Agent": FEED_USER_AGENT})
+    return session
+
+
+HTTP_SESSION = create_http_session()
+
+
+def validate_feed_url(url):
+    """Reject unexpected feed URLs before attempting any network request."""
+    parsed = urlsplit((url or "").strip())
+    host = normalize_host(parsed.hostname)
+
+    if parsed.scheme != "https":
+        raise ValueError(f"Feed URL must use https: {url}")
+    if not host or host not in ALLOWED_FEED_HOSTS:
+        raise ValueError(f"Feed URL host is not allowlisted: {url}")
+
+    return parsed
+
+
+def fetch_feed(url):
+    """Fetch and parse a remote feed using explicit transport controls."""
+    validate_feed_url(url)
+    response = HTTP_SESSION.get(url, timeout=FEED_REQUEST_TIMEOUT)
+    response.raise_for_status()
+    return feedparser.parse(response.content)
 
 
 def clean_html(text):
@@ -142,6 +244,102 @@ def _normalize_for_match(text):
     value = re.sub(r"[^a-z0-9\s]", " ", value)
     value = re.sub(r"\s+", " ", value).strip()
     return value
+
+
+def normalize_article_url(url):
+    """Canonicalize article URLs for more reliable deduplication."""
+    raw_url = (url or "").strip()
+    if not raw_url:
+        return ""
+
+    parsed = urlsplit(raw_url)
+    scheme = parsed.scheme.lower()
+    host = normalize_host(parsed.hostname)
+    if not scheme or not host:
+        return raw_url
+
+    port = parsed.port
+    netloc = host
+    if port and DEFAULT_PORTS.get(scheme) != port:
+        netloc = f"{host}:{port}"
+
+    path = re.sub(r"/{2,}", "/", parsed.path or "/")
+    if path != "/":
+        path = path.rstrip("/")
+
+    filtered_query = []
+    for key, value in parse_qsl(parsed.query, keep_blank_values=True):
+        normalized_key = key.lower()
+        if normalized_key.startswith(TRACKING_QUERY_PREFIXES):
+            continue
+        if normalized_key in TRACKING_QUERY_KEYS:
+            continue
+        filtered_query.append((key, value))
+
+    query = urlencode(sorted(filtered_query))
+    return urlunsplit((scheme, netloc, path, query, ""))
+
+
+def parse_iso_datetime(value):
+    """Parse an ISO datetime string into UTC."""
+    if not value:
+        return None
+
+    try:
+        normalized = value.replace("Z", "+00:00")
+        dt = datetime.fromisoformat(normalized)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except ValueError:
+        return None
+
+
+def article_is_recent(article, cutoff_dt):
+    """Return whether the article is within the retention window."""
+    published_dt = parse_iso_datetime(article.get("published", ""))
+    return published_dt is not None and published_dt >= cutoff_dt
+
+
+def dedupe_articles(articles):
+    """Drop stale or duplicate articles using canonical links and title/day matching."""
+    cutoff_dt = datetime.now(timezone.utc) - timedelta(days=30)
+    seen_links = set()
+    seen_title_days = set()
+    unique_articles = []
+
+    for article in articles:
+        if not article_is_recent(article, cutoff_dt):
+            print(f"Discarding stale/undated article: {article.get('title', 'Untitled')}")
+            continue
+
+        canonical_link = normalize_article_url(article.get("link", ""))
+        title_key = None
+        normalized_title = _normalize_for_match(article.get("title", ""))
+        published_day = article.get("published", "")[:10]
+        if normalized_title and published_day and len(normalized_title) >= 20:
+            title_key = (normalized_title, published_day)
+
+        duplicate_reason = None
+        if canonical_link and canonical_link in seen_links:
+            duplicate_reason = "canonical_url"
+        elif title_key and title_key in seen_title_days:
+            duplicate_reason = "normalized_title_day"
+
+        if duplicate_reason:
+            print(
+                f"Deduplicated article via {duplicate_reason}: "
+                f"{article.get('title', 'Untitled')}"
+            )
+            continue
+
+        if canonical_link:
+            seen_links.add(canonical_link)
+        if title_key:
+            seen_title_days.add(title_key)
+        unique_articles.append(article)
+
+    return unique_articles
 
 
 def attach_links_to_summary(summary_text, summary_articles):
@@ -222,7 +420,13 @@ def parse_date(entry):
     for field in ["published", "updated"]:
         date_str = entry.get(field, "")
         if date_str:
-            return date_str
+            try:
+                dt = parsedate_to_datetime(date_str)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                return dt.astimezone(timezone.utc).isoformat()
+            except (TypeError, ValueError, IndexError, OverflowError):
+                continue
 
     return datetime.now(timezone.utc).isoformat()
 
@@ -236,7 +440,7 @@ def fetch_tech_community_feeds():
         print(f"Fetching: {blog_name} ({board_id})...")
 
         try:
-            feed = feedparser.parse(url)
+            feed = fetch_feed(url)
 
             if feed.bozo and not feed.entries:
                 print(f"  Warning: Could not parse feed for {blog_name}")
@@ -274,7 +478,7 @@ def fetch_aks_blog():
     print("Fetching: AKS Blog...")
 
     try:
-        feed = feedparser.parse(AKS_BLOG_FEED)
+        feed = fetch_feed(AKS_BLOG_FEED)
 
         if feed.bozo and not feed.entries:
             print("  Warning: Could not parse AKS blog feed")
@@ -312,7 +516,7 @@ def fetch_devblogs_feeds():
         print(f"Fetching: {blog_name}...")
 
         try:
-            feed = feedparser.parse(feed_url)
+            feed = fetch_feed(feed_url)
 
             if feed.bozo and not feed.entries:
                 print(f"  Warning: Could not parse {blog_name} feed")
@@ -348,7 +552,7 @@ def fetch_savill_video():
     """Fetch John Savill's latest Azure Infrastructure Update video from YouTube RSS."""
     print("Fetching: John Savill YouTube channel...")
     try:
-        feed = feedparser.parse(SAVILL_YOUTUBE_RSS)
+        feed = fetch_feed(SAVILL_YOUTUBE_RSS)
         if not feed.entries:
             print("  Warning: No entries in Savill YouTube feed")
             return None
@@ -400,7 +604,7 @@ def fetch_azure_updates_feed():
     print("Fetching: Azure Updates...")
 
     try:
-        feed = feedparser.parse(AZURE_UPDATES_FEED)
+        feed = fetch_feed(AZURE_UPDATES_FEED)
 
         if feed.bozo and not feed.entries:
             print("  Warning: Could not parse Azure Updates feed")
@@ -661,7 +865,6 @@ def generate_ai_summary(articles):
         return {
             "status": "unavailable",
             "reason": "azure_openai_failed",
-            "error": error_msg,
             "windowDays": SUMMARY_WINDOW_DAYS,
             "publishingDays": summary_days,
         }
@@ -684,15 +887,8 @@ def main():
     # Sort by date, newest first
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
 
-    # Remove duplicates by link and discard articles older than 30 days
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
-    seen_links = set()
-    unique_articles = []
-    for article in all_articles:
-        if article["link"] and article["link"] not in seen_links:
-            if article.get("published", "") >= cutoff:
-                seen_links.add(article["link"])
-                unique_articles.append(article)
+    # Remove duplicates and discard articles older than 30 days
+    unique_articles = dedupe_articles(all_articles)
 
     discarded = len(all_articles) - len(unique_articles)
     if discarded:
@@ -716,9 +912,9 @@ def main():
     if summary_payload.get("articleCount") is not None:
         data["summaryArticleCount"] = summary_payload["articleCount"]
     if summary_payload.get("reason"):
-        data["summaryReason"] = summary_payload["reason"]
-    if summary_payload.get("error"):
-        data["summaryError"] = summary_payload["error"]
+        reason = summary_payload["reason"]
+        if reason in PUBLIC_SUMMARY_REASONS:
+            data["summaryReason"] = reason
     if summary_payload.get("summary"):
         data["summary"] = summary_payload["summary"]
     if savill_video:

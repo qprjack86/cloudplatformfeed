@@ -1,8 +1,9 @@
-const CACHE_NAME = "azurefeed-v2";
+const CACHE_NAME = "azurefeed-v3";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
   "/css/styles.css",
+  "/js/clarity.js",
   "/js/app.js",
   "/manifest.json",
 ];
