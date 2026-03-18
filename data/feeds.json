@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-03-18T15:59:32.409464+00:00",
-  "totalArticles": 203,
+  "lastUpdated": "2026-03-18T16:01:04.457190+00:00",
+  "totalArticles": 206,
   "articles": [
+    {
+      "title": "Introducing Lakeflow Connect Free Tier, now available on Azure Databricks",
+      "link": "https://techcommunity.microsoft.com/t5/azure-databricks/introducing-lakeflow-connect-free-tier-now-available-on-azure/ba-p/4502755",
+      "published": "2026-03-18T16:00:00+00:00",
+      "summary": "We're excited to introduce the Lakeflow Connect Free Tier on Azure Databricks, so you can easily bring your enterprise data into your lakehouse to build analytics and AI applications faster. Modern applications require reliable access to operational data, especially for training analytics and AI...",
+      "blog": "Azure Databricks",
+      "blogId": "azure-databricks",
+      "author": "AnaviNahar"
+    },
+    {
+      "title": "Near–Real-Time CDC to Delta Lake for BI and ML with Lakeflow on Azure Databricks",
+      "link": "https://techcommunity.microsoft.com/t5/azure-databricks/near-real-time-cdc-to-delta-lake-for-bi-and-ml-with-lakeflow-on/ba-p/4502750",
+      "published": "2026-03-18T16:00:00+00:00",
+      "summary": "The Challenge: Too Many Tools, Not Enough Clarity Modern data teams on Azure often stitch together separate orchestrators, custom streaming consumers, hand-rolled transformation notebooks, and third-party connectors — each with its own monitoring UI, credential system, and failure modes. The result...",
+      "blog": "Azure Databricks",
+      "blogId": "azure-databricks",
+      "author": "AnaviNahar"
+    },
+    {
+      "title": "Turning historical patterns into actionable detection pipelines with Microsoft Sentinel data lake",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/turning-historical-patterns-into-actionable-detection-pipelines/ba-p/4503126",
+      "published": "2026-03-18T16:00:00+00:00",
+      "summary": "This article is part of the Sentinel data lake practitioner series. In part 1, we introduced the Operationalization Framework — a structured way to turn exploratory notebooks into reliable, scheduled Spark jobs within the Microsoft Sentinel data lake. Now in Part 2, we go from framework to function...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "Ashwin_Patil"
+    },
     {
       "title": "MSSQL Extension for VS Code: SQL Notebooks, AI-Powered Schema Design, Data API builder & More",
       "link": "https://devblogs.microsoft.com/azure-sql/vscode-mssql-march-2026/",
@@ -1842,8 +1869,8 @@
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
-  "summaryArticleCount": 62,
-  "summary": "- In preview:\n  • [Entra ID‑based access for Azure Blob Storage SFTP](https://azure.microsoft.com/updates?id=558662)\n  • [Azure Storage Mover private data transfers from AWS S3 to Azure Blob](https://azure.microsoft.com/updates?id=558651)\n  • [Customer‑managed keys for Premium SSD v2 disks in Azure Database for PostgreSQL](https://azure.microsoft.com/updates?id=557527)\n  • [Query Profiler in MSSQL extension for Visual Studio Code](https://azure.microsoft.com/updates?id=558164)\n\n- Launched / Generally Available:\n  • [Azure Web Application Firewall Default Rule Set 2.2 and updated ruleset support policy](https://azure.microsoft.com/updates?id=558016)\n  • [Foundry Agent Service](https://azure.microsoft.com/updates?id=557141)\n  • [Log Analytics summary rules add manual “Retry bin” capability](https://azure.microsoft.com/updates?id=558656)\n  • [Terraform, Bicep, and Ansible support for Azure Database for PostgreSQL elastic clusters](https://azure.microsoft.com/updates?id=558145)\n  • [Azure Database for PostgreSQL dashboards with Grafana](https://azure.microsoft.com/updates?id=558140)\n  • [Azure SRE Agent with new capabilities](https://azure.microsoft.com/updates?id=558321)\n\n- In development:\n  • none noted in selected window",
+  "summaryArticleCount": 65,
+  "summary": "- In preview:\n  • [Entra ID‑based access for Azure Blob Storage SFTP](https://azure.microsoft.com/updates?id=558662)\n  • [Azure Storage Mover private transfers from AWS S3 to Azure Blob](https://azure.microsoft.com/updates?id=558651)\n  • [Customer‑managed keys for Premium SSD v2 disks with Azure Database for PostgreSQL](https://azure.microsoft.com/updates?id=557527)\n  • [Query Profiler in MSSQL extension for Visual Studio Code](https://azure.microsoft.com/updates?id=558164)\n\n- Launched / Generally Available:\n  • [Default Rule Set 2.2 and updated ruleset support policy for Azure WAF](https://azure.microsoft.com/updates?id=558016)\n  • [Foundry Agent Service](https://azure.microsoft.com/updates?id=557141)\n  • [Log Analytics summary rules add manual “Retry bin” capability](https://azure.microsoft.com/updates?id=558656)\n  • [Terraform, Bicep, and Ansible support for elastic clusters in Azure Database for PostgreSQL](https://azure.microsoft.com/updates?id=558145)\n  • [Azure Database for PostgreSQL dashboards with Grafana](https://azure.microsoft.com/updates?id=558140)\n  • [Azure SRE Agent with new capabilities](https://azure.microsoft.com/updates?id=558321)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 13th March 2026",
     "url": "https://www.youtube.com/watch?v=17uHDPjdkto",
