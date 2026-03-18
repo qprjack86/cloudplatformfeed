@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-18T12:31:49.678213+00:00",
+  "lastUpdated": "2026-03-18T12:39:10.819117+00:00",
   "totalArticles": 201,
   "articles": [
     {
@@ -1825,5 +1825,5 @@
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 60,
-  "summary": "- In preview:\n  • Entra ID‑based access for Azure Blob Storage SFTP (Public Preview)  \n  • Azure Storage Mover private data transfers from AWS S3 to Azure Blob (Public Preview)  \n  • Customer‑managed keys for Premium SSD v2 disks with Azure Database for PostgreSQL (Public Preview)  \n  • Query Profiler in MSSQL extension for Visual Studio Code (Public Preview)\n\n- Launched / Generally Available:\n  • Azure Front Door Web Application Firewall Default Rule Set 2.2 and updated ruleset support policy (GA)  \n  • Foundry Agent Service (GA)  \n  • Log Analytics summary rules add manual “Retry bin” capability (GA)  \n  • Terraform, Bicep, and Ansible support for elastic clusters in Azure Database for PostgreSQL (GA)  \n  • Azure Database for PostgreSQL dashboards integration with Grafana (GA)  \n  • Azure SRE Agent with new capabilities (GA)\n\n- In development:\n  • none noted in selected window"
+  "summary": "- In preview:\n  • Entra ID‑based access for Azure Blob Storage SFTP  \n  • Azure Storage Mover private transfers from AWS S3 to Azure Blob  \n  • Customer‑managed keys for Premium SSD v2 disks in Azure Database for PostgreSQL  \n  • Query Profiler in MSSQL extension for Visual Studio Code  \n\n- Launched / Generally Available:\n  • Azure Web Application Firewall Default Rule Set 2.2 and ruleset support policy updates  \n  • Foundry Agent Service  \n  • Log Analytics summary rules manual “Retry bin” capability  \n  • Terraform, Bicep, and Ansible support for elastic clusters in Azure Database for PostgreSQL  \n  • Azure Database for PostgreSQL dashboards with Grafana  \n  • Azure SRE Agent with new capabilities  \n\n- In development:\n  • none noted in selected window"
 }
