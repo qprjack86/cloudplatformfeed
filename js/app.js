@@ -5,7 +5,8 @@
   var CATEGORIES = {
     "Compute": ["azurecompute", "aksblog", "azurevirtualdesktopblog", "azurehighperformancecomputingblog"],
     "Data & AI": ["analyticsonazure", "azure-databricks", "oracleonazureblog", "cosmosdbblog", "azuresqlblog", "foundryblog"],
-    "Infrastructure": ["azureinfrastructureblog", "azurearcblog", "azurestackblog", "azurenetworkingblog", "azurenetworksecurityblog", "azurestorageblog"],
+    "Infrastructure": ["azureinfrastructureblog", "azurearcblog", "azurestackblog", "azurenetworkingblog", "azurestorageblog"],
+    "Security": ["azurenetworksecurityblog", "microsoftsentinelblog", "microsoftdefendercloudblog", "azureadvancedthreatprotection"],
     "Architecture": ["azurearchitectureblog", "azure-customer-innovation-blog", "iseblog"],
     "Apps & Platform": ["appsonazureblog", "azurepaasblog", "integrationsonazureblog", "messagingonazureblog", "aspireblog", "azuresdkblog"],
     "Operations": ["azuregovernanceandmanagementblog", "azureobservabilityblog", "finopsblog", "azuretoolsblog", "azuremigrationblog", "azuredevops", "azureupdates"],
@@ -19,6 +20,7 @@
     "Compute": ["batch", "virtual machine", "vm", "aks", "kubernetes", "gpu", "container", "app service"],
     "Data & AI": ["sql", "database", "cosmos", "databricks", "ai", "openai", "machine learning", "fabric", "synapse"],
     "Infrastructure": ["network", "vnet", "storage", "backup", "disaster recovery", "firewall", "load balancer", "vpn", "expressroute"],
+    "Security": ["sentinel", "defender", "security", "threat", "idps", "siem", "soc", "identity", "entra", "waf", "firewall"],
     "Architecture": ["architecture", "well-architected", "reference architecture", "design pattern"],
     "Apps & Platform": ["api management", "functions", "logic apps", "service bus", "event grid", "web app", "integration"],
     "Operations": ["monitor", "observability", "policy", "governance", "cost", "finops", "devops", "migration", "retirement", "support"],

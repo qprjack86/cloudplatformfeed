@@ -6,7 +6,7 @@ A daily-updated Azure blog aggregator hosted on GitHub Pages. Collects articles 
 
 ## Features
 
-- 📰 **45 sources** — Azure blogs, Azure Updates, DevOps, Developer Tools, Data & AI, and more
+- 📰 **49 sources** — Azure blogs, Azure Updates, DevOps, Security, Developer Tools, Data & AI, and more
 - 🔍 **Search & filter** — Find articles by keyword, blog category, or date range
 - ⭐ **Bookmarks** — Save articles for later (stored locally per browser)
 - 🌙 **Dark mode** — Easy on the eyes
@@ -17,10 +17,11 @@ A daily-updated Azure blog aggregator hosted on GitHub Pages. Collects articles 
 ## Blog Sources
 
 | Category | Blogs |
-|----------|-------|
+| ---------- | ----- |
 | **Compute** | Azure Compute, AKS, Azure Virtual Desktop, High Performance Computing |
 | **Data & AI** | Analytics on Azure, Azure Databricks, Oracle on Azure, Cosmos DB, Azure SQL, Microsoft Foundry |
 | **Infrastructure** | Azure Infrastructure, Azure Arc, Azure Stack, Azure Networking, Azure Storage |
+| **Security** | Azure Network Security, Microsoft Sentinel, Microsoft Defender for Cloud, Azure Advanced Threat Protection |
 | **Architecture** | Azure Architecture, Customer Innovation, ISE Developer Blog |
 | **Apps & Platform** | Apps on Azure, Azure PaaS, Integrations, Messaging, Aspire, Azure SDK |
 | **Operations** | Governance & Management, Observability, FinOps, Azure Tools, Migration, Azure DevOps |
