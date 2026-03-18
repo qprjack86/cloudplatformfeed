@@ -66,7 +66,16 @@ SAVILL_YOUTUBE_RSS = (
     "?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 )
 SUMMARY_WINDOW_DAYS = 7
-SUMMARY_MAX_ARTICLES = 20
+MAX_ITEMS_PER_SECTION = 5
+MAX_UNCLASSIFIED_FOR_AI = 20
+LIFECYCLE_SECTIONS = {
+    "in_preview": "In preview",
+    "launched_ga": "Launched / Generally Available",
+    "in_development": "In development",
+}
+BULLET_PREFIX = "  \u2022 "
+SECTION_HEADING_PREFIX = "- "
+FALLBACK_BULLET = "none noted in selected window"
 FEED_REQUEST_TIMEOUT = (5, 20)
 FEED_RETRY_TOTAL = 2
 FEED_BACKOFF_FACTOR = 1
@@ -222,18 +231,6 @@ def get_articles_for_publishing_days(articles, publishing_days):
         for article in articles
         if article.get("published", "")[:10] in publishing_days_set
     ]
-
-
-def normalize_summary_text(summary_text):
-    """Normalize model phrasing so it reflects a multi-day summary window."""
-    normalized = summary_text or ""
-    normalized = re.sub(
-        r"\bnone today\b", "none noted in selected window", normalized, flags=re.IGNORECASE
-    )
-    normalized = re.sub(
-        r"\btoday\b", "the selected window", normalized, flags=re.IGNORECASE
-    )
-    return normalized
 
 
 def _normalize_for_match(text):
@@ -404,6 +401,108 @@ def attach_links_to_summary(summary_text, summary_articles):
             out_lines.append(line)
 
     return "\n".join(out_lines)
+
+
+def classify_lifecycle(article):
+    """Classify an article into a lifecycle bucket based on title patterns.
+
+    Returns 'in_preview', 'launched_ga', 'in_development', or None when
+    no deterministic signal is present.
+    """
+    title = (article.get("title") or "").lower()
+    # Check in_development first to avoid false GA matches on retirement notices
+    if re.search(r"\[in development\]|in development|coming soon|retir|deprecat", title):
+        return "in_development"
+    if re.search(r"\[.*?preview\]|public preview|private preview|\bin preview\b|now in.*?preview", title):
+        return "in_preview"
+    if re.search(
+        r"\[.*?generally available\]|\[ga\]|generally available|general availability"
+        r"|now available\b|is now available",
+        title,
+    ):
+        return "launched_ga"
+    return None
+
+
+def classify_with_ai(candidates, client, deployment):
+    """Ask AI to classify and label articles lacking deterministic lifecycle signals.
+
+    Returns a list of dicts with keys: id, bucket, label.  On any failure
+    returns an empty list so the caller can proceed without AI results.
+    """
+    if not candidates:
+        return []
+
+    records = [
+        {
+            "id": str(i),
+            "title": a.get("title", ""),
+            "blogId": a.get("blogId", ""),
+            "summary_snippet": (a.get("summary") or "")[:80],
+        }
+        for i, a in enumerate(candidates)
+    ]
+    system_msg = (
+        "You are an Azure release classifier. "
+        "For each item assign a bucket and write a concise one-line display label. "
+        'Bucket must be exactly one of: in_preview, launched_ga, in_development, other. '
+        'Return ONLY a JSON object with key "items" containing an array. '
+        "Each element must have: id (string), bucket (string), label (string). "
+        "No explanation, no markdown fences, only the JSON object."
+    )
+    user_msg = json.dumps({"items": records}, ensure_ascii=False)
+
+    try:
+        response = client.chat.completions.create(
+            model=deployment,
+            messages=[
+                {"role": "system", "content": system_msg},
+                {"role": "user", "content": user_msg},
+            ],
+            max_completion_tokens=300,
+        )
+        raw = response.choices[0].message.content.strip()
+        raw = re.sub(r"^```[a-z]*\n?", "", raw)
+        raw = re.sub(r"\n?```$", "", raw)
+        parsed = json.loads(raw)
+        valid_buckets = {"in_preview", "launched_ga", "in_development", "other"}
+        results = []
+        for item in parsed.get("items", []):
+            bucket = item.get("bucket", "")
+            if bucket not in valid_buckets:
+                continue
+            results.append({
+                "id": str(item.get("id", "")),
+                "bucket": bucket,
+                "label": (item.get("label") or "").strip(),
+            })
+        return results
+    except Exception as e:
+        print(f"  AI classifier failed: {e}")
+        return []
+
+
+def render_summary_markdown(buckets):
+    """Render lifecycle summary markdown from pre-built bucket data.
+
+    buckets: {"in_preview": [{"label": str, "link": str}], ...}
+    """
+    lines = []
+    for key, heading in LIFECYCLE_SECTIONS.items():
+        lines.append(f"{SECTION_HEADING_PREFIX}{heading}:")
+        items = buckets.get(key, [])[:MAX_ITEMS_PER_SECTION]
+        if items:
+            for item in items:
+                label = item.get("label") or ""
+                link = item.get("link") or ""
+                if label and link:
+                    lines.append(f"{BULLET_PREFIX}[{label}]({link})")
+                elif label:
+                    lines.append(f"{BULLET_PREFIX}{label}")
+        else:
+            lines.append(f"{BULLET_PREFIX}{FALLBACK_BULLET}")
+        lines.append("")
+    return "\n".join(lines).rstrip()
 
 
 def parse_date(entry):
@@ -749,102 +848,57 @@ def generate_ai_summary(articles):
     try:
         from openai import AzureOpenAI
 
-        # Scale article cap and token budget with the number of days being summarised
-        max_articles = SUMMARY_MAX_ARTICLES * len(summary_days)
-        max_tokens = min(250 * len(summary_days), 800)
-        window_desc = summary_days[-1] + " to " + summary_days[0]
+        azure_updates_articles = [a for a in day_articles if a.get("blogId") == "azureupdates"]
+        other_articles = [a for a in day_articles if a.get("blogId") != "azureupdates"]
+        if not azure_updates_articles:
+            print("No Azure Updates entries found in window; using all articles for classification")
+        ordered_articles = azure_updates_articles + other_articles
 
-        azure_updates_articles = [
-            a for a in day_articles if a.get("blogId") == "azureupdates"
-        ]
-        if azure_updates_articles:
-            remaining_articles = [
-                article
-                for article in day_articles
-                if article.get("blogId") != "azureupdates"
-            ]
-            summary_articles = (
-                azure_updates_articles[:max_articles]
-                + remaining_articles[: max(0, max_articles - len(azure_updates_articles[:max_articles]))]
-            )
-            prompt = (
-                "You are an Azure Updates lifecycle editor. Summarize only items from Azure "
-                "Updates and recent Azure news. Prioritize Azure Updates entries where blogId "
-                "is azureupdates, but use the additional recent items for context when helpful. "
-                "Build a short structured summary with exactly 3 sections using these headings: "
-                "'In preview', 'Launched / Generally Available', and 'In development'. "
-                "Format each section like this example:\n"
-                "- In preview:\n  \u2022 item one\n  \u2022 item two\n\n"
-                "List each item on its own line starting with '  \u2022 '. "
-                "Do NOT use semicolons to separate items. "
-                "If a section has no strong match write '  \u2022 none noted in selected window'. "
-                "Keep each bullet to one concise line; call out the key service or feature name. "
-                "Do not use the word 'today' anywhere because this is a multi-day digest. "
-                "Selected publishing-day range: "
-                + window_desc
-                + ". Here are the recent items for publishing days "
-                + ", ".join(summary_days)
-                + ":\n\n"
-            )
-        else:
-            print(
-                "No Azure Updates entries found in configured publishing-day window; summarizing recent articles"
-            )
-            summary_articles = day_articles[:max_articles]
-            prompt = (
-                "You are an Azure cloud editor. Create a concise AI summary over the selected "
-                "recent publishing days with exactly 3 sections under these headings: 'Platform "
-                "launches', 'In preview', and 'Developer / operations notes'. Focus on concrete "
-                "product news, major releases, and notable platform changes. "
-                "Format each section like this example:\n"
-                "- Platform launches:\n  • [item one](https://example.com/post-1)\n  • [item two](https://example.com/post-2)\n\n"
-                "List each item on its own line starting with '  • '. "
-                "Each bullet must be a markdown link in the form [short title](url). "
-                "Use only URLs from the provided list and do not invent or alter links. "
-                "If a section has no strong match, write '  • none noted in selected window'. "
-                "Do not use the word "
-                "'today' anywhere because this is a multi-day digest. Selected publishing-day "
-                "range: "
-                + window_desc
-                + ". Here are the recent articles for publishing "
-                "days "
-                + ", ".join(summary_days)
-                + ":\n\n"
-            )
+        # Phase 1: rule-based lifecycle classification
+        code_buckets = {"in_preview": [], "launched_ga": [], "in_development": []}
+        unclassified = []
+        for article in ordered_articles:
+            bucket = classify_lifecycle(article)
+            if bucket and len(code_buckets[bucket]) < MAX_ITEMS_PER_SECTION:
+                code_buckets[bucket].append(article)
+            else:
+                unclassified.append(article)
 
-        titles = "\n".join(
-            [
-                "- "
-                + a["title"]
-                + " | source="
-                + a["blog"]
-                + " | blogId="
-                + a.get("blogId", "")
-                + " | url="
-                + a.get("link", "")
-                for a in summary_articles
-            ]
-        )
-        prompt += titles
+        code_classified_count = sum(len(v) for v in code_buckets.values())
+        print(f"  Rule-based classification: {code_classified_count} items bucketed, {len(unclassified)} unclassified")
+
+        # Phase 2: AI classification for items without deterministic signals
+        unclassified_au = [a for a in unclassified if a.get("blogId") == "azureupdates"]
+        unclassified_other = [a for a in unclassified if a.get("blogId") != "azureupdates"]
+        unclassified_pool = (unclassified_au + unclassified_other)[:MAX_UNCLASSIFIED_FOR_AI]
 
         client = AzureOpenAI(
             api_key=api_key,
             azure_endpoint=endpoint,
             api_version=api_version,
         )
-        response = client.chat.completions.create(
-            model=deployment,
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are a precise Azure release editor. Follow formatting instructions exactly.",
-                },
-                {"role": "user", "content": prompt},
-            ],
-            max_completion_tokens=max_tokens,
-        )
-        summary = normalize_summary_text(response.choices[0].message.content.strip())
-        summary = attach_links_to_summary(summary, summary_articles)
+        ai_results = classify_with_ai(unclassified_pool, client, deployment)
+        ai_result_by_id = {r["id"]: r for r in ai_results}
+
+        # Phase 3: merge results and render markdown entirely in code
+        final_buckets = {"in_preview": [], "launched_ga": [], "in_development": []}
+        for bucket_key, bucket_articles in code_buckets.items():
+            for article in bucket_articles:
+                label = re.sub(r"^\s*\[[^\]]+\]\s*", "", article.get("title", "")).strip()
+                final_buckets[bucket_key].append({"label": label, "link": article.get("link", "")})
+
+        for i, article in enumerate(unclassified_pool):
+            ai = ai_result_by_id.get(str(i))
+            if not ai or ai["bucket"] == "other":
+                continue
+            bucket_key = ai["bucket"]
+            if len(final_buckets[bucket_key]) >= MAX_ITEMS_PER_SECTION:
+                continue
+            label = ai["label"] or re.sub(r"^\s*\[[^\]]+\]\s*", "", article.get("title", "")).strip()
+            final_buckets[bucket_key].append({"label": label, "link": article.get("link", "")})
+
+        summary_article_count = sum(len(v) for v in final_buckets.values())
+        summary = render_summary_markdown(final_buckets)
         print(f"AI summary generated: {summary[:100]}...")
         return {
             "status": "available",
@@ -852,7 +906,7 @@ def generate_ai_summary(articles):
             "source": "azure-openai",
             "windowDays": len(summary_days),
             "publishingDays": summary_days,
-            "articleCount": len(summary_articles),
+            "articleCount": summary_article_count,
         }
 
     except Exception as e:
