@@ -9,6 +9,7 @@ import json
 import os
 import re
 import time
+from difflib import SequenceMatcher
 from datetime import datetime, timedelta, timezone
 from html import unescape
 
@@ -129,6 +130,80 @@ def normalize_summary_text(summary_text):
     return normalized
 
 
+def _normalize_for_match(text):
+    """Normalize text for fuzzy title matching."""
+    value = (text or "").lower()
+    value = re.sub(r"\[[^\]]+\]", " ", value)
+    value = re.sub(r"https?://\S+", " ", value)
+    value = re.sub(r"[^a-z0-9\s]", " ", value)
+    value = re.sub(r"\s+", " ", value).strip()
+    return value
+
+
+def attach_links_to_summary(summary_text, summary_articles):
+    """Attach article links to bullet lines when model output omits markdown links."""
+    if not summary_text:
+        return summary_text
+
+    # Recover from malformed heading links like:
+    # - [Launched / Generally Available:](https://...)
+    summary_text = re.sub(
+        r"(?m)^- \[([^\]]+:)\]\(https?://[^\s)]+\)\s*$",
+        r"- \1",
+        summary_text,
+    )
+
+    candidates = []
+    for article in summary_articles:
+        title = (article.get("title") or "").strip()
+        link = (article.get("link") or "").strip()
+        if title and link:
+            candidates.append(
+                {
+                    "title": title,
+                    "norm": _normalize_for_match(title),
+                    "link": link,
+                }
+            )
+
+    markdown_link_re = re.compile(r"\[[^\]]+\]\((https?://[^\s)]+)\)")
+    bullet_re = re.compile(r"^(\s+[•\-*]\s+)(.+)$")
+
+    out_lines = []
+    for line in summary_text.splitlines():
+        bullet = bullet_re.match(line)
+        if not bullet:
+            out_lines.append(line)
+            continue
+
+        prefix, content = bullet.groups()
+        stripped = content.strip()
+        if not stripped or "none noted in selected window" in stripped.lower():
+            out_lines.append(line)
+            continue
+        if markdown_link_re.search(stripped):
+            out_lines.append(line)
+            continue
+
+        best = None
+        probe = _normalize_for_match(stripped)
+        for candidate in candidates:
+            score = SequenceMatcher(None, probe, candidate["norm"]).ratio()
+            if probe and (probe in candidate["norm"] or candidate["norm"] in probe):
+                score += 0.2
+            if best is None or score > best[0]:
+                best = (score, candidate)
+
+        if best and best[0] >= 0.45:
+            out_lines.append(
+                f"{prefix}[{stripped}]({best[1]['link']})"
+            )
+        else:
+            out_lines.append(line)
+
+    return "\n".join(out_lines)
+
+
 def parse_date(entry):
     """Parse date from feed entry, return ISO format string."""
     for field in ["published_parsed", "updated_parsed"]:
@@ -171,11 +246,10 @@ def fetch_tech_community_feeds():
                         "title": clean_html(entry.get("title", "Untitled")),
                         "link": entry.get("link", ""),
                 "- In preview:\n  • [item one](https://example.com/post-1)\n  • [item two](https://example.com/post-2)\n\n"
-                        "summary": truncate(summary),
                         "blog": blog_name,
+                        "blogId": board_id,
                 "Each bullet must be a markdown link in the form [short title](url). "
                 "Use only URLs from the provided list and do not invent or alter links. "
-                        "blogId": board_id,
                         "author": entry.get("author", "Microsoft"),
                     }
                 )
@@ -393,10 +467,14 @@ def generate_ai_summary(articles):
             with open(existing_output, "r", encoding="utf-8") as f:
                 existing = json.load(f)
             if existing.get("summaryStatus") == "available" and existing.get("summary"):
+                # Backfill links if an older summary was plain text only.
+                preserved_summary = attach_links_to_summary(
+                    existing["summary"], day_articles
+                )
                 print("  Preserving existing AI summary from previous CI run")
                 return {
                     "status": "available",
-                    "summary": existing["summary"],
+                    "summary": preserved_summary,
                     "source": existing.get("summarySource", "azure-openai"),
                     "windowDays": existing.get("summaryWindowDays", SUMMARY_WINDOW_DAYS),
                     "publishingDays": existing.get("summaryPublishingDays", []),
@@ -509,6 +587,7 @@ def generate_ai_summary(articles):
             max_completion_tokens=max_tokens,
         )
         summary = normalize_summary_text(response.choices[0].message.content.strip())
+        summary = attach_links_to_summary(summary, summary_articles)
         print(f"AI summary generated: {summary[:100]}...")
         return {
             "status": "available",
