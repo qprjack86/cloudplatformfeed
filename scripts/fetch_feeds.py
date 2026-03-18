@@ -332,25 +332,55 @@ def generate_ai_summary(articles):
     try:
         from openai import AzureOpenAI
 
-        today = datetime.now(timezone.utc).date().isoformat()
-        today_articles = [
-            a for a in articles if a.get("published", "").startswith(today)
+        published_days = sorted(
+            {
+                a.get("published", "")[:10]
+                for a in articles
+                if re.match(r"\d{4}-\d{2}-\d{2}", a.get("published", ""))
+            },
+            reverse=True,
+        )
+
+        if not published_days:
+            print("No dated articles available, skipping AI summary")
+            return None
+
+        summary_day = published_days[0]
+        day_articles = [
+            a for a in articles if a.get("published", "").startswith(summary_day)
         ]
 
-        if not today_articles:
-            print("No articles published today, skipping AI summary")
+        if not day_articles:
+            print(f"No articles found for summary day {summary_day}, skipping AI summary")
             return None
 
         azure_updates_articles = [
-            a for a in today_articles if a.get("blogId") == "azureupdates"
+            a for a in day_articles if a.get("blogId") == "azureupdates"
         ]
         if azure_updates_articles:
-            today_articles = azure_updates_articles
+            summary_articles = azure_updates_articles[:20]
+            prompt = (
+                "You are an Azure Updates lifecycle editor. Summarize only items from Azure "
+                "Updates (prioritize entries where blogId is azureupdates). Build a short "
+                "structured summary with exactly 3 bullets using these headings: 'In preview', "
+                "'Launched / Generally Available', and 'In development'. Use status labels in "
+                "titles (for example '[In preview]') to classify each item, and call out key "
+                "services or features. If a category has no matching items, write 'none today'. "
+                f"Here are the Azure Updates items for {summary_day}:\n\n"
+            )
         else:
             print(
-                "No Azure Updates entries published today; skipping AI summary"
+                f"No Azure Updates entries found for {summary_day}; falling back to all recent articles"
             )
-            return None
+            summary_articles = day_articles[:20]
+            prompt = (
+                "You are an Azure cloud editor. Create a concise daily highlights summary with "
+                "exactly 3 bullets under these headings: 'Platform launches', 'In preview', "
+                "and 'Developer / operations notes'. Focus on concrete product news, major "
+                "releases, and notable platform changes. If a heading has no strong match, "
+                "write 'none noted'. Here are the most recent articles for "
+                f"{summary_day}:\n\n"
+            )
 
         titles = "\n".join(
             [
@@ -360,19 +390,10 @@ def generate_ai_summary(articles):
                 + a["blog"]
                 + " | blogId="
                 + a.get("blogId", "")
-                for a in today_articles[:20]
+                for a in summary_articles
             ]
         )
-        prompt = (
-            "You are an Azure Updates lifecycle editor. Summarize only items from Azure "
-            "Updates (prioritize entries where blogId is azureupdates). Build a short "
-            "structured summary with exactly 3 bullets using these headings: 'In preview', "
-            "'Launched / Generally Available', and 'In development'. Use status labels in "
-            "titles (for example '[In preview]') to classify each item, and call out key "
-            "services or features. If a category has no matching items, write 'none today'. "
-            "Here are today's Azure Updates items:\n\n"
-            + titles
-        )
+        prompt += titles
 
         client = AzureOpenAI(
             api_key=api_key,
