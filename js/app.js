@@ -38,6 +38,7 @@
     JSON.parse(localStorage.getItem("azurefeed-bookmarks") || "[]")
   );
   var showBookmarksOnly = false;
+  var showOtherBlogs = localStorage.getItem("azurefeed-show-other-blogs") === "true";
 
   // Color palette for blog tags
   var blogColors = {};
@@ -65,6 +66,7 @@
   var totalCount = document.getElementById("total-count");
   var toastEl = document.getElementById("toast");
   var bookmarksToggle = document.getElementById("bookmarks-toggle");
+  var otherBlogsToggle = document.getElementById("other-blogs-toggle");
   var aiSummaryEl = document.getElementById("ai-summary");
 
   // ===== Initialize =====
@@ -148,6 +150,7 @@
         aiSummaryEl.style.display = "block";
       }
 
+      updateOtherBlogsToggleUI();
       renderFilters();
       applyFilters();
     } catch (err) {
@@ -161,11 +164,54 @@
     showLoading(false);
   }
 
+  function getVisibleArticles() {
+    if (showOtherBlogs) {
+      return articles;
+    }
+    return articles.filter(function (a) {
+      return a.blogId === AZURE_UPDATES_BLOG_ID;
+    });
+  }
+
+  function updateOtherBlogsToggleUI() {
+    if (!otherBlogsToggle) return;
+    otherBlogsToggle.classList.toggle("active", showOtherBlogs);
+    otherBlogsToggle.textContent = showOtherBlogs
+      ? "📰 Other Blogs On"
+      : "📰 Other Blogs Off";
+    otherBlogsToggle.title = showOtherBlogs
+      ? "Hide non-Azure Updates blogs"
+      : "Show non-Azure Updates blogs";
+  }
+
+  function syncActiveCategoryPill() {
+    var categoryButtons = filterPills.querySelectorAll(".category-pill");
+    categoryButtons.forEach(function (p) {
+      p.classList.remove("active");
+    });
+
+    var activeCategoryButton = filterPills.querySelector(
+      '.category-pill[data-category="' + currentCategory + '"]'
+    );
+
+    if (!activeCategoryButton) {
+      currentCategory = "all";
+      activeCategoryButton = filterPills.querySelector(
+        '.category-pill[data-category="all"]'
+      );
+    }
+
+    if (activeCategoryButton) {
+      activeCategoryButton.classList.add("active");
+    }
+  }
+
   // ===== Render Filter Pills (with category grouping) =====
   function renderFilters() {
+    var sourceArticles = getVisibleArticles();
     var blogCounts = {};
     var azureUpdatesCategoryCounts = {};
-    articles.forEach(function (a) {
+    sourceArticles.forEach(function (a) {
       if (!blogCounts[a.blogId]) {
         blogCounts[a.blogId] = { name: a.blog, count: 0 };
       }
@@ -184,7 +230,7 @@
     var catHtml =
       '<div class="category-bar" id="category-bar">' +
       '<button class="category-pill active" data-category="all">All <span class="count">' +
-      articles.length + "</span></button>";
+      sourceArticles.length + "</span></button>";
 
     Object.keys(CATEGORIES).forEach(function (catName) {
       var catBlogs = CATEGORIES[catName];
@@ -206,6 +252,7 @@
     blogHtml += '<div class="filter-pills" id="blog-filter-pills"></div></div>';
 
     filterPills.innerHTML = catHtml + blogHtml;
+    syncActiveCategoryPill();
   }
 
   // Render blog pills for a specific category
@@ -221,7 +268,7 @@
 
     var blogCounts = {};
     var azureUpdatesCount = 0;
-    articles.forEach(function (a) {
+    getVisibleArticles().forEach(function (a) {
       if (!blogCounts[a.blogId]) {
         blogCounts[a.blogId] = { name: a.blog, count: 0 };
       }
@@ -261,7 +308,8 @@
 
   // ===== Apply Filters & Sort =====
   function applyFilters() {
-    var result = articles.slice();
+    var visibleArticles = getVisibleArticles();
+    var result = visibleArticles.slice();
 
     // Category filter
     if (currentCategory !== "all") {
@@ -323,7 +371,8 @@
 
     filteredArticles = result;
     showingCount.textContent =
-      "Showing " + result.length + " of " + articles.length + " articles";
+      "Showing " + result.length + " of " + visibleArticles.length +
+      " visible (" + articles.length + " loaded)";
     renderArticles();
   }
 
@@ -587,6 +636,19 @@
         : "⭐ Bookmarks";
       applyFilters();
     });
+
+    // Other blogs toggle
+    if (otherBlogsToggle) {
+      otherBlogsToggle.addEventListener("click", function () {
+        showOtherBlogs = !showOtherBlogs;
+          localStorage.setItem("azurefeed-show-other-blogs", String(showOtherBlogs));
+        currentFilter = "all";
+        updateOtherBlogsToggleUI();
+        renderFilters();
+        renderBlogPills(currentCategory);
+        applyFilters();
+      });
+    }
 
     // Article actions (event delegation on grid)
     articlesGrid.addEventListener("click", function (e) {

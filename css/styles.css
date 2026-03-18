@@ -269,6 +269,30 @@ main {
   color: var(--text-secondary);
 }
 
+#other-blogs-toggle {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+#other-blogs-toggle:hover {
+  border-color: var(--azure-blue);
+  color: var(--azure-blue);
+}
+
+#other-blogs-toggle.active {
+  background: var(--azure-blue);
+  border-color: var(--azure-blue);
+  color: white;
+}
+
 #date-filter,
 #sort-by {
   padding: 0.4rem 0.75rem;
@@ -580,6 +604,7 @@ footer a:hover {
 
   .controls-right {
     justify-content: flex-end;
+    flex-wrap: wrap;
   }
 }
 
