@@ -40,6 +40,7 @@ jobs:
 
       - name: Fetch RSS feeds
         env:
+          AZUREFEED_RUN_METRICS_PATH: ${{ runner.temp }}/azurefeed-run-metrics.json
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
           AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
@@ -50,8 +51,121 @@ jobs:
         run: ruby scripts/smoke_test.rb
 
       - name: Commit and push changes
+        id: commit_changes
         run: |
+          committed=false
+          commit_sha=
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/feeds.json data/feed.xml
-          git diff --staged --quiet || (git commit -m "📰 Update Azure blog feeds - $(date -u '+%Y-%m-%d %H:%M UTC')" && git push)
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📰 Update Azure blog feeds - $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+            committed=true
+            commit_sha="$(git rev-parse HEAD)"
+          fi
+          echo "committed=$committed" >> "$GITHUB_OUTPUT"
+          echo "commit_sha=$commit_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Publish run summary
+        if: always()
+        env:
+          METRICS_PATH: ${{ runner.temp }}/azurefeed-run-metrics.json
+          COMMITTED: ${{ steps.commit_changes.outputs.committed }}
+          COMMIT_SHA: ${{ steps.commit_changes.outputs.commit_sha }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          def to_text(value):
+              if value is None:
+                  return "n/a"
+              if isinstance(value, bool):
+                  return "yes" if value else "no"
+              return str(value)
+
+          metrics_path = Path(os.environ.get("METRICS_PATH", "")).expanduser()
+          committed = (os.environ.get("COMMITTED", "").strip().lower() == "true")
+          commit_sha = os.environ.get("COMMIT_SHA", "").strip()
+          summary_file = os.environ["GITHUB_STEP_SUMMARY"]
+
+          metrics = {}
+          if metrics_path and metrics_path.exists():
+              try:
+                  metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+              except (OSError, json.JSONDecodeError) as e:
+                  print(f"::warning::Failed to read run metrics JSON: {e}")
+          else:
+              print(f"::warning::Run metrics file not found at {metrics_path}")
+
+          raw_count = metrics.get("rawArticleCount")
+          unique_count = metrics.get("uniqueArticleCount")
+          previous_count = metrics.get("previousArticleCount")
+          if isinstance(unique_count, int) and isinstance(previous_count, int):
+              delta = unique_count - previous_count
+              delta_text = f"{delta:+d}"
+          else:
+              delta_text = "n/a"
+
+          failsafe_triggered = bool(metrics.get("failsafeTriggered"))
+          failsafe_details = metrics.get("failsafeDetails")
+          summary_status = metrics.get("summaryStatus")
+          summary_reason = metrics.get("summaryReason")
+          summary_article_count = metrics.get("summaryArticleCount")
+          savill_found = metrics.get("savillVideoFound")
+          published = metrics.get("published")
+          generated_at = metrics.get("generatedAt")
+
+          if committed:
+              short_sha = commit_sha[:7] if commit_sha else "unknown"
+              commit_outcome = f"pushed ({short_sha})"
+          else:
+              commit_outcome = "no changes"
+              print("::notice::No publish commit was created for this run.")
+
+          if failsafe_triggered:
+              print("::warning::Publish fail-safe triggered; existing feed data was preserved.")
+
+          lines = [
+              "## Fetch Run Summary",
+              "",
+              f"- Generated at: `{to_text(generated_at)}`",
+              f"- Published outputs: **{to_text(published)}**",
+              f"- Commit outcome: **{commit_outcome}**",
+              "",
+              "### Feed Volume",
+              f"- Raw articles fetched: **{to_text(raw_count)}**",
+              f"- Unique articles kept: **{to_text(unique_count)}**",
+              f"- Previous article count: **{to_text(previous_count)}**",
+              f"- Delta vs previous: **{delta_text}**",
+              "",
+              "### Quality Gates",
+              f"- Fail-safe triggered: **{to_text(failsafe_triggered)}**",
+              f"- Fail-safe details: `{to_text(failsafe_details)}`",
+              "",
+              "### AI Summary",
+              f"- Status: **{to_text(summary_status)}**",
+              f"- Reason: `{to_text(summary_reason)}`",
+              f"- Article count: **{to_text(summary_article_count)}**",
+              "",
+              "### Extras",
+              f"- Savill video found: **{to_text(savill_found)}**",
+              f"- Metrics artifact path: `{metrics_path}`",
+          ]
+
+          with open(summary_file, "a", encoding="utf-8") as f:
+              f.write("\n".join(lines) + "\n")
+          PY
+
+      - name: Upload run metrics artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: azurefeed-run-metrics
+          path: ${{ runner.temp }}/azurefeed-run-metrics.json
+          if-no-files-found: warn
+          retention-days: 14

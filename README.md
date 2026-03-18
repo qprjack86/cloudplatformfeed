@@ -114,6 +114,12 @@ pip-compile --upgrade --output-file scripts/requirements.txt scripts/requirement
   - `new_count < ceil(previous_count * 0.60)`
   - `previous_count >= 80` and `new_count < 80`
 
+### CI run observability (maintainers)
+
+- `fetch-feeds` workflow writes core run metrics to JSON when `AZUREFEED_RUN_METRICS_PATH` is set.
+- Each fetch run publishes a GitHub Actions Step Summary with feed volume, fail-safe status, AI summary status, and commit outcome.
+- The same metrics payload is uploaded as the `azurefeed-run-metrics` artifact (14-day retention) for debugging.
+
 If these variables are not set, feed fetching still works and the site will show that the AI summary is unavailable for that update. The published JSON now exposes only a safe summary status and reason code, never raw Azure OpenAI error text.
 
 Feed retrieval is also hardened before parsing: only the configured HTTPS feed hosts are requested, requests use explicit timeouts and bounded retries, and article deduplication normalizes URLs to drop common tracking parameters before duplicate checks.

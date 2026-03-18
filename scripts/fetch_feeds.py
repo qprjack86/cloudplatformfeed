@@ -144,6 +144,7 @@ PUBLIC_SUMMARY_REASONS = {
 }
 FAILSAFE_MIN_ARTICLES = 80
 FAILSAFE_MIN_RATIO = 0.60
+RUN_METRICS_ENV_VAR = "AZUREFEED_RUN_METRICS_PATH"
 
 # DevBlogs definitions: slug -> (display name, feed URL)
 DEVBLOGS = {
@@ -1024,6 +1025,55 @@ def evaluate_publish_failsafe(
     return triggered, details
 
 
+def build_run_metrics(
+    raw_article_count,
+    unique_article_count,
+    previous_article_count,
+    failsafe_triggered,
+    failsafe_details,
+    published,
+    summary_payload,
+    savill_video,
+):
+    """Build the core observability payload for a fetch run."""
+    summary_data = summary_payload or {}
+    return {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "rawArticleCount": raw_article_count,
+        "uniqueArticleCount": unique_article_count,
+        "previousArticleCount": previous_article_count,
+        "failsafeTriggered": failsafe_triggered,
+        "failsafeDetails": failsafe_details,
+        "published": published,
+        "summaryStatus": summary_data.get("status"),
+        "summaryReason": summary_data.get("reason"),
+        "summaryArticleCount": summary_data.get("articleCount"),
+        "savillVideoFound": bool(savill_video),
+    }
+
+
+def write_run_metrics(metrics, output_path=None):
+    """Write run metrics to the configured path without failing the run."""
+    path = output_path
+    if path is None:
+        path = os.environ.get(RUN_METRICS_ENV_VAR, "")
+    path = (path or "").strip()
+    if not path:
+        return False
+
+    try:
+        parent = os.path.dirname(path)
+        if parent:
+            os.makedirs(parent, exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(metrics, f, indent=2, ensure_ascii=False)
+        print(f"Run metrics saved to {path}")
+        return True
+    except (OSError, TypeError, ValueError) as e:
+        print(f"Warning: failed to write run metrics to {path}: {e}")
+        return False
+
+
 def main():
     print("=" * 60)
     print("Azure News Feed - Fetching RSS Feeds")
@@ -1034,6 +1084,7 @@ def main():
     all_articles.extend(fetch_aks_blog())
     all_articles.extend(fetch_devblogs_feeds())
     all_articles.extend(fetch_azure_updates_feed())
+    raw_article_count = len(all_articles)
 
     # Fetch Savill video (independent of article feeds)
     savill_video = fetch_savill_video()
@@ -1058,6 +1109,17 @@ def main():
     elif failsafe_triggered:
         print("Publish fail-safe triggered; skipping output write to preserve last good data")
         print(f"  {failsafe_details}")
+        run_metrics = build_run_metrics(
+            raw_article_count=raw_article_count,
+            unique_article_count=len(unique_articles),
+            previous_article_count=previous_count,
+            failsafe_triggered=True,
+            failsafe_details=failsafe_details,
+            published=False,
+            summary_payload=None,
+            savill_video=savill_video,
+        )
+        write_run_metrics(run_metrics)
         return
     else:
         print("Publish fail-safe check passed")
@@ -1095,6 +1157,18 @@ def main():
 
     # Generate RSS feed
     generate_rss_feed(unique_articles)
+
+    run_metrics = build_run_metrics(
+        raw_article_count=raw_article_count,
+        unique_article_count=len(unique_articles),
+        previous_article_count=previous_count,
+        failsafe_triggered=False,
+        failsafe_details=failsafe_details,
+        published=True,
+        summary_payload=summary_payload,
+        savill_video=savill_video,
+    )
+    write_run_metrics(run_metrics)
 
     print(f"\n{'=' * 60}")
     print(f"Done! {len(unique_articles)} unique articles saved to {output_path}")

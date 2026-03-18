@@ -176,6 +176,68 @@ class SiteConfigTests(unittest.TestCase):
                 fetch_feeds.load_site_config(str(config))
 
 
+class RunMetricsTests(unittest.TestCase):
+    def test_build_run_metrics_for_normal_publish(self):
+        metrics = fetch_feeds.build_run_metrics(
+            raw_article_count=300,
+            unique_article_count=210,
+            previous_article_count=205,
+            failsafe_triggered=False,
+            failsafe_details="guard passed",
+            published=True,
+            summary_payload={
+                "status": "available",
+                "reason": None,
+                "articleCount": 7,
+            },
+            savill_video={"title": "Latest Azure Infrastructure Update"},
+        )
+
+        self.assertIsInstance(metrics.get("generatedAt"), str)
+        self.assertEqual(metrics["rawArticleCount"], 300)
+        self.assertEqual(metrics["uniqueArticleCount"], 210)
+        self.assertEqual(metrics["previousArticleCount"], 205)
+        self.assertFalse(metrics["failsafeTriggered"])
+        self.assertTrue(metrics["published"])
+        self.assertEqual(metrics["summaryStatus"], "available")
+        self.assertIsNone(metrics["summaryReason"])
+        self.assertEqual(metrics["summaryArticleCount"], 7)
+        self.assertTrue(metrics["savillVideoFound"])
+
+    def test_build_run_metrics_for_failsafe_early_exit(self):
+        metrics = fetch_feeds.build_run_metrics(
+            raw_article_count=220,
+            unique_article_count=60,
+            previous_article_count=210,
+            failsafe_triggered=True,
+            failsafe_details="large drop detected",
+            published=False,
+            summary_payload=None,
+            savill_video=None,
+        )
+
+        self.assertTrue(metrics["failsafeTriggered"])
+        self.assertEqual(metrics["failsafeDetails"], "large drop detected")
+        self.assertFalse(metrics["published"])
+        self.assertIsNone(metrics["summaryStatus"])
+        self.assertIsNone(metrics["summaryReason"])
+        self.assertIsNone(metrics["summaryArticleCount"])
+        self.assertFalse(metrics["savillVideoFound"])
+
+    def test_write_run_metrics_skips_when_path_missing(self):
+        result = fetch_feeds.write_run_metrics({"hello": "world"}, output_path="")
+        self.assertFalse(result)
+
+    def test_write_run_metrics_writes_json_file(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = pathlib.Path(tmpdir) / "run-metrics.json"
+            metrics = {"published": True, "rawArticleCount": 5}
+            result = fetch_feeds.write_run_metrics(metrics, output_path=str(path))
+            self.assertTrue(result)
+            written = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(written, metrics)
+
+
 class PublishFailsafeTests(unittest.TestCase):
     def test_triggers_on_large_relative_drop(self):
         triggered, details = fetch_feeds.evaluate_publish_failsafe(
