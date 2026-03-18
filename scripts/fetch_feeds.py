@@ -55,7 +55,7 @@ TC_RSS_URL = (
 )
 AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
 AZURE_UPDATES_FEED = "https://www.microsoft.com/releasecommunications/api/v2/azure/rss"
-SUMMARY_WINDOW_DAYS = 3
+SUMMARY_WINDOW_DAYS = 7
 SUMMARY_MAX_ARTICLES = 20
 
 # DevBlogs definitions: slug -> (display name, feed URL)
