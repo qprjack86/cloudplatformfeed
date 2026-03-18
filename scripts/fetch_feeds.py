@@ -79,7 +79,7 @@ FALLBACK_BULLET = "none noted in selected window"
 FEED_REQUEST_TIMEOUT = (5, 20)
 FEED_RETRY_TOTAL = 2
 FEED_BACKOFF_FACTOR = 1
-FEED_USER_AGENT = "AzureFeedBot/1.0 (+https://azurefeed.news)"
+FEED_USER_AGENT = "AzureFeedBot/1.0 (+https://azurefeed.kailice.uk)"
 TRACKING_QUERY_PREFIXES = ("utm_",)
 TRACKING_QUERY_KEYS = {
     "fbclid",
@@ -741,7 +741,7 @@ def generate_rss_feed(articles):
     rss.set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
     channel = SubElement(rss, "channel")
     SubElement(channel, "title").text = "Azure News Feed"
-    SubElement(channel, "link").text = "https://azurefeed.news"
+    SubElement(channel, "link").text = "https://azurefeed.kailice.uk"
     SubElement(channel, "description").text = (
         "Aggregated daily news from Azure blogs"
     )

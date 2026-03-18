@@ -2,7 +2,7 @@
 
 A daily-updated Azure blog aggregator hosted on GitHub Pages. Collects articles from Azure blogs and presents them in a clean, searchable interface — last 30 days only.
 
-**Live site:** [azurefeed.news](https://azurefeed.news)
+**Live site:** [azurefeed.kailice.uk](https://azurefeed.kailice.uk)
 
 ## Features
 
@@ -59,7 +59,7 @@ The regeneration workflow now runs only on its daily schedule or from manual dis
 
 ### 5. Visit your site
 
-Your feed will be live at `https://azurefeed.news`
+Your feed will be live at `https://azurefeed.kailice.uk`
 
 ## Local Development
 
