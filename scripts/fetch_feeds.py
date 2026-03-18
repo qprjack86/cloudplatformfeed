@@ -11,6 +11,7 @@ import re
 import time
 import math
 import requests
+from pathlib import Path
 from difflib import SequenceMatcher
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -18,6 +19,47 @@ from html import unescape
 from requests.adapters import HTTPAdapter
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from urllib3.util.retry import Retry
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
+
+
+def _normalize_site_host(value):
+    """Normalize a configured host value for canonical URL checks."""
+    host = (value or "").strip().lower().rstrip(".")
+    if host.startswith("www."):
+        host = host[4:]
+    return host
+
+
+def load_site_config(path=SITE_CONFIG_PATH):
+    """Load and validate canonical site settings from config/site.json."""
+    with open(path, "r", encoding="utf-8") as f:
+        raw = json.load(f)
+
+    canonical_host = _normalize_site_host(raw.get("canonicalHost"))
+    configured_url = (raw.get("canonicalUrl") or "").strip()
+    parsed_url = urlsplit(configured_url)
+    url_host = _normalize_site_host(parsed_url.hostname)
+
+    if not canonical_host:
+        raise ValueError("site config canonicalHost must be a non-empty string")
+    if parsed_url.scheme != "https":
+        raise ValueError("site config canonicalUrl must use https")
+    if not url_host or url_host != canonical_host:
+        raise ValueError("site config canonicalUrl host must match canonicalHost")
+    if parsed_url.path not in ("", "/") or parsed_url.query or parsed_url.fragment:
+        raise ValueError("site config canonicalUrl must point to site root")
+
+    return {
+        "canonicalHost": canonical_host,
+        "canonicalUrl": f"https://{canonical_host}",
+    }
+
+
+SITE_CONFIG = load_site_config()
+CANONICAL_SITE_HOST = SITE_CONFIG["canonicalHost"]
+CANONICAL_SITE_URL = SITE_CONFIG["canonicalUrl"]
 
 # Blog definitions: board_id -> display name
 BLOGS = {
@@ -80,7 +122,7 @@ FALLBACK_BULLET = "none noted in selected window"
 FEED_REQUEST_TIMEOUT = (5, 20)
 FEED_RETRY_TOTAL = 2
 FEED_BACKOFF_FACTOR = 1
-FEED_USER_AGENT = "AzureFeedBot/1.0 (+https://azurefeed.kailice.uk)"
+FEED_USER_AGENT = f"AzureFeedBot/1.0 (+{CANONICAL_SITE_URL})"
 TRACKING_QUERY_PREFIXES = ("utm_",)
 TRACKING_QUERY_KEYS = {
     "fbclid",
@@ -744,7 +786,7 @@ def generate_rss_feed(articles):
     rss.set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
     channel = SubElement(rss, "channel")
     SubElement(channel, "title").text = "Azure News Feed"
-    SubElement(channel, "link").text = "https://azurefeed.kailice.uk"
+    SubElement(channel, "link").text = CANONICAL_SITE_URL
     SubElement(channel, "description").text = (
         "Aggregated daily news from Azure blogs"
     )

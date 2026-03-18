@@ -127,6 +127,55 @@ class AttachLinksToSummaryTests(unittest.TestCase):
         self.assertEqual(result.count("https://example.com/existing"), 1)
 
 
+class SiteConfigTests(unittest.TestCase):
+    def test_load_site_config_accepts_valid_config(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            config = pathlib.Path(tmpdir) / "site.json"
+            config.write_text(
+                json.dumps(
+                    {
+                        "canonicalHost": "www.Example.COM",
+                        "canonicalUrl": "https://example.com/",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            loaded = fetch_feeds.load_site_config(str(config))
+
+        self.assertEqual(loaded["canonicalHost"], "example.com")
+        self.assertEqual(loaded["canonicalUrl"], "https://example.com")
+
+    def test_load_site_config_rejects_non_https_urls(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            config = pathlib.Path(tmpdir) / "site.json"
+            config.write_text(
+                json.dumps(
+                    {
+                        "canonicalHost": "example.com",
+                        "canonicalUrl": "http://example.com",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with self.assertRaises(ValueError):
+                fetch_feeds.load_site_config(str(config))
+
+    def test_load_site_config_rejects_host_mismatch(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            config = pathlib.Path(tmpdir) / "site.json"
+            config.write_text(
+                json.dumps(
+                    {
+                        "canonicalHost": "example.com",
+                        "canonicalUrl": "https://other.example.com",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with self.assertRaises(ValueError):
+                fetch_feeds.load_site_config(str(config))
+
+
 class PublishFailsafeTests(unittest.TestCase):
     def test_triggers_on_large_relative_drop(self):
         triggered, details = fetch_feeds.evaluate_publish_failsafe(

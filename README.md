@@ -98,6 +98,12 @@ pip install pip-tools
 pip-compile --upgrade --output-file scripts/requirements.txt scripts/requirements.in
 ```
 
+### Canonical site URL (maintainers)
+
+- Canonical host/URL is centralized in `config/site.json`.
+- Keep `canonicalHost` and `canonicalUrl` in sync (`https://<host>`).
+- Smoke checks enforce consistency across `CNAME`, `index.html` metadata, `README.md`, and generated RSS output.
+
 ### Publish fail-safe (maintainers)
 
 - Feed generation compares the newly deduplicated article count against the previously published `data/feeds.json`.

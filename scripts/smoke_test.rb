@@ -30,6 +30,29 @@ index_html = read_text(ROOT.join("index.html"))
 app_js = read_text(ROOT.join("js", "app.js"))
 feeds_json_text = read_text(ROOT.join("data", "feeds.json"))
 feed_xml = read_text(ROOT.join("data", "feed.xml"))
+readme_text = read_text(ROOT.join("README.md"))
+cname_text = read_text(ROOT.join("CNAME"))
+fetch_script = read_text(ROOT.join("scripts", "fetch_feeds.py"))
+site_config_text = read_text(ROOT.join("config", "site.json"))
+
+site_config = begin
+  JSON.parse(site_config_text)
+rescue JSON::ParserError => e
+  fail_check("config/site.json is invalid JSON: #{e.message}")
+end
+
+canonical_host = site_config["canonicalHost"]
+canonical_url = site_config["canonicalUrl"]
+assert(canonical_host.is_a?(String) && !canonical_host.empty?, "config/site.json canonicalHost must be a non-empty string")
+assert(canonical_url == "https://#{canonical_host}", "config/site.json canonicalUrl must match canonicalHost")
+assert(cname_text.strip == canonical_host, "CNAME must match config/site.json canonicalHost")
+assert(index_html.include?("content=\"#{canonical_url}\""), "index.html og:url must match config/site.json canonicalUrl")
+assert(index_html.include?("content=\"#{canonical_url}/og-image.png\""), "index.html og:image must match config/site.json canonicalUrl")
+assert(readme_text.include?("[#{canonical_host}](#{canonical_url})"), "README live-site link must match config/site.json canonical URL")
+assert(readme_text.include?("`#{canonical_url}`"), "README setup URL must match config/site.json canonical URL")
+assert(feed_xml.include?("<link>#{canonical_url}</link>"), "data/feed.xml channel link must match config/site.json canonicalUrl")
+assert(fetch_script.include?("load_site_config"), "fetch_feeds.py must load canonical URL from config/site.json")
+assert(!fetch_script.include?(canonical_host), "fetch_feeds.py should not hardcode canonical host")
 
 [index_html, app_js].each do |content|
   assert(!contains_conflict_markers?(content), "merge conflict markers detected")
