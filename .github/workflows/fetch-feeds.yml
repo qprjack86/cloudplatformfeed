@@ -16,6 +16,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -31,6 +36,9 @@ jobs:
           AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
           AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
         run: python scripts/fetch_feeds.py
+
+      - name: Run smoke checks
+        run: ruby scripts/smoke_test.rb
 
       - name: Commit and push changes
         run: |
