@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-18T11:22:06.900420+00:00",
+  "lastUpdated": "2026-03-18T11:30:26.071543+00:00",
   "totalArticles": 201,
   "articles": [
     {
@@ -1822,6 +1822,8 @@
     "2026-03-12",
     "2026-03-11"
   ],
-  "summaryStatus": "unavailable",
-  "summaryReason": "missing_azure_openai_config"
+  "summaryStatus": "available",
+  "summarySource": "azure-openai",
+  "summaryArticleCount": 60,
+  "summary": "- In preview: [In preview] Entra ID‑based access for Azure Blob Storage SFTP; [In preview] Azure Storage Mover private transfers from AWS S3 to Azure Blob; [In preview] Customer‑managed encryption keys for Premium SSD v2 disks used by Azure Database for PostgreSQL; [In preview] Query Profiler in the MSSQL extension for Visual Studio Code.\n\n- Launched / Generally Available: [Launched] Default Rule Set 2.2 and updated ruleset support policy (Azure Web Application Firewall); [Launched] Foundry Agent Service for building and operating AI agents with enterprise controls; [Launched] Log Analytics summary rules “Retry bin” for manual reprocessing; [Launched] Azure Database for PostgreSQL improvements including Grafana dashboards and Terraform/Bicep/Ansible support for elastic clusters.\n\n- In development: none noted in selected window."
 }
