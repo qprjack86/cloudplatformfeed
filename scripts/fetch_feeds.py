@@ -55,6 +55,8 @@ TC_RSS_URL = (
 )
 AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
 AZURE_UPDATES_FEED = "https://www.microsoft.com/releasecommunications/api/v2/azure/rss"
+SUMMARY_WINDOW_DAYS = 3
+SUMMARY_MAX_ARTICLES = 20
 
 # DevBlogs definitions: slug -> (display name, feed URL)
 DEVBLOGS = {
@@ -90,6 +92,29 @@ def truncate(text, max_length=300):
         return text
     truncated = text[:max_length].rsplit(" ", 1)[0]
     return truncated + "..."
+
+
+def get_recent_publishing_days(articles, max_days):
+    """Return the most recent publishing days found in article published values."""
+    published_days = sorted(
+        {
+            article.get("published", "")[:10]
+            for article in articles
+            if re.match(r"\d{4}-\d{2}-\d{2}", article.get("published", ""))
+        },
+        reverse=True,
+    )
+    return published_days[:max_days]
+
+
+def get_articles_for_publishing_days(articles, publishing_days):
+    """Return articles whose published date falls within the selected publishing days."""
+    publishing_days_set = set(publishing_days)
+    return [
+        article
+        for article in articles
+        if article.get("published", "")[:10] in publishing_days_set
+    ]
 
 
 def parse_date(entry):
@@ -308,7 +333,27 @@ def generate_rss_feed(articles):
 
 
 def generate_ai_summary(articles):
-    """Generate an AI summary of today's articles using Azure OpenAI (optional)."""
+    """Generate an AI summary using Azure OpenAI over recent publishing days."""
+    summary_days = get_recent_publishing_days(articles, SUMMARY_WINDOW_DAYS)
+    if not summary_days:
+        print("No dated articles available, skipping AI summary")
+        return {
+            "status": "unavailable",
+            "reason": "no_dated_articles",
+            "windowDays": SUMMARY_WINDOW_DAYS,
+            "publishingDays": [],
+        }
+
+    day_articles = get_articles_for_publishing_days(articles, summary_days)
+    if not day_articles:
+        print("No articles found in configured publishing-day window, skipping AI summary")
+        return {
+            "status": "unavailable",
+            "reason": "no_articles_in_window",
+            "windowDays": SUMMARY_WINDOW_DAYS,
+            "publishingDays": summary_days,
+        }
+
     api_key = os.environ.get("AZURE_OPENAI_API_KEY", "")
     endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", "")
     api_version = os.environ.get("AZURE_OPENAI_API_VERSION", "")
@@ -327,59 +372,55 @@ def generate_ai_summary(articles):
             + ", ".join(missing)
             + "), skipping AI summary"
         )
-        return None
+        return {
+            "status": "unavailable",
+            "reason": "missing_azure_openai_config",
+            "windowDays": SUMMARY_WINDOW_DAYS,
+            "publishingDays": summary_days,
+        }
 
     try:
         from openai import AzureOpenAI
-
-        published_days = sorted(
-            {
-                a.get("published", "")[:10]
-                for a in articles
-                if re.match(r"\d{4}-\d{2}-\d{2}", a.get("published", ""))
-            },
-            reverse=True,
-        )
-
-        if not published_days:
-            print("No dated articles available, skipping AI summary")
-            return None
-
-        summary_day = published_days[0]
-        day_articles = [
-            a for a in articles if a.get("published", "").startswith(summary_day)
-        ]
-
-        if not day_articles:
-            print(f"No articles found for summary day {summary_day}, skipping AI summary")
-            return None
 
         azure_updates_articles = [
             a for a in day_articles if a.get("blogId") == "azureupdates"
         ]
         if azure_updates_articles:
-            summary_articles = azure_updates_articles[:20]
+            remaining_articles = [
+                article
+                for article in day_articles
+                if article.get("blogId") != "azureupdates"
+            ]
+            summary_articles = (
+                azure_updates_articles[:SUMMARY_MAX_ARTICLES]
+                + remaining_articles[: max(0, SUMMARY_MAX_ARTICLES - len(azure_updates_articles[:SUMMARY_MAX_ARTICLES]))]
+            )
             prompt = (
                 "You are an Azure Updates lifecycle editor. Summarize only items from Azure "
-                "Updates (prioritize entries where blogId is azureupdates). Build a short "
-                "structured summary with exactly 3 bullets using these headings: 'In preview', "
-                "'Launched / Generally Available', and 'In development'. Use status labels in "
-                "titles (for example '[In preview]') to classify each item, and call out key "
-                "services or features. If a category has no matching items, write 'none today'. "
-                f"Here are the Azure Updates items for {summary_day}:\n\n"
+                "Updates and recent Azure news. Prioritize Azure Updates entries where blogId "
+                "is azureupdates, but use the additional recent items for context when helpful. "
+                "Build a short structured summary with exactly 3 bullets using these headings: "
+                "'In preview', 'Launched / Generally Available', and 'In development'. Use "
+                "status labels in titles (for example '[In preview]') to classify each item, "
+                "and call out key services or features. If a category has no strong match, "
+                "write 'none noted'. Here are the recent items for publishing days "
+                + ", ".join(summary_days)
+                + ":\n\n"
             )
         else:
             print(
-                f"No Azure Updates entries found for {summary_day}; falling back to all recent articles"
+                "No Azure Updates entries found in configured publishing-day window; summarizing recent articles"
             )
-            summary_articles = day_articles[:20]
+            summary_articles = day_articles[:SUMMARY_MAX_ARTICLES]
             prompt = (
-                "You are an Azure cloud editor. Create a concise daily highlights summary with "
-                "exactly 3 bullets under these headings: 'Platform launches', 'In preview', "
-                "and 'Developer / operations notes'. Focus on concrete product news, major "
-                "releases, and notable platform changes. If a heading has no strong match, "
-                "write 'none noted'. Here are the most recent articles for "
-                f"{summary_day}:\n\n"
+                "You are an Azure cloud editor. Create a concise AI summary over the selected "
+                "recent publishing days with exactly 3 bullets under these headings: 'Platform "
+                "launches', 'In preview', and 'Developer / operations notes'. Focus on concrete "
+                "product news, major releases, and notable platform changes. If a heading has no "
+                "strong match, write 'none noted'. Here are the recent articles for publishing "
+                "days "
+                + ", ".join(summary_days)
+                + ":\n\n"
             )
 
         titles = "\n".join(
@@ -407,7 +448,14 @@ def generate_ai_summary(articles):
         )
         summary = response.choices[0].message.content.strip()
         print(f"AI summary generated: {summary[:100]}...")
-        return summary
+        return {
+            "status": "available",
+            "summary": summary,
+            "source": "azure-openai",
+            "windowDays": len(summary_days),
+            "publishingDays": summary_days,
+            "articleCount": len(summary_articles),
+        }
 
     except Exception as e:
         print(
@@ -415,7 +463,12 @@ def generate_ai_summary(articles):
             "(check Azure OpenAI auth, AZURE_OPENAI_API_VERSION, "
             f"and AZURE_OPENAI_DEPLOYMENT): {e}"
         )
-        return None
+        return {
+            "status": "unavailable",
+            "reason": "azure_openai_failed",
+            "windowDays": SUMMARY_WINDOW_DAYS,
+            "publishingDays": summary_days,
+        }
 
 
 def main():
@@ -447,15 +500,26 @@ def main():
         print(f"Filtered out {discarded} duplicate/older-than-30-days articles")
 
     # Generate AI summary (optional)
-    summary = generate_ai_summary(unique_articles)
+    summary_payload = generate_ai_summary(unique_articles)
 
     data = {
         "lastUpdated": datetime.now(timezone.utc).isoformat(),
         "totalArticles": len(unique_articles),
         "articles": unique_articles,
+        "summaryWindowDays": summary_payload.get("windowDays", SUMMARY_WINDOW_DAYS),
     }
-    if summary:
-        data["summary"] = summary
+    if summary_payload.get("publishingDays"):
+        data["summaryPublishingDays"] = summary_payload["publishingDays"]
+    if summary_payload.get("status"):
+        data["summaryStatus"] = summary_payload["status"]
+    if summary_payload.get("source"):
+        data["summarySource"] = summary_payload["source"]
+    if summary_payload.get("articleCount") is not None:
+        data["summaryArticleCount"] = summary_payload["articleCount"]
+    if summary_payload.get("reason"):
+        data["summaryReason"] = summary_payload["reason"]
+    if summary_payload.get("summary"):
+        data["summary"] = summary_payload["summary"]
 
     os.makedirs("data", exist_ok=True)
     output_path = os.path.join("data", "feeds.json")

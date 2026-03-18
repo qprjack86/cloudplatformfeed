@@ -727,11 +727,22 @@ footer a:hover {
   gap: 0.4rem;
 }
 
+.ai-summary.is-unavailable {
+  border-color: var(--border-color);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--bg-secondary) 100%);
+}
+
+.ai-summary-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
 .ai-summary p {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.4rem;
+  white-space: pre-line;
 }
 
 .ai-summary p:last-child {

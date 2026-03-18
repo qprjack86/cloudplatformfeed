@@ -47,6 +47,33 @@ assert(!articles.empty?, "feeds.json articles must not be empty")
 assert(feeds["lastUpdated"].is_a?(String) && !feeds["lastUpdated"].empty?, "feeds.json lastUpdated is missing")
 assert(feed_xml.include?("<rss") || feed_xml.include?("<feed"), "feed.xml does not look like RSS or Atom")
 
+if feeds.key?("summary")
+  assert(feeds["summary"].is_a?(String) && !feeds["summary"].strip.empty?, "feeds.json summary must be a non-empty string")
+end
+
+if feeds.key?("summaryWindowDays")
+  assert(feeds["summaryWindowDays"].is_a?(Integer) && feeds["summaryWindowDays"] > 0, "feeds.json summaryWindowDays must be a positive integer")
+end
+
+if feeds.key?("summaryPublishingDays")
+  assert(feeds["summaryPublishingDays"].is_a?(Array), "feeds.json summaryPublishingDays must be an array")
+  feeds["summaryPublishingDays"].each_with_index do |day, index|
+    assert(day.is_a?(String) && day.match?(/^\d{4}-\d{2}-\d{2}$/), "summaryPublishingDays entry #{index} must be YYYY-MM-DD")
+  end
+end
+
+if feeds.key?("summaryStatus")
+  assert(%w[available unavailable].include?(feeds["summaryStatus"]), "feeds.json summaryStatus must be available or unavailable")
+end
+
+if feeds.key?("summarySource")
+  assert(feeds["summarySource"].is_a?(String) && !feeds["summarySource"].empty?, "feeds.json summarySource must be a non-empty string")
+end
+
+if feeds["summaryStatus"] == "available"
+  assert(feeds.key?("summary"), "feeds.json summary must exist when summaryStatus is available")
+end
+
 required_keys = %w[title link published summary blog blogId author]
 
 articles.each_with_index do |article, index|

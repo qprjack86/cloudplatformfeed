@@ -122,9 +122,29 @@
 
       // Render AI summary if available
       if (data.summary) {
+        var publishingDays = Array.isArray(data.summaryPublishingDays)
+          ? data.summaryPublishingDays
+          : [];
+        var summaryWindowDays = typeof data.summaryWindowDays === "number"
+          ? data.summaryWindowDays
+          : publishingDays.length;
+        var summaryLabel = summaryWindowDays === 1
+          ? "AI Highlights: Latest Publishing Day"
+          : "AI Highlights: Last " + summaryWindowDays + " Publishing Days";
+        var summaryMeta = publishingDays.length > 0
+          ? '<p class="ai-summary-meta">Covering: ' + escapeHtml(publishingDays.join(", ")) + "</p>"
+          : "";
         aiSummaryEl.innerHTML =
-          "<h2>🤖 Today's Highlights</h2>" +
-          "<p>" + escapeHtml(data.summary) + "</p>";
+          "<h2>🤖 " + escapeHtml(summaryLabel) + "</h2>" +
+          summaryMeta +
+          "<p>" + escapeHtml(data.summary).replace(/\n/g, "<br>") + "</p>";
+        aiSummaryEl.classList.remove("is-unavailable");
+        aiSummaryEl.style.display = "block";
+      } else if (data.summaryStatus === "unavailable") {
+        aiSummaryEl.innerHTML =
+          "<h2>🤖 AI Summary Unavailable</h2>" +
+          "<p>Azure OpenAI did not return a summary for this update.</p>";
+        aiSummaryEl.classList.add("is-unavailable");
         aiSummaryEl.style.display = "block";
       }
 

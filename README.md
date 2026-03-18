@@ -68,6 +68,8 @@ export AZURE_OPENAI_API_VERSION="2024-02-15-preview"
 export AZURE_OPENAI_DEPLOYMENT="gpt-4o-mini"
 ```
 
+The number of recent publishing days included in the AI summary is controlled in `scripts/fetch_feeds.py` via `SUMMARY_WINDOW_DAYS`. Change that constant to values like `1`, `3`, or `7` depending on how broad you want the AI summary to be.
+
 Then run the fetcher:
 
 ```bash
@@ -75,7 +77,7 @@ pip install -r scripts/requirements.txt
 python scripts/fetch_feeds.py
 ```
 
-If these variables are not set, feed fetching still works and only the AI summary is skipped.
+If these variables are not set, feed fetching still works and the site will show that the AI summary is unavailable for that update.
 
 For GitHub Actions, add the same values as repository secrets: `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_VERSION`, and `AZURE_OPENAI_DEPLOYMENT`.
 
