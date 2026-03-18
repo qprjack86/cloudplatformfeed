@@ -812,3 +812,13 @@ footer a:hover {
   font-size: 0.75rem;
   top: 0.22rem;
 }
+
+.ai-section .ai-link {
+  color: var(--azure-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ai-section .ai-link:hover {
+  color: #0072c6;
+}

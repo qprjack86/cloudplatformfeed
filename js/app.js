@@ -147,6 +147,25 @@
 
         // Parse structured sections: "- Heading:\n  • item" into <h3>+<ul>
         function renderSummaryHtml(text) {
+          function renderBulletContent(content) {
+            var html = "";
+            var cursor = 0;
+            var linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+            var match;
+            while ((match = linkRe.exec(content)) !== null) {
+              html += escapeHtml(content.slice(cursor, match.index));
+              html +=
+                '<a class="ai-link" href="' +
+                escapeHtml(match[2]) +
+                '" target="_blank" rel="noopener noreferrer">' +
+                escapeHtml(match[1]) +
+                "</a>";
+              cursor = match.index + match[0].length;
+            }
+            html += escapeHtml(content.slice(cursor));
+            return html;
+          }
+
           var html = "";
           var sectionRe = /^- (.+?):[ \t]*$/;
           var bulletRe = /^[ \t]+[•\-\*] (.+)$/;
@@ -160,7 +179,7 @@
               html += '<div class="ai-section"><h3>' + escapeHtml(sec[1]) + "</h3><ul>";
               inList = true;
             } else if (bul && inList) {
-              html += "<li>" + escapeHtml(bul[1]) + "</li>";
+              html += "<li>" + renderBulletContent(bul[1]) + "</li>";
             } else if (line.trim()) {
               // fallback plain line
               if (inList) { html += "</ul>"; inList = false; html += "</div>"; }

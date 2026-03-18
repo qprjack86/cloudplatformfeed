@@ -170,9 +170,11 @@ def fetch_tech_community_feeds():
                     {
                         "title": clean_html(entry.get("title", "Untitled")),
                         "link": entry.get("link", ""),
-                        "published": parse_date(entry),
+                "- In preview:\n  • [item one](https://example.com/post-1)\n  • [item two](https://example.com/post-2)\n\n"
                         "summary": truncate(summary),
                         "blog": blog_name,
+                "Each bullet must be a markdown link in the form [short title](url). "
+                "Use only URLs from the provided list and do not invent or alter links. "
                         "blogId": board_id,
                         "author": entry.get("author", "Microsoft"),
                     }
@@ -456,10 +458,16 @@ def generate_ai_summary(articles):
             summary_articles = day_articles[:max_articles]
             prompt = (
                 "You are an Azure cloud editor. Create a concise AI summary over the selected "
-                "recent publishing days with exactly 3 bullets under these headings: 'Platform "
+                "recent publishing days with exactly 3 sections under these headings: 'Platform "
                 "launches', 'In preview', and 'Developer / operations notes'. Focus on concrete "
-                "product news, major releases, and notable platform changes. If a heading has no "
-                "strong match, write 'none noted in selected window'. Do not use the word "
+                "product news, major releases, and notable platform changes. "
+                "Format each section like this example:\n"
+                "- Platform launches:\n  • [item one](https://example.com/post-1)\n  • [item two](https://example.com/post-2)\n\n"
+                "List each item on its own line starting with '  • '. "
+                "Each bullet must be a markdown link in the form [short title](url). "
+                "Use only URLs from the provided list and do not invent or alter links. "
+                "If a section has no strong match, write '  • none noted in selected window'. "
+                "Do not use the word "
                 "'today' anywhere because this is a multi-day digest. Selected publishing-day "
                 "range: "
                 + window_desc
@@ -477,6 +485,8 @@ def generate_ai_summary(articles):
                 + a["blog"]
                 + " | blogId="
                 + a.get("blogId", "")
+                + " | url="
+                + a.get("link", "")
                 for a in summary_articles
             ]
         )
