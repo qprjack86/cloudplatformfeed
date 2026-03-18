@@ -9,6 +9,7 @@ import json
 import os
 import re
 import time
+import math
 import requests
 from difflib import SequenceMatcher
 from datetime import datetime, timedelta, timezone
@@ -99,6 +100,8 @@ PUBLIC_SUMMARY_REASONS = {
     "missing_azure_openai_config",
     "azure_openai_failed",
 }
+FAILSAFE_MIN_ARTICLES = 80
+FAILSAFE_MIN_RATIO = 0.60
 
 # DevBlogs definitions: slug -> (display name, feed URL)
 DEVBLOGS = {
@@ -924,6 +927,61 @@ def generate_ai_summary(articles):
         }
 
 
+def load_previous_article_count(path):
+    """Return prior article count from feeds.json, or None when unavailable."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+    except FileNotFoundError:
+        print(f"Publish fail-safe baseline not found: {path}")
+        return None
+    except (OSError, json.JSONDecodeError, TypeError, ValueError) as e:
+        print(f"Publish fail-safe baseline unreadable at {path}: {e}")
+        return None
+
+    articles = existing.get("articles")
+    if isinstance(articles, list):
+        return len(articles)
+
+    total_articles = existing.get("totalArticles")
+    if isinstance(total_articles, int) and total_articles >= 0:
+        return total_articles
+
+    print(
+        "Publish fail-safe baseline missing both articles array and totalArticles; "
+        "bypassing guard for this run"
+    )
+    return None
+
+
+def evaluate_publish_failsafe(
+    new_count,
+    previous_count,
+    min_articles=FAILSAFE_MIN_ARTICLES,
+    min_ratio=FAILSAFE_MIN_RATIO,
+):
+    """Return (triggered, details) for publish fail-safe guard logic."""
+    if previous_count is None:
+        details = (
+            f"baseline unavailable; new_count={new_count}; "
+            f"min_articles={min_articles}; min_ratio={min_ratio:.2f}"
+        )
+        return False, details
+
+    relative_threshold = math.ceil(previous_count * min_ratio)
+    relative_trigger = new_count < relative_threshold
+    absolute_trigger = previous_count >= min_articles and new_count < min_articles
+    triggered = relative_trigger or absolute_trigger
+
+    details = (
+        f"new_count={new_count}, previous_count={previous_count}, "
+        f"relative_threshold={relative_threshold} (ratio={min_ratio:.2f}), "
+        f"absolute_threshold={min_articles}, "
+        f"relative_trigger={relative_trigger}, absolute_trigger={absolute_trigger}"
+    )
+    return triggered, details
+
+
 def main():
     print("=" * 60)
     print("Azure News Feed - Fetching RSS Feeds")
@@ -947,6 +1005,21 @@ def main():
     discarded = len(all_articles) - len(unique_articles)
     if discarded:
         print(f"Filtered out {discarded} duplicate/older-than-30-days articles")
+
+    output_path = os.path.join("data", "feeds.json")
+    previous_count = load_previous_article_count(output_path)
+    failsafe_triggered, failsafe_details = evaluate_publish_failsafe(
+        len(unique_articles), previous_count
+    )
+    if previous_count is None:
+        print("Publish fail-safe bypassed due to missing or unreadable baseline")
+    elif failsafe_triggered:
+        print("Publish fail-safe triggered; skipping output write to preserve last good data")
+        print(f"  {failsafe_details}")
+        return
+    else:
+        print("Publish fail-safe check passed")
+        print(f"  {failsafe_details}")
 
     # Generate AI summary (optional)
     summary_payload = generate_ai_summary(unique_articles)
@@ -975,7 +1048,6 @@ def main():
         data["savillVideo"] = savill_video
 
     os.makedirs("data", exist_ok=True)
-    output_path = os.path.join("data", "feeds.json")
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 

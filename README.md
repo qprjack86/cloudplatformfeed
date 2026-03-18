@@ -98,6 +98,16 @@ pip install pip-tools
 pip-compile --upgrade --output-file scripts/requirements.txt scripts/requirements.in
 ```
 
+### Publish fail-safe (maintainers)
+
+- Feed generation compares the newly deduplicated article count against the previously published `data/feeds.json`.
+- Guard thresholds in `scripts/fetch_feeds.py` are:
+  - `FAILSAFE_MIN_ARTICLES = 80`
+  - `FAILSAFE_MIN_RATIO = 0.60`
+- A run skips publishing (keeps existing feed files unchanged) when the new count is below either threshold rule:
+  - `new_count < ceil(previous_count * 0.60)`
+  - `previous_count >= 80` and `new_count < 80`
+
 If these variables are not set, feed fetching still works and the site will show that the AI summary is unavailable for that update. The published JSON now exposes only a safe summary status and reason code, never raw Azure OpenAI error text.
 
 Feed retrieval is also hardened before parsing: only the configured HTTPS feed hosts are requested, requests use explicit timeouts and bounded retries, and article deduplication normalizes URLs to drop common tracking parameters before duplicate checks.

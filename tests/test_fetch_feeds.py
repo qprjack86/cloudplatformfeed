@@ -1,6 +1,8 @@
 import pathlib
 import sys
 import unittest
+import tempfile
+import json
 from datetime import datetime, timedelta, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -123,6 +125,71 @@ class AttachLinksToSummaryTests(unittest.TestCase):
             result,
         )
         self.assertEqual(result.count("https://example.com/existing"), 1)
+
+
+class PublishFailsafeTests(unittest.TestCase):
+    def test_triggers_on_large_relative_drop(self):
+        triggered, details = fetch_feeds.evaluate_publish_failsafe(
+            new_count=90,
+            previous_count=200,
+        )
+        self.assertTrue(triggered)
+        self.assertIn("relative_trigger=True", details)
+
+    def test_triggers_on_absolute_floor_when_baseline_is_healthy(self):
+        triggered, details = fetch_feeds.evaluate_publish_failsafe(
+            new_count=70,
+            previous_count=120,
+        )
+        self.assertTrue(triggered)
+        self.assertIn("absolute_trigger=True", details)
+
+    def test_does_not_trigger_for_normal_variation(self):
+        triggered, details = fetch_feeds.evaluate_publish_failsafe(
+            new_count=125,
+            previous_count=200,
+        )
+        self.assertFalse(triggered)
+        self.assertIn("relative_trigger=False", details)
+        self.assertIn("absolute_trigger=False", details)
+
+    def test_does_not_trigger_when_baseline_is_missing_or_unreadable(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            missing = pathlib.Path(tmpdir) / "missing.json"
+            previous_count = fetch_feeds.load_previous_article_count(str(missing))
+            self.assertIsNone(previous_count)
+            triggered, _ = fetch_feeds.evaluate_publish_failsafe(
+                new_count=1,
+                previous_count=previous_count,
+            )
+            self.assertFalse(triggered)
+
+            bad = pathlib.Path(tmpdir) / "bad.json"
+            bad.write_text("{ not json", encoding="utf-8")
+            previous_count = fetch_feeds.load_previous_article_count(str(bad))
+            self.assertIsNone(previous_count)
+            triggered, _ = fetch_feeds.evaluate_publish_failsafe(
+                new_count=1,
+                previous_count=previous_count,
+            )
+            self.assertFalse(triggered)
+
+    def test_absolute_floor_does_not_lock_recovery_when_baseline_below_floor(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            baseline = pathlib.Path(tmpdir) / "feeds.json"
+            baseline.write_text(
+                json.dumps({"totalArticles": 70}),
+                encoding="utf-8",
+            )
+            previous_count = fetch_feeds.load_previous_article_count(str(baseline))
+            self.assertEqual(previous_count, 70)
+
+        triggered, details = fetch_feeds.evaluate_publish_failsafe(
+            new_count=75,
+            previous_count=previous_count,
+        )
+        self.assertFalse(triggered)
+        self.assertIn("absolute_trigger=False", details)
 
 
 if __name__ == "__main__":
