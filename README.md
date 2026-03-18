@@ -81,6 +81,17 @@ pip install -r scripts/requirements.txt
 python scripts/fetch_feeds.py
 ```
 
+### Python dependency locking (maintainers)
+
+- `scripts/requirements.in` is the source of truth for direct Python dependencies.
+- `scripts/requirements.txt` is generated/locked output and should not be edited by hand.
+- When updating dependencies, regenerate the lock file and commit both files together:
+
+```bash
+pip install pip-tools
+pip-compile --upgrade --output-file scripts/requirements.txt scripts/requirements.in
+```
+
 If these variables are not set, feed fetching still works and the site will show that the AI summary is unavailable for that update. The published JSON now exposes only a safe summary status and reason code, never raw Azure OpenAI error text.
 
 Feed retrieval is also hardened before parsing: only the configured HTTPS feed hosts are requested, requests use explicit timeouts and bounded retries, and article deduplication normalizes URLs to drop common tracking parameters before duplicate checks.
