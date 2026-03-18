@@ -249,11 +249,10 @@ def fetch_tech_community_feeds():
                     {
                         "title": clean_html(entry.get("title", "Untitled")),
                         "link": entry.get("link", ""),
-                "- In preview:\n  • [item one](https://example.com/post-1)\n  • [item two](https://example.com/post-2)\n\n"
+                        "published": parse_date(entry),
+                        "summary": truncate(summary),
                         "blog": blog_name,
                         "blogId": board_id,
-                "Each bullet must be a markdown link in the form [short title](url). "
-                "Use only URLs from the provided list and do not invent or alter links. "
                         "author": entry.get("author", "Microsoft"),
                     }
                 )
