@@ -78,6 +78,14 @@
     azure_openai_failed: "AI summary generation was temporarily unavailable for this refresh."
   };
 
+  function showElement(element) {
+    if (element) element.classList.remove("is-hidden");
+  }
+
+  function hideElement(element) {
+    if (element) element.classList.add("is-hidden");
+  }
+
   function parseDateValue(value) {
     if (!value) return null;
     var date = new Date(value);
@@ -233,18 +241,20 @@
           "<h2>🤖 " + escapeHtml(summaryLabel) + "</h2>" +
           renderSummaryHtml(data.summary);
         aiSummaryEl.classList.remove("is-unavailable");
-        aiSummaryEl.style.display = "block";
+        showElement(aiSummaryEl);
       } else if (data.summaryStatus === "unavailable") {
         var unavailMsg = "Azure OpenAI did not return a summary for this update.";
         if (data.summaryReason && SUMMARY_REASON_MESSAGES[data.summaryReason]) {
-          unavailMsg += "<br><small style='opacity:0.7'>" +
+          unavailMsg += "<br><small class=\"ai-summary-note\">" +
             escapeHtml(SUMMARY_REASON_MESSAGES[data.summaryReason]) + "</small>";
         }
         aiSummaryEl.innerHTML =
           "<h2>🤖 AI Summary Unavailable</h2>" +
           "<p>" + unavailMsg + "</p>";
         aiSummaryEl.classList.add("is-unavailable");
-        aiSummaryEl.style.display = "block";
+        showElement(aiSummaryEl);
+      } else {
+        hideElement(aiSummaryEl);
       }
 
       updateOtherBlogsToggleUI();
@@ -261,21 +271,28 @@
             year: "numeric"
           });
         }
-        var thumbHtml = sv.thumbnail
-          ? '<img class="savill-thumb" src="' + escapeHtml(sv.thumbnail) +
-            '" alt="Video thumbnail" loading="lazy" />'
-          : '<div class="savill-thumb savill-thumb-placeholder">▶</div>';
+        var thumbHtml = '<div class="savill-thumb-wrap' +
+          (sv.thumbnail ? '' : ' thumb-fallback') +
+          '">' +
+          (sv.thumbnail
+            ? '<img class="savill-thumb" src="' + escapeHtml(sv.thumbnail) +
+              '" alt="Video thumbnail" loading="lazy" />'
+            : '') +
+          '<div class="savill-thumb-placeholder" aria-hidden="true">▶</div>' +
+          '<span class="savill-play">▶</span></div>';
         savillVideoEl.innerHTML =
           '<a class="savill-card" href="' + escapeHtml(sv.url) +
           '" target="_blank" rel="noopener noreferrer">' +
           '<div class="savill-label">🎬 Latest Azure Update Video</div>' +
           '<div class="savill-body">' +
-          '<div class="savill-thumb-wrap">' + thumbHtml + '<span class="savill-play">▶</span></div>' +
+          thumbHtml +
           '<div class="savill-info">' +
           '<div class="savill-title">' + escapeHtml(sv.title) + '</div>' +
           (svDate ? '<div class="savill-date">' + escapeHtml(svDate) + '</div>' : '') +
           '</div></div></a>';
-        savillVideoEl.style.display = "block";
+        showElement(savillVideoEl);
+      } else {
+        hideElement(savillVideoEl);
       }
 
       renderFilters();
@@ -283,8 +300,8 @@
     } catch (err) {
       console.error("Error loading feeds:", err);
       articlesGrid.innerHTML =
-        '<div style="grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--text-secondary);">' +
-        '<p style="font-size:1.3rem;margin-bottom:0.5rem;">📡 No feed data available yet</p>' +
+        '<div class="empty-state empty-state-full">' +
+        '<p class="empty-state-title">📡 No feed data available yet</p>' +
         "<p>Run the GitHub Action to fetch the latest articles, or check back later.</p>" +
         "</div>";
     }
@@ -375,7 +392,7 @@
     catHtml += "</div>";
 
     // Blog pills (shown below categories)
-    var blogHtml = '<div class="blog-pills-row" id="blog-pills-row" style="display:none;">';
+    var blogHtml = '<div class="blog-pills-row is-hidden" id="blog-pills-row">';
     blogHtml += '<div class="filter-pills" id="blog-filter-pills"></div></div>';
 
     filterPills.innerHTML = catHtml + blogHtml;
@@ -389,7 +406,7 @@
     if (!blogFilterPills) return;
 
     if (categoryName === "all") {
-      blogPillsRow.style.display = "none";
+      hideElement(blogPillsRow);
       return;
     }
 
@@ -430,7 +447,7 @@
     }
 
     blogFilterPills.innerHTML = html;
-    blogPillsRow.style.display = "block";
+    showElement(blogPillsRow);
   }
 
   // ===== Apply Filters & Sort =====
@@ -616,7 +633,7 @@
     return (
       '<article class="article-card">' +
       '<div class="card-header">' +
-      '<span class="blog-tag" style="background:' + color + "18;color:" + color + ';">' +
+      '<span class="blog-tag">' +
       escapeHtml(article.blog) + "</span>" +
       '<button class="bookmark-btn ' + (isBookmarked ? "bookmarked" : "") +
       '" data-action="bookmark" data-link="' + encodedLink +
@@ -785,7 +802,10 @@
       savillVideoEl.addEventListener("error", function (e) {
         var target = e.target;
         if (target && target.classList && target.classList.contains("savill-thumb")) {
-          target.style.display = "none";
+          var thumbWrap = target.closest(".savill-thumb-wrap");
+          if (thumbWrap) {
+            thumbWrap.classList.add("thumb-fallback");
+          }
         }
       }, true);
     }

@@ -11,7 +11,7 @@ A daily-updated Azure blog aggregator hosted on GitHub Pages. Collects articles 
 - ⭐ **Bookmarks** — Save articles for later (stored locally per browser)
 - 🌙 **Dark mode** — Easy on the eyes
 - 📱 **Responsive** — Works on desktop, tablet, and mobile
-- 🤖 **Auto-updated** — GitHub Actions fetches new articles daily at 7 AM EST (12 PM UTC)
+- 🤖 **Auto-updated** — GitHub Actions fetches new articles three times a day at 8 AM, 12 PM, and 4 PM UTC
 - 📅 **Last 30 days** — Keeps only recent articles for a lean, fast experience
 - 🔒 **Hardened publish surface** — AI summary failures expose only safe status codes, not raw Azure OpenAI diagnostics
 - 🛡️ **Browser hardening** — CSP and referrer policy limit third-party script and data exposure while preserving Microsoft Clarity
@@ -97,7 +97,7 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## How It Works
 
-1. **GitHub Actions** runs daily at 7 AM EST / 12 PM UTC (or manually)
+1. **GitHub Actions** runs at 8 AM, 12 PM, and 4 PM UTC each day (or manually)
 2. **Python script** fetches RSS feeds from Azure and Microsoft developer blogs plus Azure Updates using allowlisted HTTPS requests with explicit timeouts and retries
 3. Articles from the last 30 days are deduplicated with canonical URL normalization, sorted, and saved to `data/feeds.json`
 4. The commit triggers **GitHub Pages** to redeploy
