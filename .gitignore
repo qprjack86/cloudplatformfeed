@@ -5,3 +5,4 @@ __pycache__/
 *.log
 .DS_Store
 Thumbs.db
+.github/prompts/git-commit-message.prompt.md

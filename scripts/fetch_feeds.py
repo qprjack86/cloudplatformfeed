@@ -117,6 +117,18 @@ def get_articles_for_publishing_days(articles, publishing_days):
     ]
 
 
+def normalize_summary_text(summary_text):
+    """Normalize model phrasing so it reflects a multi-day summary window."""
+    normalized = summary_text or ""
+    normalized = re.sub(
+        r"\bnone today\b", "none noted in selected window", normalized, flags=re.IGNORECASE
+    )
+    normalized = re.sub(
+        r"\btoday\b", "the selected window", normalized, flags=re.IGNORECASE
+    )
+    return normalized
+
+
 def parse_date(entry):
     """Parse date from feed entry, return ISO format string."""
     for field in ["published_parsed", "updated_parsed"]:
@@ -384,7 +396,8 @@ def generate_ai_summary(articles):
 
         # Scale article cap and token budget with the number of days being summarised
         max_articles = SUMMARY_MAX_ARTICLES * len(summary_days)
-        max_tokens = min(200 * len(summary_days), 600)
+        max_tokens = min(250 * len(summary_days), 800)
+        window_desc = summary_days[-1] + " to " + summary_days[0]
 
         azure_updates_articles = [
             a for a in day_articles if a.get("blogId") == "azureupdates"
@@ -406,8 +419,12 @@ def generate_ai_summary(articles):
                 "Build a short structured summary with exactly 3 bullets using these headings: "
                 "'In preview', 'Launched / Generally Available', and 'In development'. Use "
                 "status labels in titles (for example '[In preview]') to classify each item, "
-                "and call out key services or features. If a category has no strong match, "
-                "write 'none noted'. Here are the recent items for publishing days "
+                "and call out key services or features. Do not use the word 'today' anywhere "
+                "because this is a multi-day digest. If a category has no strong match, write "
+                "'none noted in selected window'. Keep each bullet concise and mention the most "
+                "important 2-4 items. Selected publishing-day range: "
+                + window_desc
+                + ". Here are the recent items for publishing days "
                 + ", ".join(summary_days)
                 + ":\n\n"
             )
@@ -421,7 +438,11 @@ def generate_ai_summary(articles):
                 "recent publishing days with exactly 3 bullets under these headings: 'Platform "
                 "launches', 'In preview', and 'Developer / operations notes'. Focus on concrete "
                 "product news, major releases, and notable platform changes. If a heading has no "
-                "strong match, write 'none noted'. Here are the recent articles for publishing "
+                "strong match, write 'none noted in selected window'. Do not use the word "
+                "'today' anywhere because this is a multi-day digest. Selected publishing-day "
+                "range: "
+                + window_desc
+                + ". Here are the recent articles for publishing "
                 "days "
                 + ", ".join(summary_days)
                 + ":\n\n"
@@ -447,10 +468,17 @@ def generate_ai_summary(articles):
         )
         response = client.chat.completions.create(
             model=deployment,
-            messages=[{"role": "user", "content": prompt}],
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a precise Azure release editor. Follow formatting instructions exactly.",
+                },
+                {"role": "user", "content": prompt},
+            ],
             max_completion_tokens=max_tokens,
+            temperature=0.2,
         )
-        summary = response.choices[0].message.content.strip()
+        summary = normalize_summary_text(response.choices[0].message.content.strip())
         print(f"AI summary generated: {summary[:100]}...")
         return {
             "status": "available",
