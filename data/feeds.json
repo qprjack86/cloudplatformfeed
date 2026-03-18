@@ -1,11 +1,29 @@
 {
-  "lastUpdated": "2026-03-18T00:17:39.834970+00:00",
+  "lastUpdated": "2026-03-18T09:36:24.368821+00:00",
   "totalArticles": 201,
   "articles": [
     {
+      "title": "Learn how to build agents and workflows in Python",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-agents-and-workflows-in-python/ba-p/4502144",
+      "published": "2026-03-18T07:00:00+00:00",
+      "summary": "We just concluded Python + Agents, a six-part livestream series where we explored the foundational concepts behind building AI agents in Python using the Microsoft Agent Framework: Using agents with tools, MCP servers, and subagents Adding context to agents with database calls and long-term memory...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "Pamela_Fox"
+    },
+    {
+      "title": "Orchestrating Intrusion Detection and Prevention Signature overrides in Azure Firewall Premium",
+      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/orchestrating-intrusion-detection-and-prevention-signature/ba-p/4502213",
+      "published": "2026-03-18T04:37:40+00:00",
+      "summary": "Introduction: Azure Firewall Premium provides strong protection with a built-in Intrusion Detection and Prevention System (IDPS). It inspects inbound, outbound, and east-west traffic against Microsoft’s continuously updated signature set and can block threats before they reach your workloads. IDPS...",
+      "blog": "Azure Network Security",
+      "blogId": "azurenetworksecurityblog",
+      "author": "saikishor"
+    },
+    {
       "title": "Azure Front Door: Resiliency Series – Part 2: Faster recovery (RTO)",
       "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-resiliency-series-part-2-faster-recovery-rto/ba-p/4503091",
-      "published": "2026-03-17T23:40:48+00:00",
+      "published": "2026-03-18T00:20:54+00:00",
       "summary": "In Part 1 of this blog series, we outlined our four‑pillar strategy for resiliency in Azure Front Door: configuration resiliency, data plane resiliency, tenant isolation, and accelerated Recovery Time Objective (RTO). Together, these pillars help Azure Front Door remain continuously available and...",
       "blog": "Azure Networking",
       "blogId": "azurenetworkingblog",
@@ -46,15 +64,6 @@
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "samcogan"
-    },
-    {
-      "title": "Orchestrating Intrusion Detection and Prevention Signature overrides in Azure Firewall Premium",
-      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/orchestrating-intrusion-detection-and-prevention-signature/ba-p/4502213",
-      "published": "2026-03-17T20:13:25+00:00",
-      "summary": "Introduction: Azure Firewall Premium provides strong protection with a built-in Intrusion Detection and Prevention System (IDPS). It inspects inbound, outbound, and east-west traffic against Microsoft’s continuously updated signature set and can block threats before they reach your workloads. IDPS...",
-      "blog": "Azure Network Security",
-      "blogId": "azurenetworksecurityblog",
-      "author": "saikishor"
     },
     {
       "title": "The LLM Inference Optimization Stack: A Prioritized Playbook for Enterprise Teams",
@@ -1407,15 +1416,6 @@
       "author": "eyalh"
     },
     {
-      "title": "On-Premises Manufacturing Intelligence",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-premises-manufacturing-intelligence/ba-p/4490771",
-      "published": "2026-02-24T16:11:32+00:00",
-      "summary": "Manufacturing facilities face a fundamental dilemma in the AI era: how to harness artificial intelligence for predictive maintenance, equipment diagnostics, and operational insights while keeping sensitive production data entirely on-premises. Industrial environments generate proprietary...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Lee_Stott"
-    },
-    {
       "title": "Improved Python (PyPi/uvx) support in Azure MCP Server",
       "link": "https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-better-python-support/",
       "published": "2026-02-24T16:00:21+00:00",
@@ -1812,5 +1812,16 @@
       "author": "Dan Hellem"
     }
   ],
-  "summary": "- In preview: none today\n\n- Launched / Generally Available: [Launched] Default Rule Set 2.2 for Azure Web Application Firewall is now generally available with updated ruleset support policy; [Launched] Foundry Agent Service is now generally available; [Retirement notice] Azure VMware Solution AV36P and AV52 nodes will retire on June 30, 2029.\n\n- In development: none today"
+  "summaryWindowDays": 7,
+  "summaryPublishingDays": [
+    "2026-03-18",
+    "2026-03-17",
+    "2026-03-16",
+    "2026-03-14",
+    "2026-03-13",
+    "2026-03-12",
+    "2026-03-11"
+  ],
+  "summaryStatus": "unavailable",
+  "summaryReason": "azure_openai_failed"
 }
