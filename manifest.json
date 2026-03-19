@@ -9,10 +9,16 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "icons/atech.png",
-      "sizes": "1599x742",
+      "src": "icons/atech-192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/atech-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
