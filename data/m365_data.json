@@ -1,11 +1,10 @@
 {
-  "generatedAt": "2026-03-19T13:29:13.138395+00:00",
+  "generatedAt": "2026-03-19T14:01:29.304791+00:00",
   "totalArticles": 90,
   "articles": [
     {
       "title": "Dynamics 365, Power Platform, and Role-based Copilot offerings 2026 release wave 1 plans available now",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
+      "link": "https://deltapulse.app/dashboard?message=MC1255714",
       "published": "2026-03-19T04:39:14.000Z",
       "source": "m365",
       "m365Service": "Dynamics 365 Apps",
@@ -24,7 +23,7 @@
     },
     {
       "title": "Dynamics 365 Customer Service – Define critical questions in evaluation criteria",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255709",
+      "link": "https://deltapulse.app/dashboard?message=MC1255709",
       "published": "2026-03-19T04:24:53.000Z",
       "source": "m365",
       "m365Service": "Dynamics 365 Apps",
@@ -42,7 +41,7 @@
     },
     {
       "title": "Microsoft Copilot Studio - Read only Analytics Viewer role",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255508",
+      "link": "https://deltapulse.app/dashboard?message=MC1255508",
       "published": "2026-03-19T02:21:27.000Z",
       "source": "m365",
       "m365Service": "Microsoft Copilot (Power Platform)",
@@ -92,7 +91,7 @@
     },
     {
       "title": "Updates available for Microsoft 365 Apps for Current Channel",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255412",
+      "link": "https://deltapulse.app/dashboard?message=MC1255412",
       "published": "2026-03-18T22:45:20.723Z",
       "source": "m365",
       "m365Service": "Microsoft 365 apps",
@@ -110,7 +109,7 @@
     },
     {
       "title": "Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255410",
+      "link": "https://deltapulse.app/dashboard?message=MC1255410",
       "published": "2026-03-18T22:32:26.000Z",
       "source": "m365",
       "m365Service": "Microsoft Viva",
@@ -128,7 +127,7 @@
     },
     {
       "title": "Lists as a knowledge source for agents in SharePoint and OneDrive",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255409",
+      "link": "https://deltapulse.app/dashboard?message=MC1255409",
       "published": "2026-03-18T22:31:18.000Z",
       "source": "m365",
       "m365Service": "SharePoint Online",
@@ -147,7 +146,7 @@
     },
     {
       "title": "Publishing InfoPath Forms in SharePoint Online will not be allowed for all tenants",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255407",
+      "link": "https://deltapulse.app/dashboard?message=MC1255407",
       "published": "2026-03-18T22:30:18.000Z",
       "source": "m365",
       "m365Service": "SharePoint Online",
@@ -165,7 +164,7 @@
     },
     {
       "title": "Microsoft Purview | Data Security Triage Agent Summaries for DLP Alerts in Microsoft Defender XDR",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255406",
+      "link": "https://deltapulse.app/dashboard?message=MC1255406",
       "published": "2026-03-18T22:29:45.000Z",
       "source": "m365",
       "m365Service": "Microsoft Defender XDR",
@@ -184,7 +183,7 @@
     },
     {
       "title": "Microsoft Edge for Business: Cross-tenant support using Intune Mobile Application Management (MAM)",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255405",
+      "link": "https://deltapulse.app/dashboard?message=MC1255405",
       "published": "2026-03-18T22:29:15.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365 suite",
@@ -202,7 +201,7 @@
     },
     {
       "title": "Improved OneDrive sync experience for macOS users",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255404",
+      "link": "https://deltapulse.app/dashboard?message=MC1255404",
       "published": "2026-03-18T22:28:44.000Z",
       "source": "m365",
       "m365Service": "Microsoft OneDrive",
@@ -220,7 +219,7 @@
     },
     {
       "title": "New admin control for AI‑generated code previews in Microsoft 365 Copilot Pages",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254560",
+      "link": "https://deltapulse.app/dashboard?message=MC1254560",
       "published": "2026-03-17T22:52:11.000Z",
       "source": "m365",
       "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -239,7 +238,7 @@
     },
     {
       "title": "Purview DSPM’s Data Risk Assessments now support item-level investigation and remediation of SharePoint",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254556",
+      "link": "https://deltapulse.app/dashboard?message=MC1254556",
       "published": "2026-03-17T22:51:02.000Z",
       "source": "m365",
       "m365Service": "Microsoft Purview",
@@ -257,7 +256,7 @@
     },
     {
       "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254554",
+      "link": "https://deltapulse.app/dashboard?message=MC1254554",
       "published": "2026-03-17T22:47:38.000Z",
       "source": "m365",
       "m365Service": "Microsoft Defender XDR",
@@ -275,7 +274,7 @@
     },
     {
       "title": "Microsoft Teams: New slash command in compose to create workflows",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254553",
+      "link": "https://deltapulse.app/dashboard?message=MC1254553",
       "published": "2026-03-17T22:46:28.000Z",
       "source": "m365",
       "m365Service": "Microsoft Teams",
@@ -325,7 +324,7 @@
     },
     {
       "title": "Copilot Notebooks: New features coming to Frontier Public",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254552",
+      "link": "https://deltapulse.app/dashboard?message=MC1254552",
       "published": "2026-03-17T22:45:44.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365 apps",
@@ -344,7 +343,7 @@
     },
     {
       "title": "Power Apps - Custom theming for model-driven apps is becoming generally available",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254543",
+      "link": "https://deltapulse.app/dashboard?message=MC1254543",
       "published": "2026-03-17T21:54:38.000Z",
       "source": "m365",
       "m365Service": "Power Apps",
@@ -362,7 +361,7 @@
     },
     {
       "title": "30-Day Reminder: Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254512",
+      "link": "https://deltapulse.app/dashboard?message=MC1254512",
       "published": "2026-03-17T19:57:25.823Z",
       "source": "m365",
       "m365Service": "Windows",
@@ -380,7 +379,7 @@
     },
     {
       "title": "Dynamics 365 Sales - Improve opportunity context with AI-based data enrichment",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254454",
+      "link": "https://deltapulse.app/dashboard?message=MC1254454",
       "published": "2026-03-17T17:37:12.000Z",
       "source": "m365",
       "m365Service": "Dynamics 365 Apps",
@@ -398,7 +397,7 @@
     },
     {
       "title": "Dynamics 365 Sales - Modern, in-flow email template picker for Sequences",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254451",
+      "link": "https://deltapulse.app/dashboard?message=MC1254451",
       "published": "2026-03-17T17:31:28.000Z",
       "source": "m365",
       "m365Service": "Dynamics 365 Apps",
@@ -416,7 +415,7 @@
     },
     {
       "title": "Planner and Project Online licensing: Project Plan 5 and Project Online Essentials retire from sale",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253809",
+      "link": "https://deltapulse.app/dashboard?message=MC1253809",
       "published": "2026-03-17T00:03:13.000Z",
       "source": "m365",
       "m365Service": "Project Online",
@@ -498,7 +497,7 @@
     },
     {
       "title": "Whiteboards created in Teams channels will now be stored in SharePoint",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253753",
+      "link": "https://deltapulse.app/dashboard?message=MC1253753",
       "published": "2026-03-16T22:34:52.000Z",
       "source": "m365",
       "m365Service": "Microsoft Teams",
@@ -516,7 +515,7 @@
     },
     {
       "title": "Microsoft Teams: Manage multiple phone numbers within one Teams account",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253752",
+      "link": "https://deltapulse.app/dashboard?message=MC1253752",
       "published": "2026-03-16T22:32:26.000Z",
       "source": "m365",
       "m365Service": "Microsoft Teams",
@@ -534,7 +533,7 @@
     },
     {
       "title": "Microsoft 365 Copilot: Upload local files now supports .eml and .msg file types",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253750",
+      "link": "https://deltapulse.app/dashboard?message=MC1253750",
       "published": "2026-03-16T22:31:42.000Z",
       "source": "m365",
       "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -553,7 +552,7 @@
     },
     {
       "title": "Microsoft Entra: Passkeys in Microsoft registration campaigns",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253746",
+      "link": "https://deltapulse.app/dashboard?message=MC1253746",
       "published": "2026-03-16T22:27:17.000Z",
       "source": "m365",
       "m365Service": "Microsoft Entra",
@@ -571,7 +570,7 @@
     },
     {
       "title": "Action required: Secure Boot certificate updates for Windows 365 Cloud PCs before June 2026",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253743",
+      "link": "https://deltapulse.app/dashboard?message=MC1253743",
       "published": "2026-03-16T22:23:56.000Z",
       "source": "m365",
       "m365Service": "Windows 365",
@@ -589,7 +588,7 @@
     },
     {
       "title": "Out-of-band hotpatch update released to address an issue affecting Bluetooth device visibility",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253720",
+      "link": "https://deltapulse.app/dashboard?message=MC1253720",
       "published": "2026-03-16T21:03:14.053Z",
       "source": "m365",
       "m365Service": "Windows",
@@ -607,7 +606,7 @@
     },
     {
       "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253577",
+      "link": "https://deltapulse.app/dashboard?message=MC1253577",
       "published": "2026-03-16T19:07:15.000Z",
       "source": "m365",
       "m365Service": "Power Platform",
@@ -625,7 +624,7 @@
     },
     {
       "title": "Dynamics 365 Sales - Get additional Dataverse storage capacity",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253515",
+      "link": "https://deltapulse.app/dashboard?message=MC1253515",
       "published": "2026-03-16T18:34:00.000Z",
       "source": "m365",
       "m365Service": "Dynamics 365 Apps",
@@ -643,7 +642,7 @@
     },
     {
       "title": "Microsoft Dataverse - Use AI functions to enhance data quality",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253512",
+      "link": "https://deltapulse.app/dashboard?message=MC1253512",
       "published": "2026-03-16T18:32:52.000Z",
       "source": "m365",
       "m365Service": "Microsoft Dataverse",
@@ -661,7 +660,7 @@
     },
     {
       "title": "Dynamics 365 Customer Service - Control evaluation volume with sampling",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253514",
+      "link": "https://deltapulse.app/dashboard?message=MC1253514",
       "published": "2026-03-16T18:17:17.000Z",
       "source": "m365",
       "m365Service": "Dynamics 365 Apps",
@@ -679,7 +678,7 @@
     },
     {
       "title": "Dynamics 365 Commerce – Modernize POS journeys with React and Fluent UI",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253506",
+      "link": "https://deltapulse.app/dashboard?message=MC1253506",
       "published": "2026-03-16T18:09:30.000Z",
       "source": "m365",
       "m365Service": "Finance and Operations Apps",
@@ -697,7 +696,7 @@
     },
     {
       "title": "Dynamics 365 Commerce - Support multiple languages in Store Commerce self-checkout",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253504",
+      "link": "https://deltapulse.app/dashboard?message=MC1253504",
       "published": "2026-03-16T18:05:13.000Z",
       "source": "m365",
       "m365Service": "Finance and Operations Apps",
@@ -715,7 +714,7 @@
     },
     {
       "title": "Power Apps - Download wrapped apps directly from Dataverse",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253499",
+      "link": "https://deltapulse.app/dashboard?message=MC1253499",
       "published": "2026-03-16T17:54:58.000Z",
       "source": "m365",
       "m365Service": "Power Apps",
@@ -733,7 +732,7 @@
     },
     {
       "title": "Microsoft Secure Score: New recommendations for Microsoft Defender for Endpoint",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251207",
+      "link": "https://deltapulse.app/dashboard?message=MC1251207",
       "published": "2026-03-13T22:53:07.000Z",
       "source": "m365",
       "m365Service": "Microsoft Defender XDR",
@@ -751,7 +750,7 @@
     },
     {
       "title": "Microsoft Teams: Identify external bots joining your Teams meetings",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251206",
+      "link": "https://deltapulse.app/dashboard?message=MC1251206",
       "published": "2026-03-13T22:52:25.000Z",
       "source": "m365",
       "m365Service": "Microsoft Teams",
@@ -769,7 +768,7 @@
     },
     {
       "title": "Copilot extensibility: Microsoft 365 Copilot Declarative Agents model upgrade to GPT‑5.2",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251203",
+      "link": "https://deltapulse.app/dashboard?message=MC1251203",
       "published": "2026-03-13T22:48:48.000Z",
       "source": "m365",
       "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -787,7 +786,7 @@
     },
     {
       "title": "Microsoft Viva Engage | Email sender domain migration from @yammer.com to @engage.mail.microsoft",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251200",
+      "link": "https://deltapulse.app/dashboard?message=MC1251200",
       "published": "2026-03-13T22:45:08.000Z",
       "source": "m365",
       "m365Service": "Microsoft Viva",
@@ -805,7 +804,7 @@
     },
     {
       "title": "(Updated) Planned Maintenance: Windows 365 Service",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251199",
+      "link": "https://deltapulse.app/dashboard?message=MC1251199",
       "published": "2026-03-13T22:44:27.000Z",
       "source": "m365",
       "m365Service": "Windows 365",
@@ -823,7 +822,7 @@
     },
     {
       "title": "Prevent/Fix (Detected): Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251194",
+      "link": "https://deltapulse.app/dashboard?message=MC1251194",
       "published": "2026-03-13T22:37:03.000Z",
       "source": "m365",
       "m365Service": "Windows Autopatch",
@@ -889,7 +888,7 @@
     },
     {
       "title": "Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250975",
+      "link": "https://deltapulse.app/dashboard?message=MC1250975",
       "published": "2026-03-13T18:59:56.223Z",
       "source": "m365",
       "m365Service": "Windows",
@@ -907,7 +906,7 @@
     },
     {
       "title": "Windows Deployment Services (WDS): Hands-free deployment hardening (Phase 2)",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250927",
+      "link": "https://deltapulse.app/dashboard?message=MC1250927",
       "published": "2026-03-13T17:09:18.157Z",
       "source": "m365",
       "m365Service": "Windows",
@@ -925,7 +924,7 @@
     },
     {
       "title": "Power Platform – New Continuous Access Evaluation (CAE) announcement",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250351",
+      "link": "https://deltapulse.app/dashboard?message=MC1250351",
       "published": "2026-03-13T03:42:00.000Z",
       "source": "m365",
       "m365Service": "Microsoft Dataverse",
@@ -944,7 +943,7 @@
     },
     {
       "title": "Sensitivity labels available soon for Viva Engage communities",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250283",
+      "link": "https://deltapulse.app/dashboard?message=MC1250283",
       "published": "2026-03-12T23:46:41.000Z",
       "source": "m365",
       "m365Service": "Microsoft Viva",
@@ -962,7 +961,7 @@
     },
     {
       "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250279",
+      "link": "https://deltapulse.app/dashboard?message=MC1250279",
       "published": "2026-03-12T23:42:55.000Z",
       "source": "m365",
       "m365Service": "Planner",
@@ -981,7 +980,7 @@
     },
     {
       "title": "Microsoft Edge: Copilot new tab page",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250274",
+      "link": "https://deltapulse.app/dashboard?message=MC1250274",
       "published": "2026-03-12T23:41:53.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365 suite",
@@ -999,7 +998,7 @@
     },
     {
       "title": "Improved copy and paste support for @mentions and shared contacts in Microsoft Teams",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250273",
+      "link": "https://deltapulse.app/dashboard?message=MC1250273",
       "published": "2026-03-12T23:41:19.000Z",
       "source": "m365",
       "m365Service": "Microsoft Teams",
@@ -1017,7 +1016,7 @@
     },
     {
       "title": "Introducing awards and certifications section in M365 profile card",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250272",
+      "link": "https://deltapulse.app/dashboard?message=MC1250272",
       "published": "2026-03-12T23:40:52.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365 apps",
@@ -1179,7 +1178,7 @@
     },
     {
       "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in model-driven apps",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250069",
+      "link": "https://deltapulse.app/dashboard?message=MC1250069",
       "published": "2026-03-12T19:18:24.000Z",
       "source": "m365",
       "m365Service": "Power Apps",
@@ -1197,7 +1196,7 @@
     },
     {
       "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in canvas apps",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250062",
+      "link": "https://deltapulse.app/dashboard?message=MC1250062",
       "published": "2026-03-12T19:14:12.000Z",
       "source": "m365",
       "m365Service": "Power Apps",
@@ -1215,7 +1214,7 @@
     },
     {
       "title": "Windows Office Hours: March 19, 2026",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250021",
+      "link": "https://deltapulse.app/dashboard?message=MC1250021",
       "published": "2026-03-12T17:55:36.090Z",
       "source": "m365",
       "m365Service": "Windows",
@@ -1249,7 +1248,7 @@
     },
     {
       "title": "(Updated) Microsoft Entra passkeys on Windows now support phishing-resistant sign-in",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247893",
+      "link": "https://deltapulse.app/dashboard?message=MC1247893",
       "published": "2026-03-09T22:24:16.000Z",
       "source": "m365",
       "m365Service": "Microsoft Entra",
@@ -1267,7 +1266,7 @@
     },
     {
       "title": "(Updated) Set a custom name for the OneDrive sync folder",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1242782",
+      "link": "https://deltapulse.app/dashboard?message=MC1242782",
       "published": "2026-03-03T00:02:49.000Z",
       "source": "m365",
       "m365Service": "Microsoft OneDrive",
@@ -1285,7 +1284,7 @@
     },
     {
       "title": "Prevent/Fix: Microsoft Baseline Security Mode has automatically trigger Entra Conditional Access policy creation",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1246002",
+      "link": "https://deltapulse.app/dashboard?message=MC1246002",
       "published": "2026-03-06T21:22:39.000Z",
       "source": "m365",
       "m365Service": "Microsoft Entra",
@@ -1351,7 +1350,7 @@
     },
     {
       "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1249427",
+      "link": "https://deltapulse.app/dashboard?message=MC1249427",
       "published": "2026-03-12T00:04:42.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365 apps",
@@ -1369,7 +1368,7 @@
     },
     {
       "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247899",
+      "link": "https://deltapulse.app/dashboard?message=MC1247899",
       "published": "2026-03-09T22:27:11.000Z",
       "source": "m365",
       "m365Service": "Microsoft Viva",
@@ -1387,7 +1386,7 @@
     },
     {
       "title": "(Updated) Outlook: Support for recommended and automatically applied sensitivity labels in Outlook for iOS and Android",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247891",
+      "link": "https://deltapulse.app/dashboard?message=MC1247891",
       "published": "2026-03-09T22:23:37.000Z",
       "source": "m365",
       "m365Service": "Exchange Online",
@@ -1453,7 +1452,7 @@
     },
     {
       "title": "(Updated) Outlook Mobile: Follow a meeting option",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1248393",
+      "link": "https://deltapulse.app/dashboard?message=MC1248393",
       "published": "2026-03-10T22:50:11.000Z",
       "source": "m365",
       "m365Service": "Exchange Online",
@@ -1471,7 +1470,7 @@
     },
     {
       "title": "Microsoft Viva Glint: AI-generated survey insights with Copilot highlights",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247887",
+      "link": "https://deltapulse.app/dashboard?message=MC1247887",
       "published": "2026-03-09T22:21:46.000Z",
       "source": "m365",
       "m365Service": "Microsoft Viva",
@@ -1490,7 +1489,7 @@
     },
     {
       "title": "(Updated) Outlook: retiring “Contact Masking” (hide suggested recipients) -  March 31, 2026",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1234566",
+      "link": "https://deltapulse.app/dashboard?message=MC1234566",
       "published": "2026-02-18T18:40:43.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365 suite",
@@ -1556,7 +1555,7 @@
     },
     {
       "title": "(Updated) Microsoft Teams Rooms: Private chat for organizers and presenters in structured meetings and webinars",
-      "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247896",
+      "link": "https://deltapulse.app/dashboard?message=MC1247896",
       "published": "2026-03-09T22:25:10.000Z",
       "source": "m365",
       "m365Service": "Microsoft Teams",
@@ -1577,7 +1576,7 @@
     "Collaboration": [
       {
         "title": "Lists as a knowledge source for agents in SharePoint and OneDrive",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255409",
+        "link": "https://deltapulse.app/dashboard?message=MC1255409",
         "published": "2026-03-18T22:31:18.000Z",
         "source": "m365",
         "m365Service": "SharePoint Online",
@@ -1596,7 +1595,7 @@
       },
       {
         "title": "Publishing InfoPath Forms in SharePoint Online will not be allowed for all tenants",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255407",
+        "link": "https://deltapulse.app/dashboard?message=MC1255407",
         "published": "2026-03-18T22:30:18.000Z",
         "source": "m365",
         "m365Service": "SharePoint Online",
@@ -1614,7 +1613,7 @@
       },
       {
         "title": "Microsoft Teams: New slash command in compose to create workflows",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254553",
+        "link": "https://deltapulse.app/dashboard?message=MC1254553",
         "published": "2026-03-17T22:46:28.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -1632,7 +1631,7 @@
       },
       {
         "title": "Whiteboards created in Teams channels will now be stored in SharePoint",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253753",
+        "link": "https://deltapulse.app/dashboard?message=MC1253753",
         "published": "2026-03-16T22:34:52.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -1650,7 +1649,7 @@
       },
       {
         "title": "Microsoft Teams: Manage multiple phone numbers within one Teams account",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253752",
+        "link": "https://deltapulse.app/dashboard?message=MC1253752",
         "published": "2026-03-16T22:32:26.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -1668,7 +1667,7 @@
       },
       {
         "title": "Microsoft Teams: Identify external bots joining your Teams meetings",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251206",
+        "link": "https://deltapulse.app/dashboard?message=MC1251206",
         "published": "2026-03-13T22:52:25.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -1686,7 +1685,7 @@
       },
       {
         "title": "Improved copy and paste support for @mentions and shared contacts in Microsoft Teams",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250273",
+        "link": "https://deltapulse.app/dashboard?message=MC1250273",
         "published": "2026-03-12T23:41:19.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -1704,7 +1703,7 @@
       },
       {
         "title": "(Updated) Outlook: Support for recommended and automatically applied sensitivity labels in Outlook for iOS and Android",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247891",
+        "link": "https://deltapulse.app/dashboard?message=MC1247891",
         "published": "2026-03-09T22:23:37.000Z",
         "source": "m365",
         "m365Service": "Exchange Online",
@@ -1722,7 +1721,7 @@
       },
       {
         "title": "(Updated) Outlook Mobile: Follow a meeting option",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1248393",
+        "link": "https://deltapulse.app/dashboard?message=MC1248393",
         "published": "2026-03-10T22:50:11.000Z",
         "source": "m365",
         "m365Service": "Exchange Online",
@@ -1740,7 +1739,7 @@
       },
       {
         "title": "(Updated) Microsoft Teams Rooms: Private chat for organizers and presenters in structured meetings and webinars",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247896",
+        "link": "https://deltapulse.app/dashboard?message=MC1247896",
         "published": "2026-03-09T22:25:10.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -1792,7 +1791,7 @@
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255412",
+        "link": "https://deltapulse.app/dashboard?message=MC1255412",
         "published": "2026-03-18T22:45:20.723Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
@@ -1842,7 +1841,7 @@
       },
       {
         "title": "Copilot Notebooks: New features coming to Frontier Public",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254552",
+        "link": "https://deltapulse.app/dashboard?message=MC1254552",
         "published": "2026-03-17T22:45:44.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
@@ -1861,7 +1860,7 @@
       },
       {
         "title": "Planner and Project Online licensing: Project Plan 5 and Project Online Essentials retire from sale",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253809",
+        "link": "https://deltapulse.app/dashboard?message=MC1253809",
         "published": "2026-03-17T00:03:13.000Z",
         "source": "m365",
         "m365Service": "Project Online",
@@ -1991,7 +1990,7 @@
       },
       {
         "title": "Introducing awards and certifications section in M365 profile card",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250272",
+        "link": "https://deltapulse.app/dashboard?message=MC1250272",
         "published": "2026-03-12T23:40:52.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
@@ -2217,7 +2216,7 @@
       },
       {
         "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1249427",
+        "link": "https://deltapulse.app/dashboard?message=MC1249427",
         "published": "2026-03-12T00:04:42.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
@@ -2333,7 +2332,7 @@
     "AI & Automation": [
       {
         "title": "Microsoft Copilot Studio - Read only Analytics Viewer role",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255508",
+        "link": "https://deltapulse.app/dashboard?message=MC1255508",
         "published": "2026-03-19T02:21:27.000Z",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Power Platform)",
@@ -2351,7 +2350,7 @@
       },
       {
         "title": "New admin control for AI‑generated code previews in Microsoft 365 Copilot Pages",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254560",
+        "link": "https://deltapulse.app/dashboard?message=MC1254560",
         "published": "2026-03-17T22:52:11.000Z",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -2370,7 +2369,7 @@
       },
       {
         "title": "Microsoft 365 Copilot: Upload local files now supports .eml and .msg file types",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253750",
+        "link": "https://deltapulse.app/dashboard?message=MC1253750",
         "published": "2026-03-16T22:31:42.000Z",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -2389,7 +2388,7 @@
       },
       {
         "title": "Copilot extensibility: Microsoft 365 Copilot Declarative Agents model upgrade to GPT‑5.2",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251203",
+        "link": "https://deltapulse.app/dashboard?message=MC1251203",
         "published": "2026-03-13T22:48:48.000Z",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -2409,7 +2408,7 @@
     "Data & Analytics": [
       {
         "title": "Microsoft Dataverse - Use AI functions to enhance data quality",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253512",
+        "link": "https://deltapulse.app/dashboard?message=MC1253512",
         "published": "2026-03-16T18:32:52.000Z",
         "source": "m365",
         "m365Service": "Microsoft Dataverse",
@@ -2427,7 +2426,7 @@
       },
       {
         "title": "Power Platform – New Continuous Access Evaluation (CAE) announcement",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250351",
+        "link": "https://deltapulse.app/dashboard?message=MC1250351",
         "published": "2026-03-13T03:42:00.000Z",
         "source": "m365",
         "m365Service": "Microsoft Dataverse",
@@ -2448,7 +2447,7 @@
     "Security & Compliance": [
       {
         "title": "Purview DSPM’s Data Risk Assessments now support item-level investigation and remediation of SharePoint",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254556",
+        "link": "https://deltapulse.app/dashboard?message=MC1254556",
         "published": "2026-03-17T22:51:02.000Z",
         "source": "m365",
         "m365Service": "Microsoft Purview",
@@ -2468,8 +2467,7 @@
     "Business Applications": [
       {
         "title": "Dynamics 365, Power Platform, and Role-based Copilot offerings 2026 release wave 1 plans available now",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
+        "link": "https://deltapulse.app/dashboard?message=MC1255714",
         "published": "2026-03-19T04:39:14.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -2488,7 +2486,7 @@
       },
       {
         "title": "Dynamics 365 Customer Service – Define critical questions in evaluation criteria",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255709",
+        "link": "https://deltapulse.app/dashboard?message=MC1255709",
         "published": "2026-03-19T04:24:53.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -2506,7 +2504,7 @@
       },
       {
         "title": "Dynamics 365 Sales - Improve opportunity context with AI-based data enrichment",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254454",
+        "link": "https://deltapulse.app/dashboard?message=MC1254454",
         "published": "2026-03-17T17:37:12.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -2524,7 +2522,7 @@
       },
       {
         "title": "Dynamics 365 Sales - Modern, in-flow email template picker for Sequences",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254451",
+        "link": "https://deltapulse.app/dashboard?message=MC1254451",
         "published": "2026-03-17T17:31:28.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -2542,7 +2540,7 @@
       },
       {
         "title": "Dynamics 365 Sales - Get additional Dataverse storage capacity",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253515",
+        "link": "https://deltapulse.app/dashboard?message=MC1253515",
         "published": "2026-03-16T18:34:00.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -2560,7 +2558,7 @@
       },
       {
         "title": "Dynamics 365 Customer Service - Control evaluation volume with sampling",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253514",
+        "link": "https://deltapulse.app/dashboard?message=MC1253514",
         "published": "2026-03-16T18:17:17.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -2578,7 +2576,7 @@
       },
       {
         "title": "Dynamics 365 Commerce – Modernize POS journeys with React and Fluent UI",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253506",
+        "link": "https://deltapulse.app/dashboard?message=MC1253506",
         "published": "2026-03-16T18:09:30.000Z",
         "source": "m365",
         "m365Service": "Finance and Operations Apps",
@@ -2596,7 +2594,7 @@
       },
       {
         "title": "Dynamics 365 Commerce - Support multiple languages in Store Commerce self-checkout",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253504",
+        "link": "https://deltapulse.app/dashboard?message=MC1253504",
         "published": "2026-03-16T18:05:13.000Z",
         "source": "m365",
         "m365Service": "Finance and Operations Apps",
@@ -2616,7 +2614,7 @@
     "Other": [
       {
         "title": "Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255410",
+        "link": "https://deltapulse.app/dashboard?message=MC1255410",
         "published": "2026-03-18T22:32:26.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -2634,7 +2632,7 @@
       },
       {
         "title": "Microsoft Viva Engage | Email sender domain migration from @yammer.com to @engage.mail.microsoft",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251200",
+        "link": "https://deltapulse.app/dashboard?message=MC1251200",
         "published": "2026-03-13T22:45:08.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -2652,7 +2650,7 @@
       },
       {
         "title": "Sensitivity labels available soon for Viva Engage communities",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250283",
+        "link": "https://deltapulse.app/dashboard?message=MC1250283",
         "published": "2026-03-12T23:46:41.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -2670,7 +2668,7 @@
       },
       {
         "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250279",
+        "link": "https://deltapulse.app/dashboard?message=MC1250279",
         "published": "2026-03-12T23:42:55.000Z",
         "source": "m365",
         "m365Service": "Planner",
@@ -2689,7 +2687,7 @@
       },
       {
         "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247899",
+        "link": "https://deltapulse.app/dashboard?message=MC1247899",
         "published": "2026-03-09T22:27:11.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -2707,7 +2705,7 @@
       },
       {
         "title": "Microsoft Viva Glint: AI-generated survey insights with Copilot highlights",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247887",
+        "link": "https://deltapulse.app/dashboard?message=MC1247887",
         "published": "2026-03-09T22:21:46.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -2728,7 +2726,7 @@
     "Uncategorized": [
       {
         "title": "Microsoft Purview | Data Security Triage Agent Summaries for DLP Alerts in Microsoft Defender XDR",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255406",
+        "link": "https://deltapulse.app/dashboard?message=MC1255406",
         "published": "2026-03-18T22:29:45.000Z",
         "source": "m365",
         "m365Service": "Microsoft Defender XDR",
@@ -2747,7 +2745,7 @@
       },
       {
         "title": "Microsoft Edge for Business: Cross-tenant support using Intune Mobile Application Management (MAM)",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255405",
+        "link": "https://deltapulse.app/dashboard?message=MC1255405",
         "published": "2026-03-18T22:29:15.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
@@ -2765,7 +2763,7 @@
       },
       {
         "title": "Improved OneDrive sync experience for macOS users",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255404",
+        "link": "https://deltapulse.app/dashboard?message=MC1255404",
         "published": "2026-03-18T22:28:44.000Z",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
@@ -2783,7 +2781,7 @@
       },
       {
         "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254554",
+        "link": "https://deltapulse.app/dashboard?message=MC1254554",
         "published": "2026-03-17T22:47:38.000Z",
         "source": "m365",
         "m365Service": "Microsoft Defender XDR",
@@ -2801,7 +2799,7 @@
       },
       {
         "title": "Power Apps - Custom theming for model-driven apps is becoming generally available",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254543",
+        "link": "https://deltapulse.app/dashboard?message=MC1254543",
         "published": "2026-03-17T21:54:38.000Z",
         "source": "m365",
         "m365Service": "Power Apps",
@@ -2819,7 +2817,7 @@
       },
       {
         "title": "30-Day Reminder: Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254512",
+        "link": "https://deltapulse.app/dashboard?message=MC1254512",
         "published": "2026-03-17T19:57:25.823Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -2837,7 +2835,7 @@
       },
       {
         "title": "Microsoft Entra: Passkeys in Microsoft registration campaigns",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253746",
+        "link": "https://deltapulse.app/dashboard?message=MC1253746",
         "published": "2026-03-16T22:27:17.000Z",
         "source": "m365",
         "m365Service": "Microsoft Entra",
@@ -2855,7 +2853,7 @@
       },
       {
         "title": "Action required: Secure Boot certificate updates for Windows 365 Cloud PCs before June 2026",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253743",
+        "link": "https://deltapulse.app/dashboard?message=MC1253743",
         "published": "2026-03-16T22:23:56.000Z",
         "source": "m365",
         "m365Service": "Windows 365",
@@ -2873,7 +2871,7 @@
       },
       {
         "title": "Out-of-band hotpatch update released to address an issue affecting Bluetooth device visibility",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253720",
+        "link": "https://deltapulse.app/dashboard?message=MC1253720",
         "published": "2026-03-16T21:03:14.053Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -2891,7 +2889,7 @@
       },
       {
         "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253577",
+        "link": "https://deltapulse.app/dashboard?message=MC1253577",
         "published": "2026-03-16T19:07:15.000Z",
         "source": "m365",
         "m365Service": "Power Platform",
@@ -2909,7 +2907,7 @@
       },
       {
         "title": "Power Apps - Download wrapped apps directly from Dataverse",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253499",
+        "link": "https://deltapulse.app/dashboard?message=MC1253499",
         "published": "2026-03-16T17:54:58.000Z",
         "source": "m365",
         "m365Service": "Power Apps",
@@ -2927,7 +2925,7 @@
       },
       {
         "title": "Microsoft Secure Score: New recommendations for Microsoft Defender for Endpoint",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251207",
+        "link": "https://deltapulse.app/dashboard?message=MC1251207",
         "published": "2026-03-13T22:53:07.000Z",
         "source": "m365",
         "m365Service": "Microsoft Defender XDR",
@@ -2945,7 +2943,7 @@
       },
       {
         "title": "(Updated) Planned Maintenance: Windows 365 Service",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251199",
+        "link": "https://deltapulse.app/dashboard?message=MC1251199",
         "published": "2026-03-13T22:44:27.000Z",
         "source": "m365",
         "m365Service": "Windows 365",
@@ -2963,7 +2961,7 @@
       },
       {
         "title": "Prevent/Fix (Detected): Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251194",
+        "link": "https://deltapulse.app/dashboard?message=MC1251194",
         "published": "2026-03-13T22:37:03.000Z",
         "source": "m365",
         "m365Service": "Windows Autopatch",
@@ -2981,7 +2979,7 @@
       },
       {
         "title": "Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250975",
+        "link": "https://deltapulse.app/dashboard?message=MC1250975",
         "published": "2026-03-13T18:59:56.223Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -2999,7 +2997,7 @@
       },
       {
         "title": "Windows Deployment Services (WDS): Hands-free deployment hardening (Phase 2)",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250927",
+        "link": "https://deltapulse.app/dashboard?message=MC1250927",
         "published": "2026-03-13T17:09:18.157Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -3017,7 +3015,7 @@
       },
       {
         "title": "Microsoft Edge: Copilot new tab page",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250274",
+        "link": "https://deltapulse.app/dashboard?message=MC1250274",
         "published": "2026-03-12T23:41:53.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
@@ -3035,7 +3033,7 @@
       },
       {
         "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in model-driven apps",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250069",
+        "link": "https://deltapulse.app/dashboard?message=MC1250069",
         "published": "2026-03-12T19:18:24.000Z",
         "source": "m365",
         "m365Service": "Power Apps",
@@ -3053,7 +3051,7 @@
       },
       {
         "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in canvas apps",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250062",
+        "link": "https://deltapulse.app/dashboard?message=MC1250062",
         "published": "2026-03-12T19:14:12.000Z",
         "source": "m365",
         "m365Service": "Power Apps",
@@ -3071,7 +3069,7 @@
       },
       {
         "title": "Windows Office Hours: March 19, 2026",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250021",
+        "link": "https://deltapulse.app/dashboard?message=MC1250021",
         "published": "2026-03-12T17:55:36.090Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -3089,7 +3087,7 @@
       },
       {
         "title": "(Updated) Microsoft Entra passkeys on Windows now support phishing-resistant sign-in",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247893",
+        "link": "https://deltapulse.app/dashboard?message=MC1247893",
         "published": "2026-03-09T22:24:16.000Z",
         "source": "m365",
         "m365Service": "Microsoft Entra",
@@ -3107,7 +3105,7 @@
       },
       {
         "title": "(Updated) Set a custom name for the OneDrive sync folder",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1242782",
+        "link": "https://deltapulse.app/dashboard?message=MC1242782",
         "published": "2026-03-03T00:02:49.000Z",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
@@ -3125,7 +3123,7 @@
       },
       {
         "title": "Prevent/Fix: Microsoft Baseline Security Mode has automatically trigger Entra Conditional Access policy creation",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1246002",
+        "link": "https://deltapulse.app/dashboard?message=MC1246002",
         "published": "2026-03-06T21:22:39.000Z",
         "source": "m365",
         "m365Service": "Microsoft Entra",
@@ -3143,7 +3141,7 @@
       },
       {
         "title": "(Updated) Outlook: retiring “Contact Masking” (hide suggested recipients) -  March 31, 2026",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1234566",
+        "link": "https://deltapulse.app/dashboard?message=MC1234566",
         "published": "2026-02-18T18:40:43.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
@@ -3215,8 +3213,7 @@
     "launched_ga": [
       {
         "title": "Dynamics 365, Power Platform, and Role-based Copilot offerings 2026 release wave 1 plans available now",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
+        "link": "https://deltapulse.app/dashboard?message=MC1255714",
         "published": "2026-03-19T04:39:14.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -3235,7 +3232,7 @@
       },
       {
         "title": "Dynamics 365 Customer Service – Define critical questions in evaluation criteria",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255709",
+        "link": "https://deltapulse.app/dashboard?message=MC1255709",
         "published": "2026-03-19T04:24:53.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -3253,7 +3250,7 @@
       },
       {
         "title": "Microsoft Copilot Studio - Read only Analytics Viewer role",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255508",
+        "link": "https://deltapulse.app/dashboard?message=MC1255508",
         "published": "2026-03-19T02:21:27.000Z",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Power Platform)",
@@ -3271,7 +3268,7 @@
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255412",
+        "link": "https://deltapulse.app/dashboard?message=MC1255412",
         "published": "2026-03-18T22:45:20.723Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
@@ -3289,7 +3286,7 @@
       },
       {
         "title": "Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255410",
+        "link": "https://deltapulse.app/dashboard?message=MC1255410",
         "published": "2026-03-18T22:32:26.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -3307,7 +3304,7 @@
       },
       {
         "title": "Lists as a knowledge source for agents in SharePoint and OneDrive",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255409",
+        "link": "https://deltapulse.app/dashboard?message=MC1255409",
         "published": "2026-03-18T22:31:18.000Z",
         "source": "m365",
         "m365Service": "SharePoint Online",
@@ -3326,7 +3323,7 @@
       },
       {
         "title": "Publishing InfoPath Forms in SharePoint Online will not be allowed for all tenants",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255407",
+        "link": "https://deltapulse.app/dashboard?message=MC1255407",
         "published": "2026-03-18T22:30:18.000Z",
         "source": "m365",
         "m365Service": "SharePoint Online",
@@ -3344,7 +3341,7 @@
       },
       {
         "title": "Microsoft Purview | Data Security Triage Agent Summaries for DLP Alerts in Microsoft Defender XDR",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255406",
+        "link": "https://deltapulse.app/dashboard?message=MC1255406",
         "published": "2026-03-18T22:29:45.000Z",
         "source": "m365",
         "m365Service": "Microsoft Defender XDR",
@@ -3363,7 +3360,7 @@
       },
       {
         "title": "Microsoft Edge for Business: Cross-tenant support using Intune Mobile Application Management (MAM)",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255405",
+        "link": "https://deltapulse.app/dashboard?message=MC1255405",
         "published": "2026-03-18T22:29:15.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
@@ -3381,7 +3378,7 @@
       },
       {
         "title": "Improved OneDrive sync experience for macOS users",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255404",
+        "link": "https://deltapulse.app/dashboard?message=MC1255404",
         "published": "2026-03-18T22:28:44.000Z",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
@@ -3399,7 +3396,7 @@
       },
       {
         "title": "New admin control for AI‑generated code previews in Microsoft 365 Copilot Pages",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254560",
+        "link": "https://deltapulse.app/dashboard?message=MC1254560",
         "published": "2026-03-17T22:52:11.000Z",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -3418,7 +3415,7 @@
       },
       {
         "title": "Purview DSPM’s Data Risk Assessments now support item-level investigation and remediation of SharePoint",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254556",
+        "link": "https://deltapulse.app/dashboard?message=MC1254556",
         "published": "2026-03-17T22:51:02.000Z",
         "source": "m365",
         "m365Service": "Microsoft Purview",
@@ -3436,7 +3433,7 @@
       },
       {
         "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254554",
+        "link": "https://deltapulse.app/dashboard?message=MC1254554",
         "published": "2026-03-17T22:47:38.000Z",
         "source": "m365",
         "m365Service": "Microsoft Defender XDR",
@@ -3454,7 +3451,7 @@
       },
       {
         "title": "Microsoft Teams: New slash command in compose to create workflows",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254553",
+        "link": "https://deltapulse.app/dashboard?message=MC1254553",
         "published": "2026-03-17T22:46:28.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -3472,7 +3469,7 @@
       },
       {
         "title": "Copilot Notebooks: New features coming to Frontier Public",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254552",
+        "link": "https://deltapulse.app/dashboard?message=MC1254552",
         "published": "2026-03-17T22:45:44.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
@@ -3491,7 +3488,7 @@
       },
       {
         "title": "Power Apps - Custom theming for model-driven apps is becoming generally available",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254543",
+        "link": "https://deltapulse.app/dashboard?message=MC1254543",
         "published": "2026-03-17T21:54:38.000Z",
         "source": "m365",
         "m365Service": "Power Apps",
@@ -3509,7 +3506,7 @@
       },
       {
         "title": "30-Day Reminder: Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254512",
+        "link": "https://deltapulse.app/dashboard?message=MC1254512",
         "published": "2026-03-17T19:57:25.823Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -3527,7 +3524,7 @@
       },
       {
         "title": "Dynamics 365 Sales - Improve opportunity context with AI-based data enrichment",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254454",
+        "link": "https://deltapulse.app/dashboard?message=MC1254454",
         "published": "2026-03-17T17:37:12.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -3545,7 +3542,7 @@
       },
       {
         "title": "Dynamics 365 Sales - Modern, in-flow email template picker for Sequences",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1254451",
+        "link": "https://deltapulse.app/dashboard?message=MC1254451",
         "published": "2026-03-17T17:31:28.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -3563,7 +3560,7 @@
       },
       {
         "title": "Planner and Project Online licensing: Project Plan 5 and Project Online Essentials retire from sale",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253809",
+        "link": "https://deltapulse.app/dashboard?message=MC1253809",
         "published": "2026-03-17T00:03:13.000Z",
         "source": "m365",
         "m365Service": "Project Online",
@@ -3581,7 +3578,7 @@
       },
       {
         "title": "Whiteboards created in Teams channels will now be stored in SharePoint",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253753",
+        "link": "https://deltapulse.app/dashboard?message=MC1253753",
         "published": "2026-03-16T22:34:52.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -3599,7 +3596,7 @@
       },
       {
         "title": "Microsoft Teams: Manage multiple phone numbers within one Teams account",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253752",
+        "link": "https://deltapulse.app/dashboard?message=MC1253752",
         "published": "2026-03-16T22:32:26.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -3617,7 +3614,7 @@
       },
       {
         "title": "Microsoft 365 Copilot: Upload local files now supports .eml and .msg file types",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253750",
+        "link": "https://deltapulse.app/dashboard?message=MC1253750",
         "published": "2026-03-16T22:31:42.000Z",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -3636,7 +3633,7 @@
       },
       {
         "title": "Microsoft Entra: Passkeys in Microsoft registration campaigns",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253746",
+        "link": "https://deltapulse.app/dashboard?message=MC1253746",
         "published": "2026-03-16T22:27:17.000Z",
         "source": "m365",
         "m365Service": "Microsoft Entra",
@@ -3654,7 +3651,7 @@
       },
       {
         "title": "Action required: Secure Boot certificate updates for Windows 365 Cloud PCs before June 2026",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253743",
+        "link": "https://deltapulse.app/dashboard?message=MC1253743",
         "published": "2026-03-16T22:23:56.000Z",
         "source": "m365",
         "m365Service": "Windows 365",
@@ -3672,7 +3669,7 @@
       },
       {
         "title": "Out-of-band hotpatch update released to address an issue affecting Bluetooth device visibility",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253720",
+        "link": "https://deltapulse.app/dashboard?message=MC1253720",
         "published": "2026-03-16T21:03:14.053Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -3690,7 +3687,7 @@
       },
       {
         "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253577",
+        "link": "https://deltapulse.app/dashboard?message=MC1253577",
         "published": "2026-03-16T19:07:15.000Z",
         "source": "m365",
         "m365Service": "Power Platform",
@@ -3708,7 +3705,7 @@
       },
       {
         "title": "Dynamics 365 Sales - Get additional Dataverse storage capacity",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253515",
+        "link": "https://deltapulse.app/dashboard?message=MC1253515",
         "published": "2026-03-16T18:34:00.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -3726,7 +3723,7 @@
       },
       {
         "title": "Microsoft Dataverse - Use AI functions to enhance data quality",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253512",
+        "link": "https://deltapulse.app/dashboard?message=MC1253512",
         "published": "2026-03-16T18:32:52.000Z",
         "source": "m365",
         "m365Service": "Microsoft Dataverse",
@@ -3744,7 +3741,7 @@
       },
       {
         "title": "Dynamics 365 Customer Service - Control evaluation volume with sampling",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253514",
+        "link": "https://deltapulse.app/dashboard?message=MC1253514",
         "published": "2026-03-16T18:17:17.000Z",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
@@ -3762,7 +3759,7 @@
       },
       {
         "title": "Dynamics 365 Commerce – Modernize POS journeys with React and Fluent UI",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253506",
+        "link": "https://deltapulse.app/dashboard?message=MC1253506",
         "published": "2026-03-16T18:09:30.000Z",
         "source": "m365",
         "m365Service": "Finance and Operations Apps",
@@ -3780,7 +3777,7 @@
       },
       {
         "title": "Dynamics 365 Commerce - Support multiple languages in Store Commerce self-checkout",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253504",
+        "link": "https://deltapulse.app/dashboard?message=MC1253504",
         "published": "2026-03-16T18:05:13.000Z",
         "source": "m365",
         "m365Service": "Finance and Operations Apps",
@@ -3798,7 +3795,7 @@
       },
       {
         "title": "Power Apps - Download wrapped apps directly from Dataverse",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1253499",
+        "link": "https://deltapulse.app/dashboard?message=MC1253499",
         "published": "2026-03-16T17:54:58.000Z",
         "source": "m365",
         "m365Service": "Power Apps",
@@ -3816,7 +3813,7 @@
       },
       {
         "title": "Microsoft Secure Score: New recommendations for Microsoft Defender for Endpoint",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251207",
+        "link": "https://deltapulse.app/dashboard?message=MC1251207",
         "published": "2026-03-13T22:53:07.000Z",
         "source": "m365",
         "m365Service": "Microsoft Defender XDR",
@@ -3834,7 +3831,7 @@
       },
       {
         "title": "Microsoft Teams: Identify external bots joining your Teams meetings",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251206",
+        "link": "https://deltapulse.app/dashboard?message=MC1251206",
         "published": "2026-03-13T22:52:25.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -3852,7 +3849,7 @@
       },
       {
         "title": "Copilot extensibility: Microsoft 365 Copilot Declarative Agents model upgrade to GPT‑5.2",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251203",
+        "link": "https://deltapulse.app/dashboard?message=MC1251203",
         "published": "2026-03-13T22:48:48.000Z",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
@@ -3870,7 +3867,7 @@
       },
       {
         "title": "Microsoft Viva Engage | Email sender domain migration from @yammer.com to @engage.mail.microsoft",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251200",
+        "link": "https://deltapulse.app/dashboard?message=MC1251200",
         "published": "2026-03-13T22:45:08.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -3888,7 +3885,7 @@
       },
       {
         "title": "(Updated) Planned Maintenance: Windows 365 Service",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251199",
+        "link": "https://deltapulse.app/dashboard?message=MC1251199",
         "published": "2026-03-13T22:44:27.000Z",
         "source": "m365",
         "m365Service": "Windows 365",
@@ -3906,7 +3903,7 @@
       },
       {
         "title": "Prevent/Fix (Detected): Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1251194",
+        "link": "https://deltapulse.app/dashboard?message=MC1251194",
         "published": "2026-03-13T22:37:03.000Z",
         "source": "m365",
         "m365Service": "Windows Autopatch",
@@ -3924,7 +3921,7 @@
       },
       {
         "title": "Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250975",
+        "link": "https://deltapulse.app/dashboard?message=MC1250975",
         "published": "2026-03-13T18:59:56.223Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -3942,7 +3939,7 @@
       },
       {
         "title": "Windows Deployment Services (WDS): Hands-free deployment hardening (Phase 2)",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250927",
+        "link": "https://deltapulse.app/dashboard?message=MC1250927",
         "published": "2026-03-13T17:09:18.157Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -3960,7 +3957,7 @@
       },
       {
         "title": "Power Platform – New Continuous Access Evaluation (CAE) announcement",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250351",
+        "link": "https://deltapulse.app/dashboard?message=MC1250351",
         "published": "2026-03-13T03:42:00.000Z",
         "source": "m365",
         "m365Service": "Microsoft Dataverse",
@@ -3979,7 +3976,7 @@
       },
       {
         "title": "Sensitivity labels available soon for Viva Engage communities",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250283",
+        "link": "https://deltapulse.app/dashboard?message=MC1250283",
         "published": "2026-03-12T23:46:41.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -3997,7 +3994,7 @@
       },
       {
         "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250279",
+        "link": "https://deltapulse.app/dashboard?message=MC1250279",
         "published": "2026-03-12T23:42:55.000Z",
         "source": "m365",
         "m365Service": "Planner",
@@ -4016,7 +4013,7 @@
       },
       {
         "title": "Microsoft Edge: Copilot new tab page",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250274",
+        "link": "https://deltapulse.app/dashboard?message=MC1250274",
         "published": "2026-03-12T23:41:53.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
@@ -4034,7 +4031,7 @@
       },
       {
         "title": "Improved copy and paste support for @mentions and shared contacts in Microsoft Teams",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250273",
+        "link": "https://deltapulse.app/dashboard?message=MC1250273",
         "published": "2026-03-12T23:41:19.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -4052,7 +4049,7 @@
       },
       {
         "title": "Introducing awards and certifications section in M365 profile card",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250272",
+        "link": "https://deltapulse.app/dashboard?message=MC1250272",
         "published": "2026-03-12T23:40:52.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
@@ -4070,7 +4067,7 @@
       },
       {
         "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in model-driven apps",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250069",
+        "link": "https://deltapulse.app/dashboard?message=MC1250069",
         "published": "2026-03-12T19:18:24.000Z",
         "source": "m365",
         "m365Service": "Power Apps",
@@ -4088,7 +4085,7 @@
       },
       {
         "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in canvas apps",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250062",
+        "link": "https://deltapulse.app/dashboard?message=MC1250062",
         "published": "2026-03-12T19:14:12.000Z",
         "source": "m365",
         "m365Service": "Power Apps",
@@ -4106,7 +4103,7 @@
       },
       {
         "title": "Windows Office Hours: March 19, 2026",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1250021",
+        "link": "https://deltapulse.app/dashboard?message=MC1250021",
         "published": "2026-03-12T17:55:36.090Z",
         "source": "m365",
         "m365Service": "Windows",
@@ -4140,7 +4137,7 @@
       },
       {
         "title": "(Updated) Microsoft Entra passkeys on Windows now support phishing-resistant sign-in",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247893",
+        "link": "https://deltapulse.app/dashboard?message=MC1247893",
         "published": "2026-03-09T22:24:16.000Z",
         "source": "m365",
         "m365Service": "Microsoft Entra",
@@ -4158,7 +4155,7 @@
       },
       {
         "title": "(Updated) Set a custom name for the OneDrive sync folder",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1242782",
+        "link": "https://deltapulse.app/dashboard?message=MC1242782",
         "published": "2026-03-03T00:02:49.000Z",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
@@ -4176,7 +4173,7 @@
       },
       {
         "title": "Prevent/Fix: Microsoft Baseline Security Mode has automatically trigger Entra Conditional Access policy creation",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1246002",
+        "link": "https://deltapulse.app/dashboard?message=MC1246002",
         "published": "2026-03-06T21:22:39.000Z",
         "source": "m365",
         "m365Service": "Microsoft Entra",
@@ -4194,7 +4191,7 @@
       },
       {
         "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1249427",
+        "link": "https://deltapulse.app/dashboard?message=MC1249427",
         "published": "2026-03-12T00:04:42.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
@@ -4212,7 +4209,7 @@
       },
       {
         "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247899",
+        "link": "https://deltapulse.app/dashboard?message=MC1247899",
         "published": "2026-03-09T22:27:11.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -4230,7 +4227,7 @@
       },
       {
         "title": "(Updated) Outlook: Support for recommended and automatically applied sensitivity labels in Outlook for iOS and Android",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247891",
+        "link": "https://deltapulse.app/dashboard?message=MC1247891",
         "published": "2026-03-09T22:23:37.000Z",
         "source": "m365",
         "m365Service": "Exchange Online",
@@ -4248,7 +4245,7 @@
       },
       {
         "title": "(Updated) Outlook Mobile: Follow a meeting option",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1248393",
+        "link": "https://deltapulse.app/dashboard?message=MC1248393",
         "published": "2026-03-10T22:50:11.000Z",
         "source": "m365",
         "m365Service": "Exchange Online",
@@ -4266,7 +4263,7 @@
       },
       {
         "title": "Microsoft Viva Glint: AI-generated survey insights with Copilot highlights",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247887",
+        "link": "https://deltapulse.app/dashboard?message=MC1247887",
         "published": "2026-03-09T22:21:46.000Z",
         "source": "m365",
         "m365Service": "Microsoft Viva",
@@ -4285,7 +4282,7 @@
       },
       {
         "title": "(Updated) Outlook: retiring “Contact Masking” (hide suggested recipients) -  March 31, 2026",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1234566",
+        "link": "https://deltapulse.app/dashboard?message=MC1234566",
         "published": "2026-02-18T18:40:43.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
@@ -4303,7 +4300,7 @@
       },
       {
         "title": "(Updated) Microsoft Teams Rooms: Private chat for organizers and presenters in structured meetings and webinars",
-        "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1247896",
+        "link": "https://deltapulse.app/dashboard?message=MC1247896",
         "published": "2026-03-09T22:25:10.000Z",
         "source": "m365",
         "m365Service": "Microsoft Teams",
@@ -4739,6 +4736,12 @@
       }
     ],
     "retiring": []
+  },
+  "m365Video": {
+    "title": "What’s New in Microsoft 365 | February Updates",
+    "url": "https://www.youtube.com/watch?v=HdO9NV8a9yE",
+    "published": "2026-03-01T14:00:33+00:00",
+    "thumbnail": "https://i1.ytimg.com/vi/HdO9NV8a9yE/hqdefault.jpg"
   },
   "summaryPublishingDays": [
     "2026-03-19",

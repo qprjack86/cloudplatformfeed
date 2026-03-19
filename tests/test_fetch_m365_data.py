@@ -162,7 +162,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["title"], "New feature announcement")
         self.assertEqual(
             article["link"],
-            "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
+            "https://deltapulse.app/dashboard?message=MC1255714",
         )
         self.assertEqual(article["source"], "m365")
         self.assertEqual(article["m365Service"], "Teams")
@@ -170,8 +170,8 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["m365AllServices"], ["Teams", "SharePoint"])
         self.assertIsNotNone(article["lifecycle"])
 
-    def test_prefers_admin_message_center_link(self):
-        """Message Center items should resolve to the admin portal message URL."""
+    def test_prefers_deltapulse_message_center_link(self):
+        """Message Center items should resolve to DeltaPulse URL when available."""
         item = {
             "id": "MC999999",
             "title": "Admin portal update",
@@ -186,7 +186,23 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         self.assertEqual(
             article["link"],
-            "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC999999",
+            "https://deltapulse.app/dashboard?message=MC999999",
+        )
+
+    def test_message_center_falls_back_to_dashboard_search(self):
+        """Message Center items without URL should fall back to DeltaPulse dashboard search."""
+        item = {
+            "id": "MC888888",
+            "title": "Missing URL update",
+            "source": "message_center",
+            "publishedDate": "2026-03-19T04:39:14.000Z",
+            "service": ["Teams"],
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+        self.assertEqual(
+            article["link"],
+            "https://deltapulse.app/dashboard?search=MC888888",
         )
 
     def test_roadmap_item_gets_roadmap_url(self):
@@ -301,6 +317,32 @@ class FailsafeTests(unittest.TestCase):
             previous_count=200,  # 75% - normal variation
         )
         self.assertFalse(triggered)
+
+
+class BuildM365FeedTests(unittest.TestCase):
+    """Test feed-level output fields."""
+
+    def test_includes_m365_video_payload(self):
+        """Feed payload should include m365Video metadata."""
+        raw_items = [
+            {
+                "id": "MC1000",
+                "title": "A message",
+                "source": "message_center",
+                "publishedDate": "2026-03-19T04:39:14.000Z",
+                "service": ["Teams"],
+                "url": "https://deltapulse.app/dashboard?message=MC1000",
+            }
+        ]
+        m365_video = {
+            "title": "What's new in Microsoft 365 | March Updates",
+            "url": "https://www.youtube.com/watch?v=HdO9NV8a9yE&t=83s",
+            "published": "2026-03-01T00:00:00+00:00",
+            "thumbnail": "https://i.ytimg.com/vi/HdO9NV8a9yE/hqdefault.jpg",
+        }
+
+        feed = fetch_m365_data.build_m365_feed(raw_items, m365_video)
+        self.assertEqual(feed.get("m365Video"), m365_video)
     
     def test_does_not_trigger_without_baseline(self):
         """Failsafe should not trigger if no baseline."""

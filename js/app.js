@@ -343,8 +343,64 @@
     showElement(savillVideoEl);
   }
 
+  function renderM365VideoPanel() {
+    if (!savillVideoEl) return;
+
+    if (currentSource !== "m365" || !m365FeedData || !m365FeedData.m365Video) {
+      hideElement(savillVideoEl);
+      return;
+    }
+
+    var mv = m365FeedData.m365Video;
+    var mvDate = "";
+    if (mv.published) {
+      var mvd = parseDateValue(mv.published);
+      mvDate = formatLocalDate(mvd, {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      });
+    }
+
+    var thumbHtml = '<div class="savill-thumb-wrap' +
+      (mv.thumbnail ? '' : ' thumb-fallback') +
+      '">' +
+      (mv.thumbnail
+        ? '<img class="savill-thumb" src="' + escapeHtml(mv.thumbnail) +
+          '" alt="Video thumbnail" loading="lazy" />'
+        : '') +
+      '<div class="savill-thumb-placeholder" aria-hidden="true">▶</div>' +
+      '<span class="savill-play">▶</span></div>';
+
+    savillVideoEl.innerHTML =
+      '<a class="savill-card" href="' + escapeHtml(mv.url) +
+      '" target="_blank" rel="noopener noreferrer">' +
+      '<div class="savill-label">🎬 Latest Microsoft 365 Update Video</div>' +
+      '<div class="savill-body">' +
+      thumbHtml +
+      '<div class="savill-info">' +
+      '<div class="savill-title">' + escapeHtml(mv.title) + '</div>' +
+      (mvDate ? '<div class="savill-date">' + escapeHtml(mvDate) + '</div>' : '') +
+      '</div></div></a>';
+    showElement(savillVideoEl);
+  }
+
+  function updateOtherBlogsToggleVisibility() {
+    if (!otherBlogsToggle) return;
+    if (currentSource === "m365") {
+      hideElement(otherBlogsToggle);
+      return;
+    }
+    showElement(otherBlogsToggle);
+  }
+
   function refreshSourcePanels() {
+    updateOtherBlogsToggleVisibility();
     renderSummaryPanel();
+    if (currentSource === "m365") {
+      renderM365VideoPanel();
+      return;
+    }
     renderSavillVideoPanel();
   }
 
