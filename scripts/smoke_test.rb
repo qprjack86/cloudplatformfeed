@@ -59,7 +59,10 @@ assert(!fetch_script.include?(canonical_host), "fetch_feeds.py should not hardco
   assert(!contains_conflict_markers?(content), "merge conflict markers detected")
 end
 
-assert(index_html.include?("<script src=\"js/app.js\" defer></script>"), "index.html does not load js/app.js with defer")
+assert(
+  index_html.match?(%r{<script\s+src="js/app\.js(?:\?[^"]+)?"\s+defer></script>}),
+  "index.html does not load js/app.js with defer"
+)
 assert(index_html.include?("<script src=\"js/clarity.js\" defer></script>"), "index.html does not load js/clarity.js")
 assert(index_html.include?("Content-Security-Policy"), "index.html is missing a Content-Security-Policy")
 assert(index_html.include?("style-src 'self'"), "index.html CSP should restrict styles to self")
