@@ -9,9 +9,9 @@
   --text-secondary: #65676b;
   --text-tertiary: #8a8d91;
   --border-color: #dadde1;
-  --azure-blue: #0078D4;
-  --azure-blue-light: #50E6FF;
-  --azure-blue-dark: #005A9E;
+  --primary: #0EA5E9;
+  --primary-light: #7DD3FC;
+  --primary-dark: #0369A1;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -54,7 +54,7 @@ body {
 
 /* ===== Header ===== */
 header {
-  background: linear-gradient(135deg, #0078D4 0%, #004E8C 100%);
+  background: linear-gradient(135deg, #0C4A6E 0%, #082F49 100%);
   color: white;
   padding: 1.25rem 2rem 0.75rem;
   position: sticky;
@@ -218,8 +218,8 @@ header {
 }
 
 .tab-button.active {
-  color: var(--azure-blue);
-  border-bottom-color: var(--azure-blue);
+  color: var(--primary);
+  border-bottom-color: var(--primary);
 }
 
 /* ===== Filters ===== */
@@ -262,14 +262,14 @@ header {
 }
 
 .pill:hover {
-  border-color: var(--azure-blue);
-  color: var(--azure-blue);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .pill.active {
-  background: var(--azure-blue);
+  background: var(--primary);
   color: white;
-  border-color: var(--azure-blue);
+  border-color: var(--primary);
 }
 
 .pill .count {
@@ -326,13 +326,13 @@ main {
 }
 
 #other-blogs-toggle:hover {
-  border-color: var(--azure-blue);
-  color: var(--azure-blue);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 #other-blogs-toggle.active {
-  background: var(--azure-blue);
-  border-color: var(--azure-blue);
+  background: var(--primary);
+  border-color: var(--primary);
   color: white;
 }
 
@@ -351,7 +351,7 @@ main {
 
 #date-filter:focus,
 #sort-by:focus {
-  border-color: var(--azure-blue);
+  border-color: var(--primary);
   outline: none;
 }
 
@@ -363,7 +363,7 @@ main {
   color: var(--text-primary);
   margin: 1.5rem 0 0.5rem;
   padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--azure-blue);
+  border-bottom: 2px solid var(--primary);
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -414,13 +414,13 @@ main {
   letter-spacing: 0.3px;
   white-space: nowrap;
   flex-shrink: 0;
-  color: var(--azure-blue);
+  color: var(--primary);
   background: color-mix(in srgb, currentColor 12%, transparent);
   border: 1px solid color-mix(in srgb, currentColor 24%, transparent);
 }
 
-.blog-tag.blog-color-0 { color: #0078D4; }
-.blog-tag.blog-color-1 { color: #00BCF2; }
+.blog-tag.blog-color-0 { color: #0EA5E9; }
+.blog-tag.blog-color-1 { color: #7DD3FC; }
 .blog-tag.blog-color-2 { color: #7719AA; }
 .blog-tag.blog-color-3 { color: #E3008C; }
 .blog-tag.blog-color-4 { color: #D83B01; }
@@ -485,7 +485,7 @@ main {
 }
 
 .article-title a:hover {
-  color: var(--azure-blue);
+  color: var(--primary);
 }
 
 .article-meta {
@@ -533,12 +533,12 @@ main {
 }
 
 .btn-primary {
-  background: var(--azure-blue);
+  background: var(--primary);
   color: white;
 }
 
 .btn-primary:hover {
-  background: var(--azure-blue-dark);
+  background: var(--primary-dark);
 }
 
 .btn-secondary {
@@ -589,7 +589,7 @@ main {
   width: 36px;
   height: 36px;
   border: 3px solid var(--border-color);
-  border-top-color: var(--azure-blue);
+  border-top-color: var(--primary);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
   margin-bottom: 1rem;
@@ -634,7 +634,7 @@ footer {
 }
 
 footer a {
-  color: var(--azure-blue);
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -786,14 +786,14 @@ footer a:hover {
 }
 
 .category-pill:hover {
-  border-color: var(--azure-blue);
-  color: var(--azure-blue);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .category-pill.active {
-  background: var(--azure-blue-dark);
+  background: var(--primary-dark);
   color: white;
-  border-color: var(--azure-blue-dark);
+  border-color: var(--primary-dark);
 }
 
 .blog-pills-row {
@@ -833,8 +833,8 @@ footer a:hover {
 
 /* ===== AI Summary ===== */
 .ai-summary {
-  background: linear-gradient(135deg, #0078D410 0%, #50E6FF10 100%);
-  border: 1px solid var(--azure-blue);
+  background: linear-gradient(135deg, #0EA5E910 0%, #7DD3FC10 100%);
+  border: 1px solid var(--primary);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
   margin-bottom: 1.5rem;
@@ -843,7 +843,7 @@ footer a:hover {
 .ai-summary h2 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--azure-blue);
+  color: var(--primary);
   margin-bottom: 0.6rem;
   display: flex;
   align-items: center;
@@ -886,7 +886,7 @@ footer a:hover {
 .ai-section h3 {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--azure-blue);
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin: 0 0 0.3rem 0;
@@ -910,13 +910,13 @@ footer a:hover {
   content: '▸';
   position: absolute;
   left: 0;
-  color: var(--azure-blue);
+  color: var(--primary);
   font-size: 0.75rem;
   top: 0.22rem;
 }
 
 .ai-section .ai-link {
-  color: var(--azure-blue);
+  color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 2px;
 }

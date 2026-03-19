@@ -38,10 +38,10 @@
   var searchQuery = "";
   var sortBy = "date-desc";
   var bookmarks = new Set(
-    JSON.parse(localStorage.getItem("azurefeed-bookmarks") || "[]")
+    JSON.parse(localStorage.getItem("cloudplatformfeed-bookmarks") || "[]")
   );
   var showBookmarksOnly = false;
-  var showOtherBlogs = localStorage.getItem("azurefeed-show-other-blogs") === "true";
+  var showOtherBlogs = localStorage.getItem("cloudplatformfeed-other-blogs") === "true";
 
   // Color palette for blog tags
   var blogColors = {};
@@ -949,7 +949,7 @@
       showToast("⭐ Article bookmarked!");
     }
     localStorage.setItem(
-      "azurefeed-bookmarks",
+      "cloudplatformfeed-bookmarks",
       JSON.stringify(Array.from(bookmarks))
     );
     applyFilters();
@@ -993,7 +993,7 @@
 
   // ===== Theme =====
   function loadTheme() {
-    var saved = localStorage.getItem("azurefeed-theme") || "light";
+    var saved = localStorage.getItem("cloudplatformfeed-theme") || "light";
     document.documentElement.setAttribute("data-theme", saved);
     themeToggle.textContent = saved === "dark" ? "☀️" : "🌙";
   }
@@ -1002,7 +1002,7 @@
     var current = document.documentElement.getAttribute("data-theme");
     var next = current === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("azurefeed-theme", next);
+    localStorage.setItem("cloudplatformfeed-theme", next);
     themeToggle.textContent = next === "dark" ? "☀️" : "🌙";
   }
 
@@ -1119,7 +1119,7 @@
     if (otherBlogsToggle) {
       otherBlogsToggle.addEventListener("click", function () {
         showOtherBlogs = !showOtherBlogs;
-          localStorage.setItem("azurefeed-show-other-blogs", String(showOtherBlogs));
+          localStorage.setItem("cloudplatformfeed-other-blogs", String(showOtherBlogs));
         currentFilter = "all";
         updateOtherBlogsToggleUI();
         renderFilters();

@@ -4,8 +4,8 @@
   "description": "Daily updates from Azure and Microsoft 365 blogs — last 30 days",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0078D4",
-  "theme_color": "#0078D4",
+  "background_color": "#0C4A6E",
+  "theme_color": "#0EA5E9",
   "orientation": "any",
   "icons": [
     {
