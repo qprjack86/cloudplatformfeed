@@ -34,6 +34,7 @@
   var filteredArticles = [];
   var currentCategory = "all";
   var currentFilter = "all";
+  var currentSource = "azure";  // New: track active feed source (azure|m365)
   var searchQuery = "";
   var sortBy = "date-desc";
   var bookmarks = new Set(
@@ -73,6 +74,10 @@
   var otherBlogsToggle = document.getElementById("other-blogs-toggle");
   var aiSummaryEl = document.getElementById("ai-summary");
   var savillVideoEl = document.getElementById("savill-video");
+  var subtitleEl = document.querySelector(".subtitle");
+  
+  // Tab buttons (M365 feature)
+  var tabButtons = document.querySelectorAll(".tab-button");
   var SUMMARY_REASON_MESSAGES = {
     no_dated_articles: "No recent dated articles were available to summarize.",
     no_articles_in_window: "No recent articles were available in the current summary window.",
@@ -148,18 +153,55 @@
   async function loadData() {
     showLoading(true);
     try {
-      var response = await fetch("data/feeds.json");
-      if (!response.ok) throw new Error("Failed to load feeds");
-      var data = await response.json();
-      articles = data.articles || [];
+      // Load Azure feeds
+      var azureResponse = await fetch("data/feeds.json");
+      if (!azureResponse.ok) throw new Error("Failed to load Azure feeds");
+      var azureData = azureResponse.json ? azureResponse.json() : JSON.parse(await azureResponse.text());
+      var azureArticles = azureData.articles || [];
+      
+      // Mark Azure articles with source
+      azureArticles.forEach(function (a) { a.source = "azure"; });
+      
+      // Try to load M365 data (graceful fallback if not available)
+      var m365Articles = [];
+      try {
+        var m365Response = await fetch("data/m365_data.json");
+        if (m365Response.ok) {
+          var m365Data = m365Response.json ? m365Response.json() : JSON.parse(await m365Response.text());
+          m365Articles = m365Data.articles || [];
+          // Mark M365 articles with source
+          m365Articles.forEach(function (a) { a.source = "m365"; });
+          
+          // Populate productCategory field from byCategory structure
+          var byCategory = m365Data.byCategory || {};
+          Object.keys(byCategory).forEach(function (catName) {
+            var catArticles = byCategory[catName] || [];
+            catArticles.forEach(function (catArticle) {
+              var article = m365Articles.find(function (a) {
+                return a.link === catArticle.link;
+              });
+              if (article) {
+                article.productCategory = catName;
+              }
+            });
+          });
+        }
+      } catch (e) {
+        // M365 data is optional - graceful degradation if unavailable
+        console.log("M365 data not available (optional feature)");
+      }
+      
+      // Combine both sources
+      articles = azureArticles.concat(m365Articles);
 
-      // Assign colors to blogs
+      // Assign colors to blogs/services
       var blogs = [];
       var seen = {};
       articles.forEach(function (a) {
-        if (!seen[a.blogId]) {
-          seen[a.blogId] = true;
-          blogs.push(a.blogId);
+        var id = a.source === "m365" ? (a.m365Service || "m365") : a.blogId;
+        if (!seen[id]) {
+          seen[id] = true;
+          blogs.push(id);
         }
       });
       blogs.forEach(function (blogId, i) {
@@ -169,16 +211,17 @@
       });
 
       // Update header stats
-      if (data.lastUpdated) {
-        var date = parseDateValue(data.lastUpdated);
+      var lastDate = azureData.lastUpdated;
+      if (lastDate) {
+        var date = parseDateValue(lastDate);
         lastUpdated.textContent = "Last updated: " + formatLocalDateTime(date);
       }
       totalCount.textContent = articles.length + " articles";
 
-      // Render AI summary if available
-      if (data.summary) {
-        var publishingDays = Array.isArray(data.summaryPublishingDays)
-          ? data.summaryPublishingDays
+      // Render AI summary if available (from Azure)
+      if (azureData.summary) {
+        var publishingDays = Array.isArray(azureData.summaryPublishingDays)
+          ? azureData.summaryPublishingDays
           : [];
 
         function toLocalPublishingDate(day) {
@@ -315,6 +358,12 @@
   }
 
   function getVisibleArticles() {
+    // For M365, return all articles (no blogId filtering)
+    if (currentSource === "m365") {
+      return articles;
+    }
+    
+    // For Azure, apply the showOtherBlogs logic
     if (showOtherBlogs) {
       return articles;
     }
@@ -359,6 +408,15 @@
   // ===== Render Filter Pills (with category grouping) =====
   function renderFilters() {
     var sourceArticles = getVisibleArticles();
+    
+    if (currentSource === "m365") {
+      renderFiltersM365(sourceArticles);
+    } else {
+      renderFiltersAzure(sourceArticles);
+    }
+  }
+
+  function renderFiltersAzure(sourceArticles) {
     var blogCounts = {};
     var azureUpdatesCategoryCounts = {};
     sourceArticles.forEach(function (a) {
@@ -405,14 +463,37 @@
     syncActiveCategoryPill();
   }
 
-  // Render blog pills for a specific category
-  function renderBlogPills(categoryName) {
-    var blogPillsRow = document.getElementById("blog-pills-row");
-    var blogFilterPills = document.getElementById("blog-filter-pills");
-    if (!blogFilterPills) return;
+  function renderFiltersM365(sourceArticles) {
+    var m365CategoryCounts = {};
+    
+    sourceArticles.forEach(function (a) {
+      var category = a.productCategory || "Uncategorized";
+      m365CategoryCounts[category] = (m365CategoryCounts[category] || 0) + 1;
+    });
 
-    if (categoryName === "all") {
-      hideElement(blogPillsRow);
+    // Category bar for M365
+    var catHtml =
+      '<div class="category-bar" id="category-bar">' +
+      '<button class="category-pill active" data-category="all">All <span class="count">' +
+      sourceArticles.length + "</span></button>";
+
+    Object.keys(m365CategoryCounts).sort().forEach(function (catName) {
+      var catCount = m365CategoryCounts[catName];
+      if (catCount > 0) {
+        catHtml +=
+          '<button class="category-pill" data-category="' + catName + '">' +
+          catName + ' <span class="count">' + catCount + "</span></button>";
+      }
+    });
+    catHtml += "</div>";
+
+    filterPills.innerHTML = catHtml;
+    syncActiveCategoryPill();
+  }
+
+  function renderBlogPills(categoryName) {
+    if (currentSource === "m365") {
+      // M365 doesn't have blog-level filtering, just category
       return;
     }
 
@@ -461,6 +542,11 @@
     var visibleArticles = getVisibleArticles();
     var result = visibleArticles.slice();
 
+    // Source filter (Azure vs M365)
+    result = result.filter(function (a) {
+      return (a.source || "azure") === currentSource;
+    });
+
     // Category filter
     if (currentCategory !== "all") {
       result = result.filter(function (a) {
@@ -468,8 +554,8 @@
       });
     }
 
-    // Blog filter (within category)
-    if (currentFilter !== "all") {
+    // Blog filter (within category) - only applies to Azure articles
+    if (currentFilter !== "all" && currentSource === "azure") {
       result = result.filter(function (a) { return a.blogId === currentFilter; });
     }
 
@@ -555,6 +641,12 @@
   }
 
   function articleMatchesCategory(article, categoryName) {
+    // Handle M365 articles (use productCategory field)
+    if ((article.source || "azure") === "m365") {
+      return (article.productCategory || "Uncategorized") === categoryName;
+    }
+
+    // Handle Azure articles (original logic)
     var catBlogs = CATEGORIES[categoryName] || [];
     if (catBlogs.indexOf(article.blogId) !== -1) {
       return true;
@@ -622,8 +714,9 @@
 
   // ===== Render Single Card =====
   function renderCard(article) {
-    var color = blogColors[article.blogId] || "#0078D4";
-    var colorClass = blogColorClasses[article.blogId] || "blog-color-0";
+    var isM365 = (article.source || "azure") === "m365";
+    var color = isM365 ? "#0078D4" : (blogColors[article.blogId] || "#0078D4");
+    var colorClass = isM365 ? "blog-color-0" : (blogColorClasses[article.blogId] || "blog-color-0");
     var isBookmarked = bookmarks.has(article.link);
     var date = parseDateValue(article.published);
     var dateStr = formatLocalDate(date, {
@@ -637,11 +730,20 @@
     var shareUrl = encodeURIComponent(article.link);
     var shareTitle = encodeURIComponent(article.title);
 
+    // For M365 articles, use service name as blog tag, lifecycle as meta, m365Source for source label
+    var blogTagText = isM365 ? (article.m365Service || "Microsoft 365") : article.blog;
+    var metaContent = isM365 
+      ? ("<span>📌 " + escapeHtml(article.m365Source || "message_center") + " · " + escapeHtml(article.lifecycle || "") + "</span>" +
+         "<span>📅 " + dateStr + "</span>")
+      : ("<span>✍️ " + escapeHtml(article.author) + "</span>" +
+         "<span>📅 " + dateStr + "</span>");
+    var summary = article.summary || "No additional information available.";
+
     return (
       '<article class="article-card">' +
       '<div class="card-header">' +
       '<span class="blog-tag ' + colorClass + '" title="' + escapeHtml(color) + '">' +
-      escapeHtml(article.blog) + "</span>" +
+      escapeHtml(blogTagText) + "</span>" +
       '<button class="bookmark-btn ' + (isBookmarked ? "bookmarked" : "") +
       '" data-action="bookmark" data-link="' + encodedLink +
       '" title="' + (isBookmarked ? "Remove bookmark" : "Bookmark this article") + '">' +
@@ -652,10 +754,9 @@
       escapeHtml(article.title) + "</a>" + newBadge +
       "</h3>" +
       '<div class="article-meta">' +
-      "<span>✍️ " + escapeHtml(article.author) + "</span>" +
-      "<span>📅 " + dateStr + "</span>" +
+      metaContent +
       "</div>" +
-      '<p class="article-summary">' + escapeHtml(article.summary) + "</p>" +
+      '<p class="article-summary">' + escapeHtml(summary) + "</p>" +
       '<div class="share-buttons">' +
       "</div>" +
       "</article>"
@@ -758,6 +859,39 @@
 
     // Theme toggle
     themeToggle.addEventListener("click", toggleTheme);
+
+    // Tab buttons for source switching (Azure vs M365)
+    tabButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        currentSource = btn.dataset.source;
+        
+        // Update active state on tab buttons
+        tabButtons.forEach(function (b) {
+          b.classList.remove("active");
+        });
+        btn.classList.add("active");
+        
+        // Update header subtitle
+        if (subtitleEl) {
+          if (currentSource === "m365") {
+            subtitleEl.textContent = "Daily updates from Microsoft 365 · Last 30 days";
+          } else {
+            subtitleEl.textContent = "Daily updates from Azure blogs · Last 30 days";
+          }
+        }
+        
+        // Reset search and category filters when switching sources
+        searchInput.value = "";
+        searchQuery = "";
+        currentCategory = "all";
+        currentFilter = "all";
+        
+        // Re-render filters and articles for the new source
+        renderFilters();
+        renderBlogPills(currentCategory);
+        applyFilters();
+      });
+    });
 
     // Category and blog pills (event delegation)
     filterPills.addEventListener("click", function (e) {
