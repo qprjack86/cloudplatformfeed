@@ -49,7 +49,7 @@
   var blogColors = {};
   var blogColorClasses = {};
   var colorPalette = [
-    "#0078D4", "#00BCF2", "#7719AA", "#E3008C", "#D83B01",
+    "#BD8D32", "#1F2C35", "#7719AA", "#E3008C", "#D83B01",
     "#107C10", "#008575", "#4F6BED", "#B4009E", "#C239B3",
     "#E81123", "#FF8C00", "#00B294", "#68217A", "#0063B1",
     "#2D7D9A", "#5C2D91", "#CA5010", "#038387", "#8764B8",
@@ -949,7 +949,7 @@
   // ===== Render Single Card =====
   function renderCard(article) {
     var isM365 = (article.source || "azure") === "m365";
-    var color = isM365 ? "#0078D4" : (blogColors[article.blogId] || "#0078D4");
+    var color = isM365 ? "#BD8D32" : (blogColors[article.blogId] || "#BD8D32");
     var colorClass = isM365 ? "blog-color-0" : (blogColorClasses[article.blogId] || "blog-color-0");
     var isBookmarked = bookmarks.has(article.link);
     var date = getArticleDate(article);

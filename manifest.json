@@ -4,21 +4,15 @@
   "description": "Daily updates from Azure and Microsoft 365 blogs — last 30 days",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0C4A6E",
-  "theme_color": "#0EA5E9",
+  "background_color": "#1F2C35",
+  "theme_color": "#1F2C35",
   "orientation": "any",
   "icons": [
     {
-      "src": "icons/icon-192.png",
-      "sizes": "192x192",
+      "src": "icons/atech.png",
+      "sizes": "1599x742",
       "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }

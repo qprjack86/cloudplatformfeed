@@ -2,16 +2,21 @@
 :root {
   --header-height: 88px;
   --tabs-height: 52px;
-  --bg-primary: #f0f2f5;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #e4e6eb;
-  --text-primary: #1c1e21;
-  --text-secondary: #65676b;
-  --text-tertiary: #8a8d91;
-  --border-color: #dadde1;
-  --primary: #0EA5E9;
-  --primary-light: #7DD3FC;
-  --primary-dark: #0369A1;
+  --brand-slate: #1f2c35;
+  --brand-slate-strong: #17232b;
+  --brand-gold: #bd8d32;
+  --brand-gold-light: #d8b36b;
+  --brand-gold-dark: #8f6821;
+  --bg-primary: #f5f1e8;
+  --bg-secondary: #fffcf6;
+  --bg-tertiary: #ece4d6;
+  --text-primary: #1f2c35;
+  --text-secondary: #526069;
+  --text-tertiary: #74818a;
+  --border-color: #d8cfbf;
+  --primary: #bd8d32;
+  --primary-light: #d8b36b;
+  --primary-dark: #8f6821;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -22,13 +27,13 @@
 }
 
 [data-theme="dark"] {
-  --bg-primary: #18191a;
-  --bg-secondary: #242526;
-  --bg-tertiary: #3a3b3c;
-  --text-primary: #e4e6eb;
-  --text-secondary: #b0b3b8;
-  --text-tertiary: #6c757d;
-  --border-color: #3a3b3c;
+  --bg-primary: #162029;
+  --bg-secondary: #1f2c35;
+  --bg-tertiary: #293640;
+  --text-primary: #f6f1e7;
+  --text-secondary: #d4c7ad;
+  --text-tertiary: #a99777;
+  --border-color: #33424c;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -54,7 +59,7 @@ body {
 
 /* ===== Header ===== */
 header {
-  background: linear-gradient(135deg, #0C4A6E 0%, #082F49 100%);
+  background: linear-gradient(135deg, var(--brand-slate-strong) 0%, var(--brand-slate) 100%);
   color: white;
   padding: 1.25rem 2rem 0.75rem;
   position: sticky;
@@ -77,6 +82,13 @@ header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.brand-logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .logo h1 {
@@ -149,8 +161,9 @@ header {
 }
 
 #bookmarks-toggle.active {
-  background: #f59e0b;
-  border-color: #f59e0b;
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--brand-slate-strong);
 }
 
 #theme-toggle {
@@ -268,7 +281,7 @@ header {
 
 .pill.active {
   background: var(--primary);
-  color: white;
+  color: var(--brand-slate-strong);
   border-color: var(--primary);
 }
 
@@ -333,7 +346,7 @@ main {
 #other-blogs-toggle.active {
   background: var(--primary);
   border-color: var(--primary);
-  color: white;
+  color: var(--brand-slate-strong);
 }
 
 #date-filter,
@@ -419,8 +432,8 @@ main {
   border: 1px solid color-mix(in srgb, currentColor 24%, transparent);
 }
 
-.blog-tag.blog-color-0 { color: #0EA5E9; }
-.blog-tag.blog-color-1 { color: #7DD3FC; }
+.blog-tag.blog-color-0 { color: #BD8D32; }
+.blog-tag.blog-color-1 { color: #1F2C35; }
 .blog-tag.blog-color-2 { color: #7719AA; }
 .blog-tag.blog-color-3 { color: #E3008C; }
 .blog-tag.blog-color-4 { color: #D83B01; }
@@ -534,11 +547,12 @@ main {
 
 .btn-primary {
   background: var(--primary);
-  color: white;
+  color: var(--brand-slate-strong);
 }
 
 .btn-primary:hover {
   background: var(--primary-dark);
+  color: white;
 }
 
 .btn-secondary {
@@ -730,6 +744,10 @@ footer a:hover {
     font-size: 1.2rem;
   }
 
+  .brand-logo {
+    width: 96px;
+  }
+
   .header-actions {
     gap: 0.5rem;
   }
@@ -810,9 +828,9 @@ footer a:hover {
 }
 
 .category-pill.active {
-  background: var(--primary-dark);
-  color: white;
-  border-color: var(--primary-dark);
+  background: var(--primary);
+  color: var(--brand-slate-strong);
+  border-color: var(--primary);
 }
 
 .blog-pills-row {
@@ -852,7 +870,7 @@ footer a:hover {
 
 /* ===== AI Summary ===== */
 .ai-summary {
-  background: linear-gradient(135deg, #0EA5E910 0%, #7DD3FC10 100%);
+  background: linear-gradient(135deg, rgba(189, 141, 50, 0.14) 0%, rgba(31, 44, 53, 0.08) 100%);
   border: 1px solid var(--primary);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
@@ -871,12 +889,12 @@ footer a:hover {
 
 .ai-summary.is-unavailable {
   border-color: var(--border-color);
-  background: linear-gradient(135deg, var(--surface) 0%, var(--bg-secondary) 100%);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
 .ai-summary-meta {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--text-tertiary);
 }
 
 .ai-summary p {
@@ -941,7 +959,7 @@ footer a:hover {
 }
 
 .ai-section .ai-link:hover {
-  color: #0072c6;
+  color: var(--primary-dark);
 }
 
 /* ===== John Savill Video Card ===== */
