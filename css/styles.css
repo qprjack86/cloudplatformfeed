@@ -1,5 +1,6 @@
 /* ===== Design Tokens ===== */
 :root {
+  --header-height: 88px;
   --bg-primary: #f0f2f5;
   --bg-secondary: #ffffff;
   --bg-tertiary: #e4e6eb;
@@ -185,7 +186,7 @@ header {
   border-bottom: 1px solid var(--border-color);
   padding: 0.6rem 2rem;
   position: sticky;
-  top: 88px;
+  top: var(--header-height);
   z-index: 90;
   transition: background var(--transition), border-color var(--transition);
 }
