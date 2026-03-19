@@ -115,6 +115,7 @@ MAX_UNCLASSIFIED_FOR_AI = 20
 LIFECYCLE_SECTIONS = {
     "in_preview": "In preview",
     "launched_ga": "Launched / Generally Available",
+    "retiring": "Retiring",
     "in_development": "In development",
 }
 BULLET_PREFIX = "  \u2022 "
@@ -498,12 +499,13 @@ def attach_links_to_summary(summary_text, summary_articles):
 def classify_lifecycle(article):
     """Classify an article into a lifecycle bucket based on title patterns.
 
-    Returns 'in_preview', 'launched_ga', 'in_development', or None when
+    Returns 'in_preview', 'launched_ga', 'retiring', 'in_development', or None when
     no deterministic signal is present.
     """
     title = (article.get("title") or "").lower()
-    # Check in_development first to avoid false GA matches on retirement notices
-    if re.search(r"\[in development\]|in development|coming soon|retir|deprecat", title):
+    if re.search(r"retirement|deprecated|deprecat|retir", title):
+        return "retiring"
+    if re.search(r"\[in development\]|in development|coming soon", title):
         return "in_development"
     if re.search(r"\[.*?preview\]|public preview|private preview|\bin preview\b|now in.*?preview", title):
         return "in_preview"
@@ -537,7 +539,7 @@ def classify_with_ai(candidates, client, deployment):
     system_msg = (
         "You are an Azure release classifier. "
         "For each item assign a bucket and write a concise one-line display label. "
-        'Bucket must be exactly one of: in_preview, launched_ga, in_development, other. '
+        'Bucket must be exactly one of: in_preview, launched_ga, retiring, in_development, other. '
         'Return ONLY a JSON object with key "items" containing an array. '
         "Each element must have: id (string), bucket (string), label (string). "
         "No explanation, no markdown fences, only the JSON object."
@@ -557,7 +559,7 @@ def classify_with_ai(candidates, client, deployment):
         raw = re.sub(r"^```[a-z]*\n?", "", raw)
         raw = re.sub(r"\n?```$", "", raw)
         parsed = json.loads(raw)
-        valid_buckets = {"in_preview", "launched_ga", "in_development", "other"}
+        valid_buckets = {"in_preview", "launched_ga", "retiring", "in_development", "other"}
         results = []
         for item in parsed.get("items", []):
             bucket = item.get("bucket", "")
@@ -947,7 +949,7 @@ def generate_ai_summary(articles):
         ordered_articles = azure_updates_articles + other_articles
 
         # Phase 1: rule-based lifecycle classification
-        code_buckets = {"in_preview": [], "launched_ga": [], "in_development": []}
+        code_buckets = {"in_preview": [], "launched_ga": [], "retiring": [], "in_development": []}
         unclassified = []
         for article in ordered_articles:
             bucket = classify_lifecycle(article)
@@ -973,7 +975,7 @@ def generate_ai_summary(articles):
         ai_result_by_id = {r["id"]: r for r in ai_results}
 
         # Phase 3: merge results and render markdown entirely in code
-        final_buckets = {"in_preview": [], "launched_ga": [], "in_development": []}
+        final_buckets = {"in_preview": [], "launched_ga": [], "retiring": [], "in_development": []}
         for bucket_key, bucket_articles in code_buckets.items():
             for article in bucket_articles:
                 label = re.sub(r"^\s*\[[^\]]+\]\s*", "", article.get("title", "")).strip()
