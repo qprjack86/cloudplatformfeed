@@ -176,6 +176,63 @@ class SiteConfigTests(unittest.TestCase):
                 fetch_feeds.load_site_config(str(config))
 
 
+class ChecksumMetadataTests(unittest.TestCase):
+    def test_build_checksums_payload_includes_expected_shape(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = pathlib.Path(tmpdir)
+            feeds = root / "data" / "feeds.json"
+            feed_xml = root / "data" / "feed.xml"
+            feeds.parent.mkdir(parents=True, exist_ok=True)
+            feeds.write_text('{"ok":true}\n', encoding="utf-8")
+            feed_xml.write_text('<rss></rss>\n', encoding="utf-8")
+
+            payload = fetch_feeds.build_checksums_payload(
+                [feeds, feed_xml],
+                generated_at="2026-03-19T00:00:00+00:00",
+            )
+
+        self.assertEqual(payload["generatedAt"], "2026-03-19T00:00:00+00:00")
+        self.assertEqual(len(payload["artifacts"]), 2)
+        self.assertEqual(
+            payload["artifacts"][0],
+            {
+                "path": feeds.as_posix(),
+                "algorithm": "sha256",
+                "value": "e5f1eb4d806641698a35efe20e098efd20d7d57a9b90ee69079d5bb650920726",
+                "generatedAt": "2026-03-19T00:00:00+00:00",
+            },
+        )
+        self.assertEqual(payload["artifacts"][1]["path"], feed_xml.as_posix())
+        self.assertEqual(payload["artifacts"][1]["algorithm"], "sha256")
+        self.assertEqual(payload["artifacts"][1]["generatedAt"], "2026-03-19T00:00:00+00:00")
+        self.assertEqual(
+            payload["artifacts"][1]["value"],
+            "4aff68cc72ca39863a0639b0a6683a6b089cda528e2451390fbea4e61f9267b6",
+        )
+
+    def test_write_checksums_file_writes_json_file(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = pathlib.Path(tmpdir)
+            feeds = root / "data" / "feeds.json"
+            feed_xml = root / "data" / "feed.xml"
+            checksums = root / "data" / "checksums.json"
+            feeds.parent.mkdir(parents=True, exist_ok=True)
+            feeds.write_text('{"ok":true}\n', encoding="utf-8")
+            feed_xml.write_text('<rss></rss>\n', encoding="utf-8")
+
+            payload = fetch_feeds.write_checksums_file(
+                [feeds, feed_xml],
+                output_path=checksums,
+                generated_at="2026-03-19T00:00:00+00:00",
+            )
+
+            written = json.loads(checksums.read_text(encoding="utf-8"))
+
+        self.assertEqual(written, payload)
+        self.assertEqual(written["artifacts"][0]["path"], feeds.as_posix())
+        self.assertEqual(written["artifacts"][1]["path"], feed_xml.as_posix())
+
+
 class RunMetricsTests(unittest.TestCase):
     def test_build_run_metrics_for_normal_publish(self):
         metrics = fetch_feeds.build_run_metrics(
