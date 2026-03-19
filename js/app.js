@@ -221,11 +221,25 @@
         return;
       }
 
-      var generatedDate = parseDateValue(m365FeedData.generatedAt);
-      var dateLabel = generatedDate
-        ? formatLocalDate(generatedDate, { day: "numeric", month: "short", year: "numeric" })
-        : "";
-      var m365Label = "Microsoft 365 Updates" + (dateLabel ? ": " + dateLabel : "");
+      var m365Days = Array.isArray(m365FeedData.summaryPublishingDays)
+        ? m365FeedData.summaryPublishingDays
+        : [];
+
+      function toM365Date(day) {
+        return formatLocalDate(parsePublishingDay(day), {
+          day: "numeric",
+          month: "short",
+          year: "numeric"
+        });
+      }
+
+      var m365DateLabel = "";
+      if (m365Days.length >= 2) {
+        m365DateLabel = toM365Date(m365Days[m365Days.length - 1]) + " – " + toM365Date(m365Days[0]);
+      } else if (m365Days.length === 1) {
+        m365DateLabel = toM365Date(m365Days[0]);
+      }
+      var m365Label = "Microsoft 365 Updates" + (m365DateLabel ? ": " + m365DateLabel : "");
       var m365SummaryText = m365FeedData.summary || buildLifecycleSummaryMarkdown(m365FeedData.byLifecycle || {});
 
       aiSummaryEl.innerHTML =

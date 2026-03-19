@@ -139,7 +139,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["title"], "New feature announcement")
         self.assertEqual(
             article["link"],
-            "https://deltapulse.app/dashboard?message=MC1255714",
+            "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
         )
         self.assertEqual(article["source"], "m365")
         self.assertEqual(article["m365Service"], "Teams")
@@ -163,8 +163,40 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         self.assertEqual(
             article["link"],
-            "https://deltapulse.app/dashboard?message=MC999999",
+            "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC999999",
         )
+
+    def test_roadmap_item_gets_roadmap_url(self):
+        """Roadmap items should link to the M365 roadmap page."""
+        item = {
+            "id": "558435",
+            "title": "Security Update Alerts",
+            "source": "roadmap",
+            "status": "In development",
+            "service": ["Microsoft 365"],
+            "url": "https://deltapulse.app/dashboard?roadmap=558435",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertEqual(
+            article["link"],
+            "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
+        )
+
+    def test_published_date_falls_back_through_fields(self):
+        """Items without publishedDate should try other date fields."""
+        item = {
+            "id": "558435",
+            "title": "Roadmap item",
+            "source": "roadmap",
+            "status": "In development",
+            "service": [],
+            "lastModifiedDateTime": "2026-03-18T10:00:00.000Z",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+        self.assertEqual(article["published"], "2026-03-18T10:00:00.000Z")
 
 
 class CategorizeByProductTests(unittest.TestCase):

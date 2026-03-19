@@ -281,23 +281,34 @@ def resolve_m365_item_link(item: dict) -> str:
     source = item.get("source", "")
     item_id = str(item.get("id", "")).strip()
 
-    if source == "message_center":
-        # Prefer a DeltaPulse deep link so users land on the advisory card.
-        for key in ["url", "link", "detailsUrl", "webUrl"]:
-            value = item.get(key)
-            if isinstance(value, str) and "deltapulse.app" in value.lower():
-                return value
+    if source == "message_center" and item_id:
+        return (
+            "https://admin.microsoft.com/Adminportal/Home"
+            f"?#/MessageCenter/:/messages/{item_id}"
+        )
 
-        if item_id:
-            return f"https://deltapulse.app/dashboard?message={item_id}"
-
-        # Fallback to whatever URL the source provided.
-        for key in ["messageCenterUrl", "message_center_url", "detailsUrl", "webUrl", "link", "url"]:
-            value = item.get(key)
-            if isinstance(value, str) and value.strip():
-                return value
+    if source == "roadmap" and item_id:
+        return (
+            "https://www.microsoft.com/en-us/microsoft-365/roadmap"
+            f"?filters=&searchterms={item_id}"
+        )
 
     return item.get("url", "")
+
+
+def _resolve_published_date(item: dict) -> str:
+    """Pick the best available date from a DeltaPulse item."""
+    for key in (
+        "publishedDate",
+        "lastModifiedDateTime",
+        "updatedDateTime",
+        "addedDateTime",
+        "createdDateTime",
+    ):
+        value = item.get(key)
+        if isinstance(value, str) and value.strip():
+            return value
+    return datetime.now(timezone.utc).isoformat()
 
 
 def build_article_from_m365_item(item: dict) -> dict:
@@ -308,7 +319,7 @@ def build_article_from_m365_item(item: dict) -> dict:
     return {
         "title": item.get("title", ""),
         "link": resolve_m365_item_link(item),
-        "published": item.get("publishedDate", datetime.now(timezone.utc).isoformat()),
+        "published": _resolve_published_date(item),
         "source": "m365",
         "m365Service": main_service,
         "m365AllServices": services,
@@ -389,12 +400,23 @@ def build_m365_feed(raw_items: list) -> dict:
     for lifecycle in ["in_preview", "launched_ga", "in_development", "retiring"]:
         by_lifecycle[lifecycle] = [a for a in deduped if a.get("lifecycle") == lifecycle]
     
+    # Compute distinct publishing days for the summary date range
+    pub_days = set()
+    for a in deduped:
+        try:
+            dt = datetime.fromisoformat(a["published"].replace("Z", "+00:00"))
+            pub_days.add(dt.strftime("%Y-%m-%d"))
+        except (ValueError, KeyError):
+            pass
+    publishing_days = sorted(pub_days, reverse=True)
+
     return {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "totalArticles": len(deduped),
         "articles": deduped,
         "byCategory": by_category,
         "byLifecycle": by_lifecycle,
+        "summaryPublishingDays": publishing_days,
         "source": "m365",
     }
 
