@@ -1,7 +1,187 @@
 {
-  "lastUpdated": "2026-03-18T16:01:04.457190+00:00",
-  "totalArticles": 206,
+  "lastUpdated": "2026-03-19T08:43:36.948635+00:00",
+  "totalArticles": 221,
   "articles": [
+    {
+      "title": "Building Knowledge-Grounded AI Agents with Foundry IQ",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-knowledge-grounded-ai-agents-with-foundry-iq/ba-p/4499683",
+      "published": "2026-03-19T07:00:00+00:00",
+      "summary": "Foundry IQ now integrates with Foundry Agent Service via MCP (Model Context Protocol), enabling developers to build AI agents grounded in enterprise knowledge. This integration combines Foundry IQ’s intelligent retrieval capabilities with Foundry Agent Service’s orchestration, enabling agents to...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "NelsonKumari"
+    },
+    {
+      "title": "Introducing Azure Managed Grafana MCP: The Managed Data Gateway for AI Agents",
+      "link": "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-managed-grafana-mcp-the-managed-data-gateway/ba-p/4503619",
+      "published": "2026-03-18T23:30:40+00:00",
+      "summary": "AI agents are rapidly becoming a core part of how teams build, operate, and improve cloud systems, from coding assistants to autonomous remediation workflows. To deliver on that promise in the enterprise, agents need a secure, governed way to access real production telemetry. Azure Managed Grafana...",
+      "blog": "Azure Observability",
+      "blogId": "azureobservabilityblog",
+      "author": "aayodeji"
+    },
+    {
+      "title": "Azure NCv6 Virtual Machines: Enhancements and GA Transition",
+      "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-virtual-machines-enhancements-and-ga-transition/ba-p/4503578",
+      "published": "2026-03-18T20:08:51+00:00",
+      "summary": "NCv6 Virtual Machines are Azure's flexible, next generation platform enabling both leading-edge graphics and generative AI compute workloads. Featuring NVIDIA RTX PRO 6000 Blackwell Server Edition (BSE) GPUs, Intel Xeon™ 6 \"Granite Rapids\" 6900P series CPUs, and a suite of Microsoft Azure...",
+      "blog": "High Performance Computing",
+      "blogId": "azurehighperformancecomputingblog",
+      "author": "Fernando_Aznar"
+    },
+    {
+      "title": "Authentication Tokens Are Not a Data Contract",
+      "link": "https://devblogs.microsoft.com/devops/authentication-tokens-are-not-a-data-contract/",
+      "published": "2026-03-18T18:46:49+00:00",
+      "summary": "Authentication tokens exist to answer one question: is this caller authorized to do this? They are not intended to be a stable data interface, a schema you can depend on, or an input into application logic. If your application decodes tokens and reads claims from them, this is an important...",
+      "blog": "Azure DevOps Blog",
+      "blogId": "azuredevops",
+      "author": "Angel Wong"
+    },
+    {
+      "title": "Retirement: Emissions Impact Dashboard for Azure",
+      "link": "https://azure.microsoft.com/updates?id=558278",
+      "published": "2026-03-18T18:45:54+00:00",
+      "summary": "Effective March 31, 2027, the Emissions Impact Dashboard for Azure hosted by Power BI will be retired. After this date, the dashboard will no longer be accessible and technical support will be discontinued. We strongly encourage customers to export their",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Announcing the New Home for the Azure Databricks Blog",
+      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/announcing-the-new-home-for-the-azure-databricks-blog/ba-p/4503570",
+      "published": "2026-03-18T18:44:42+00:00",
+      "summary": "We’re excited to share that the Azure Databricks blog has moved to a new address on Microsoft Tech Community Hub! Azure Databricks | Microsoft Community Hub Our new blog home is designed to make it easier than ever for you to discover the latest product updates, deep technical insights, and...",
+      "blog": "Analytics on Azure",
+      "blogId": "analyticsonazure",
+      "author": "AnaviNahar"
+    },
+    {
+      "title": "[Launched] General availability: Azure SQL updates for mid-March 2026",
+      "link": "https://azure.microsoft.com/updates?id=558121",
+      "published": "2026-03-18T18:30:05+00:00",
+      "summary": "In mid-March 2026, the following updates and enhancements were made to Azure SQL: Publish SQL database projects directly from Visual Studio Code to streamline database deployment workflows. View and edit SQL table data directly in the MSSQ",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity",
+      "link": "https://azure.microsoft.com/updates?id=557917",
+      "published": "2026-03-18T18:30:05+00:00",
+      "summary": "Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, enabling you to run OpenShift clusters and applications on Azure without long lived service principal credentials. This aligns Azure Red H",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension",
+      "link": "https://azure.microsoft.com/updates?id=558169",
+      "published": "2026-03-18T18:15:04+00:00",
+      "summary": "The MSSQL extension for Visual Studio Code now introduces GitHub Copilot integration in Schema Designer, expanding the visual schema design experience with AI-assisted capabilities. Based on developer feedback and evolving workflows, you can now understan",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Database DevOps in SSMS powered by SQL projects",
+      "link": "https://azure.microsoft.com/updates?id=558155",
+      "published": "2026-03-18T18:15:04+00:00",
+      "summary": "Bring the benefits of schema-as-code to your database development workflow. SQL database projects enable you to source control your database schema, perform reliable deployments to any environment, and integrate code quality checks into your development p",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: SQL MCP Server",
+      "link": "https://azure.microsoft.com/updates?id=558150",
+      "published": "2026-03-18T18:15:04+00:00",
+      "summary": "Announcing SQL MCP Server, our Model Context Protocol (MCP) connector for production databases. SQL MCP Server is a feature rich component of data API builder (DAB) that gives you a simple, predictable, secure way to bring AI agents into your data workflo",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: GitHub Copilot in SQL Server Management Studio 22",
+      "link": "https://azure.microsoft.com/updates?id=558134",
+      "published": "2026-03-18T18:15:04+00:00",
+      "summary": "GitHub Copilot is now generally available in SQL Server Management Studio (SSMS) 22, bringing AI‑powered assistance directly into the application that you use every day. With GitHub Copilot in SSMS, you can use natural language to develop, explain, fix,",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "The Swarm Diaries: What Happens When You Let AI Agents Loose on a Codebase",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-swarm-diaries-what-happens-when-you-let-ai-agents-loose-on-a/ba-p/4501393",
+      "published": "2026-03-18T18:08:04+00:00",
+      "summary": "The Idea Single-agent coding assistants are impressive, but they have a fundamental bottleneck: they think serially. Ask one to build a full CLI app with a database layer, a command parser, pretty output, and tests, and it’ll grind through each piece one by one. Industry benchmarks bear this out:...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "larohra"
+    },
+    {
+      "title": "Azure Developer CLI (azd): Run and test AI agents locally with azd",
+      "link": "https://devblogs.microsoft.com/azure-sdk/azd-ai-agent-run-invoke/",
+      "published": "2026-03-18T17:49:36+00:00",
+      "summary": "New azd ai agent run and invoke commands let you start and test AI agents from your terminal—locally or in the cloud. The post Azure Developer CLI (azd): Run and test AI agents locally with azd appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "PuiChee (PC) Chan, Travis Angevine"
+    },
+    {
+      "title": "DiskANN Vector Index Improvements",
+      "link": "https://devblogs.microsoft.com/azure-sql/diskann-vector-index-improvements/",
+      "published": "2026-03-18T17:00:33+00:00",
+      "summary": "Remember when we announced the Public Preview of DiskANN vector indexes back in November and mentioned that once you created the index, your table became read‑only? Yeah… about that… 😅 We shipped early because the demand for Vector search in SQL was overwhelming. We knew the constraints weren’t...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Davide Mauri, Pooja Kamath"
+    },
+    {
+      "title": "[Launched] Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks",
+      "link": "https://azure.microsoft.com/updates?id=558810",
+      "published": "2026-03-18T17:00:05+00:00",
+      "summary": "Azure Databricks now offers a Lakeflow Connect Free Tier that gives each workspace 100 free DBUs per workspace per day for ingestion from SaaS applications and databases. This allows you to bring roughly 100 million records of data per workspace per day i",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[Launched] Generally Available: Versionless key support for transparent data encryption in Azure SQL Database",
+      "link": "https://azure.microsoft.com/updates?id=558183",
+      "published": "2026-03-18T17:00:05+00:00",
+      "summary": "Azure SQL Database now supports versionless keys for transparent data encryption (TDE), giving you a simpler and more reliable way to manage your own encryption keys. You no longer need to reference a specific key version from Azure Key Vault or Managed H",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "[In preview] Public Preview: Data API builder with built-in GitHub Copilot in MSSQL extension",
+      "link": "https://azure.microsoft.com/updates?id=558178",
+      "published": "2026-03-18T17:00:05+00:00",
+      "summary": "The MSSQL extension for Visual Studio Code now introduces Data API builder in public preview with built-in GitHub Copilot integration, bringing a guided back-end generation experience directly into your development workflow. You can generate REST, GraphQL",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Microsoft partners with DataBahn to accelerate enterprise deployments for Microsoft Sentinel",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-partners-with-databahn-to-accelerate-enterprise/ba-p/4501055",
+      "published": "2026-03-18T16:40:17+00:00",
+      "summary": "Enterprise security teams are collecting more telemetry than ever across cloud platforms, endpoints, SaaS applications, and on-premises infrastructure. Security teams want broader data coverage and longer retention without losing control of cost and data quality. This post explains the new DataBahn...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "JamesAde"
+    },
+    {
+      "title": "When Infrastructure Scales But Understanding Doesn’t",
+      "link": "https://devblogs.microsoft.com/all-things-azure/when-infrastructure-scales-but-understanding-doesnt/",
+      "published": "2026-03-18T16:22:59+00:00",
+      "summary": "We all know this, even if we don’t like to admit it: modern infrastructure can scale infinitely, but human understanding doesn’t. We’ve all seen it happen – organizations going from managing dozens of servers to thousands of containers, from deploying weekly to deploying hundreds of times per day,...",
+      "blog": "All Things Azure",
+      "blogId": "allthingsazure",
+      "author": "Diego Casati, Ray Kao"
+    },
     {
       "title": "Introducing Lakeflow Connect Free Tier, now available on Azure Databricks",
       "link": "https://techcommunity.microsoft.com/t5/azure-databricks/introducing-lakeflow-connect-free-tier-now-available-on-azure/ba-p/4502755",
@@ -561,15 +741,6 @@
       "author": "Jay Gordon"
     },
     {
-      "title": "Microsoft partners with DataBahn to accelerate enterprise deployments for Microsoft Sentinel",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-partners-with-databahn-to-accelerate-enterprise/ba-p/4501055",
-      "published": "2026-03-11T15:12:47+00:00",
-      "summary": "Enterprise security teams are collecting more telemetry than ever across cloud platforms, endpoints, SaaS applications, and on-premises infrastructure. Security teams want broader data coverage and longer retention without losing control of cost and data quality. This post explains the new DataBahn...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "JamesAde"
-    },
-    {
       "title": "From Single Apps to Scale Solutions: How AI Agents Scale Modernization",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-single-apps-to-scale-solutions-how-ai-agents-scale/ba-p/4500059",
       "published": "2026-03-11T15:00:00+00:00",
@@ -993,15 +1164,6 @@
       "author": "ellievail"
     },
     {
-      "title": "Get started with Datadog MCP server in Azure SRE Agent",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-datadog-mcp-server-in-azure-sre-agent/ba-p/4497123",
-      "published": "2026-03-03T21:52:13+00:00",
-      "summary": "Overview The Datadog MCP server is a cloud-hosted bridge between your Datadog organization and Azure SRE Agent. Once configured, it enables real-time interaction with logs, metrics, APM traces, monitors, incidents, dashboards, and other Datadog data through natural language. All actions respect...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "dbandaru"
-    },
-    {
       "title": "Azure Developer CLI (azd): One command to swap Azure App Service slots",
       "link": "https://devblogs.microsoft.com/azure-sdk/azd-appservice-swap/",
       "published": "2026-03-03T21:10:01+00:00",
@@ -1405,15 +1567,6 @@
       "blog": "Azure SDK Blog",
       "blogId": "azuresdkblog",
       "author": "PuiChee (PC) Chan"
-    },
-    {
-      "title": "The JavaScript AI Build-a-thon Season 2 starts March 2!",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-javascript-ai-build-a-thon-season-2-starts-march-2/ba-p/4496855",
-      "published": "2026-02-25T14:32:13+00:00",
-      "summary": "Most applications used by millions of people every single day are powered by JavaScript/TypeScript. But when it comes to AI, most learning resources and code samples assume you're working in Python and will leave you trying to stitch scattered tutorials together to build AI into your stack. The...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Julia_Muiruri"
     },
     {
       "title": "Stop Writing Plumbing! Use the New Logic Apps MCP Server Wizard",
@@ -1837,40 +1990,22 @@
       "blog": "Integrations on Azure",
       "blogId": "integrationsonazureblog",
       "author": "hcamposu"
-    },
-    {
-      "title": "DCasv6 and ECasv6 confidential VMs in Azure Government Cloud",
-      "link": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/dcasv6-and-ecasv6-confidential-vms-in-azure-government-cloud/ba-p/4494604",
-      "published": "2026-02-17T00:27:19+00:00",
-      "summary": "Today, we are announcing the launch of the DCasv6 and ECasv6 series of confidential virtual machines (CVMs) in Azure Government. Azure Government: Compliant, Hyperscale, Sovereign Cloud Azure Government was designed to remove the constraints that have historically limited federal cloud adoption by...",
-      "blog": "Confidential Computing",
-      "blogId": "azureconfidentialcomputingblog",
-      "author": "Rakeshginjupalli"
-    },
-    {
-      "title": "Condensed views on Kanban and Sprint boards",
-      "link": "https://devblogs.microsoft.com/devops/condensed-views-on-kanban-and-sprint-boards/",
-      "published": "2026-02-16T20:53:30+00:00",
-      "summary": "One of the challenges teams face when working with large boards or displaying multiple fields on work item cards is limited screen space. This became even more noticeable with the rollout of the New Boards hub, which introduced additional spacing and padding for improved readability. While this...",
-      "blog": "Azure DevOps Blog",
-      "blogId": "azuredevops",
-      "author": "Dan Hellem"
     }
   ],
   "summaryWindowDays": 7,
   "summaryPublishingDays": [
+    "2026-03-19",
     "2026-03-18",
     "2026-03-17",
     "2026-03-16",
     "2026-03-14",
     "2026-03-13",
-    "2026-03-12",
-    "2026-03-11"
+    "2026-03-12"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
-  "summaryArticleCount": 65,
-  "summary": "- In preview:\n  • [Entra ID‑based access for Azure Blob Storage SFTP](https://azure.microsoft.com/updates?id=558662)\n  • [Azure Storage Mover private transfers from AWS S3 to Azure Blob](https://azure.microsoft.com/updates?id=558651)\n  • [Customer‑managed keys for Premium SSD v2 disks with Azure Database for PostgreSQL](https://azure.microsoft.com/updates?id=557527)\n  • [Query Profiler in MSSQL extension for Visual Studio Code](https://azure.microsoft.com/updates?id=558164)\n\n- Launched / Generally Available:\n  • [Default Rule Set 2.2 and updated ruleset support policy for Azure WAF](https://azure.microsoft.com/updates?id=558016)\n  • [Foundry Agent Service](https://azure.microsoft.com/updates?id=557141)\n  • [Log Analytics summary rules add manual “Retry bin” capability](https://azure.microsoft.com/updates?id=558656)\n  • [Terraform, Bicep, and Ansible support for elastic clusters in Azure Database for PostgreSQL](https://azure.microsoft.com/updates?id=558145)\n  • [Azure Database for PostgreSQL dashboards with Grafana](https://azure.microsoft.com/updates?id=558140)\n  • [Azure SRE Agent with new capabilities](https://azure.microsoft.com/updates?id=558321)\n\n- In development:\n  • none noted in selected window",
+  "summaryArticleCount": 15,
+  "summary": "- In preview:\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/updates?id=558169)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/updates?id=558155)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/updates?id=558150)\n  • [Public Preview: Data API builder with built-in GitHub Copilot in MSSQL extension](https://azure.microsoft.com/updates?id=558178)\n  • [Public Preview: Entra ID-Based Access for Azure Blob Storage SFTP](https://azure.microsoft.com/updates?id=558662)\n\n- Launched / Generally Available:\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558121)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/updates?id=557917)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/updates?id=558134)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/updates?id=558810)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/updates?id=558183)\n\n- In development:\n  • [Retirement: Emissions Impact Dashboard for Azure](https://azure.microsoft.com/updates?id=558278)\n  • [Retirement: Azure VMware Solution AV36P and AV52 node retirement on June 30, 2029](https://azure.microsoft.com/updates?id=557094)\n  • [Retirement: Support for Windows Server 2016 Marketplace images on Azure Batch pools will end on January 12, 2027](https://azure.microsoft.com/updates?id=549077)\n  • [Retirement: Migration of Azure Batch Low-Priority VMs to Spot VMs in early March](https://azure.microsoft.com/updates?id=543279)\n  • [Retirement: End of life reminder of NVv3 and NVv4-series Azure virtual machine in Azure Batch pools](https://azure.microsoft.com/updates?id=516070)",
   "savillVideo": {
     "title": "Azure Update 13th March 2026",
     "url": "https://www.youtube.com/watch?v=17uHDPjdkto",
