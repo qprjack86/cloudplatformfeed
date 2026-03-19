@@ -1,7 +1,7 @@
 {
-  "name": "Azure News Feed",
-  "short_name": "AzureFeed",
-  "description": "Daily updates from Azure blogs — last 30 days",
+  "name": "Microsoft Cloud Platform Feed",
+  "short_name": "Cloud Platform Feed",
+  "description": "Daily updates from Azure and Microsoft 365 blogs — last 30 days",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0078D4",
