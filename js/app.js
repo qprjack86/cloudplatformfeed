@@ -480,7 +480,11 @@
         if (m365Response.ok) {
           var m365Data = await m365Response.json();
           m365FeedData = m365Data;
-          m365Articles = m365Data.articles || [];
+          var m365Cutoff = localDaysAgo(30);
+          m365Articles = (m365Data.articles || []).filter(function (article) {
+            var articleDate = getArticleDate(article);
+            return articleDate && articleDate >= m365Cutoff;
+          });
           // Mark M365 articles with source
           m365Articles.forEach(function (a) { a.source = "m365"; });
           
