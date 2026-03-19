@@ -44,6 +44,7 @@
 
   // Color palette for blog tags
   var blogColors = {};
+  var blogColorClasses = {};
   var colorPalette = [
     "#0078D4", "#00BCF2", "#7719AA", "#E3008C", "#D83B01",
     "#107C10", "#008575", "#4F6BED", "#B4009E", "#C239B3",
@@ -159,7 +160,9 @@
         }
       });
       blogs.forEach(function (blogId, i) {
-        blogColors[blogId] = colorPalette[i % colorPalette.length];
+        var colorIndex = i % colorPalette.length;
+        blogColors[blogId] = colorPalette[colorIndex];
+        blogColorClasses[blogId] = "blog-color-" + colorIndex;
       });
 
       // Update header stats
@@ -617,6 +620,7 @@
   // ===== Render Single Card =====
   function renderCard(article) {
     var color = blogColors[article.blogId] || "#0078D4";
+    var colorClass = blogColorClasses[article.blogId] || "blog-color-0";
     var isBookmarked = bookmarks.has(article.link);
     var date = parseDateValue(article.published);
     var dateStr = formatLocalDate(date, {
@@ -631,9 +635,9 @@
     var shareTitle = encodeURIComponent(article.title);
 
     return (
-      '<article class="article-card" style="--blog-color:' + escapeHtml(color) + '">' +
+      '<article class="article-card">' +
       '<div class="card-header">' +
-      '<span class="blog-tag">' +
+      '<span class="blog-tag ' + colorClass + '" title="' + escapeHtml(color) + '">' +
       escapeHtml(article.blog) + "</span>" +
       '<button class="bookmark-btn ' + (isBookmarked ? "bookmarked" : "") +
       '" data-action="bookmark" data-link="' + encodedLink +
