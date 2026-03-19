@@ -1,4 +1,4 @@
-const CACHE_NAME = "azurefeed-v3";
+const CACHE_NAME = "azurefeed-v4";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
@@ -73,7 +73,10 @@ self.addEventListener("fetch", (event) => {
 
   var url = new URL(event.request.url);
   var isSameOrigin = url.origin === self.location.origin;
-  var isFeedData = url.pathname.includes("feeds.json") || url.pathname.includes("feed.xml");
+  var isFeedData =
+    url.pathname.includes("feeds.json") ||
+    url.pathname.includes("feed.xml") ||
+    url.pathname.includes("m365_data.json");
   var isAppShell = STATIC_ASSETS.includes(url.pathname) || event.request.mode === "navigate";
 
   // Network-first for feed data (always get fresh data)
