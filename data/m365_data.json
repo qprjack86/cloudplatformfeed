@@ -1,7 +1,44 @@
 {
-  "generatedAt": "2026-03-19T14:01:29.304791+00:00",
-  "totalArticles": 90,
+  "generatedAt": "2026-03-19T16:54:53.891842+00:00",
+  "totalArticles": 92,
   "articles": [
+    {
+      "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
+      "link": "https://deltapulse.app/dashboard?message=MC1256117",
+      "published": "2026-03-19T15:28:26.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft Copilot (Microsoft 365)",
+      "m365AllServices": [
+        "Microsoft Copilot (Microsoft 365)"
+      ],
+      "m365Id": "MC1256117",
+      "m365Source": "message_center",
+      "m365Category": "planForChange",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1256117"
+    },
+    {
+      "title": "Designer tools in Copilot",
+      "link": "https://deltapulse.app/dashboard?message=MC1256040",
+      "published": "2026-03-19T15:16:01.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft Copilot (Microsoft 365)",
+      "m365AllServices": [
+        "Microsoft Copilot (Microsoft 365)",
+        "Microsoft 365 Copilot Chat"
+      ],
+      "m365Id": "MC1256040",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1256040"
+    },
     {
       "title": "Dynamics 365, Power Platform, and Role-based Copilot offerings 2026 release wave 1 plans available now",
       "link": "https://deltapulse.app/dashboard?message=MC1255714",
@@ -2331,6 +2368,43 @@
     ],
     "AI & Automation": [
       {
+        "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
+        "link": "https://deltapulse.app/dashboard?message=MC1256117",
+        "published": "2026-03-19T15:28:26.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
+        "m365AllServices": [
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1256117",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256117"
+      },
+      {
+        "title": "Designer tools in Copilot",
+        "link": "https://deltapulse.app/dashboard?message=MC1256040",
+        "published": "2026-03-19T15:16:01.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
+        "m365AllServices": [
+          "Microsoft Copilot (Microsoft 365)",
+          "Microsoft 365 Copilot Chat"
+        ],
+        "m365Id": "MC1256040",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256040"
+      },
+      {
         "title": "Microsoft Copilot Studio - Read only Analytics Viewer role",
         "link": "https://deltapulse.app/dashboard?message=MC1255508",
         "published": "2026-03-19T02:21:27.000Z",
@@ -3211,6 +3285,43 @@
       }
     ],
     "launched_ga": [
+      {
+        "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
+        "link": "https://deltapulse.app/dashboard?message=MC1256117",
+        "published": "2026-03-19T15:28:26.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
+        "m365AllServices": [
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1256117",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256117"
+      },
+      {
+        "title": "Designer tools in Copilot",
+        "link": "https://deltapulse.app/dashboard?message=MC1256040",
+        "published": "2026-03-19T15:16:01.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
+        "m365AllServices": [
+          "Microsoft Copilot (Microsoft 365)",
+          "Microsoft 365 Copilot Chat"
+        ],
+        "m365Id": "MC1256040",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256040"
+      },
       {
         "title": "Dynamics 365, Power Platform, and Role-based Copilot offerings 2026 release wave 1 plans available now",
         "link": "https://deltapulse.app/dashboard?message=MC1255714",

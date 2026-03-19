@@ -1,7 +1,25 @@
 {
-  "lastUpdated": "2026-03-19T13:31:48.677364+00:00",
-  "totalArticles": 222,
+  "lastUpdated": "2026-03-19T16:54:51.704267+00:00",
+  "totalArticles": 221,
   "articles": [
+    {
+      "title": "Migrating to the next generation of Virtual Nodes on Azure Container Instances (ACI)",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-to-the-next-generation-of-virtual-nodes-on-azure/ba-p/4496565",
+      "published": "2026-03-19T16:51:42+00:00",
+      "summary": "What is ACI/Virtual Nodes? Azure Container Instances (ACI) is a fully-managed serverless container platform which gives you the ability to run containers on-demand without provisioning infrastructure. Virtual Nodes on ACI allows you to run Kubernetes pods managed by an AKS cluster in a serverless...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "adamsharif-msft"
+    },
+    {
+      "title": "Azure Bastion: Enterprise-grade secure access made simple",
+      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/azure-bastion-enterprise-grade-secure-access-made-simple/ba-p/4503833",
+      "published": "2026-03-19T14:32:39+00:00",
+      "summary": "Managing secure remote access to virtual machines traditionally means juggling public IP addresses, configuring jump boxes, deploying VPN infrastructure, and managing complex firewall rules. Each layer adds cost, complexity, and potential security vulnerabilities. Azure Bastion changes everything....",
+      "blog": "Azure Network Security",
+      "blogId": "azurenetworksecurityblog",
+      "author": "ShabazShaik"
+    },
     {
       "title": "Building Knowledge-Grounded AI Agents with Foundry IQ",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-knowledge-grounded-ai-agents-with-foundry-iq/ba-p/4499683",
@@ -499,7 +517,7 @@
     },
     {
       "title": "Azure Cosmos DB at FOSSASIA Summit 2026: Sessions, Conversations, and Community",
-      "link": "https://devblogs.microsoft.com/cosmosdb/azure-cosmos-db-at-fossasia-summit-2026-sessions-conversations-and-community/",
+      "link": "https://devblogs.microsoft.com/cosmosdb/azure-cosmos-db-at-fossasia-summit-2026-sessions-community/",
       "published": "2026-03-16T16:24:05+00:00",
       "summary": "The FOSSASIA Summit 2026 was an incredible gathering of developers, open-source contributors, startups, and technology enthusiasts from across the region. This year, Azure Cosmos DB and Azure DocumentDB were present at the summit with both technical sessions and a dedicated booth, giving us a great...",
       "blog": "Azure Cosmos DB Blog",
@@ -838,15 +856,6 @@
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "Mayunk_Jain"
-    },
-    {
-      "title": "Migrating to the next generation of Virtual Nodes on Azure Container Instances (ACI)",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-to-the-next-generation-of-virtual-nodes-on-azure/ba-p/4496565",
-      "published": "2026-03-10T13:13:05+00:00",
-      "summary": "What is ACI/Virtual Nodes? Azure Container Instances (ACI) is a fully-managed serverless container platform which gives you the ability to run containers on-demand without provisioning infrastructure. Virtual Nodes on ACI allows you to run Kubernetes pods managed by an AKS cluster in a serverless...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "adamsharif-msft"
     },
     {
       "title": "Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery",
@@ -1981,24 +1990,6 @@
       "blog": "Azure Virtual Desktop",
       "blogId": "azurevirtualdesktopblog",
       "author": "Rinku_Dalwani"
-    },
-    {
-      "title": "Azure API Management - Unified AI Gateway Design Pattern",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-api-management-unified-ai-gateway-design-pattern/ba-p/4495436",
-      "published": "2026-02-17T16:21:27+00:00",
-      "summary": "Scaling AI adoption requires a unified control plane As organizations scale generative AI adoption, they face growing complexity managing multiple AI providers, models, API formats, and rapid release cycles. Without a unified control plane, enterprises risk fragmented governance, inconsistent...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "nicolehaugen"
-    },
-    {
-      "title": "Microsoft BizTalk Server Product Lifecycle Update",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559",
-      "published": "2026-02-17T15:38:15+00:00",
-      "summary": "For more than 25 years, Microsoft BizTalk Server has supported mission-critical integration workloads for organizations around the world. From business process automation and B2B messaging to connectivity across industries such as financial services, healthcare, manufacturing, and government,...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "hcamposu"
     }
   ],
   "summaryWindowDays": 7,
