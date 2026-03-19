@@ -47,6 +47,9 @@ jobs:
           AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
         run: python scripts/fetch_feeds.py
 
+      - name: Fetch M365 data from DeltaPulse
+        run: python scripts/fetch_m365_data.py
+
       - name: Run smoke checks
         run: ruby scripts/smoke_test.rb
 
@@ -57,11 +60,11 @@ jobs:
           commit_sha=
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/feeds.json data/feed.xml
+          git add data/feeds.json data/feed.xml data/m365_data.json data/m365_checksums.json data/checksums.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "📰 Update Azure blog feeds - $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git commit -m "📰 Update Azure blog feeds and M365 data - $(date -u '+%Y-%m-%d %H:%M UTC')"
             git push
             committed=true
             commit_sha="$(git rev-parse HEAD)"
