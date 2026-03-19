@@ -565,9 +565,9 @@
       result = result.filter(function (a) {
         return (
           a.title.toLowerCase().includes(q) ||
-          a.summary.toLowerCase().includes(q) ||
-          a.blog.toLowerCase().includes(q) ||
-          a.author.toLowerCase().includes(q)
+          (a.summary || "").toLowerCase().includes(q) ||
+          (a.blog || a.m365Service || "").toLowerCase().includes(q) ||
+          (a.author || "").toLowerCase().includes(q)
         );
       });
     }
