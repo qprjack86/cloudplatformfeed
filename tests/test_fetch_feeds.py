@@ -86,11 +86,30 @@ class ClassifyLifecycleTests(unittest.TestCase):
         article = {"title": "Generally available: hardened deployment feature"}
         self.assertEqual(fetch_feeds.classify_lifecycle(article), "launched_ga")
 
-    def test_in_development_rules_take_precedence_over_ga_terms(self):
-        article = {
-            "title": "Generally available retirement timeline update for legacy SKU"
-        }
+    def test_detects_retirement_titles(self):
+        article = {"title": "Retirement: legacy SKU support ends in 2026"}
+        self.assertEqual(fetch_feeds.classify_lifecycle(article), "retiring")
+
+    def test_detects_in_development_titles(self):
+        article = {"title": "[In development] New accelerator for distributed workloads"}
         self.assertEqual(fetch_feeds.classify_lifecycle(article), "in_development")
+
+
+class RenderSummaryMarkdownTests(unittest.TestCase):
+    def test_includes_retiring_section_when_populated(self):
+        buckets = {
+            "in_preview": [],
+            "launched_ga": [],
+            "retiring": [{"label": "Legacy SKU retirement announced", "link": "https://example.com/retire"}],
+            "in_development": [],
+        }
+
+        result = fetch_feeds.render_summary_markdown(buckets)
+
+        self.assertIn(
+            "- Retiring:\n  • [Legacy SKU retirement announced](https://example.com/retire)",
+            result,
+        )
 
 
 class AttachLinksToSummaryTests(unittest.TestCase):
