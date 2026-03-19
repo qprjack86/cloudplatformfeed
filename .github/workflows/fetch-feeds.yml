@@ -1,4 +1,4 @@
-name: Fetch Azure Blog Feeds
+name: Fetch Azure & M365 Blog Feeds
 
 on:
   schedule:
