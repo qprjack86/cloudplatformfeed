@@ -112,6 +112,16 @@
     return Number.isNaN(date.getTime()) ? null : date;
   }
 
+  function getArticleDate(article) {
+    if (!article) return null;
+    return (
+      parseDateValue(article.published) ||
+      parseDateValue(article.publishedDate) ||
+      parseDateValue(article.updated) ||
+      parseDateValue(article.modified)
+    );
+  }
+
   function parsePublishingDay(day) {
     var match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(day || "");
     if (!match) return null;
@@ -774,7 +784,7 @@
         case "month": cutoff = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate()); break;
       }
       result = result.filter(function (a) {
-        var published = parseDateValue(a.published);
+        var published = getArticleDate(a);
         return published && published >= cutoff;
       });
     }
@@ -787,16 +797,20 @@
     // Sort
     switch (sortBy) {
       case "date-desc":
-        result.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
+        result.sort(function (a, b) {
+          return (getArticleDate(b) || 0) - (getArticleDate(a) || 0);
+        });
         break;
       case "date-asc":
-        result.sort(function (a, b) { return new Date(a.published) - new Date(b.published); });
+        result.sort(function (a, b) {
+          return (getArticleDate(a) || 0) - (getArticleDate(b) || 0);
+        });
         break;
       case "blog":
         result.sort(function (a, b) {
           var aBlog = a.blog || a.m365Service || "";
           var bBlog = b.blog || b.m365Service || "";
-          return aBlog.localeCompare(bBlog) || new Date(b.published) - new Date(a.published);
+          return aBlog.localeCompare(bBlog) || ((getArticleDate(b) || 0) - (getArticleDate(a) || 0));
         });
         break;
     }
@@ -869,48 +883,61 @@
 
   // ===== Group by Date =====
   function groupByDate(list) {
-    var groups = {};
+    var groups = {
+      "Today": [],
+      "Yesterday": [],
+      "This Week": []
+    };
+    var monthGroups = {};
+    var unknown = [];
     var today = startOfLocalDay(new Date());
     var yesterday = new Date(today);
     yesterday.setDate(yesterday.getDate() - 1);
     var weekAgo = new Date(today);
     weekAgo.setDate(weekAgo.getDate() - 7);
-    var orderedKeys = [];
 
     list.forEach(function (article) {
-      var date = parseDateValue(article.published);
-      if (!date) return;
-      var group;
-      if (date >= today) {
-        group = "Today";
+      var date = getArticleDate(article);
+      if (!date) {
+        unknown.push(article);
+      } else if (date >= today) {
+        groups["Today"].push(article);
       } else if (date >= yesterday) {
-        group = "Yesterday";
+        groups["Yesterday"].push(article);
       } else if (date >= weekAgo) {
-        group = "This Week";
+        groups["This Week"].push(article);
       } else {
-        group = formatLocalDate(date, {
+        var monthKey = formatLocalDate(date, {
           year: "numeric",
           month: "long"
         });
+        if (!monthGroups[monthKey]) monthGroups[monthKey] = [];
+        monthGroups[monthKey].push(article);
       }
-      if (!groups[group]) {
-        groups[group] = [];
-        orderedKeys.push(group);
-      }
-      groups[group].push(article);
     });
 
     var ordered = {};
-    orderedKeys.forEach(function (key) {
-      ordered[key] = groups[key];
+    ["Today", "Yesterday", "This Week"].forEach(function (key) {
+      if (groups[key].length) ordered[key] = groups[key];
     });
+
+    Object.keys(monthGroups).sort(function (a, b) {
+      return new Date(b) - new Date(a);
+    }).forEach(function (key) {
+      ordered[key] = monthGroups[key];
+    });
+
+    if (unknown.length) {
+      ordered["Unknown Date"] = unknown;
+    }
+
     return ordered;
   }
 
   // ===== Check if article is new (last 24h) =====
   function isNew(article) {
     var now = new Date();
-    var published = parseDateValue(article.published);
+    var published = getArticleDate(article);
     if (!published) return false;
     return (now - published) < 24 * 60 * 60 * 1000;
   }
@@ -921,7 +948,7 @@
     var color = isM365 ? "#0078D4" : (blogColors[article.blogId] || "#0078D4");
     var colorClass = isM365 ? "blog-color-0" : (blogColorClasses[article.blogId] || "blog-color-0");
     var isBookmarked = bookmarks.has(article.link);
-    var date = parseDateValue(article.published);
+    var date = getArticleDate(article);
     var dateStr = formatLocalDate(date, {
       month: "short",
       day: "numeric",
