@@ -250,7 +250,7 @@ def dedupe_m365_articles(articles: list, max_age_days: int = 30) -> list:
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(days=max_age_days)
     
-    seen_urls = {}  # url -> article (first seen wins)
+    seen_keys = {}  # dedupe key -> article (first seen wins)
     deduped = []
     
     for article in articles:
@@ -264,13 +264,18 @@ def dedupe_m365_articles(articles: list, max_age_days: int = 30) -> list:
             except (ValueError, AttributeError):
                 pass  # If unparseable, include it
         
-        # Check URL deduplication
-        url = article.get("link", "")  # Article dict uses 'link', not 'url'
-        normalized = normalize_url(url)
-        
-        if normalized and normalized not in seen_urls:
-            seen_urls[normalized] = article
-            article["_normalized_url"] = normalized
+        # Prefer source/id dedupe to avoid collapsing admin URLs that carry IDs in fragments.
+        source = (article.get("m365Source") or "").strip().lower()
+        item_id = str(article.get("m365Id") or "").strip()
+        dedupe_key = f"{source}:{item_id}" if source and item_id else ""
+
+        if not dedupe_key:
+            url = article.get("link", "")  # Article dict uses 'link', not 'url'
+            dedupe_key = normalize_url(url)
+
+        if dedupe_key and dedupe_key not in seen_keys:
+            seen_keys[dedupe_key] = article
+            article["_normalized_url"] = dedupe_key
             deduped.append(article)
     
     return deduped
@@ -302,8 +307,11 @@ def _resolve_published_date(item: dict) -> str:
         "publishedDate",
         "lastModifiedDateTime",
         "updatedDateTime",
+        "updatedDate",
         "addedDateTime",
         "createdDateTime",
+        "createdDate",
+        "modifiedDate",
     ):
         value = item.get(key)
         if isinstance(value, str) and value.strip():

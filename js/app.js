@@ -400,18 +400,25 @@
           // Mark M365 articles with source
           m365Articles.forEach(function (a) { a.source = "m365"; });
           
-          // Populate productCategory field from byCategory structure
+          // Populate productCategory using a stable source+id key.
           var byCategory = m365Data.byCategory || {};
+          var categoryBySourceId = {};
           Object.keys(byCategory).forEach(function (catName) {
             var catArticles = byCategory[catName] || [];
             catArticles.forEach(function (catArticle) {
-              var article = m365Articles.find(function (a) {
-                return a.link === catArticle.link;
-              });
-              if (article) {
-                article.productCategory = catName;
+              var key = String((catArticle.m365Source || "") + ":" + (catArticle.m365Id || ""));
+              if (key !== ":") {
+                categoryBySourceId[key] = catName;
               }
             });
+          });
+
+          m365Articles.forEach(function (article) {
+            var key = String((article.m365Source || "") + ":" + (article.m365Id || ""));
+            article.productCategory =
+              categoryBySourceId[key] ||
+              article.m365Category ||
+              "Uncategorized";
           });
         }
       } catch (e) {
@@ -755,7 +762,8 @@
   function articleMatchesCategory(article, categoryName) {
     // Handle M365 articles (use productCategory field)
     if ((article.source || "azure") === "m365") {
-      return (article.productCategory || "Uncategorized") === categoryName;
+      var productCategory = article.productCategory || article.m365Category || "Uncategorized";
+      return productCategory === categoryName;
     }
 
     // Handle Azure articles (original logic)

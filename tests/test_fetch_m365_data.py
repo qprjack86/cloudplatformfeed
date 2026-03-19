@@ -74,6 +74,29 @@ class DedupeM365ArticlesTests(unittest.TestCase):
         titles = [a["title"] for a in deduped]
         self.assertIn("First version", titles)
         self.assertIn("Unique article", titles)
+
+        def test_keeps_distinct_message_center_ids(self):
+            """Different message IDs should not be deduped together."""
+            fresh = datetime.now(timezone.utc).isoformat()
+            articles = [
+                {
+                    "title": "Msg A",
+                    "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC100",
+                    "published": fresh,
+                    "m365Source": "message_center",
+                    "m365Id": "MC100",
+                },
+                {
+                    "title": "Msg B",
+                    "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC200",
+                    "published": fresh,
+                    "m365Source": "message_center",
+                    "m365Id": "MC200",
+                },
+            ]
+
+            deduped = fetch_m365_data.dedupe_m365_articles(articles)
+            self.assertEqual(len(deduped), 2)
     
     def test_discards_stale_articles(self):
         """Articles older than 30 days should be discarded."""
@@ -147,8 +170,8 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["m365AllServices"], ["Teams", "SharePoint"])
         self.assertIsNotNone(article["lifecycle"])
 
-    def test_prefers_deltapulse_link_when_present(self):
-        """DeltaPulse links should be used when both URLs are present."""
+    def test_prefers_admin_message_center_link(self):
+        """Message Center items should resolve to the admin portal message URL."""
         item = {
             "id": "MC999999",
             "title": "Admin portal update",
@@ -197,6 +220,20 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         article = fetch_m365_data.build_article_from_m365_item(item)
         self.assertEqual(article["published"], "2026-03-18T10:00:00.000Z")
+
+        def test_published_date_uses_created_date(self):
+            """Roadmap items should use createdDate when datetime fields are absent."""
+            item = {
+                "id": "558435",
+                "title": "Roadmap item",
+                "source": "roadmap",
+                "status": "In development",
+                "service": [],
+                "createdDate": "2026-03-18T00:00:00.000Z",
+            }
+
+            article = fetch_m365_data.build_article_from_m365_item(item)
+            self.assertEqual(article["published"], "2026-03-18T00:00:00.000Z")
 
 
 class CategorizeByProductTests(unittest.TestCase):

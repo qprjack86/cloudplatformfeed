@@ -2,7 +2,7 @@
   "generatedAt": "2026-03-19T13:31:49.560862+00:00",
   "artifacts": [
     {
-      "path": "/home/runner/work/azurenewsfeed/azurenewsfeed/data/m365_data.json",
+      "path": "/home/jack/azurenewsfeed/data/m365_data.json",
       "algorithm": "sha256",
       "value": "1f6fcd9357418145db09da79f6668d3c4a85f9dcb07694ad0d7199f069943d8b",
       "generatedAt": "2026-03-19T13:31:49.560862+00:00"
