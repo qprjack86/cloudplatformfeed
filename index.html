@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Azure Feed</title>
-  <meta name="description" content="Daily aggregated news from Azure blogs — search, filter, bookmark, and share. Updated every day.">
+  <title>Microsoft Cloud Platform Feed</title>
+  <meta name="description" content="Daily aggregated updates from Azure and Microsoft 365 blogs — search, filter, bookmark, and share.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self' https://www.clarity.ms; connect-src 'self' https://www.clarity.ms https://c.clarity.ms https://m.clarity.ms; img-src 'self' data: https://*.ytimg.com https://www.clarity.ms https://c.clarity.ms https://m.clarity.ms; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Azure Feed">
-  <meta property="og:description" content="Daily aggregated news from Azure blogs — search, filter, bookmark, and share.">
-  <meta property="og:url" content="https://azurefeed.kailice.uk">
-  <meta property="og:image" content="https://azurefeed.kailice.uk/og-image.png">
+  <meta property="og:title" content="Microsoft Cloud Platform Feed">
+  <meta property="og:description" content="Daily aggregated updates from Azure and Microsoft 365 blogs — search, filter, bookmark, and share.">
+  <meta property="og:url" content="https://cloudplatformfeed.kailice.uk">
+  <meta property="og:image" content="https://cloudplatformfeed.kailice.uk/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Azure Feed">
-  <meta name="twitter:description" content="Daily aggregated news from Azure blogs — search, filter, bookmark, and share.">
-  <meta name="twitter:image" content="https://azurefeed.kailice.uk/og-image.png">
+  <meta name="twitter:title" content="Microsoft Cloud Platform Feed">
+  <meta name="twitter:description" content="Daily aggregated updates from Azure and Microsoft 365 blogs — search, filter, bookmark, and share.">
+  <meta name="twitter:image" content="https://cloudplatformfeed.kailice.uk/og-image.png">
   <!-- PWA -->
   <meta name="theme-color" content="#0078D4">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="Azure Feed" href="data/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Microsoft Cloud Platform Feed" href="data/feed.xml">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/clarity.js" defer></script>
@@ -38,8 +38,8 @@
           <path d="M27.2 69.6L47.6 24H58.8L34 69.6H27.2ZM20 69.6L40.4 24H51.6L26.8 69.6H20ZM56.4 69.6L64 54.4L70.4 40L76 69.6H56.4Z" fill="white"/>
         </svg>
         <div>
-          <h1>Azure Feed</h1>
-          <span class="subtitle">Daily updates from Azure blogs · Last 30 days</span>
+          <h1>Microsoft Cloud Platform Feed</h1>
+          <span class="subtitle">Daily updates from Azure and Microsoft 365 blogs · Last 30 days</span>
         </div>
       </div>
       <div class="header-actions">
@@ -77,7 +77,7 @@
     <div class="controls">
       <span id="showing-count"></span>
       <div class="controls-right">
-        <button id="other-blogs-toggle" title="Show non-Azure Updates blogs">📰 Other Blogs Off</button>
+        <button id="other-blogs-toggle" title="Show non-Updates blogs">📰 Other Blogs Off</button>
         <select id="date-filter">
           <option value="all">All Time</option>
           <option value="today">Today</option>
@@ -108,7 +108,7 @@
   <div class="toast" id="toast"></div>
 
   <footer>
-    <p>☁️ Azure Feed &bull; Updated daily via <a href="https://github.com/qprjack86/azurenewsfeed" target="_blank" rel="noopener">GitHub Actions</a> &bull; <a href="data/feed.xml" target="_blank" rel="noopener">📡 RSS Feed</a></p>
+    <p>☁️ Microsoft Cloud Platform Feed &bull; Updated daily via <a href="https://github.com/qprjack86/cloudplatformfeed" target="_blank" rel="noopener">GitHub Actions</a> &bull; <a href="data/feed.xml" target="_blank" rel="noopener">📡 RSS Feed</a></p>
   </footer>
 
   <script src="js/app.js?v=20260319g" defer></script>

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Azure News Feed - RSS Feed Fetcher
-Fetches articles from Azure blog RSS feeds and generates a JSON data file.
+Microsoft Cloud Platform Feed - RSS Feed Fetcher
+Fetches articles from Azure and Microsoft 365 blog RSS feeds and generates a JSON data file.
 """
 
 import feedparser
@@ -834,15 +834,15 @@ def generate_rss_feed(articles):
     rss = Element("rss", version="2.0")
     rss.set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
     channel = SubElement(rss, "channel")
-    SubElement(channel, "title").text = "Azure News Feed"
+    SubElement(channel, "title").text = "Microsoft Cloud Platform Feed"
     SubElement(channel, "link").text = CANONICAL_SITE_URL
     SubElement(channel, "description").text = (
-        "Aggregated daily news from Azure blogs"
+        "Aggregated daily updates from Azure and Microsoft 365 blogs"
     )
     SubElement(channel, "lastBuildDate").text = datetime.now(
         timezone.utc
     ).strftime("%a, %d %b %Y %H:%M:%S GMT")
-    SubElement(channel, "generator").text = "Azure News Feed"
+    SubElement(channel, "generator").text = "Microsoft Cloud Platform Feed"
     SubElement(channel, "language").text = "en"
 
     for article in articles[:50]:
@@ -1124,7 +1124,7 @@ def write_run_metrics(metrics, output_path=None):
 
 def main():
     print("=" * 60)
-    print("Azure News Feed - Fetching RSS Feeds")
+    print("Microsoft Cloud Platform Feed - Fetching RSS Feeds")
     print("=" * 60)
 
     all_articles = []

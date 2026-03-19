@@ -547,8 +547,8 @@
       ? "📰 Other Blogs On"
       : "📰 Other Blogs Off";
     otherBlogsToggle.title = showOtherBlogs
-      ? "Hide non-Azure Updates blogs"
-      : "Show non-Azure Updates blogs";
+      ? "Hide non-Updates blogs"
+      : "Show non-Updates blogs";
   }
 
   function syncActiveCategoryPill() {
@@ -1056,7 +1056,7 @@
           if (currentSource === "m365") {
             subtitleEl.textContent = "Daily updates from Microsoft 365 · Last 30 days";
           } else {
-            subtitleEl.textContent = "Daily updates from Azure blogs · Last 30 days";
+            subtitleEl.textContent = "Daily updates from Azure · Last 30 days";
           }
         }
         

@@ -1,13 +1,13 @@
-# ☁️ Azure News Feed
+# ☁️ Microsoft Cloud Platform Feed
 
-A daily-updated Azure blog aggregator hosted on GitHub Pages. Collects articles from Azure blogs and presents them in a clean, searchable interface — last 30 days only.
+A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It collects articles from Azure and Microsoft 365 blogs and presents them in a clean, searchable interface covering the last 30 days.
 
-**Live site:** [azurefeed.kailice.uk](https://azurefeed.kailice.uk)
+**Live site:** [cloudplatformfeed.kailice.uk](https://cloudplatformfeed.kailice.uk)
 
 ## Features
 
-- 📰 **49 sources** — Azure blogs, Azure Updates, DevOps, Security, Developer Tools, Data & AI, and more
-- 🔍 **Search & filter** — Find articles by keyword, blog category, or date range
+- 📰 **49 sources** — Azure blogs, Microsoft 365 blogs, Azure Updates, DevOps, Security, Developer Tools, Data & AI, and more
+- 🔍 **Search & filter** — Find articles by keyword, blog category, product area, or date range
 - ⭐ **Bookmarks** — Save articles for later (stored locally per browser)
 - 🌙 **Dark mode** — Easy on the eyes
 - 📱 **Responsive** — Works on desktop, tablet, and mobile
@@ -18,25 +18,17 @@ A daily-updated Azure blog aggregator hosted on GitHub Pages. Collects articles 
 
 ## Blog Sources
 
-| Category | Blogs |
+| Area | Coverage |
 | ---------- | ----- |
-| **Compute** | Azure Compute, AKS, Azure Virtual Desktop, High Performance Computing |
-| **Data & AI** | Analytics on Azure, Azure Databricks, Oracle on Azure, Cosmos DB, Azure SQL, Microsoft Foundry |
-| **Infrastructure** | Azure Infrastructure, Azure Arc, Azure Stack, Azure Networking, Azure Storage |
-| **Security** | Azure Network Security, Microsoft Sentinel, Microsoft Defender for Cloud, Azure Advanced Threat Protection |
-| **Architecture** | Azure Architecture, Customer Innovation, ISE Developer Blog |
-| **Apps & Platform** | Apps on Azure, Azure PaaS, Integrations, Messaging, Aspire, Azure SDK |
-| **Operations** | Governance & Management, Observability, FinOps, Azure Tools, Migration, Azure DevOps |
-| **Community** | Azure Dev Community, Azure Events, Linux & Open Source, All Things Azure, Microsoft Developers Blog |
-| **Developer Tools** | Visual Studio, VS Code, Windows Command Line, Develop from the Cloud |
-| **Specialized** | Communication Services, Confidential Computing, Maps, Telecommunications, Planetary Computer |
+| **Azure** | Compute, Data & AI, Infrastructure, Security, Architecture, Apps & Platform, Operations, Community, Developer Tools, and specialized Azure product blogs |
+| **Microsoft 365** | Microsoft 365 apps, Teams, SharePoint, OneDrive, Exchange, Microsoft Viva, Microsoft 365 Defender, Purview, Intune, Copilot, and related admin/community blogs |
 
 ## Setup
 
 ### 1. Create the GitHub repository
 
 ```bash
-gh repo create azurenewsfeed --public --source=. --remote=origin
+gh repo create cloudplatformfeed --public --source=. --remote=origin
 ```
 
 ### 2. Push the code
@@ -44,7 +36,7 @@ gh repo create azurenewsfeed --public --source=. --remote=origin
 ```bash
 git init
 git add .
-git commit -m "Initial commit - Azure News Feed"
+git commit -m "Initial commit - Microsoft Cloud Platform Feed"
 git push -u origin main
 ```
 
@@ -54,12 +46,12 @@ Go to **Settings → Pages → Source** and select **Deploy from a branch** → 
 
 ### 4. Trigger the first data fetch
 
-Go to **Actions → Fetch Azure Blog Feeds → Run workflow** to populate the initial data.
+Go to **Actions → Fetch Cloud Platform Feeds → Run workflow** to populate the initial data.
 The regeneration workflow now runs only on its daily schedule or from manual dispatch. It no longer writes generated files back on every source push.
 
 ### 5. Visit your site
 
-Your feed will be live at `https://azurefeed.kailice.uk`
+Your feed will be live at `https://cloudplatformfeed.kailice.uk`
 
 ## Local Development
 
@@ -137,7 +129,7 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 ## How It Works
 
 1. **GitHub Actions** runs at 8 AM, 12 PM, and 4 PM UTC each day (or manually)
-2. **Python script** fetches RSS feeds from Azure and Microsoft developer blogs plus Azure Updates using allowlisted HTTPS requests with explicit timeouts and retries
+2. **Python script** fetches RSS feeds from Azure, Microsoft 365, and Microsoft developer blogs plus Azure Updates using allowlisted HTTPS requests with explicit timeouts and retries
 3. Articles from the last 30 days are deduplicated with canonical URL normalization, sorted, and saved to `data/feeds.json`
 4. The commit triggers **GitHub Pages** to redeploy
 5. The **static frontend** loads the JSON, applies viewer-local date grouping/filtering, and renders the feed
