@@ -137,12 +137,34 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         article = fetch_m365_data.build_article_from_m365_item(item)
         
         self.assertEqual(article["title"], "New feature announcement")
-        self.assertEqual(article["link"], "https://deltapulse.app/dashboard?message=MC1255714")
+        self.assertEqual(
+            article["link"],
+            "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
+        )
         self.assertEqual(article["source"], "m365")
         self.assertEqual(article["m365Service"], "Teams")
         self.assertEqual(article["m365Id"], "MC1255714")
         self.assertEqual(article["m365AllServices"], ["Teams", "SharePoint"])
         self.assertIsNotNone(article["lifecycle"])
+
+    def test_preserves_direct_admin_link_when_provided(self):
+        """Direct admin links should be used as-is when present."""
+        item = {
+            "id": "MC999999",
+            "title": "Admin portal update",
+            "source": "message_center",
+            "publishedDate": "2026-03-19T04:39:14.000Z",
+            "service": ["Teams"],
+            "url": "https://deltapulse.app/dashboard?message=MC999999",
+            "detailsUrl": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC999999",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertEqual(
+            article["link"],
+            "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC999999",
+        )
 
 
 class CategorizeByProductTests(unittest.TestCase):

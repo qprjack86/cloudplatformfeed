@@ -276,6 +276,27 @@ def dedupe_m365_articles(articles: list, max_age_days: int = 30) -> list:
     return deduped
 
 
+def resolve_m365_item_link(item: dict) -> str:
+    """Resolve the best outbound link for a DeltaPulse item."""
+    source = item.get("source", "")
+    item_id = str(item.get("id", "")).strip()
+
+    if source == "message_center":
+        # Prefer any direct admin link if the source provides one.
+        for key in ["messageCenterUrl", "message_center_url", "detailsUrl", "webUrl", "link", "url"]:
+            value = item.get(key)
+            if isinstance(value, str) and "admin.microsoft.com" in value.lower():
+                return value
+
+        if item_id:
+            return (
+                "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/"
+                f"{item_id}"
+            )
+
+    return item.get("url", "")
+
+
 def build_article_from_m365_item(item: dict) -> dict:
     """Convert a DeltaPulse item into article schema."""
     services = item.get("service", [])
@@ -283,7 +304,7 @@ def build_article_from_m365_item(item: dict) -> dict:
     
     return {
         "title": item.get("title", ""),
-        "link": item.get("url", ""),
+        "link": resolve_m365_item_link(item),
         "published": item.get("publishedDate", datetime.now(timezone.utc).isoformat()),
         "source": "m365",
         "m365Service": main_service,

@@ -75,6 +75,10 @@
   var aiSummaryEl = document.getElementById("ai-summary");
   var savillVideoEl = document.getElementById("savill-video");
   var subtitleEl = document.querySelector(".subtitle");
+  var tabsContainerEl = document.querySelector(".tabs-container");
+
+  var azureFeedData = null;
+  var m365FeedData = null;
   
   // Tab buttons (M365 feature)
   var tabButtons = document.querySelectorAll(".tab-button");
@@ -83,6 +87,13 @@
     no_articles_in_window: "No recent articles were available in the current summary window.",
     missing_azure_openai_config: "AI summary generation is not configured for this refresh.",
     azure_openai_failed: "AI summary generation was temporarily unavailable for this refresh."
+  };
+
+  var LIFECYCLE_LABELS = {
+    in_preview: "In preview",
+    launched_ga: "Launched / GA",
+    retiring: "Retiring",
+    in_development: "In development"
   };
 
   function showElement(element) {
@@ -122,6 +133,222 @@
       : "";
   }
 
+  function renderSummaryHtml(text) {
+    function renderBulletContent(content) {
+      var html = "";
+      var cursor = 0;
+      var linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+      var match;
+      while ((match = linkRe.exec(content)) !== null) {
+        html += escapeHtml(content.slice(cursor, match.index));
+        html +=
+          '<a class="ai-link" href="' +
+          escapeHtml(match[2]) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          escapeHtml(match[1]) +
+          "</a>";
+        cursor = match.index + match[0].length;
+      }
+      html += escapeHtml(content.slice(cursor));
+      return html;
+    }
+
+    var html = "";
+    var sectionRe = /^- (.+?):[ \t]*$/;
+    var bulletRe = /^[ \t]+[•\-\*] (.+)$/;
+    var lines = String(text || "").split(/\n/);
+    var inList = false;
+    lines.forEach(function (line) {
+      var sec = line.match(sectionRe);
+      var bul = line.match(bulletRe);
+      if (sec) {
+        if (inList) { html += "</ul>"; inList = false; }
+        html += '<div class="ai-section"><h3>' + escapeHtml(sec[1]) + "</h3><ul>";
+        inList = true;
+      } else if (bul && inList) {
+        html += "<li>" + renderBulletContent(bul[1]) + "</li>";
+      } else if (line.trim()) {
+        if (inList) { html += "</ul>"; inList = false; html += "</div>"; }
+        html += "<p>" + escapeHtml(line) + "</p>";
+      }
+    });
+    if (inList) { html += "</ul></div>"; }
+    return html || "<p>" + escapeHtml(text || "") + "</p>";
+  }
+
+  function resolveM365MessageUrl(link, m365Id) {
+    if (/admin\.microsoft\.com/i.test(link || "")) {
+      return link;
+    }
+    var id = String(m365Id || "").trim();
+    if (!id) {
+      var match = /[?&]message=([^&#]+)/i.exec(link || "");
+      id = match ? decodeURIComponent(match[1]) : "";
+    }
+    if (!id) {
+      return link;
+    }
+    return "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/" + encodeURIComponent(id);
+  }
+
+  function resolveArticleOutboundLink(article) {
+    if (!article) return "";
+    if ((article.source || "azure") === "m365" && article.m365Source === "message_center") {
+      return resolveM365MessageUrl(article.link, article.m365Id);
+    }
+    return article.link || "";
+  }
+
+  function buildLifecycleSummaryMarkdown(byLifecycle) {
+    var order = ["in_preview", "launched_ga", "retiring", "in_development"];
+    var lines = [];
+
+    order.forEach(function (key) {
+      var label = LIFECYCLE_LABELS[key];
+      var bucket = Array.isArray(byLifecycle && byLifecycle[key]) ? byLifecycle[key] : [];
+      lines.push("- " + label + ":");
+
+      if (!bucket.length) {
+        lines.push("  • none noted in selected window");
+        return;
+      }
+
+      bucket.slice(0, 6).forEach(function (article) {
+        var articleTitle = article.title || "Untitled update";
+        var articleLink = resolveArticleOutboundLink(article);
+        if (articleLink) {
+          lines.push("  • [" + articleTitle + "](" + articleLink + ")");
+        } else {
+          lines.push("  • " + articleTitle);
+        }
+      });
+    });
+
+    return lines.join("\n");
+  }
+
+  function renderSummaryPanel() {
+    if (!aiSummaryEl) return;
+
+    if (currentSource === "m365") {
+      if (!m365FeedData) {
+        hideElement(aiSummaryEl);
+        return;
+      }
+
+      var generatedDate = parseDateValue(m365FeedData.generatedAt);
+      var dateLabel = generatedDate
+        ? formatLocalDate(generatedDate, { day: "numeric", month: "short", year: "numeric" })
+        : "";
+      var m365Label = "Microsoft 365 Updates" + (dateLabel ? ": " + dateLabel : "");
+      var m365SummaryText = m365FeedData.summary || buildLifecycleSummaryMarkdown(m365FeedData.byLifecycle || {});
+
+      aiSummaryEl.innerHTML =
+        "<h2>🤖 " + escapeHtml(m365Label) + "</h2>" +
+        renderSummaryHtml(m365SummaryText);
+      aiSummaryEl.classList.remove("is-unavailable");
+      showElement(aiSummaryEl);
+      return;
+    }
+
+    if (!azureFeedData) {
+      hideElement(aiSummaryEl);
+      return;
+    }
+
+    if (azureFeedData.summary) {
+      var publishingDays = Array.isArray(azureFeedData.summaryPublishingDays)
+        ? azureFeedData.summaryPublishingDays
+        : [];
+
+      function toLocalPublishingDate(day) {
+        return formatLocalDate(parsePublishingDay(day), {
+          day: "numeric",
+          month: "short",
+          year: "numeric"
+        });
+      }
+
+      var azureDateLabel = "";
+      if (publishingDays.length >= 2) {
+        var oldest = publishingDays[publishingDays.length - 1];
+        var newest = publishingDays[0];
+        azureDateLabel = toLocalPublishingDate(oldest) + " – " + toLocalPublishingDate(newest);
+      } else if (publishingDays.length === 1) {
+        azureDateLabel = toLocalPublishingDate(publishingDays[0]);
+      }
+      var summaryLabel = "Azure Updates" + (azureDateLabel ? ": " + azureDateLabel : "");
+
+      aiSummaryEl.innerHTML =
+        "<h2>🤖 " + escapeHtml(summaryLabel) + "</h2>" +
+        renderSummaryHtml(azureFeedData.summary);
+      aiSummaryEl.classList.remove("is-unavailable");
+      showElement(aiSummaryEl);
+      return;
+    }
+
+    if (azureFeedData.summaryStatus === "unavailable") {
+      var unavailMsg = "Azure OpenAI did not return a summary for this update.";
+      if (azureFeedData.summaryReason && SUMMARY_REASON_MESSAGES[azureFeedData.summaryReason]) {
+        unavailMsg += "<br><small class=\"ai-summary-note\">" +
+          escapeHtml(SUMMARY_REASON_MESSAGES[azureFeedData.summaryReason]) + "</small>";
+      }
+      aiSummaryEl.innerHTML =
+        "<h2>🤖 AI Summary Unavailable</h2>" +
+        "<p>" + unavailMsg + "</p>";
+      aiSummaryEl.classList.add("is-unavailable");
+      showElement(aiSummaryEl);
+      return;
+    }
+
+    hideElement(aiSummaryEl);
+  }
+
+  function renderSavillVideoPanel() {
+    if (!savillVideoEl) return;
+
+    if (currentSource !== "azure" || !azureFeedData || !azureFeedData.savillVideo) {
+      hideElement(savillVideoEl);
+      return;
+    }
+
+    var sv = azureFeedData.savillVideo;
+    var svDate = "";
+    if (sv.published) {
+      var svd = parseDateValue(sv.published);
+      svDate = formatLocalDate(svd, {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      });
+    }
+    var thumbHtml = '<div class="savill-thumb-wrap' +
+      (sv.thumbnail ? '' : ' thumb-fallback') +
+      '">' +
+      (sv.thumbnail
+        ? '<img class="savill-thumb" src="' + escapeHtml(sv.thumbnail) +
+          '" alt="Video thumbnail" loading="lazy" />'
+        : '') +
+      '<div class="savill-thumb-placeholder" aria-hidden="true">▶</div>' +
+      '<span class="savill-play">▶</span></div>';
+    savillVideoEl.innerHTML =
+      '<a class="savill-card" href="' + escapeHtml(sv.url) +
+      '" target="_blank" rel="noopener noreferrer">' +
+      '<div class="savill-label">🎬 Latest Azure Update Video</div>' +
+      '<div class="savill-body">' +
+      thumbHtml +
+      '<div class="savill-info">' +
+      '<div class="savill-title">' + escapeHtml(sv.title) + '</div>' +
+      (svDate ? '<div class="savill-date">' + escapeHtml(svDate) + '</div>' : '') +
+      '</div></div></a>';
+    showElement(savillVideoEl);
+  }
+
+  function refreshSourcePanels() {
+    renderSummaryPanel();
+    renderSavillVideoPanel();
+  }
+
   function startOfLocalDay(date) {
     return new Date(date.getFullYear(), date.getMonth(), date.getDate());
   }
@@ -157,6 +384,7 @@
       var azureResponse = await fetch("data/feeds.json");
       if (!azureResponse.ok) throw new Error("Failed to load Azure feeds");
       var azureData = await azureResponse.json();
+      azureFeedData = azureData;
       var azureArticles = azureData.articles || [];
       
       // Mark Azure articles with source
@@ -168,6 +396,7 @@
         var m365Response = await fetch("data/m365_data.json");
         if (m365Response.ok) {
           var m365Data = await m365Response.json();
+          m365FeedData = m365Data;
           m365Articles = m365Data.articles || [];
           // Mark M365 articles with source
           m365Articles.forEach(function (a) { a.source = "m365"; });
@@ -218,133 +447,10 @@
       }
       totalCount.textContent = articles.length + " articles";
 
-      // Render AI summary if available (from Azure)
-      if (azureData.summary) {
-        var publishingDays = Array.isArray(azureData.summaryPublishingDays)
-          ? azureData.summaryPublishingDays
-          : [];
-
-        function toLocalPublishingDate(day) {
-          return formatLocalDate(parsePublishingDay(day), {
-            day: "numeric",
-            month: "short",
-            year: "numeric"
-          });
-        }
-        var dateLabel = "";
-        if (publishingDays.length >= 2) {
-          var oldest = publishingDays[publishingDays.length - 1];
-          var newest = publishingDays[0];
-          dateLabel = toLocalPublishingDate(oldest) + " – " + toLocalPublishingDate(newest);
-        } else if (publishingDays.length === 1) {
-          dateLabel = toLocalPublishingDate(publishingDays[0]);
-        }
-        var summaryLabel = "Azure Updates" + (dateLabel ? ": " + dateLabel : "");
-
-        // Parse structured sections: "- Heading:\n  • item" into <h3>+<ul>
-        function renderSummaryHtml(text) {
-          function renderBulletContent(content) {
-            var html = "";
-            var cursor = 0;
-            var linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
-            var match;
-            while ((match = linkRe.exec(content)) !== null) {
-              html += escapeHtml(content.slice(cursor, match.index));
-              html +=
-                '<a class="ai-link" href="' +
-                escapeHtml(match[2]) +
-                '" target="_blank" rel="noopener noreferrer">' +
-                escapeHtml(match[1]) +
-                "</a>";
-              cursor = match.index + match[0].length;
-            }
-            html += escapeHtml(content.slice(cursor));
-            return html;
-          }
-
-          var html = "";
-          var sectionRe = /^- (.+?):[ \t]*$/;
-          var bulletRe = /^[ \t]+[•\-\*] (.+)$/;
-          var lines = text.split(/\n/);
-          var inList = false;
-          lines.forEach(function (line) {
-            var sec = line.match(sectionRe);
-            var bul = line.match(bulletRe);
-            if (sec) {
-              if (inList) { html += "</ul>"; inList = false; }
-              html += '<div class="ai-section"><h3>' + escapeHtml(sec[1]) + "</h3><ul>";
-              inList = true;
-            } else if (bul && inList) {
-              html += "<li>" + renderBulletContent(bul[1]) + "</li>";
-            } else if (line.trim()) {
-              // fallback plain line
-              if (inList) { html += "</ul>"; inList = false; html += "</div>"; }
-              html += "<p>" + escapeHtml(line) + "</p>";
-            }
-          });
-          if (inList) { html += "</ul></div>"; }
-          return html || "<p>" + escapeHtml(text) + "</p>";
-        }
-
-        aiSummaryEl.innerHTML =
-          "<h2>🤖 " + escapeHtml(summaryLabel) + "</h2>" +
-          renderSummaryHtml(azureData.summary);
-        aiSummaryEl.classList.remove("is-unavailable");
-        showElement(aiSummaryEl);
-      } else if (azureData.summaryStatus === "unavailable") {
-        var unavailMsg = "Azure OpenAI did not return a summary for this update.";
-        if (azureData.summaryReason && SUMMARY_REASON_MESSAGES[azureData.summaryReason]) {
-          unavailMsg += "<br><small class=\"ai-summary-note\">" +
-            escapeHtml(SUMMARY_REASON_MESSAGES[azureData.summaryReason]) + "</small>";
-        }
-        aiSummaryEl.innerHTML =
-          "<h2>🤖 AI Summary Unavailable</h2>" +
-          "<p>" + unavailMsg + "</p>";
-        aiSummaryEl.classList.add("is-unavailable");
-        showElement(aiSummaryEl);
-      } else {
-        hideElement(aiSummaryEl);
-      }
-
       updateOtherBlogsToggleUI();
 
-      // Render John Savill video card if available
-      if (savillVideoEl && azureData.savillVideo) {
-        var sv = azureData.savillVideo;
-        var svDate = "";
-        if (sv.published) {
-          var svd = parseDateValue(sv.published);
-          svDate = formatLocalDate(svd, {
-            day: "numeric",
-            month: "short",
-            year: "numeric"
-          });
-        }
-        var thumbHtml = '<div class="savill-thumb-wrap' +
-          (sv.thumbnail ? '' : ' thumb-fallback') +
-          '">' +
-          (sv.thumbnail
-            ? '<img class="savill-thumb" src="' + escapeHtml(sv.thumbnail) +
-              '" alt="Video thumbnail" loading="lazy" />'
-            : '') +
-          '<div class="savill-thumb-placeholder" aria-hidden="true">▶</div>' +
-          '<span class="savill-play">▶</span></div>';
-        savillVideoEl.innerHTML =
-          '<a class="savill-card" href="' + escapeHtml(sv.url) +
-          '" target="_blank" rel="noopener noreferrer">' +
-          '<div class="savill-label">🎬 Latest Azure Update Video</div>' +
-          '<div class="savill-body">' +
-          thumbHtml +
-          '<div class="savill-info">' +
-          '<div class="savill-title">' + escapeHtml(sv.title) + '</div>' +
-          (svDate ? '<div class="savill-date">' + escapeHtml(svDate) + '</div>' : '') +
-          '</div></div></a>';
-        showElement(savillVideoEl);
-      } else {
-        hideElement(savillVideoEl);
-      }
-
       renderFilters();
+      refreshSourcePanels();
       applyFilters();
     } catch (err) {
       console.error("Error loading feeds:", err);
@@ -757,7 +863,7 @@
       (isBookmarked ? "⭐" : "☆") + "</button>" +
       "</div>" +
       '<h3 class="article-title">' +
-      '<a href="' + escapeHtml(article.link) + '" target="_blank" rel="noopener">' +
+      '<a href="' + escapeHtml(resolveArticleOutboundLink(article)) + '" target="_blank" rel="noopener">' +
       escapeHtml(article.title) + "</a>" + newBadge +
       "</h3>" +
       '<div class="article-meta">' +
@@ -815,6 +921,10 @@
     document.documentElement.style.setProperty(
       "--header-height",
       headerEl.offsetHeight + "px"
+    );
+    document.documentElement.style.setProperty(
+      "--tabs-height",
+      ((tabsContainerEl && tabsContainerEl.offsetHeight) || 0) + "px"
     );
   }
 
@@ -896,6 +1006,7 @@
         // Re-render filters and articles for the new source
         renderFilters();
         renderBlogPills(currentCategory);
+        refreshSourcePanels();
         applyFilters();
       });
     });

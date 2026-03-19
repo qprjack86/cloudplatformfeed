@@ -1,6 +1,7 @@
 /* ===== Design Tokens ===== */
 :root {
   --header-height: 88px;
+  --tabs-height: 52px;
   --bg-primary: #f0f2f5;
   --bg-secondary: #ffffff;
   --bg-tertiary: #e4e6eb;
@@ -187,6 +188,9 @@ header {
   display: flex;
   gap: 1px;
   padding: 0 2rem;
+  position: sticky;
+  top: var(--header-height);
+  z-index: 95;
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -224,7 +228,7 @@ header {
   border-bottom: 1px solid var(--border-color);
   padding: 0.6rem 2rem;
   position: sticky;
-  top: calc(var(--header-height) + 52px);
+  top: calc(var(--header-height) + var(--tabs-height));
   z-index: 90;
   transition: background var(--transition), border-color var(--transition);
 }
@@ -674,7 +678,7 @@ footer a:hover {
 
   .filters {
     padding: 0.5rem 1rem;
-    top: 145px;
+    top: calc(var(--header-height) + var(--tabs-height));
   }
 
   .filter-pills {
