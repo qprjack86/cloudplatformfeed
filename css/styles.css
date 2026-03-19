@@ -371,42 +371,42 @@ main {
   letter-spacing: 0.3px;
   white-space: nowrap;
   flex-shrink: 0;
-  background: color-mix(in srgb, var(--blog-color, var(--azure-blue)) 12%, transparent);
-  color: var(--blog-color, var(--azure-blue));
-  border: 1px solid color-mix(in srgb, var(--blog-color, var(--azure-blue)) 24%, transparent);
+  color: var(--azure-blue);
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 24%, transparent);
 }
 
-.blog-tag.blog-color-0 { --blog-color: #0078D4; }
-.blog-tag.blog-color-1 { --blog-color: #00BCF2; }
-.blog-tag.blog-color-2 { --blog-color: #7719AA; }
-.blog-tag.blog-color-3 { --blog-color: #E3008C; }
-.blog-tag.blog-color-4 { --blog-color: #D83B01; }
-.blog-tag.blog-color-5 { --blog-color: #107C10; }
-.blog-tag.blog-color-6 { --blog-color: #008575; }
-.blog-tag.blog-color-7 { --blog-color: #4F6BED; }
-.blog-tag.blog-color-8 { --blog-color: #B4009E; }
-.blog-tag.blog-color-9 { --blog-color: #C239B3; }
-.blog-tag.blog-color-10 { --blog-color: #E81123; }
-.blog-tag.blog-color-11 { --blog-color: #FF8C00; }
-.blog-tag.blog-color-12 { --blog-color: #00B294; }
-.blog-tag.blog-color-13 { --blog-color: #68217A; }
-.blog-tag.blog-color-14 { --blog-color: #0063B1; }
-.blog-tag.blog-color-15 { --blog-color: #2D7D9A; }
-.blog-tag.blog-color-16 { --blog-color: #5C2D91; }
-.blog-tag.blog-color-17 { --blog-color: #CA5010; }
-.blog-tag.blog-color-18 { --blog-color: #038387; }
-.blog-tag.blog-color-19 { --blog-color: #8764B8; }
-.blog-tag.blog-color-20 { --blog-color: #567C73; }
-.blog-tag.blog-color-21 { --blog-color: #C30052; }
-.blog-tag.blog-color-22 { --blog-color: #6B69D6; }
-.blog-tag.blog-color-23 { --blog-color: #8E8CD8; }
-.blog-tag.blog-color-24 { --blog-color: #00B7C3; }
-.blog-tag.blog-color-25 { --blog-color: #EE5E00; }
-.blog-tag.blog-color-26 { --blog-color: #847545; }
-.blog-tag.blog-color-27 { --blog-color: #5D5A58; }
-.blog-tag.blog-color-28 { --blog-color: #767676; }
-.blog-tag.blog-color-29 { --blog-color: #4C4A48; }
-.blog-tag.blog-color-30 { --blog-color: #0099BC; }
+.blog-tag.blog-color-0 { color: #0078D4; }
+.blog-tag.blog-color-1 { color: #00BCF2; }
+.blog-tag.blog-color-2 { color: #7719AA; }
+.blog-tag.blog-color-3 { color: #E3008C; }
+.blog-tag.blog-color-4 { color: #D83B01; }
+.blog-tag.blog-color-5 { color: #107C10; }
+.blog-tag.blog-color-6 { color: #008575; }
+.blog-tag.blog-color-7 { color: #4F6BED; }
+.blog-tag.blog-color-8 { color: #B4009E; }
+.blog-tag.blog-color-9 { color: #C239B3; }
+.blog-tag.blog-color-10 { color: #E81123; }
+.blog-tag.blog-color-11 { color: #FF8C00; }
+.blog-tag.blog-color-12 { color: #00B294; }
+.blog-tag.blog-color-13 { color: #68217A; }
+.blog-tag.blog-color-14 { color: #0063B1; }
+.blog-tag.blog-color-15 { color: #2D7D9A; }
+.blog-tag.blog-color-16 { color: #5C2D91; }
+.blog-tag.blog-color-17 { color: #CA5010; }
+.blog-tag.blog-color-18 { color: #038387; }
+.blog-tag.blog-color-19 { color: #8764B8; }
+.blog-tag.blog-color-20 { color: #567C73; }
+.blog-tag.blog-color-21 { color: #C30052; }
+.blog-tag.blog-color-22 { color: #6B69D6; }
+.blog-tag.blog-color-23 { color: #8E8CD8; }
+.blog-tag.blog-color-24 { color: #00B7C3; }
+.blog-tag.blog-color-25 { color: #EE5E00; }
+.blog-tag.blog-color-26 { color: #847545; }
+.blog-tag.blog-color-27 { color: #5D5A58; }
+.blog-tag.blog-color-28 { color: #767676; }
+.blog-tag.blog-color-29 { color: #4C4A48; }
+.blog-tag.blog-color-30 { color: #0099BC; }
 
 .bookmark-btn {
   background: none;
