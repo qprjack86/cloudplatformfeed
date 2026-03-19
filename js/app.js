@@ -631,7 +631,7 @@
     var shareTitle = encodeURIComponent(article.title);
 
     return (
-      '<article class="article-card">' +
+      '<article class="article-card" style="--blog-color:' + escapeHtml(color) + '">' +
       '<div class="card-header">' +
       '<span class="blog-tag">' +
       escapeHtml(article.blog) + "</span>" +

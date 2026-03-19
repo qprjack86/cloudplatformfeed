@@ -371,9 +371,9 @@ main {
   letter-spacing: 0.3px;
   white-space: nowrap;
   flex-shrink: 0;
-  background: color-mix(in srgb, var(--azure-blue) 12%, transparent);
-  color: var(--azure-blue);
-  border: 1px solid color-mix(in srgb, var(--azure-blue) 24%, transparent);
+  background: color-mix(in srgb, var(--blog-color, var(--azure-blue)) 12%, transparent);
+  color: var(--blog-color, var(--azure-blue));
+  border: 1px solid color-mix(in srgb, var(--blog-color, var(--azure-blue)) 24%, transparent);
 }
 
 .bookmark-btn {
