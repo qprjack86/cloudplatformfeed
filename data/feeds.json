@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-19T10:12:15.208418+00:00",
-  "totalArticles": 221,
+  "lastUpdated": "2026-03-19T12:16:17.656326+00:00",
+  "totalArticles": 222,
   "articles": [
     {
       "title": "Building Knowledge-Grounded AI Agents with Foundry IQ",
@@ -10,6 +10,15 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "NelsonKumari"
+    },
+    {
+      "title": "From Azure IoT Operations Data Processor Pipelines to Dataflows",
+      "link": "https://devblogs.microsoft.com/ise/aio-data-processor-pipelines-to-dataflow-processing-data-in-the-edge/",
+      "published": "2026-03-19T07:00:00+00:00",
+      "summary": "In this post we explore the evolution from Azure IoT Operations Data Processor Pipelines to Dataflows, why we adopted a hybrid strategy with custom Rust pods, and the architectural lessons we learned building event detection systems at the edge. The post From Azure IoT Operations Data Processor...",
+      "blog": "ISE Developer Blog",
+      "blogId": "iseblog",
+      "author": "Maho Pacheco"
     },
     {
       "title": "Introducing Azure Managed Grafana MCP: The Managed Data Gateway for AI Agents",
