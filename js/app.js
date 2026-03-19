@@ -156,7 +156,7 @@
       // Load Azure feeds
       var azureResponse = await fetch("data/feeds.json");
       if (!azureResponse.ok) throw new Error("Failed to load Azure feeds");
-      var azureData = azureResponse.json ? azureResponse.json() : JSON.parse(await azureResponse.text());
+      var azureData = await azureResponse.json();
       var azureArticles = azureData.articles || [];
       
       // Mark Azure articles with source
@@ -167,7 +167,7 @@
       try {
         var m365Response = await fetch("data/m365_data.json");
         if (m365Response.ok) {
-          var m365Data = m365Response.json ? m365Response.json() : JSON.parse(await m365Response.text());
+          var m365Data = await m365Response.json();
           m365Articles = m365Data.articles || [];
           // Mark M365 articles with source
           m365Articles.forEach(function (a) { a.source = "m365"; });
@@ -288,14 +288,14 @@
 
         aiSummaryEl.innerHTML =
           "<h2>🤖 " + escapeHtml(summaryLabel) + "</h2>" +
-          renderSummaryHtml(data.summary);
+          renderSummaryHtml(azureData.summary);
         aiSummaryEl.classList.remove("is-unavailable");
         showElement(aiSummaryEl);
-      } else if (data.summaryStatus === "unavailable") {
+      } else if (azureData.summaryStatus === "unavailable") {
         var unavailMsg = "Azure OpenAI did not return a summary for this update.";
-        if (data.summaryReason && SUMMARY_REASON_MESSAGES[data.summaryReason]) {
+        if (azureData.summaryReason && SUMMARY_REASON_MESSAGES[azureData.summaryReason]) {
           unavailMsg += "<br><small class=\"ai-summary-note\">" +
-            escapeHtml(SUMMARY_REASON_MESSAGES[data.summaryReason]) + "</small>";
+            escapeHtml(SUMMARY_REASON_MESSAGES[azureData.summaryReason]) + "</small>";
         }
         aiSummaryEl.innerHTML =
           "<h2>🤖 AI Summary Unavailable</h2>" +
@@ -309,8 +309,8 @@
       updateOtherBlogsToggleUI();
 
       // Render John Savill video card if available
-      if (savillVideoEl && data.savillVideo) {
-        var sv = data.savillVideo;
+      if (savillVideoEl && azureData.savillVideo) {
+        var sv = azureData.savillVideo;
         var svDate = "";
         if (sv.published) {
           var svd = parseDateValue(sv.published);
