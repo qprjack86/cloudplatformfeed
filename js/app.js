@@ -67,6 +67,7 @@
   var showingCount = document.getElementById("showing-count");
   var lastUpdated = document.getElementById("last-updated");
   var totalCount = document.getElementById("total-count");
+  var headerEl = document.querySelector("header");
   var toastEl = document.getElementById("toast");
   var bookmarksToggle = document.getElementById("bookmarks-toggle");
   var otherBlogsToggle = document.getElementById("other-blogs-toggle");
@@ -129,8 +130,10 @@
   // ===== Initialize =====
   async function init() {
     loadTheme();
+    updateHeaderOffset();
     registerServiceWorker();
     await loadData();
+    updateHeaderOffset();
     setupEventListeners();
   }
 
@@ -699,6 +702,14 @@
     loadingEl.classList.toggle("visible", show);
   }
 
+  function updateHeaderOffset() {
+    if (!headerEl) return;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      headerEl.offsetHeight + "px"
+    );
+  }
+
   // ===== Theme =====
   function loadTheme() {
     var saved = localStorage.getItem("azurefeed-theme") || "light";
@@ -835,6 +846,8 @@
         searchInput.focus();
       }
     });
+
+    window.addEventListener("resize", updateHeaderOffset);
   }
 
   // ===== Start =====
