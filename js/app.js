@@ -176,25 +176,10 @@
     return html || "<p>" + escapeHtml(text || "") + "</p>";
   }
 
-  function resolveM365MessageUrl(link, m365Id) {
-    if (/admin\.microsoft\.com/i.test(link || "")) {
-      return link;
-    }
-    var id = String(m365Id || "").trim();
-    if (!id) {
-      var match = /[?&]message=([^&#]+)/i.exec(link || "");
-      id = match ? decodeURIComponent(match[1]) : "";
-    }
-    if (!id) {
-      return link;
-    }
-    return "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/" + encodeURIComponent(id);
-  }
-
   function resolveArticleOutboundLink(article) {
     if (!article) return "";
-    if ((article.source || "azure") === "m365" && article.m365Source === "message_center") {
-      return resolveM365MessageUrl(article.link, article.m365Id);
+    if ((article.source || "azure") === "m365") {
+      return article.link || "";
     }
     return article.link || "";
   }

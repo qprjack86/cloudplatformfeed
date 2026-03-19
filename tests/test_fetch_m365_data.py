@@ -139,7 +139,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["title"], "New feature announcement")
         self.assertEqual(
             article["link"],
-            "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC1255714",
+            "https://deltapulse.app/dashboard?message=MC1255714",
         )
         self.assertEqual(article["source"], "m365")
         self.assertEqual(article["m365Service"], "Teams")
@@ -147,8 +147,8 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["m365AllServices"], ["Teams", "SharePoint"])
         self.assertIsNotNone(article["lifecycle"])
 
-    def test_preserves_direct_admin_link_when_provided(self):
-        """Direct admin links should be used as-is when present."""
+    def test_prefers_deltapulse_link_when_present(self):
+        """DeltaPulse links should be used when both URLs are present."""
         item = {
             "id": "MC999999",
             "title": "Admin portal update",
@@ -163,7 +163,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         self.assertEqual(
             article["link"],
-            "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC999999",
+            "https://deltapulse.app/dashboard?message=MC999999",
         )
 
 

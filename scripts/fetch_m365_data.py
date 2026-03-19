@@ -282,17 +282,20 @@ def resolve_m365_item_link(item: dict) -> str:
     item_id = str(item.get("id", "")).strip()
 
     if source == "message_center":
-        # Prefer any direct admin link if the source provides one.
-        for key in ["messageCenterUrl", "message_center_url", "detailsUrl", "webUrl", "link", "url"]:
+        # Prefer a DeltaPulse deep link so users land on the advisory card.
+        for key in ["url", "link", "detailsUrl", "webUrl"]:
             value = item.get(key)
-            if isinstance(value, str) and "admin.microsoft.com" in value.lower():
+            if isinstance(value, str) and "deltapulse.app" in value.lower():
                 return value
 
         if item_id:
-            return (
-                "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/"
-                f"{item_id}"
-            )
+            return f"https://deltapulse.app/dashboard?message={item_id}"
+
+        # Fallback to whatever URL the source provided.
+        for key in ["messageCenterUrl", "message_center_url", "detailsUrl", "webUrl", "link", "url"]:
+            value = item.get(key)
+            if isinstance(value, str) and value.strip():
+                return value
 
     return item.get("url", "")
 
