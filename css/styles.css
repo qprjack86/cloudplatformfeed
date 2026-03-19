@@ -601,6 +601,25 @@ main {
   }
 }
 
+/* ===== Load More Sentinel (infinite scroll) ===== */
+.load-more-sentinel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 1rem;
+}
+
+.load-more-sentinel::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
 /* ===== Toast ===== */
 .toast {
   position: fixed;

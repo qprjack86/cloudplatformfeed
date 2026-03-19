@@ -37,6 +37,8 @@
   var currentSource = "azure";  // New: track active feed source (azure|m365)
   var searchQuery = "";
   var sortBy = "date-desc";
+  var PAGE_SIZE = 30;
+  var renderedCount = 0;
   var bookmarks = new Set(
     JSON.parse(localStorage.getItem("cloudplatformfeed-bookmarks") || "[]")
   );
@@ -419,9 +421,25 @@
     loadTheme();
     updateHeaderOffset();
     registerServiceWorker();
+    setupInfiniteScroll();
     await loadData();
     updateHeaderOffset();
     setupEventListeners();
+  }
+
+  // ===== Infinite Scroll =====
+  function setupInfiniteScroll() {
+    var sentinelEl = document.getElementById("load-more-sentinel");
+    if (!sentinelEl || !window.IntersectionObserver) return;
+    var observer = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      if (renderedCount >= filteredArticles.length) return;
+      renderedCount = Math.min(renderedCount + PAGE_SIZE, filteredArticles.length);
+      showingCount.textContent =
+        "Showing " + renderedCount + " of " + filteredArticles.length;
+      renderArticles();
+    }, { rootMargin: "200px" });
+    observer.observe(sentinelEl);
   }
 
   // ===== Service Worker =====
@@ -784,22 +802,25 @@
     }
 
     filteredArticles = result;
+    renderedCount = Math.min(PAGE_SIZE, result.length);
     showingCount.textContent =
-      "Showing " + result.length + " of " + visibleArticles.length +
-      " visible (" + articles.length + " loaded)";
+      "Showing " + renderedCount + " of " + result.length;
     renderArticles();
   }
 
   // ===== Render Articles =====
   function renderArticles() {
+    var sentinelEl = document.getElementById("load-more-sentinel");
     if (filteredArticles.length === 0) {
       articlesGrid.innerHTML = "";
       noResultsEl.classList.add("visible");
+      hideElement(sentinelEl);
       return;
     }
     noResultsEl.classList.remove("visible");
 
-    var groups = groupByDate(filteredArticles);
+    var toRender = filteredArticles.slice(0, renderedCount);
+    var groups = groupByDate(toRender);
     var html = "";
     for (var groupName in groups) {
       if (!groups.hasOwnProperty(groupName)) continue;
@@ -813,6 +834,12 @@
     }
 
     articlesGrid.innerHTML = html;
+
+    if (renderedCount < filteredArticles.length) {
+      showElement(sentinelEl);
+    } else {
+      hideElement(sentinelEl);
+    }
   }
 
   function articleMatchesCategory(article, categoryName) {
