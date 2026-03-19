@@ -492,10 +492,15 @@
   }
 
   function renderBlogPills(categoryName) {
-    if (currentSource === "m365") {
-      // M365 doesn't have blog-level filtering, just category
+    var blogPillsRow = document.getElementById("blog-pills-row");
+    var blogFilterPillsEl = document.getElementById("blog-filter-pills");
+
+    if (currentSource === "m365" || categoryName === "all") {
+      hideElement(blogPillsRow);
       return;
     }
+
+    if (!blogFilterPillsEl || !blogPillsRow) return;
 
     var blogCounts = {};
     var azureUpdatesCount = 0;
@@ -533,7 +538,7 @@
         ' <span class="count">' + azureUpdatesCount + "</span></button>";
     }
 
-    blogFilterPills.innerHTML = html;
+    blogFilterPillsEl.innerHTML = html;
     showElement(blogPillsRow);
   }
 
@@ -603,7 +608,9 @@
         break;
       case "blog":
         result.sort(function (a, b) {
-          return a.blog.localeCompare(b.blog) || new Date(b.published) - new Date(a.published);
+          var aBlog = a.blog || a.m365Service || "";
+          var bBlog = b.blog || b.m365Service || "";
+          return aBlog.localeCompare(bBlog) || new Date(b.published) - new Date(a.published);
         });
         break;
     }
