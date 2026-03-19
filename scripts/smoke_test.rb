@@ -30,6 +30,7 @@ index_html = read_text(ROOT.join("index.html"))
 app_js = read_text(ROOT.join("js", "app.js"))
 feeds_json_text = read_text(ROOT.join("data", "feeds.json"))
 feed_xml = read_text(ROOT.join("data", "feed.xml"))
+checksums_json_text = read_text(ROOT.join("data", "checksums.json"))
 readme_text = read_text(ROOT.join("README.md"))
 cname_text = read_text(ROOT.join("CNAME"))
 fetch_script = read_text(ROOT.join("scripts", "fetch_feeds.py"))
@@ -68,12 +69,29 @@ assert(index_html.include?("id=\"articles-grid\""), "index.html is missing artic
 assert(index_html.include?("id=\"filter-pills\""), "index.html is missing filter pills container")
 
 feeds = JSON.parse(feeds_json_text)
+checksums = JSON.parse(checksums_json_text)
 articles = feeds["articles"]
 
 assert(articles.is_a?(Array), "feeds.json articles must be an array")
 assert(!articles.empty?, "feeds.json articles must not be empty")
 assert(feeds["lastUpdated"].is_a?(String) && !feeds["lastUpdated"].empty?, "feeds.json lastUpdated is missing")
 assert(feed_xml.include?("<rss") || feed_xml.include?("<feed"), "feed.xml does not look like RSS or Atom")
+
+
+assert(checksums["generatedAt"].is_a?(String) && !checksums["generatedAt"].empty?, "checksums.json generatedAt is missing")
+assert(checksums["artifacts"].is_a?(Array) && !checksums["artifacts"].empty?, "checksums.json artifacts must be a non-empty array")
+expected_artifacts = ["data/feeds.json", "data/feed.xml"]
+artifact_paths = checksums["artifacts"].map { |artifact| artifact["path"] }
+expected_artifacts.each do |expected_path|
+  assert(artifact_paths.include?(expected_path), "checksums.json must include #{expected_path}")
+end
+checksums["artifacts"].each_with_index do |artifact, index|
+  assert(artifact.is_a?(Hash), "checksums artifact #{index} must be an object")
+  assert(artifact["path"].is_a?(String) && !artifact["path"].empty?, "checksums artifact #{index} path is missing")
+  assert(artifact["algorithm"] == "sha256", "checksums artifact #{index} algorithm must be sha256")
+  assert(artifact["value"].is_a?(String) && artifact["value"].match?(/\A\h{64}\z/), "checksums artifact #{index} value must be a 64-character hex SHA-256")
+  assert(artifact["generatedAt"].is_a?(String) && !artifact["generatedAt"].empty?, "checksums artifact #{index} generatedAt is missing")
+end
 
 if feeds.key?("summary")
   assert(feeds["summary"].is_a?(String) && !feeds["summary"].strip.empty?, "feeds.json summary must be a non-empty string")

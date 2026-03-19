@@ -5,6 +5,7 @@ Fetches articles from Azure blog RSS feeds and generates a JSON data file.
 """
 
 import feedparser
+import hashlib
 import json
 import os
 import re
@@ -145,6 +146,51 @@ PUBLIC_SUMMARY_REASONS = {
 FAILSAFE_MIN_ARTICLES = 80
 FAILSAFE_MIN_RATIO = 0.60
 RUN_METRICS_ENV_VAR = "AZUREFEED_RUN_METRICS_PATH"
+
+
+CHECKSUM_ARTIFACTS = [
+    Path("data") / "feeds.json",
+    Path("data") / "feed.xml",
+]
+CHECKSUM_OUTPUT_PATH = Path("data") / "checksums.json"
+
+
+def _artifact_checksum_record(path, generated_at):
+    """Return checksum metadata for an existing artifact file."""
+    sha256 = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(8192), b""):
+            sha256.update(chunk)
+
+    return {
+        "path": Path(path).as_posix(),
+        "algorithm": "sha256",
+        "value": sha256.hexdigest(),
+        "generatedAt": generated_at,
+    }
+
+
+def build_checksums_payload(paths, generated_at=None):
+    """Build checksum metadata for published artifacts."""
+    timestamp = generated_at or datetime.now(timezone.utc).isoformat()
+    artifacts = [_artifact_checksum_record(path, timestamp) for path in paths]
+    return {
+        "generatedAt": timestamp,
+        "artifacts": artifacts,
+    }
+
+
+def write_checksums_file(paths=None, output_path=CHECKSUM_OUTPUT_PATH, generated_at=None):
+    """Write checksum metadata after published artifacts are finalized."""
+    artifact_paths = paths or CHECKSUM_ARTIFACTS
+    payload = build_checksums_payload(artifact_paths, generated_at=generated_at)
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
+    print(f"Checksums saved to {output_path}")
+    return payload
+
 
 # DevBlogs definitions: slug -> (display name, feed URL)
 DEVBLOGS = {
@@ -1157,6 +1203,8 @@ def main():
 
     # Generate RSS feed
     generate_rss_feed(unique_articles)
+
+    write_checksums_file()
 
     run_metrics = build_run_metrics(
         raw_article_count=raw_article_count,
