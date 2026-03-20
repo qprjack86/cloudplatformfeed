@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T11:03:02.477864+00:00",
+  "generatedAt": "2026-03-20T12:29:42.868418+00:00",
   "totalArticles": 84,
   "articles": [
     {
@@ -1455,20 +1455,20 @@
       "_normalized_url": "message_center:MC1234566"
     },
     {
-      "title": "Microsoft Teams: Spoken language detection is now automatic",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
+      "title": "Microsoft Teams: Video recap in Teams",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
       "published": "2026-03-12T23:00:54.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558543",
+      "m365Id": "558540",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558543"
+      "_normalized_url": "roadmap:558540"
     }
   ],
   "byCategory": {
@@ -2164,20 +2164,20 @@
         "_normalized_url": "roadmap:557349"
       },
       {
-        "title": "Microsoft Teams: Spoken language detection is now automatic",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
+        "title": "Microsoft Teams: Video recap in Teams",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
         "published": "2026-03-12T23:00:54.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558543",
+        "m365Id": "558540",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558543"
+        "_normalized_url": "roadmap:558540"
       }
     ],
     "AI & Automation": [
@@ -4414,20 +4414,20 @@
         "_normalized_url": "message_center:MC1234566"
       },
       {
-        "title": "Microsoft Teams: Spoken language detection is now automatic",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
+        "title": "Microsoft Teams: Video recap in Teams",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
         "published": "2026-03-12T23:00:54.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558543",
+        "m365Id": "558540",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558543"
+        "_normalized_url": "roadmap:558540"
       }
     ],
     "in_development": [],
