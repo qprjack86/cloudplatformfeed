@@ -134,6 +134,28 @@ class ClassifyM365LifecycleTests(unittest.TestCase):
         }
         self.assertEqual(fetch_m365_data.classify_m365_lifecycle(item), "in_preview")
     
+    def test_roadmap_prefers_releasephase_over_status(self):
+        """classify_m365_lifecycle should prefer DeltaPulse releasePhase over status."""
+        item = {
+            "source": "roadmap",
+            "status": "In Preview",       # would map to in_preview
+            "releasePhase": "In Development",  # DeltaPulse value wins
+        }
+        self.assertEqual(fetch_m365_data.classify_m365_lifecycle(item), "in_development")
+
+    def test_roadmap_m365status_not_set(self):
+        """build_article_from_m365_item should not populate m365Status for roadmap items."""
+        item = {
+            "id": "12345",
+            "title": "Roadmap feature",
+            "source": "roadmap",
+            "status": "In Development",
+            "releasePhase": "In Development",
+            "service": ["Teams"],
+        }
+        article = fetch_m365_data.build_article_from_m365_item(item)
+        self.assertIsNone(article.get("m365Status"))
+
     def test_message_center_defaults_to_launched(self):
         """Message Center items should default to launched_ga."""
         item = {

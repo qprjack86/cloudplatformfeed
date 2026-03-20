@@ -332,12 +332,13 @@ def classify_m365_lifecycle(item: dict) -> str:
     source = item.get("source", "")
     
     if source == "roadmap":
-        status = (item.get("status") or "").lower()
-        if "development" in status or "in development" in status:
+        # Prefer DeltaPulse's own releasePhase; fall back to status
+        phase = (item.get("releasePhase") or item.get("status") or "").lower()
+        if "development" in phase or "in development" in phase:
             return "in_development"
-        elif "preview" in status or "in preview" in status:
+        elif "preview" in phase or "in preview" in phase:
             return "in_preview"
-        elif "general" in status or "available" in status or "launched" in status:
+        elif "general" in phase or "available" in phase or "launched" in phase:
             return "launched_ga"
         return "in_preview"  # Default for roadmap items
     
@@ -444,7 +445,8 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365Source": item.get("source", ""),  # "roadmap" or "message_center"
         "m365Category": item.get("category", ""),
         "m365Severity": item.get("severity"),
-        "m365Status": item.get("status"),
+        # For roadmap items use the DeltaPulse releasePhase via lifecycle; don't duplicate with m365Status
+        "m365Status": None if item.get("source") == "roadmap" else item.get("status"),
         "m365TargetDate": resolve_m365_target_date(item),
         "lifecycle": classify_m365_lifecycle(item),
     }
