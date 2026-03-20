@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-20T12:29:13.992872+00:00",
-  "totalArticles": 222,
+  "lastUpdated": "2026-03-20T14:47:16.675165+00:00",
+  "totalArticles": 221,
   "articles": [
+    {
+      "title": "Heroku Entered Maintenance Mode — Here's Your Next Move",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/heroku-entered-maintenance-mode-here-s-your-next-move/ba-p/4504021",
+      "published": "2026-03-20T14:27:30+00:00",
+      "summary": "Heroku has entered sustaining engineering — no new features, no new enterprise contracts. If you're running production workloads on the platform, you're probably thinking about what comes next. Azure Container Apps is worth a serious look. Scale-to-zero pricing, event-driven autoscaling, built-in...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "simonjj"
+    },
     {
       "title": "Designing an Azure Disaster Recovery Strategy for Enterprise Workloads",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/designing-an-azure-disaster-recovery-strategy-for-enterprise/ba-p/4504142",
@@ -28,15 +37,6 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "Shikhaghildiyal"
-    },
-    {
-      "title": "Heroku Set the Standard. We're Just Removing the Ceiling",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/heroku-set-the-standard-we-re-just-removing-the-ceiling/ba-p/4504021",
-      "published": "2026-03-20T05:15:54+00:00",
-      "summary": "For a generation of developers, Heroku was where it clicked — the moment you realized shipping software didn't have to mean fighting infrastructure. Push your code, get a URL, focus on your product. That idea changed an industry, and a lot of us built our first real apps on it. Now that Heroku has...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "simonjj"
     },
     {
       "title": "Introducing Azure Managed Grafana MCP: The Managed Telemetry Gateway for AI Agents",
@@ -1990,15 +1990,6 @@
       "blog": "Telecommunications",
       "blogId": "telecommunications-industry-blog",
       "author": "Yongguang Zhang"
-    },
-    {
-      "title": "A Practical Guide to Azure DDoS Protection Cost Optimization",
-      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/a-practical-guide-to-azure-ddos-protection-cost-optimization/ba-p/4495199",
-      "published": "2026-02-18T13:55:49+00:00",
-      "summary": "Introduction Azure provides infrastructure-level DDoS protection by default to protect Azure’s own platform and services. However, this protection does not extend to customer workloads or non-Microsoft managed resources like Application Gateway, Azure Firewall, or virtual machines with public IPs....",
-      "blog": "Azure Network Security",
-      "blogId": "azurenetworksecurityblog",
-      "author": "SaleemBseeu"
     }
   ],
   "summaryWindowDays": 7,
