@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-20T14:48:33.266632+00:00",
-  "totalArticles": 84,
+  "generatedAt": "2026-03-20T16:54:21.746089+00:00",
+  "totalArticles": 82,
   "articles": [
     {
       "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
@@ -1435,40 +1435,6 @@
       "m365TargetDate": "April 2026",
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1247887"
-    },
-    {
-      "title": "(Updated) Outlook: retiring “Contact Masking” (hide suggested recipients) -  March 31, 2026",
-      "link": "https://deltapulse.app/dashboard?message=MC1234566",
-      "published": "2026-02-18T18:40:43.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365 suite",
-      "m365AllServices": [
-        "Microsoft 365 suite"
-      ],
-      "m365Id": "MC1234566",
-      "m365Source": "message_center",
-      "m365Category": "planForChange",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026",
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1234566"
-    },
-    {
-      "title": "Microsoft Teams: Video recap in Teams",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558540",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558540"
     }
   ],
   "byCategory": {
@@ -2162,22 +2128,6 @@
         "m365TargetDate": "March 2026",
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557349"
-      },
-      {
-        "title": "Microsoft Teams: Video recap in Teams",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558540",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558540"
       }
     ],
     "AI & Automation": [
@@ -2936,24 +2886,6 @@
         "m365TargetDate": "November 2025, December 2025, January 2026, February 2026",
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1246002"
-      },
-      {
-        "title": "(Updated) Outlook: retiring “Contact Masking” (hide suggested recipients) -  March 31, 2026",
-        "link": "https://deltapulse.app/dashboard?message=MC1234566",
-        "published": "2026-02-18T18:40:43.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365 suite",
-        "m365AllServices": [
-          "Microsoft 365 suite"
-        ],
-        "m365Id": "MC1234566",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1234566"
       }
     ]
   },
@@ -4394,40 +4326,6 @@
         "m365TargetDate": "April 2026",
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247887"
-      },
-      {
-        "title": "(Updated) Outlook: retiring “Contact Masking” (hide suggested recipients) -  March 31, 2026",
-        "link": "https://deltapulse.app/dashboard?message=MC1234566",
-        "published": "2026-02-18T18:40:43.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365 suite",
-        "m365AllServices": [
-          "Microsoft 365 suite"
-        ],
-        "m365Id": "MC1234566",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1234566"
-      },
-      {
-        "title": "Microsoft Teams: Video recap in Teams",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558540",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558540"
       }
     ],
     "in_development": [],
@@ -4456,8 +4354,7 @@
     "2026-02-26",
     "2026-02-23",
     "2026-02-20",
-    "2026-02-19",
-    "2026-02-18"
+    "2026-02-19"
   ],
   "source": "m365"
 }

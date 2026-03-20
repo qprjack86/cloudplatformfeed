@@ -1,7 +1,79 @@
 {
-  "lastUpdated": "2026-03-20T14:47:16.675165+00:00",
-  "totalArticles": 221,
+  "lastUpdated": "2026-03-20T16:54:00.122183+00:00",
+  "totalArticles": 224,
   "articles": [
+    {
+      "title": "How Granular Delegated Admin Privileges (GDAP) allows Sentinel customers to delegate access",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-granular-delegated-admin-privileges-gdap-allows-sentinel/ba-p/4503123",
+      "published": "2026-03-20T16:15:00+00:00",
+      "summary": "Simplifying Defender SIEM and XDR delegated access As Microsoft Sentinel and Defender converge into a unified experience, organizations face a fundamental challenge: the lack of a scalable, comprehensive, delegated access model that works seamlessly across Entra ID and Sentinel’s Azure Resource...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "Yossi Basha"
+    },
+    {
+      "title": "Agentic Use Cases for Developers on the Microsoft Sentinel Platform",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/agentic-use-cases-for-developers-on-the-microsoft-sentinel/ba-p/4503041",
+      "published": "2026-03-20T16:01:05+00:00",
+      "summary": "Interested in building an agent with Sentinel platform solutions but not sure where to start? This blog will help you understand some common use cases for agent development that we’ve seen across our partner ecosystem. SOC teams don’t need more alerts - they need fast, repeatable investigation and...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "Sai_Marapareddy"
+    },
+    {
+      "title": "RSAC 2026: New Microsoft Sentinel Connectors Announcement",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042",
+      "published": "2026-03-20T16:00:00+00:00",
+      "summary": "Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "JesseKopavi"
+    },
+    {
+      "title": "Extending App Assure’s Sentinel Promise through the Sentinel Advisory Service",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/extending-app-assure-s-sentinel-promise-through-the-sentinel/ba-p/4503045",
+      "published": "2026-03-20T16:00:00+00:00",
+      "summary": "At RSAC last year, we introduced the Microsoft Sentinel Promise with a straightforward commitment to our customers: that third-party data ingestion for Sentinel is reliable, predictable, and scalable without the need for complex custom coding and architecting. In other words, your connectors for...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "MikeAdams"
+    },
+    {
+      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
+      "published": "2026-03-20T16:00:00+00:00",
+      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "spalani"
+    },
+    {
+      "title": "Defending the AI Era: New Microsoft Capabilities to Protect AI",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defending-the-ai-era-new-microsoft-capabilities-to-protect-ai/ba-p/4503885",
+      "published": "2026-03-20T15:45:00+00:00",
+      "summary": "As enterprises rapidly adopt AI to drive productivity, automate decisions, and power intelligent agents, a new attack surface is emerging—one that traditional security controls were never designed to protect. AI models, training pipelines, plugins, and autonomous agents now sit directly in the path...",
+      "blog": "Microsoft Defender for Cloud",
+      "blogId": "microsoftdefendercloudblog",
+      "author": "danielacardon"
+    },
+    {
+      "title": "Microsoft Sentinel is now supported in Unified RBAC with row-level access",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-is-now-supported-in-unified-rbac-with-row/ba-p/4503121",
+      "published": "2026-03-20T15:30:00+00:00",
+      "summary": "Enabling streamlined, granular, and scalable permissions We’re excited to announce the Public Preview of Unified Role Based Access Control (URBAC) for Microsoft Sentinel, together with row-level access. This new capability, available April 1st, extends the Microsoft Defender Unified RBAC model to...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "tomasbeerthuis"
+    },
+    {
+      "title": "New innovations in Microsoft Defender to strengthen multi-cloud, containers, and AI model security",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/new-innovations-in-microsoft-defender-to-strengthen-multi-cloud/ba-p/4503886",
+      "published": "2026-03-20T15:30:00+00:00",
+      "summary": "Cloud security today is no longer just about misconfigurations; it’s about keeping pace with cloud-native change, prioritizing risk before it becomes an incident, and securing AI as a new supply chain for applications. In modern environments, infrastructure and applications are rebuilt and...",
+      "blog": "Microsoft Defender for Cloud",
+      "blogId": "microsoftdefendercloudblog",
+      "author": "parulseth"
+    },
     {
       "title": "Heroku Entered Maintenance Mode — Here's Your Next Move",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/heroku-entered-maintenance-mode-here-s-your-next-move/ba-p/4504021",
@@ -667,15 +739,6 @@
       "blog": "Azure DevOps Blog",
       "blogId": "azuredevops",
       "author": "Gloridel Morales"
-    },
-    {
-      "title": "Accelerate your move to Microsoft Sentinel with the new AI Powered SIEM migration experience",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/accelerate-your-move-to-microsoft-sentinel-with-the-new-ai/ba-p/4488505",
-      "published": "2026-03-13T20:58:10+00:00",
-      "summary": "Migrating from one SIEM to another is a critical decision—and often one of the hardest to execute. Legacy SIEM migrations are complex, resource-heavy, and time-consuming, often taking up to 15 months with extensive manual effort and cross-team coordination. Organizations face hurdles like...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "yohasson"
     },
     {
       "title": "The Human Scale Problem in Platform Engineering",
@@ -1954,42 +2017,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "Zeinab Mokhtarian Koorabbasloo"
-    },
-    {
-      "title": "[Launched] Generally Available: Node auto-provisioning enabled clusters in AKS now support LocalDNS",
-      "link": "https://azure.microsoft.com/updates?id=557203",
-      "published": "2026-02-18T16:45:58+00:00",
-      "summary": "Customers previously could not enable LocalDNS on clusters that used Node auto‑provisioning in AKS, limiting their ability to use this feature in those environments. LocalDNS is now generally available for AKS clusters with Node auto‑provisioning, providi",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "TFVC Remove Existing Obsolete Policies ASAP",
-      "link": "https://devblogs.microsoft.com/devops/tfvc-remove-existing-obsolete-policies-asap/",
-      "published": "2026-02-18T16:35:23+00:00",
-      "summary": "In April 2025, we announced the deprecation schedule for legacy TFVC check-in policies. This change was required due to limitations in how those policies were previously implemented and stored. The old policies have been marked as obsolete, and you can replace them by selecting the equivalent...",
-      "blog": "Azure DevOps Blog",
-      "blogId": "azuredevops",
-      "author": "Dan Hellem"
-    },
-    {
-      "title": "[Launched] Generally Available: Encryption at host & disk encryption sets support in node auto-provisioning",
-      "link": "https://azure.microsoft.com/updates?id=557213",
-      "published": "2026-02-18T16:30:06+00:00",
-      "summary": "Node auto-provisioning enabled clusters previously did not have support for Encryption at Host and disk encryption sets. This limited users with certain security requirements for their cluster to not be able to use node auto-provisioning. Node auto-pro",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "AI-Powered RAN and the Intelligent Edge: Microsoft’s Vision for the Future of Telecom",
-      "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/ai-powered-ran-and-the-intelligent-edge-microsoft-s-vision-for/ba-p/4495554",
-      "published": "2026-02-18T16:15:41+00:00",
-      "summary": "Artificial intelligence (AI) is rapidly converging with telecommunications infrastructure, promising to transform how networks are built, optimized, and monetized. Nowhere is this more evident than in the radio access network (RAN) – the crucial “last mile” that connects our devices to the digital...",
-      "blog": "Telecommunications",
-      "blogId": "telecommunications-industry-blog",
-      "author": "Yongguang Zhang"
     }
   ],
   "summaryWindowDays": 7,
@@ -2007,9 +2034,9 @@
   "summaryArticleCount": 15,
   "summary": "- In preview:\n  • [Public Preview: Azure Databricks OneLake Catalog Federation](https://azure.microsoft.com/updates?id=558927)\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/updates?id=558169)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/updates?id=558155)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/updates?id=558150)\n  • [Public Preview: Data API builder with built-in GitHub Copilot in MSSQL extension](https://azure.microsoft.com/updates?id=558178)\n\n- Launched / Generally Available:\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558121)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/updates?id=557917)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/updates?id=558134)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/updates?id=558810)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/updates?id=558183)\n\n- Retiring:\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548543)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548525)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548497)\n  • [Retirement: Emissions Impact Dashboard for Azure](https://azure.microsoft.com/updates?id=558278)\n  • [Retirement: Azure VMware Solution AV36P and AV52 node retirement on June 30, 2029](https://azure.microsoft.com/updates?id=557094)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
-    "title": "Azure Update 13th March 2026",
-    "url": "https://www.youtube.com/watch?v=17uHDPjdkto",
-    "published": "2026-03-13T15:18:27+00:00",
-    "thumbnail": "https://i2.ytimg.com/vi/17uHDPjdkto/hqdefault.jpg"
+    "title": "Azure Update 20th March 2026",
+    "url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",
+    "published": "2026-03-20T16:05:24+00:00",
+    "thumbnail": "https://i3.ytimg.com/vi/jkpcFAYJjvM/hqdefault.jpg"
   }
 }
