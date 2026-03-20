@@ -3,6 +3,7 @@ import sys
 import unittest
 import tempfile
 import json
+from unittest import mock
 from datetime import datetime, timedelta, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -377,6 +378,47 @@ class PublishFailsafeTests(unittest.TestCase):
         )
         self.assertFalse(triggered)
         self.assertIn("absolute_trigger=False", details)
+
+
+class YouTubeVideoHelperTests(unittest.TestCase):
+    def test_extract_youtube_video_id_supports_watch_and_short_urls(self):
+        self.assertEqual(
+            fetch_feeds._extract_youtube_video_id("https://www.youtube.com/watch?v=abc123XYZ"),
+            "abc123XYZ",
+        )
+        self.assertEqual(
+            fetch_feeds._extract_youtube_video_id("https://youtu.be/abc123XYZ?t=10"),
+            "abc123XYZ",
+        )
+
+    def test_select_best_youtube_video_entry_falls_back_to_latest(self):
+        entries = [
+            {"title": "Latest random upload", "link": "https://www.youtube.com/watch?v=latest"},
+            {"title": "Older random upload", "link": "https://www.youtube.com/watch?v=older"},
+        ]
+
+        best, used_fallback = fetch_feeds._select_best_youtube_video_entry(
+            entries,
+            lambda _: 0,
+        )
+
+        self.assertTrue(used_fallback)
+        self.assertEqual(best["link"], "https://www.youtube.com/watch?v=latest")
+
+    def test_resolve_youtube_channel_id_from_seed_extracts_channel_id(self):
+        session = mock.Mock()
+        response = mock.Mock()
+        response.text = '<script>{"channelId":"UC123abcXYZ"}</script>'
+        response.raise_for_status.return_value = None
+        session.get.return_value = response
+
+        channel_id = fetch_feeds._resolve_youtube_channel_id_from_seed(
+            session,
+            "https://www.youtube.com/watch?v=abc123XYZ",
+            (5, 20),
+        )
+
+        self.assertEqual(channel_id, "UC123abcXYZ")
 
 
 if __name__ == "__main__":

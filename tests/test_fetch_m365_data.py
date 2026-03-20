@@ -9,6 +9,7 @@ import sys
 import unittest
 import tempfile
 import json
+from unittest import mock
 from datetime import datetime, timedelta, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -351,6 +352,79 @@ class BuildM365FeedTests(unittest.TestCase):
             previous_count=None,
         )
         self.assertFalse(triggered)
+
+
+class YouTubeVideoHelperTests(unittest.TestCase):
+    """Test YouTube helper parity behavior."""
+
+    def test_m365_series_title_match_is_specific(self):
+        self.assertTrue(
+            fetch_m365_data._is_m365_monthly_video_title(
+                "What's new in Microsoft 365 | March 2026"
+            )
+        )
+        self.assertFalse(
+            fetch_m365_data._is_m365_monthly_video_title(
+                "Microsoft 365 update roundup"
+            )
+        )
+
+    def test_select_best_youtube_video_entry_falls_back_to_latest(self):
+        entries = [
+            {"title": "Latest random upload", "link": "https://www.youtube.com/watch?v=latest"},
+            {"title": "Older random upload", "link": "https://www.youtube.com/watch?v=older"},
+        ]
+
+        best, used_fallback = fetch_m365_data._select_best_youtube_video_entry(
+            entries,
+            lambda _: 0,
+        )
+
+        self.assertTrue(used_fallback)
+        self.assertEqual(best["link"], "https://www.youtube.com/watch?v=latest")
+
+    def test_resolve_youtube_channel_id_from_seed_extracts_channel_id(self):
+        session = mock.Mock()
+        response = mock.Mock()
+        response.text = '<script>{"channelId":"UCm365Channel123"}</script>'
+        response.raise_for_status.return_value = None
+        session.get.return_value = response
+
+        channel_id = fetch_m365_data._resolve_youtube_channel_id_from_seed(
+            session,
+            "https://www.youtube.com/watch?v=HdO9NV8a9yE",
+            (5, 20),
+        )
+
+        self.assertEqual(channel_id, "UCm365Channel123")
+
+    def test_fetch_m365_video_does_not_use_unrelated_latest_upload(self):
+        session = mock.Mock()
+
+        seed_response = mock.Mock()
+        seed_response.text = '<script>{"channelId":"UCm365Channel123"}</script>'
+        seed_response.raise_for_status.return_value = None
+
+        rss_response = mock.Mock()
+        rss_response.content = b"<feed></feed>"
+        rss_response.raise_for_status.return_value = None
+
+        session.get.side_effect = [seed_response, rss_response]
+
+        with mock.patch.object(fetch_m365_data.feedparser, "parse") as parse_mock:
+            parse_mock.return_value = mock.Mock(
+                entries=[
+                    {
+                        "title": "Random channel upload",
+                        "link": "https://www.youtube.com/watch?v=random123",
+                        "published": "2026-03-20T10:00:00+00:00",
+                    }
+                ]
+            )
+
+            result = fetch_m365_data.fetch_m365_video(session)
+
+        self.assertEqual(result["url"], fetch_m365_data.M365_VIDEO_SEED_URL)
 
 
 if __name__ == "__main__":

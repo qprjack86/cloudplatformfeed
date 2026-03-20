@@ -105,10 +105,8 @@ TC_RSS_URL = (
 )
 AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
 AZURE_UPDATES_FEED = "https://www.microsoft.com/releasecommunications/api/v2/azure/rss"
-SAVILL_YOUTUBE_RSS = (
-    "https://www.youtube.com/feeds/videos.xml"
-    "?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
-)
+YOUTUBE_RSS_BASE = "https://www.youtube.com/feeds/videos.xml"
+SAVILL_VIDEO_SEED_URL = "https://www.youtube.com/watch?v=17uHDPjdkto"
 SUMMARY_WINDOW_DAYS = 7
 MAX_ITEMS_PER_SECTION = 5
 MAX_UNCLASSIFIED_FOR_AI = 20
@@ -225,7 +223,8 @@ def build_allowed_feed_hosts():
         TC_RSS_URL.format(board="azurecompute"),
         AKS_BLOG_FEED,
         AZURE_UPDATES_FEED,
-        SAVILL_YOUTUBE_RSS,
+        YOUTUBE_RSS_BASE,
+        SAVILL_VIDEO_SEED_URL,
     ]
     source_urls.extend(feed_url for _, feed_url in DEVBLOGS.values())
 
@@ -624,6 +623,53 @@ def parse_date(entry):
     return datetime.now(timezone.utc).isoformat()
 
 
+def _extract_youtube_video_id(url):
+    """Extract a YouTube video id from watch or youtu.be links."""
+    parsed = urlsplit((url or "").strip())
+    host = normalize_host(parsed.hostname)
+    if not host:
+        return ""
+
+    if host == "youtu.be":
+        return parsed.path.strip("/")
+
+    if host == "youtube.com":
+        query = dict(parse_qsl(parsed.query or ""))
+        return query.get("v", "")
+
+    return ""
+
+
+def _build_youtube_thumbnail_from_video_url(url):
+    """Build a deterministic thumbnail URL from a YouTube video link."""
+    video_id = _extract_youtube_video_id(url)
+    if not video_id:
+        return ""
+    return f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
+
+
+def _resolve_youtube_channel_id_from_seed(session, seed_url, timeout):
+    """Resolve a YouTube channel id by reading the seed video page payload."""
+    response = session.get(seed_url, timeout=timeout)
+    response.raise_for_status()
+    channel_match = re.search(r'"channelId"\s*:\s*"([A-Za-z0-9_-]+)"', response.text)
+    if not channel_match:
+        return ""
+    return channel_match.group(1)
+
+
+def _select_best_youtube_video_entry(entries, match_score_fn):
+    """Select highest scoring entry; fall back to latest upload when no match."""
+    if not entries:
+        return None, False
+
+    best = max(entries, key=match_score_fn)
+    used_fallback = match_score_fn(best) <= 0
+    if used_fallback:
+        best = entries[0]
+    return best, used_fallback
+
+
 def fetch_tech_community_feeds():
     """Fetch articles from Tech Community blogs."""
     articles = []
@@ -744,11 +790,27 @@ def fetch_devblogs_feeds():
 def fetch_savill_video():
     """Fetch John Savill's latest Azure Infrastructure Update video from YouTube RSS."""
     print("Fetching: John Savill YouTube channel...")
+    fallback = {
+        "title": "Latest Azure Infrastructure Update",
+        "url": SAVILL_VIDEO_SEED_URL,
+        "published": "",
+        "thumbnail": _build_youtube_thumbnail_from_video_url(SAVILL_VIDEO_SEED_URL),
+    }
+
     try:
-        feed = fetch_feed(SAVILL_YOUTUBE_RSS)
+        channel_id = _resolve_youtube_channel_id_from_seed(
+            HTTP_SESSION,
+            SAVILL_VIDEO_SEED_URL,
+            FEED_REQUEST_TIMEOUT,
+        )
+        if not channel_id:
+            print("  Warning: Could not resolve Savill YouTube channel id from seed video")
+            return fallback
+
+        feed = fetch_feed(f"{YOUTUBE_RSS_BASE}?channel_id={channel_id}")
         if not feed.entries:
             print("  Warning: No entries in Savill YouTube feed")
-            return None
+            return fallback
 
         def match_score(entry):
             t = entry.get("title", "").lower()
@@ -760,35 +822,31 @@ def fetch_savill_video():
                 return 1
             return 0
 
-        # Sort by score descending; entries are already newest-first so first
-        # high-scoring entry wins when scores are equal.
-        best = max(feed.entries, key=match_score)
-        if match_score(best) == 0:
-            best = feed.entries[0]  # fallback: latest video regardless of topic
+        best, used_fallback = _select_best_youtube_video_entry(feed.entries, match_score)
+        if used_fallback:
+            print("  Warning: No strong Savill title match found; using latest upload")
 
         link = best.get("link", "")
 
-        # Extract thumbnail: prefer media:thumbnail element, fall back to ytimg URL
+        # Extract thumbnail: prefer media:thumbnail element, then deterministic ytimg fallback.
         thumbnail = ""
         media_thumbs = getattr(best, "media_thumbnail", None) or best.get("media_thumbnail", [])
         if media_thumbs:
             thumbnail = media_thumbs[0].get("url", "")
         if not thumbnail:
-            m = re.search(r"[?&]v=([A-Za-z0-9_-]+)", link)
-            if m:
-                thumbnail = f"https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg"
+            thumbnail = _build_youtube_thumbnail_from_video_url(link)
 
         result = {
-            "title": clean_html(best.get("title", "")),
-            "url": link,
-            "published": parse_date(best),
-            "thumbnail": thumbnail,
+            "title": clean_html(best.get("title", "")) or fallback["title"],
+            "url": link or fallback["url"],
+            "published": parse_date(best) if best else fallback["published"],
+            "thumbnail": thumbnail or fallback["thumbnail"],
         }
         print(f"  Found: {result['title'][:70]}")
         return result
     except Exception as e:
         print(f"  Error fetching Savill YouTube: {e}")
-        return None
+        return fallback
 
 
 def fetch_azure_updates_feed():

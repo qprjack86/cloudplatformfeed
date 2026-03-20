@@ -10,11 +10,10 @@ import os
 import re
 import time
 import requests
-import calendar
+import feedparser
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
-from xml.etree import ElementTree as ET
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -42,6 +41,7 @@ MCP_USER_AGENT = "M365FeedBot/1.0"
 
 M365_VIDEO_SEED_URL = "https://www.youtube.com/watch?v=HdO9NV8a9yE&t=83s"
 M365_VIDEO_TITLE_PREFIX = "what's new in microsoft 365"
+YOUTUBE_RSS_BASE = "https://www.youtube.com/feeds/videos.xml"
 
 # Tracking parameters to filter
 TRACKING_QUERY_PREFIXES = ("utm_",)
@@ -424,46 +424,58 @@ def _build_thumbnail_from_video_url(url: str) -> str:
     return f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
 
 
+def _build_youtube_thumbnail_from_video_url(url: str) -> str:
+    """Alias for parity with Azure script helper naming."""
+    return _build_thumbnail_from_video_url(url)
+
+
+def _resolve_youtube_channel_id_from_seed(
+    session: requests.Session,
+    seed_url: str,
+    timeout,
+) -> str:
+    """Resolve a YouTube channel id by reading the seed video page payload."""
+    seed_resp = session.get(seed_url, timeout=timeout)
+    seed_resp.raise_for_status()
+    html = seed_resp.text
+
+    channel_match = re.search(r'"channelId"\s*:\s*"([A-Za-z0-9_-]+)"', html)
+    if not channel_match:
+        return ""
+    return channel_match.group(1)
+
+
+def _select_best_youtube_video_entry(entries: list, match_score_fn):
+    """Select highest scoring entry; fall back to latest upload when no match."""
+    if not entries:
+        return None, False
+
+    best = max(entries, key=match_score_fn)
+    used_fallback = match_score_fn(best) <= 0
+    if used_fallback:
+        best = entries[0]
+    return best, used_fallback
+
+
 def _normalize_summary_title(value: str) -> str:
     """Normalize title text for stable matching."""
     return re.sub(r"\s+", " ", (value or "").strip().lower())
 
 
 def _is_m365_monthly_video_title(title: str) -> bool:
-    """Match likely monthly "What's new in Microsoft 365" style titles."""
+    """Match the dedicated "What's new in Microsoft 365" series title."""
     normalized = _normalize_summary_title(title)
     if not normalized:
         return False
 
-    has_product = "microsoft 365" in normalized
-    has_update_signal = (
-        "what's new" in normalized
-        or "whats new" in normalized
-        or "update" in normalized
-        or "updates" in normalized
-        or "currently" in normalized
+    variants = (
+        M365_VIDEO_TITLE_PREFIX,
+        M365_VIDEO_TITLE_PREFIX.replace("'", ""),
     )
-    return has_product and has_update_signal
-
-
-def _month_score_from_title(title: str) -> int:
-    """Return month score where current month is highest, then nearby months."""
-    normalized = _normalize_summary_title(title)
-    if not normalized:
-        return -1
-
-    current_month = datetime.now(timezone.utc).month
-    score = -1
-    for month_number in range(1, 13):
-        month_name = calendar.month_name[month_number].lower()
-        if month_name in normalized:
-            # Closer to current month gets higher score.
-            distance = min(
-                (month_number - current_month) % 12,
-                (current_month - month_number) % 12,
-            )
-            score = max(score, 12 - distance)
-    return score
+    for prefix in variants:
+        if normalized == prefix or normalized.startswith(prefix + " ") or normalized.startswith(prefix + "|") or normalized.startswith(prefix + ":"):
+            return True
+    return False
 
 
 def fetch_m365_video(session: requests.Session) -> dict:
@@ -474,70 +486,52 @@ def fetch_m365_video(session: requests.Session) -> dict:
         "title": "What's new in Microsoft 365",
         "url": M365_VIDEO_SEED_URL,
         "published": "",
-        "thumbnail": _build_thumbnail_from_video_url(M365_VIDEO_SEED_URL),
+        "thumbnail": _build_youtube_thumbnail_from_video_url(M365_VIDEO_SEED_URL),
     }
 
     try:
-        seed_resp = session.get(M365_VIDEO_SEED_URL, timeout=MCP_REQUEST_TIMEOUT)
-        seed_resp.raise_for_status()
-        html = seed_resp.text
-
-        channel_match = re.search(r'"channelId"\s*:\s*"([A-Za-z0-9_-]+)"', html)
-        if not channel_match:
+        channel_id = _resolve_youtube_channel_id_from_seed(
+            session,
+            M365_VIDEO_SEED_URL,
+            MCP_REQUEST_TIMEOUT,
+        )
+        if not channel_id:
             print("  Warning: Could not resolve YouTube channel id from seed video")
             return fallback
 
-        channel_id = channel_match.group(1)
-        rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+        rss_url = f"{YOUTUBE_RSS_BASE}?channel_id={channel_id}"
         rss_resp = session.get(rss_url, timeout=MCP_REQUEST_TIMEOUT)
         rss_resp.raise_for_status()
-
-        root = ET.fromstring(rss_resp.content)
-        ns = {
-            "atom": "http://www.w3.org/2005/Atom",
-            "media": "http://search.yahoo.com/mrss/",
-        }
-
-        candidates = []
-        for entry in root.findall("atom:entry", ns):
-            title = (entry.findtext("atom:title", default="", namespaces=ns) or "").strip()
-            if not _is_m365_monthly_video_title(title):
-                continue
-
-            link_el = entry.find("atom:link", ns)
-            link = (link_el.get("href") if link_el is not None else "") or ""
-
-            published = (entry.findtext("atom:published", default="", namespaces=ns) or "").strip()
-
-            thumb_el = entry.find("media:group/media:thumbnail", ns)
-            thumbnail = thumb_el.get("url") if thumb_el is not None else ""
-            if not thumbnail:
-                thumbnail = _build_thumbnail_from_video_url(link)
-
-            candidates.append(
-                {
-                    "title": title,
-                    "url": link,
-                    "published": published,
-                    "thumbnail": thumbnail,
-                    "monthScore": _month_score_from_title(title),
-                }
-            )
-
-        if not candidates:
-            print("  Warning: No matching Microsoft 365 monthly video titles found")
+        feed = feedparser.parse(rss_resp.content)
+        if not feed.entries:
+            print("  Warning: No entries in Microsoft 365 YouTube feed")
             return fallback
 
-        def rank(entry: dict):
-            return (entry.get("monthScore", -1), entry.get("published", ""))
+        matching_entries = [
+            entry
+            for entry in feed.entries
+            if _is_m365_monthly_video_title((entry.get("title", "") or "").strip())
+        ]
+        if not matching_entries:
+            print("  Warning: No matching 'What's new in Microsoft 365' video found")
+            return fallback
 
-        best = max(candidates, key=rank)
+        best = max(matching_entries, key=lambda entry: entry.get("published", ""))
+
+        link = best.get("link", "")
+        thumbnail = ""
+        media_thumbs = getattr(best, "media_thumbnail", None) or best.get("media_thumbnail", [])
+        if media_thumbs:
+            thumbnail = media_thumbs[0].get("url", "")
+        if not thumbnail:
+            thumbnail = _build_youtube_thumbnail_from_video_url(link)
+
         print(f"  Found: {best.get('title', '')[:70]}")
         return {
             "title": best.get("title", fallback["title"]),
-            "url": best.get("url", fallback["url"]),
-            "published": best.get("published", ""),
-            "thumbnail": best.get("thumbnail", ""),
+            "url": link or fallback["url"],
+            "published": best.get("published", "") or fallback["published"],
+            "thumbnail": thumbnail or fallback["thumbnail"],
         }
 
     except Exception as exc:
