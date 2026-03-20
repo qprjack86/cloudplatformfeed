@@ -1,7 +1,174 @@
 {
-  "generatedAt": "2026-03-19T16:54:53.891842+00:00",
-  "totalArticles": 92,
+  "generatedAt": "2026-03-20T08:42:04.512158+00:00",
+  "totalArticles": 84,
   "articles": [
+    {
+      "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
+      "published": "2026-03-19T23:30:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558679",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558679"
+    },
+    {
+      "title": "Microsoft Purview: Endpoint Data Loss Prevention - Logged-in user details on the Purview device onboarding page",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=559028",
+      "published": "2026-03-19T23:30:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559028",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:559028"
+    },
+    {
+      "title": "Microsoft Purview: Endpoint Data Loss Prevention - Endpoint DLP Device Status API",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=559027",
+      "published": "2026-03-19T23:30:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559027",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:559027"
+    },
+    {
+      "title": "Outlook: Font Improvements in Outlook for Android",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558936",
+      "published": "2026-03-19T23:30:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558936",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558936"
+    },
+    {
+      "title": "Microsoft Viva: Modernized content composition experience in Engage",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558935",
+      "published": "2026-03-19T23:30:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558935",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558935"
+    },
+    {
+      "title": "Microsoft Purview: Data Loss Prevention - Unmanaged cloud app discovery and protection with Microsoft Purview and Palo Alto Prisma Access",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558939",
+      "published": "2026-03-19T23:30:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558939",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558939"
+    },
+    {
+      "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558857",
+      "published": "2026-03-19T23:30:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558857",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558857"
+    },
+    {
+      "title": "Microsoft Teams: Recently used emojis sync across devices",
+      "link": "https://deltapulse.app/dashboard?message=MC1256307",
+      "published": "2026-03-19T22:26:54.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft Teams",
+      "m365AllServices": [
+        "Microsoft Teams"
+      ],
+      "m365Id": "MC1256307",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1256307"
+    },
+    {
+      "title": "Microsoft 365 Copilot: Planner Agent available in Frontier",
+      "link": "https://deltapulse.app/dashboard?message=MC1256306",
+      "published": "2026-03-19T22:26:23.000Z",
+      "source": "m365",
+      "m365Service": "Planner",
+      "m365AllServices": [
+        "Planner",
+        "Microsoft Copilot (Microsoft 365)"
+      ],
+      "m365Id": "MC1256306",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1256306"
+    },
+    {
+      "title": "Microsoft Teams for Mac: Improved access to account management",
+      "link": "https://deltapulse.app/dashboard?message=MC1256301",
+      "published": "2026-03-19T22:23:38.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft Teams",
+      "m365AllServices": [
+        "Microsoft Teams"
+      ],
+      "m365Id": "MC1256301",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1256301"
+    },
     {
       "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
       "link": "https://deltapulse.app/dashboard?message=MC1256117",
@@ -95,22 +262,6 @@
       "_normalized_url": "message_center:MC1255508"
     },
     {
-      "title": "Microsoft Edge: Security Update Alerts in the Edge management service",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
-      "published": "2026-03-18T23:15:26.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558435",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558435"
-    },
-    {
       "title": "Microsoft Purview: Information Protection - Sensitivity label support in Engage",
       "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558684",
       "published": "2026-03-18T23:15:26.000Z",
@@ -125,6 +276,22 @@
       "m365TargetDate": null,
       "lifecycle": "in_development",
       "_normalized_url": "roadmap:558684"
+    },
+    {
+      "title": "Microsoft Edge: Security Update Alerts in the Edge management service",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
+      "published": "2026-03-18T23:15:26.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558435",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558435"
     },
     {
       "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -328,22 +495,6 @@
       "_normalized_url": "message_center:MC1254553"
     },
     {
-      "title": "Microsoft Purview: Data Loss Prevention - Data Security Triage Agent summaries and categorizations for DLP alerts will be made available in DLP Alerts in Microsoft Defender XDR",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558860",
-      "published": "2026-03-17T22:45:46.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558860",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558860"
-    },
-    {
       "title": "Microsoft Purview: eDiscovery - review set limit increase",
       "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558858",
       "published": "2026-03-17T22:45:46.000Z",
@@ -358,6 +509,22 @@
       "m365TargetDate": null,
       "lifecycle": "in_development",
       "_normalized_url": "roadmap:558858"
+    },
+    {
+      "title": "Microsoft Purview: Data Loss Prevention - Data Security Triage Agent summaries and categorizations for DLP alerts will be made available in DLP Alerts in Microsoft Defender XDR",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558860",
+      "published": "2026-03-17T22:45:46.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558860",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558860"
     },
     {
       "title": "Copilot Notebooks: New features coming to Frontier Public",
@@ -469,20 +636,20 @@
       "_normalized_url": "message_center:MC1253809"
     },
     {
-      "title": "Microsoft Purview: Information Protection - Exclude modern groups / include dynamic security groups support for sensitivity label policies",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558685",
+      "title": "Microsoft Purview: Information Protection - Policy sync status for M365 Label publishing policies",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558687",
       "published": "2026-03-16T23:00:10.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558685",
+      "m365Id": "558687",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": "In development",
       "m365TargetDate": null,
       "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558685"
+      "_normalized_url": "roadmap:558687"
     },
     {
       "title": "Microsoft Purview: Information Protection - Sensitivity label inheritance for Teams meeting artifacts",
@@ -517,20 +684,20 @@
       "_normalized_url": "roadmap:557681"
     },
     {
-      "title": "Microsoft Purview: Information Protection - Policy sync status for M365 Label publishing policies",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558687",
+      "title": "Microsoft Purview: Information Protection - Exclude modern groups / include dynamic security groups support for sensitivity label policies",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558685",
       "published": "2026-03-16T23:00:10.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558687",
+      "m365Id": "558685",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": "In development",
       "m365TargetDate": null,
       "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558687"
+      "_normalized_url": "roadmap:558685"
     },
     {
       "title": "Whiteboards created in Teams channels will now be stored in SharePoint",
@@ -840,24 +1007,6 @@
       "_normalized_url": "message_center:MC1251200"
     },
     {
-      "title": "(Updated) Planned Maintenance: Windows 365 Service",
-      "link": "https://deltapulse.app/dashboard?message=MC1251199",
-      "published": "2026-03-13T22:44:27.000Z",
-      "source": "m365",
-      "m365Service": "Windows 365",
-      "m365AllServices": [
-        "Windows 365"
-      ],
-      "m365Id": "MC1251199",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1251199"
-    },
-    {
       "title": "Prevent/Fix (Detected): Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
       "link": "https://deltapulse.app/dashboard?message=MC1251194",
       "published": "2026-03-13T22:37:03.000Z",
@@ -874,22 +1023,6 @@
       "m365TargetDate": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1251194"
-    },
-    {
-      "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558688",
-      "published": "2026-03-13T22:00:48.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558688",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558688"
     },
     {
       "title": "Microsoft Teams: Honor Windows Do not disturb setting",
@@ -922,6 +1055,22 @@
       "m365TargetDate": null,
       "lifecycle": "in_development",
       "_normalized_url": "roadmap:558681"
+    },
+    {
+      "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558688",
+      "published": "2026-03-13T22:00:48.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558688",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558688"
     },
     {
       "title": "Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
@@ -960,312 +1109,77 @@
       "_normalized_url": "message_center:MC1250927"
     },
     {
-      "title": "Power Platform – New Continuous Access Evaluation (CAE) announcement",
-      "link": "https://deltapulse.app/dashboard?message=MC1250351",
-      "published": "2026-03-13T03:42:00.000Z",
+      "title": "(Updated) Outlook: Delimiter setting admin policy",
+      "link": "https://deltapulse.app/dashboard?message=MC1239176",
+      "published": "2026-02-26T00:20:37.000Z",
       "source": "m365",
-      "m365Service": "Microsoft Dataverse",
+      "m365Service": "Exchange Online",
       "m365AllServices": [
-        "Microsoft Dataverse",
-        "Power Platform"
+        "Exchange Online"
       ],
-      "m365Id": "MC1250351",
+      "m365Id": "MC1239176",
       "m365Source": "message_center",
       "m365Category": "stayInformed",
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250351"
+      "_normalized_url": "message_center:MC1239176"
     },
     {
-      "title": "Sensitivity labels available soon for Viva Engage communities",
-      "link": "https://deltapulse.app/dashboard?message=MC1250283",
-      "published": "2026-03-12T23:46:41.000Z",
+      "title": "(Updated) Microsoft 365 Copilot: Introducing infinite scroll for chat history",
+      "link": "https://deltapulse.app/dashboard?message=MC1237701",
+      "published": "2026-02-23T22:52:43.000Z",
       "source": "m365",
-      "m365Service": "Microsoft Viva",
+      "m365Service": "Microsoft Copilot (Microsoft 365)",
       "m365AllServices": [
-        "Microsoft Viva"
+        "Microsoft Copilot (Microsoft 365)",
+        "Microsoft 365 Copilot Chat"
       ],
-      "m365Id": "MC1250283",
+      "m365Id": "MC1237701",
       "m365Source": "message_center",
       "m365Category": "stayInformed",
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250283"
+      "_normalized_url": "message_center:MC1237701"
     },
     {
-      "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-      "link": "https://deltapulse.app/dashboard?message=MC1250279",
-      "published": "2026-03-12T23:42:55.000Z",
-      "source": "m365",
-      "m365Service": "Planner",
-      "m365AllServices": [
-        "Planner",
-        "Microsoft Copilot (Microsoft 365)"
-      ],
-      "m365Id": "MC1250279",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250279"
-    },
-    {
-      "title": "Microsoft Edge: Copilot new tab page",
-      "link": "https://deltapulse.app/dashboard?message=MC1250274",
-      "published": "2026-03-12T23:41:53.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365 suite",
-      "m365AllServices": [
-        "Microsoft 365 suite"
-      ],
-      "m365Id": "MC1250274",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250274"
-    },
-    {
-      "title": "Improved copy and paste support for @mentions and shared contacts in Microsoft Teams",
-      "link": "https://deltapulse.app/dashboard?message=MC1250273",
-      "published": "2026-03-12T23:41:19.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Teams",
-      "m365AllServices": [
-        "Microsoft Teams"
-      ],
-      "m365Id": "MC1250273",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250273"
-    },
-    {
-      "title": "Introducing awards and certifications section in M365 profile card",
-      "link": "https://deltapulse.app/dashboard?message=MC1250272",
-      "published": "2026-03-12T23:40:52.000Z",
+      "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
+      "link": "https://deltapulse.app/dashboard?message=MC1249427",
+      "published": "2026-03-12T00:04:42.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365 apps",
       "m365AllServices": [
         "Microsoft 365 apps"
       ],
-      "m365Id": "MC1250272",
+      "m365Id": "MC1249427",
       "m365Source": "message_center",
-      "m365Category": "stayInformed",
+      "m365Category": "planForChange",
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250272"
+      "_normalized_url": "message_center:MC1249427"
     },
     {
-      "title": "Windows 365: Windows 365 Link - Market Expansion",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558253",
-      "published": "2026-03-12T23:00:54.000Z",
+      "title": "(Updated) Plan for change:Azure Network Connection health check enforcement for required Windows 365 endpoints",
+      "link": "https://deltapulse.app/dashboard?message=MC1245997",
+      "published": "2026-03-06T21:17:06.000Z",
       "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558253",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558253"
-    },
-    {
-      "title": "Microsoft Purview: Data Loss Prevention – File Quarantine Action in DLP for SharePoint/OneDrive",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=557190",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "557190",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:557190"
-    },
-    {
-      "title": "Microsoft Purview: Data Security Investigations – analyze files tied to audit log activities",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558548",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558548",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558548"
-    },
-    {
-      "title": "Microsoft Teams: Enhancements to Interpreter quality and support for Traditional Chinese",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558434",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558434",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558434"
-    },
-    {
-      "title": "Microsoft Teams: Spoken language detection is now automatic",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558543",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558543"
-    },
-    {
-      "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558547",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558547",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558547"
-    },
-    {
-      "title": "Microsoft Purview: Data Security Investigations – role-based access simplification",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558546",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558546",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558546"
-    },
-    {
-      "title": "Microsoft Teams: Video recap in Teams",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558540",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558540"
-    },
-    {
-      "title": "SharePoint: Plan and Create Pages with AI",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558441",
-      "published": "2026-03-12T23:00:54.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558441",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558441"
-    },
-    {
-      "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in model-driven apps",
-      "link": "https://deltapulse.app/dashboard?message=MC1250069",
-      "published": "2026-03-12T19:18:24.000Z",
-      "source": "m365",
-      "m365Service": "Power Apps",
+      "m365Service": "Windows 365",
       "m365AllServices": [
-        "Power Apps"
+        "Windows 365"
       ],
-      "m365Id": "MC1250069",
+      "m365Id": "MC1245997",
       "m365Source": "message_center",
-      "m365Category": "stayInformed",
+      "m365Category": "planForChange",
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250069"
-    },
-    {
-      "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in canvas apps",
-      "link": "https://deltapulse.app/dashboard?message=MC1250062",
-      "published": "2026-03-12T19:14:12.000Z",
-      "source": "m365",
-      "m365Service": "Power Apps",
-      "m365AllServices": [
-        "Power Apps"
-      ],
-      "m365Id": "MC1250062",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250062"
-    },
-    {
-      "title": "Windows Office Hours: March 19, 2026",
-      "link": "https://deltapulse.app/dashboard?message=MC1250021",
-      "published": "2026-03-12T17:55:36.090Z",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1250021",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250021"
+      "_normalized_url": "message_center:MC1245997"
     },
     {
       "title": "OneDrive: Set a custom name for the OneDrive sync folder",
@@ -1338,6 +1252,22 @@
       "_normalized_url": "message_center:MC1246002"
     },
     {
+      "title": "Windows 365: Windows 365 Link - Market Expansion",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558253",
+      "published": "2026-03-12T23:00:54.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558253",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": "In development",
+      "m365TargetDate": null,
+      "lifecycle": "in_development",
+      "_normalized_url": "roadmap:558253"
+    },
+    {
       "title": "Microsoft Teams: Delete meeting generated content in recap",
       "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=557170",
       "published": "2026-03-04T00:00:25.000Z",
@@ -1384,24 +1314,6 @@
       "m365TargetDate": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:557674"
-    },
-    {
-      "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
-      "link": "https://deltapulse.app/dashboard?message=MC1249427",
-      "published": "2026-03-12T00:04:42.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365 apps",
-      "m365AllServices": [
-        "Microsoft 365 apps"
-      ],
-      "m365Id": "MC1249427",
-      "m365Source": "message_center",
-      "m365Category": "planForChange",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1249427"
     },
     {
       "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
@@ -1543,74 +1455,60 @@
       "_normalized_url": "message_center:MC1234566"
     },
     {
-      "title": "Microsoft Teams: Run SMB admin tasks faster with Microsoft 365 Admin Agent in Microsoft Teams",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558255",
-      "published": "2026-03-11T23:30:17.000Z",
+      "title": "Microsoft Teams: Spoken language detection is now automatic",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
+      "published": "2026-03-12T23:00:54.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558255",
+      "m365Id": "558543",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": "In development",
       "m365TargetDate": null,
       "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558255"
-    },
-    {
-      "title": "Microsoft Edge: Copilot New Tab Page",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558256",
-      "published": "2026-03-05T00:15:18.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558256",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:558256"
-    },
-    {
-      "title": "Microsoft Teams: Chat for organizers and presenters in structured meetings and webinars on Teams Rooms on Windows",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=557165",
-      "published": "2026-02-19T00:15:25.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "557165",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": "In development",
-      "m365TargetDate": null,
-      "lifecycle": "in_development",
-      "_normalized_url": "roadmap:557165"
-    },
-    {
-      "title": "(Updated) Microsoft Teams Rooms: Private chat for organizers and presenters in structured meetings and webinars",
-      "link": "https://deltapulse.app/dashboard?message=MC1247896",
-      "published": "2026-03-09T22:25:10.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Teams",
-      "m365AllServices": [
-        "Microsoft Teams"
-      ],
-      "m365Id": "MC1247896",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1247896"
+      "_normalized_url": "roadmap:558543"
     }
   ],
   "byCategory": {
     "Collaboration": [
+      {
+        "title": "Microsoft Teams: Recently used emojis sync across devices",
+        "link": "https://deltapulse.app/dashboard?message=MC1256307",
+        "published": "2026-03-19T22:26:54.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Teams",
+        "m365AllServices": [
+          "Microsoft Teams"
+        ],
+        "m365Id": "MC1256307",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256307"
+      },
+      {
+        "title": "Microsoft Teams for Mac: Improved access to account management",
+        "link": "https://deltapulse.app/dashboard?message=MC1256301",
+        "published": "2026-03-19T22:23:38.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Teams",
+        "m365AllServices": [
+          "Microsoft Teams"
+        ],
+        "m365Id": "MC1256301",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256301"
+      },
       {
         "title": "Lists as a knowledge source for agents in SharePoint and OneDrive",
         "link": "https://deltapulse.app/dashboard?message=MC1255409",
@@ -1721,22 +1619,22 @@
         "_normalized_url": "message_center:MC1251206"
       },
       {
-        "title": "Improved copy and paste support for @mentions and shared contacts in Microsoft Teams",
-        "link": "https://deltapulse.app/dashboard?message=MC1250273",
-        "published": "2026-03-12T23:41:19.000Z",
+        "title": "(Updated) Outlook: Delimiter setting admin policy",
+        "link": "https://deltapulse.app/dashboard?message=MC1239176",
+        "published": "2026-02-26T00:20:37.000Z",
         "source": "m365",
-        "m365Service": "Microsoft Teams",
+        "m365Service": "Exchange Online",
         "m365AllServices": [
-          "Microsoft Teams"
+          "Exchange Online"
         ],
-        "m365Id": "MC1250273",
+        "m365Id": "MC1239176",
         "m365Source": "message_center",
         "m365Category": "stayInformed",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250273"
+        "_normalized_url": "message_center:MC1239176"
       },
       {
         "title": "(Updated) Outlook: Support for recommended and automatically applied sensitivity labels in Outlook for iOS and Android",
@@ -1773,42 +1671,120 @@
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1248393"
-      },
-      {
-        "title": "(Updated) Microsoft Teams Rooms: Private chat for organizers and presenters in structured meetings and webinars",
-        "link": "https://deltapulse.app/dashboard?message=MC1247896",
-        "published": "2026-03-09T22:25:10.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Teams",
-        "m365AllServices": [
-          "Microsoft Teams"
-        ],
-        "m365Id": "MC1247896",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1247896"
       }
     ],
     "Productivity": [
       {
-        "title": "Microsoft Edge: Security Update Alerts in the Edge management service",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
-        "published": "2026-03-18T23:15:26.000Z",
+        "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
+        "published": "2026-03-19T23:30:43.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558435",
+        "m365Id": "558679",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558435"
+        "_normalized_url": "roadmap:558679"
+      },
+      {
+        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Logged-in user details on the Purview device onboarding page",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=559028",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559028",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:559028"
+      },
+      {
+        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Endpoint DLP Device Status API",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=559027",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559027",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:559027"
+      },
+      {
+        "title": "Outlook: Font Improvements in Outlook for Android",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558936",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558936",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558936"
+      },
+      {
+        "title": "Microsoft Viva: Modernized content composition experience in Engage",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558935",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558935",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558935"
+      },
+      {
+        "title": "Microsoft Purview: Data Loss Prevention - Unmanaged cloud app discovery and protection with Microsoft Purview and Palo Alto Prisma Access",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558939",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558939",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558939"
+      },
+      {
+        "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558857",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558857",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558857"
       },
       {
         "title": "Microsoft Purview: Information Protection - Sensitivity label support in Engage",
@@ -1825,6 +1801,22 @@
         "m365TargetDate": null,
         "lifecycle": "in_development",
         "_normalized_url": "roadmap:558684"
+      },
+      {
+        "title": "Microsoft Edge: Security Update Alerts in the Edge management service",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
+        "published": "2026-03-18T23:15:26.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558435",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558435"
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -1845,22 +1837,6 @@
         "_normalized_url": "message_center:MC1255412"
       },
       {
-        "title": "Microsoft Purview: Data Loss Prevention - Data Security Triage Agent summaries and categorizations for DLP alerts will be made available in DLP Alerts in Microsoft Defender XDR",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558860",
-        "published": "2026-03-17T22:45:46.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558860",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558860"
-      },
-      {
         "title": "Microsoft Purview: eDiscovery - review set limit increase",
         "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558858",
         "published": "2026-03-17T22:45:46.000Z",
@@ -1875,6 +1851,22 @@
         "m365TargetDate": null,
         "lifecycle": "in_development",
         "_normalized_url": "roadmap:558858"
+      },
+      {
+        "title": "Microsoft Purview: Data Loss Prevention - Data Security Triage Agent summaries and categorizations for DLP alerts will be made available in DLP Alerts in Microsoft Defender XDR",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558860",
+        "published": "2026-03-17T22:45:46.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558860",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558860"
       },
       {
         "title": "Copilot Notebooks: New features coming to Frontier Public",
@@ -1914,20 +1906,20 @@
         "_normalized_url": "message_center:MC1253809"
       },
       {
-        "title": "Microsoft Purview: Information Protection - Exclude modern groups / include dynamic security groups support for sensitivity label policies",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558685",
+        "title": "Microsoft Purview: Information Protection - Policy sync status for M365 Label publishing policies",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558687",
         "published": "2026-03-16T23:00:10.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558685",
+        "m365Id": "558687",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558685"
+        "_normalized_url": "roadmap:558687"
       },
       {
         "title": "Microsoft Purview: Information Protection - Sensitivity label inheritance for Teams meeting artifacts",
@@ -1962,36 +1954,20 @@
         "_normalized_url": "roadmap:557681"
       },
       {
-        "title": "Microsoft Purview: Information Protection - Policy sync status for M365 Label publishing policies",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558687",
+        "title": "Microsoft Purview: Information Protection - Exclude modern groups / include dynamic security groups support for sensitivity label policies",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558685",
         "published": "2026-03-16T23:00:10.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558687",
+        "m365Id": "558685",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558687"
-      },
-      {
-        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558688",
-        "published": "2026-03-13T22:00:48.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558688",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558688"
+        "_normalized_url": "roadmap:558685"
       },
       {
         "title": "Microsoft Teams: Honor Windows Do not disturb setting",
@@ -2026,166 +2002,38 @@
         "_normalized_url": "roadmap:558681"
       },
       {
-        "title": "Introducing awards and certifications section in M365 profile card",
-        "link": "https://deltapulse.app/dashboard?message=MC1250272",
-        "published": "2026-03-12T23:40:52.000Z",
+        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558688",
+        "published": "2026-03-13T22:00:48.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558688",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558688"
+      },
+      {
+        "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
+        "link": "https://deltapulse.app/dashboard?message=MC1249427",
+        "published": "2026-03-12T00:04:42.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
         "m365AllServices": [
           "Microsoft 365 apps"
         ],
-        "m365Id": "MC1250272",
+        "m365Id": "MC1249427",
         "m365Source": "message_center",
-        "m365Category": "stayInformed",
+        "m365Category": "planForChange",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250272"
-      },
-      {
-        "title": "Windows 365: Windows 365 Link - Market Expansion",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558253",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558253",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558253"
-      },
-      {
-        "title": "Microsoft Purview: Data Loss Prevention – File Quarantine Action in DLP for SharePoint/OneDrive",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=557190",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "557190",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:557190"
-      },
-      {
-        "title": "Microsoft Purview: Data Security Investigations – analyze files tied to audit log activities",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558548",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558548",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558548"
-      },
-      {
-        "title": "Microsoft Teams: Enhancements to Interpreter quality and support for Traditional Chinese",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558434",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558434",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558434"
-      },
-      {
-        "title": "Microsoft Teams: Spoken language detection is now automatic",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558543",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558543"
-      },
-      {
-        "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558547",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558547",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558547"
-      },
-      {
-        "title": "Microsoft Purview: Data Security Investigations – role-based access simplification",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558546",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558546",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558546"
-      },
-      {
-        "title": "Microsoft Teams: Video recap in Teams",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558540",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558540"
-      },
-      {
-        "title": "SharePoint: Plan and Create Pages with AI",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558441",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558441",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558441"
+        "_normalized_url": "message_center:MC1249427"
       },
       {
         "title": "OneDrive: Set a custom name for the OneDrive sync folder",
@@ -2202,6 +2050,22 @@
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557562"
+      },
+      {
+        "title": "Windows 365: Windows 365 Link - Market Expansion",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558253",
+        "published": "2026-03-12T23:00:54.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558253",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558253"
       },
       {
         "title": "Microsoft Teams: Delete meeting generated content in recap",
@@ -2252,24 +2116,6 @@
         "_normalized_url": "roadmap:557674"
       },
       {
-        "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
-        "link": "https://deltapulse.app/dashboard?message=MC1249427",
-        "published": "2026-03-12T00:04:42.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365 apps",
-        "m365AllServices": [
-          "Microsoft 365 apps"
-        ],
-        "m365Id": "MC1249427",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1249427"
-      },
-      {
         "title": "Microsoft Teams: Private organizer and presenter chat for structured meetings and webinars on Teams Rooms on Windows",
         "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=557720",
         "published": "2026-03-02T23:45:11.000Z",
@@ -2318,52 +2164,20 @@
         "_normalized_url": "roadmap:557349"
       },
       {
-        "title": "Microsoft Teams: Run SMB admin tasks faster with Microsoft 365 Admin Agent in Microsoft Teams",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558255",
-        "published": "2026-03-11T23:30:17.000Z",
+        "title": "Microsoft Teams: Spoken language detection is now automatic",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
+        "published": "2026-03-12T23:00:54.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558255",
+        "m365Id": "558543",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558255"
-      },
-      {
-        "title": "Microsoft Edge: Copilot New Tab Page",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558256",
-        "published": "2026-03-05T00:15:18.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558256",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558256"
-      },
-      {
-        "title": "Microsoft Teams: Chat for organizers and presenters in structured meetings and webinars on Teams Rooms on Windows",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=557165",
-        "published": "2026-02-19T00:15:25.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "557165",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:557165"
+        "_normalized_url": "roadmap:558543"
       }
     ],
     "AI & Automation": [
@@ -2477,6 +2291,25 @@
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1251203"
+      },
+      {
+        "title": "(Updated) Microsoft 365 Copilot: Introducing infinite scroll for chat history",
+        "link": "https://deltapulse.app/dashboard?message=MC1237701",
+        "published": "2026-02-23T22:52:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
+        "m365AllServices": [
+          "Microsoft Copilot (Microsoft 365)",
+          "Microsoft 365 Copilot Chat"
+        ],
+        "m365Id": "MC1237701",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1237701"
       }
     ],
     "Data & Analytics": [
@@ -2497,25 +2330,6 @@
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253512"
-      },
-      {
-        "title": "Power Platform – New Continuous Access Evaluation (CAE) announcement",
-        "link": "https://deltapulse.app/dashboard?message=MC1250351",
-        "published": "2026-03-13T03:42:00.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Dataverse",
-        "m365AllServices": [
-          "Microsoft Dataverse",
-          "Power Platform"
-        ],
-        "m365Id": "MC1250351",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250351"
       }
     ],
     "Security & Compliance": [
@@ -2687,6 +2501,25 @@
     ],
     "Other": [
       {
+        "title": "Microsoft 365 Copilot: Planner Agent available in Frontier",
+        "link": "https://deltapulse.app/dashboard?message=MC1256306",
+        "published": "2026-03-19T22:26:23.000Z",
+        "source": "m365",
+        "m365Service": "Planner",
+        "m365AllServices": [
+          "Planner",
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1256306",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256306"
+      },
+      {
         "title": "Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
         "link": "https://deltapulse.app/dashboard?message=MC1255410",
         "published": "2026-03-18T22:32:26.000Z",
@@ -2721,43 +2554,6 @@
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1251200"
-      },
-      {
-        "title": "Sensitivity labels available soon for Viva Engage communities",
-        "link": "https://deltapulse.app/dashboard?message=MC1250283",
-        "published": "2026-03-12T23:46:41.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1250283",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250283"
-      },
-      {
-        "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-        "link": "https://deltapulse.app/dashboard?message=MC1250279",
-        "published": "2026-03-12T23:42:55.000Z",
-        "source": "m365",
-        "m365Service": "Planner",
-        "m365AllServices": [
-          "Planner",
-          "Microsoft Copilot (Microsoft 365)"
-        ],
-        "m365Id": "MC1250279",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250279"
       },
       {
         "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
@@ -3016,24 +2812,6 @@
         "_normalized_url": "message_center:MC1251207"
       },
       {
-        "title": "(Updated) Planned Maintenance: Windows 365 Service",
-        "link": "https://deltapulse.app/dashboard?message=MC1251199",
-        "published": "2026-03-13T22:44:27.000Z",
-        "source": "m365",
-        "m365Service": "Windows 365",
-        "m365AllServices": [
-          "Windows 365"
-        ],
-        "m365Id": "MC1251199",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1251199"
-      },
-      {
         "title": "Prevent/Fix (Detected): Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
         "link": "https://deltapulse.app/dashboard?message=MC1251194",
         "published": "2026-03-13T22:37:03.000Z",
@@ -3088,76 +2866,22 @@
         "_normalized_url": "message_center:MC1250927"
       },
       {
-        "title": "Microsoft Edge: Copilot new tab page",
-        "link": "https://deltapulse.app/dashboard?message=MC1250274",
-        "published": "2026-03-12T23:41:53.000Z",
+        "title": "(Updated) Plan for change:Azure Network Connection health check enforcement for required Windows 365 endpoints",
+        "link": "https://deltapulse.app/dashboard?message=MC1245997",
+        "published": "2026-03-06T21:17:06.000Z",
         "source": "m365",
-        "m365Service": "Microsoft 365 suite",
+        "m365Service": "Windows 365",
         "m365AllServices": [
-          "Microsoft 365 suite"
+          "Windows 365"
         ],
-        "m365Id": "MC1250274",
+        "m365Id": "MC1245997",
         "m365Source": "message_center",
-        "m365Category": "stayInformed",
+        "m365Category": "planForChange",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250274"
-      },
-      {
-        "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in model-driven apps",
-        "link": "https://deltapulse.app/dashboard?message=MC1250069",
-        "published": "2026-03-12T19:18:24.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1250069",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250069"
-      },
-      {
-        "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in canvas apps",
-        "link": "https://deltapulse.app/dashboard?message=MC1250062",
-        "published": "2026-03-12T19:14:12.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1250062",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250062"
-      },
-      {
-        "title": "Windows Office Hours: March 19, 2026",
-        "link": "https://deltapulse.app/dashboard?message=MC1250021",
-        "published": "2026-03-12T17:55:36.090Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1250021",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250021"
+        "_normalized_url": "message_center:MC1245997"
       },
       {
         "title": "(Updated) Microsoft Entra passkeys on Windows now support phishing-resistant sign-in",
@@ -3285,6 +3009,61 @@
       }
     ],
     "launched_ga": [
+      {
+        "title": "Microsoft Teams: Recently used emojis sync across devices",
+        "link": "https://deltapulse.app/dashboard?message=MC1256307",
+        "published": "2026-03-19T22:26:54.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Teams",
+        "m365AllServices": [
+          "Microsoft Teams"
+        ],
+        "m365Id": "MC1256307",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256307"
+      },
+      {
+        "title": "Microsoft 365 Copilot: Planner Agent available in Frontier",
+        "link": "https://deltapulse.app/dashboard?message=MC1256306",
+        "published": "2026-03-19T22:26:23.000Z",
+        "source": "m365",
+        "m365Service": "Planner",
+        "m365AllServices": [
+          "Planner",
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1256306",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256306"
+      },
+      {
+        "title": "Microsoft Teams for Mac: Improved access to account management",
+        "link": "https://deltapulse.app/dashboard?message=MC1256301",
+        "published": "2026-03-19T22:23:38.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Teams",
+        "m365AllServices": [
+          "Microsoft Teams"
+        ],
+        "m365Id": "MC1256301",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1256301"
+      },
       {
         "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
         "link": "https://deltapulse.app/dashboard?message=MC1256117",
@@ -3995,24 +3774,6 @@
         "_normalized_url": "message_center:MC1251200"
       },
       {
-        "title": "(Updated) Planned Maintenance: Windows 365 Service",
-        "link": "https://deltapulse.app/dashboard?message=MC1251199",
-        "published": "2026-03-13T22:44:27.000Z",
-        "source": "m365",
-        "m365Service": "Windows 365",
-        "m365AllServices": [
-          "Windows 365"
-        ],
-        "m365Id": "MC1251199",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1251199"
-      },
-      {
         "title": "Prevent/Fix (Detected): Out-of-band update released for Windows Enterprise client devices running hotpatch updates",
         "link": "https://deltapulse.app/dashboard?message=MC1251194",
         "published": "2026-03-13T22:37:03.000Z",
@@ -4067,168 +3828,77 @@
         "_normalized_url": "message_center:MC1250927"
       },
       {
-        "title": "Power Platform – New Continuous Access Evaluation (CAE) announcement",
-        "link": "https://deltapulse.app/dashboard?message=MC1250351",
-        "published": "2026-03-13T03:42:00.000Z",
+        "title": "(Updated) Outlook: Delimiter setting admin policy",
+        "link": "https://deltapulse.app/dashboard?message=MC1239176",
+        "published": "2026-02-26T00:20:37.000Z",
         "source": "m365",
-        "m365Service": "Microsoft Dataverse",
+        "m365Service": "Exchange Online",
         "m365AllServices": [
-          "Microsoft Dataverse",
-          "Power Platform"
+          "Exchange Online"
         ],
-        "m365Id": "MC1250351",
+        "m365Id": "MC1239176",
         "m365Source": "message_center",
         "m365Category": "stayInformed",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250351"
+        "_normalized_url": "message_center:MC1239176"
       },
       {
-        "title": "Sensitivity labels available soon for Viva Engage communities",
-        "link": "https://deltapulse.app/dashboard?message=MC1250283",
-        "published": "2026-03-12T23:46:41.000Z",
+        "title": "(Updated) Microsoft 365 Copilot: Introducing infinite scroll for chat history",
+        "link": "https://deltapulse.app/dashboard?message=MC1237701",
+        "published": "2026-02-23T22:52:43.000Z",
         "source": "m365",
-        "m365Service": "Microsoft Viva",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
         "m365AllServices": [
-          "Microsoft Viva"
+          "Microsoft Copilot (Microsoft 365)",
+          "Microsoft 365 Copilot Chat"
         ],
-        "m365Id": "MC1250283",
+        "m365Id": "MC1237701",
         "m365Source": "message_center",
         "m365Category": "stayInformed",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250283"
+        "_normalized_url": "message_center:MC1237701"
       },
       {
-        "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-        "link": "https://deltapulse.app/dashboard?message=MC1250279",
-        "published": "2026-03-12T23:42:55.000Z",
-        "source": "m365",
-        "m365Service": "Planner",
-        "m365AllServices": [
-          "Planner",
-          "Microsoft Copilot (Microsoft 365)"
-        ],
-        "m365Id": "MC1250279",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250279"
-      },
-      {
-        "title": "Microsoft Edge: Copilot new tab page",
-        "link": "https://deltapulse.app/dashboard?message=MC1250274",
-        "published": "2026-03-12T23:41:53.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365 suite",
-        "m365AllServices": [
-          "Microsoft 365 suite"
-        ],
-        "m365Id": "MC1250274",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250274"
-      },
-      {
-        "title": "Improved copy and paste support for @mentions and shared contacts in Microsoft Teams",
-        "link": "https://deltapulse.app/dashboard?message=MC1250273",
-        "published": "2026-03-12T23:41:19.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Teams",
-        "m365AllServices": [
-          "Microsoft Teams"
-        ],
-        "m365Id": "MC1250273",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250273"
-      },
-      {
-        "title": "Introducing awards and certifications section in M365 profile card",
-        "link": "https://deltapulse.app/dashboard?message=MC1250272",
-        "published": "2026-03-12T23:40:52.000Z",
+        "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
+        "link": "https://deltapulse.app/dashboard?message=MC1249427",
+        "published": "2026-03-12T00:04:42.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
         "m365AllServices": [
           "Microsoft 365 apps"
         ],
-        "m365Id": "MC1250272",
+        "m365Id": "MC1249427",
         "m365Source": "message_center",
-        "m365Category": "stayInformed",
+        "m365Category": "planForChange",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250272"
+        "_normalized_url": "message_center:MC1249427"
       },
       {
-        "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in model-driven apps",
-        "link": "https://deltapulse.app/dashboard?message=MC1250069",
-        "published": "2026-03-12T19:18:24.000Z",
+        "title": "(Updated) Plan for change:Azure Network Connection health check enforcement for required Windows 365 endpoints",
+        "link": "https://deltapulse.app/dashboard?message=MC1245997",
+        "published": "2026-03-06T21:17:06.000Z",
         "source": "m365",
-        "m365Service": "Power Apps",
+        "m365Service": "Windows 365",
         "m365AllServices": [
-          "Power Apps"
+          "Windows 365"
         ],
-        "m365Id": "MC1250069",
+        "m365Id": "MC1245997",
         "m365Source": "message_center",
-        "m365Category": "stayInformed",
+        "m365Category": "planForChange",
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250069"
-      },
-      {
-        "title": "Power Apps - Public preview for Microsoft 365 Copilot chat in canvas apps",
-        "link": "https://deltapulse.app/dashboard?message=MC1250062",
-        "published": "2026-03-12T19:14:12.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1250062",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250062"
-      },
-      {
-        "title": "Windows Office Hours: March 19, 2026",
-        "link": "https://deltapulse.app/dashboard?message=MC1250021",
-        "published": "2026-03-12T17:55:36.090Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1250021",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250021"
+        "_normalized_url": "message_center:MC1245997"
       },
       {
         "title": "OneDrive: Set a custom name for the OneDrive sync folder",
@@ -4299,24 +3969,6 @@
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1246002"
-      },
-      {
-        "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
-        "link": "https://deltapulse.app/dashboard?message=MC1249427",
-        "published": "2026-03-12T00:04:42.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365 apps",
-        "m365AllServices": [
-          "Microsoft 365 apps"
-        ],
-        "m365Id": "MC1249427",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1249427"
       },
       {
         "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
@@ -4408,42 +4060,120 @@
         "m365TargetDate": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1234566"
-      },
-      {
-        "title": "(Updated) Microsoft Teams Rooms: Private chat for organizers and presenters in structured meetings and webinars",
-        "link": "https://deltapulse.app/dashboard?message=MC1247896",
-        "published": "2026-03-09T22:25:10.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Teams",
-        "m365AllServices": [
-          "Microsoft Teams"
-        ],
-        "m365Id": "MC1247896",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1247896"
       }
     ],
     "in_development": [
       {
-        "title": "Microsoft Edge: Security Update Alerts in the Edge management service",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
-        "published": "2026-03-18T23:15:26.000Z",
+        "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
+        "published": "2026-03-19T23:30:43.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558435",
+        "m365Id": "558679",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558435"
+        "_normalized_url": "roadmap:558679"
+      },
+      {
+        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Logged-in user details on the Purview device onboarding page",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=559028",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559028",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:559028"
+      },
+      {
+        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Endpoint DLP Device Status API",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=559027",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559027",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:559027"
+      },
+      {
+        "title": "Outlook: Font Improvements in Outlook for Android",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558936",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558936",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558936"
+      },
+      {
+        "title": "Microsoft Viva: Modernized content composition experience in Engage",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558935",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558935",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558935"
+      },
+      {
+        "title": "Microsoft Purview: Data Loss Prevention - Unmanaged cloud app discovery and protection with Microsoft Purview and Palo Alto Prisma Access",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558939",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558939",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558939"
+      },
+      {
+        "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558857",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558857",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558857"
       },
       {
         "title": "Microsoft Purview: Information Protection - Sensitivity label support in Engage",
@@ -4462,20 +4192,20 @@
         "_normalized_url": "roadmap:558684"
       },
       {
-        "title": "Microsoft Purview: Data Loss Prevention - Data Security Triage Agent summaries and categorizations for DLP alerts will be made available in DLP Alerts in Microsoft Defender XDR",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558860",
-        "published": "2026-03-17T22:45:46.000Z",
+        "title": "Microsoft Edge: Security Update Alerts in the Edge management service",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
+        "published": "2026-03-18T23:15:26.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558860",
+        "m365Id": "558435",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558860"
+        "_normalized_url": "roadmap:558435"
       },
       {
         "title": "Microsoft Purview: eDiscovery - review set limit increase",
@@ -4494,20 +4224,36 @@
         "_normalized_url": "roadmap:558858"
       },
       {
-        "title": "Microsoft Purview: Information Protection - Exclude modern groups / include dynamic security groups support for sensitivity label policies",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558685",
-        "published": "2026-03-16T23:00:10.000Z",
+        "title": "Microsoft Purview: Data Loss Prevention - Data Security Triage Agent summaries and categorizations for DLP alerts will be made available in DLP Alerts in Microsoft Defender XDR",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558860",
+        "published": "2026-03-17T22:45:46.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558685",
+        "m365Id": "558860",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558685"
+        "_normalized_url": "roadmap:558860"
+      },
+      {
+        "title": "Microsoft Purview: Information Protection - Policy sync status for M365 Label publishing policies",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558687",
+        "published": "2026-03-16T23:00:10.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558687",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558687"
       },
       {
         "title": "Microsoft Purview: Information Protection - Sensitivity label inheritance for Teams meeting artifacts",
@@ -4542,36 +4288,20 @@
         "_normalized_url": "roadmap:557681"
       },
       {
-        "title": "Microsoft Purview: Information Protection - Policy sync status for M365 Label publishing policies",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558687",
+        "title": "Microsoft Purview: Information Protection - Exclude modern groups / include dynamic security groups support for sensitivity label policies",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558685",
         "published": "2026-03-16T23:00:10.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558687",
+        "m365Id": "558685",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558687"
-      },
-      {
-        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558688",
-        "published": "2026-03-13T22:00:48.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558688",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558688"
+        "_normalized_url": "roadmap:558685"
       },
       {
         "title": "Microsoft Teams: Honor Windows Do not disturb setting",
@@ -4606,6 +4336,22 @@
         "_normalized_url": "roadmap:558681"
       },
       {
+        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558688",
+        "published": "2026-03-13T22:00:48.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558688",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": "In development",
+        "m365TargetDate": null,
+        "lifecycle": "in_development",
+        "_normalized_url": "roadmap:558688"
+      },
+      {
         "title": "Windows 365: Windows 365 Link - Market Expansion",
         "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558253",
         "published": "2026-03-12T23:00:54.000Z",
@@ -4620,134 +4366,6 @@
         "m365TargetDate": null,
         "lifecycle": "in_development",
         "_normalized_url": "roadmap:558253"
-      },
-      {
-        "title": "Microsoft Purview: Data Loss Prevention – File Quarantine Action in DLP for SharePoint/OneDrive",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=557190",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "557190",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:557190"
-      },
-      {
-        "title": "Microsoft Purview: Data Security Investigations – analyze files tied to audit log activities",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558548",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558548",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558548"
-      },
-      {
-        "title": "Microsoft Teams: Enhancements to Interpreter quality and support for Traditional Chinese",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558434",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558434",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558434"
-      },
-      {
-        "title": "Microsoft Teams: Spoken language detection is now automatic",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558543",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558543"
-      },
-      {
-        "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558547",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558547",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558547"
-      },
-      {
-        "title": "Microsoft Purview: Data Security Investigations – role-based access simplification",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558546",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558546",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558546"
-      },
-      {
-        "title": "Microsoft Teams: Video recap in Teams",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558540",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558540",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558540"
-      },
-      {
-        "title": "SharePoint: Plan and Create Pages with AI",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558441",
-        "published": "2026-03-12T23:00:54.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558441",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558441"
       },
       {
         "title": "Microsoft Teams: Delete meeting generated content in recap",
@@ -4798,52 +4416,20 @@
         "_normalized_url": "roadmap:557970"
       },
       {
-        "title": "Microsoft Teams: Run SMB admin tasks faster with Microsoft 365 Admin Agent in Microsoft Teams",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558255",
-        "published": "2026-03-11T23:30:17.000Z",
+        "title": "Microsoft Teams: Spoken language detection is now automatic",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558543",
+        "published": "2026-03-12T23:00:54.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558255",
+        "m365Id": "558543",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": "In development",
         "m365TargetDate": null,
         "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558255"
-      },
-      {
-        "title": "Microsoft Edge: Copilot New Tab Page",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558256",
-        "published": "2026-03-05T00:15:18.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558256",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:558256"
-      },
-      {
-        "title": "Microsoft Teams: Chat for organizers and presenters in structured meetings and webinars on Teams Rooms on Windows",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=557165",
-        "published": "2026-02-19T00:15:25.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "557165",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": "In development",
-        "m365TargetDate": null,
-        "lifecycle": "in_development",
-        "_normalized_url": "roadmap:557165"
+        "_normalized_url": "roadmap:558543"
       }
     ],
     "retiring": []
@@ -4861,15 +4447,15 @@
     "2026-03-16",
     "2026-03-13",
     "2026-03-12",
-    "2026-03-11",
     "2026-03-10",
     "2026-03-09",
     "2026-03-06",
-    "2026-03-05",
     "2026-03-04",
     "2026-03-03",
     "2026-03-02",
     "2026-02-27",
+    "2026-02-26",
+    "2026-02-23",
     "2026-02-20",
     "2026-02-19",
     "2026-02-18"

@@ -1,15 +1,114 @@
 {
-  "lastUpdated": "2026-03-19T16:54:51.704267+00:00",
-  "totalArticles": 221,
+  "lastUpdated": "2026-03-20T08:42:02.800114+00:00",
+  "totalArticles": 222,
   "articles": [
+    {
+      "title": "Power Apps Vibe Experience: Build Business Apps at the Speed of Ideas",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/power-apps-vibe-experience-build-business-apps-at-the-speed-of/ba-p/4502347",
+      "published": "2026-03-20T07:00:00+00:00",
+      "summary": "Power Apps Vibe Experience: Building Business Applications with AI in Minutes Organizations today operate in a fast-paced digital environment where new business challenges emerge constantly. Whether it’s managing internal workflows, tracking projects, or collecting customer feedback, businesses...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "harshul05"
+    },
+    {
+      "title": "Centralized Monitoring in Azure",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/centralized-monitoring-in-azure/ba-p/4504027",
+      "published": "2026-03-20T06:17:50+00:00",
+      "summary": "Centralized Monitoring in Azure: Automating Diagnostic Settings Across All Resources Introduction In modern cloud environments, observability is not optional—it’s foundational. As organizations scale their Azure footprint, ensuring consistent monitoring across hundreds (or thousands) of resources...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "Shikhaghildiyal"
+    },
+    {
+      "title": "Heroku Set the Standard. We're Just Removing the Ceiling",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/heroku-set-the-standard-we-re-just-removing-the-ceiling/ba-p/4504021",
+      "published": "2026-03-20T05:15:54+00:00",
+      "summary": "For a generation of developers, Heroku was where it clicked — the moment you realized shipping software didn't have to mean fighting infrastructure. Push your code, get a URL, focus on your product. That idea changed an industry, and a lot of us built our first real apps on it. Now that Heroku has...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "simonjj"
+    },
+    {
+      "title": "Introducing Azure Managed Grafana MCP: The Managed Telemetry Gateway for AI Agents",
+      "link": "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-managed-grafana-mcp-the-managed-telemetry/ba-p/4503619",
+      "published": "2026-03-19T20:10:08+00:00",
+      "summary": "AI agents are rapidly becoming a core part of how teams build, operate, and improve cloud systems, from coding assistants to autonomous remediation workflows. To deliver on that promise in the enterprise, agents need a secure, governed way to access real production telemetry. Azure Managed Grafana...",
+      "blog": "Azure Observability",
+      "blogId": "azureobservabilityblog",
+      "author": "aayodeji"
+    },
+    {
+      "title": "Building an Enterprise Platform for Inference at Scale",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-an-enterprise-platform-for-inference-at-scale/ba-p/4498820",
+      "published": "2026-03-19T19:43:23+00:00",
+      "summary": "Architecture Decisions With the optimization stack in place, the next layer of decisions is architectural — how you distribute compute across GPUs, nodes, and deployment environments to match your model size and traffic profile. GPU Parallelism Strategy on AKS Strategy How It Works When to Use...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "bobmital"
+    },
+    {
+      "title": "Remote MCP Server preview in Microsoft Foundry",
+      "link": "https://devblogs.microsoft.com/devops/remote-mcp-server-preview-in-microsoft-foundry/",
+      "published": "2026-03-19T17:48:10+00:00",
+      "summary": "Earlier this week we release the public preview for our Azure DevOps MCP Server. Today we are excited to let you know that the Azure DevOps MCP Server is now available to use in Microsoft Foundry. For those who are new to Foundry, Microsoft Foundry is a unified platform for building and managing AI...",
+      "blog": "Azure DevOps Blog",
+      "blogId": "azuredevops",
+      "author": "Dan Hellem"
+    },
+    {
+      "title": "Azure Front Door: Resiliency Series – Part 2: Faster recovery (RTO)",
+      "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-resiliency-series-part-2-faster-recovery-rto/ba-p/4503091",
+      "published": "2026-03-19T17:00:54+00:00",
+      "summary": "In Part 1 of this blog series, we outlined our four‑pillar strategy for resiliency in Azure Front Door: configuration resiliency, data plane resiliency, tenant isolation, and accelerated Recovery Time Objective (RTO). Together, these pillars help Azure Front Door remain continuously available and...",
+      "blog": "Azure Networking",
+      "blogId": "azurenetworkingblog",
+      "author": "AbhishekTiwari"
+    },
+    {
+      "title": "[In preview] Public Preview: Azure Databricks OneLake Catalog Federation",
+      "link": "https://azure.microsoft.com/updates?id=558927",
+      "published": "2026-03-19T17:00:53+00:00",
+      "summary": "You can now enable OneLake catalog federation in Azure Databricks to query Microsoft Fabric OneLake data without copying or moving it. By connecting Unity Catalog to a OneLake catalog, Azure Databricks automatically syncs schemas and tables so Fabric Lake",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
     {
       "title": "Migrating to the next generation of Virtual Nodes on Azure Container Instances (ACI)",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-to-the-next-generation-of-virtual-nodes-on-azure/ba-p/4496565",
-      "published": "2026-03-19T16:51:42+00:00",
+      "published": "2026-03-19T16:55:56+00:00",
       "summary": "What is ACI/Virtual Nodes? Azure Container Instances (ACI) is a fully-managed serverless container platform which gives you the ability to run containers on-demand without provisioning infrastructure. Virtual Nodes on ACI allows you to run Kubernetes pods managed by an AKS cluster in a serverless...",
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "adamsharif-msft"
+    },
+    {
+      "title": "Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027",
+      "link": "https://azure.microsoft.com/updates?id=548543",
+      "published": "2026-03-19T16:30:27+00:00",
+      "summary": "On May 31, 2027, Microsoft Azure will retire the following HC-series virtual machine (VMs) sizes: Standard_HC44rs, Standard_HC44-16rs, and Standard_HC44-32rs. To ensure continuity and improved performance, we recommend transitioning to one of the current‑",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027",
+      "link": "https://azure.microsoft.com/updates?id=548525",
+      "published": "2026-03-19T16:30:27+00:00",
+      "summary": "On May 31, 2027, Microsoft Azure will retire the following HBv2-series virtual machine (VMs) sizes: Standard_HB120rs_v2, Standard_HB120-96rs_v2, Standard_HB120-64rs_v2, Standard_HB120-32rs_v2, and Standard_HB120-16rs_v2. To ensure continuity and improved",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027",
+      "link": "https://azure.microsoft.com/updates?id=548497",
+      "published": "2026-03-19T16:30:27+00:00",
+      "summary": "On May 31, 2027, Microsoft Azure will retire the follow NP-series virtual machine (VMs) sizes: Standard_NP10s, Standard_NP20s, and Standard_NP40s. To ensure continuity and optimal performance, we recommend transitioning to one of the following Azure GPU V",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
     },
     {
       "title": "Azure Bastion: Enterprise-grade secure access made simple",
@@ -37,15 +136,6 @@
       "blog": "ISE Developer Blog",
       "blogId": "iseblog",
       "author": "Maho Pacheco"
-    },
-    {
-      "title": "Introducing Azure Managed Grafana MCP: The Managed Data Gateway for AI Agents",
-      "link": "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-managed-grafana-mcp-the-managed-data-gateway/ba-p/4503619",
-      "published": "2026-03-18T23:30:40+00:00",
-      "summary": "AI agents are rapidly becoming a core part of how teams build, operate, and improve cloud systems, from coding assistants to autonomous remediation workflows. To deliver on that promise in the enterprise, agents need a secure, governed way to access real production telemetry. Azure Managed Grafana...",
-      "blog": "Azure Observability",
-      "blogId": "azureobservabilityblog",
-      "author": "aayodeji"
     },
     {
       "title": "Azure NCv6 Virtual Machines: Enhancements and GA Transition",
@@ -246,15 +336,6 @@
       "author": "Yo-Lei Chen, Tauseef Siddique, Carlos Robles"
     },
     {
-      "title": "Azure Front Door: Resiliency Series – Part 2: Faster recovery (RTO)",
-      "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-resiliency-series-part-2-faster-recovery-rto/ba-p/4503091",
-      "published": "2026-03-18T15:51:35+00:00",
-      "summary": "In Part 1 of this blog series, we outlined our four‑pillar strategy for resiliency in Azure Front Door: configuration resiliency, data plane resiliency, tenant isolation, and accelerated Recovery Time Objective (RTO). Together, these pillars help Azure Front Door remain continuously available and...",
-      "blog": "Azure Networking",
-      "blogId": "azurenetworkingblog",
-      "author": "AbhishekTiwari"
-    },
-    {
       "title": "Announcing savings plan for databases: flexible savings for modern, evolving workloads",
       "link": "https://techcommunity.microsoft.com/t5/finops-blog/announcing-savings-plan-for-databases-flexible-savings-for/ba-p/4503107",
       "published": "2026-03-18T13:05:06+00:00",
@@ -322,15 +403,6 @@
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-llm-inference-optimization-stack-a-prioritized-playbook-for/ba-p/4498818",
       "published": "2026-03-17T18:29:02+00:00",
       "summary": "The Solutions — An Optimization Stack for Enterprise Inference The optimizations below are ordered by implementation priority — starting with the highest-leverage. The Three-Layer Serving Stack Most enterprise LLM deployments operate across three layers, each responsible for a different part of the...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "bobmital"
-    },
-    {
-      "title": "Building an Enterprise Platform for Inference at Scale",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-an-enterprise-platform-for-inference-at-scale/ba-p/4498820",
-      "published": "2026-03-17T18:28:24+00:00",
-      "summary": "Architecture Decisions With the optimization stack in place, the next layer of decisions is architectural — how you distribute compute across GPUs, nodes, and deployment environments to match your model size and traffic profile. GPU Parallelism Strategy on AKS Strategy How It Works When to Use...",
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "bobmital"
@@ -1371,15 +1443,6 @@
       "author": "Lee_Stott"
     },
     {
-      "title": "Get started with PagerDuty MCP server and PagerDuty SRE Agent in Azure SRE Agent",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-and-pagerduty-sre-agent-in/ba-p/4497124",
-      "published": "2026-02-27T01:39:14+00:00",
-      "summary": "Overview The PagerDuty MCP server is a cloud-hosted bridge between your PagerDuty account and Azure SRE Agent. Once configured, it enables real-time interaction with incidents, on-call schedules, services, teams, escalation policies, event orchestration, incident workflows, status pages, and more...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "dbandaru"
-    },
-    {
       "title": "Azure DocumentDB: A Fully Managed MongoDB-Compatible Database",
       "link": "https://devblogs.microsoft.com/cosmosdb/azure-documentdb-mongodb-compatible/",
       "published": "2026-02-27T00:58:03+00:00",
@@ -1504,15 +1567,6 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "Lee_Stott"
-    },
-    {
-      "title": "Building a Dual Sidecar Pod: Combining GitHub Copilot SDK with Skill Server on Kubernetes",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-dual-sidecar-pod-combining-github-copilot-sdk-with/ba-p/4497080",
-      "published": "2026-02-26T08:00:00+00:00",
-      "summary": "Why the Sidecar Pattern? In Kubernetes, a Pod is the smallest deployable unit — a single Pod can contain multiple containers that share the same network namespace and storage volumes. The Sidecar pattern places auxiliary containers alongside the main application container within the same Pod. These...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "kinfey"
     },
     {
       "title": "Building a Secure MCP Server with OAuth 2.1 and Azure AD: Lessons from the Field",
@@ -1945,67 +1999,22 @@
       "blog": "Telecommunications",
       "blogId": "telecommunications-industry-blog",
       "author": "rickliev"
-    },
-    {
-      "title": "JMESPath support comes to azd JSON output",
-      "link": "https://devblogs.microsoft.com/azure-sdk/azd-jmespath-query-support/",
-      "published": "2026-02-17T18:19:18+00:00",
-      "summary": "Run JMESPath queries on azd JSON output, including error messages. The post JMESPath support comes to azd JSON output appeared first on Azure SDK Blog.",
-      "blog": "Azure SDK Blog",
-      "blogId": "azuresdkblog",
-      "author": "Scott Addie"
-    },
-    {
-      "title": "Public Preview: Automatic zone balance for Virtual Machine Scale Sets",
-      "link": "https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-automatic-zone-balance-for-virtual-machine-scale/ba-p/4494476",
-      "published": "2026-02-17T17:30:00+00:00",
-      "summary": "We're excited to announce the public preview of automatic zone balance for Azure Virtual Machine Scale Sets. This new capability helps you maintain zone-resilient workloads with zero manual intervention. Automatic zone balance continuously monitors your scale set and redistributes VMs across...",
-      "blog": "Azure Compute",
-      "blogId": "azurecompute",
-      "author": "HilaryWang"
-    },
-    {
-      "title": "Dear Copilot, can you help me with SQL?",
-      "link": "https://devblogs.microsoft.com/azure-sql/dear-copilot-azure-sql/",
-      "published": "2026-02-17T17:00:59+00:00",
-      "summary": "Perhaps we missed it at first, but Copilot is more than comfortable with SQL. This goes beyond autocomplete. This is moving from nothing to a working database without leaving our tools. Have we really arrived? Yes, sort of. For database engineers and app engineers alike, we have crossed an...",
-      "blog": "Azure SQL Dev Corner",
-      "blogId": "azuresqlblog",
-      "author": "Jerry Nixon"
-    },
-    {
-      "title": "[Launched] Generally Available: Instant access support for incremental snapshots of Azure Premium SSD v2 and Ultra Disk",
-      "link": "https://azure.microsoft.com/updates?id=545784",
-      "published": "2026-02-17T17:00:32+00:00",
-      "summary": "Announcing the General Availability of instant access support for incremental snapshots of Premium SSD v2 (Pv2) and Ultra Disk. This new capability enables you to restore new disks immediately after creating snapshots of Pv2 and Ultra disks. Newly restore",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "RDP Shortpath (UDP) over Private Link is now generally available",
-      "link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/rdp-shortpath-udp-over-private-link-is-now-generally-available/ba-p/4494644",
-      "published": "2026-02-17T17:00:00+00:00",
-      "summary": "UDP support over Private Link for Azure Virtual Desktop is now generally available. This release enables a direct, high‑performance, UDP‑based RDP connection between AVD session hosts and clients over Azure Private Link using RDP Shortpath for managed networks. This capability complements the...",
-      "blog": "Azure Virtual Desktop",
-      "blogId": "azurevirtualdesktopblog",
-      "author": "Rinku_Dalwani"
     }
   ],
   "summaryWindowDays": 7,
   "summaryPublishingDays": [
+    "2026-03-20",
     "2026-03-19",
     "2026-03-18",
     "2026-03-17",
     "2026-03-16",
     "2026-03-14",
-    "2026-03-13",
-    "2026-03-12"
+    "2026-03-13"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 15,
-  "summary": "- In preview:\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/updates?id=558169)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/updates?id=558155)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/updates?id=558150)\n  • [Public Preview: Data API builder with built-in GitHub Copilot in MSSQL extension](https://azure.microsoft.com/updates?id=558178)\n  • [Public Preview: Entra ID-Based Access for Azure Blob Storage SFTP](https://azure.microsoft.com/updates?id=558662)\n\n- Launched / Generally Available:\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558121)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/updates?id=557917)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/updates?id=558134)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/updates?id=558810)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/updates?id=558183)\n\n- Retiring:\n  • [Retirement: Emissions Impact Dashboard for Azure](https://azure.microsoft.com/updates?id=558278)\n  • [Retirement: Azure VMware Solution AV36P and AV52 node retirement on June 30, 2029](https://azure.microsoft.com/updates?id=557094)\n  • [Retirement: Support for Windows Server 2016 Marketplace images on Azure Batch pools will end on January 12, 2027](https://azure.microsoft.com/updates?id=549077)\n  • [Retirement: Migration of Azure Batch Low-Priority VMs to Spot VMs in early March](https://azure.microsoft.com/updates?id=543279)\n  • [Retirement: End of life reminder of NVv3 and NVv4-series Azure virtual machine in Azure Batch pools](https://azure.microsoft.com/updates?id=516070)\n\n- In development:\n  • none noted in selected window",
+  "summary": "- In preview:\n  • [Public Preview: Azure Databricks OneLake Catalog Federation](https://azure.microsoft.com/updates?id=558927)\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/updates?id=558169)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/updates?id=558155)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/updates?id=558150)\n  • [Public Preview: Data API builder with built-in GitHub Copilot in MSSQL extension](https://azure.microsoft.com/updates?id=558178)\n\n- Launched / Generally Available:\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558121)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/updates?id=557917)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/updates?id=558134)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/updates?id=558810)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/updates?id=558183)\n\n- Retiring:\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548543)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548525)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548497)\n  • [Retirement: Emissions Impact Dashboard for Azure](https://azure.microsoft.com/updates?id=558278)\n  • [Retirement: Azure VMware Solution AV36P and AV52 node retirement on June 30, 2029](https://azure.microsoft.com/updates?id=557094)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 13th March 2026",
     "url": "https://www.youtube.com/watch?v=17uHDPjdkto",
