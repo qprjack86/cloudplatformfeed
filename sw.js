@@ -1,4 +1,4 @@
-const CACHE_NAME = "cloudplatformfeed-v1";
+const CACHE_NAME = "cloudplatformfeed-v2";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
@@ -6,6 +6,8 @@ const STATIC_ASSETS = [
   "/js/clarity.js",
   "/js/app.js",
   "/manifest.json",
+  "/icons/atech-192.png",
+  "/icons/atech-512.png",
 ];
 
 function shouldCache(response) {
@@ -77,6 +79,11 @@ self.addEventListener("fetch", (event) => {
     url.pathname.includes("feeds.json") ||
     url.pathname.includes("feed.xml") ||
     url.pathname.includes("m365_data.json");
+  var isIconAsset =
+    url.pathname.startsWith("/icons/") ||
+    url.pathname.endsWith(".ico") ||
+    url.pathname.endsWith(".png") ||
+    url.pathname.endsWith(".svg");
   var isAppShell = STATIC_ASSETS.includes(url.pathname) || event.request.mode === "navigate";
 
   // Network-first for feed data (always get fresh data)
@@ -87,6 +94,12 @@ self.addEventListener("fetch", (event) => {
 
   // Network-first for the app shell so new deploys are picked up quickly.
   if (isSameOrigin && isAppShell) {
+    event.respondWith(networkFirst(event.request));
+    return;
+  }
+
+  // Network-first for icons so branding updates are visible without hard refresh.
+  if (isSameOrigin && isIconAsset) {
     event.respondWith(networkFirst(event.request));
     return;
   }
