@@ -132,6 +132,31 @@
     return date ? date.toLocaleDateString(undefined, options) : "";
   }
 
+  function formatM365TargetDate(value) {
+    if (!value) return "";
+    var raw = String(value).trim();
+    if (!raw) return "";
+
+    var monthOnly = /^(\d{4})-(\d{2})$/.exec(raw);
+    if (monthOnly) {
+      var monthDate = new Date(Number(monthOnly[1]), Number(monthOnly[2]) - 1, 1);
+      return formatLocalDate(monthDate, { month: "short", year: "numeric" });
+    }
+
+    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
+    if (dayMatch) {
+      var dayDate = new Date(Number(dayMatch[1]), Number(dayMatch[2]) - 1, Number(dayMatch[3]));
+      return formatLocalDate(dayDate, { day: "numeric", month: "short", year: "numeric" });
+    }
+
+    var parsed = parseDateValue(raw);
+    if (parsed) {
+      return formatLocalDate(parsed, { day: "numeric", month: "short", year: "numeric" });
+    }
+
+    return raw;
+  }
+
   function formatLocalDateTime(date) {
     return date
       ? date.toLocaleDateString(undefined, {
@@ -980,7 +1005,47 @@
          "<span>📅 " + dateStr + "</span>")
       : ("<span>✍️ " + escapeHtml(article.author) + "</span>" +
          "<span>📅 " + dateStr + "</span>");
-    var summary = article.summary || "No additional information available.";
+    var summary = isM365
+      ? String(article.summary || "").trim()
+      : (article.summary || "No additional information available.");
+
+    var m365TagsHtml = "";
+    if (isM365) {
+      var m365Status = String(article.m365Status || "").trim();
+      var releasePhase = LIFECYCLE_LABELS[article.lifecycle] || "";
+      var expectedRelease = formatM365TargetDate(article.m365TargetDate);
+      var tags = [];
+
+      if (m365Status) {
+        tags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">Status:</span> ' +
+          escapeHtml(m365Status) +
+          "</span>"
+        );
+      }
+      if (releasePhase) {
+        tags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">Release Phase:</span> ' +
+          escapeHtml(releasePhase) +
+          "</span>"
+        );
+      }
+      if (expectedRelease) {
+        tags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">Expected Release:</span> ' +
+          escapeHtml(expectedRelease) +
+          "</span>"
+        );
+      }
+
+      if (tags.length) {
+        m365TagsHtml = '<div class="m365-tags">' + tags.join("") + "</div>";
+      }
+    }
+
+    var summaryHtml = summary
+      ? ('<p class="article-summary">' + escapeHtml(summary) + "</p>")
+      : "";
 
     return (
       '<article class="article-card">' +
@@ -999,7 +1064,8 @@
       '<div class="article-meta">' +
       metaContent +
       "</div>" +
-      '<p class="article-summary">' + escapeHtml(summary) + "</p>" +
+      m365TagsHtml +
+      summaryHtml +
       '<div class="share-buttons">' +
       "</div>" +
       "</article>"

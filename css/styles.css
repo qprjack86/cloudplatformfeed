@@ -523,6 +523,31 @@ main {
   overflow: hidden;
 }
 
+.m365-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.m365-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+
+.m365-tag-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
 .card-actions {
   display: flex;
   gap: 0.4rem;
