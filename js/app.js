@@ -426,6 +426,16 @@
     return date;
   }
 
+  function startOfCurrentLocalWeek() {
+    var today = startOfLocalDay(new Date());
+    var dayOfWeek = today.getDay();
+    // Use Monday as week start: Mon=0, Tue=1, ..., Sun=6.
+    var mondayOffset = (dayOfWeek + 6) % 7;
+    var weekStart = new Date(today);
+    weekStart.setDate(today.getDate() - mondayOffset);
+    return weekStart;
+  }
+
   // ===== Initialize =====
   async function init() {
     loadTheme();
@@ -784,7 +794,7 @@
       var cutoff = startOfLocalDay(now);
       switch (dateVal) {
         case "today": break;
-        case "week": cutoff = localDaysAgo(7); break;
+        case "week": cutoff = startOfCurrentLocalWeek(); break;
         case "month": cutoff = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate()); break;
       }
       result = result.filter(function (a) {
@@ -897,8 +907,7 @@
     var today = startOfLocalDay(new Date());
     var yesterday = new Date(today);
     yesterday.setDate(yesterday.getDate() - 1);
-    var weekAgo = new Date(today);
-    weekAgo.setDate(weekAgo.getDate() - 7);
+    var weekStart = startOfCurrentLocalWeek();
 
     list.forEach(function (article) {
       var date = getArticleDate(article);
@@ -908,7 +917,7 @@
         groups["Today"].push(article);
       } else if (date >= yesterday) {
         groups["Yesterday"].push(article);
-      } else if (date >= weekAgo) {
+      } else if (date >= weekStart) {
         groups["This Week"].push(article);
       } else {
         var monthKey = formatLocalDate(date, {
