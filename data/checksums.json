@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-20T10:39:42.076602+00:00",
+  "generatedAt": "2026-03-20T11:02:34.571838+00:00",
   "artifacts": [
     {
       "path": "data/feeds.json",
       "algorithm": "sha256",
-      "value": "24f69cbdbbcbc31fb72ca9ec1134651ea55058085124312af2d634176a9b0b93",
-      "generatedAt": "2026-03-20T10:39:42.076602+00:00"
+      "value": "f3bfb242576122aeca176d29f2029b7a25d407c3b1f57dc37963ed4ca1c9eeed",
+      "generatedAt": "2026-03-20T11:02:34.571838+00:00"
     },
     {
       "path": "data/feed.xml",
       "algorithm": "sha256",
-      "value": "58886a921c228c473f99e9d70eb547f163fb0c0b9959b0df15d6b6841ec64940",
-      "generatedAt": "2026-03-20T10:39:42.076602+00:00"
+      "value": "6dc081226a315b89b103ed9b5a86968525768018ca4bef7523412c0a96c4d9d2",
+      "generatedAt": "2026-03-20T11:02:34.571838+00:00"
     }
   ]
 }

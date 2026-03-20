@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-20T10:39:42.016172+00:00",
-  "totalArticles": 223,
+  "lastUpdated": "2026-03-20T11:02:34.547622+00:00",
+  "totalArticles": 222,
   "articles": [
     {
       "title": "Designing an Azure Disaster Recovery Strategy for Enterprise Workloads",
@@ -1999,15 +1999,6 @@
       "blog": "Azure Network Security",
       "blogId": "azurenetworksecurityblog",
       "author": "SaleemBseeu"
-    },
-    {
-      "title": "Reimagining Network Operations: How Microsoft NetAI Tackles Hyperscale Challenges",
-      "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-network-operations-how-microsoft-netai-tackles/ba-p/4470572",
-      "published": "2026-02-18T10:41:47+00:00",
-      "summary": "The Business Imperative: Why Network Operations Must Change Modern network operators face a perfect storm of challenges: Exponential Growth in Events and Maintenance Network events and maintenance activities are increasing at an unprecedented rate. According to Microsoft’s analysis, weekly network...",
-      "blog": "Telecommunications",
-      "blogId": "telecommunications-industry-blog",
-      "author": "rickliev"
     }
   ],
   "summaryWindowDays": 7,
