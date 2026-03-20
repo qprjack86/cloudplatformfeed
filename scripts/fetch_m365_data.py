@@ -23,6 +23,7 @@ SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
 # DeltaPulse MCP Endpoint Configuration
 DELTAPULSE_MCP_ENDPOINT = "https://deltapulse.app/mcp"
 DELTAPULSE_PRODUCTS_API = "https://deltapulse.app/mcp"
+DELTAPULSE_ROADMAP_ITEM_API = "https://deltapulse.app/api/roadmap/items"
 
 # Data configuration
 M365_DATA_OUTPUT = REPO_ROOT / "data" / "m365_data.json"
@@ -227,6 +228,23 @@ def call_mcp_fetch_metadata(session: requests.Session, item_id: str) -> dict:
         return {}
 
 
+def call_roadmap_item_details(session: requests.Session, item_id: str) -> dict:
+    """Fetch roadmap item details from DeltaPulse public item API."""
+    if not item_id:
+        return {}
+
+    try:
+        response = session.get(
+            f"{DELTAPULSE_ROADMAP_ITEM_API}/{item_id}",
+            timeout=MCP_REQUEST_TIMEOUT,
+        )
+        response.raise_for_status()
+        payload = response.json()
+        return payload if isinstance(payload, dict) else {}
+    except Exception:
+        return {}
+
+
 def _first_non_empty(item: dict, keys: tuple[str, ...]):
     """Return first non-empty value from candidate keys."""
     for key in keys:
@@ -256,6 +274,10 @@ def resolve_m365_target_date(item: dict):
         "deploymentDate",
     ))
     if direct is not None:
+        if isinstance(direct, str):
+            normalized = re.sub(r"\b([CF]Y)(\d{4})\b", r"\2", direct).strip()
+            normalized = re.sub(r"\s+", " ", normalized)
+            return normalized
         return direct
 
     months = item.get("months")
@@ -487,6 +509,27 @@ def fetch_m365_items(session: requests.Session) -> list:
     print(f"  - Enriching metadata for {len(by_key)} unique items...")
     for item in by_key.values():
         item_id = str(item.get("id", "")).strip()
+        source = str(item.get("source", "")).strip().lower()
+
+        roadmap_details = {}
+        if source == "roadmap":
+            roadmap_details = call_roadmap_item_details(session, item_id)
+            for field in (
+                "description",
+                "product",
+                "status",
+                "releaseDate",
+                "createdDate",
+                "modifiedDate",
+                "lastUpdated",
+                "cloudInstances",
+                "releasePhase",
+                "platforms",
+                "thirdPartyLinks",
+            ):
+                if field in roadmap_details and (field not in item or item.get(field) in (None, "", [])):
+                    item[field] = roadmap_details.get(field)
+
         metadata = call_mcp_fetch_metadata(session, item_id)
         if not metadata:
             continue

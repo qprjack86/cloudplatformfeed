@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-20T10:39:56.634539+00:00",
+  "generatedAt": "2026-03-20T10:50:58.043275+00:00",
   "artifacts": [
     {
-      "path": "/home/runner/work/azurenewsfeed/azurenewsfeed/data/m365_data.json",
+      "path": "/home/jack/azurenewsfeed/data/m365_data.json",
       "algorithm": "sha256",
-      "value": "c33d026c75b3837b0a9ead44d433299258ddb4b15a9e614f643d360a34014d67",
-      "generatedAt": "2026-03-20T10:39:56.634539+00:00"
+      "value": "7d5e6f550b49964d9174414a0fe02e50884b28c45f6b6944bfcdc0f7033d9a23",
+      "generatedAt": "2026-03-20T10:50:58.043275+00:00"
     }
   ]
 }

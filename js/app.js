@@ -137,6 +137,11 @@
     var raw = String(value).trim();
     if (!raw) return "";
 
+    var cycleMonth = /^([A-Za-z]+)\s+(?:CY|FY)(\d{4})$/.exec(raw);
+    if (cycleMonth) {
+      raw = cycleMonth[1] + " " + cycleMonth[2];
+    }
+
     var monthOnly = /^(\d{4})-(\d{2})$/.exec(raw);
     if (monthOnly) {
       var monthDate = new Date(Number(monthOnly[1]), Number(monthOnly[2]) - 1, 1);

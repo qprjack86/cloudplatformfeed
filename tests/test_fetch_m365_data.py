@@ -224,6 +224,21 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
             "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
         )
 
+    def test_roadmap_item_uses_release_date_for_target_date(self):
+        """Roadmap items should preserve DeltaPulse releaseDate for expected release display."""
+        item = {
+            "id": "558679",
+            "title": "Teams preview improvements",
+            "source": "roadmap",
+            "status": "In development",
+            "service": ["Microsoft Teams"],
+            "releaseDate": "June CY2026",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertEqual(article["m365TargetDate"], "June 2026")
+
     def test_published_date_falls_back_through_fields(self):
         """Items without publishedDate should try other date fields."""
         item = {
