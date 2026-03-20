@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-20T08:42:02.800114+00:00",
-  "totalArticles": 222,
+  "lastUpdated": "2026-03-20T10:39:42.016172+00:00",
+  "totalArticles": 223,
   "articles": [
+    {
+      "title": "Designing an Azure Disaster Recovery Strategy for Enterprise Workloads",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/designing-an-azure-disaster-recovery-strategy-for-enterprise/ba-p/4504142",
+      "published": "2026-03-20T10:08:28+00:00",
+      "summary": "Introduction As organizations accelerate their cloud adoption journey, ensuring resiliency and disaster recovery (DR) becomes a foundational requirement for maintaining business continuity. In large-scale Azure environments, customers often operate critical workloads in a primary region and later...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "Shikhaghildiyal"
+    },
     {
       "title": "Power Apps Vibe Experience: Build Business Apps at the Speed of Ideas",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/power-apps-vibe-experience-build-business-apps-at-the-speed-of/ba-p/4502347",
