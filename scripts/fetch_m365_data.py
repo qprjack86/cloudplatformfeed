@@ -189,6 +189,84 @@ def call_mcp_tool(session: requests.Session, tool_name: str, arguments: dict = N
         return []
 
 
+def call_mcp_fetch_metadata(session: requests.Session, item_id: str) -> dict:
+    """Fetch detailed metadata for an item via DeltaPulse fetch tool."""
+    if not item_id:
+        return {}
+
+    payload = {
+        "jsonrpc": "2.0",
+        "method": "tools/call",
+        "params": {
+            "name": "fetch",
+            "arguments": {"id": str(item_id)},
+        },
+        "id": 1,
+    }
+
+    try:
+        response = session.post(
+            DELTAPULSE_MCP_ENDPOINT,
+            json=payload,
+            timeout=MCP_REQUEST_TIMEOUT,
+        )
+        response.raise_for_status()
+        result = response.json()
+        if "error" in result:
+            return {}
+
+        content = result.get("result", {}).get("content", [])
+        if not content:
+            return {}
+
+        text = content[0].get("text", "{}")
+        parsed = json.loads(text)
+        metadata = parsed.get("metadata")
+        return metadata if isinstance(metadata, dict) else {}
+    except Exception:
+        return {}
+
+
+def _first_non_empty(item: dict, keys: tuple[str, ...]):
+    """Return first non-empty value from candidate keys."""
+    for key in keys:
+        value = item.get(key)
+        if value is None:
+            continue
+        if isinstance(value, str):
+            if value.strip():
+                return value.strip()
+            continue
+        if isinstance(value, (list, tuple)):
+            if value:
+                return value
+            continue
+        return value
+    return None
+
+
+def resolve_m365_target_date(item: dict):
+    """Resolve expected release date/month from known DeltaPulse fields."""
+    direct = _first_non_empty(item, (
+        "targetedReleaseDate",
+        "targetReleaseDate",
+        "expectedReleaseDate",
+        "releaseDate",
+        "targetDate",
+        "deploymentDate",
+    ))
+    if direct is not None:
+        return direct
+
+    months = item.get("months")
+    if isinstance(months, list):
+        month_values = [str(month).strip() for month in months if str(month).strip()]
+        if month_values:
+            return ", ".join(month_values)
+
+    return None
+
+
 def normalize_url(url: str) -> str:
     """Normalize DeltaPulse URLs for deduplication."""
     if not url:
@@ -345,7 +423,7 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365Category": item.get("category", ""),
         "m365Severity": item.get("severity"),
         "m365Status": item.get("status"),
-        "m365TargetDate": item.get("targetedReleaseDate"),
+        "m365TargetDate": resolve_m365_target_date(item),
         "lifecycle": classify_m365_lifecycle(item),
     }
 
@@ -395,6 +473,43 @@ def fetch_m365_items(session: requests.Session) -> list:
     })
     all_items.extend(updated_items)
     print(f"    Found {len(updated_items)} updated items")
+
+    # Enrich each unique item with metadata from fetch(id), which contains
+    # release timeline fields (for example months / releaseDate variants).
+    by_key = {}
+    for item in all_items:
+        source = str(item.get("source", "")).strip()
+        item_id = str(item.get("id", "")).strip()
+        key = f"{source}:{item_id}" if source and item_id else ""
+        if key and key not in by_key:
+            by_key[key] = item
+
+    print(f"  - Enriching metadata for {len(by_key)} unique items...")
+    for item in by_key.values():
+        item_id = str(item.get("id", "")).strip()
+        metadata = call_mcp_fetch_metadata(session, item_id)
+        if not metadata:
+            continue
+
+        # Keep existing top-level fields when present, use metadata as fallback.
+        for field in (
+            "status",
+            "severity",
+            "category",
+            "service",
+            "months",
+            "releaseDate",
+            "targetedReleaseDate",
+            "targetDate",
+            "expectedReleaseDate",
+            "deploymentDate",
+            "publishedDate",
+            "lastUpdatedDate",
+            "createdDate",
+            "modifiedDate",
+        ):
+            if field in metadata and (field not in item or item.get(field) in (None, "", [])):
+                item[field] = metadata.get(field)
     
     print(f"  - Total raw items: {len(all_items)}")
     return all_items
