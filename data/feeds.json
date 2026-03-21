@@ -1,7 +1,79 @@
 {
-  "lastUpdated": "2026-03-20T16:54:00.122183+00:00",
-  "totalArticles": 224,
+  "lastUpdated": "2026-03-21T08:45:41.940181+00:00",
+  "totalArticles": 213,
   "articles": [
+    {
+      "title": "Detect, correlate, contain: New Azure Firewall IDPS detections in Microsoft Sentinel and XDR",
+      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/detect-correlate-contain-new-azure-firewall-idps-detections-in/ba-p/4502128",
+      "published": "2026-03-20T21:03:45+00:00",
+      "summary": "As threat actors continue to blend reconnaissance, exploitation, and post-compromise activity, network-level signals remain critical for early detection and correlated response. To strengthen this layer, we're introducing five new Azure Firewall IDPS detections, now available out of the box in the...",
+      "blog": "Azure Network Security",
+      "blogId": "azurenetworksecurityblog",
+      "author": "Mohit_Kumar"
+    },
+    {
+      "title": "Agentic Use Cases for Developers on the Microsoft Sentinel Platform",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/agentic-use-cases-for-developers-on-the-microsoft-sentinel/ba-p/4503041",
+      "published": "2026-03-20T20:46:02+00:00",
+      "summary": "Interested in building an agent with Sentinel platform solutions but not sure where to start? This blog will help you understand some common use cases for agent development that we’ve seen across our partner ecosystem. SOC teams don’t need more alerts - they need fast, repeatable investigation and...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "Sai_Marapareddy"
+    },
+    {
+      "title": "Extending App Assure’s Sentinel Promise through the Sentinel Advisory Service",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/extending-app-assure-s-sentinel-promise-through-the-sentinel/ba-p/4503045",
+      "published": "2026-03-20T20:23:18+00:00",
+      "summary": "At RSAC last year, we introduced the Microsoft Sentinel Promise with a straightforward commitment to our customers: that third-party data ingestion for Sentinel is reliable, predictable, and scalable without the need for complex custom coding and architecting. In other words, your connectors for...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "MikeAdams"
+    },
+    {
+      "title": "Shaping the Next Era of Energy Decision Making with Geospatial Intelligence",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-planetary-computer/shaping-the-next-era-of-energy-decision-making-with-geospatial/ba-p/4503662",
+      "published": "2026-03-20T20:20:42+00:00",
+      "summary": "Blog draft Shaping the Next Era of Energy Decision Making with Geospatial Intelligence By Yves Pitsch, GM, Azure Space, Microsoft The global energy system is entering a new phase—one defined not just by a single transition to renewables, but by the convergence of forces that are reshaping how...",
+      "blog": "Planetary Computer",
+      "blogId": "microsoft-planetary-computer-blog",
+      "author": "Yves-Pitsch"
+    },
+    {
+      "title": "[In preview] Public Preview: Azure SQL updates for mid-March 2026",
+      "link": "https://azure.microsoft.com/updates?id=558116",
+      "published": "2026-03-20T19:15:35+00:00",
+      "summary": "In mid-March 2026, the following updates and enhancements were made to Azure SQL: Reduce the consumption of storage space, I/O, and memory and improve performance without investing time and effort into index maintenance jobs. Configure",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Retirement: Azure SQL Elastic query - Shard_Map_Manager mode",
+      "link": "https://azure.microsoft.com/updates?id=558086",
+      "published": "2026-03-20T19:00:50+00:00",
+      "summary": "Starting March 31, 2027 Elastic query using Shard_Map_Manager external data source type reaches end of support.Existing workloads can continue to run using Azure SQL Elastic query - Shard_Map_Manager mode, but will no longer receive updates or support fro",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
+    {
+      "title": "RSAC 2026: New Microsoft Sentinel Connectors Announcement",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042",
+      "published": "2026-03-20T18:45:22+00:00",
+      "summary": "Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "JesseKopavi"
+    },
+    {
+      "title": "Retirement: Azure Sphere will be retired on July 31, 2031",
+      "link": "https://azure.microsoft.com/updates?id=557123",
+      "published": "2026-03-20T17:15:50+00:00",
+      "summary": "The Azure Sphere service is retiring and will stop supporting all customer application, OS, bug and security updates, along with DAA certificate issuance, on July 31, 2031. Why is this happening? Azure Sphere pioneered secure IoT connectivity, combining",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft"
+    },
     {
       "title": "How Granular Delegated Admin Privileges (GDAP) allows Sentinel customers to delegate access",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-granular-delegated-admin-privileges-gdap-allows-sentinel/ba-p/4503123",
@@ -10,33 +82,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "Yossi Basha"
-    },
-    {
-      "title": "Agentic Use Cases for Developers on the Microsoft Sentinel Platform",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/agentic-use-cases-for-developers-on-the-microsoft-sentinel/ba-p/4503041",
-      "published": "2026-03-20T16:01:05+00:00",
-      "summary": "Interested in building an agent with Sentinel platform solutions but not sure where to start? This blog will help you understand some common use cases for agent development that we’ve seen across our partner ecosystem. SOC teams don’t need more alerts - they need fast, repeatable investigation and...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "Sai_Marapareddy"
-    },
-    {
-      "title": "RSAC 2026: New Microsoft Sentinel Connectors Announcement",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042",
-      "published": "2026-03-20T16:00:00+00:00",
-      "summary": "Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "JesseKopavi"
-    },
-    {
-      "title": "Extending App Assure’s Sentinel Promise through the Sentinel Advisory Service",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/extending-app-assure-s-sentinel-promise-through-the-sentinel/ba-p/4503045",
-      "published": "2026-03-20T16:00:00+00:00",
-      "summary": "At RSAC last year, we introduced the Microsoft Sentinel Promise with a straightforward commitment to our customers: that third-party data ingestion for Sentinel is reliable, predictable, and scalable without the need for complex custom coding and architecting. In other words, your connectors for...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "MikeAdams"
     },
     {
       "title": "What’s new in Microsoft Sentinel: RSAC 2026",
@@ -487,15 +532,6 @@
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "bobmital"
-    },
-    {
-      "title": "Detect, correlate, contain: New Azure Firewall IDPS detections in Microsoft Sentinel and XDR",
-      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/detect-correlate-contain-new-azure-firewall-idps-detections-in/ba-p/4502128",
-      "published": "2026-03-17T18:02:43+00:00",
-      "summary": "As threat actors continue to blend reconnaissance, exploitation, and post-compromise activity, network-level signals remain critical for early detection and correlated response. To strengthen this layer, we're introducing five new Azure Firewall IDPS detections, now available out of the box in the...",
-      "blog": "Azure Network Security",
-      "blogId": "azurenetworksecurityblog",
-      "author": "Mohit_Kumar"
     },
     {
       "title": "PowerToys 0.98 is here: new Keyboard Manager UX, the Command Palette Dock and better CursorWrap!",
@@ -1882,141 +1918,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "Zeinab Mokhtarian Koorabbasloo"
-    },
-    {
-      "title": "Migrating Workloads from AWS to Azure: A Structured Approach for Cloud Architects",
-      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-workloads-from-aws-to-azure-a-structured-approach-for/ba-p/4495227",
-      "published": "2026-02-19T06:52:01+00:00",
-      "summary": "The core migration principle: Like-for-like architecture The foundation of a successful migration is maintaining a like-for-like architecture during the transition. This means replicating your existing AWS architecture on Azure with equivalent services, preserving the same operational patterns,...",
-      "blog": "Azure Migration",
-      "blogId": "azuremigrationblog",
-      "author": "rhack"
-    },
-    {
-      "title": "Reactive Incident Response with Azure SRE Agent: From Alert to Resolution in Minutes",
-      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/reactive-incident-response-with-azure-sre-agent-from-alert-to/ba-p/4492938",
-      "published": "2026-02-19T06:44:39+00:00",
-      "summary": "SRE Agent portal overview with incident list The Reactive Incident Challenge Your monitoring is solid. Alerts fire when they should. But then what? Alert lands in Teams/PagerDuty On-call engineer wakes up, logs in Starts investigating: \"What's broken? Why? How do I fix it?\" 20 minutes later,...",
-      "blog": "Azure Architecture",
-      "blogId": "azurearchitectureblog",
-      "author": "Sabyasachi-Samaddar"
-    },
-    {
-      "title": "What’s new in Microsoft Foundry | Dec 2025 & Jan 2026",
-      "link": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/",
-      "published": "2026-02-19T01:01:09+00:00",
-      "summary": "Catch up on all the new models, audio updates, fine-tuning expansions, and SDK updates from Microsoft Foundry spanning December 2025 and January 2026 — including GPT-5.2, Codex Max, DeepSeek V3.2, FLUX.2, and the azure-ai-projects v2 beta consolidation. The post What’s new in Microsoft Foundry |...",
-      "blog": "Microsoft Foundry Blog",
-      "blogId": "foundryblog",
-      "author": "Nick Brady"
-    },
-    {
-      "title": "Azure Recognized as an NVIDIA Cloud Exemplar, Setting the Bar for AI Performance in the Cloud",
-      "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-recognized-as-an-nvidia-cloud-exemplar-setting-the-bar-for/ba-p/4495747",
-      "published": "2026-02-18T22:31:25+00:00",
-      "summary": "As AI models continue to scale in size and complexity, cloud infrastructure must deliver more than theoretical peak performance. What matters in practice is reliable, end-to-end, workload-level AI performance—where compute, networking, system software, and optimization work together to deliver...",
-      "blog": "High Performance Computing",
-      "blogId": "azurehighperformancecomputingblog",
-      "author": "Fernando_Aznar"
-    },
-    {
-      "title": "Navigating the 2025 holiday season: Insights into Azure’s DDoS defense",
-      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/navigating-the-2025-holiday-season-insights-into-azure-s-ddos/ba-p/4495741",
-      "published": "2026-02-18T20:30:34+00:00",
-      "summary": "The holiday season continues to be one of the most demanding periods for online businesses. Traffic surges, higher transaction volumes, and user expectations for seamless digital experiences all converge, making reliability a non-negotiable requirement. For attackers, this same period presents an...",
-      "blog": "Azure Network Security",
-      "blogId": "azurenetworksecurityblog",
-      "author": "Jdasari"
-    },
-    {
-      "title": "Private Preview: Azure Managed Prometheus on VM / VMSS",
-      "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472",
-      "published": "2026-02-18T20:00:31+00:00",
-      "summary": "What’s new — Managed Prometheus now supports VMs & VMSS Today we are excited to announce the private preview of Azure Managed Prometheus support for virtual machines (VM) and virtual machine scale sets (VMSS). Until now, Managed Prometheus on Azure was primarily targeted at containerized workloads...",
-      "blog": "High Performance Computing",
-      "blogId": "azurehighperformancecomputingblog",
-      "author": "Daramfon"
-    },
-    {
-      "title": "[Launched] Generally Available: Anthropic Claude Sonnet 4.6 is now available on Azure Databricks",
-      "link": "https://azure.microsoft.com/updates?id=557595",
-      "published": "2026-02-18T18:00:55+00:00",
-      "summary": "Azure Databricks now supports Anthropic Claude Sonnet 4.6 through Azure Databricks AI Model Serving. Claude Sonnet 4.6 delivers frontier-level performance on complex coding, agentic workflows, and professional knowledge work including reasoning at a lower",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "[In preview] Public Preview: Unified tooling in the AKS MCP server",
-      "link": "https://azure.microsoft.com/updates?id=557223",
-      "published": "2026-02-18T18:00:55+00:00",
-      "summary": "Managing AKS MCP servers can be affected by the number of tools and the amount of context required, which can increase latency and cost. The unified tooling for the AKS MCP Server introduces two new tools in public preview, call_az and call_kubectl, that",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "[In preview] Public Preview: Cluster mode for the agentic CLI for AKS",
-      "link": "https://azure.microsoft.com/updates?id=557218",
-      "published": "2026-02-18T18:00:55+00:00",
-      "summary": "Users often face security and manageability challenges when diagnostic agents inherit broad user permissions, such as cluster-admin rights, and when each user must deploy their own instance. Cluster mode for the agentic CLI for AKS, now in public preview,",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "[Launched] Generally Available: Quota and deployment troubleshooting tools for Azure Functions Flex Consumption",
-      "link": "https://azure.microsoft.com/updates?id=556008",
-      "published": "2026-02-18T18:00:55+00:00",
-      "summary": "Azure Functions Flex Consumption introduces new platform‑integrated tools that provide clearer insight into quota availability and deployment behavior. The quota troubleshooting experience surfaces Flex Consumption quota limits and related constraints,",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "[Launched] Generally Available: Azure Functions .NET 10 support",
-      "link": "https://azure.microsoft.com/updates?id=556003",
-      "published": "2026-02-18T18:00:55+00:00",
-      "summary": "Azure Functions support for .NET 10 is generally available, enabling production use of the latest .NET runtime for serverless applications. This support was introduced as part of the Azure Functions Ignite 2025 updates. .NET 10 is supported using the iso",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "Azure Migrate: Now Supporting Premium SSD V2, Ultra and ZRS Disks as Targets",
-      "link": "https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-migrate-now-supporting-premium-ssd-v2-ultra-and-zrs-disks/ba-p/4495332",
-      "published": "2026-02-18T17:22:53+00:00",
-      "summary": "We are excited to announce that we have added assessment and migration support for Premium SSD v2,Ultra Disk and ZRS Disks as storage options in Azure Migrate, with Premium SSD v2 and ZRS Disks now Generally Available and Ultra Disk in Public Preview. This further enhances the assessment and...",
-      "blog": "Azure Storage",
-      "blogId": "azurestorageblog",
-      "author": "Lakshya_Jalan"
-    },
-    {
-      "title": "[Launched] Generally Available: Node auto-provisioning support in Sovereign Cloud",
-      "link": "https://azure.microsoft.com/updates?id=557208",
-      "published": "2026-02-18T17:15:17+00:00",
-      "summary": "Node auto‑provisioning removes the need for teams to manually size and manage compute resources for Kubernetes workloads. Azure Kubernetes Service (AKS) now provides general availability support for node auto‑provisioning in Sovereign Cloud. This capabili",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "Federating Databases with Data API Builder Chaining",
-      "link": "https://devblogs.microsoft.com/azure-sql/data-api-builder-chaining/",
-      "published": "2026-02-18T17:00:17+00:00",
-      "summary": "For decades, DBAs relied on linked servers to stitch data together. If you needed data from two places, you wired them up and moved on. It worked. It was straightforward. It felt native to SQL. But what if linked servers are not an option? What if policy blocks them? What if one of the systems […]...",
-      "blog": "Azure SQL Dev Corner",
-      "blogId": "azuresqlblog",
-      "author": "Jerry Nixon"
-    },
-    {
-      "title": "Unlocking the power of Notebooks with Microsoft Sentinel data lake",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/unlocking-the-power-of-notebooks-with-microsoft-sentinel-data/ba-p/4494656",
-      "published": "2026-02-18T17:00:00+00:00",
-      "summary": "Co-authors: Vandana Mahtani, Ashwin Patil Security operations are rapidly evolving, driven by AI and the need for scalable, cost-effective analytics. A key differentiator of the Sentinel data lake is its native integration with Jupyter Notebooks, which brings powerful data science and machine...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "Zeinab Mokhtarian Koorabbasloo"
     }
   ],
   "summaryWindowDays": 7,
@@ -2032,7 +1933,7 @@
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 15,
-  "summary": "- In preview:\n  • [Public Preview: Azure Databricks OneLake Catalog Federation](https://azure.microsoft.com/updates?id=558927)\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/updates?id=558169)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/updates?id=558155)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/updates?id=558150)\n  • [Public Preview: Data API builder with built-in GitHub Copilot in MSSQL extension](https://azure.microsoft.com/updates?id=558178)\n\n- Launched / Generally Available:\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558121)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/updates?id=557917)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/updates?id=558134)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/updates?id=558810)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/updates?id=558183)\n\n- Retiring:\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548543)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548525)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548497)\n  • [Retirement: Emissions Impact Dashboard for Azure](https://azure.microsoft.com/updates?id=558278)\n  • [Retirement: Azure VMware Solution AV36P and AV52 node retirement on June 30, 2029](https://azure.microsoft.com/updates?id=557094)\n\n- In development:\n  • none noted in selected window",
+  "summary": "- In preview:\n  • [Public Preview: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558116)\n  • [Public Preview: Azure Databricks OneLake Catalog Federation](https://azure.microsoft.com/updates?id=558927)\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/updates?id=558169)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/updates?id=558155)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/updates?id=558150)\n\n- Launched / Generally Available:\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558121)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/updates?id=557917)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/updates?id=558134)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/updates?id=558810)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/updates?id=558183)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/updates?id=558086)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/updates?id=557123)\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548543)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548525)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548497)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 20th March 2026",
     "url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",
