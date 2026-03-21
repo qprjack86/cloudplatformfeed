@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-21T12:48:22.631673+00:00",
-  "totalArticles": 213,
+  "lastUpdated": "2026-03-21T16:38:11.673119+00:00",
+  "totalArticles": 212,
   "articles": [
+    {
+      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
+      "published": "2026-03-21T16:13:26+00:00",
+      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "spalani"
+    },
     {
       "title": "Detect, correlate, contain: New Azure Firewall IDPS detections in Microsoft Sentinel and XDR",
       "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/detect-correlate-contain-new-azure-firewall-idps-detections-in/ba-p/4502128",
@@ -82,15 +91,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "Yossi Basha"
-    },
-    {
-      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
-      "published": "2026-03-20T16:00:00+00:00",
-      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "spalani"
     },
     {
       "title": "Defending the AI Era: New Microsoft Capabilities to Protect AI",
@@ -1909,26 +1909,17 @@
       "blog": "Visual Studio Blog",
       "blogId": "visualstudio",
       "author": "Rhea Patel, Kelly Fam"
-    },
-    {
-      "title": "Three ways to run KQL on Microsoft Sentinel data lake: Interactive, Async, or Jobs",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/three-ways-to-run-kql-on-microsoft-sentinel-data-lake/ba-p/4494657",
-      "published": "2026-02-19T16:00:00+00:00",
-      "summary": "SOC analysts often face complex challenges during investigations. They often need to investigate incidents that span weeks or even months, not just hours or days. This requires correlating multiple high-volume data sources such as sign-ins, network traffic, endpoint activity, and logs. Analysts...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "Zeinab Mokhtarian Koorabbasloo"
     }
   ],
   "summaryWindowDays": 7,
   "summaryPublishingDays": [
+    "2026-03-21",
     "2026-03-20",
     "2026-03-19",
     "2026-03-18",
     "2026-03-17",
     "2026-03-16",
-    "2026-03-14",
-    "2026-03-13"
+    "2026-03-14"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
