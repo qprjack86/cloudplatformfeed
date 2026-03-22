@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-21T16:38:11.673119+00:00",
-  "totalArticles": 212,
+  "lastUpdated": "2026-03-22T08:47:55.597205+00:00",
+  "totalArticles": 209,
   "articles": [
     {
       "title": "What’s new in Microsoft Sentinel: RSAC 2026",
@@ -1882,33 +1882,6 @@
       "blog": "Telecommunications",
       "blogId": "telecommunications-industry-blog",
       "author": "rodekirk"
-    },
-    {
-      "title": "Using Codes to Increase Adherence to Prompts",
-      "link": "https://devblogs.microsoft.com/ise/using-codes-to-increase-adherence-to-prompts/",
-      "published": "2026-02-20T08:00:00+00:00",
-      "summary": "Agentic systems have some discretion in the parameters they sent to tooling, but there are cases, such as experimentation, when you need 100% adherence to a set of parameters. The post Using Codes to Increase Adherence to Prompts appeared first on ISE Developer Blog.",
-      "blog": "ISE Developer Blog",
-      "blogId": "iseblog",
-      "author": "Peter Lasne"
-    },
-    {
-      "title": "Microsoft Agent Framework Reaches Release Candidate",
-      "link": "https://devblogs.microsoft.com/foundry/microsoft-agent-framework-reaches-release-candidate/",
-      "published": "2026-02-20T05:51:29+00:00",
-      "summary": "We’re happy to announce that Microsoft Agent Framework is now in Release Candidate status for both .NET and Python. Release Candidate is an important milestone on the road to General Availability — it means the API surface is stable, and all features that we intend to release with version 1.0 are...",
-      "blog": "Microsoft Foundry Blog",
-      "blogId": "foundryblog",
-      "author": "Shawn Henry"
-    },
-    {
-      "title": "Custom Agents in Visual Studio: Built in and Build-Your-Own agents",
-      "link": "https://devblogs.microsoft.com/visualstudio/custom-agents-in-visual-studio-built-in-and-build-your-own-agents/",
-      "published": "2026-02-19T21:02:13+00:00",
-      "summary": "Agents in Visual Studio now go beyond a single general-purpose assistant. We’re shipping a set of curated preset agents that tap into deep IDE capabilities; debugging, profiling, testing alongside a framework for building your own custom agents tailored to how your team works. Built in agents Each...",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "Rhea Patel, Kelly Fam"
     }
   ],
   "summaryWindowDays": 7,

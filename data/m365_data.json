@@ -1,7 +1,43 @@
 {
-  "generatedAt": "2026-03-21T16:38:36.644906+00:00",
-  "totalArticles": 77,
+  "generatedAt": "2026-03-22T08:48:22.587563+00:00",
+  "totalArticles": 79,
   "articles": [
+    {
+      "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
+      "link": "https://deltapulse.app/dashboard?message=MC1258087",
+      "published": "2026-03-21T21:07:44.520Z",
+      "source": "m365",
+      "m365Service": "Windows",
+      "m365AllServices": [
+        "Windows"
+      ],
+      "m365Id": "MC1258087",
+      "m365Source": "message_center",
+      "m365Category": "preventOrFixIssue",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "March 2026",
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1258087"
+    },
+    {
+      "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
+      "link": "https://deltapulse.app/dashboard?message=MC1258000",
+      "published": "2026-03-21T16:18:41.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft Purview",
+      "m365AllServices": [
+        "Microsoft Purview"
+      ],
+      "m365Id": "MC1258000",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "April 2026, May 2026",
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1258000"
+    },
     {
       "title": "Microsoft Teams: Building‑level insights on the Teams Rooms Pro Management portal recommended actions page",
       "link": "https://deltapulse.app/dashboard?message=MC1257308",
@@ -2203,6 +2239,24 @@
     ],
     "Security & Compliance": [
       {
+        "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
+        "link": "https://deltapulse.app/dashboard?message=MC1258000",
+        "published": "2026-03-21T16:18:41.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Purview",
+        "m365AllServices": [
+          "Microsoft Purview"
+        ],
+        "m365Id": "MC1258000",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, May 2026",
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1258000"
+      },
+      {
         "title": "Purview DSPM’s Data Risk Assessments now support item-level investigation and remediation of SharePoint",
         "link": "https://deltapulse.app/dashboard?message=MC1254556",
         "published": "2026-03-17T22:51:02.000Z",
@@ -2426,6 +2480,24 @@
       }
     ],
     "Uncategorized": [
+      {
+        "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
+        "link": "https://deltapulse.app/dashboard?message=MC1258087",
+        "published": "2026-03-21T21:07:44.520Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1258087",
+        "m365Source": "message_center",
+        "m365Category": "preventOrFixIssue",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1258087"
+      },
       {
         "title": "(Updated) Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
         "link": "https://deltapulse.app/dashboard?message=MC1254512",
@@ -2847,6 +2919,42 @@
       }
     ],
     "launched_ga": [
+      {
+        "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
+        "link": "https://deltapulse.app/dashboard?message=MC1258087",
+        "published": "2026-03-21T21:07:44.520Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1258087",
+        "m365Source": "message_center",
+        "m365Category": "preventOrFixIssue",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1258087"
+      },
+      {
+        "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
+        "link": "https://deltapulse.app/dashboard?message=MC1258000",
+        "published": "2026-03-21T16:18:41.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Purview",
+        "m365AllServices": [
+          "Microsoft Purview"
+        ],
+        "m365Id": "MC1258000",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, May 2026",
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1258000"
+      },
       {
         "title": "Microsoft Teams: Building‑level insights on the Teams Rooms Pro Management portal recommended actions page",
         "link": "https://deltapulse.app/dashboard?message=MC1257308",
@@ -4053,6 +4161,7 @@
     "thumbnail": "https://i.ytimg.com/vi/HdO9NV8a9yE/hqdefault.jpg"
   },
   "summaryPublishingDays": [
+    "2026-03-21",
     "2026-03-20",
     "2026-03-19",
     "2026-03-18",
