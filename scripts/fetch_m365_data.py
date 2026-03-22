@@ -728,12 +728,16 @@ def build_m365_feed(raw_items: list, m365_video: dict = None) -> dict:
     for lifecycle in ["in_preview", "launched_ga", "in_development", "retiring"]:
         by_lifecycle[lifecycle] = [a for a in deduped if a.get("lifecycle") == lifecycle]
     
-    # Compute distinct publishing days for the summary date range
+    # Compute distinct publishing days for the summary date range.
+    # Limit to the last 7 days so the panel header shows a weekly window,
+    # matching the Azure summary behaviour.
+    summary_cutoff = datetime.now(timezone.utc) - timedelta(days=7)
     pub_days = set()
     for a in deduped:
         try:
             dt = datetime.fromisoformat(a["published"].replace("Z", "+00:00"))
-            pub_days.add(dt.strftime("%Y-%m-%d"))
+            if dt >= summary_cutoff:
+                pub_days.add(dt.strftime("%Y-%m-%d"))
         except (ValueError, KeyError):
             pass
     publishing_days = sorted(pub_days, reverse=True)
