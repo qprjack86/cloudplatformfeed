@@ -228,8 +228,8 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
             "https://deltapulse.app/dashboard?search=MC888888",
         )
 
-    def test_roadmap_item_gets_roadmap_url(self):
-        """Roadmap items should link to the M365 roadmap page."""
+    def test_roadmap_item_gets_deltapulse_url(self):
+        """Roadmap items should link to the DeltaPulse card, not the M365 roadmap page."""
         item = {
             "id": "558435",
             "title": "Security Update Alerts",
@@ -243,7 +243,24 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         self.assertEqual(
             article["link"],
-            "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558435",
+            "https://deltapulse.app/dashboard?roadmap=558435",
+        )
+
+    def test_roadmap_item_falls_back_to_deltapulse_search(self):
+        """Roadmap items without a URL should fall back to DeltaPulse dashboard search."""
+        item = {
+            "id": "558435",
+            "title": "Security Update Alerts",
+            "source": "roadmap",
+            "status": "In development",
+            "service": ["Microsoft 365"],
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertEqual(
+            article["link"],
+            "https://deltapulse.app/dashboard?roadmap=558435",
         )
 
     def test_roadmap_item_uses_release_date_for_target_date(self):

@@ -402,11 +402,14 @@ def resolve_m365_item_link(item: dict) -> str:
         if item_id:
             return f"https://deltapulse.app/dashboard?search={item_id}"
 
-    if source == "roadmap" and item_id:
-        return (
-            "https://www.microsoft.com/en-us/microsoft-365/roadmap"
-            f"?filters=&searchterms={item_id}"
-        )
+    if source == "roadmap":
+        # Prefer DeltaPulse URLs for direct card navigation (same as message_center).
+        for key in ("url", "detailsUrl", "webUrl"):
+            value = item.get(key)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+        if item_id:
+            return f"https://deltapulse.app/dashboard?roadmap={item_id}"
 
     return item.get("url", "")
 
