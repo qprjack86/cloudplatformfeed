@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-22T16:39:07.860947+00:00",
-  "totalArticles": 209,
+  "lastUpdated": "2026-03-22T22:11:38.641223+00:00",
+  "totalArticles": 206,
   "articles": [
+    {
+      "title": "Shaping the Next Era of Energy Decision Making with Geospatial Intelligence",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-planetary-computer/shaping-the-next-era-of-energy-decision-making-with-geospatial/ba-p/4503662",
+      "published": "2026-03-22T21:28:35+00:00",
+      "summary": "Blog draft Shaping the Next Era of Energy Decision Making with Geospatial Intelligence By Yves Pitsch, GM, Azure Space, Microsoft The global energy system is entering a new phase—one defined not just by a single transition to renewables, but by the convergence of forces that are reshaping how...",
+      "blog": "Planetary Computer",
+      "blogId": "microsoft-planetary-computer-blog",
+      "author": "Yves-Pitsch"
+    },
     {
       "title": "Run OpenClaw Agents on Azure Linux VMs (with Secure Defaults)",
       "link": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/run-openclaw-agents-on-azure-linux-vms-with-secure-defaults/ba-p/4502944",
@@ -46,15 +55,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "MikeAdams"
-    },
-    {
-      "title": "Shaping the Next Era of Energy Decision Making with Geospatial Intelligence",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-planetary-computer/shaping-the-next-era-of-energy-decision-making-with-geospatial/ba-p/4503662",
-      "published": "2026-03-20T20:20:42+00:00",
-      "summary": "Blog draft Shaping the Next Era of Energy Decision Making with Geospatial Intelligence By Yves Pitsch, GM, Azure Space, Microsoft The global energy system is entering a new phase—one defined not just by a single transition to renewables, but by the convergence of forces that are reshaping how...",
-      "blog": "Planetary Computer",
-      "blogId": "microsoft-planetary-computer-blog",
-      "author": "Yves-Pitsch"
     },
     {
       "title": "[In preview] Public Preview: Azure SQL updates for mid-March 2026",
@@ -1855,33 +1855,6 @@
       "blog": "Integrations on Azure",
       "blogId": "integrationsonazureblog",
       "author": "Emmanuel_Abram_Profeta"
-    },
-    {
-      "title": "[Launched] Generally Available: Azure Premium SSD v2 Disk is now available in Brazil Southeast, and in a third Availability Zone in Malaysia West and Indonesia Central",
-      "link": "https://azure.microsoft.com/updates?id=557623",
-      "published": "2026-02-20T19:00:04+00:00",
-      "summary": "Azure Premium SSD v2 is now available in Brazil Southeast (a region without Availability Zone), and in a third Availability Zone in Malaysia West and Indonesia Central.Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for A",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft"
-    },
-    {
-      "title": "Microsoft Agent Pre-Purchase Plan: One Unified Path to Scale AI Agents",
-      "link": "https://techcommunity.microsoft.com/t5/finops-blog/microsoft-agent-pre-purchase-plan-one-unified-path-to-scale-ai/ba-p/4476052",
-      "published": "2026-02-20T18:06:20+00:00",
-      "summary": "AI is now essential, and at Microsoft Ignite 2025, we introduced a new foundation for intelligent agents: Work IQ, Fabric IQ, and Foundry IQ. These three IQs represent the intelligence layer that gives agents deep context; understanding how people work, connecting to enterprise data, and...",
-      "blog": "FinOps",
-      "blogId": "finopsblog",
-      "author": "kyleikeda"
-    },
-    {
-      "title": "Light up Multiple Databases with a Single API with Data API builder’s multi-source configuration",
-      "link": "https://devblogs.microsoft.com/azure-sql/multi-source-data-api-builder/",
-      "published": "2026-02-20T17:30:27+00:00",
-      "summary": "Data API builder (DAB) supports multi-source configurations Data API builder (DAB) connects to your database with a safe REST or GraphQL endpoint. But DAB is not limited to just one database. Using a multi-source configuration, you can connect to more than one database simultaneously. Learn more...",
-      "blog": "Azure SQL Dev Corner",
-      "blogId": "azuresqlblog",
-      "author": "Jerry Nixon"
     }
   ],
   "summaryWindowDays": 7,
