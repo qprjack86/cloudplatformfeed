@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Fetch RSS feeds
+      - name: Fetch Azure RSS feeds
         env:
           AZUREFEED_RUN_METRICS_PATH: ${{ runner.temp }}/azurefeed-run-metrics.json
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
