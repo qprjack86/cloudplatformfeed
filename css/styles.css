@@ -548,6 +548,16 @@ main {
   color: var(--text-primary);
 }
 
+.m365-tag.major-change {
+  border-color: #E81123;
+  color: #E81123;
+  background: rgba(232, 17, 35, 0.1);
+}
+
+.m365-tag.major-change .m365-tag-label {
+  color: #E81123;
+}
+
 .card-actions {
   display: flex;
   gap: 0.4rem;

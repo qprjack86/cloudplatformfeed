@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T16:39:27.755872+00:00",
+  "generatedAt": "2026-03-22T22:08:28.537394+00:00",
   "totalArticles": 79,
   "articles": [
     {
@@ -17,6 +17,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1258087"
     },
@@ -35,6 +36,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1258000"
     },
@@ -53,6 +55,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1257308"
     },
@@ -69,6 +72,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558938"
     },
@@ -85,6 +89,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558934"
     },
@@ -101,6 +106,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558856"
     },
@@ -117,6 +123,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558852"
     },
@@ -133,6 +140,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "June 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558859"
     },
@@ -151,6 +159,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, July 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254512"
     },
@@ -167,6 +176,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558857"
     },
@@ -183,6 +193,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559027"
     },
@@ -199,24 +210,9 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559028"
-    },
-    {
-      "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
-      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
-      "published": "2026-03-19T23:30:43.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558679",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "June 2026",
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558679"
     },
     {
       "title": "Microsoft Viva: Modernized content composition experience in Engage",
@@ -231,8 +227,26 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558935"
+    },
+    {
+      "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
+      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
+      "published": "2026-03-19T23:30:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558679",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "June 2026",
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:558679"
     },
     {
       "title": "Outlook: Font Improvements in Outlook for Android",
@@ -247,6 +261,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558936"
     },
@@ -263,6 +278,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "October 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558939"
     },
@@ -281,6 +297,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1256307"
     },
@@ -300,6 +317,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026, April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1256306"
     },
@@ -318,6 +336,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1256301"
     },
@@ -336,6 +355,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1256117"
     },
@@ -355,6 +375,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "February 2026, March 2026, April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1256040"
     },
@@ -374,6 +395,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, May 2026, June 2026, July 2026, August 2026, September 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255714"
     },
@@ -392,6 +414,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255709"
     },
@@ -410,6 +433,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255508"
     },
@@ -426,6 +450,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "June 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558435"
     },
@@ -442,6 +467,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558684"
     },
@@ -460,6 +486,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255412"
     },
@@ -478,6 +505,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255410"
     },
@@ -497,6 +525,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026, April 2026, May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255409"
     },
@@ -515,6 +544,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "May 2026, July 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255407"
     },
@@ -534,6 +564,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, August 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255406"
     },
@@ -552,6 +583,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "February 2026, March 2026, April 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255405"
     },
@@ -570,6 +602,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255404"
     },
@@ -589,6 +622,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026, April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254560"
     },
@@ -607,6 +641,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254556"
     },
@@ -625,6 +660,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254554"
     },
@@ -643,6 +679,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, May 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254553"
     },
@@ -659,6 +696,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "August 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558860"
     },
@@ -675,6 +713,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558858"
     },
@@ -694,6 +733,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026, April 2026, May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254552"
     },
@@ -712,6 +752,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026, April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254543"
     },
@@ -730,6 +771,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254454"
     },
@@ -748,6 +790,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1254451"
     },
@@ -766,6 +809,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026, May 2026, September 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253809"
     },
@@ -782,6 +826,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "June 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558686"
     },
@@ -798,6 +843,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558685"
     },
@@ -814,6 +860,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558687"
     },
@@ -830,6 +877,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557681"
     },
@@ -848,6 +896,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "September 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253753"
     },
@@ -866,6 +915,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, May 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253752"
     },
@@ -885,6 +935,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "February 2026, March 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253750"
     },
@@ -903,6 +954,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026, May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253746"
     },
@@ -921,6 +973,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "June 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253743"
     },
@@ -939,6 +992,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253720"
     },
@@ -957,6 +1011,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "June 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253577"
     },
@@ -975,6 +1030,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253515"
     },
@@ -993,6 +1049,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253512"
     },
@@ -1011,6 +1068,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253514"
     },
@@ -1029,6 +1087,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253506"
     },
@@ -1047,6 +1106,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253504"
     },
@@ -1065,6 +1125,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1253499"
     },
@@ -1083,6 +1144,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1239176"
     },
@@ -1102,6 +1164,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1237701"
     },
@@ -1120,6 +1183,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": true,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1249427"
     },
@@ -1138,6 +1202,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1245997"
     },
@@ -1154,6 +1219,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557562"
     },
@@ -1172,6 +1238,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026, April 2026, May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1247893"
     },
@@ -1190,6 +1257,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1242782"
     },
@@ -1208,6 +1276,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "November 2025, December 2025, January 2026, February 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1246002"
     },
@@ -1224,6 +1293,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "September 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558253"
     },
@@ -1240,6 +1310,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557170"
     },
@@ -1256,6 +1327,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557977"
     },
@@ -1272,6 +1344,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "March 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557674"
     },
@@ -1290,6 +1363,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1247899"
     },
@@ -1308,6 +1382,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "March 2026, April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1247891"
     },
@@ -1324,6 +1399,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557974"
     },
@@ -1340,6 +1416,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "May 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557720"
     },
@@ -1356,6 +1433,7 @@
       "m365Severity": null,
       "m365Status": null,
       "m365TargetDate": "June 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557970"
     },
@@ -1374,6 +1452,7 @@
       "m365Severity": "normal",
       "m365Status": null,
       "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1248393"
     }
@@ -1395,6 +1474,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1257308"
       },
@@ -1413,6 +1493,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256307"
       },
@@ -1431,6 +1512,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256301"
       },
@@ -1450,6 +1532,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255409"
       },
@@ -1468,6 +1551,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "May 2026, July 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255407"
       },
@@ -1486,6 +1570,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254553"
       },
@@ -1504,6 +1589,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "September 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253753"
       },
@@ -1522,6 +1608,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253752"
       },
@@ -1540,6 +1627,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1239176"
       },
@@ -1558,6 +1646,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247891"
       },
@@ -1576,6 +1665,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1248393"
       }
@@ -1594,6 +1684,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558938"
       },
@@ -1610,6 +1701,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558934"
       },
@@ -1626,6 +1718,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558856"
       },
@@ -1642,6 +1735,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558852"
       },
@@ -1658,6 +1752,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558859"
       },
@@ -1674,6 +1769,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558857"
       },
@@ -1690,6 +1786,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559027"
       },
@@ -1706,24 +1803,9 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559028"
-      },
-      {
-        "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
-        "published": "2026-03-19T23:30:43.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558679",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558679"
       },
       {
         "title": "Microsoft Viva: Modernized content composition experience in Engage",
@@ -1738,8 +1820,26 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558935"
+      },
+      {
+        "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558679",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558679"
       },
       {
         "title": "Outlook: Font Improvements in Outlook for Android",
@@ -1754,6 +1854,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558936"
       },
@@ -1770,6 +1871,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "October 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558939"
       },
@@ -1786,6 +1888,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558435"
       },
@@ -1802,6 +1905,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558684"
       },
@@ -1820,6 +1924,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255412"
       },
@@ -1836,6 +1941,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "August 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558860"
       },
@@ -1852,6 +1958,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558858"
       },
@@ -1871,6 +1978,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254552"
       },
@@ -1889,6 +1997,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, May 2026, September 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253809"
       },
@@ -1905,6 +2014,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558686"
       },
@@ -1921,6 +2031,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558685"
       },
@@ -1937,6 +2048,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558687"
       },
@@ -1953,6 +2065,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557681"
       },
@@ -1971,6 +2084,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1249427"
       },
@@ -1987,6 +2101,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557562"
       },
@@ -2003,6 +2118,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "September 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558253"
       },
@@ -2019,6 +2135,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557170"
       },
@@ -2035,6 +2152,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557977"
       },
@@ -2051,6 +2169,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557674"
       },
@@ -2067,6 +2186,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557974"
       },
@@ -2083,6 +2203,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557720"
       },
@@ -2099,6 +2220,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557970"
       }
@@ -2119,6 +2241,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256117"
       },
@@ -2138,6 +2261,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "February 2026, March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256040"
       },
@@ -2156,6 +2280,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255508"
       },
@@ -2175,6 +2300,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254560"
       },
@@ -2194,6 +2320,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "February 2026, March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253750"
       },
@@ -2213,6 +2340,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1237701"
       }
@@ -2233,6 +2361,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253512"
       }
@@ -2253,6 +2382,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1258000"
       },
@@ -2271,6 +2401,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254556"
       }
@@ -2292,6 +2423,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026, June 2026, July 2026, August 2026, September 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255714"
       },
@@ -2310,6 +2442,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255709"
       },
@@ -2328,6 +2461,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254454"
       },
@@ -2346,6 +2480,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254451"
       },
@@ -2364,6 +2499,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253515"
       },
@@ -2382,6 +2518,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253514"
       },
@@ -2400,6 +2537,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253506"
       },
@@ -2418,6 +2556,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253504"
       }
@@ -2439,6 +2578,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256306"
       },
@@ -2457,6 +2597,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255410"
       },
@@ -2475,6 +2616,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247899"
       }
@@ -2495,6 +2637,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1258087"
       },
@@ -2513,6 +2656,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, July 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254512"
       },
@@ -2532,6 +2676,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, August 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255406"
       },
@@ -2550,6 +2695,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "February 2026, March 2026, April 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255405"
       },
@@ -2568,6 +2714,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255404"
       },
@@ -2586,6 +2733,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254554"
       },
@@ -2604,6 +2752,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254543"
       },
@@ -2622,6 +2771,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253746"
       },
@@ -2640,6 +2790,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253743"
       },
@@ -2658,6 +2809,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253720"
       },
@@ -2676,6 +2828,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253577"
       },
@@ -2694,6 +2847,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253499"
       },
@@ -2712,6 +2866,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1245997"
       },
@@ -2730,6 +2885,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247893"
       },
@@ -2748,6 +2904,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1242782"
       },
@@ -2766,6 +2923,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "November 2025, December 2025, January 2026, February 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1246002"
       }
@@ -2786,6 +2944,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558938"
       },
@@ -2802,6 +2961,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558934"
       },
@@ -2818,6 +2978,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "October 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558939"
       },
@@ -2834,6 +2995,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558435"
       },
@@ -2850,6 +3012,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558684"
       },
@@ -2866,6 +3029,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "August 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558860"
       },
@@ -2882,6 +3046,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558686"
       },
@@ -2898,6 +3063,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558685"
       },
@@ -2914,6 +3080,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558687"
       }
@@ -2934,6 +3101,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1258087"
       },
@@ -2952,6 +3120,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1258000"
       },
@@ -2970,6 +3139,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1257308"
       },
@@ -2986,6 +3156,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558856"
       },
@@ -3002,6 +3173,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558852"
       },
@@ -3018,6 +3190,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558859"
       },
@@ -3036,6 +3209,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, July 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254512"
       },
@@ -3052,6 +3226,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558857"
       },
@@ -3068,6 +3243,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559027"
       },
@@ -3084,24 +3260,9 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559028"
-      },
-      {
-        "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
-        "published": "2026-03-19T23:30:43.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558679",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558679"
       },
       {
         "title": "Microsoft Viva: Modernized content composition experience in Engage",
@@ -3116,8 +3277,26 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558935"
+      },
+      {
+        "title": "Microsoft Teams: Standardized preview experience for Word, PowerPoint, and Excel files",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=558679",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558679",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558679"
       },
       {
         "title": "Outlook: Font Improvements in Outlook for Android",
@@ -3132,6 +3311,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558936"
       },
@@ -3150,6 +3330,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256307"
       },
@@ -3169,6 +3350,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256306"
       },
@@ -3187,6 +3369,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256301"
       },
@@ -3205,6 +3388,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256117"
       },
@@ -3224,6 +3408,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "February 2026, March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256040"
       },
@@ -3243,6 +3428,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026, June 2026, July 2026, August 2026, September 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255714"
       },
@@ -3261,6 +3447,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255709"
       },
@@ -3279,6 +3466,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255508"
       },
@@ -3297,6 +3485,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255412"
       },
@@ -3315,6 +3504,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255410"
       },
@@ -3334,6 +3524,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255409"
       },
@@ -3352,6 +3543,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "May 2026, July 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255407"
       },
@@ -3371,6 +3563,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, August 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255406"
       },
@@ -3389,6 +3582,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "February 2026, March 2026, April 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255405"
       },
@@ -3407,6 +3601,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255404"
       },
@@ -3426,6 +3621,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254560"
       },
@@ -3444,6 +3640,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254556"
       },
@@ -3462,6 +3659,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254554"
       },
@@ -3480,6 +3678,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254553"
       },
@@ -3496,6 +3695,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558858"
       },
@@ -3515,6 +3715,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254552"
       },
@@ -3533,6 +3734,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254543"
       },
@@ -3551,6 +3753,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254454"
       },
@@ -3569,6 +3772,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254451"
       },
@@ -3587,6 +3791,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, May 2026, September 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253809"
       },
@@ -3603,6 +3808,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557681"
       },
@@ -3621,6 +3827,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "September 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253753"
       },
@@ -3639,6 +3846,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253752"
       },
@@ -3658,6 +3866,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "February 2026, March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253750"
       },
@@ -3676,6 +3885,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253746"
       },
@@ -3694,6 +3904,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253743"
       },
@@ -3712,6 +3923,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253720"
       },
@@ -3730,6 +3942,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253577"
       },
@@ -3748,6 +3961,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253515"
       },
@@ -3766,6 +3980,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253512"
       },
@@ -3784,6 +3999,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253514"
       },
@@ -3802,6 +4018,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253506"
       },
@@ -3820,6 +4037,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253504"
       },
@@ -3838,6 +4056,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253499"
       },
@@ -3856,6 +4075,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1239176"
       },
@@ -3875,6 +4095,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1237701"
       },
@@ -3893,6 +4114,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": true,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1249427"
       },
@@ -3911,6 +4133,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1245997"
       },
@@ -3927,6 +4150,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557562"
       },
@@ -3945,6 +4169,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026, May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247893"
       },
@@ -3963,6 +4188,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1242782"
       },
@@ -3981,6 +4207,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "November 2025, December 2025, January 2026, February 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1246002"
       },
@@ -3997,6 +4224,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "September 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558253"
       },
@@ -4013,6 +4241,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557170"
       },
@@ -4029,6 +4258,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557977"
       },
@@ -4045,6 +4275,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557674"
       },
@@ -4063,6 +4294,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247899"
       },
@@ -4081,6 +4313,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247891"
       },
@@ -4097,6 +4330,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557974"
       },
@@ -4113,6 +4347,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "May 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557720"
       },
@@ -4129,6 +4364,7 @@
         "m365Severity": null,
         "m365Status": null,
         "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557970"
       },
@@ -4147,6 +4383,7 @@
         "m365Severity": "normal",
         "m365Status": null,
         "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1248393"
       }

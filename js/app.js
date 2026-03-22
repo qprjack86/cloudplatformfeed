@@ -1042,6 +1042,11 @@
           "</span>"
         );
       }
+      if (article.m365IsMajorChange) {
+        tags.push(
+          '<span class="m365-tag major-change"><span class="m365-tag-label">Major change</span></span>'
+        );
+      }
 
       if (tags.length) {
         m365TagsHtml = '<div class="m365-tags">' + tags.join("") + "</div>";

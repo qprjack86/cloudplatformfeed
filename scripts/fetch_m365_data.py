@@ -445,9 +445,9 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365Source": item.get("source", ""),  # "roadmap" or "message_center"
         "m365Category": item.get("category", ""),
         "m365Severity": item.get("severity"),
-        # For roadmap items use the DeltaPulse releasePhase via lifecycle; don't duplicate with m365Status
         "m365Status": None if item.get("source") == "roadmap" else item.get("status"),
         "m365TargetDate": resolve_m365_target_date(item),
+        "m365IsMajorChange": item.get("isMajorChange", False),
         "lifecycle": classify_m365_lifecycle(item),
     }
 
@@ -528,6 +528,7 @@ def fetch_m365_items(session: requests.Session) -> list:
                 "releasePhase",
                 "platforms",
                 "thirdPartyLinks",
+                "isMajorChange",
             ):
                 if field in roadmap_details and (field not in item or item.get(field) in (None, "", [])):
                     item[field] = roadmap_details.get(field)
@@ -552,6 +553,7 @@ def fetch_m365_items(session: requests.Session) -> list:
             "lastUpdatedDate",
             "createdDate",
             "modifiedDate",
+            "isMajorChange",
         ):
             if field in metadata and (field not in item or item.get(field) in (None, "", [])):
                 item[field] = metadata.get(field)
