@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-22T12:51:49.431765+00:00",
+  "lastUpdated": "2026-03-22T16:39:07.860947+00:00",
   "totalArticles": 209,
   "articles": [
+    {
+      "title": "Run OpenClaw Agents on Azure Linux VMs (with Secure Defaults)",
+      "link": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/run-openclaw-agents-on-azure-linux-vms-with-secure-defaults/ba-p/4502944",
+      "published": "2026-03-22T16:34:46+00:00",
+      "summary": "Many teams want an enterprise-ready personal AI assistant, but they need it on infrastructure they control, with security boundaries they can explain to IT. That is exactly where OpenClaw fits on Azure. OpenClaw is a self-hosted, always-on personal agent runtime you run in your enterprise...",
+      "blog": "Linux & Open Source",
+      "blogId": "linuxandopensourceblog",
+      "author": "johnsonshi_msft"
+    },
     {
       "title": "What’s new in Microsoft Sentinel: RSAC 2026",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
@@ -1873,26 +1882,17 @@
       "blog": "Azure SQL Dev Corner",
       "blogId": "azuresqlblog",
       "author": "Jerry Nixon"
-    },
-    {
-      "title": "The Rise of Agentic BSS in the IQ Era: from Systems of Record to Systems of Outcome",
-      "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/the-rise-of-agentic-bss-in-the-iq-era-from-systems-of-record-to/ba-p/4495499",
-      "published": "2026-02-20T16:14:52+00:00",
-      "summary": "Authors: Rode Kirk and Rick Lievano Telecom Business Support Systems (BSS) are entering their most consequential transformation since digital billing. As networks become programmable, products become composable, and customers expect real‑time, personalized experiences, the traditional BSS...",
-      "blog": "Telecommunications",
-      "blogId": "telecommunications-industry-blog",
-      "author": "rodekirk"
     }
   ],
   "summaryWindowDays": 7,
   "summaryPublishingDays": [
+    "2026-03-22",
     "2026-03-21",
     "2026-03-20",
     "2026-03-19",
     "2026-03-18",
     "2026-03-17",
-    "2026-03-16",
-    "2026-03-14"
+    "2026-03-16"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
