@@ -351,25 +351,32 @@ def classify_m365_lifecycle(item: dict) -> str:
     return "launched_ga"  # Safe default
 
 
-def dedupe_m365_articles(articles: list, max_age_days: int = 30) -> list:
-    """Deduplicate M365 items by normalized URL; discard stale items."""
+def dedupe_m365_articles(articles: list, max_age_days: int = 30, major_change_age_days: int = 90) -> list:
+    """Deduplicate M365 items by normalized URL; discard stale items.
+
+    Major change articles (m365IsMajorChange=True) are kept for
+    ``major_change_age_days`` (default 90); all others for ``max_age_days``
+    (default 30).
+    """
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(days=max_age_days)
-    
+    major_cutoff = now - timedelta(days=major_change_age_days)
+
     seen_keys = {}  # dedupe key -> article (first seen wins)
     deduped = []
-    
+
     for article in articles:
-        # Check age
+        # Check age — major changes get extended retention.
         pub_date_str = article.get("published", "")  # Article dict uses 'published', not 'publishedDate'
         if pub_date_str:
             try:
                 pub_date = datetime.fromisoformat(pub_date_str.replace("Z", "+00:00"))
-                if pub_date < cutoff:
+                age_cutoff = major_cutoff if article.get("m365IsMajorChange") else cutoff
+                if pub_date < age_cutoff:
                     continue  # Skip stale items
             except (ValueError, AttributeError):
                 pass  # If unparseable, include it
-        
+
         # Prefer source/id dedupe to avoid collapsing admin URLs that carry IDs in fragments.
         source = (article.get("m365Source") or "").strip().lower()
         item_id = str(article.get("m365Id") or "").strip()
@@ -383,7 +390,7 @@ def dedupe_m365_articles(articles: list, max_age_days: int = 30) -> list:
             seen_keys[dedupe_key] = article
             article["_normalized_url"] = dedupe_key
             deduped.append(article)
-    
+
     return deduped
 
 

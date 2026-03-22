@@ -521,13 +521,31 @@
           var m365Data = await m365Response.json();
           m365FeedData = m365Data;
           var m365Cutoff = localDaysAgo(30);
+          var m365MajorCutoff = localDaysAgo(90);
           m365Articles = (m365Data.articles || []).filter(function (article) {
             var articleDate = getArticleDate(article);
-            return articleDate && articleDate >= m365Cutoff;
+            if (!articleDate) return false;
+            var cutoff = article.m365IsMajorChange ? m365MajorCutoff : m365Cutoff;
+            return articleDate >= cutoff;
           });
           // Mark M365 articles with source
           m365Articles.forEach(function (a) { a.source = "m365"; });
-          
+
+          // Auto-bookmark major changes for all visitors.
+          var bookmarksChanged = false;
+          m365Articles.forEach(function (a) {
+            if (a.m365IsMajorChange && a.link && !bookmarks.has(a.link)) {
+              bookmarks.add(a.link);
+              bookmarksChanged = true;
+            }
+          });
+          if (bookmarksChanged) {
+            localStorage.setItem(
+              "cloudplatformfeed-bookmarks",
+              JSON.stringify(Array.from(bookmarks))
+            );
+          }
+
           // Populate productCategory using a stable source+id key.
           var byCategory = m365Data.byCategory || {};
           var categoryBySourceId = {};

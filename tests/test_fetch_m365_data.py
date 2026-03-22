@@ -104,15 +104,56 @@ class DedupeM365ArticlesTests(unittest.TestCase):
         now = datetime.now(timezone.utc)
         fresh = (now - timedelta(days=1)).isoformat()
         stale = (now - timedelta(days=31)).isoformat()
-        
+
         articles = [
             {"title": "Recent", "link": "https://deltapulse.app/d1", "published": fresh},
             {"title": "Old", "link": "https://deltapulse.app/d2", "published": stale},
         ]
-        
+
         deduped = fetch_m365_data.dedupe_m365_articles(articles)
         self.assertEqual(len(deduped), 1)
         self.assertEqual(deduped[0]["title"], "Recent")
+
+    def test_major_change_kept_past_30_days(self):
+        """Major change articles should survive past the 30-day cutoff (up to 90 days)."""
+        now = datetime.now(timezone.utc)
+        stale_for_normal = (now - timedelta(days=45)).isoformat()
+
+        articles = [
+            {
+                "title": "Major Change",
+                "link": "https://deltapulse.app/d3",
+                "published": stale_for_normal,
+                "m365IsMajorChange": True,
+            },
+            {
+                "title": "Normal Old",
+                "link": "https://deltapulse.app/d4",
+                "published": stale_for_normal,
+                "m365IsMajorChange": False,
+            },
+        ]
+
+        deduped = fetch_m365_data.dedupe_m365_articles(articles)
+        self.assertEqual(len(deduped), 1)
+        self.assertEqual(deduped[0]["title"], "Major Change")
+
+    def test_major_change_discarded_after_90_days(self):
+        """Major change articles older than 90 days should still be discarded."""
+        now = datetime.now(timezone.utc)
+        very_old = (now - timedelta(days=91)).isoformat()
+
+        articles = [
+            {
+                "title": "Ancient Major Change",
+                "link": "https://deltapulse.app/d5",
+                "published": very_old,
+                "m365IsMajorChange": True,
+            },
+        ]
+
+        deduped = fetch_m365_data.dedupe_m365_articles(articles)
+        self.assertEqual(len(deduped), 0)
 
 
 class ClassifyM365LifecycleTests(unittest.TestCase):
