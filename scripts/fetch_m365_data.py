@@ -409,7 +409,7 @@ def resolve_m365_item_link(item: dict) -> str:
                 return value.strip()
 
         if item_id:
-            return f"https://deltapulse.app/dashboard?search={item_id}"
+            return f"https://deltapulse.app/dashboard?message={item_id}"
 
     if source == "roadmap":
         # Prefer DeltaPulse URLs for direct card navigation (same as message_center).
