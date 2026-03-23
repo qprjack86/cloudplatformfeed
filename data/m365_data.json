@@ -1,7 +1,45 @@
 {
-  "generatedAt": "2026-03-23T15:55:07.508359+00:00",
-  "totalArticles": 79,
+  "generatedAt": "2026-03-23T22:19:34.252166+00:00",
+  "totalArticles": 72,
   "articles": [
+    {
+      "title": "Power Apps - Use Microsoft 365 Copilot in model-driven apps",
+      "link": "https://deltapulse.app/item/MC1259433",
+      "published": "2026-03-23T13:34:52.000Z",
+      "source": "m365",
+      "m365Service": "Power Apps",
+      "m365AllServices": [
+        "Power Apps"
+      ],
+      "m365Id": "MC1259433",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1259433"
+    },
+    {
+      "title": "Power Automate - Share Process license capacity across workflows",
+      "link": "https://deltapulse.app/item/MC1259418",
+      "published": "2026-03-23T13:11:43.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft Power Automate",
+      "m365AllServices": [
+        "Microsoft Power Automate"
+      ],
+      "m365Id": "MC1259418",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1259418"
+    },
     {
       "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
       "link": "https://deltapulse.app/item/MC1258087",
@@ -978,158 +1016,6 @@
       "_normalized_url": "message_center:MC1253743"
     },
     {
-      "title": "Out-of-band hotpatch update released to address an issue affecting Bluetooth device visibility",
-      "link": "https://deltapulse.app/item/MC1253720",
-      "published": "2026-03-16T21:03:14.053Z",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1253720",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026",
-      "m365IsMajorChange": true,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1253720"
-    },
-    {
-      "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
-      "link": "https://deltapulse.app/item/MC1253577",
-      "published": "2026-03-16T19:07:15.000Z",
-      "source": "m365",
-      "m365Service": "Power Platform",
-      "m365AllServices": [
-        "Power Platform"
-      ],
-      "m365Id": "MC1253577",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "June 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1253577"
-    },
-    {
-      "title": "Dynamics 365 Sales - Get additional Dataverse storage capacity",
-      "link": "https://deltapulse.app/item/MC1253515",
-      "published": "2026-03-16T18:34:00.000Z",
-      "source": "m365",
-      "m365Service": "Dynamics 365 Apps",
-      "m365AllServices": [
-        "Dynamics 365 Apps"
-      ],
-      "m365Id": "MC1253515",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1253515"
-    },
-    {
-      "title": "Microsoft Dataverse - Use AI functions to enhance data quality",
-      "link": "https://deltapulse.app/item/MC1253512",
-      "published": "2026-03-16T18:32:52.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Dataverse",
-      "m365AllServices": [
-        "Microsoft Dataverse"
-      ],
-      "m365Id": "MC1253512",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1253512"
-    },
-    {
-      "title": "Dynamics 365 Customer Service - Control evaluation volume with sampling",
-      "link": "https://deltapulse.app/item/MC1253514",
-      "published": "2026-03-16T18:17:17.000Z",
-      "source": "m365",
-      "m365Service": "Dynamics 365 Apps",
-      "m365AllServices": [
-        "Dynamics 365 Apps"
-      ],
-      "m365Id": "MC1253514",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1253514"
-    },
-    {
-      "title": "Dynamics 365 Commerce – Modernize POS journeys with React and Fluent UI",
-      "link": "https://deltapulse.app/item/MC1253506",
-      "published": "2026-03-16T18:09:30.000Z",
-      "source": "m365",
-      "m365Service": "Finance and Operations Apps",
-      "m365AllServices": [
-        "Finance and Operations Apps"
-      ],
-      "m365Id": "MC1253506",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1253506"
-    },
-    {
-      "title": "Dynamics 365 Commerce - Support multiple languages in Store Commerce self-checkout",
-      "link": "https://deltapulse.app/item/MC1253504",
-      "published": "2026-03-16T18:05:13.000Z",
-      "source": "m365",
-      "m365Service": "Finance and Operations Apps",
-      "m365AllServices": [
-        "Finance and Operations Apps"
-      ],
-      "m365Id": "MC1253504",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1253504"
-    },
-    {
-      "title": "Power Apps - Download wrapped apps directly from Dataverse",
-      "link": "https://deltapulse.app/item/MC1253499",
-      "published": "2026-03-16T17:54:58.000Z",
-      "source": "m365",
-      "m365Service": "Power Apps",
-      "m365AllServices": [
-        "Power Apps"
-      ],
-      "m365Id": "MC1253499",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1253499"
-    },
-    {
       "title": "(Updated) Copilot can edit your presentation in PowerPoint for the web",
       "link": "https://deltapulse.app/item/MC1219792",
       "published": "2026-01-21T00:37:16.000Z",
@@ -1262,6 +1148,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1242782"
+    },
+    {
+      "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
+      "link": "https://deltapulse.app/item/MC1253577",
+      "published": "2026-03-16T19:07:15.000Z",
+      "source": "m365",
+      "m365Service": "Power Platform",
+      "m365AllServices": [
+        "Power Platform"
+      ],
+      "m365Id": "MC1253577",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "June 2026",
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1253577"
     },
     {
       "title": "Prevent/Fix: Microsoft Baseline Security Mode has automatically trigger Entra Conditional Access policy creation",
@@ -1421,44 +1326,6 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557970"
-    },
-    {
-      "title": "(Updated) Outlook Mobile: Follow a meeting option",
-      "link": "https://deltapulse.app/item/MC1248393",
-      "published": "2026-03-10T22:50:11.000Z",
-      "source": "m365",
-      "m365Service": "Exchange Online",
-      "m365AllServices": [
-        "Exchange Online"
-      ],
-      "m365Id": "MC1248393",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1248393"
-    },
-    {
-      "title": "(Updated) Trust DigiCert Global Root G2 certificate authority to avoid Exchange Online email disruption",
-      "link": "https://deltapulse.app/item/MC1224565",
-      "published": "2026-01-30T00:04:01.000Z",
-      "source": "m365",
-      "m365Service": "Exchange Online",
-      "m365AllServices": [
-        "Exchange Online"
-      ],
-      "m365Id": "MC1224565",
-      "m365Source": "message_center",
-      "m365Category": "planForChange",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026, April 2026",
-      "m365IsMajorChange": true,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1224565"
     }
   ],
   "byCategory": {
@@ -1691,44 +1558,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247891"
-      },
-      {
-        "title": "(Updated) Outlook Mobile: Follow a meeting option",
-        "link": "https://deltapulse.app/item/MC1248393",
-        "published": "2026-03-10T22:50:11.000Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1248393",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1248393"
-      },
-      {
-        "title": "(Updated) Trust DigiCert Global Root G2 certificate authority to avoid Exchange Online email disruption",
-        "link": "https://deltapulse.app/item/MC1224565",
-        "published": "2026-01-30T00:04:01.000Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1224565",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1224565"
       }
     ],
     "Productivity": [
@@ -2273,6 +2102,25 @@
     ],
     "AI & Automation": [
       {
+        "title": "Power Automate - Share Process license capacity across workflows",
+        "link": "https://deltapulse.app/item/MC1259418",
+        "published": "2026-03-23T13:11:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Power Automate",
+        "m365AllServices": [
+          "Microsoft Power Automate"
+        ],
+        "m365Id": "MC1259418",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1259418"
+      },
+      {
         "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
         "link": "https://deltapulse.app/item/MC1256117",
         "published": "2026-03-19T15:28:26.000Z",
@@ -2408,27 +2256,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1237701"
-      }
-    ],
-    "Data & Analytics": [
-      {
-        "title": "Microsoft Dataverse - Use AI functions to enhance data quality",
-        "link": "https://deltapulse.app/item/MC1253512",
-        "published": "2026-03-16T18:32:52.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Dataverse",
-        "m365AllServices": [
-          "Microsoft Dataverse"
-        ],
-        "m365Id": "MC1253512",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253512"
       }
     ],
     "Security & Compliance": [
@@ -2588,25 +2415,6 @@
         "_normalized_url": "message_center:MC1253743"
       },
       {
-        "title": "Out-of-band hotpatch update released to address an issue affecting Bluetooth device visibility",
-        "link": "https://deltapulse.app/item/MC1253720",
-        "published": "2026-03-16T21:03:14.053Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1253720",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253720"
-      },
-      {
         "title": "(Updated) Plan for change:Azure Network Connection health check enforcement for required Windows 365 endpoints",
         "link": "https://deltapulse.app/item/MC1245997",
         "published": "2026-03-06T21:17:06.000Z",
@@ -2665,6 +2473,25 @@
       }
     ],
     "Business Applications": [
+      {
+        "title": "Power Apps - Use Microsoft 365 Copilot in model-driven apps",
+        "link": "https://deltapulse.app/item/MC1259433",
+        "published": "2026-03-23T13:34:52.000Z",
+        "source": "m365",
+        "m365Service": "Power Apps",
+        "m365AllServices": [
+          "Power Apps"
+        ],
+        "m365Id": "MC1259433",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1259433"
+      },
       {
         "title": "Dynamics 365, Power Platform, and Role-based Copilot offerings 2026 release wave 1 plans available now",
         "link": "https://deltapulse.app/item/MC1255714",
@@ -2779,101 +2606,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253577"
-      },
-      {
-        "title": "Dynamics 365 Sales - Get additional Dataverse storage capacity",
-        "link": "https://deltapulse.app/item/MC1253515",
-        "published": "2026-03-16T18:34:00.000Z",
-        "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
-        "m365AllServices": [
-          "Dynamics 365 Apps"
-        ],
-        "m365Id": "MC1253515",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253515"
-      },
-      {
-        "title": "Dynamics 365 Customer Service - Control evaluation volume with sampling",
-        "link": "https://deltapulse.app/item/MC1253514",
-        "published": "2026-03-16T18:17:17.000Z",
-        "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
-        "m365AllServices": [
-          "Dynamics 365 Apps"
-        ],
-        "m365Id": "MC1253514",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253514"
-      },
-      {
-        "title": "Dynamics 365 Commerce – Modernize POS journeys with React and Fluent UI",
-        "link": "https://deltapulse.app/item/MC1253506",
-        "published": "2026-03-16T18:09:30.000Z",
-        "source": "m365",
-        "m365Service": "Finance and Operations Apps",
-        "m365AllServices": [
-          "Finance and Operations Apps"
-        ],
-        "m365Id": "MC1253506",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253506"
-      },
-      {
-        "title": "Dynamics 365 Commerce - Support multiple languages in Store Commerce self-checkout",
-        "link": "https://deltapulse.app/item/MC1253504",
-        "published": "2026-03-16T18:05:13.000Z",
-        "source": "m365",
-        "m365Service": "Finance and Operations Apps",
-        "m365AllServices": [
-          "Finance and Operations Apps"
-        ],
-        "m365Id": "MC1253504",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253504"
-      },
-      {
-        "title": "Power Apps - Download wrapped apps directly from Dataverse",
-        "link": "https://deltapulse.app/item/MC1253499",
-        "published": "2026-03-16T17:54:58.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1253499",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253499"
       }
     ],
     "Other": [
@@ -3094,6 +2826,44 @@
       }
     ],
     "launched_ga": [
+      {
+        "title": "Power Apps - Use Microsoft 365 Copilot in model-driven apps",
+        "link": "https://deltapulse.app/item/MC1259433",
+        "published": "2026-03-23T13:34:52.000Z",
+        "source": "m365",
+        "m365Service": "Power Apps",
+        "m365AllServices": [
+          "Power Apps"
+        ],
+        "m365Id": "MC1259433",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1259433"
+      },
+      {
+        "title": "Power Automate - Share Process license capacity across workflows",
+        "link": "https://deltapulse.app/item/MC1259418",
+        "published": "2026-03-23T13:11:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Power Automate",
+        "m365AllServices": [
+          "Microsoft Power Automate"
+        ],
+        "m365Id": "MC1259418",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1259418"
+      },
       {
         "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
         "link": "https://deltapulse.app/item/MC1258087",
@@ -3917,158 +3687,6 @@
         "_normalized_url": "message_center:MC1253743"
       },
       {
-        "title": "Out-of-band hotpatch update released to address an issue affecting Bluetooth device visibility",
-        "link": "https://deltapulse.app/item/MC1253720",
-        "published": "2026-03-16T21:03:14.053Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1253720",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253720"
-      },
-      {
-        "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
-        "link": "https://deltapulse.app/item/MC1253577",
-        "published": "2026-03-16T19:07:15.000Z",
-        "source": "m365",
-        "m365Service": "Power Platform",
-        "m365AllServices": [
-          "Power Platform"
-        ],
-        "m365Id": "MC1253577",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253577"
-      },
-      {
-        "title": "Dynamics 365 Sales - Get additional Dataverse storage capacity",
-        "link": "https://deltapulse.app/item/MC1253515",
-        "published": "2026-03-16T18:34:00.000Z",
-        "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
-        "m365AllServices": [
-          "Dynamics 365 Apps"
-        ],
-        "m365Id": "MC1253515",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253515"
-      },
-      {
-        "title": "Microsoft Dataverse - Use AI functions to enhance data quality",
-        "link": "https://deltapulse.app/item/MC1253512",
-        "published": "2026-03-16T18:32:52.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Dataverse",
-        "m365AllServices": [
-          "Microsoft Dataverse"
-        ],
-        "m365Id": "MC1253512",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253512"
-      },
-      {
-        "title": "Dynamics 365 Customer Service - Control evaluation volume with sampling",
-        "link": "https://deltapulse.app/item/MC1253514",
-        "published": "2026-03-16T18:17:17.000Z",
-        "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
-        "m365AllServices": [
-          "Dynamics 365 Apps"
-        ],
-        "m365Id": "MC1253514",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253514"
-      },
-      {
-        "title": "Dynamics 365 Commerce – Modernize POS journeys with React and Fluent UI",
-        "link": "https://deltapulse.app/item/MC1253506",
-        "published": "2026-03-16T18:09:30.000Z",
-        "source": "m365",
-        "m365Service": "Finance and Operations Apps",
-        "m365AllServices": [
-          "Finance and Operations Apps"
-        ],
-        "m365Id": "MC1253506",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253506"
-      },
-      {
-        "title": "Dynamics 365 Commerce - Support multiple languages in Store Commerce self-checkout",
-        "link": "https://deltapulse.app/item/MC1253504",
-        "published": "2026-03-16T18:05:13.000Z",
-        "source": "m365",
-        "m365Service": "Finance and Operations Apps",
-        "m365AllServices": [
-          "Finance and Operations Apps"
-        ],
-        "m365Id": "MC1253504",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253504"
-      },
-      {
-        "title": "Power Apps - Download wrapped apps directly from Dataverse",
-        "link": "https://deltapulse.app/item/MC1253499",
-        "published": "2026-03-16T17:54:58.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1253499",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253499"
-      },
-      {
         "title": "(Updated) Copilot can edit your presentation in PowerPoint for the web",
         "link": "https://deltapulse.app/item/MC1219792",
         "published": "2026-01-21T00:37:16.000Z",
@@ -4201,6 +3819,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1242782"
+      },
+      {
+        "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
+        "link": "https://deltapulse.app/item/MC1253577",
+        "published": "2026-03-16T19:07:15.000Z",
+        "source": "m365",
+        "m365Service": "Power Platform",
+        "m365AllServices": [
+          "Power Platform"
+        ],
+        "m365Id": "MC1253577",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1253577"
       },
       {
         "title": "Prevent/Fix: Microsoft Baseline Security Mode has automatically trigger Entra Conditional Access policy creation",
@@ -4360,44 +3997,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557970"
-      },
-      {
-        "title": "(Updated) Outlook Mobile: Follow a meeting option",
-        "link": "https://deltapulse.app/item/MC1248393",
-        "published": "2026-03-10T22:50:11.000Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1248393",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1248393"
-      },
-      {
-        "title": "(Updated) Trust DigiCert Global Root G2 certificate authority to avoid Exchange Online email disruption",
-        "link": "https://deltapulse.app/item/MC1224565",
-        "published": "2026-01-30T00:04:01.000Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1224565",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1224565"
       }
     ],
     "in_development": [],
@@ -4410,6 +4009,7 @@
     "thumbnail": "https://i1.ytimg.com/vi/HdO9NV8a9yE/hqdefault.jpg"
   },
   "summaryPublishingDays": [
+    "2026-03-23",
     "2026-03-21",
     "2026-03-20",
     "2026-03-19",
