@@ -401,24 +401,9 @@ def resolve_m365_item_link(item: dict) -> str:
     source = item.get("source", "")
     item_id = str(item.get("id", "")).strip()
 
-    if source == "message_center":
-        # Prefer DeltaPulse URLs for direct card/dashboard navigation.
-        for key in ("url", "detailsUrl", "webUrl"):
-            value = item.get(key)
-            if isinstance(value, str) and value.strip():
-                return value.strip()
-
-        if item_id:
-            return f"https://deltapulse.app/dashboard?message={item_id}"
-
-    if source == "roadmap":
-        # Prefer DeltaPulse URLs for direct card navigation (same as message_center).
-        for key in ("url", "detailsUrl", "webUrl"):
-            value = item.get(key)
-            if isinstance(value, str) and value.strip():
-                return value.strip()
-        if item_id:
-            return f"https://deltapulse.app/dashboard?roadmap={item_id}"
+    # Use DeltaPulse public item page (works without authentication).
+    if item_id and source in ("message_center", "roadmap"):
+        return f"https://deltapulse.app/item/{item_id}"
 
     return item.get("url", "")
 
