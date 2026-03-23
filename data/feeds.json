@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-23T08:35:14.584339+00:00",
+  "lastUpdated": "2026-03-23T08:32:32.811691+00:00",
   "totalArticles": 207,
   "articles": [
     {
@@ -1868,13 +1868,13 @@
   ],
   "summaryWindowDays": 7,
   "summaryPublishingDays": [
-    "2026-03-23",
     "2026-03-22",
     "2026-03-21",
     "2026-03-20",
     "2026-03-19",
     "2026-03-18",
-    "2026-03-17"
+    "2026-03-17",
+    "2026-03-16"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",

@@ -303,8 +303,8 @@ def truncate(text, max_length=300):
 
 
 def get_recent_publishing_days(articles, max_days):
-    """Return the most recent publishing days found in article published values."""
-    published_days = sorted(
+    """Return the calendar days within max_days of the most recent article."""
+    published_days_all = sorted(
         {
             article.get("published", "")[:10]
             for article in articles
@@ -312,7 +312,17 @@ def get_recent_publishing_days(articles, max_days):
         },
         reverse=True,
     )
-    return published_days[:max_days]
+    if not published_days_all:
+        return []
+
+    latest_day_str = published_days_all[0]
+    latest_date = datetime.fromisoformat(latest_day_str).replace(tzinfo=timezone.utc)
+    cutoff_date = latest_date - timedelta(days=max_days)
+
+    return [
+        day_str for day_str in published_days_all
+        if datetime.fromisoformat(day_str).replace(tzinfo=timezone.utc) > cutoff_date
+    ]
 
 
 def get_articles_for_publishing_days(articles, publishing_days):

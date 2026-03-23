@@ -56,11 +56,11 @@ DEFAULT_PORTS = {"http": 80, "https": 443}
 M365_PRODUCT_CATEGORIES = {
     "Collaboration": [
         "Teams", "SharePoint Online", "Outlook", "Exchange Online", "OneDrive for Business",
-        "Yammer", "Skype for Business", "Stream"
+        "Yammer", "Skype for Business", "Stream", "OneDrive"
     ],
     "Productivity": [
         "Word", "Excel", "PowerPoint", "OneNote", "Access", "Publisher", "Project", "Visio",
-        "Microsoft 365 apps"
+        "Microsoft 365 apps", "Microsoft 365 suite"
     ],
     "AI & Automation": [
         "Microsoft Copilot", "Copilot Pro", "Power Automate", "Copilot in Teams", 
@@ -72,16 +72,18 @@ M365_PRODUCT_CATEGORIES = {
     ],
     "Security & Compliance": [
         "Microsoft 365 Defender", "Azure Information Protection", "Advanced Threat Protection",
-        "Security & Compliance Center", "Insider Risk Management", "Microsoft Purview"
+        "Security & Compliance Center", "Insider Risk Management", "Microsoft Purview",
+        "Microsoft Defender XDR"
     ],
     "Administration": [
         "Microsoft 365 Admin Center", "Entra ID", "Active Directory", "Intune",
-        "Endpoint Manager", "Compliance Manager", "Microsoft 365 Lighthouse"
+        "Endpoint Manager", "Compliance Manager", "Microsoft 365 Lighthouse",
+        "Entra", "Windows", "Windows 365"
     ],
     "Business Applications": [
         "Dynamics 365 Apps", "Dynamics 365 Sales", "Dynamics 365 Customer Service",
         "Dynamics 365 Finance", "Dynamics 365 Supply Chain", "Project Operations",
-        "Business Central", "Finance and Operations Apps"
+        "Business Central", "Finance and Operations Apps", "Power Apps", "Power Platform"
     ],
     "Other": { # Fallback
         "Bookings", "Forms", "Lists", "Planner", "Shifts", "To Do", "Viva",
@@ -731,17 +733,23 @@ def build_m365_feed(raw_items: list, m365_video: dict = None) -> dict:
         by_lifecycle[lifecycle] = [a for a in deduped if a.get("lifecycle") == lifecycle]
     
     # Compute distinct publishing days for the summary date range.
-    # Limit to the last 7 days so the panel header shows a weekly window,
-    # matching the Azure summary behaviour.
-    summary_cutoff = datetime.now(timezone.utc) - timedelta(days=7)
-    pub_days = set()
+    # Determine the strict 7-day calendar window backwards from the most recent article.
+    valid_dates = []
     for a in deduped:
         try:
             dt = datetime.fromisoformat(a["published"].replace("Z", "+00:00"))
-            if dt >= summary_cutoff:
-                pub_days.add(dt.strftime("%Y-%m-%d"))
+            valid_dates.append(dt)
         except (ValueError, KeyError):
             pass
+
+    pub_days = set()
+    if valid_dates:
+        latest_date = max(valid_dates)
+        summary_cutoff = latest_date - timedelta(days=7)
+        for dt in valid_dates:
+            if dt > summary_cutoff:
+                pub_days.add(dt.strftime("%Y-%m-%d"))
+                
     publishing_days = sorted(pub_days, reverse=True)
 
     return {

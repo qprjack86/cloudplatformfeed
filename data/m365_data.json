@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T08:35:33.046214+00:00",
+  "generatedAt": "2026-03-23T08:32:39.330054+00:00",
   "totalArticles": 79,
   "articles": [
     {
@@ -1560,6 +1560,25 @@
         "_normalized_url": "message_center:MC1255407"
       },
       {
+        "title": "Improved OneDrive sync experience for macOS users",
+        "link": "https://deltapulse.app/dashboard?message=MC1255404",
+        "published": "2026-03-18T22:28:44.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft OneDrive",
+        "m365AllServices": [
+          "Microsoft OneDrive"
+        ],
+        "m365Id": "MC1255404",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1255404"
+      },
+      {
         "title": "Microsoft Teams: New slash command in compose to create workflows",
         "link": "https://deltapulse.app/dashboard?message=MC1254553",
         "published": "2026-03-17T22:46:28.000Z",
@@ -1634,6 +1653,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1239176"
+      },
+      {
+        "title": "(Updated) Set a custom name for the OneDrive sync folder",
+        "link": "https://deltapulse.app/dashboard?message=MC1242782",
+        "published": "2026-03-03T00:02:49.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft OneDrive",
+        "m365AllServices": [
+          "Microsoft OneDrive"
+        ],
+        "m365Id": "MC1242782",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1242782"
       },
       {
         "title": "(Updated) Outlook: Support for recommended and automatically applied sensitivity labels in Outlook for iOS and Android",
@@ -1950,6 +1988,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255412"
+      },
+      {
+        "title": "Microsoft Edge for Business: Cross-tenant support using Intune Mobile Application Management (MAM)",
+        "link": "https://deltapulse.app/dashboard?message=MC1255405",
+        "published": "2026-03-18T22:29:15.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365 suite",
+        "m365AllServices": [
+          "Microsoft 365 suite"
+        ],
+        "m365Id": "MC1255405",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "February 2026, March 2026, April 2026",
+        "m365IsMajorChange": true,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1255405"
       },
       {
         "title": "Microsoft Purview: Data Loss Prevention - Data Security Triage Agent summaries and categorizations for DLP alerts will be made available in DLP Alerts in Microsoft Defender XDR",
@@ -2395,6 +2452,26 @@
         "_normalized_url": "message_center:MC1258000"
       },
       {
+        "title": "Microsoft Purview | Data Security Triage Agent Summaries for DLP Alerts in Microsoft Defender XDR",
+        "link": "https://deltapulse.app/dashboard?message=MC1255406",
+        "published": "2026-03-18T22:29:45.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Defender XDR",
+        "m365AllServices": [
+          "Microsoft Defender XDR",
+          "Microsoft Purview"
+        ],
+        "m365Id": "MC1255406",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, August 2026",
+        "m365IsMajorChange": true,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1255406"
+      },
+      {
         "title": "Purview DSPM’s Data Risk Assessments now support item-level investigation and remediation of SharePoint",
         "link": "https://deltapulse.app/dashboard?message=MC1254556",
         "published": "2026-03-17T22:51:02.000Z",
@@ -2412,6 +2489,179 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254556"
+      },
+      {
+        "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
+        "link": "https://deltapulse.app/dashboard?message=MC1254554",
+        "published": "2026-03-17T22:47:38.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Defender XDR",
+        "m365AllServices": [
+          "Microsoft Defender XDR"
+        ],
+        "m365Id": "MC1254554",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365IsMajorChange": true,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1254554"
+      }
+    ],
+    "Administration": [
+      {
+        "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
+        "link": "https://deltapulse.app/dashboard?message=MC1258087",
+        "published": "2026-03-21T21:07:44.520Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1258087",
+        "m365Source": "message_center",
+        "m365Category": "preventOrFixIssue",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365IsMajorChange": true,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1258087"
+      },
+      {
+        "title": "(Updated) Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
+        "link": "https://deltapulse.app/dashboard?message=MC1254512",
+        "published": "2026-03-20T19:58:29.570Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1254512",
+        "m365Source": "message_center",
+        "m365Category": "preventOrFixIssue",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, July 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1254512"
+      },
+      {
+        "title": "Microsoft Entra: Passkeys in Microsoft registration campaigns",
+        "link": "https://deltapulse.app/dashboard?message=MC1253746",
+        "published": "2026-03-16T22:27:17.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Entra",
+        "m365AllServices": [
+          "Microsoft Entra"
+        ],
+        "m365Id": "MC1253746",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, May 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1253746"
+      },
+      {
+        "title": "Action required: Secure Boot certificate updates for Windows 365 Cloud PCs before June 2026",
+        "link": "https://deltapulse.app/dashboard?message=MC1253743",
+        "published": "2026-03-16T22:23:56.000Z",
+        "source": "m365",
+        "m365Service": "Windows 365",
+        "m365AllServices": [
+          "Windows 365"
+        ],
+        "m365Id": "MC1253743",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365IsMajorChange": true,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1253743"
+      },
+      {
+        "title": "Out-of-band hotpatch update released to address an issue affecting Bluetooth device visibility",
+        "link": "https://deltapulse.app/dashboard?message=MC1253720",
+        "published": "2026-03-16T21:03:14.053Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1253720",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365IsMajorChange": true,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1253720"
+      },
+      {
+        "title": "(Updated) Plan for change:Azure Network Connection health check enforcement for required Windows 365 endpoints",
+        "link": "https://deltapulse.app/dashboard?message=MC1245997",
+        "published": "2026-03-06T21:17:06.000Z",
+        "source": "m365",
+        "m365Service": "Windows 365",
+        "m365AllServices": [
+          "Windows 365"
+        ],
+        "m365Id": "MC1245997",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1245997"
+      },
+      {
+        "title": "(Updated) Microsoft Entra passkeys on Windows now support phishing-resistant sign-in",
+        "link": "https://deltapulse.app/dashboard?message=MC1247893",
+        "published": "2026-03-09T22:24:16.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Entra",
+        "m365AllServices": [
+          "Microsoft Entra"
+        ],
+        "m365Id": "MC1247893",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026, April 2026, May 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1247893"
+      },
+      {
+        "title": "Prevent/Fix: Microsoft Baseline Security Mode has automatically trigger Entra Conditional Access policy creation",
+        "link": "https://deltapulse.app/dashboard?message=MC1246002",
+        "published": "2026-03-06T21:22:39.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Entra",
+        "m365AllServices": [
+          "Microsoft Entra"
+        ],
+        "m365Id": "MC1246002",
+        "m365Source": "message_center",
+        "m365Category": "preventOrFixIssue",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "November 2025, December 2025, January 2026, February 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1246002"
       }
     ],
     "Business Applications": [
@@ -2455,6 +2705,25 @@
         "_normalized_url": "message_center:MC1255709"
       },
       {
+        "title": "Power Apps - Custom theming for model-driven apps is becoming generally available",
+        "link": "https://deltapulse.app/dashboard?message=MC1254543",
+        "published": "2026-03-17T21:54:38.000Z",
+        "source": "m365",
+        "m365Service": "Power Apps",
+        "m365AllServices": [
+          "Power Apps"
+        ],
+        "m365Id": "MC1254543",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1254543"
+      },
+      {
         "title": "Dynamics 365 Sales - Improve opportunity context with AI-based data enrichment",
         "link": "https://deltapulse.app/dashboard?message=MC1254454",
         "published": "2026-03-17T17:37:12.000Z",
@@ -2491,6 +2760,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254451"
+      },
+      {
+        "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
+        "link": "https://deltapulse.app/dashboard?message=MC1253577",
+        "published": "2026-03-16T19:07:15.000Z",
+        "source": "m365",
+        "m365Service": "Power Platform",
+        "m365AllServices": [
+          "Power Platform"
+        ],
+        "m365Id": "MC1253577",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1253577"
       },
       {
         "title": "Dynamics 365 Sales - Get additional Dataverse storage capacity",
@@ -2567,6 +2855,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1253504"
+      },
+      {
+        "title": "Power Apps - Download wrapped apps directly from Dataverse",
+        "link": "https://deltapulse.app/dashboard?message=MC1253499",
+        "published": "2026-03-16T17:54:58.000Z",
+        "source": "m365",
+        "m365Service": "Power Apps",
+        "m365AllServices": [
+          "Power Apps"
+        ],
+        "m365Id": "MC1253499",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1253499"
       }
     ],
     "Other": [
@@ -2627,313 +2934,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1247899"
-      }
-    ],
-    "Uncategorized": [
-      {
-        "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
-        "link": "https://deltapulse.app/dashboard?message=MC1258087",
-        "published": "2026-03-21T21:07:44.520Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1258087",
-        "m365Source": "message_center",
-        "m365Category": "preventOrFixIssue",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1258087"
-      },
-      {
-        "title": "(Updated) Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
-        "link": "https://deltapulse.app/dashboard?message=MC1254512",
-        "published": "2026-03-20T19:58:29.570Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1254512",
-        "m365Source": "message_center",
-        "m365Category": "preventOrFixIssue",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026, July 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1254512"
-      },
-      {
-        "title": "Microsoft Purview | Data Security Triage Agent Summaries for DLP Alerts in Microsoft Defender XDR",
-        "link": "https://deltapulse.app/dashboard?message=MC1255406",
-        "published": "2026-03-18T22:29:45.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Defender XDR",
-        "m365AllServices": [
-          "Microsoft Defender XDR",
-          "Microsoft Purview"
-        ],
-        "m365Id": "MC1255406",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026, August 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1255406"
-      },
-      {
-        "title": "Microsoft Edge for Business: Cross-tenant support using Intune Mobile Application Management (MAM)",
-        "link": "https://deltapulse.app/dashboard?message=MC1255405",
-        "published": "2026-03-18T22:29:15.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365 suite",
-        "m365AllServices": [
-          "Microsoft 365 suite"
-        ],
-        "m365Id": "MC1255405",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "February 2026, March 2026, April 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1255405"
-      },
-      {
-        "title": "Improved OneDrive sync experience for macOS users",
-        "link": "https://deltapulse.app/dashboard?message=MC1255404",
-        "published": "2026-03-18T22:28:44.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft OneDrive",
-        "m365AllServices": [
-          "Microsoft OneDrive"
-        ],
-        "m365Id": "MC1255404",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026, May 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1255404"
-      },
-      {
-        "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
-        "link": "https://deltapulse.app/dashboard?message=MC1254554",
-        "published": "2026-03-17T22:47:38.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Defender XDR",
-        "m365AllServices": [
-          "Microsoft Defender XDR"
-        ],
-        "m365Id": "MC1254554",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1254554"
-      },
-      {
-        "title": "Power Apps - Custom theming for model-driven apps is becoming generally available",
-        "link": "https://deltapulse.app/dashboard?message=MC1254543",
-        "published": "2026-03-17T21:54:38.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1254543",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1254543"
-      },
-      {
-        "title": "Microsoft Entra: Passkeys in Microsoft registration campaigns",
-        "link": "https://deltapulse.app/dashboard?message=MC1253746",
-        "published": "2026-03-16T22:27:17.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Entra",
-        "m365AllServices": [
-          "Microsoft Entra"
-        ],
-        "m365Id": "MC1253746",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026, May 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253746"
-      },
-      {
-        "title": "Action required: Secure Boot certificate updates for Windows 365 Cloud PCs before June 2026",
-        "link": "https://deltapulse.app/dashboard?message=MC1253743",
-        "published": "2026-03-16T22:23:56.000Z",
-        "source": "m365",
-        "m365Service": "Windows 365",
-        "m365AllServices": [
-          "Windows 365"
-        ],
-        "m365Id": "MC1253743",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253743"
-      },
-      {
-        "title": "Out-of-band hotpatch update released to address an issue affecting Bluetooth device visibility",
-        "link": "https://deltapulse.app/dashboard?message=MC1253720",
-        "published": "2026-03-16T21:03:14.053Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1253720",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253720"
-      },
-      {
-        "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
-        "link": "https://deltapulse.app/dashboard?message=MC1253577",
-        "published": "2026-03-16T19:07:15.000Z",
-        "source": "m365",
-        "m365Service": "Power Platform",
-        "m365AllServices": [
-          "Power Platform"
-        ],
-        "m365Id": "MC1253577",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253577"
-      },
-      {
-        "title": "Power Apps - Download wrapped apps directly from Dataverse",
-        "link": "https://deltapulse.app/dashboard?message=MC1253499",
-        "published": "2026-03-16T17:54:58.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1253499",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1253499"
-      },
-      {
-        "title": "(Updated) Plan for change:Azure Network Connection health check enforcement for required Windows 365 endpoints",
-        "link": "https://deltapulse.app/dashboard?message=MC1245997",
-        "published": "2026-03-06T21:17:06.000Z",
-        "source": "m365",
-        "m365Service": "Windows 365",
-        "m365AllServices": [
-          "Windows 365"
-        ],
-        "m365Id": "MC1245997",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1245997"
-      },
-      {
-        "title": "(Updated) Microsoft Entra passkeys on Windows now support phishing-resistant sign-in",
-        "link": "https://deltapulse.app/dashboard?message=MC1247893",
-        "published": "2026-03-09T22:24:16.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Entra",
-        "m365AllServices": [
-          "Microsoft Entra"
-        ],
-        "m365Id": "MC1247893",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026, May 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1247893"
-      },
-      {
-        "title": "(Updated) Set a custom name for the OneDrive sync folder",
-        "link": "https://deltapulse.app/dashboard?message=MC1242782",
-        "published": "2026-03-03T00:02:49.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft OneDrive",
-        "m365AllServices": [
-          "Microsoft OneDrive"
-        ],
-        "m365Id": "MC1242782",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1242782"
-      },
-      {
-        "title": "Prevent/Fix: Microsoft Baseline Security Mode has automatically trigger Entra Conditional Access policy creation",
-        "link": "https://deltapulse.app/dashboard?message=MC1246002",
-        "published": "2026-03-06T21:22:39.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Entra",
-        "m365AllServices": [
-          "Microsoft Entra"
-        ],
-        "m365Id": "MC1246002",
-        "m365Source": "message_center",
-        "m365Category": "preventOrFixIssue",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "November 2025, December 2025, January 2026, February 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1246002"
       }
     ]
   },
