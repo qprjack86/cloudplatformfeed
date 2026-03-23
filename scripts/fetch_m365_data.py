@@ -467,7 +467,7 @@ def build_article_from_m365_item(item: dict) -> dict:
 def categorize_by_product(articles: list) -> dict:
     """Group articles by M365 product category."""
     categories = {cat: [] for cat in M365_PRODUCT_CATEGORIES.keys()}
-    categories["Uncategorized"] = []
+    categories["Uncategorised"] = []
     
     for article in articles:
         service = article.get("m365Service", "")
@@ -481,7 +481,7 @@ def categorize_by_product(articles: list) -> dict:
                 break
         
         if not categorized:
-            categories["Uncategorized"].append(article)
+            categories["Uncategorised"].append(article)
     
     return {k: v for k, v in categories.items() if v}  # Remove empty categories
 

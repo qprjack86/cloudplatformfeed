@@ -165,7 +165,7 @@ To test the feed fetchers locally:
 
 If these variables are not set, feed fetching still works and the site will show that the AI summary is unavailable for that update. The published JSON now exposes only a safe summary status and reason code, never raw Azure OpenAI error text.
 
-Feed retrieval is also hardened before parsing: only the configured HTTPS feed hosts are requested, requests use explicit timeouts and bounded retries, and article deduplication normalizes URLs to drop common tracking parameters before duplicate checks.
+Feed retrieval is also hardened before parsing: only the configured HTTPS feed hosts are requested, requests use explicit timeouts and bounded retries, and article deduplication normalises URLs to drop common tracking parameters before duplicate checks.
 
 For GitHub Actions, add the same values as repository secrets: `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_VERSION`, and `AZURE_OPENAI_DEPLOYMENT`.
 
@@ -190,7 +190,7 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 - The site uses a meta Content Security Policy and referrer policy because GitHub Pages does not provide a native way to set custom response headers for this static site.
 - Microsoft Clarity telemetry is integrated smoothly, with the CSP explicitly tuned to securely permit its dynamic load-balancer endpoints (`*.clarity.ms`) and required inline execution.
 - AI summary failures are logged in CI, but public feed data includes only safe summary reason codes.
-- Each successful fetch now writes `data/checksums.json` after `data/feeds.json` and `data/feed.xml` are finalized. The file records the artifact path, `sha256` algorithm, digest, and generation timestamp for both published outputs.
+- Each successful fetch now writes `data/checksums.json` after `data/feeds.json` and `data/feed.xml` are finalised. The file records the artifact path, `sha256` algorithm, digest, and generation timestamp for both published outputs.
 - During incident review or debugging, compare the published artifacts against `data/checksums.json` to confirm whether a suspicious file matches the last known generated content, or to spot unexpected post-generation changes.
 
 ## Acknowledgements

@@ -85,7 +85,7 @@
   // Tab buttons (M365 feature)
   var tabButtons = document.querySelectorAll(".tab-button");
   var SUMMARY_REASON_MESSAGES = {
-    no_dated_articles: "No recent dated articles were available to summarize.",
+    no_dated_articles: "No recent dated articles were available to summarise.",
     no_articles_in_window: "No recent articles were available in the current summary window.",
     missing_azure_openai_config: "AI summary generation is not configured for this refresh.",
     azure_openai_failed: "AI summary generation was temporarily unavailable for this refresh."
@@ -564,7 +564,7 @@
             article.productCategory =
               categoryBySourceId[key] ||
               article.m365Category ||
-              "Uncategorized";
+              "Uncategorised";
           });
         }
       } catch (e) {
@@ -726,7 +726,7 @@
     var m365CategoryCounts = {};
     
     sourceArticles.forEach(function (a) {
-      var category = a.productCategory || "Uncategorized";
+      var category = a.productCategory || "Uncategorised";
       m365CategoryCounts[category] = (m365CategoryCounts[category] || 0) + 1;
     });
 
@@ -922,7 +922,7 @@
   function articleMatchesCategory(article, categoryName) {
     // Handle M365 articles (use productCategory field)
     if ((article.source || "azure") === "m365") {
-      var productCategory = article.productCategory || article.m365Category || "Uncategorized";
+      var productCategory = article.productCategory || article.m365Category || "Uncategorised";
       return productCategory === categoryName;
     }
 
