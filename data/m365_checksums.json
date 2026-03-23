@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-22T23:31:56.073657+00:00",
+  "generatedAt": "2026-03-23T00:06:11.805435+00:00",
   "artifacts": [
     {
-      "path": "/home/runner/work/cloudplatformfeed/cloudplatformfeed/data/m365_data.json",
+      "path": "/Users/natasha/DO Files/cloudplatformfeed/data/m365_data.json",
       "algorithm": "sha256",
-      "value": "03377a5bf938186d3e373f9241444513d3c2166d157f61efb239a5bc654c1415",
-      "generatedAt": "2026-03-22T23:31:56.073657+00:00"
+      "value": "82ef63c005d7d427e1690866636e9eb48a06352a5329a3a1fc5ff6bc6cfc07ef",
+      "generatedAt": "2026-03-23T00:06:11.805435+00:00"
     }
   ]
 }

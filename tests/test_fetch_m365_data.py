@@ -458,6 +458,11 @@ class YouTubeVideoHelperTests(unittest.TestCase):
                 "What's new in Microsoft 365 | March 2026"
             )
         )
+        self.assertTrue(
+            fetch_m365_data._is_m365_monthly_video_title(
+                "What’s new in Microsoft 365 | March 2026"
+            )
+        )
         self.assertFalse(
             fetch_m365_data._is_m365_monthly_video_title(
                 "Microsoft 365 update roundup"

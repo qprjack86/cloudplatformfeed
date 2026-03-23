@@ -631,7 +631,9 @@ def _select_best_youtube_video_entry(entries: list, match_score_fn):
 
 def _normalize_summary_title(value: str) -> str:
     """Normalize title text for stable matching."""
-    return re.sub(r"\s+", " ", (value or "").strip().lower())
+    value = (value or "").strip().lower()
+    value = value.replace("’", "'").replace("‘", "'")
+    return re.sub(r"\s+", " ", value)
 
 
 def _is_m365_monthly_video_title(title: str) -> bool:
