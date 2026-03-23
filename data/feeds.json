@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-23T09:53:57.110669+00:00",
-  "totalArticles": 207,
+  "lastUpdated": "2026-03-23T11:12:51.706068+00:00",
+  "totalArticles": 208,
   "articles": [
+    {
+      "title": "Reliable blob processing using Azure Logic Apps: Recommended architecture",
+      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/reliable-blob-processing-using-azure-logic-apps-recommended/ba-p/4408091",
+      "published": "2026-03-23T10:53:35+00:00",
+      "summary": "Understanding the Limitations of In-App Blob Triggers The Logic App Blob - In-App trigger https://learn.microsoft.com/en-us/azure/logic-apps/connectors/built-in/reference/azureblob/ is built upon the same architecture as the Azure Function App Blob trigger and therefore inherits similar features...",
+      "blog": "Integrations on Azure",
+      "blogId": "integrationsonazureblog",
+      "author": "SwathiK"
+    },
     {
       "title": "Building real-world AI automation with Foundry Local and the Microsoft Agent Framework",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-real-world-ai-automation-with-foundry-local-and-the/ba-p/4501898",
