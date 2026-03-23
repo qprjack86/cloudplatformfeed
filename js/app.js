@@ -97,6 +97,20 @@
     retiring: "Retiring",
     in_development: "In development"
   };
+  var AZURE_LIFECYCLE_FILTER_ORDER = [
+    "launched_ga",
+    "in_preview",
+    "in_development",
+    "retiring",
+    "unknown"
+  ];
+  var AZURE_LIFECYCLE_FILTER_LABELS = {
+    launched_ga: "Launched / GA",
+    in_preview: "In preview",
+    in_development: "In development",
+    retiring: "Retiring",
+    unknown: "Unknown"
+  };
 
   function showElement(element) {
     if (element) element.classList.remove("is-hidden");
@@ -631,6 +645,28 @@
     });
   }
 
+  function isAzureLifecyclePillMode() {
+    return currentSource === "azure" && !showOtherBlogs;
+  }
+
+  function deriveAzureLifecycleKey(article) {
+    if (!article || article.blogId !== AZURE_UPDATES_BLOG_ID) {
+      return "unknown";
+    }
+
+    var lifecycle = String(article.lifecycle || "").toLowerCase().trim();
+    if (lifecycle === "launched_ga" || lifecycle === "in_preview" || lifecycle === "in_development" || lifecycle === "retiring") {
+      return lifecycle;
+    }
+
+    var status = String(article.azureStatus || "").toLowerCase();
+    if (/retir|deprecat|sunset|end of support/.test(status)) return "retiring";
+    if (/in development|coming soon|develop/.test(status)) return "in_development";
+    if (/preview/.test(status)) return "in_preview";
+    if (/launch|generally available|\bga\b|available/.test(status)) return "launched_ga";
+    return "unknown";
+  }
+
   function updateOtherBlogsToggleUI() {
     if (!otherBlogsToggle) return;
     otherBlogsToggle.classList.toggle("active", showOtherBlogs);
@@ -676,6 +712,12 @@
   }
 
   function renderFiltersAzure(sourceArticles) {
+    if (isAzureLifecyclePillMode()) {
+      currentFilter = "all";
+      renderFiltersAzureLifecycle(sourceArticles);
+      return;
+    }
+
     var blogCounts = {};
     var azureUpdatesCategoryCounts = {};
     sourceArticles.forEach(function (a) {
@@ -722,6 +764,36 @@
     syncActiveCategoryPill();
   }
 
+  function renderFiltersAzureLifecycle(sourceArticles) {
+    var lifecycleCounts = {};
+    AZURE_LIFECYCLE_FILTER_ORDER.forEach(function (key) {
+      lifecycleCounts[key] = 0;
+    });
+
+    sourceArticles.forEach(function (a) {
+      var key = deriveAzureLifecycleKey(a);
+      if (!lifecycleCounts[key]) lifecycleCounts[key] = 0;
+      lifecycleCounts[key]++;
+    });
+
+    var catHtml =
+      '<div class="category-bar" id="category-bar">' +
+      '<button class="category-pill active" data-category="all">All <span class="count">' +
+      sourceArticles.length + "</span></button>";
+
+    AZURE_LIFECYCLE_FILTER_ORDER.forEach(function (key) {
+      var count = lifecycleCounts[key] || 0;
+      if (!count) return;
+      catHtml +=
+        '<button class="category-pill" data-category="' + key + '">' +
+        AZURE_LIFECYCLE_FILTER_LABELS[key] + ' <span class="count">' + count + "</span></button>";
+    });
+
+    catHtml += "</div>";
+    filterPills.innerHTML = catHtml;
+    syncActiveCategoryPill();
+  }
+
   function renderFiltersM365(sourceArticles) {
     var m365CategoryCounts = {};
     
@@ -754,7 +826,7 @@
     var blogPillsRow = document.getElementById("blog-pills-row");
     var blogFilterPillsEl = document.getElementById("blog-filter-pills");
 
-    if (currentSource === "m365" || categoryName === "all") {
+    if (currentSource === "m365" || categoryName === "all" || isAzureLifecyclePillMode()) {
       hideElement(blogPillsRow);
       return;
     }
@@ -924,6 +996,10 @@
     if ((article.source || "azure") === "m365") {
       var productCategory = article.productCategory || article.m365Category || "Uncategorised";
       return productCategory === categoryName;
+    }
+
+    if (isAzureLifecyclePillMode()) {
+      return deriveAzureLifecycleKey(article) === categoryName;
     }
 
     // Handle Azure articles (original logic)
@@ -1280,9 +1356,13 @@
     // Other blogs toggle
     if (otherBlogsToggle) {
       otherBlogsToggle.addEventListener("click", function () {
+        var wasLifecycleMode = isAzureLifecyclePillMode();
         showOtherBlogs = !showOtherBlogs;
-          localStorage.setItem("cloudplatformfeed-other-blogs", String(showOtherBlogs));
+        localStorage.setItem("cloudplatformfeed-other-blogs", String(showOtherBlogs));
         currentFilter = "all";
+        if (wasLifecycleMode !== isAzureLifecyclePillMode()) {
+          currentCategory = "all";
+        }
         updateOtherBlogsToggleUI();
         renderFilters();
         renderBlogPills(currentCategory);

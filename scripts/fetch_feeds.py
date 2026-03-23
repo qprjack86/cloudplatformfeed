@@ -105,6 +105,7 @@ TC_RSS_URL = (
 )
 AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
 AZURE_UPDATES_FEED = "https://www.microsoft.com/releasecommunications/api/v2/azure/rss"
+AZURE_UPDATES_API = "https://www.microsoft.com/releasecommunications/api/v2/azure"
 YOUTUBE_RSS_BASE = "https://www.youtube.com/feeds/videos.xml"
 SAVILL_VIDEO_SEED_URL = "https://www.youtube.com/watch?v=17uHDPjdkto"
 SUMMARY_WINDOW_DAYS = 7
@@ -223,6 +224,7 @@ def build_allowed_feed_hosts():
         TC_RSS_URL.format(board="azurecompute"),
         AKS_BLOG_FEED,
         AZURE_UPDATES_FEED,
+        AZURE_UPDATES_API,
         YOUTUBE_RSS_BASE,
         SAVILL_VIDEO_SEED_URL,
     ]
@@ -391,6 +393,18 @@ def parse_iso_datetime(value):
             dt = dt.replace(tzinfo=timezone.utc)
         return dt.astimezone(timezone.utc)
     except ValueError:
+        # Some feeds emit >6 fractional second digits (for example .1234567),
+        # which datetime.fromisoformat (py3.9) cannot parse directly.
+        normalized = value.replace("Z", "+00:00")
+        trimmed = re.sub(r"(\.\d{6})\d+([+-]\d{2}:\d{2})$", r"\1\2", normalized)
+        if trimmed != normalized:
+            try:
+                dt = datetime.fromisoformat(trimmed)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                return dt.astimezone(timezone.utc)
+            except ValueError:
+                return None
         return None
 
 
@@ -859,40 +873,181 @@ def fetch_savill_video():
         return fallback
 
 
-def fetch_azure_updates_feed():
-    """Fetch articles from Azure Updates RSS feed."""
+AZURE_UPDATES_MAX_PAGES = 10
+
+
+def _classify_azure_update_lifecycle(status_raw, title_raw):
+    """Derive lifecycle bucket from Azure Updates API status/title signals."""
+    status = (status_raw or "").lower()
+    title = (title_raw or "").lower()
+    text = f"{status} {title}".strip()
+
+    if re.search(r"retir|deprecat|sunset|end of support", text):
+        return "retiring"
+    if re.search(r"in development|coming soon|develop", text):
+        return "in_development"
+    if re.search(r"preview", text):
+        return "in_preview"
+    if re.search(r"launch|generally available|\bga\b|now available|available", text):
+        return "launched_ga"
+    return None
+
+
+def _parse_azure_update_published(item):
+    """Extract the best published timestamp available in an Azure Updates API item."""
+    for key in (
+        "created",
+        "modified",
+        "lastModified",
+        "publishedDate",
+        "publishDate",
+        "announcementDate",
+    ):
+        value = str(item.get(key, "") or "").strip()
+        dt = parse_iso_datetime(value)
+        if dt:
+            return dt.isoformat()
+    return None
+
+
+def _parse_azure_update_item(item):
+    """Parse and normalize one Azure Updates API item.
+
+    Returns None when the item has no parseable published timestamp.
+    """
+    if not isinstance(item, dict):
+        return None
+
+    published = _parse_azure_update_published(item)
+    if not published:
+        return None
+
+    title = clean_html(item.get("title", "Untitled"))
+    summary = clean_html(item.get("description") or item.get("summary") or "")
+    status_raw = clean_html(str(item.get("status", "") or "").strip())
+    lifecycle = _classify_azure_update_lifecycle(status_raw, title)
+    target_date = clean_html(
+        str(
+            item.get("generalAvailabilityDate")
+            or item.get("previewAvailabilityDate")
+            or item.get("targetDate")
+            or ""
+        ).strip()
+    )
+
+    item_id = str(item.get("id", "") or "").strip()
+    link = (
+        f"https://azure.microsoft.com/en-us/updates/{item_id}/"
+        if item_id
+        else str(item.get("link", "") or "").strip()
+    )
+
+    article = {
+        "title": title,
+        "link": link,
+        "published": published,
+        "summary": truncate(summary),
+        "blog": "Azure Updates",
+        "blogId": "azureupdates",
+        "author": clean_html(str(item.get("author", "") or "").strip()) or "Microsoft",
+    }
+    if lifecycle:
+        article["lifecycle"] = lifecycle
+    if target_date:
+        article["azureTargetDate"] = target_date
+    if status_raw:
+        article["azureStatus"] = status_raw
+    return article
+
+
+def fetch_azure_updates_via_api():
+    """Fetch Azure Updates via JSON API and keep only valid dated items in window."""
+    print("Fetching: Azure Updates API...")
     articles = []
-    print("Fetching: Azure Updates...")
+    cutoff_dt = datetime.now(timezone.utc) - timedelta(days=30)
+    url = AZURE_UPDATES_API + "?$orderby=created%20desc"
+    page = 0
+
+    while url and page < AZURE_UPDATES_MAX_PAGES:
+        page += 1
+        if page == 1:
+            validate_feed_url(AZURE_UPDATES_API)
+
+        response = HTTP_SESSION.get(url, timeout=FEED_REQUEST_TIMEOUT)
+        response.raise_for_status()
+        payload = response.json()
+        items = payload.get("value", []) if isinstance(payload, dict) else payload
+        if not isinstance(items, list):
+            break
+
+        all_before_cutoff = True
+        for item in items:
+            article = _parse_azure_update_item(item)
+            if not article:
+                continue
+            published_dt = parse_iso_datetime(article.get("published"))
+            if not published_dt:
+                continue
+            if published_dt >= cutoff_dt:
+                all_before_cutoff = False
+                articles.append(article)
+
+        next_link = payload.get("@odata.nextLink", "") if isinstance(payload, dict) else ""
+        if all_before_cutoff or not next_link:
+            break
+        url = next_link
+
+    print(f"  Found {len(articles)} valid API articles across {page} page(s)")
+    return articles
+
+
+def fetch_azure_updates_via_rss():
+    """Fetch Azure Updates from RSS as compatibility fallback."""
+    articles = []
+    print("Fetching: Azure Updates RSS fallback...")
+
+    feed = fetch_feed(AZURE_UPDATES_FEED)
+
+    if feed.bozo and not feed.entries:
+        print("  Warning: Could not parse Azure Updates RSS feed")
+        return articles
+
+    count = 0
+    for entry in feed.entries:
+        summary = clean_html(entry.get("summary", ""))
+        articles.append(
+            {
+                "title": clean_html(entry.get("title", "Untitled")),
+                "link": entry.get("link", ""),
+                "published": parse_date(entry),
+                "summary": truncate(summary),
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "author": entry.get("author", "Microsoft"),
+            }
+        )
+        count += 1
+
+    print(f"  Found {count} RSS articles")
+    return articles
+
+
+def fetch_azure_updates_feed():
+    """Fetch Azure Updates with API primary and RSS fallback."""
+    try:
+        api_articles = fetch_azure_updates_via_api()
+        if api_articles:
+            return api_articles
+        print("  API returned zero valid dated items; falling back to RSS")
+    except Exception as e:
+        print(f"  Error fetching Azure Updates API: {e}")
+        print("  Falling back to RSS feed")
 
     try:
-        feed = fetch_feed(AZURE_UPDATES_FEED)
-
-        if feed.bozo and not feed.entries:
-            print("  Warning: Could not parse Azure Updates feed")
-            return articles
-
-        count = 0
-        for entry in feed.entries:
-            summary = clean_html(entry.get("summary", ""))
-            articles.append(
-                {
-                    "title": clean_html(entry.get("title", "Untitled")),
-                    "link": entry.get("link", ""),
-                    "published": parse_date(entry),
-                    "summary": truncate(summary),
-                    "blog": "Azure Updates",
-                    "blogId": "azureupdates",
-                    "author": entry.get("author", "Microsoft"),
-                }
-            )
-            count += 1
-
-        print(f"  Found {count} articles")
-
+        return fetch_azure_updates_via_rss()
     except Exception as e:
-        print(f"  Error fetching Azure Updates feed: {e}")
-
-    return articles
+        print(f"  Error fetching Azure Updates RSS fallback: {e}")
+        return []
 
 
 def generate_rss_feed(articles):

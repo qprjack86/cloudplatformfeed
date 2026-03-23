@@ -78,6 +78,13 @@ class DedupeArticlesTests(unittest.TestCase):
         )
 
 
+class ParseIsoDatetimeTests(unittest.TestCase):
+    def test_parses_high_precision_fractional_seconds(self):
+        parsed = fetch_feeds.parse_iso_datetime("2026-03-20T19:15:35.2206794Z")
+        self.assertIsNotNone(parsed)
+        self.assertEqual(parsed.isoformat(), "2026-03-20T19:15:35.220679+00:00")
+
+
 class ClassifyLifecycleTests(unittest.TestCase):
     def test_detects_preview_titles(self):
         article = {"title": "[In preview] New accelerator for distributed workloads"}
@@ -419,6 +426,78 @@ class YouTubeVideoHelperTests(unittest.TestCase):
         )
 
         self.assertEqual(channel_id, "UC123abcXYZ")
+
+
+class AzureUpdatesApiFallbackTests(unittest.TestCase):
+    def test_parse_azure_update_item_extracts_metadata_and_date(self):
+        item = {
+            "id": "123456",
+            "title": "Generally Available: Sample Azure capability",
+            "description": "<p>Rich <b>summary</b> text.</p>",
+            "status": "Launched",
+            "generalAvailabilityDate": "2026-04",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["blogId"], "azureupdates")
+        self.assertEqual(article["lifecycle"], "launched_ga")
+        self.assertEqual(article["azureStatus"], "Launched")
+        self.assertEqual(article["azureTargetDate"], "2026-04")
+        self.assertEqual(article["published"], "2026-03-22T10:30:00+00:00")
+        self.assertEqual(article["link"], "https://azure.microsoft.com/en-us/updates/123456/")
+
+    def test_fetch_azure_updates_feed_falls_back_to_rss_on_api_exception(self):
+        rss_articles = [{"title": "RSS fallback article"}]
+        with mock.patch.object(
+            fetch_feeds,
+            "fetch_azure_updates_via_api",
+            side_effect=RuntimeError("api unavailable"),
+        ) as api_mock, mock.patch.object(
+            fetch_feeds,
+            "fetch_azure_updates_via_rss",
+            return_value=rss_articles,
+        ) as rss_mock:
+            result = fetch_feeds.fetch_azure_updates_feed()
+
+        self.assertEqual(result, rss_articles)
+        api_mock.assert_called_once()
+        rss_mock.assert_called_once()
+
+    def test_fetch_azure_updates_feed_falls_back_to_rss_when_api_returns_no_valid_items(self):
+        rss_articles = [{"title": "RSS fallback article"}]
+        with mock.patch.object(
+            fetch_feeds,
+            "fetch_azure_updates_via_api",
+            return_value=[],
+        ) as api_mock, mock.patch.object(
+            fetch_feeds,
+            "fetch_azure_updates_via_rss",
+            return_value=rss_articles,
+        ) as rss_mock:
+            result = fetch_feeds.fetch_azure_updates_feed()
+
+        self.assertEqual(result, rss_articles)
+        api_mock.assert_called_once()
+        rss_mock.assert_called_once()
+
+    def test_fetch_azure_updates_feed_keeps_api_results_when_non_empty(self):
+        api_articles = [{"title": "API article", "published": "2026-03-22T10:30:00+00:00"}]
+        with mock.patch.object(
+            fetch_feeds,
+            "fetch_azure_updates_via_api",
+            return_value=api_articles,
+        ) as api_mock, mock.patch.object(
+            fetch_feeds,
+            "fetch_azure_updates_via_rss",
+        ) as rss_mock:
+            result = fetch_feeds.fetch_azure_updates_feed()
+
+        self.assertEqual(result, api_articles)
+        api_mock.assert_called_once()
+        rss_mock.assert_not_called()
 
 
 if __name__ == "__main__":
