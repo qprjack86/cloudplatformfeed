@@ -1,7 +1,43 @@
 {
-  "lastUpdated": "2026-03-23T11:49:41.609347+00:00",
-  "totalArticles": 208,
+  "lastUpdated": "2026-03-23T15:52:58.854607+00:00",
+  "totalArticles": 210,
   "articles": [
+    {
+      "title": "Announcing Aspire 13.2",
+      "link": "https://devblogs.microsoft.com/aspire/aspire-13-2-announcement/",
+      "published": "2026-03-23T15:30:00+00:00",
+      "summary": "Aspire 13.2 brings TypeScript AppHost authoring, an agent-native CLI, Foundry integration, and more. The post Announcing Aspire 13.2 appeared first on Aspire Blog.",
+      "blog": "Aspire Blog",
+      "blogId": "aspireblog",
+      "author": "Maddy Montaquila, David Fowler"
+    },
+    {
+      "title": "Code Optimizations for Azure App Service Now Available in VS Code",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/code-optimizations-for-azure-app-service-now-available-in-vs/ba-p/4504252",
+      "published": "2026-03-23T15:18:08+00:00",
+      "summary": "Today we shipped a feature in the Azure App Service extension for VS Code that answers both questions: Code Optimizations, powered by Application Insights profiler data and GitHub Copilot. The problem: production performance is a black box You've deployed your .NET app to Azure App Service....",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "fiveisprime"
+    },
+    {
+      "title": "Shaping the Next Era of Energy Decision Making with Geospatial Intelligence",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-planetary-computer/shaping-the-next-era-of-energy-decision-making-with-geospatial/ba-p/4503662",
+      "published": "2026-03-23T14:36:30+00:00",
+      "summary": "Shaping the Next Era of Energy Decision Making with Geospatial Intelligence By Yves Pitsch, GM, Azure Space, Microsoft The global energy system is entering a new phase—one defined not just by a single transition to renewables, but by the convergence of forces that are reshaping how energy is...",
+      "blog": "Planetary Computer",
+      "blogId": "microsoft-planetary-computer-blog",
+      "author": "Yves-Pitsch"
+    },
+    {
+      "title": "How to get blob Total Blob Count and Total Capacity with Blob Inventory",
+      "link": "https://techcommunity.microsoft.com/t5/azure-paas-blog/how-to-get-blob-total-blob-count-and-total-capacity-with-blob/ba-p/4485643",
+      "published": "2026-03-23T13:46:08+00:00",
+      "summary": "Table of Contents Approach Introduction to the Blob Inventory Service Steps to enable inventory report Support Documentation Disclaimer: Approach This article presents how to take advantage of the Blob Inventory service to get the total blob count and the total capacity per storage account, per...",
+      "blog": "Azure PaaS",
+      "blogId": "azurepaasblog",
+      "author": "ruineiva"
+    },
     {
       "title": "Reliable blob processing using Azure Logic Apps: Recommended architecture",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/reliable-blob-processing-using-azure-logic-apps-recommended/ba-p/4408091",
@@ -37,15 +73,6 @@
       "blog": "Azure Networking",
       "blogId": "azurenetworkingblog",
       "author": "chandanAggarwal"
-    },
-    {
-      "title": "Shaping the Next Era of Energy Decision Making with Geospatial Intelligence",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-planetary-computer/shaping-the-next-era-of-energy-decision-making-with-geospatial/ba-p/4503662",
-      "published": "2026-03-22T21:28:35+00:00",
-      "summary": "Blog draft Shaping the Next Era of Energy Decision Making with Geospatial Intelligence By Yves Pitsch, GM, Azure Space, Microsoft The global energy system is entering a new phase—one defined not just by a single transition to renewables, but by the convergence of forces that are reshaping how...",
-      "blog": "Planetary Computer",
-      "blogId": "microsoft-planetary-computer-blog",
-      "author": "Yves-Pitsch"
     },
     {
       "title": "Run OpenClaw Agents on Azure Linux VMs (with Secure Defaults)",
@@ -1639,15 +1666,6 @@
       "blog": "Oracle on Azure",
       "blogId": "oracleonazureblog",
       "author": "SparshAgrawat"
-    },
-    {
-      "title": "Azure Container Registry Premium SKU Now Supports 100 TiB Storage",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-premium-sku-now-supports-100-tib/ba-p/4497651",
-      "published": "2026-02-26T20:46:56+00:00",
-      "summary": "Today, we're excited to announce that Azure Container Registry Premium SKU now supports up to 100 TiB of registry storage—a 2.5x increase from the previous 40 TiB limit, and a 5x increase from the original 20 TiB limit just two years ago. We've also improved geo-replication data sync speed,...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "johnsonshi_msft"
     },
     {
       "title": "[In preview] Public Preview: Restrict usage of user delegation SAS to an Entra ID identity",
