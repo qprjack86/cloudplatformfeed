@@ -1077,7 +1077,7 @@
       : "";
 
     return (
-      '<article class="article-card">' +
+      '<article class="article-card clickable-card" data-href="' + escapeHtml(resolveArticleOutboundLink(article)) + '">' +
       '<div class="card-header">' +
       '<span class="blog-tag ' + colorClass + '" title="' + escapeHtml(color) + '">' +
       escapeHtml(blogTagText) + "</span>" +
@@ -1314,6 +1314,16 @@
       if (btn.dataset.action === "bookmark") {
         toggleBookmark(article.link);
       }
+    });
+
+    // Whole-card click for M365 articles (opens DeltaPulse)
+    articlesGrid.addEventListener("click", function (e) {
+      var card = e.target.closest(".clickable-card");
+      if (!card) return;
+      // Ignore clicks on interactive elements inside the card
+      if (e.target.closest("a, button")) return;
+      var href = card.dataset.href;
+      if (href) window.open(href, "_blank", "noopener");
     });
 
     // Keyboard shortcut: Ctrl/Cmd + K to focus search
