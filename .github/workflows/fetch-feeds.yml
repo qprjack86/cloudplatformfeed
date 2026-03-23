@@ -2,9 +2,9 @@ name: Fetch Azure & M365 Blog Feeds
 
 on:
   schedule:
-    - cron: '0 8 * * *'
-    - cron: '0 12 * * *'
-    - cron: '0 16 * * *'
+    - cron: '0 7 * * *'
+    - cron: '0 11 * * *'
+    - cron: '0 15 * * *'
   workflow_dispatch:
 
 concurrency:
