@@ -401,12 +401,9 @@ def resolve_m365_item_link(item: dict) -> str:
     source = item.get("source", "")
     item_id = str(item.get("id", "")).strip()
 
-    # Use DeltaPulse dashboard with query param to open the card overlay.
-    if item_id and source == "message_center":
-        return f"https://deltapulse.app/dashboard?message={item_id}"
-
-    if item_id and source == "roadmap":
-        return f"https://deltapulse.app/dashboard?roadmap={item_id}"
+    # Use DeltaPulse public item page (works without authentication).
+    if item_id and source in ("message_center", "roadmap"):
+        return f"https://deltapulse.app/item/{item_id}"
 
     return item.get("url", "")
 

@@ -25,17 +25,17 @@ class NormalizeUrlTests(unittest.TestCase):
     
     def test_normalizes_deltapulse_dashboard_url(self):
         """DeltaPulse URLs should normalize consistently."""
-        url = "https://deltapulse.app/dashboard?message=MC1255714&utm_source=feed"
+        url = "https://deltapulse.app/item/MC1255714?utm_source=feed"
         normalized = fetch_m365_data.normalize_url(url)
         # Tracking param should be removed
         self.assertNotIn("utm_source", normalized)
-        self.assertIn("message=MC1255714", normalized)
+        self.assertIn("item/MC1255714", normalized)
     
     def test_removes_www_prefix(self):
         """www. prefix should be removed."""
-        url = "https://www.deltapulse.app/dashboard?message=MC1255714"
+        url = "https://www.deltapulse.app/item/MC1255714"
         normalized = fetch_m365_data.normalize_url(url)
-        self.assertEqual(normalized, fetch_m365_data.normalize_url("https://deltapulse.app/dashboard?message=MC1255714"))
+        self.assertEqual(normalized, fetch_m365_data.normalize_url("https://deltapulse.app/item/MC1255714"))
     
     def test_sorts_query_parameters(self):
         """Query parameters should be sorted for consistent dedup."""
@@ -55,17 +55,17 @@ class DedupeM365ArticlesTests(unittest.TestCase):
         articles = [
             {
                 "title": "First version",
-                "link": "https://deltapulse.app/dashboard?message=MC123&utm_source=rss",
+                "link": "https://deltapulse.app/item/MC123?utm_source=rss",
                 "published": published,
             },
             {
                 "title": "Different title same URL",
-                "link": "https://deltapulse.app/dashboard?message=MC123&gclid=abc",
+                "link": "https://deltapulse.app/item/MC123?gclid=abc",
                 "published": published,
             },
             {
                 "title": "Unique article",
-                "link": "https://deltapulse.app/dashboard?message=MC456",
+                "link": "https://deltapulse.app/item/MC456",
                 "published": published,
             },
         ]
@@ -218,7 +218,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
             "publishedDate": "2026-03-19T04:39:14.000Z",
             "service": ["Teams", "SharePoint"],
             "category": "stayInformed",
-            "url": "https://deltapulse.app/dashboard?message=MC1255714",
+            "url": "https://deltapulse.app/item/MC1255714",
         }
         
         article = fetch_m365_data.build_article_from_m365_item(item)
@@ -226,7 +226,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["title"], "New feature announcement")
         self.assertEqual(
             article["link"],
-            "https://deltapulse.app/dashboard?message=MC1255714",
+            "https://deltapulse.app/item/MC1255714",
         )
         self.assertEqual(article["source"], "m365")
         self.assertEqual(article["m365Service"], "Teams")
@@ -234,7 +234,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["m365AllServices"], ["Teams", "SharePoint"])
         self.assertIsNotNone(article["lifecycle"])
 
-    def test_prefers_deltapulse_message_center_link(self):
+    def test_overrides_deltapulse_message_center_link(self):
         """Message Center items should resolve to DeltaPulse URL when available."""
         item = {
             "id": "MC999999",
@@ -242,7 +242,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
             "source": "message_center",
             "publishedDate": "2026-03-19T04:39:14.000Z",
             "service": ["Teams"],
-            "url": "https://deltapulse.app/dashboard?message=MC999999",
+            "url": "https://deltapulse.app/item/MC999999",
             "detailsUrl": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC999999",
         }
 
@@ -250,10 +250,10 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         self.assertEqual(
             article["link"],
-            "https://deltapulse.app/dashboard?message=MC999999",
+            "https://deltapulse.app/item/MC999999",
         )
 
-    def test_message_center_falls_back_to_dashboard_search(self):
+    def test_message_center_falls_back_to_item_page(self):
         """Message Center items without URL should fall back to DeltaPulse dashboard search."""
         item = {
             "id": "MC888888",
@@ -266,7 +266,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         article = fetch_m365_data.build_article_from_m365_item(item)
         self.assertEqual(
             article["link"],
-            "https://deltapulse.app/dashboard?message=MC888888",
+            "https://deltapulse.app/item/MC888888",
         )
 
     def test_roadmap_item_gets_deltapulse_url(self):
@@ -277,14 +277,14 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
             "source": "roadmap",
             "status": "In development",
             "service": ["Microsoft 365"],
-            "url": "https://deltapulse.app/dashboard?roadmap=558435",
+            "url": "https://deltapulse.app/item/558435",
         }
 
         article = fetch_m365_data.build_article_from_m365_item(item)
 
         self.assertEqual(
             article["link"],
-            "https://deltapulse.app/dashboard?roadmap=558435",
+            "https://deltapulse.app/item/558435",
         )
 
     def test_roadmap_item_falls_back_to_deltapulse_search(self):
@@ -301,7 +301,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         self.assertEqual(
             article["link"],
-            "https://deltapulse.app/dashboard?roadmap=558435",
+            "https://deltapulse.app/item/558435",
         )
 
     def test_roadmap_item_uses_release_date_for_target_date(self):
@@ -427,7 +427,7 @@ class BuildM365FeedTests(unittest.TestCase):
                 "source": "message_center",
                 "publishedDate": "2026-03-19T04:39:14.000Z",
                 "service": ["Teams"],
-                "url": "https://deltapulse.app/dashboard?message=MC1000",
+                "url": "https://deltapulse.app/item/MC1000",
             }
         ]
         m365_video = {
