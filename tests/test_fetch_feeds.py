@@ -35,7 +35,7 @@ class NormalizeArticleUrlTests(unittest.TestCase):
 
 class DedupeArticlesTests(unittest.TestCase):
     def test_discards_stale_and_duplicate_articles(self):
-        now = datetime.now(timezone.utc)
+        now = datetime.now(timezone.utc).replace(hour=12, minute=0, second=0)
         fresh = (now - timedelta(days=1)).isoformat()
         same_day = (now - timedelta(days=1, hours=1)).isoformat()
         stale = (now - timedelta(days=31)).isoformat()
