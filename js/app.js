@@ -616,16 +616,17 @@
   }
 
   function getVisibleArticles() {
-    // For M365, return all articles (no blogId filtering)
+    // For M365, return only M365 articles (no blogId filtering needed)
     if (currentSource === "m365") {
-      return articles;
+      return articles.filter(function (a) { return a.source === "m365"; });
     }
-    
+
     // For Azure, apply the showOtherBlogs logic
+    var azureArticles = articles.filter(function (a) { return (a.source || "azure") === "azure"; });
     if (showOtherBlogs) {
-      return articles;
+      return azureArticles;
     }
-    return articles.filter(function (a) {
+    return azureArticles.filter(function (a) {
       return a.blogId === AZURE_UPDATES_BLOG_ID;
     });
   }
