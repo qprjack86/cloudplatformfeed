@@ -266,7 +266,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         article = fetch_m365_data.build_article_from_m365_item(item)
         self.assertEqual(
             article["link"],
-            "https://deltapulse.app/dashboard?search=MC888888",
+            "https://deltapulse.app/dashboard?message=MC888888",
         )
 
     def test_roadmap_item_gets_deltapulse_url(self):
