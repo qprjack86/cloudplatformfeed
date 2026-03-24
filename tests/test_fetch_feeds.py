@@ -499,6 +499,109 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertNotIn("azurePreviewDate", article)
         self.assertNotIn("azureGeneralAvailabilityDate", article)
 
+    def test_parse_azure_update_item_extracts_retirement_date_from_title(self):
+        item = {
+            "id": "889000",
+            "title": "Retirement: Example service will be retired on July 31, 2031",
+            "description": "Planning guidance.",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["lifecycle"], "retiring")
+        self.assertEqual(article["azureRetirementDate"], "2031-07-31")
+
+    def test_parse_azure_update_item_extracts_retirement_date_from_description_dmy(self):
+        item = {
+            "id": "889001",
+            "title": "Retirement: Example service",
+            "description": (
+                ("noise " * 140)
+                + "The service will be retired on 30 November 2030 after transition."
+            ),
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["azureRetirementDate"], "2030-11-30")
+
+    def test_parse_azure_update_item_extracts_retirement_month_only(self):
+        item = {
+            "id": "889002",
+            "title": "Retirement: Managed NGINX add-on retiring November 2026",
+            "description": "Please migrate workloads.",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["azureRetirementDate"], "2026-11")
+
+    def test_parse_azure_update_item_prefers_retirement_context_date(self):
+        item = {
+            "id": "889003",
+            "title": "Retirement: Example service timeline",
+            "description": (
+                "Migration begins March 1, 2030. "
+                "This service will be retired on January 12, 2027."
+            ),
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["azureRetirementDate"], "2027-01-12")
+
+    def test_parse_azure_update_item_omits_retirement_date_when_not_found(self):
+        item = {
+            "id": "889004",
+            "title": "Retirement: Legacy feature notice",
+            "description": "Support policy details without explicit date value.",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertNotIn("azureRetirementDate", article)
+
+    def test_parse_azure_update_item_does_not_override_structured_dates_for_retirement(self):
+        item = {
+            "id": "889005",
+            "title": "Retirement: Example feature",
+            "description": "Retired on July 31, 2031.",
+            "targetDate": "2027-04",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["azureTargetDate"], "2027-04")
+        self.assertNotIn("azureRetirementDate", article)
+
+    def test_parse_azure_update_item_prefers_later_title_retirement_date(self):
+        item = {
+            "id": "889006",
+            "title": "Retirement: NP-series example service will be retired on May 31, 2027",
+            "description": (
+                "Operational note: related batch support will end on April 2, 2026. "
+                "Please migrate before retirement."
+            ),
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["azureRetirementDate"], "2027-05-31")
+
     def test_fetch_azure_updates_feed_falls_back_to_rss_on_api_exception(self):
         rss_articles = [{"title": "RSS fallback article"}]
         with mock.patch.object(

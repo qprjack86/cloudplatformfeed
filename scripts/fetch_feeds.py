@@ -874,6 +874,53 @@ def fetch_savill_video():
 
 
 AZURE_UPDATES_MAX_PAGES = 10
+RETIREMENT_MONTH_PATTERN = (
+    r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|"
+    r"Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?"
+)
+RETIREMENT_CONTEXT_PATTERN = re.compile(
+    r"retir|will end|end of support|end-of-support|end of life|eol|deprecated|deprecat|sunset|stop supporting",
+    re.IGNORECASE,
+)
+RETIREMENT_DATE_PATTERNS = (
+    (
+        re.compile(
+            rf"\b(?P<month>{RETIREMENT_MONTH_PATTERN})\s+"
+            r"(?P<day>\d{1,2})(?:st|nd|rd|th)?\s*,?\s*(?P<year>\d{4})\b",
+            re.IGNORECASE,
+        ),
+        "day",
+    ),
+    (
+        re.compile(
+            rf"\b(?P<day>\d{{1,2}})(?:st|nd|rd|th)?\s+"
+            rf"(?P<month>{RETIREMENT_MONTH_PATTERN})\s+(?P<year>\d{{4}})\b",
+            re.IGNORECASE,
+        ),
+        "day",
+    ),
+    (
+        re.compile(
+            rf"\b(?P<month>{RETIREMENT_MONTH_PATTERN})\s+(?P<year>\d{{4}})\b",
+            re.IGNORECASE,
+        ),
+        "month",
+    ),
+)
+RETIREMENT_MONTH_TO_INT = {
+    "jan": 1,
+    "feb": 2,
+    "mar": 3,
+    "apr": 4,
+    "may": 5,
+    "jun": 6,
+    "jul": 7,
+    "aug": 8,
+    "sep": 9,
+    "oct": 10,
+    "nov": 11,
+    "dec": 12,
+}
 
 
 def _classify_azure_update_lifecycle(status_raw, title_raw):
@@ -891,6 +938,104 @@ def _classify_azure_update_lifecycle(status_raw, title_raw):
     if re.search(r"launch|generally available|\bga\b|now available|available", text):
         return "launched_ga"
     return None
+
+
+def _normalize_retirement_date_candidate(match, precision):
+    """Normalize a regex match into a sortable retirement date candidate."""
+    groups = match.groupdict()
+    month = RETIREMENT_MONTH_TO_INT.get((groups.get("month") or "")[:3].lower())
+    if not month:
+        return None
+
+    try:
+        year = int(groups.get("year", "0"))
+    except ValueError:
+        return None
+
+    day_sort = 0
+    if precision == "day":
+        try:
+            day_sort = int(groups.get("day", "0"))
+            datetime(year, month, day_sort)
+        except (TypeError, ValueError):
+            return None
+        value = f"{year:04d}-{month:02d}-{day_sort:02d}"
+    else:
+        value = f"{year:04d}-{month:02d}"
+
+    return {
+        "value": value,
+        "year": year,
+        "month": month,
+        "day_sort": day_sort,
+        "precision": precision,
+    }
+
+
+def _extract_azure_retirement_date(title_raw, summary_raw):
+    """Extract a best-effort retirement date from Azure update title/summary text."""
+    today = datetime.now(timezone.utc).date()
+    candidates = []
+
+    for source_name, source_text in (
+        ("title", (title_raw or "").strip()),
+        ("summary", (summary_raw or "").strip()),
+    ):
+        if not source_text:
+            continue
+
+        context_spans = [m.span() for m in RETIREMENT_CONTEXT_PATTERN.finditer(source_text)]
+        for pattern, precision in RETIREMENT_DATE_PATTERNS:
+            for match in pattern.finditer(source_text):
+                candidate = _normalize_retirement_date_candidate(match, precision)
+                if not candidate:
+                    continue
+
+                span_start, span_end = match.span()
+                near_context = False
+                for ctx_start, ctx_end in context_spans:
+                    if ctx_start <= span_end and ctx_end >= span_start:
+                        near_context = True
+                        break
+                    # Prefer dates directly attached to retirement wording (same phrase).
+                    if ctx_end <= span_start and (span_start - ctx_end) <= 48:
+                        near_context = True
+                        break
+
+                if candidate["precision"] == "month":
+                    is_future = (candidate["year"], candidate["month"]) >= (
+                        today.year,
+                        today.month,
+                    )
+                else:
+                    is_future = datetime(
+                        candidate["year"],
+                        candidate["month"],
+                        candidate["day_sort"],
+                    ).date() >= today
+
+                candidate["near_context"] = near_context
+                candidate["is_future"] = is_future
+                candidate["source_priority"] = 1 if source_name == "title" else 0
+                candidate["span_start"] = span_start
+                candidates.append(candidate)
+
+    if not candidates:
+        return None
+
+    best = max(
+        candidates,
+        key=lambda c: (
+            1 if c["near_context"] else 0,
+            1 if c["is_future"] else 0,
+            c["year"],
+            c["month"],
+            c["day_sort"],
+            c["source_priority"],
+            -c["span_start"],
+        ),
+    )
+    return best["value"]
 
 
 def _parse_azure_update_published(item):
@@ -923,7 +1068,7 @@ def _parse_azure_update_item(item):
         return None
 
     title = clean_html(item.get("title", "Untitled"))
-    summary = clean_html(item.get("description") or item.get("summary") or "")
+    summary_full = clean_html(item.get("description") or item.get("summary") or "")
     status_raw = clean_html(str(item.get("status", "") or "").strip())
     lifecycle = _classify_azure_update_lifecycle(status_raw, title)
     preview_date = clean_html(str(item.get("previewAvailabilityDate") or "").strip())
@@ -948,7 +1093,7 @@ def _parse_azure_update_item(item):
         "title": title,
         "link": link,
         "published": published,
-        "summary": truncate(summary),
+        "summary": truncate(summary_full),
         "blog": "Azure Updates",
         "blogId": "azureupdates",
         "author": clean_html(str(item.get("author", "") or "").strip()) or "Microsoft",
@@ -961,6 +1106,15 @@ def _parse_azure_update_item(item):
         article["azureGeneralAvailabilityDate"] = ga_date
     if legacy_target_date:
         article["azureTargetDate"] = legacy_target_date
+    if (
+        lifecycle == "retiring"
+        and not preview_date
+        and not ga_date
+        and not legacy_target_date
+    ):
+        retirement_date = _extract_azure_retirement_date(title, summary_full)
+        if retirement_date:
+            article["azureRetirementDate"] = retirement_date
     if status_raw:
         article["azureStatus"] = status_raw
     return article

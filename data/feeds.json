@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-24T19:14:13.737977+00:00",
+  "lastUpdated": "2026-03-24T19:39:29.251063+00:00",
   "totalArticles": 228,
   "articles": [
     {
@@ -388,7 +388,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2027-03-31"
     },
     {
       "title": "RSAC 2026: New Microsoft Sentinel Connectors Announcement",
@@ -407,7 +408,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2031-07-31"
     },
     {
       "title": "How Granular Delegated Admin Privileges (GDAP) allows Sentinel customers to delegate access",
@@ -529,7 +531,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2027-05-31"
     },
     {
       "title": "Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027",
@@ -539,7 +542,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2027-05-31"
     },
     {
       "title": "Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027",
@@ -549,7 +553,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2027-05-31"
     },
     {
       "title": "Azure Bastion: Enterprise-grade secure access made simple",
@@ -604,7 +609,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2027-03-31"
     },
     {
       "title": "Announcing the New Home for the Azure Databricks Blog",
@@ -919,7 +925,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2029-06-30"
     },
     {
       "title": "Introducing the Azure Cosmos DB Plugin for Cursor",
@@ -1001,7 +1008,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2025-09-30"
     },
     {
       "title": "Retirement: Support for Windows Server 2016 Marketplace images on Azure Batch pools will end on January 12, 2027",
@@ -1011,7 +1019,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2027-01-12"
     },
     {
       "title": "Retirement: End of life reminder of NVv3 and NVv4-series Azure virtual machine in Azure Batch pools",
@@ -1021,7 +1030,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-09-30"
     },
     {
       "title": "Public Preview: Entra ID-Based Access for Azure Blob Storage SFTP",
@@ -1044,7 +1054,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-06-08"
     },
     {
       "title": "Health-Aware Failover for Azure Container Registry Geo-Replication",
@@ -1658,7 +1669,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-04-30"
     },
     {
       "title": "What’s New in Microsoft Sentinel: March 2026",
@@ -1895,7 +1907,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-11"
     },
     {
       "title": "Updates to Team Calendar extension",
@@ -2199,7 +2212,8 @@
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
-      "lifecycle": "retiring"
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-05-15"
     },
     {
       "title": "Public Preview: WAF Insights for Application Gateway",

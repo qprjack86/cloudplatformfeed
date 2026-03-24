@@ -176,6 +176,28 @@
     return raw;
   }
 
+  function formatUkRetirementDate(value) {
+    if (!value) return "";
+    var raw = String(value).trim();
+    if (!raw) return "";
+
+    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
+    if (dayMatch) {
+      var year = dayMatch[1];
+      var month = dayMatch[2];
+      var day = dayMatch[3];
+      return day + "/" + month + "/" + year;
+    }
+
+    var monthMatch = /^(\d{4})-(\d{2})$/.exec(raw);
+    if (monthMatch) {
+      var monthDate = new Date(Number(monthMatch[1]), Number(monthMatch[2]) - 1, 1);
+      return formatLocalDate(monthDate, { month: "short", year: "numeric" });
+    }
+
+    return raw;
+  }
+
   function formatLocalDateTime(date) {
     return date
       ? date.toLocaleDateString(undefined, {
@@ -1151,6 +1173,8 @@
       var previewTarget = formatM365TargetDate(article.azurePreviewDate);
       var gaTarget = formatM365TargetDate(article.azureGeneralAvailabilityDate);
       var fallbackTarget = formatM365TargetDate(article.azureTargetDate);
+      var retirementTarget = formatUkRetirementDate(article.azureRetirementDate);
+      var isRetiring = String(article.lifecycle || "").toLowerCase().trim() === "retiring";
       var azureTags = [];
 
       if (azureReleasePhase) {
@@ -1171,6 +1195,13 @@
         azureTags.push(
           '<span class="m365-tag"><span class="m365-tag-label">GA:</span> ' +
           escapeHtml(gaTarget) +
+          "</span>"
+        );
+      }
+      if (isRetiring && retirementTarget) {
+        azureTags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">Retires On:</span> ' +
+          escapeHtml(retirementTarget) +
           "</span>"
         );
       }
