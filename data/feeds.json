@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-24T19:39:29.251063+00:00",
-  "totalArticles": 228,
+  "lastUpdated": "2026-03-24T19:44:42.842098+00:00",
+  "totalArticles": 229,
   "articles": [
     {
       "title": "Hosted Containers and AI Agent Solutions",
@@ -845,6 +845,15 @@
       "blog": "Azure Network Security",
       "blogId": "azurenetworksecurityblog",
       "author": "saikishor"
+    },
+    {
+      "title": "Announcing Gateway API support for App Routing (preview)",
+      "link": "https://blog.aks.azure.com/2026/03/18/app-routing-gateway-api",
+      "published": "2026-03-18T00:00:00+00:00",
+      "summary": "The AKS app routing add-on now supports the Kubernetes Gateway API via a meshless Istio control plane — the recommended path to migrate from Ingress-NGINX.",
+      "blog": "AKS Blog",
+      "blogId": "aksblog",
+      "author": "Microsoft"
     },
     {
       "title": "From 150 Unread to Zero Stress: Automating Inbox Triage with MCP and GitHub Copilot",
@@ -2260,7 +2269,7 @@
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 15,
-  "summary": "- In preview:\n  • [Public Preview: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/en-us/updates/558116/)\n  • [Public Preview: Azure Databricks OneLake Catalog Federation](https://azure.microsoft.com/en-us/updates/558927/)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/en-us/updates/558150/)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/en-us/updates/558155/)\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/en-us/updates/558169/)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/en-us/updates/557917/)\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/en-us/updates/558121/)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/en-us/updates/558134/)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/en-us/updates/558183/)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/en-us/updates/558810/)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/en-us/updates/558086/)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/en-us/updates/557123/)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548497/)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548525/)\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548543/)\n\n- In development:\n  • none noted in selected window",
+  "summary": "- In preview:\n  • [Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager](https://azure.microsoft.com/en-us/updates/557877/)\n  • [Public Preview: AKS managed GPU metrics in Azure Monitor](https://azure.microsoft.com/en-us/updates/557882/)\n  • [Public Preview: Microsoft Azure Kubernetes Application Network](https://azure.microsoft.com/en-us/updates/557922/)\n  • [Public Preview: Application routing with meshless Istio in AKS](https://azure.microsoft.com/en-us/updates/557927/)\n  • [Public Preview: Ingest OTLP data into Azure Monitor with the OpenTelemetry Collector](https://azure.microsoft.com/en-us/updates/559273/)\n\n- Launched / Generally Available:\n  • [Generally Available: Container network logs in AKS](https://azure.microsoft.com/en-us/updates/557892/)\n  • [Generally Available: Azure Container Storage v2.1.0 now with Elastic SAN integration and on demand installation](https://azure.microsoft.com/en-us/updates/557912/)\n  • [Generally Available: Azure Monitor Prometheus community recommended alerts for Azure Arc-enabled Kubernetes](https://azure.microsoft.com/en-us/updates/558825/)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/en-us/updates/557917/)\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/en-us/updates/558121/)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/en-us/updates/558086/)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/en-us/updates/557123/)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548497/)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548525/)\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548543/)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 20th March 2026",
     "url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-24T15:57:05.164236+00:00",
-  "totalArticles": 78,
+  "generatedAt": "2026-03-24T19:45:11.395130+00:00",
+  "totalArticles": 76,
   "articles": [
     {
       "title": "Changes to OneLake operation reporting in Microsoft Fabric",
@@ -804,7 +804,7 @@
       "_normalized_url": "message_center:MC1255412"
     },
     {
-      "title": "Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
+      "title": "(Updated) Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
       "link": "https://deltapulse.app/item/MC1255410",
       "published": "2026-03-18T22:32:26.000Z",
       "source": "m365",
@@ -1070,42 +1070,42 @@
       "_normalized_url": "message_center:MC1254543"
     },
     {
-      "title": "Dynamics 365 Sales - Improve opportunity context with AI-based data enrichment",
-      "link": "https://deltapulse.app/item/MC1254454",
-      "published": "2026-03-17T17:37:12.000Z",
+      "title": "(Updated) Copilot extensibility: Microsoft 365 Copilot Declarative Agents model upgrade to GPT‑5.2",
+      "link": "https://deltapulse.app/item/MC1251203",
+      "published": "2026-03-13T22:48:48.000Z",
       "source": "m365",
-      "m365Service": "Dynamics 365 Apps",
+      "m365Service": "Microsoft Copilot (Microsoft 365)",
       "m365AllServices": [
-        "Dynamics 365 Apps"
+        "Microsoft Copilot (Microsoft 365)"
       ],
-      "m365Id": "MC1254454",
+      "m365Id": "MC1251203",
       "m365Source": "message_center",
       "m365Category": "stayInformed",
       "m365Severity": "normal",
       "m365Status": null,
-      "m365TargetDate": "April 2026",
+      "m365TargetDate": "March 2026",
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1254454"
+      "_normalized_url": "message_center:MC1251203"
     },
     {
-      "title": "Dynamics 365 Sales - Modern, in-flow email template picker for Sequences",
-      "link": "https://deltapulse.app/item/MC1254451",
-      "published": "2026-03-17T17:31:28.000Z",
+      "title": "(Updated) Introducing awards and certifications section in M365 profile card",
+      "link": "https://deltapulse.app/item/MC1250272",
+      "published": "2026-03-12T23:40:52.000Z",
       "source": "m365",
-      "m365Service": "Dynamics 365 Apps",
+      "m365Service": "Microsoft 365 apps",
       "m365AllServices": [
-        "Dynamics 365 Apps"
+        "Microsoft 365 apps"
       ],
-      "m365Id": "MC1254451",
+      "m365Id": "MC1250272",
       "m365Source": "message_center",
       "m365Category": "stayInformed",
       "m365Severity": "normal",
       "m365Status": null,
-      "m365TargetDate": "April 2026",
+      "m365TargetDate": "March 2026, April 2026",
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1254451"
+      "_normalized_url": "message_center:MC1250272"
     },
     {
       "title": "Microsoft Teams: Video recap in Teams",
@@ -1399,44 +1399,6 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557977"
-    },
-    {
-      "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
-      "link": "https://deltapulse.app/item/MC1247899",
-      "published": "2026-03-09T22:27:11.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Viva",
-      "m365AllServices": [
-        "Microsoft Viva"
-      ],
-      "m365Id": "MC1247899",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1247899"
-    },
-    {
-      "title": "(Updated) Outlook: Support for recommended and automatically applied sensitivity labels in Outlook for iOS and Android",
-      "link": "https://deltapulse.app/item/MC1247891",
-      "published": "2026-03-09T22:23:37.000Z",
-      "source": "m365",
-      "m365Service": "Exchange Online",
-      "m365AllServices": [
-        "Exchange Online"
-      ],
-      "m365Id": "MC1247891",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026, April 2026",
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1247891"
     }
   ],
   "byCategory": {
@@ -1652,25 +1614,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1242782"
-      },
-      {
-        "title": "(Updated) Outlook: Support for recommended and automatically applied sensitivity labels in Outlook for iOS and Android",
-        "link": "https://deltapulse.app/item/MC1247891",
-        "published": "2026-03-09T22:23:37.000Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1247891",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1247891"
       }
     ],
     "Productivity": [
@@ -2107,6 +2050,25 @@
         "_normalized_url": "message_center:MC1254552"
       },
       {
+        "title": "(Updated) Introducing awards and certifications section in M365 profile card",
+        "link": "https://deltapulse.app/item/MC1250272",
+        "published": "2026-03-12T23:40:52.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365 apps",
+        "m365AllServices": [
+          "Microsoft 365 apps"
+        ],
+        "m365Id": "MC1250272",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026, April 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1250272"
+      },
+      {
         "title": "Microsoft Teams: Video recap in Teams",
         "link": "https://deltapulse.app/item/558540",
         "published": "2026-03-12T23:00:54.000Z",
@@ -2344,6 +2306,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254560"
+      },
+      {
+        "title": "(Updated) Copilot extensibility: Microsoft 365 Copilot Declarative Agents model upgrade to GPT‑5.2",
+        "link": "https://deltapulse.app/item/MC1251203",
+        "published": "2026-03-13T22:48:48.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
+        "m365AllServices": [
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1251203",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1251203"
       },
       {
         "title": "(Updated) Microsoft 365 Copilot: Draft and send Outlook email directly in Copilot Chat",
@@ -2756,44 +2737,6 @@
         "_normalized_url": "message_center:MC1254543"
       },
       {
-        "title": "Dynamics 365 Sales - Improve opportunity context with AI-based data enrichment",
-        "link": "https://deltapulse.app/item/MC1254454",
-        "published": "2026-03-17T17:37:12.000Z",
-        "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
-        "m365AllServices": [
-          "Dynamics 365 Apps"
-        ],
-        "m365Id": "MC1254454",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1254454"
-      },
-      {
-        "title": "Dynamics 365 Sales - Modern, in-flow email template picker for Sequences",
-        "link": "https://deltapulse.app/item/MC1254451",
-        "published": "2026-03-17T17:31:28.000Z",
-        "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
-        "m365AllServices": [
-          "Dynamics 365 Apps"
-        ],
-        "m365Id": "MC1254451",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1254451"
-      },
-      {
         "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
         "link": "https://deltapulse.app/item/MC1253577",
         "published": "2026-03-16T19:07:15.000Z",
@@ -2854,7 +2797,7 @@
         "_normalized_url": "message_center:MC1256306"
       },
       {
-        "title": "Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
+        "title": "(Updated) Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
         "link": "https://deltapulse.app/item/MC1255410",
         "published": "2026-03-18T22:32:26.000Z",
         "source": "m365",
@@ -2871,25 +2814,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255410"
-      },
-      {
-        "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
-        "link": "https://deltapulse.app/item/MC1247899",
-        "published": "2026-03-09T22:27:11.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1247899",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1247899"
       }
     ]
   },
@@ -3716,7 +3640,7 @@
         "_normalized_url": "message_center:MC1255412"
       },
       {
-        "title": "Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
+        "title": "(Updated) Microsoft Viva Insights: Automatic expiry of analyst report data using Viva Feature Access Management",
         "link": "https://deltapulse.app/item/MC1255410",
         "published": "2026-03-18T22:32:26.000Z",
         "source": "m365",
@@ -3965,42 +3889,42 @@
         "_normalized_url": "message_center:MC1254543"
       },
       {
-        "title": "Dynamics 365 Sales - Improve opportunity context with AI-based data enrichment",
-        "link": "https://deltapulse.app/item/MC1254454",
-        "published": "2026-03-17T17:37:12.000Z",
+        "title": "(Updated) Copilot extensibility: Microsoft 365 Copilot Declarative Agents model upgrade to GPT‑5.2",
+        "link": "https://deltapulse.app/item/MC1251203",
+        "published": "2026-03-13T22:48:48.000Z",
         "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
         "m365AllServices": [
-          "Dynamics 365 Apps"
+          "Microsoft Copilot (Microsoft 365)"
         ],
-        "m365Id": "MC1254454",
+        "m365Id": "MC1251203",
         "m365Source": "message_center",
         "m365Category": "stayInformed",
         "m365Severity": "normal",
         "m365Status": null,
-        "m365TargetDate": "April 2026",
+        "m365TargetDate": "March 2026",
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1254454"
+        "_normalized_url": "message_center:MC1251203"
       },
       {
-        "title": "Dynamics 365 Sales - Modern, in-flow email template picker for Sequences",
-        "link": "https://deltapulse.app/item/MC1254451",
-        "published": "2026-03-17T17:31:28.000Z",
+        "title": "(Updated) Introducing awards and certifications section in M365 profile card",
+        "link": "https://deltapulse.app/item/MC1250272",
+        "published": "2026-03-12T23:40:52.000Z",
         "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
+        "m365Service": "Microsoft 365 apps",
         "m365AllServices": [
-          "Dynamics 365 Apps"
+          "Microsoft 365 apps"
         ],
-        "m365Id": "MC1254451",
+        "m365Id": "MC1250272",
         "m365Source": "message_center",
         "m365Category": "stayInformed",
         "m365Severity": "normal",
         "m365Status": null,
-        "m365TargetDate": "April 2026",
+        "m365TargetDate": "March 2026, April 2026",
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1254451"
+        "_normalized_url": "message_center:MC1250272"
       },
       {
         "title": "Microsoft Teams: Video recap in Teams",
@@ -4294,44 +4218,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557977"
-      },
-      {
-        "title": "(Updated) Microsoft Viva Insights – Onboarding Email for Copilot Analytics",
-        "link": "https://deltapulse.app/item/MC1247899",
-        "published": "2026-03-09T22:27:11.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1247899",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1247899"
-      },
-      {
-        "title": "(Updated) Outlook: Support for recommended and automatically applied sensitivity labels in Outlook for iOS and Android",
-        "link": "https://deltapulse.app/item/MC1247891",
-        "published": "2026-03-09T22:23:37.000Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1247891",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026",
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1247891"
       }
     ],
     "in_development": [],
