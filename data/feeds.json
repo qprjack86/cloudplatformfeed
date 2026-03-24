@@ -1,7 +1,25 @@
 {
-  "lastUpdated": "2026-03-24T11:50:25.726167+00:00",
-  "totalArticles": 218,
+  "lastUpdated": "2026-03-24T15:56:41.367701+00:00",
+  "totalArticles": 220,
   "articles": [
+    {
+      "title": "Unlock More Power in Your Development Workflow: Syncfusion for Visual Studio Subscribers",
+      "link": "https://devblogs.microsoft.com/visualstudio/syncfusion-for-visual-studio/",
+      "published": "2026-03-24T15:00:12+00:00",
+      "summary": "A few months ago, I was talking with a developer who said something that stuck with me: “I love building apps. I just don’t love rebuilding the same UI controls over and over again.” That’s the reality for a lot of teams. You want to focus on your business logic, your architecture, your...",
+      "blog": "Visual Studio Blog",
+      "blogId": "visualstudio",
+      "author": "Jim Harrer"
+    },
+    {
+      "title": "Automating Azure OpenAI Cost Control Using Budgets, Action Groups, and Automation Runbooks",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/automating-azure-openai-cost-control-using-budgets-action-groups/ba-p/4505164",
+      "published": "2026-03-24T13:28:40+00:00",
+      "summary": "Introduction As organizations increasingly adopt Azure OpenAI for use cases such as generative AI, analytics, and experimentation, cost governance becomes a critical operational concern. Azure OpenAI workloads can scale quickly, and without proper controls, unmonitored usage may lead to unexpected...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "trisha1302"
+    },
     {
       "title": "Synchronizing Azure Storage Across Isolated Private Endpoint Networks",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/synchronizing-azure-storage-across-isolated-private-endpoint/ba-p/4504564",
