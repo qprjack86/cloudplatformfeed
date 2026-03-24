@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-03-24T07:53:09.042002+00:00",
-  "totalArticles": 215,
+  "lastUpdated": "2026-03-24T11:50:25.726167+00:00",
+  "totalArticles": 218,
   "articles": [
+    {
+      "title": "Synchronizing Azure Storage Across Isolated Private Endpoint Networks",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/synchronizing-azure-storage-across-isolated-private-endpoint/ba-p/4504564",
+      "published": "2026-03-24T08:27:32+00:00",
+      "summary": "Introduction In Azure repatriation programs, enterprises often need to migrate large volumes of blob data from a source Azure environment to a target Azure environment under strict security and network isolation constraints. A typical repatriation setup includes fully isolated source and target...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "deepakkumarv"
+    },
+    {
+      "title": "Announcing Public Preview of Argo CD extension on AKS and Azure Arc enabled Kubernetes clusters",
+      "link": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-public-preview-of-argo-cd-extension-on-aks-and-azure/ba-p/4504497",
+      "published": "2026-03-24T08:00:00+00:00",
+      "summary": "We are excited to announce public preview of the Argo CD extension for Azure Kubernetes Service (AKS) and Azure Arc-enabled Kubernetes clusters. As GitOps becomes the standard for deploying and operating applications at scale, enterprises need a way to implement GitOps while staying compliant with...",
+      "blog": "Azure Arc",
+      "blogId": "azurearcblog",
+      "author": "Poornima99"
+    },
+    {
+      "title": "New Oracle Autonomous AI Database - Dedicated option on Oracle AI Database@Azure",
+      "link": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/new-oracle-autonomous-ai-database-dedicated-option-on-oracle-ai/ba-p/4504929",
+      "published": "2026-03-24T08:00:00+00:00",
+      "summary": "At Microsoft, our partnership with Oracle reflects a shared commitment to meeting customers where they are — helping them modernize mission-critical workloads on Azure without sacrificing the performance, control, or compliance posture they've built over years. As part of this continued evolution,...",
+      "blog": "Oracle on Azure",
+      "blogId": "oracleonazureblog",
+      "author": "SparshAgrawat"
+    },
     {
       "title": "Hosted Containers and AI Agent Solutions",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/hosted-containers-and-ai-agent-solutions/ba-p/4500627",
