@@ -926,7 +926,9 @@ def _parse_azure_update_item(item):
     summary = clean_html(item.get("description") or item.get("summary") or "")
     status_raw = clean_html(str(item.get("status", "") or "").strip())
     lifecycle = _classify_azure_update_lifecycle(status_raw, title)
-    target_date = clean_html(
+    preview_date = clean_html(str(item.get("previewAvailabilityDate") or "").strip())
+    ga_date = clean_html(str(item.get("generalAvailabilityDate") or "").strip())
+    legacy_target_date = clean_html(
         str(
             item.get("generalAvailabilityDate")
             or item.get("previewAvailabilityDate")
@@ -953,8 +955,12 @@ def _parse_azure_update_item(item):
     }
     if lifecycle:
         article["lifecycle"] = lifecycle
-    if target_date:
-        article["azureTargetDate"] = target_date
+    if preview_date:
+        article["azurePreviewDate"] = preview_date
+    if ga_date:
+        article["azureGeneralAvailabilityDate"] = ga_date
+    if legacy_target_date:
+        article["azureTargetDate"] = legacy_target_date
     if status_raw:
         article["azureStatus"] = status_raw
     return article

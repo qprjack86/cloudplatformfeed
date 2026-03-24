@@ -1,7 +1,129 @@
 {
-  "lastUpdated": "2026-03-24T15:56:41.367701+00:00",
-  "totalArticles": 220,
+  "lastUpdated": "2026-03-24T19:14:13.737977+00:00",
+  "totalArticles": 228,
   "articles": [
+    {
+      "title": "Hosted Containers and AI Agent Solutions",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/hosted-containers-and-ai-agent-solutions/ba-p/4500627",
+      "published": "2026-03-24T18:32:11+00:00",
+      "summary": "If you have built a proof-of-concept AI agent on your laptop and wondered how to turn it into something other people can actually use, you are not alone. The gap between a working prototype and a production-ready service is where most agent projects stall. Hosted containers close that gap faster...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "Lee_Stott"
+    },
+    {
+      "title": "Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager",
+      "link": "https://azure.microsoft.com/en-us/updates/557877/",
+      "published": "2026-03-24T18:30:36.249325+00:00",
+      "summary": "Organizations running applications across multiple Kubernetes clusters often face challenges with performance, global service discovery, and observability due to the complexity of distributed microservice environments. Azure Kubernetes Fleet Manager now provides Cross Cluster Networking, delivering...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Public Preview: AKS managed GPU metrics in Azure Monitor",
+      "link": "https://azure.microsoft.com/en-us/updates/557882/",
+      "published": "2026-03-24T18:30:36.249325+00:00",
+      "summary": "Teams running GPU‑backed workloads often lack integrated visibility into GPU utilization alongside Kubernetes metrics. AKS managed GPU metrics automatically expose performance and utilization data from NVIDIA GPU‑enabled node pools into managed Prometheus and Grafana environments. This brings GPU...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Generally Available: Container network logs in AKS",
+      "link": "https://azure.microsoft.com/en-us/updates/557892/",
+      "published": "2026-03-24T18:15:48.958219+00:00",
+      "summary": "Networking issues in Kubernetes environments can be difficult to diagnose due to limited visibility into traffic flows and insufficient context around failures. Container network logs in Azure Kubernetes Service (AKS), now generally available, provide context‑rich visibility into network flows by...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Generally Available: Azure Container Storage v2.1.0 now with Elastic SAN integration and on demand installation",
+      "link": "https://azure.microsoft.com/en-us/updates/557912/",
+      "published": "2026-03-24T18:15:48.958219+00:00",
+      "summary": "Containerized workloads often require higher and more consistent storage performance without managing large numbers of individual disks. Azure Container Storage integration with Elastic SAN allows Kubernetes clusters to consume storage from a shared pool of capacity and performance. This simplifies...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "HTTP Triggers in Azure SRE Agent: From Jira Ticket to Automated Investigation",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/http-triggers-in-azure-sre-agent-from-jira-ticket-to-automated/ba-p/4504960",
+      "published": "2026-03-24T18:13:32+00:00",
+      "summary": "Introduction Many teams run their observability, incident management, ticketing, and deployment on platforms outside of Azure—Jira, Opsgenie, Grafana, Zendesk, GitLab, Jenkins, Harness, or homegrown internal tools. These are the systems where alerts fire, tickets get filed, deployments happen, and...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "Vineela-Suri"
+    },
+    {
+      "title": "Public Preview: Microsoft Azure Kubernetes Application Network",
+      "link": "https://azure.microsoft.com/en-us/updates/557922/",
+      "published": "2026-03-24T17:30:29.818683+00:00",
+      "summary": "As Kubernetes environments scale across regions and clusters, IP‑based networking becomes difficult to manage and provides limited application‑level visibility and security controls. Azure Kubernetes Application Network introduces application‑layer abstractions for Kubernetes traffic, including...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Public Preview: Application routing with meshless Istio in AKS",
+      "link": "https://azure.microsoft.com/en-us/updates/557927/",
+      "published": "2026-03-24T17:30:29.818683+00:00",
+      "summary": "Following the deprecation of ingress‑nginx, Kubernetes operators need a supported, standards‑aligned migration path for ingress without the complexity of a full service mesh. Application Routing with Meshless Istio enables adoption of the Kubernetes Gateway API for ingress management while avoiding...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Generally Available: Azure Monitor Prometheus community recommended alerts for Azure Arc-enabled Kubernetes",
+      "link": "https://azure.microsoft.com/en-us/updates/558825/",
+      "published": "2026-03-24T17:30:29.818683+00:00",
+      "summary": "Azure Monitor now offers one-click enablement of Prometheus recommended alerts directly in the Azure Portal for Azure Arc-enabled Kubernetes clusters. These alerts, based on enhanced Prometheus community rules, provide comprehensive coverage across cluster, node, and pod levels. Previously,...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Public Preview: Ingest OTLP data into Azure Monitor with the OpenTelemetry Collector",
+      "link": "https://azure.microsoft.com/en-us/updates/559273/",
+      "published": "2026-03-24T17:15:45.404411+00:00",
+      "summary": "Azure Monitor now supports native ingestion of OpenTelemetry Protocol (OTLP) signals, enabling you to send telemetry data directly from OpenTelemetry-instrumented applications and platforms to Azure Monitor. You can configure your OpenTelemetry Collector to send data directly to Azure Monitor cloud...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
     {
       "title": "Unlock More Power in Your Development Workflow: Syncfusion for Visual Studio Subscribers",
       "link": "https://devblogs.microsoft.com/visualstudio/syncfusion-for-visual-studio/",
@@ -46,15 +168,6 @@
       "blog": "Oracle on Azure",
       "blogId": "oracleonazureblog",
       "author": "SparshAgrawat"
-    },
-    {
-      "title": "Hosted Containers and AI Agent Solutions",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/hosted-containers-and-ai-agent-solutions/ba-p/4500627",
-      "published": "2026-03-24T07:00:00+00:00",
-      "summary": "If you have built a proof-of-concept AI agent on your laptop and wondered how to turn it into something other people can actually use, you are not alone. The gap between a working prototype and a production-ready service is where most agent projects stall. Hosted containers close that gap faster...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Lee_Stott"
     },
     {
       "title": "Take Control of Every Message: Partial Failure Handling for Service Bus Triggers in Azure Functions",
@@ -263,6 +376,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -403,6 +517,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -509,6 +624,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -521,6 +637,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -533,6 +650,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -545,6 +663,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -557,6 +676,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -569,6 +689,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -608,6 +729,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -620,6 +742,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -632,6 +755,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -753,15 +877,6 @@
       "author": "samcogan"
     },
     {
-      "title": "The LLM Inference Optimization Stack: A Prioritized Playbook for Enterprise Teams",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-llm-inference-optimization-stack-a-prioritized-playbook-for/ba-p/4498818",
-      "published": "2026-03-17T18:29:02+00:00",
-      "summary": "The Solutions — An Optimization Stack for Enterprise Inference The optimizations below are ordered by implementation priority — starting with the highest-leverage. The Three-Layer Serving Stack Most enterprise LLM deployments operate across three layers, each responsible for a different part of the...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "bobmital"
-    },
-    {
       "title": "PowerToys 0.98 is here: new Keyboard Manager UX, the Command Palette Dock and better CursorWrap!",
       "link": "https://devblogs.microsoft.com/commandline/powertoys-0-98-is-here-new-keyboard-manager-ux-the-command-palette-dock-and-better-cursorwrap/",
       "published": "2026-03-17T17:47:43+00:00",
@@ -779,6 +894,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -791,6 +907,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -915,6 +1032,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -1081,6 +1199,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -1093,6 +1212,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2025-07",
       "azureTargetDate": "2025-07",
       "azureStatus": "Launched"
     },
@@ -1132,6 +1252,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -1144,6 +1265,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -1156,6 +1278,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -1177,6 +1300,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
     },
@@ -1189,6 +1313,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -1670,6 +1795,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -1709,6 +1835,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -1721,6 +1848,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
     },
@@ -1742,6 +1870,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "Launched"
     },
@@ -1754,6 +1883,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "Launched"
     },
@@ -1785,6 +1915,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "Launched"
     },
@@ -1860,6 +1991,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "In preview"
     },
@@ -1935,6 +2067,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "In preview"
     },
@@ -1947,6 +2080,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "Launched"
     },
@@ -1959,6 +2093,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "In preview"
     },
@@ -1971,6 +2106,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "In preview"
     },
@@ -2074,6 +2210,7 @@
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "In preview"
     },

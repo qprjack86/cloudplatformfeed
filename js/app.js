@@ -1109,7 +1109,7 @@
       ? String(article.summary || "").trim()
       : (article.summary || "No additional information available.");
 
-    var m365TagsHtml = "";
+    var cardTagsHtml = "";
     if (isM365) {
       var m365Status = String(article.m365Status || "").trim();
       var releasePhase = LIFECYCLE_LABELS[article.lifecycle] || "";
@@ -1144,7 +1144,46 @@
       }
 
       if (tags.length) {
-        m365TagsHtml = '<div class="m365-tags">' + tags.join("") + "</div>";
+        cardTagsHtml = '<div class="m365-tags">' + tags.join("") + "</div>";
+      }
+    } else if (article.blogId === AZURE_UPDATES_BLOG_ID) {
+      var azureReleasePhase = LIFECYCLE_LABELS[article.lifecycle] || String(article.azureStatus || "").trim();
+      var previewTarget = formatM365TargetDate(article.azurePreviewDate);
+      var gaTarget = formatM365TargetDate(article.azureGeneralAvailabilityDate);
+      var fallbackTarget = formatM365TargetDate(article.azureTargetDate);
+      var azureTags = [];
+
+      if (azureReleasePhase) {
+        azureTags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">Release Phase:</span> ' +
+          escapeHtml(azureReleasePhase) +
+          "</span>"
+        );
+      }
+      if (previewTarget) {
+        azureTags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">Preview:</span> ' +
+          escapeHtml(previewTarget) +
+          "</span>"
+        );
+      }
+      if (gaTarget) {
+        azureTags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">GA:</span> ' +
+          escapeHtml(gaTarget) +
+          "</span>"
+        );
+      }
+      if (!previewTarget && !gaTarget && fallbackTarget) {
+        azureTags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">Expected Release:</span> ' +
+          escapeHtml(fallbackTarget) +
+          "</span>"
+        );
+      }
+
+      if (azureTags.length) {
+        cardTagsHtml = '<div class="m365-tags">' + azureTags.join("") + "</div>";
       }
     }
 
@@ -1169,7 +1208,7 @@
       '<div class="article-meta">' +
       metaContent +
       "</div>" +
-      m365TagsHtml +
+      cardTagsHtml +
       summaryHtml +
       '<div class="share-buttons">' +
       "</div>" +

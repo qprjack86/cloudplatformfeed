@@ -446,8 +446,58 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertEqual(article["lifecycle"], "launched_ga")
         self.assertEqual(article["azureStatus"], "Launched")
         self.assertEqual(article["azureTargetDate"], "2026-04")
+        self.assertEqual(article["azureGeneralAvailabilityDate"], "2026-04")
         self.assertEqual(article["published"], "2026-03-22T10:30:00+00:00")
         self.assertEqual(article["link"], "https://azure.microsoft.com/en-us/updates/123456/")
+
+    def test_parse_azure_update_item_extracts_preview_date(self):
+        item = {
+            "id": "654321",
+            "title": "Public Preview: Sample Azure capability",
+            "status": "In preview",
+            "previewAvailabilityDate": "2026-05",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["azurePreviewDate"], "2026-05")
+        self.assertEqual(article["azureTargetDate"], "2026-05")
+        self.assertNotIn("azureGeneralAvailabilityDate", article)
+
+    def test_parse_azure_update_item_extracts_preview_and_ga_dates(self):
+        item = {
+            "id": "777777",
+            "title": "Generally Available: Dual milestone update",
+            "status": "Launched",
+            "previewAvailabilityDate": "2026-04",
+            "generalAvailabilityDate": "2026-05",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["azurePreviewDate"], "2026-04")
+        self.assertEqual(article["azureGeneralAvailabilityDate"], "2026-05")
+        self.assertEqual(article["azureTargetDate"], "2026-05")
+
+    def test_parse_azure_update_item_falls_back_to_target_date(self):
+        item = {
+            "id": "888888",
+            "title": "Coming soon: Legacy target date field",
+            "status": "In development",
+            "targetDate": "2026-08",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["azureTargetDate"], "2026-08")
+        self.assertNotIn("azurePreviewDate", article)
+        self.assertNotIn("azureGeneralAvailabilityDate", article)
 
     def test_fetch_azure_updates_feed_falls_back_to_rss_on_api_exception(self):
         rss_articles = [{"title": "RSS fallback article"}]
