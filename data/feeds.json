@@ -1,7 +1,43 @@
 {
-  "lastUpdated": "2026-03-23T22:40:45.158498+00:00",
-  "totalArticles": 213,
+  "lastUpdated": "2026-03-24T07:53:09.042002+00:00",
+  "totalArticles": 215,
   "articles": [
+    {
+      "title": "Hosted Containers and AI Agent Solutions",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/hosted-containers-and-ai-agent-solutions/ba-p/4500627",
+      "published": "2026-03-24T07:00:00+00:00",
+      "summary": "If you have built a proof-of-concept AI agent on your laptop and wondered how to turn it into something other people can actually use, you are not alone. The gap between a working prototype and a production-ready service is where most agent projects stall. Hosted containers close that gap faster...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "Lee_Stott"
+    },
+    {
+      "title": "Take Control of Every Message: Partial Failure Handling for Service Bus Triggers in Azure Functions",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/take-control-of-every-message-partial-failure-handling-for/ba-p/4504893",
+      "published": "2026-03-24T05:34:12+00:00",
+      "summary": "The Problem: All-or-Nothing Batch Processing in Azure Service Bus Azure Service Bus is one of the most widely used messaging services for building event-driven applications on Azure. When you use Azure Functions with a Service Bus trigger in batch mode, your function receives multiple messages at...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "swapnil_nagar"
+    },
+    {
+      "title": "SQL code analysis in VS Code: Configure rules without editing your project file",
+      "link": "https://devblogs.microsoft.com/azure-sql/sql-code-analysis-in-vs-code-configure-rules-without-editing-your-project-file/",
+      "published": "2026-03-24T03:30:13+00:00",
+      "summary": "SQL code analysis has been part of the SSDT workflow for a long time. Before deploying a schema change, you could run a set of static analysis rules against your project to catch potential issues, things like missing primary keys, deprecated syntax, or objects that could break under certain...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Iqra Shaikh"
+    },
+    {
+      "title": "Manage SQL database schemas in VS Code: Publish dialog and item templates",
+      "link": "https://devblogs.microsoft.com/azure-sql/sql-database-projects-publish-dialog-item-templates/",
+      "published": "2026-03-24T00:39:44+00:00",
+      "summary": "Making schema changes often means jumping between tools. You write code in VS Code, then switch to a separate tool to deploy your changes : exporting a script, running it manually, or copy-pasting into a query editor. Either way, it pulls you out of your flow. With the latest updates to SQL...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Iqra Shaikh"
+    },
     {
       "title": "Agentic Platform Engineering with GitHub Copilot",
       "link": "https://devblogs.microsoft.com/all-things-azure/agentic-platform-engineering-with-github-copilot/",
@@ -1400,15 +1436,6 @@
       "author": "Dustin Howett"
     },
     {
-      "title": "Even simpler to Safely Execute AI-generated Code with Azure Container Apps Dynamic Sessions",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/even-simpler-to-safely-execute-ai-generated-code-with-azure/ba-p/4499795",
-      "published": "2026-03-05T21:04:59+00:00",
-      "summary": "AI agents are writing code. The question is: where does that code run? If it runs in your process, a single hallucinated import os; os.remove('/') can ruin your day. Azure Container Apps dynamic sessions solve this with on-demand sandboxed environments — Hyper-V isolated, fully managed, and ready...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "Jan-Kalis"
-    },
-    {
       "title": "How Netstar Streamlined Fleet Monitoring and Reduced Custom Integrations with Drasi",
       "link": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/how-netstar-streamlined-fleet-monitoring-and-reduced-custom/ba-p/4499592",
       "published": "2026-03-05T19:23:46+00:00",
@@ -1735,15 +1762,6 @@
       "author": "rickliev"
     },
     {
-      "title": "Optimising AI Costs with Microsoft Foundry Model Router",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/optimising-ai-costs-with-microsoft-foundry-model-router/ba-p/4494776",
-      "published": "2026-02-27T08:00:00+00:00",
-      "summary": "Microsoft Foundry Model Router analyses each prompt in real-time and forwards it to the most appropriate LLM from a pool of underlying models. Simple requests go to fast, cheap models; complex requests go to premium ones, all automatically. I built an interactive demo app so you can see the routing...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Lee_Stott"
-    },
-    {
       "title": "Azure DocumentDB: A Fully Managed MongoDB-Compatible Database",
       "link": "https://devblogs.microsoft.com/cosmosdb/azure-documentdb-mongodb-compatible/",
       "published": "2026-02-27T00:58:03+00:00",
@@ -2035,18 +2053,18 @@
   ],
   "summaryWindowDays": 7,
   "summaryPublishingDays": [
+    "2026-03-24",
     "2026-03-23",
     "2026-03-22",
     "2026-03-21",
     "2026-03-20",
     "2026-03-19",
-    "2026-03-18",
-    "2026-03-17"
+    "2026-03-18"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 15,
-  "summary": "- In preview:\n  • [Public Preview: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558116)\n  • [Public Preview: Azure Databricks OneLake Catalog Federation](https://azure.microsoft.com/updates?id=558927)\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/updates?id=558169)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/updates?id=558155)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/updates?id=558150)\n\n- Launched / Generally Available:\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/updates?id=558121)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/updates?id=557917)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/updates?id=558134)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/updates?id=558810)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/updates?id=558183)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/updates?id=558086)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/updates?id=557123)\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548543)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548525)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/updates?id=548497)\n\n- In development:\n  • none noted in selected window",
+  "summary": "- In preview:\n  • [Public Preview: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/en-us/updates/558116/)\n  • [Public Preview: Azure Databricks OneLake Catalog Federation](https://azure.microsoft.com/en-us/updates/558927/)\n  • [Public Preview: SQL MCP Server](https://azure.microsoft.com/en-us/updates/558150/)\n  • [Public Preview: Database DevOps in SSMS powered by SQL projects](https://azure.microsoft.com/en-us/updates/558155/)\n  • [Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension](https://azure.microsoft.com/en-us/updates/558169/)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/en-us/updates/557917/)\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/en-us/updates/558121/)\n  • [Generally Available: GitHub Copilot in SQL Server Management Studio 22](https://azure.microsoft.com/en-us/updates/558134/)\n  • [Generally Available: Versionless key support for transparent data encryption in Azure SQL Database](https://azure.microsoft.com/en-us/updates/558183/)\n  • [Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks](https://azure.microsoft.com/en-us/updates/558810/)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/en-us/updates/558086/)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/en-us/updates/557123/)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548497/)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548525/)\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548543/)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 20th March 2026",
     "url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",
