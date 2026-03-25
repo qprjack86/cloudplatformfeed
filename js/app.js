@@ -146,6 +146,15 @@
     return date ? date.toLocaleDateString(undefined, options) : "";
   }
 
+  function formatUkNumericDate(date) {
+    if (!date) return "";
+    return date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric"
+    });
+  }
+
   function formatM365TargetDate(value) {
     if (!value) return "";
     var raw = String(value).trim();
@@ -165,12 +174,23 @@
     var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
     if (dayMatch) {
       var dayDate = new Date(Number(dayMatch[1]), Number(dayMatch[2]) - 1, Number(dayMatch[3]));
-      return formatLocalDate(dayDate, { day: "numeric", month: "short", year: "numeric" });
+      return formatUkNumericDate(dayDate);
     }
 
-    var parsed = parseDateValue(raw);
-    if (parsed) {
-      return formatLocalDate(parsed, { day: "numeric", month: "short", year: "numeric" });
+    // Preserve fuzzy month timing (for example: "late June 2026") and
+    // month-only values ("June 2026") instead of guessing a day-of-month.
+    if (/^(?:early|mid|late)\s+[A-Za-z]+\s+\d{4}$/i.test(raw)) {
+      return raw;
+    }
+    if (/^[A-Za-z]+\s+\d{4}$/.test(raw)) {
+      return raw;
+    }
+
+    // Only parse free-form dates when a specific day is present.
+    var hasExplicitDay = /^([A-Za-z]+)\s+\d{1,2},\s*\d{4}$/.test(raw);
+    var parsed = hasExplicitDay ? parseDateValue(raw) : null;
+    if (parsed && !Number.isNaN(parsed.getTime())) {
+      return formatUkNumericDate(parsed);
     }
 
     return raw;
