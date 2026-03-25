@@ -1,7 +1,78 @@
 {
-  "lastUpdated": "2026-03-24T19:44:42.842098+00:00",
-  "totalArticles": 229,
+  "lastUpdated": "2026-03-25T07:51:38.764782+00:00",
+  "totalArticles": 231,
   "articles": [
+    {
+      "title": "Microsoft Foundry Labs: A Practical Fast Lane from Research to Real Developer Work",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-foundry-labs-a-practical-fast-lane-from-research-to/ba-p/4502127",
+      "published": "2026-03-25T07:00:00+00:00",
+      "summary": "Why developers need a fast lane from research → prototypes AI engineering has a speed problem, but it is not a shortage of announcements. The hard part is turning research into a useful prototype before the next wave of models, tools, or agent patterns shows up. That gap matters. AI engineers want...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "Lee_Stott"
+    },
+    {
+      "title": "Vectorless Reasoning-Based RAG: A New Approach to Retrieval-Augmented Generation",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/vectorless-reasoning-based-rag-a-new-approach-to-retrieval/ba-p/4502238",
+      "published": "2026-03-25T07:00:00+00:00",
+      "summary": "Introduction Retrieval-Augmented Generation (RAG) has become a widely adopted architecture for building AI applications that combine Large Language Models (LLMs) with external knowledge sources. Traditional RAG pipelines rely heavily on vector embeddings and similarity search to retrieve relevant...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "Rajapriya"
+    },
+    {
+      "title": "🚀 Securing Enterprise AI: From Red Teaming to Risk Cards and Azure Guardrails",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/securing-enterprise-ai-from-red-teaming-to-risk-cards-and-azure/ba-p/4505388",
+      "published": "2026-03-25T05:03:42+00:00",
+      "summary": "AI is no longer experimental—it’s deeply embedded into critical business workflows. From copilots to decision intelligence systems, organizations are rapidly adopting large language models (LLMs). But here’s the reality: AI is not just another application layer—it’s a new attack surface. 🧠 Why...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "adityakumar60"
+    },
+    {
+      "title": "Your Entire Engineering Floor Just Stopped Coding",
+      "link": "https://devblogs.microsoft.com/all-things-azure/your-entire-engineering-floor-just-stopped-coding/",
+      "published": "2026-03-25T03:38:23+00:00",
+      "summary": "And the developers running Claude Code and GitHub Copilot CLI didn’t notice… Status Page Says ‘Operational.’ Your Subagents Say Otherwise. If you’re running autonomous agents in any serious capacity, you’ve experienced this: model provider outages aren’t edge cases — they’re part of the operating...",
+      "blog": "All Things Azure",
+      "blogId": "allthingsazure",
+      "author": "Desi Villanueva"
+    },
+    {
+      "title": "Generally Available: Container network metrics filtering for AKS",
+      "link": "https://azure.microsoft.com/en-us/updates/557902/",
+      "published": "2026-03-24T23:00:18.186102+00:00",
+      "summary": "Network observability can generate large volumes of metrics, making it difficult for teams to focus on data that is operationally relevant. Container network metrics filtering in Azure Container Networking Services (ACNS) allows operators to control which container‑level network metrics are...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Public Preview: AI Agent for container networking troubleshooting",
+      "link": "https://azure.microsoft.com/en-us/updates/557887/",
+      "published": "2026-03-24T21:45:26.015763+00:00",
+      "summary": "Troubleshooting Kubernetes networking issues is often slowed by logs and metrics scattered across multiple tools, forcing engineers to manually correlate signals during incidents. The container networking agent provides a lightweight, web‑based interface that translates natural‑language problem...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "HTTP Triggers in Azure SRE Agent: From Jira Ticket to Automated Investigation",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/http-triggers-in-azure-sre-agent-from-jira-ticket-to-automated/ba-p/4504960",
+      "published": "2026-03-24T21:09:11+00:00",
+      "summary": "Introduction Many teams run their observability, incident management, ticketing, and deployment on platforms outside of Azure—Jira, Opsgenie, Grafana, Zendesk, GitLab, Jenkins, Harness, or homegrown internal tools. These are the systems where alerts fire, tickets get filed, deployments happen, and...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "Vineela-Suri"
+    },
     {
       "title": "Hosted Containers and AI Agent Solutions",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/hosted-containers-and-ai-agent-solutions/ba-p/4500627",
@@ -62,15 +133,6 @@
       "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
-    },
-    {
-      "title": "HTTP Triggers in Azure SRE Agent: From Jira Ticket to Automated Investigation",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/http-triggers-in-azure-sre-agent-from-jira-ticket-to-automated/ba-p/4504960",
-      "published": "2026-03-24T18:13:32+00:00",
-      "summary": "Introduction Many teams run their observability, incident management, ticketing, and deployment on platforms outside of Azure—Jira, Opsgenie, Grafana, Zendesk, GitLab, Jenkins, Harness, or homegrown internal tools. These are the systems where alerts fire, tickets get filed, deployments happen, and...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "Vineela-Suri"
     },
     {
       "title": "Public Preview: Microsoft Azure Kubernetes Application Network",
@@ -1635,15 +1697,6 @@
       "author": "CollinBrian"
     },
     {
-      "title": "GenRec Direct Learning: Moving Ranking from Feature Pipelines to Token-Native Sequence Modeling",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/genrec-direct-learning-moving-ranking-from-feature-pipelines-to/ba-p/4494252",
-      "published": "2026-03-05T13:17:16+00:00",
-      "summary": "Authors: Chunlong Yu, Han Zheng, Jie Zhu, I-Hong Jhuo, Neal Zhang, Li Xia, Lin Zhu, Sawyer Shen, Yulan Yan TL;DR Most modern ranking stacks rely on large generative models as feature extractors, flattening their outputs into vectors that are then fed into downstream rankers. While effective, this...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "chunlongyu"
-    },
-    {
       "title": "Building High-Performance Agentic Systems",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-high-performance-agentic-systems/ba-p/4497391",
       "published": "2026-03-05T08:00:00+00:00",
@@ -1788,15 +1841,6 @@
       "blog": "Microsoft Defender for Cloud",
       "blogId": "microsoftdefendercloudblog",
       "author": "Fernanda_Vela"
-    },
-    {
-      "title": "Giving Your AI Agents Reliable Skills with the Agent Skills SDK",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/giving-your-ai-agents-reliable-skills-with-the-agent-skills-sdk/ba-p/4497074",
-      "published": "2026-03-03T08:00:00+00:00",
-      "summary": "AI agents are becoming increasingly capable, but they often do not have the context they need to do real work reliably. Your agent can reason well, but it does not actually know how to do the specific things your team needs it to do. For example, it cannot follow your company's incident response...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "pratikpanda"
     },
     {
       "title": "Azure Databricks Lakebase is now generally available",
@@ -2236,40 +2280,22 @@
       "azurePreviewDate": "2026-02",
       "azureTargetDate": "2026-02",
       "azureStatus": "In preview"
-    },
-    {
-      "title": "Logic Apps Agentic Workflows with SAP - Part 2: AI Agents",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-agentic-workflows-with-sap-part-2-ai-agents/ba-p/4492362",
-      "published": "2026-02-23T07:15:00+00:00",
-      "summary": "Part 2 focuses on the AI-shaped portion of the destination workflows: how the Logic Apps Agent is configured, how it pulls business rules from SharePoint, and how its outputs are converted into concrete workflow artifacts. In Destination workflow #1, the agent produces three structured outputs—an...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "Emmanuel_Abram_Profeta"
-    },
-    {
-      "title": "Logic Apps Agentic Workflows with SAP - Part 1: Infrastructure",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-agentic-workflows-with-sap-part-1-infrastructure/ba-p/4491906",
-      "published": "2026-02-23T07:12:09+00:00",
-      "summary": "When you integrate Azure Logic Apps with SAP, the “hello world” part is usually easy. The part that bites you later is data quality. In SAP-heavy flows, validation isn’t a nice-to-have — it’s what makes the downstream results meaningful. If invalid data slips through, it can get expensive fast: you...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "Emmanuel_Abram_Profeta"
     }
   ],
   "summaryWindowDays": 7,
   "summaryPublishingDays": [
+    "2026-03-25",
     "2026-03-24",
     "2026-03-23",
     "2026-03-22",
     "2026-03-21",
     "2026-03-20",
-    "2026-03-19",
-    "2026-03-18"
+    "2026-03-19"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 15,
-  "summary": "- In preview:\n  • [Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager](https://azure.microsoft.com/en-us/updates/557877/)\n  • [Public Preview: AKS managed GPU metrics in Azure Monitor](https://azure.microsoft.com/en-us/updates/557882/)\n  • [Public Preview: Microsoft Azure Kubernetes Application Network](https://azure.microsoft.com/en-us/updates/557922/)\n  • [Public Preview: Application routing with meshless Istio in AKS](https://azure.microsoft.com/en-us/updates/557927/)\n  • [Public Preview: Ingest OTLP data into Azure Monitor with the OpenTelemetry Collector](https://azure.microsoft.com/en-us/updates/559273/)\n\n- Launched / Generally Available:\n  • [Generally Available: Container network logs in AKS](https://azure.microsoft.com/en-us/updates/557892/)\n  • [Generally Available: Azure Container Storage v2.1.0 now with Elastic SAN integration and on demand installation](https://azure.microsoft.com/en-us/updates/557912/)\n  • [Generally Available: Azure Monitor Prometheus community recommended alerts for Azure Arc-enabled Kubernetes](https://azure.microsoft.com/en-us/updates/558825/)\n  • [Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity](https://azure.microsoft.com/en-us/updates/557917/)\n  • [General availability: Azure SQL updates for mid-March 2026](https://azure.microsoft.com/en-us/updates/558121/)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/en-us/updates/558086/)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/en-us/updates/557123/)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548497/)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548525/)\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548543/)\n\n- In development:\n  • none noted in selected window",
+  "summary": "- In preview:\n  • [Public Preview: AI Agent for container networking troubleshooting](https://azure.microsoft.com/en-us/updates/557887/)\n  • [Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager](https://azure.microsoft.com/en-us/updates/557877/)\n  • [Public Preview: AKS managed GPU metrics in Azure Monitor](https://azure.microsoft.com/en-us/updates/557882/)\n  • [Public Preview: Microsoft Azure Kubernetes Application Network](https://azure.microsoft.com/en-us/updates/557922/)\n  • [Public Preview: Application routing with meshless Istio in AKS](https://azure.microsoft.com/en-us/updates/557927/)\n\n- Launched / Generally Available:\n  • [Generally Available: Container network metrics filtering for AKS](https://azure.microsoft.com/en-us/updates/557902/)\n  • [Generally Available: Container network logs in AKS](https://azure.microsoft.com/en-us/updates/557892/)\n  • [Generally Available: Azure Container Storage v2.1.0 now with Elastic SAN integration and on demand installation](https://azure.microsoft.com/en-us/updates/557912/)\n  • [Generally Available: Azure Monitor Prometheus community recommended alerts for Azure Arc-enabled Kubernetes](https://azure.microsoft.com/en-us/updates/558825/)\n  • [Code Optimizations for Azure App Service Now Available in VS Code](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/code-optimizations-for-azure-app-service-now-available-in-vs/ba-p/4504252)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/en-us/updates/558086/)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/en-us/updates/557123/)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548497/)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548525/)\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548543/)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 20th March 2026",
     "url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",
