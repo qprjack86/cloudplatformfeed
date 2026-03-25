@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T09:25:02.648906+00:00",
+  "generatedAt": "2026-03-25T11:47:23.727618+00:00",
   "totalArticles": 80,
   "articles": [
     {
@@ -473,25 +473,6 @@
       "_normalized_url": "roadmap:558928"
     },
     {
-      "title": "Microsoft Purview: Data Lifecycle Management - DLM Retention support Microsoft Teams call logs",
-      "link": "https://deltapulse.app/item/559261",
-      "published": "2026-03-23T23:15:39.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559261",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:559261"
-    },
-    {
       "title": "Microsoft Copilot (Microsoft 365): Create interactive visuals in Copilot Pages",
       "link": "https://deltapulse.app/item/558940",
       "published": "2026-03-23T23:15:39.000Z",
@@ -528,6 +509,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558442"
+    },
+    {
+      "title": "Microsoft Purview: Data Lifecycle Management - DLM Retention support Microsoft Teams call logs",
+      "link": "https://deltapulse.app/item/559261",
+      "published": "2026-03-23T23:15:39.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559261",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:559261"
     },
     {
       "title": "Power Platform admin center – New alert metrics available in the Monitor section",
@@ -791,23 +791,23 @@
       "_normalized_url": "roadmap:558935"
     },
     {
-      "title": "Microsoft Purview: Data Loss Prevention - Unmanaged cloud app discovery and protection with Microsoft Purview and Palo Alto Prisma Access",
-      "link": "https://deltapulse.app/item/558939",
+      "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
+      "link": "https://deltapulse.app/item/558857",
       "published": "2026-03-19T23:30:43.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558939",
+      "m365Id": "558857",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
-      "m365TargetDate": "October 2026",
+      "m365TargetDate": "April 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:558939"
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:558857"
     },
     {
       "title": "Microsoft Purview: Endpoint Data Loss Prevention - Logged-in user details on the Purview device onboarding page",
@@ -886,23 +886,23 @@
       "_normalized_url": "roadmap:558679"
     },
     {
-      "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
-      "link": "https://deltapulse.app/item/558857",
+      "title": "Microsoft Purview: Data Loss Prevention - Unmanaged cloud app discovery and protection with Microsoft Purview and Palo Alto Prisma Access",
+      "link": "https://deltapulse.app/item/558939",
       "published": "2026-03-19T23:30:43.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558857",
+      "m365Id": "558939",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
-      "m365TargetDate": "April 2026",
+      "m365TargetDate": "October 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558857"
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:558939"
     },
     {
       "title": "Microsoft Teams: Recently used emojis sync across devices",
@@ -2088,25 +2088,6 @@
         "_normalized_url": "roadmap:558928"
       },
       {
-        "title": "Microsoft Purview: Data Lifecycle Management - DLM Retention support Microsoft Teams call logs",
-        "link": "https://deltapulse.app/item/559261",
-        "published": "2026-03-23T23:15:39.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559261",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559261"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Create interactive visuals in Copilot Pages",
         "link": "https://deltapulse.app/item/558940",
         "published": "2026-03-23T23:15:39.000Z",
@@ -2143,6 +2124,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558442"
+      },
+      {
+        "title": "Microsoft Purview: Data Lifecycle Management - DLM Retention support Microsoft Teams call logs",
+        "link": "https://deltapulse.app/item/559261",
+        "published": "2026-03-23T23:15:39.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559261",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559261"
       },
       {
         "title": "Microsoft Copilot (Microsoft 365): Create PowerPoint presentations from Copilot Notebooks",
@@ -2259,23 +2259,23 @@
         "_normalized_url": "roadmap:558935"
       },
       {
-        "title": "Microsoft Purview: Data Loss Prevention - Unmanaged cloud app discovery and protection with Microsoft Purview and Palo Alto Prisma Access",
-        "link": "https://deltapulse.app/item/558939",
+        "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
+        "link": "https://deltapulse.app/item/558857",
         "published": "2026-03-19T23:30:43.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558939",
+        "m365Id": "558857",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "October 2026",
+        "m365TargetDate": "April 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558939"
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558857"
       },
       {
         "title": "Microsoft Purview: Endpoint Data Loss Prevention - Logged-in user details on the Purview device onboarding page",
@@ -2354,23 +2354,23 @@
         "_normalized_url": "roadmap:558679"
       },
       {
-        "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
-        "link": "https://deltapulse.app/item/558857",
+        "title": "Microsoft Purview: Data Loss Prevention - Unmanaged cloud app discovery and protection with Microsoft Purview and Palo Alto Prisma Access",
+        "link": "https://deltapulse.app/item/558939",
         "published": "2026-03-19T23:30:43.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558857",
+        "m365Id": "558939",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "April 2026",
+        "m365TargetDate": "October 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558857"
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558939"
       },
       {
         "title": "Microsoft Edge: Security Update Alerts in the Edge management service",
@@ -3889,25 +3889,6 @@
         "_normalized_url": "roadmap:558928"
       },
       {
-        "title": "Microsoft Purview: Data Lifecycle Management - DLM Retention support Microsoft Teams call logs",
-        "link": "https://deltapulse.app/item/559261",
-        "published": "2026-03-23T23:15:39.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559261",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559261"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Create interactive visuals in Copilot Pages",
         "link": "https://deltapulse.app/item/558940",
         "published": "2026-03-23T23:15:39.000Z",
@@ -3925,6 +3906,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558940"
+      },
+      {
+        "title": "Microsoft Purview: Data Lifecycle Management - DLM Retention support Microsoft Teams call logs",
+        "link": "https://deltapulse.app/item/559261",
+        "published": "2026-03-23T23:15:39.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559261",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559261"
       },
       {
         "title": "Power Platform admin center – New alert metrics available in the Monitor section",
@@ -4150,6 +4150,25 @@
         "_normalized_url": "roadmap:558935"
       },
       {
+        "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
+        "link": "https://deltapulse.app/item/558857",
+        "published": "2026-03-19T23:30:43.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558857",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558857"
+      },
+      {
         "title": "Microsoft Purview: Endpoint Data Loss Prevention - Logged-in user details on the Purview device onboarding page",
         "link": "https://deltapulse.app/item/559028",
         "published": "2026-03-19T23:30:43.000Z",
@@ -4224,25 +4243,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558679"
-      },
-      {
-        "title": "Outlook: Multiselect in the New Outlook and Teams calendars",
-        "link": "https://deltapulse.app/item/558857",
-        "published": "2026-03-19T23:30:43.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558857",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558857"
       },
       {
         "title": "Microsoft Teams: Recently used emojis sync across devices",

@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-25T09:24:04.098494+00:00",
-  "totalArticles": 231,
+  "lastUpdated": "2026-03-25T11:46:58.971674+00:00",
+  "totalArticles": 232,
   "articles": [
+    {
+      "title": "🚀GitHub Copilot CLI: AI Assistance from the Command Line for Infrastructure Deployments",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/github-copilot-cli-ai-assistance-from-the-command-line-for/ba-p/4500796",
+      "published": "2026-03-25T09:43:34+00:00",
+      "summary": "What is GitHub Copilot CLI? GitHub Copilot CLI is an AI-powered assistant that runs directly inside your terminal. Instead of manually writing commands, scripts, or debugging issues, you can simply describe what you want — and Copilot executes it. Here’s the shift: Traditional CLI Copilot CLI You...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "ibrahimbaig"
+    },
     {
       "title": "Microsoft Foundry Labs: A Practical Fast Lane from Research to Real Developer Work",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-foundry-labs-a-practical-fast-lane-from-research-to/ba-p/4502127",
