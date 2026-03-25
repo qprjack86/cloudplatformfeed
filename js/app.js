@@ -176,6 +176,100 @@
     return raw;
   }
 
+  function parseM365TargetDateParts(value) {
+    if (!value) return [];
+    return String(value)
+      .split(",")
+      .map(function (part) { return part.trim(); })
+      .filter(function (part) { return Boolean(part); });
+  }
+
+  function parseM365MonthDate(value) {
+    if (!value) return null;
+    var raw = String(value).trim();
+    if (!raw) return null;
+
+    var cycleMonth = /^([A-Za-z]+)\s+(?:CY|FY)(\d{4})$/i.exec(raw);
+    if (cycleMonth) {
+      raw = cycleMonth[1] + " " + cycleMonth[2];
+    }
+
+    var monthOnly = /^(\d{4})-(\d{2})$/.exec(raw);
+    if (monthOnly) {
+      return new Date(Number(monthOnly[1]), Number(monthOnly[2]) - 1, 1);
+    }
+
+    var monthYear = /^([A-Za-z]+)\s+(\d{4})$/.exec(raw);
+    if (monthYear) {
+      var parsed = new Date(monthYear[1] + " 1, " + monthYear[2]);
+      return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+
+    return null;
+  }
+
+  function toMonthKey(date) {
+    if (!date) return "";
+    return (date.getFullYear() * 12 + date.getMonth()).toString();
+  }
+
+  function buildM365TargetDatePills(targetDateValue) {
+    var parts = parseM365TargetDateParts(targetDateValue);
+    if (!parts.length) return [];
+
+    if (parts.length === 1) {
+      var single = formatM365TargetDate(parts[0]);
+      return single ? [{ label: "Expected Release", value: single }] : [];
+    }
+
+    var datedParts = parts.map(function (part) {
+      return {
+        raw: part,
+        formatted: formatM365TargetDate(part),
+        monthDate: parseM365MonthDate(part)
+      };
+    });
+
+    var allHaveMonthDates = datedParts.every(function (item) { return Boolean(item.monthDate); });
+    if (!allHaveMonthDates) {
+      var combined = formatM365TargetDate(targetDateValue);
+      return combined ? [{ label: "Expected Release", value: combined }] : [];
+    }
+
+    // Group contiguous months into rollout windows.
+    var windows = [];
+    datedParts.forEach(function (item) {
+      if (!windows.length) {
+        windows.push([item]);
+        return;
+      }
+
+      var currentWindow = windows[windows.length - 1];
+      var previousItem = currentWindow[currentWindow.length - 1];
+      var previousMonth = Number(toMonthKey(previousItem.monthDate));
+      var currentMonth = Number(toMonthKey(item.monthDate));
+
+      if ((currentMonth - previousMonth) <= 1) {
+        currentWindow.push(item);
+      } else {
+        windows.push([item]);
+      }
+    });
+
+    if (windows.length < 2) {
+      var joinedSingleWindow = datedParts
+        .map(function (item) { return item.formatted; })
+        .join(", ");
+      return joinedSingleWindow ? [{ label: "Expected Release", value: joinedSingleWindow }] : [];
+    }
+
+    return windows.map(function (window, idx) {
+      var label = idx === 0 ? "Preview" : (idx === 1 ? "GA" : "Expected Release");
+      var value = window.map(function (item) { return item.formatted; }).join(", ");
+      return { label: label, value: value };
+    }).filter(function (pill) { return Boolean(pill.value); });
+  }
+
   function formatUkRetirementDate(value) {
     if (!value) return "";
     var raw = String(value).trim();
@@ -1135,7 +1229,9 @@
     if (isM365) {
       var m365Status = String(article.m365Status || "").trim();
       var releasePhase = LIFECYCLE_LABELS[article.lifecycle] || "";
-      var expectedRelease = formatM365TargetDate(article.m365TargetDate);
+      var previewTarget = formatM365TargetDate(article.m365PreviewDate);
+      var gaTarget = formatM365TargetDate(article.m365GeneralAvailabilityDate);
+      var expectedReleasePills = buildM365TargetDatePills(article.m365TargetDate);
       var tags = [];
 
       if (m365Status) {
@@ -1152,12 +1248,30 @@
           "</span>"
         );
       }
-      if (expectedRelease) {
+      if (previewTarget) {
         tags.push(
-          '<span class="m365-tag"><span class="m365-tag-label">Expected Release:</span> ' +
-          escapeHtml(expectedRelease) +
+          '<span class="m365-tag"><span class="m365-tag-label">Preview:</span> ' +
+          escapeHtml(previewTarget) +
           "</span>"
         );
+      }
+      if (gaTarget) {
+        tags.push(
+          '<span class="m365-tag"><span class="m365-tag-label">GA:</span> ' +
+          escapeHtml(gaTarget) +
+          "</span>"
+        );
+      }
+      if (!previewTarget && !gaTarget) {
+        expectedReleasePills.forEach(function (pill) {
+          tags.push(
+            '<span class="m365-tag"><span class="m365-tag-label">' +
+            escapeHtml(pill.label) +
+            ":</span> " +
+            escapeHtml(pill.value) +
+            "</span>"
+          );
+        });
       }
       if (article.m365IsMajorChange) {
         tags.push(
