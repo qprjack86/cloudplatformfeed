@@ -291,6 +291,71 @@ def resolve_m365_target_date(item: dict):
     return None
 
 
+def _normalise_whitespace(value: str) -> str:
+    """Collapse repeated whitespace and trim."""
+    return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def _extract_rollout_window(text: str) -> str:
+    """Extract concise timeline text from rollout sentence."""
+    raw = _normalise_whitespace(text)
+    if not raw:
+        return ""
+
+    month_phrase = r"(?:early|mid|late)?\s*[A-Za-z]+\s+\d{4}"
+    begin_match = re.search(rf"begin(?:ning)?\s+in\s+({month_phrase})", raw, flags=re.IGNORECASE)
+    complete_match = re.search(rf"complete(?:s|d)?\s+by\s+({month_phrase})", raw, flags=re.IGNORECASE)
+    if begin_match and complete_match:
+        return f"{begin_match.group(1).strip()} - {complete_match.group(1).strip()}"
+
+    phrases = re.findall(month_phrase, raw, flags=re.IGNORECASE)
+    if not phrases:
+        return raw
+    if len(phrases) == 1:
+        return phrases[0].strip()
+    return f"{phrases[0].strip()} - {phrases[-1].strip()}"
+
+
+def extract_when_will_happen_dates(text: str) -> dict:
+    """Extract Preview/GA timing from a roadmap detail section."""
+    cleaned = _normalise_whitespace(text)
+    if not cleaned:
+        return {}
+
+    section_match = re.search(
+        r"\[When this will happen\](.*?)(?:\[[^\]]+\]|$)",
+        str(text),
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    section_text = section_match.group(1) if section_match else str(text)
+
+    phase_dates = {}
+    for line in section_text.splitlines():
+        line_clean = _normalise_whitespace(line)
+        if not line_clean:
+            continue
+
+        phase_match = re.match(
+            r"^(?:[-*•]\s*)?(Public\s+Preview|Preview|General\s+Availability(?:\s*\([^)]+\))?|GA)\s*:\s*(.+)$",
+            line_clean,
+            flags=re.IGNORECASE,
+        )
+        if not phase_match:
+            continue
+
+        phase_name = phase_match.group(1).lower()
+        timeline = _extract_rollout_window(phase_match.group(2))
+        if not timeline:
+            continue
+
+        if "preview" in phase_name:
+            phase_dates["m365PreviewDate"] = timeline
+        elif "general availability" in phase_name or phase_name == "ga":
+            phase_dates["m365GeneralAvailabilityDate"] = timeline
+
+    return phase_dates
+
+
 def normalize_url(url: str) -> str:
     """Normalize DeltaPulse URLs for deduplication."""
     if not url:
@@ -444,6 +509,8 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365Severity": item.get("severity"),
         "m365Status": None if item.get("source") == "roadmap" else item.get("status"),
         "m365TargetDate": resolve_m365_target_date(item),
+        "m365PreviewDate": item.get("m365PreviewDate"),
+        "m365GeneralAvailabilityDate": item.get("m365GeneralAvailabilityDate"),
         "m365IsMajorChange": item.get("isMajorChange", False),
         "lifecycle": classify_m365_lifecycle(item),
     }
@@ -530,6 +597,11 @@ def fetch_m365_items(session: requests.Session) -> list:
                 if field in roadmap_details and (field not in item or item.get(field) in (None, "", [])):
                     item[field] = roadmap_details.get(field)
 
+            extracted_dates = extract_when_will_happen_dates(roadmap_details.get("description", ""))
+            for key, value in extracted_dates.items():
+                if value and (key not in item or item.get(key) in (None, "", [])):
+                    item[key] = value
+
         metadata = call_mcp_fetch_metadata(session, item_id)
         if not metadata:
             continue
@@ -554,6 +626,12 @@ def fetch_m365_items(session: requests.Session) -> list:
         ):
             if field in metadata and (field not in item or item.get(field) in (None, "", [])):
                 item[field] = metadata.get(field)
+
+        if source == "roadmap":
+            metadata_dates = extract_when_will_happen_dates(metadata.get("description", ""))
+            for key, value in metadata_dates.items():
+                if value and (key not in item or item.get(key) in (None, "", [])):
+                    item[key] = value
     
     print(f"  - Total raw items: {len(all_items)}")
     return all_items
