@@ -871,11 +871,28 @@
       }
     });
 
-    // Category bar
-    var catHtml =
-      '<div class="category-bar" id="category-bar">' +
-      '<button class="category-pill active" data-category="all">All <span class="count">' +
-      sourceArticles.length + "</span></button>";
+    var fragment = document.createDocumentFragment();
+    var categoryBar = document.createElement("div");
+    categoryBar.className = "category-bar";
+    categoryBar.id = "category-bar";
+
+    function createCategoryPill(categoryValue, label, count) {
+      var button = document.createElement("button");
+      button.className = "category-pill";
+      button.dataset.category = categoryValue;
+      button.appendChild(document.createTextNode(label + " "));
+
+      var countEl = document.createElement("span");
+      countEl.className = "count";
+      countEl.textContent = String(count);
+      button.appendChild(countEl);
+
+      return button;
+    }
+
+    var allPill = createCategoryPill("all", "All", sourceArticles.length);
+    allPill.classList.add("active");
+    categoryBar.appendChild(allPill);
 
     Object.keys(CATEGORIES).forEach(function (catName) {
       var catBlogs = CATEGORIES[catName];
@@ -885,18 +902,23 @@
       });
       catCount += azureUpdatesCategoryCounts[catName] || 0;
       if (catCount > 0) {
-        catHtml +=
-          '<button class="category-pill" data-category="' + catName + '">' +
-          catName + ' <span class="count">' + catCount + "</span></button>";
+        categoryBar.appendChild(createCategoryPill(catName, catName, catCount));
       }
     });
-    catHtml += "</div>";
+    fragment.appendChild(categoryBar);
 
     // Blog pills (shown below categories)
-    var blogHtml = '<div class="blog-pills-row is-hidden" id="blog-pills-row">';
-    blogHtml += '<div class="filter-pills" id="blog-filter-pills"></div></div>';
+    var blogPillsRow = document.createElement("div");
+    blogPillsRow.className = "blog-pills-row is-hidden";
+    blogPillsRow.id = "blog-pills-row";
 
-    filterPills.innerHTML = catHtml + blogHtml;
+    var blogFilterPills = document.createElement("div");
+    blogFilterPills.className = "filter-pills";
+    blogFilterPills.id = "blog-filter-pills";
+    blogPillsRow.appendChild(blogFilterPills);
+    fragment.appendChild(blogPillsRow);
+
+    filterPills.replaceChildren(fragment);
     syncActiveCategoryPill();
   }
 
@@ -912,21 +934,37 @@
       lifecycleCounts[key]++;
     });
 
-    var catHtml =
-      '<div class="category-bar" id="category-bar">' +
-      '<button class="category-pill active" data-category="all">All <span class="count">' +
-      sourceArticles.length + "</span></button>";
+    var fragment = document.createDocumentFragment();
+    var categoryBar = document.createElement("div");
+    categoryBar.className = "category-bar";
+    categoryBar.id = "category-bar";
+
+    function createCategoryPill(categoryValue, label, count) {
+      var button = document.createElement("button");
+      button.className = "category-pill";
+      button.dataset.category = categoryValue;
+      button.appendChild(document.createTextNode(label + " "));
+
+      var countEl = document.createElement("span");
+      countEl.className = "count";
+      countEl.textContent = String(count);
+      button.appendChild(countEl);
+
+      return button;
+    }
+
+    var allPill = createCategoryPill("all", "All", sourceArticles.length);
+    allPill.classList.add("active");
+    categoryBar.appendChild(allPill);
 
     AZURE_LIFECYCLE_FILTER_ORDER.forEach(function (key) {
       var count = lifecycleCounts[key] || 0;
       if (!count) return;
-      catHtml +=
-        '<button class="category-pill" data-category="' + key + '">' +
-        AZURE_LIFECYCLE_FILTER_LABELS[key] + ' <span class="count">' + count + "</span></button>";
+      categoryBar.appendChild(createCategoryPill(key, AZURE_LIFECYCLE_FILTER_LABELS[key], count));
     });
 
-    catHtml += "</div>";
-    filterPills.innerHTML = catHtml;
+    fragment.appendChild(categoryBar);
+    filterPills.replaceChildren(fragment);
     syncActiveCategoryPill();
   }
 
@@ -938,23 +976,38 @@
       m365CategoryCounts[category] = (m365CategoryCounts[category] || 0) + 1;
     });
 
-    // Category bar for M365
-    var catHtml =
-      '<div class="category-bar" id="category-bar">' +
-      '<button class="category-pill active" data-category="all">All <span class="count">' +
-      sourceArticles.length + "</span></button>";
+    var fragment = document.createDocumentFragment();
+    var categoryBar = document.createElement("div");
+    categoryBar.className = "category-bar";
+    categoryBar.id = "category-bar";
+
+    function createCategoryPill(categoryValue, label, count) {
+      var button = document.createElement("button");
+      button.className = "category-pill";
+      button.dataset.category = categoryValue;
+      button.appendChild(document.createTextNode(label + " "));
+
+      var countEl = document.createElement("span");
+      countEl.className = "count";
+      countEl.textContent = String(count);
+      button.appendChild(countEl);
+
+      return button;
+    }
+
+    var allPill = createCategoryPill("all", "All", sourceArticles.length);
+    allPill.classList.add("active");
+    categoryBar.appendChild(allPill);
 
     Object.keys(m365CategoryCounts).sort().forEach(function (catName) {
       var catCount = m365CategoryCounts[catName];
       if (catCount > 0) {
-        catHtml +=
-          '<button class="category-pill" data-category="' + catName + '">' +
-          catName + ' <span class="count">' + catCount + "</span></button>";
+        categoryBar.appendChild(createCategoryPill(catName, catName, catCount));
       }
     });
-    catHtml += "</div>";
 
-    filterPills.innerHTML = catHtml;
+    fragment.appendChild(categoryBar);
+    filterPills.replaceChildren(fragment);
     syncActiveCategoryPill();
   }
 
