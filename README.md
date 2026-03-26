@@ -187,11 +187,30 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## Security Notes
 
-- The site uses a meta Content Security Policy and referrer policy because GitHub Pages does not provide a native way to set custom response headers for this static site.
+- GitHub Pages does not provide a native way to set custom response headers for this static site. Anti-clickjacking response headers must therefore be set in a proxy/CDN layer (for example Cloudflare or Azure Front Door) for `cloudplatformfeed.kailice.uk` and applied to `/*` (all routes, including static assets).
+- Template rule payloads are provided in `cloudflare-response-headers.json` (Cloudflare) and `azure-frontdoor-response-headers.json` (Azure Front Door), both setting:
+  - `Content-Security-Policy: frame-ancestors 'none'`
+  - `X-Frame-Options: DENY`
+- Step-by-step dashboard guidance is documented in `CLOUDFLARE_HEADERS.md`.
+- The page still includes a meta Content Security Policy and referrer policy for in-document browser policy controls.
 - Microsoft Clarity telemetry is integrated smoothly, with the CSP explicitly tuned to securely permit its dynamic load-balancer endpoints (`*.clarity.ms`) and required inline execution.
 - AI summary failures are logged in CI, but public feed data includes only safe summary reason codes.
 - Each successful fetch now writes `data/checksums.json` after `data/feeds.json` and `data/feed.xml` are finalised. The file records the artifact path, `sha256` algorithm, digest, and generation timestamp for both published outputs.
 - During incident review or debugging, compare the published artifacts against `data/checksums.json` to confirm whether a suspicious file matches the last known generated content, or to spot unexpected post-generation changes.
+
+### Verify anti-clickjacking response headers
+
+After applying the Cloudflare or Azure Front Door response header rule:
+
+```bash
+curl -I https://cloudplatformfeed.kailice.uk
+curl -I https://cloudplatformfeed.kailice.uk/css/styles.css
+```
+
+Confirm that at least one anti-clickjacking response header is present (prefer both):
+
+- `Content-Security-Policy: frame-ancestors 'none'`
+- `X-Frame-Options: DENY`
 
 ## Acknowledgements
 

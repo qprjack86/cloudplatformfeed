@@ -1,0 +1,51 @@
+{
+  "name": "anti-clickjacking-response-headers",
+  "properties": {
+    "order": 1,
+    "conditions": [
+      {
+        "name": "HostName",
+        "parameters": {
+          "operator": "Equal",
+          "matchValues": [
+            "cloudplatformfeed.kailice.uk"
+          ],
+          "negateCondition": false,
+          "transforms": []
+        }
+      },
+      {
+        "name": "UrlPath",
+        "parameters": {
+          "operator": "BeginsWith",
+          "matchValues": [
+            "/"
+          ],
+          "negateCondition": false,
+          "transforms": []
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "ModifyResponseHeader",
+        "parameters": {
+          "headerAction": "Overwrite",
+          "headerName": "Content-Security-Policy",
+          "value": "frame-ancestors 'none'",
+          "typeName": "DeliveryRuleHeaderActionParameters"
+        }
+      },
+      {
+        "name": "ModifyResponseHeader",
+        "parameters": {
+          "headerAction": "Overwrite",
+          "headerName": "X-Frame-Options",
+          "value": "DENY",
+          "typeName": "DeliveryRuleHeaderActionParameters"
+        }
+      }
+    ],
+    "matchProcessingBehavior": "Stop"
+  }
+}
