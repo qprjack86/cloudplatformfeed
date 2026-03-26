@@ -1,0 +1,23 @@
+{
+  "description": "cloudplatformfeed.kailice.uk anti-clickjacking response headers",
+  "target": "http_response_headers_transform",
+  "routes": [
+    "/*"
+  ],
+  "rules": [
+    {
+      "ref": "anti-clickjacking-csp",
+      "description": "Set CSP frame-ancestors for all HTML and static asset responses",
+      "action": "set",
+      "header": "Content-Security-Policy",
+      "value": "frame-ancestors 'none'"
+    },
+    {
+      "ref": "anti-clickjacking-xfo",
+      "description": "Set X-Frame-Options for compatibility with legacy clients",
+      "action": "set",
+      "header": "X-Frame-Options",
+      "value": "DENY"
+    }
+  ]
+}
