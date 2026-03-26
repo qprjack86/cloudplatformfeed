@@ -1,7 +1,156 @@
 {
-  "lastUpdated": "2026-03-25T16:00:45.168956+00:00",
-  "totalArticles": 232,
+  "lastUpdated": "2026-03-26T11:44:05.883695+00:00",
+  "totalArticles": 240,
   "articles": [
+    {
+      "title": "Guardrails for Generative AI: Securing Developer Workflows",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/guardrails-for-generative-ai-securing-developer-workflows/ba-p/4505801",
+      "published": "2026-03-26T08:58:22+00:00",
+      "summary": "Generative AI is revolutionizing software development that accelerates delivery but introduces compliance and security risks if unchecked. Tools like GitHub Copilot empower developers to write code faster, automate repetitive tasks, and even generate tests and documentation. But speed without...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "siddhigupta"
+    },
+    {
+      "title": "Shared Agent Context: How We Are Tackling Partner Agent Collaboration",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/shared-agent-context-how-we-are-tackling-partner-agent/ba-p/4505714",
+      "published": "2026-03-26T00:34:52+00:00",
+      "summary": "Your Azure SRE agent detects a spike in error rates. It triages with cloud-native telemetry, but the root cause trail leads into a third-party observability platform your team also runs. The agent can't see that data. A second agent can, one that speaks Datadog or Dynatrace or whatever your team...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "dbandaru"
+    },
+    {
+      "title": "\"No-Ops\" Kafka Experience: Why Event Hubs is Your Default Destination for Streaming on Azure",
+      "link": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/quot-no-ops-quot-kafka-experience-why-event-hubs-is-your-default/ba-p/4481501",
+      "published": "2026-03-25T22:28:51+00:00",
+      "summary": "For many engineering teams, the promise of real-time data streaming is often overshadowed by the \"operational tax\" of maintaining the infrastructure. Managing an Apache Kafka® cluster traditionally means wrestling with broker patches, Zookeeper (or KRaft) orchestration, disk rebalancing, and the...",
+      "blog": "Messaging on Azure",
+      "blogId": "messagingonazureblog",
+      "author": "ashish-chhabria"
+    },
+    {
+      "title": "Public Preview: Blue-green agent pool upgrade in AKS",
+      "link": "https://azure.microsoft.com/en-us/updates/557862/",
+      "published": "2026-03-25T20:00:39.263224+00:00",
+      "summary": "In‑place node pool upgrades can introduce risk by applying changes directly to running environments. Blue‑green agent pool upgrades create a parallel node pool with the new configuration, allowing validation before workloads are shifted and providing a clear rollback path. This reduces upgrade risk...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Generally Available: Cosmos DB Mirroring in Microsoft Fabric with private endpoints",
+      "link": "https://azure.microsoft.com/en-us/updates/558836/",
+      "published": "2026-03-25T20:00:39.263224+00:00",
+      "summary": "We're excited to announce that private endpoint support for Azure Cosmos DB Mirroring in Microsoft Fabric is now generally available. You can now unlock powerful analytics on your operational data while keeping your enhanced network security posture intact.Now you can configure virtual network...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Take Control of Every Message: Partial Failure Handling for Service Bus Triggers in Azure Functions",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/take-control-of-every-message-partial-failure-handling-for/ba-p/4504893",
+      "published": "2026-03-25T18:06:50+00:00",
+      "summary": "The Problem: All-or-Nothing Batch Processing in Azure Service Bus Azure Service Bus is one of the most widely used messaging services for building event-driven applications on Azure. When you use Azure Functions with a Service Bus trigger in batch mode, your function receives multiple messages at...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "swapnil_nagar"
+    },
+    {
+      "title": "Public Preview: Fabric Mirroring integration for Azure Database for MySQL",
+      "link": "https://azure.microsoft.com/en-us/updates/558841/",
+      "published": "2026-03-25T17:45:33.542257+00:00",
+      "summary": "We are excited to announce the public preview of Fabric Mirroring integration for Azure Database for MySQL – Flexible Server. You can now replicate MySQL operational data into Microsoft Fabric in near real time, without building or maintaining ETL pipelines. Mirrored data lands in OneLake in Delta...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Generally Available: Online migration now uses the pgoutput plugin",
+      "link": "https://azure.microsoft.com/en-us/updates/558846/",
+      "published": "2026-03-25T17:30:45.775480+00:00",
+      "summary": "You can now leverage pgoutput for online (minimal-downtime) migrations with improved reliability and performance. By aligning with PostgreSQL’s native logical replication framework, this update improves ecosystem compatibility with modern PostgreSQL deployments and reduces dependency on legacy...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Generally Available: PostgreSQL migration service supports for Google AlloyDB into Azure Database for PostgreSQL",
+      "link": "https://azure.microsoft.com/en-us/updates/558851/",
+      "published": "2026-03-25T17:30:45.775480+00:00",
+      "summary": "We’re excited to announce that Google AlloyDB is now supported as a source for migration into Azure Database for PostgreSQL. You can migrate and consolidate PostgreSQL estates from Google AlloyDB to Azure using secure, reliable workflows designed for minimal downtime, while maintaining native...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Generally Available: PostgreSQL migration service supports compatible EDB workloads into Azure Database for PostgreSQL",
+      "link": "https://azure.microsoft.com/en-us/updates/558865/",
+      "published": "2026-03-25T17:30:45.775480+00:00",
+      "summary": "We’re excited to announce that EDB PostgreSQL is now supported as a source for migration into Azure Database for PostgreSQL. You can migrate and consolidate PostgreSQL estates from EDB Postgres Extended Server to Azure using secure, reliable workflows designed for minimal downtime, while...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Generally Available: Custom time zone support for pg_cron via cron.timezone in Azure Database for PostgreSQL",
+      "link": "https://azure.microsoft.com/en-us/updates/558870/",
+      "published": "2026-03-25T17:30:45.775480+00:00",
+      "summary": "You can now modify the cron.timezone server parameter in Azure Database for PostgreSQL. This parameter controls the time zone used by pg_cron when evaluating scheduled jobs. By configuring cron.timezone, you can ensure scheduled jobs run according to your preferred time zone rather than relying on...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Public Preview: Azure SQL Managed Instance change event streaming",
+      "link": "https://azure.microsoft.com/en-us/updates/558884/",
+      "published": "2026-03-25T17:30:45.775480+00:00",
+      "summary": "You can now stream row‑level data changes—inserts, updates, and deletes—from Azure SQL Managed Instance to Azure Event Hubs in near real time with change event streaming (CES). SQL publishes changes as transactions commit, reducing latency while minimizing operational overhead on your workload.CES...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Azure Managed Redis & Azure Databricks: Real-time Feature Serving for Low-Latency Decisions",
+      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-managed-redis-azure-databricks-real-time-feature-serving/ba-p/4503116",
+      "published": "2026-03-25T16:00:00+00:00",
+      "summary": "This blog content has been a collective collaboration between the Azure Databricks and Azure Managed Redis Product and Product Marketing teams. Executive summary Modern decisioning systems, fraud scoring, payments authorization, personalization, and step-up authentication, must return answers in...",
+      "blog": "Analytics on Azure",
+      "blogId": "analyticsonazure",
+      "author": "Jason_Pereira"
+    },
     {
       "title": "Aspire on Azure App Service is now Generally Available",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aspire-on-azure-app-service-is-now-generally-available/ba-p/4505549",
@@ -248,15 +397,6 @@
       "blog": "Oracle on Azure",
       "blogId": "oracleonazureblog",
       "author": "SparshAgrawat"
-    },
-    {
-      "title": "Take Control of Every Message: Partial Failure Handling for Service Bus Triggers in Azure Functions",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/take-control-of-every-message-partial-failure-handling-for/ba-p/4504893",
-      "published": "2026-03-24T05:34:12+00:00",
-      "summary": "The Problem: All-or-Nothing Batch Processing in Azure Service Bus Azure Service Bus is one of the most widely used messaging services for building event-driven applications on Azure. When you use Azure Functions with a Service Bus trigger in batch mode, your function receives multiple messages at...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "swapnil_nagar"
     },
     {
       "title": "SQL code analysis in VS Code: Configure rules without editing your project file",
@@ -1508,15 +1648,6 @@
       "author": "dchelupati"
     },
     {
-      "title": "Announcing general availability for the Azure SRE Agent",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-for-the-azure-sre-agent/ba-p/4500682",
-      "published": "2026-03-10T14:00:00+00:00",
-      "summary": "Today, we’re excited to announce the General Availability (GA) of Azure SRE Agent— your AI‑powered operations teammate that helps organizations improve uptime, reduce incident impact, and cut operational toil by accelerating diagnosis and automating response workflows. This GA release represents a...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "Mayunk_Jain"
-    },
-    {
       "title": "Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-reusable-custom-images-for-azure-confidential-vms-using/ba-p/4500880",
       "published": "2026-03-10T12:09:24+00:00",
@@ -2256,55 +2387,22 @@
       "blog": "Azure SDK Blog",
       "blogId": "azuresdkblog",
       "author": "Xiang Yan"
-    },
-    {
-      "title": "Introducing the next generation of SOC automation: Sentinel playbook generator",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-next-generation-of-soc-automation-sentinel/ba-p/4494438",
-      "published": "2026-02-24T00:04:46+00:00",
-      "summary": "Security teams today operate under constant pressure. They are expected to respond faster, automate more, and do so without sacrificing precision. Traditional security orchestration, automation and response (SOAR) approaches have helped, but they still rely heavily on rigid templates, limited...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "ShiranShuster"
-    },
-    {
-      "title": "Retirement: Windows Server Annual Channel (preview)",
-      "link": "https://azure.microsoft.com/en-us/updates/557224/",
-      "published": "2026-02-23T18:15:17.630857+00:00",
-      "summary": "Windows Server Annual Channel (Preview) on AKS will be retired on May 15, 2026, please transition to Long Term Servicing Channel (LTSC) by that date. We encourage you to transition to Long Term Servicing Channel (LTSC) prior to the retirement date to experience the benefits of LTSC including longer...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "retiring",
-      "azureRetirementDate": "2026-05-15"
-    },
-    {
-      "title": "Public Preview: WAF Insights for Application Gateway",
-      "link": "https://azure.microsoft.com/en-us/updates/557416/",
-      "published": "2026-02-23T16:15:47.666421+00:00",
-      "summary": "Announcing the public preview of Application Gateway WAF Insights. Azure Application Gateway WAF now offers WAF Insights, providing an interactive view of logs and metrics. WAF Insights enables quick investigation of blocked requests, analysis of attack patterns, and easy access to details like...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "in_preview",
-      "azurePreviewDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "In preview"
     }
   ],
   "summaryWindowDays": 7,
   "summaryPublishingDays": [
+    "2026-03-26",
     "2026-03-25",
     "2026-03-24",
     "2026-03-23",
     "2026-03-22",
     "2026-03-21",
-    "2026-03-20",
-    "2026-03-19"
+    "2026-03-20"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
-  "summaryArticleCount": 15,
-  "summary": "- In preview:\n  • [Public Preview: AI Agent for container networking troubleshooting](https://azure.microsoft.com/en-us/updates/557887/)\n  • [Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager](https://azure.microsoft.com/en-us/updates/557877/)\n  • [Public Preview: AKS managed GPU metrics in Azure Monitor](https://azure.microsoft.com/en-us/updates/557882/)\n  • [Public Preview: Microsoft Azure Kubernetes Application Network](https://azure.microsoft.com/en-us/updates/557922/)\n  • [Public Preview: Application routing with meshless Istio in AKS](https://azure.microsoft.com/en-us/updates/557927/)\n\n- Launched / Generally Available:\n  • [Generally Available: Container network metrics filtering for AKS](https://azure.microsoft.com/en-us/updates/557902/)\n  • [Generally Available: Container network logs in AKS](https://azure.microsoft.com/en-us/updates/557892/)\n  • [Generally Available: Azure Container Storage v2.1.0 now with Elastic SAN integration and on demand installation](https://azure.microsoft.com/en-us/updates/557912/)\n  • [Generally Available: Azure Monitor Prometheus community recommended alerts for Azure Arc-enabled Kubernetes](https://azure.microsoft.com/en-us/updates/558825/)\n  • [Aspire on Azure App Service is now Generally Available](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aspire-on-azure-app-service-is-now-generally-available/ba-p/4505549)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/en-us/updates/558086/)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/en-us/updates/557123/)\n  • [Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548497/)\n  • [Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548525/)\n  • [Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027](https://azure.microsoft.com/en-us/updates/548543/)\n\n- In development:\n  • none noted in selected window",
+  "summaryArticleCount": 12,
+  "summary": "- In preview:\n  • [Public Preview: Blue-green agent pool upgrade in AKS](https://azure.microsoft.com/en-us/updates/557862/)\n  • [Public Preview: Fabric Mirroring integration for Azure Database for MySQL](https://azure.microsoft.com/en-us/updates/558841/)\n  • [Public Preview: Azure SQL Managed Instance change event streaming](https://azure.microsoft.com/en-us/updates/558884/)\n  • [Public Preview: AI Agent for container networking troubleshooting](https://azure.microsoft.com/en-us/updates/557887/)\n  • [Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager](https://azure.microsoft.com/en-us/updates/557877/)\n\n- Launched / Generally Available:\n  • [Generally Available: Cosmos DB Mirroring in Microsoft Fabric with private endpoints](https://azure.microsoft.com/en-us/updates/558836/)\n  • [Generally Available: Online migration now uses the pgoutput plugin](https://azure.microsoft.com/en-us/updates/558846/)\n  • [Generally Available: PostgreSQL migration service supports for Google AlloyDB into Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558851/)\n  • [Generally Available: PostgreSQL migration service supports compatible EDB workloads into Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558865/)\n  • [Generally Available: Custom time zone support for pg_cron via cron.timezone in Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558870/)\n\n- Retiring:\n  • [Retirement: Azure SQL Elastic query - Shard_Map_Manager mode](https://azure.microsoft.com/en-us/updates/558086/)\n  • [Retirement: Azure Sphere will be retired on July 31, 2031](https://azure.microsoft.com/en-us/updates/557123/)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 20th March 2026",
     "url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T08:01:47.970115+00:00",
+  "generatedAt": "2026-03-26T11:44:33.185695+00:00",
   "totalArticles": 82,
   "articles": [
     {
@@ -945,23 +945,23 @@
       "_normalized_url": "roadmap:558938"
     },
     {
-      "title": "Microsoft Teams: Attendee capacity packs for Teams events",
-      "link": "https://deltapulse.app/item/558856",
+      "title": "Microsoft Copilot (Microsoft 365): Create Word documents from Copilot Notebooks",
+      "link": "https://deltapulse.app/item/558934",
       "published": "2026-03-20T22:00:36.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558856",
+      "m365Id": "558934",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
-      "m365TargetDate": "April 2026",
+      "m365TargetDate": "May 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558856"
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:558934"
     },
     {
       "title": "Microsoft Teams: Digital signage support for Teams panels",
@@ -983,23 +983,23 @@
       "_normalized_url": "roadmap:558852"
     },
     {
-      "title": "Microsoft Copilot (Microsoft 365): Create Word documents from Copilot Notebooks",
-      "link": "https://deltapulse.app/item/558934",
+      "title": "Microsoft Teams: Attendee capacity packs for Teams events",
+      "link": "https://deltapulse.app/item/558856",
       "published": "2026-03-20T22:00:36.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558934",
+      "m365Id": "558856",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
-      "m365TargetDate": "May 2026",
+      "m365TargetDate": "April 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:558934"
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:558856"
     },
     {
       "title": "Microsoft Purview: Data Lifecycle Management - Power Automate integration with records management",
@@ -2321,23 +2321,23 @@
         "_normalized_url": "roadmap:558938"
       },
       {
-        "title": "Microsoft Teams: Attendee capacity packs for Teams events",
-        "link": "https://deltapulse.app/item/558856",
+        "title": "Microsoft Copilot (Microsoft 365): Create Word documents from Copilot Notebooks",
+        "link": "https://deltapulse.app/item/558934",
         "published": "2026-03-20T22:00:36.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558856",
+        "m365Id": "558934",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "April 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558856"
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558934"
       },
       {
         "title": "Microsoft Teams: Digital signage support for Teams panels",
@@ -2359,23 +2359,23 @@
         "_normalized_url": "roadmap:558852"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Create Word documents from Copilot Notebooks",
-        "link": "https://deltapulse.app/item/558934",
+        "title": "Microsoft Teams: Attendee capacity packs for Teams events",
+        "link": "https://deltapulse.app/item/558856",
         "published": "2026-03-20T22:00:36.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558934",
+        "m365Id": "558856",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "May 2026",
+        "m365TargetDate": "April 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558934"
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558856"
       },
       {
         "title": "Microsoft Purview: Data Lifecycle Management - Power Automate integration with records management",
@@ -4342,25 +4342,6 @@
         "_normalized_url": "message_center:MC1257308"
       },
       {
-        "title": "Microsoft Teams: Attendee capacity packs for Teams events",
-        "link": "https://deltapulse.app/item/558856",
-        "published": "2026-03-20T22:00:36.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558856",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558856"
-      },
-      {
         "title": "Microsoft Teams: Digital signage support for Teams panels",
         "link": "https://deltapulse.app/item/558852",
         "published": "2026-03-20T22:00:36.000Z",
@@ -4378,6 +4359,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558852"
+      },
+      {
+        "title": "Microsoft Teams: Attendee capacity packs for Teams events",
+        "link": "https://deltapulse.app/item/558856",
+        "published": "2026-03-20T22:00:36.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558856",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558856"
       },
       {
         "title": "Microsoft Purview: Data Lifecycle Management - Power Automate integration with records management",
