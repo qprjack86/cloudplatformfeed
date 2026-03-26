@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-26T11:54:55.211109+00:00",
-  "totalArticles": 240,
+  "lastUpdated": "2026-03-26T16:03:17.338671+00:00",
+  "totalArticles": 241,
   "articles": [
+    {
+      "title": "Assess Azure DDoS Protection Status Across Your Environment",
+      "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/assess-azure-ddos-protection-status-across-your-environment/ba-p/4505969",
+      "published": "2026-03-26T15:36:26+00:00",
+      "summary": "Introduction Distributed Denial of Service (DDoS) attacks continue to be one of the most prevalent threats facing organizations with internet-facing workloads. Azure DDoS Protection provides cloud-scale protection against L3/4 volumetric attacks, helping ensure your applications remain available...",
+      "blog": "Azure Network Security",
+      "blogId": "azurenetworksecurityblog",
+      "author": "SaleemBseeu"
+    },
     {
       "title": "Guardrails for Generative AI: Securing Developer Workflows",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/guardrails-for-generative-ai-securing-developer-workflows/ba-p/4505801",
@@ -10,6 +19,15 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "siddhigupta"
+    },
+    {
+      "title": "Building Search-Enabled Agents with Azure AI Foundry and Semantic Kernel and A2A",
+      "link": "https://devblogs.microsoft.com/ise/building-bing-search-enabled-agent-with-microsoft-foundry-and-semantic-kernel/",
+      "published": "2026-03-26T07:00:00+00:00",
+      "summary": "A step-by-step guide to enable search in the semantic kernel agents using bing grounding in Azure Foundry AI Agent using A2A. The post Building Search-Enabled Agents with Azure AI Foundry and Semantic Kernel and A2A appeared first on ISE Developer Blog.",
+      "blog": "ISE Developer Blog",
+      "blogId": "iseblog",
+      "author": "Munish Malhotra"
     },
     {
       "title": "Shared Agent Context: How We Are Tackling Partner Agent Collaboration",
@@ -2378,15 +2396,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "eyalh"
-    },
-    {
-      "title": "Improved Python (PyPi/uvx) support in Azure MCP Server",
-      "link": "https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-better-python-support/",
-      "published": "2026-02-24T16:00:21+00:00",
-      "summary": "Azure MCP Server now offers first-class Python support via PyPI and uvx, making it easier than ever for Python developers to integrate Azure into their agentic workflows. The post Improved Python (PyPi/uvx) support in Azure MCP Server appeared first on Azure SDK Blog.",
-      "blog": "Azure SDK Blog",
-      "blogId": "azuresdkblog",
-      "author": "Xiang Yan"
     }
   ],
   "summaryWindowDays": 7,

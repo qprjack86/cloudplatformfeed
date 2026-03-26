@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-26T11:55:16.509246+00:00",
-  "totalArticles": 82,
+  "generatedAt": "2026-03-26T16:04:30.906538+00:00",
+  "totalArticles": 80,
   "articles": [
     {
       "title": "Notice: Security Copilot will be included as part of your Microsoft 365 E5 plan soon",
@@ -1237,49 +1237,6 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1256301"
-    },
-    {
-      "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
-      "link": "https://deltapulse.app/item/MC1256117",
-      "published": "2026-03-19T15:28:26.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Copilot (Microsoft 365)",
-      "m365AllServices": [
-        "Microsoft Copilot (Microsoft 365)"
-      ],
-      "m365Id": "MC1256117",
-      "m365Source": "message_center",
-      "m365Category": "planForChange",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1256117"
-    },
-    {
-      "title": "Designer tools in Copilot",
-      "link": "https://deltapulse.app/item/MC1256040",
-      "published": "2026-03-19T15:16:01.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Copilot (Microsoft 365)",
-      "m365AllServices": [
-        "Microsoft Copilot (Microsoft 365)",
-        "Microsoft 365 Copilot Chat"
-      ],
-      "m365Id": "MC1256040",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "February 2026, March 2026, April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1256040"
     },
     {
       "title": "(Updated) Microsoft Viva – Copilot Analytics: “All” licensed user page added to the Copilot Dashboard",
@@ -2792,49 +2749,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1259418"
-      },
-      {
-        "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
-        "link": "https://deltapulse.app/item/MC1256117",
-        "published": "2026-03-19T15:28:26.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Microsoft 365)",
-        "m365AllServices": [
-          "Microsoft Copilot (Microsoft 365)"
-        ],
-        "m365Id": "MC1256117",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1256117"
-      },
-      {
-        "title": "Designer tools in Copilot",
-        "link": "https://deltapulse.app/item/MC1256040",
-        "published": "2026-03-19T15:16:01.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Microsoft 365)",
-        "m365AllServices": [
-          "Microsoft Copilot (Microsoft 365)",
-          "Microsoft 365 Copilot Chat"
-        ],
-        "m365Id": "MC1256040",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "February 2026, March 2026, April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1256040"
       },
       {
         "title": "(Updated) Copilot extensibility: Microsoft 365 Copilot Declarative Agents model upgrade to GPT‑5.2",
@@ -4596,49 +4510,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1256301"
-      },
-      {
-        "title": "Frontier Admin Control: Single enrollment across all apps, platforms, and agents",
-        "link": "https://deltapulse.app/item/MC1256117",
-        "published": "2026-03-19T15:28:26.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Microsoft 365)",
-        "m365AllServices": [
-          "Microsoft Copilot (Microsoft 365)"
-        ],
-        "m365Id": "MC1256117",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1256117"
-      },
-      {
-        "title": "Designer tools in Copilot",
-        "link": "https://deltapulse.app/item/MC1256040",
-        "published": "2026-03-19T15:16:01.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Microsoft 365)",
-        "m365AllServices": [
-          "Microsoft Copilot (Microsoft 365)",
-          "Microsoft 365 Copilot Chat"
-        ],
-        "m365Id": "MC1256040",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "February 2026, March 2026, April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1256040"
       },
       {
         "title": "(Updated) Microsoft Viva – Copilot Analytics: “All” licensed user page added to the Copilot Dashboard",
