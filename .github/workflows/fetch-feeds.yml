@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@319994f95fa847cf3fb3cd3dbe89f6dcde9f178f # v1
@@ -64,8 +66,20 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            branch_name="${GITHUB_REF_NAME:-main}"
             git commit -m "📰 Update Azure blog feeds and M365 data - $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
+            git pull --rebase origin "$branch_name"
+
+            push_attempt=1
+            max_attempts=3
+            until git push origin "HEAD:$branch_name"; do
+              if [ "$push_attempt" -ge "$max_attempts" ]; then
+                echo "::error::Push failed after ${max_attempts} attempts due to concurrent updates."
+                exit 1
+              fi
+              push_attempt=$((push_attempt + 1))
+              git pull --rebase origin "$branch_name"
+            done
             committed=true
             commit_sha="$(git rev-parse HEAD)"
           fi
