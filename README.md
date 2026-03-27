@@ -9,6 +9,7 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 
 - 📰 **50+ sources** — Azure blogs, Microsoft 365 blogs, Azure Updates, DevOps, Security, Developer Tools, Data & AI, and more
 - 🔄 **Microsoft 365 integration** — Fetches and displays Microsoft 365 Roadmap and Message Center updates alongside Azure news, with product categorisation and lifecycle status
+- 🗓️ **Azure retirement calendar** — Highlights upcoming Azure retirements/deprecations from Azure Updates plus aztty RSS enrichment with duplicate filtering
 - 🎬 **Latest update videos** — Shows the latest Azure and Microsoft 365 update videos in the UI
 - 🤖 **AI-generated summaries** — Summaries for both Azure and M365 feeds (if configured)
 - 🔍 **Search & filter** — Find articles by keyword, blog category, product area, or date range

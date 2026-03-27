@@ -106,6 +106,8 @@ TC_RSS_URL = (
 AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
 AZURE_UPDATES_FEED = "https://www.microsoft.com/releasecommunications/api/v2/azure/rss"
 AZURE_UPDATES_API = "https://www.microsoft.com/releasecommunications/api/v2/azure"
+AZTTY_DEPRECATIONS_FEED = "https://aztty.azurewebsites.net/rss/deprecations"
+AZTTY_UPDATES_FEED = "https://aztty.azurewebsites.net/rss/updates"
 YOUTUBE_RSS_BASE = "https://www.youtube.com/feeds/videos.xml"
 SAVILL_VIDEO_SEED_URL = "https://www.youtube.com/watch?v=17uHDPjdkto"
 SUMMARY_WINDOW_DAYS = 7
@@ -225,6 +227,8 @@ def build_allowed_feed_hosts():
         AKS_BLOG_FEED,
         AZURE_UPDATES_FEED,
         AZURE_UPDATES_API,
+        AZTTY_DEPRECATIONS_FEED,
+        AZTTY_UPDATES_FEED,
         YOUTUBE_RSS_BASE,
         SAVILL_VIDEO_SEED_URL,
     ]
@@ -1210,6 +1214,210 @@ def fetch_azure_updates_feed():
         return []
 
 
+def _classify_aztty_lifecycle(title_raw, summary_raw):
+    """Infer lifecycle from aztty deprecations/updates title and summary text."""
+    text = f"{title_raw or ''} {summary_raw or ''}".lower()
+    if re.search(r"retir|deprecat|sunset|end of support|end of life|eol", text):
+        return "retiring"
+    if re.search(r"in development|coming soon|develop", text):
+        return "in_development"
+    if re.search(r"preview", text):
+        return "in_preview"
+    if re.search(r"launch|generally available|\bga\b|now available|available", text):
+        return "launched_ga"
+    return None
+
+
+def fetch_aztty_feed(feed_url, blog_name, blog_id, announcement_type):
+    """Fetch aztty RSS feed entries and normalize to common article schema."""
+    articles = []
+    print(f"Fetching: {blog_name}...")
+    feed = fetch_feed(feed_url)
+
+    if feed.bozo and not feed.entries:
+        print(f"  Warning: Could not parse {blog_name}")
+        return articles
+
+    for entry in feed.entries:
+        title = clean_html(entry.get("title", "Untitled"))
+        summary_full = clean_html(entry.get("summary", ""))
+        lifecycle = _classify_aztty_lifecycle(title, summary_full)
+        article = {
+            "title": title,
+            "link": entry.get("link", ""),
+            "published": parse_date(entry),
+            "summary": truncate(summary_full),
+            "blog": blog_name,
+            "blogId": blog_id,
+            "author": entry.get("author", "Microsoft"),
+            "announcementType": announcement_type,
+        }
+        if lifecycle:
+            article["lifecycle"] = lifecycle
+        if lifecycle == "retiring":
+            retirement_date = _extract_azure_retirement_date(title, summary_full)
+            if retirement_date:
+                article["azureRetirementDate"] = retirement_date
+        articles.append(article)
+
+    print(f"  Found {len(articles)} RSS articles")
+    return articles
+
+
+def fetch_aztty_announcements():
+    """Fetch deprecation and update announcements from aztty RSS feeds."""
+    articles = []
+    try:
+        articles.extend(
+            fetch_aztty_feed(
+                AZTTY_DEPRECATIONS_FEED,
+                "Azure Deprecations (aztty)",
+                "azuredeprecations",
+                "deprecation",
+            )
+        )
+    except Exception as e:
+        print(f"  Error fetching aztty deprecations feed: {e}")
+
+    try:
+        articles.extend(
+            fetch_aztty_feed(
+                AZTTY_UPDATES_FEED,
+                "Azure Updates (aztty)",
+                "azttyupdates",
+                "update",
+            )
+        )
+    except Exception as e:
+        print(f"  Error fetching aztty updates feed: {e}")
+
+    return articles
+
+
+def _parse_retirement_calendar_sort_date(value):
+    """Parse YYYY-MM or YYYY-MM-DD values into a datetime for sorting/calendar use."""
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    match_day = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", raw)
+    if match_day:
+        return datetime(
+            int(match_day.group(1)),
+            int(match_day.group(2)),
+            int(match_day.group(3)),
+            tzinfo=timezone.utc,
+        )
+    match_month = re.match(r"^(\d{4})-(\d{2})$", raw)
+    if match_month:
+        return datetime(
+            int(match_month.group(1)),
+            int(match_month.group(2)),
+            1,
+            tzinfo=timezone.utc,
+        )
+    return None
+
+
+def _normalize_calendar_title_for_dedupe(title):
+    """Normalize retirement titles so the same announcement across sources dedupes."""
+    value = clean_html(title or "").strip()
+    if not value:
+        return ""
+    value = re.sub(r"^\s*(retirement|deprecation|update)\s*:\s*", "", value, flags=re.IGNORECASE)
+    return _normalize_for_match(value)
+
+
+def _display_calendar_title(title):
+    """Normalize display titles by removing repetitive lead-in prefixes."""
+    value = clean_html(title or "").strip()
+    if not value:
+        return "Untitled"
+    value = re.sub(r"^\s*(retirement|deprecation|update)\s*:\s*", "", value, flags=re.IGNORECASE)
+    return value.strip() or "Untitled"
+
+
+def build_azure_retirement_calendar(articles, max_items=120):
+    """Build a deduplicated, date-sorted list of upcoming retirement announcements."""
+    today = datetime.now(timezone.utc).date()
+    events_by_key = {}
+
+    for article in articles:
+        retirement_date = article.get("azureRetirementDate")
+        if not retirement_date:
+            continue
+
+        sort_dt = _parse_retirement_calendar_sort_date(retirement_date)
+        if not sort_dt:
+            continue
+
+        if sort_dt.date() < today:
+            continue
+
+        title = article.get("title", "Untitled")
+        link = article.get("link", "")
+        dedupe_key = (
+            _normalize_calendar_title_for_dedupe(title),
+            retirement_date,
+        )
+        if not dedupe_key[0]:
+            dedupe_key = (_normalize_for_match(title), retirement_date)
+
+        precision = "day" if re.match(r"^\d{4}-\d{2}-\d{2}$", retirement_date) else "month"
+        source_label = article.get("blog", "") or article.get("blogId", "") or "Source"
+        source_report = {
+            "blog": article.get("blog", ""),
+            "blogId": article.get("blogId", ""),
+            "announcementType": article.get("announcementType", ""),
+            "link": link,
+        }
+
+        existing = events_by_key.get(dedupe_key)
+        if existing:
+            existing["sourceReports"].append(source_report)
+            if article.get("published", "") > existing.get("published", ""):
+                existing["published"] = article.get("published", "")
+            if existing.get("blogId") != "azureupdates" and article.get("blogId") == "azureupdates":
+                existing["blog"] = article.get("blog", "")
+                existing["blogId"] = article.get("blogId", "")
+                existing["announcementType"] = article.get("announcementType", "")
+                existing["link"] = link or existing.get("link", "")
+            elif not existing.get("link") and link:
+                existing["link"] = link
+            existing["sources"] = sorted(
+                {
+                    src for src in existing.get("sources", []) + [source_label]
+                    if src
+                }
+            )
+            continue
+
+        events_by_key[dedupe_key] = {
+            "title": _display_calendar_title(title),
+            "link": link,
+            "retirementDate": retirement_date,
+            "datePrecision": precision,
+            "published": article.get("published", ""),
+            "blog": article.get("blog", ""),
+            "blogId": article.get("blogId", ""),
+            "announcementType": article.get("announcementType", ""),
+            "sources": [source_label] if source_label else [],
+            "sourceReports": [source_report],
+        }
+
+    events = list(events_by_key.values())
+    for event in events:
+        event["sourceCount"] = len(event.get("sourceReports", []))
+
+    events.sort(
+        key=lambda event: (
+            _parse_retirement_calendar_sort_date(event.get("retirementDate"))
+            or datetime.max.replace(tzinfo=timezone.utc),
+            event.get("title", "").lower(),
+        )
+    )
+    return events[:max_items]
+
+
 def generate_rss_feed(articles):
     """Generate an RSS feed XML file from the aggregated articles."""
     from xml.etree.ElementTree import Element, SubElement, tostring
@@ -1515,6 +1723,7 @@ def main():
     all_articles.extend(fetch_aks_blog())
     all_articles.extend(fetch_devblogs_feeds())
     all_articles.extend(fetch_azure_updates_feed())
+    all_articles.extend(fetch_aztty_announcements())
     raw_article_count = len(all_articles)
 
     # Fetch Savill video (independent of article feeds)
@@ -1525,6 +1734,7 @@ def main():
 
     # Remove duplicates and discard articles older than 30 days
     unique_articles = dedupe_articles(all_articles)
+    retirement_calendar = build_azure_retirement_calendar(unique_articles)
 
     discarded = len(all_articles) - len(unique_articles)
     if discarded:
@@ -1564,6 +1774,7 @@ def main():
         "totalArticles": len(unique_articles),
         "articles": unique_articles,
         "summaryWindowDays": summary_payload.get("windowDays", SUMMARY_WINDOW_DAYS),
+        "azureRetirementCalendar": retirement_calendar,
     }
     if summary_payload.get("publishingDays"):
         data["summaryPublishingDays"] = summary_payload["publishingDays"]
