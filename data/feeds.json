@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-27T11:46:44.000622+00:00",
-  "totalArticles": 243,
+  "lastUpdated": "2026-03-27T15:42:31.597095+00:00",
+  "totalArticles": 242,
   "articles": [
     {
       "title": "Building the agentic future together at JDConf 2026",
@@ -2409,15 +2409,6 @@
       "blog": "Azure SDK Blog",
       "blogId": "azuresdkblog",
       "author": "PuiChee (PC) Chan"
-    },
-    {
-      "title": "Stop Writing Plumbing! Use the New Logic Apps MCP Server Wizard",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/stop-writing-plumbing-use-the-new-logic-apps-mcp-server-wizard/ba-p/4496702",
-      "published": "2026-02-25T14:19:26+00:00",
-      "summary": "As part of our continued investment in making Logic Apps a first‑class platform for providing AI agents with connectivity, we’ve introduced the new Logic Apps MCP server configuration experience—a guided, in‑portal workflow that lets you turn any existing Standard logic app into a fully functional...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "KentWeareMSFT"
     }
   ],
   "summaryWindowDays": 7,
@@ -2435,9 +2426,9 @@
   "summaryArticleCount": 10,
   "summary": "- In preview:\n  • [Public Preview: Blue-green agent pool upgrade in AKS](https://azure.microsoft.com/en-us/updates/557862/)\n  • [Public Preview: Fabric Mirroring integration for Azure Database for MySQL](https://azure.microsoft.com/en-us/updates/558841/)\n  • [Public Preview: Azure SQL Managed Instance change event streaming](https://azure.microsoft.com/en-us/updates/558884/)\n  • [Public Preview: AI Agent for container networking troubleshooting](https://azure.microsoft.com/en-us/updates/557887/)\n  • [Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager](https://azure.microsoft.com/en-us/updates/557877/)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure SQL updates for late-March 2026](https://azure.microsoft.com/en-us/updates/558879/)\n  • [Generally Available: Cosmos DB Mirroring in Microsoft Fabric with private endpoints](https://azure.microsoft.com/en-us/updates/558836/)\n  • [Generally Available: Online migration now uses the pgoutput plugin](https://azure.microsoft.com/en-us/updates/558846/)\n  • [Generally Available: PostgreSQL migration service supports for Google AlloyDB into Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558851/)\n  • [Generally Available: PostgreSQL migration service supports compatible EDB workloads into Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558865/)\n\n- Retiring:\n  • none noted in selected window\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
-    "title": "Azure Update 20th March 2026",
-    "url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",
-    "published": "2026-03-20T16:05:24+00:00",
-    "thumbnail": "https://i3.ytimg.com/vi/jkpcFAYJjvM/hqdefault.jpg"
+    "title": "Azure Update 27th March 2026",
+    "url": "https://www.youtube.com/watch?v=rz-7PWle174",
+    "published": "2026-03-27T14:28:39+00:00",
+    "thumbnail": "https://i3.ytimg.com/vi/rz-7PWle174/hqdefault.jpg"
   }
 }
