@@ -1059,23 +1059,6 @@ footer a:hover {
   color: var(--text-secondary);
 }
 
-.retirement-calendar-empty {
-  font-size: 0.84rem;
-  color: var(--text-secondary);
-}
-
-.retirement-calendar-empty p {
-  margin-bottom: 0.4rem;
-}
-
-.retirement-calendar-empty p:last-child {
-  margin-bottom: 0;
-}
-
-.retirement-calendar-empty a {
-  color: var(--primary);
-}
-
 /* ===== John Savill Video Card ===== */
 #savill-video {
   margin-bottom: 1.5rem;

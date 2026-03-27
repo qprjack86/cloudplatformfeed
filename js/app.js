@@ -563,90 +563,6 @@
     return raw;
   }
 
-  function parseRetirementCalendarSortValue(value) {
-    if (!value) return null;
-    var raw = String(value).trim();
-    if (!raw) return null;
-
-    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
-    if (dayMatch) {
-      return new Date(
-        Date.UTC(
-          Number(dayMatch[1]),
-          Number(dayMatch[2]) - 1,
-          Number(dayMatch[3])
-        )
-      );
-    }
-
-    var monthMatch = /^(\d{4})-(\d{2})$/.exec(raw);
-    if (monthMatch) {
-      return new Date(
-        Date.UTC(
-          Number(monthMatch[1]),
-          Number(monthMatch[2]) - 1,
-          1
-        )
-      );
-    }
-
-    return null;
-  }
-
-  function deriveRetirementCalendarEvents() {
-    if (!azureFeedData) return [];
-
-    if (Array.isArray(azureFeedData.azureRetirementCalendar) && azureFeedData.azureRetirementCalendar.length) {
-      return azureFeedData.azureRetirementCalendar.slice();
-    }
-
-    var seen = {};
-    var today = new Date();
-    var events = (azureFeedData.articles || [])
-      .filter(function (article) {
-        return Boolean(article && article.azureRetirementDate);
-      })
-      .map(function (article) {
-        var retirementDate = String(article.azureRetirementDate || "").trim();
-        var datePrecision = /^\d{4}-\d{2}-\d{2}$/.test(retirementDate) ? "day" : "month";
-        return {
-          title: article.title || "Untitled retirement notice",
-          link: article.link || "",
-          retirementDate: retirementDate,
-          datePrecision: datePrecision,
-          published: article.published || "",
-          blog: article.blog || "Azure Updates",
-          blogId: article.blogId || "azureupdates",
-          announcementType: article.announcementType || ""
-        };
-      })
-      .filter(function (event) {
-        var sortDate = parseRetirementCalendarSortValue(event.retirementDate);
-        if (!sortDate) return false;
-        return sortDate >= new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
-      })
-      .filter(function (event) {
-        var key = [
-          String(event.link || "").toLowerCase(),
-          String(event.title || "").toLowerCase(),
-          String(event.retirementDate || "")
-        ].join("|");
-        if (seen[key]) return false;
-        seen[key] = true;
-        return true;
-      });
-
-    events.sort(function (a, b) {
-      var aDate = parseRetirementCalendarSortValue(a.retirementDate);
-      var bDate = parseRetirementCalendarSortValue(b.retirementDate);
-      if (!aDate && !bDate) return 0;
-      if (!aDate) return 1;
-      if (!bDate) return -1;
-      return aDate - bDate;
-    });
-    return events;
-  }
-
   function renderRetirementCalendarPanel() {
     if (!retirementCalendarEl) return;
     if (currentSource !== "azure" || !azureFeedData) {
@@ -654,7 +570,13 @@
       return;
     }
 
-    var events = deriveRetirementCalendarEvents();
+    var events = Array.isArray(azureFeedData.azureRetirementCalendar)
+      ? azureFeedData.azureRetirementCalendar
+      : [];
+    if (!events.length) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
 
     var topEvents = events.slice(0, 12);
     var itemsHtml = topEvents.map(function (event) {
@@ -679,25 +601,10 @@
       );
     }).join("");
 
-    var bodyHtml = "";
-    if (itemsHtml) {
-      bodyHtml = '<ol class="retirement-calendar-list">' + itemsHtml + "</ol>";
-    } else {
-      bodyHtml =
-        '<div class="retirement-calendar-empty">' +
-          "<p>No upcoming retirement dates are currently available in the local feed snapshot.</p>" +
-          "<p>Data sources: " +
-            '<a href="https://azurecharts.com/timeboards/deprecations" target="_blank" rel="noopener noreferrer">AzureCharts timeboard</a>, ' +
-            '<a href="https://aztty.azurewebsites.net/?d=deprecations" target="_blank" rel="noopener noreferrer">aztty deprecations</a>, ' +
-            '<a href="https://aztty.azurewebsites.net/rss/deprecations" target="_blank" rel="noopener noreferrer">aztty RSS</a>' +
-          "</p>" +
-        "</div>";
-    }
-
     retirementCalendarEl.innerHTML =
       "<h2>🗓️ Azure Retirement Calendar</h2>" +
       "<p>Upcoming retirement/deprecation notices aggregated from Azure Updates and aztty feeds.</p>" +
-      bodyHtml;
+      '<ol class="retirement-calendar-list">' + itemsHtml + "</ol>";
     showElement(retirementCalendarEl);
   }
 
