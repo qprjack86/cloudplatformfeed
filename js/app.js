@@ -75,6 +75,7 @@
   var bookmarksToggle = document.getElementById("bookmarks-toggle");
   var otherBlogsToggle = document.getElementById("other-blogs-toggle");
   var aiSummaryEl = document.getElementById("ai-summary");
+  var retirementCalendarEl = document.getElementById("retirement-calendar");
   var savillVideoEl = document.getElementById("savill-video");
   var subtitleEl = document.querySelector(".subtitle");
   var tabsContainerEl = document.querySelector(".tabs-container");
@@ -535,6 +536,186 @@
     showElement(savillVideoEl);
   }
 
+  function formatRetirementCalendarDate(value, precision) {
+    if (!value) return "";
+    var raw = String(value).trim();
+    if (!raw) return "";
+
+    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
+    if (dayMatch) {
+      var dayDate = new Date(
+        Number(dayMatch[1]),
+        Number(dayMatch[2]) - 1,
+        Number(dayMatch[3])
+      );
+      return formatUkNumericDate(dayDate);
+    }
+
+    var monthMatch = /^(\d{4})-(\d{2})$/.exec(raw);
+    if (monthMatch) {
+      var monthDate = new Date(Number(monthMatch[1]), Number(monthMatch[2]) - 1, 1);
+      return formatLocalDate(monthDate, { month: "short", year: "numeric" });
+    }
+
+    if (precision === "month" || precision === "day") {
+      return raw;
+    }
+    return raw;
+  }
+
+  function parseRetirementEventDate(value) {
+    if (!value) return null;
+    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value).trim());
+    if (dayMatch) {
+      return new Date(Number(dayMatch[1]), Number(dayMatch[2]) - 1, Number(dayMatch[3]));
+    }
+    var monthMatch = /^(\d{4})-(\d{2})$/.exec(String(value).trim());
+    if (monthMatch) {
+      return new Date(Number(monthMatch[1]), Number(monthMatch[2]) - 1, 1);
+    }
+    return null;
+  }
+
+  function toRetirementDedupeTitle(title) {
+    var value = String(title || "").toLowerCase().trim();
+    value = value.replace(/^(retirement|deprecation|update)\s*:\s*/i, "");
+    value = value.replace(/[^\w\s]/g, " ");
+    value = value.replace(/\s+/g, " ").trim();
+    return value;
+  }
+
+  function renderRetirementCalendarPanel() {
+    if (!retirementCalendarEl) return;
+    if (currentSource !== "azure" || !azureFeedData) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
+
+    var events = Array.isArray(azureFeedData.azureRetirementCalendar)
+      ? azureFeedData.azureRetirementCalendar
+      : [];
+    if (!events.length) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
+
+    var dedupedByClient = {};
+    var normalizedEvents = events
+      .map(function (event) {
+        var retirementDate = String(event.retirementDate || "").trim();
+        var parsedDate = parseRetirementEventDate(retirementDate);
+        return {
+          title: event.title || "Untitled retirement notice",
+          link: event.link || "",
+          retirementDate: retirementDate,
+          datePrecision: event.datePrecision || (/^\d{4}-\d{2}-\d{2}$/.test(retirementDate) ? "day" : "month"),
+          sources: Array.isArray(event.sources) ? event.sources : [],
+          sourceCount: Number(event.sourceCount || 0),
+          parsedDate: parsedDate
+        };
+      })
+      .filter(function (event) { return Boolean(event.parsedDate); })
+      .filter(function (event) {
+        var key = toRetirementDedupeTitle(event.title) + "|" + event.retirementDate;
+        var existing = dedupedByClient[key];
+        if (!existing) {
+          dedupedByClient[key] = event;
+          return true;
+        }
+        if (!existing.link && event.link) {
+          existing.link = event.link;
+        }
+        return false;
+      })
+      .sort(function (a, b) { return a.parsedDate - b.parsedDate; })
+      .slice(0, 60);
+
+    if (!normalizedEvents.length) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
+
+    var monthGroups = {};
+    normalizedEvents.forEach(function (event) {
+      var monthKey = event.parsedDate.getFullYear() + "-" + String(event.parsedDate.getMonth() + 1).padStart(2, "0");
+      if (!monthGroups[monthKey]) monthGroups[monthKey] = [];
+      monthGroups[monthKey].push(event);
+    });
+
+    var calendarHtml = Object.keys(monthGroups).sort().map(function (monthKey) {
+      var monthEvents = monthGroups[monthKey];
+      var year = Number(monthKey.split("-")[0]);
+      var monthIndex = Number(monthKey.split("-")[1]) - 1;
+      var monthStart = new Date(year, monthIndex, 1);
+      var monthEndDay = new Date(year, monthIndex + 1, 0).getDate();
+      var firstWeekday = (monthStart.getDay() + 6) % 7; // Monday first
+      var dayEvents = {};
+      var monthOnlyEvents = [];
+
+      monthEvents.forEach(function (event) {
+        if (event.datePrecision === "month") {
+          monthOnlyEvents.push(event);
+          return;
+        }
+        var day = event.parsedDate.getDate();
+        if (!dayEvents[day]) dayEvents[day] = [];
+        dayEvents[day].push(event);
+      });
+
+      var dayCells = [];
+      for (var i = 0; i < firstWeekday; i++) {
+        dayCells.push('<div class="retirement-calendar-day is-empty"></div>');
+      }
+      for (var dayNum = 1; dayNum <= monthEndDay; dayNum++) {
+        var entries = dayEvents[dayNum] || [];
+        var entriesHtml = entries.map(function (entry) {
+          var title = entry.title || "Untitled retirement notice";
+          var sourceHint = (entry.sourceCount > 1)
+            ? ("<span class=\"retirement-source-count\">" + entry.sourceCount + " sources</span>")
+            : "";
+          if (entry.link) {
+            return '<a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' +
+              escapeHtml(title) + "</a>" + sourceHint;
+          }
+          return "<span>" + escapeHtml(title) + "</span>" + sourceHint;
+        }).join("");
+
+        dayCells.push(
+          '<div class="retirement-calendar-day' + (entries.length ? " has-events" : "") + '">' +
+            '<div class="retirement-calendar-day-num">' + dayNum + "</div>" +
+            '<div class="retirement-calendar-day-events">' + entriesHtml + "</div>" +
+          "</div>"
+        );
+      }
+
+      var monthOnlyHtml = monthOnlyEvents.map(function (entry) {
+        var sourceHint = (entry.sourceCount > 1)
+          ? ("<span class=\"retirement-source-count\">" + entry.sourceCount + " sources</span>")
+          : "";
+        if (entry.link) {
+          return '<li><a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' +
+            escapeHtml(entry.title || "Untitled retirement notice") + "</a>" + sourceHint + "</li>";
+        }
+        return "<li>" + escapeHtml(entry.title || "Untitled retirement notice") + sourceHint + "</li>";
+      }).join("");
+
+      return (
+        '<section class="retirement-calendar-month">' +
+          '<h3>' + escapeHtml(formatLocalDate(monthStart, { month: "long", year: "numeric" })) + "</h3>" +
+          '<div class="retirement-calendar-weekdays"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>' +
+          '<div class="retirement-calendar-grid">' + dayCells.join("") + "</div>" +
+          (monthOnlyHtml ? '<div class="retirement-month-only"><h4>Month-level dates</h4><ul>' + monthOnlyHtml + "</ul></div>" : "") +
+        "</section>"
+      );
+    }).join("");
+
+    retirementCalendarEl.innerHTML =
+      "<h2>🗓️ Azure Retirement Calendar</h2>" +
+      "<p>Upcoming retirement/deprecation notices aggregated from Azure Updates and aztty feeds.</p>" +
+      calendarHtml;
+    showElement(retirementCalendarEl);
+  }
+
   function renderM365VideoPanel() {
     if (!savillVideoEl) return;
 
@@ -589,6 +770,7 @@
   function refreshSourcePanels() {
     updateOtherBlogsToggleVisibility();
     renderSummaryPanel();
+    renderRetirementCalendarPanel();
     if (currentSource === "m365") {
       renderM365VideoPanel();
       return;

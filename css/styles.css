@@ -1005,6 +1005,158 @@ footer a:hover {
   color: var(--primary-dark);
 }
 
+.retirement-calendar {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.retirement-calendar h2 {
+  font-size: 1.02rem;
+  margin-bottom: 0.2rem;
+}
+
+.retirement-calendar > p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.retirement-calendar-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.retirement-calendar-item {
+  font-size: 0.86rem;
+}
+
+.retirement-calendar-item a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.retirement-calendar-item a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.retirement-calendar-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.08rem;
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+}
+
+.retirement-calendar-date {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.retirement-calendar-month {
+  margin-top: 0.8rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.7rem;
+}
+
+.retirement-calendar-month h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.retirement-calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-bottom: 0.2rem;
+}
+
+.retirement-calendar-weekdays span {
+  text-align: center;
+}
+
+.retirement-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.retirement-calendar-day {
+  min-height: 92px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.25rem 0.35rem;
+  background: var(--bg-primary);
+}
+
+.retirement-calendar-day.is-empty {
+  visibility: hidden;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+}
+
+.retirement-calendar-day.has-events {
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--border-color));
+}
+
+.retirement-calendar-day-num {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-bottom: 0.15rem;
+}
+
+.retirement-calendar-day-events {
+  font-size: 0.68rem;
+  line-height: 1.35;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.retirement-calendar-day-events a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.retirement-calendar-day-events a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.retirement-source-count {
+  display: inline-block;
+  margin-left: 0.2rem;
+  color: var(--text-tertiary);
+  font-size: 0.64rem;
+}
+
+.retirement-month-only {
+  margin-top: 0.55rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  border: 1px dashed var(--border-color);
+}
+
+.retirement-month-only h4 {
+  font-size: 0.72rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+}
+
+.retirement-month-only ul {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.74rem;
+}
+
 /* ===== John Savill Video Card ===== */
 #savill-video {
   margin-bottom: 1.5rem;
