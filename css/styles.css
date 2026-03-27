@@ -1005,6 +1005,60 @@ footer a:hover {
   color: var(--primary-dark);
 }
 
+.retirement-calendar {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.retirement-calendar h2 {
+  font-size: 1.02rem;
+  margin-bottom: 0.2rem;
+}
+
+.retirement-calendar > p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.retirement-calendar-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.retirement-calendar-item {
+  font-size: 0.86rem;
+}
+
+.retirement-calendar-item a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.retirement-calendar-item a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.retirement-calendar-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.08rem;
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+}
+
+.retirement-calendar-date {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
 /* ===== John Savill Video Card ===== */
 #savill-video {
   margin-bottom: 1.5rem;

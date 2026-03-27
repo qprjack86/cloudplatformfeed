@@ -75,6 +75,7 @@
   var bookmarksToggle = document.getElementById("bookmarks-toggle");
   var otherBlogsToggle = document.getElementById("other-blogs-toggle");
   var aiSummaryEl = document.getElementById("ai-summary");
+  var retirementCalendarEl = document.getElementById("retirement-calendar");
   var savillVideoEl = document.getElementById("savill-video");
   var subtitleEl = document.querySelector(".subtitle");
   var tabsContainerEl = document.querySelector(".tabs-container");
@@ -535,6 +536,78 @@
     showElement(savillVideoEl);
   }
 
+  function formatRetirementCalendarDate(value, precision) {
+    if (!value) return "";
+    var raw = String(value).trim();
+    if (!raw) return "";
+
+    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
+    if (dayMatch) {
+      var dayDate = new Date(
+        Number(dayMatch[1]),
+        Number(dayMatch[2]) - 1,
+        Number(dayMatch[3])
+      );
+      return formatUkNumericDate(dayDate);
+    }
+
+    var monthMatch = /^(\d{4})-(\d{2})$/.exec(raw);
+    if (monthMatch) {
+      var monthDate = new Date(Number(monthMatch[1]), Number(monthMatch[2]) - 1, 1);
+      return formatLocalDate(monthDate, { month: "short", year: "numeric" });
+    }
+
+    if (precision === "month" || precision === "day") {
+      return raw;
+    }
+    return raw;
+  }
+
+  function renderRetirementCalendarPanel() {
+    if (!retirementCalendarEl) return;
+    if (currentSource !== "azure" || !azureFeedData) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
+
+    var events = Array.isArray(azureFeedData.azureRetirementCalendar)
+      ? azureFeedData.azureRetirementCalendar
+      : [];
+    if (!events.length) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
+
+    var topEvents = events.slice(0, 12);
+    var itemsHtml = topEvents.map(function (event) {
+      var dateLabel = formatRetirementCalendarDate(
+        event.retirementDate,
+        event.datePrecision
+      );
+      var sourceLabel = event.blog || "Azure announcement";
+      var typeLabel = event.announcementType === "deprecation"
+        ? "Deprecation"
+        : "Update";
+      return (
+        '<li class="retirement-calendar-item">' +
+          '<div class="retirement-calendar-meta">' +
+            '<span class="retirement-calendar-date">📅 ' + escapeHtml(dateLabel) + "</span>" +
+            '<span class="retirement-calendar-source">' + escapeHtml(typeLabel + " · " + sourceLabel) + "</span>" +
+          "</div>" +
+          '<a href="' + escapeHtml(event.link || "#") + '" target="_blank" rel="noopener noreferrer">' +
+            escapeHtml(event.title || "Untitled retirement notice") +
+          "</a>" +
+        "</li>"
+      );
+    }).join("");
+
+    retirementCalendarEl.innerHTML =
+      "<h2>🗓️ Azure Retirement Calendar</h2>" +
+      "<p>Upcoming retirement/deprecation notices aggregated from Azure Updates and aztty feeds.</p>" +
+      '<ol class="retirement-calendar-list">' + itemsHtml + "</ol>";
+    showElement(retirementCalendarEl);
+  }
+
   function renderM365VideoPanel() {
     if (!savillVideoEl) return;
 
@@ -589,6 +662,7 @@
   function refreshSourcePanels() {
     updateOtherBlogsToggleVisibility();
     renderSummaryPanel();
+    renderRetirementCalendarPanel();
     if (currentSource === "m365") {
       renderM365VideoPanel();
       return;
