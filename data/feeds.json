@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-27T07:59:33.924307+00:00",
+  "lastUpdated": "2026-03-27T11:46:44.000622+00:00",
   "totalArticles": 243,
   "articles": [
+    {
+      "title": "Building the agentic future together at JDConf 2026",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-the-agentic-future-together-at-jdconf-2026/ba-p/4505367",
+      "published": "2026-03-27T11:00:00+00:00",
+      "summary": "JDConf 2026 is just weeks away, and I’m excited to welcome Java developers, architects, and engineering leaders from around the world for two days of learning and connection. Now in its sixth year, JDConf has become a place where the Java community compares notes on their real-world production...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "Mayunk_Jain"
+    },
     {
       "title": "Unit Testing Helm Charts with Terratest: A Pattern Guide for Type-Safe Validation",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unit-testing-helm-charts-with-terratest-a-pattern-guide-for-type/ba-p/4506165",
@@ -1722,15 +1731,6 @@
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "dchelupati"
-    },
-    {
-      "title": "Agent Hooks: Production-Grade Governance for Azure SRE Agent",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agent-hooks-production-grade-governance-for-azure-sre-agent/ba-p/4500292",
-      "published": "2026-03-10T14:08:35+00:00",
-      "summary": "Introduction Azure SRE Agent helps engineering teams automate incident response, diagnostics, and remediation tasks. But when you're giving an agent access to production systems—your databases, your Kubernetes clusters, your cloud resources—you need more than just automation. You need governance....",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "Vineela-Suri"
     },
     {
       "title": "Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery",
