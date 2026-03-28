@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T11:34:54.139256+00:00",
+  "generatedAt": "2026-03-28T15:22:19.096313+00:00",
   "totalArticles": 94,
   "articles": [
     {
@@ -465,27 +465,6 @@
       "_normalized_url": "message_center:MC1262537"
     },
     {
-      "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
-      "link": "https://deltapulse.app/item/MC1262523",
-      "published": "2026-03-26T21:06:28.443Z",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1262523",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026, June 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1262523"
-    },
-    {
       "title": "The March 2026 Windows non-security preview update is now available",
       "link": "https://deltapulse.app/item/MC1262522",
       "published": "2026-03-26T21:06:28.443Z",
@@ -505,6 +484,27 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1262522"
+    },
+    {
+      "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
+      "link": "https://deltapulse.app/item/MC1262523",
+      "published": "2026-03-26T21:06:28.443Z",
+      "source": "m365",
+      "m365Service": "Windows",
+      "m365AllServices": [
+        "Windows"
+      ],
+      "m365Id": "MC1262523",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "March 2026, June 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1262523"
     },
     {
       "title": "Microsoft Copilot Studio - Analyze user sentiment from agent conversations",
@@ -3505,27 +3505,6 @@
         "_normalized_url": "message_center:MC1262589"
       },
       {
-        "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
-        "link": "https://deltapulse.app/item/MC1262523",
-        "published": "2026-03-26T21:06:28.443Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1262523",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262523"
-      },
-      {
         "title": "The March 2026 Windows non-security preview update is now available",
         "link": "https://deltapulse.app/item/MC1262522",
         "published": "2026-03-26T21:06:28.443Z",
@@ -3545,6 +3524,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1262522"
+      },
+      {
+        "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
+        "link": "https://deltapulse.app/item/MC1262523",
+        "published": "2026-03-26T21:06:28.443Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1262523",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026, June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1262523"
       },
       {
         "title": "Notice: Security Copilot will be included as part of your Microsoft 365 E5 plan soon",
@@ -4489,27 +4489,6 @@
         "_normalized_url": "message_center:MC1262537"
       },
       {
-        "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
-        "link": "https://deltapulse.app/item/MC1262523",
-        "published": "2026-03-26T21:06:28.443Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1262523",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262523"
-      },
-      {
         "title": "The March 2026 Windows non-security preview update is now available",
         "link": "https://deltapulse.app/item/MC1262522",
         "published": "2026-03-26T21:06:28.443Z",
@@ -4529,6 +4508,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1262522"
+      },
+      {
+        "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
+        "link": "https://deltapulse.app/item/MC1262523",
+        "published": "2026-03-26T21:06:28.443Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1262523",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026, June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1262523"
       },
       {
         "title": "Microsoft Copilot Studio - Analyze user sentiment from agent conversations",
