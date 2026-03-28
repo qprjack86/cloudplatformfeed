@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-28T07:42:48.855377+00:00",
-  "totalArticles": 236,
+  "lastUpdated": "2026-03-28T11:34:24.901355+00:00",
+  "totalArticles": 234,
   "articles": [
     {
       "title": "Autonomous Self-Healing for Azure VMware Solution Private Clouds",
@@ -2321,24 +2321,6 @@
       "blog": "Azure SDK Blog",
       "blogId": "azuresdkblog",
       "author": "Ronnie Geraghty"
-    },
-    {
-      "title": "Measuring actual AI Impact for Engineering with Apache DevLake",
-      "link": "https://devblogs.microsoft.com/all-things-azure/measuring-actual-ai-impact-for-engineering-with-apache-devlake/",
-      "published": "2026-02-26T10:06:19+00:00",
-      "summary": "If you want to skip the explain and get started super quick with adoption + impact insights, use gh-devlake to deploy a GitHub Copilot impact dashboard in a few CLI commands. So! You’ve rolled out GitHub Copilot to your engineering teams. You’ve got the built-in dashboards. You know how many seats...",
-      "blog": "All Things Azure",
-      "blogId": "allthingsazure",
-      "author": "Eldrick Wega"
-    },
-    {
-      "title": "Building a Secure MCP Server with OAuth 2.1 and Azure AD: Lessons from the Field",
-      "link": "https://devblogs.microsoft.com/ise/aca-secure-mcp-server-oauth21-azure-ad/",
-      "published": "2026-02-26T08:00:00+00:00",
-      "summary": "How we built a production-ready MCP server with OAuth 2.1 authentication and On-Behalf-Of flow for Microsoft Graph, navigating a rapidly evolving specification. The post Building a Secure MCP Server with OAuth 2.1 and Azure AD: Lessons from the Field appeared first on ISE Developer Blog.",
-      "blog": "ISE Developer Blog",
-      "blogId": "iseblog",
-      "author": "Juan Burckhardt"
     }
   ],
   "summaryWindowDays": 7,
