@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-28T15:22:19.096313+00:00",
-  "totalArticles": 94,
+  "generatedAt": "2026-03-29T07:52:29.807061+00:00",
+  "totalArticles": 91,
   "articles": [
     {
       "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
@@ -465,27 +465,6 @@
       "_normalized_url": "message_center:MC1262537"
     },
     {
-      "title": "The March 2026 Windows non-security preview update is now available",
-      "link": "https://deltapulse.app/item/MC1262522",
-      "published": "2026-03-26T21:06:28.443Z",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1262522",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1262522"
-    },
-    {
       "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
       "link": "https://deltapulse.app/item/MC1262523",
       "published": "2026-03-26T21:06:28.443Z",
@@ -505,6 +484,27 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1262523"
+    },
+    {
+      "title": "The March 2026 Windows non-security preview update is now available",
+      "link": "https://deltapulse.app/item/MC1262522",
+      "published": "2026-03-26T21:06:28.443Z",
+      "source": "m365",
+      "m365Service": "Windows",
+      "m365AllServices": [
+        "Windows"
+      ],
+      "m365Id": "MC1262522",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "March 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1262522"
     },
     {
       "title": "Microsoft Copilot Studio - Analyze user sentiment from agent conversations",
@@ -840,25 +840,6 @@
       "_normalized_url": "message_center:MC1261573"
     },
     {
-      "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
-      "link": "https://deltapulse.app/item/559029",
-      "published": "2026-03-24T23:15:57.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559029",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:559029"
-    },
-    {
       "title": "Microsoft Copilot (Microsoft 365): Updated chat-first design in the Microsoft 365 Copilot mobile app",
       "link": "https://deltapulse.app/item/559310",
       "published": "2026-03-24T23:15:57.000Z",
@@ -876,6 +857,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559310"
+    },
+    {
+      "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
+      "link": "https://deltapulse.app/item/559095",
+      "published": "2026-03-24T23:15:57.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559095",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:559095"
     },
     {
       "title": "Microsoft Agent 365: the control plane for agents",
@@ -916,23 +916,23 @@
       "_normalized_url": "roadmap:558682"
     },
     {
-      "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
-      "link": "https://deltapulse.app/item/559095",
+      "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
+      "link": "https://deltapulse.app/item/559029",
       "published": "2026-03-24T23:15:57.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "559095",
+      "m365Id": "559029",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
-      "m365TargetDate": "April 2026",
+      "m365TargetDate": "May 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
       "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:559095"
+      "_normalized_url": "roadmap:559029"
     },
     {
       "title": "(Updated) Microsoft 365 Copilot: Customize how managers are identified in Workforce Insights agent and Copilot responses",
@@ -1430,48 +1430,6 @@
       "_normalized_url": "message_center:MC1259418"
     },
     {
-      "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
-      "link": "https://deltapulse.app/item/MC1258087",
-      "published": "2026-03-21T21:07:44.520Z",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1258087",
-      "m365Source": "message_center",
-      "m365Category": "preventOrFixIssue",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": true,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1258087"
-    },
-    {
-      "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
-      "link": "https://deltapulse.app/item/MC1258000",
-      "published": "2026-03-21T16:18:41.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Purview",
-      "m365AllServices": [
-        "Microsoft Purview"
-      ],
-      "m365Id": "MC1258000",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026, May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1258000"
-    },
-    {
       "title": "Microsoft Teams: Digital signage support for Teams panels",
       "link": "https://deltapulse.app/item/558852",
       "published": "2026-03-20T22:00:36.000Z",
@@ -1697,25 +1655,6 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:557974"
-    },
-    {
-      "title": "SharePoint: Updates to SharePoint home sites",
-      "link": "https://deltapulse.app/item/557983",
-      "published": "2026-02-26T23:45:10.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "557983",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:557983"
     },
     {
       "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",
@@ -2697,25 +2636,6 @@
         "_normalized_url": "roadmap:557682"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
-        "link": "https://deltapulse.app/item/559029",
-        "published": "2026-03-24T23:15:57.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559029",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559029"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Updated chat-first design in the Microsoft 365 Copilot mobile app",
         "link": "https://deltapulse.app/item/559310",
         "published": "2026-03-24T23:15:57.000Z",
@@ -2733,6 +2653,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559310"
+      },
+      {
+        "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
+        "link": "https://deltapulse.app/item/559095",
+        "published": "2026-03-24T23:15:57.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559095",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:559095"
       },
       {
         "title": "Microsoft Agent 365: the control plane for agents",
@@ -2773,23 +2712,23 @@
         "_normalized_url": "roadmap:558682"
       },
       {
-        "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
-        "link": "https://deltapulse.app/item/559095",
+        "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
+        "link": "https://deltapulse.app/item/559029",
         "published": "2026-03-24T23:15:57.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559095",
+        "m365Id": "559029",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "April 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559095"
+        "_normalized_url": "roadmap:559029"
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -3045,25 +2984,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557974"
-      },
-      {
-        "title": "SharePoint: Updates to SharePoint home sites",
-        "link": "https://deltapulse.app/item/557983",
-        "published": "2026-02-26T23:45:10.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "557983",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:557983"
       },
       {
         "title": "Microsoft Purview: Data Lifecycle Management– Hard delete capability for OneDrive and SharePoint through secure priority cleanup workflows",
@@ -3459,27 +3379,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1259826"
-      },
-      {
-        "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
-        "link": "https://deltapulse.app/item/MC1258000",
-        "published": "2026-03-21T16:18:41.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Purview",
-        "m365AllServices": [
-          "Microsoft Purview"
-        ],
-        "m365Id": "MC1258000",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026, May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1258000"
       }
     ],
     "Administration": [
@@ -3505,27 +3404,6 @@
         "_normalized_url": "message_center:MC1262589"
       },
       {
-        "title": "The March 2026 Windows non-security preview update is now available",
-        "link": "https://deltapulse.app/item/MC1262522",
-        "published": "2026-03-26T21:06:28.443Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1262522",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262522"
-      },
-      {
         "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
         "link": "https://deltapulse.app/item/MC1262523",
         "published": "2026-03-26T21:06:28.443Z",
@@ -3545,6 +3423,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1262523"
+      },
+      {
+        "title": "The March 2026 Windows non-security preview update is now available",
+        "link": "https://deltapulse.app/item/MC1262522",
+        "published": "2026-03-26T21:06:28.443Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1262522",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1262522"
       },
       {
         "title": "Notice: Security Copilot will be included as part of your Microsoft 365 E5 plan soon",
@@ -3590,27 +3489,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1260708"
-      },
-      {
-        "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
-        "link": "https://deltapulse.app/item/MC1258087",
-        "published": "2026-03-21T21:07:44.520Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1258087",
-        "m365Source": "message_center",
-        "m365Category": "preventOrFixIssue",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1258087"
       }
     ],
     "Business Applications": [
@@ -3911,23 +3789,23 @@
         "_normalized_url": "roadmap:557682"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
-        "link": "https://deltapulse.app/item/559029",
+        "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
+        "link": "https://deltapulse.app/item/559095",
         "published": "2026-03-24T23:15:57.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559029",
+        "m365Id": "559095",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "May 2026",
+        "m365TargetDate": "April 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559029"
+        "_normalized_url": "roadmap:559095"
       },
       {
         "title": "Microsoft Purview: Data Loss Prevention – Reduce policy sync status SLA on the Purview UI from 2 hours to 30 mins",
@@ -3949,23 +3827,23 @@
         "_normalized_url": "roadmap:558682"
       },
       {
-        "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
-        "link": "https://deltapulse.app/item/559095",
+        "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
+        "link": "https://deltapulse.app/item/559029",
         "published": "2026-03-24T23:15:57.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559095",
+        "m365Id": "559029",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "April 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559095"
+        "_normalized_url": "roadmap:559029"
       },
       {
         "title": "Microsoft Purview: Endpoint Data Loss Prevention - Device Health Reporting Dashboard",
@@ -4489,27 +4367,6 @@
         "_normalized_url": "message_center:MC1262537"
       },
       {
-        "title": "The March 2026 Windows non-security preview update is now available",
-        "link": "https://deltapulse.app/item/MC1262522",
-        "published": "2026-03-26T21:06:28.443Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1262522",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262522"
-      },
-      {
         "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
         "link": "https://deltapulse.app/item/MC1262523",
         "published": "2026-03-26T21:06:28.443Z",
@@ -4529,6 +4386,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1262523"
+      },
+      {
+        "title": "The March 2026 Windows non-security preview update is now available",
+        "link": "https://deltapulse.app/item/MC1262522",
+        "published": "2026-03-26T21:06:28.443Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1262522",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1262522"
       },
       {
         "title": "Microsoft Copilot Studio - Analyze user sentiment from agent conversations",
@@ -5302,48 +5180,6 @@
         "_normalized_url": "message_center:MC1259418"
       },
       {
-        "title": "Take Action: Out-of-band update released to address an issue signing in to apps with a Microsoft account",
-        "link": "https://deltapulse.app/item/MC1258087",
-        "published": "2026-03-21T21:07:44.520Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1258087",
-        "m365Source": "message_center",
-        "m365Category": "preventOrFixIssue",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1258087"
-      },
-      {
-        "title": "Microsoft Purview: Data Security Investigations – analyze files tied to endpoint DLP alerts",
-        "link": "https://deltapulse.app/item/MC1258000",
-        "published": "2026-03-21T16:18:41.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Purview",
-        "m365AllServices": [
-          "Microsoft Purview"
-        ],
-        "m365Id": "MC1258000",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026, May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1258000"
-      },
-      {
         "title": "Microsoft Teams: Digital signage support for Teams panels",
         "link": "https://deltapulse.app/item/558852",
         "published": "2026-03-20T22:00:36.000Z",
@@ -5550,25 +5386,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:557974"
-      },
-      {
-        "title": "SharePoint: Updates to SharePoint home sites",
-        "link": "https://deltapulse.app/item/557983",
-        "published": "2026-02-26T23:45:10.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "557983",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:557983"
       },
       {
         "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",
@@ -5785,8 +5602,7 @@
     "2026-03-26",
     "2026-03-25",
     "2026-03-24",
-    "2026-03-23",
-    "2026-03-21"
+    "2026-03-23"
   ],
   "source": "m365"
 }
