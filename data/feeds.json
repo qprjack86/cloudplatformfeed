@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-29T11:36:02.578472+00:00",
-  "totalArticles": 224,
+  "lastUpdated": "2026-03-29T15:22:21.739500+00:00",
+  "totalArticles": 223,
   "articles": [
     {
       "title": "Autonomous Self-Healing for Azure VMware Solution Private Clouds",
@@ -2218,15 +2218,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "SonjaEd"
-    },
-    {
-      "title": "Evolving the Network Operations Agent Framework: Driving the Next Wave of Autonomous Networks",
-      "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/evolving-the-network-operations-agent-framework-driving-the-next/ba-p/4496607",
-      "published": "2026-02-27T14:23:07+00:00",
-      "summary": "The original announcement of the Network Operations Agent (NOA) Framework outlined a bold mission: provide telecom operators with a modular, multiagent foundation to accelerate the journey toward autonomous networks. NOA combined intelligent agents, unified data access, and strong governance to...",
-      "blog": "Telecommunications",
-      "blogId": "telecommunications-industry-blog",
-      "author": "rickliev"
     }
   ],
   "summaryWindowDays": 7,
