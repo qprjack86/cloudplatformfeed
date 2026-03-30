@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-30T11:57:33.533600+00:00",
-  "totalArticles": 219,
+  "lastUpdated": "2026-03-30T16:00:25.733577+00:00",
+  "totalArticles": 220,
   "articles": [
+    {
+      "title": "Writing Azure service-related unit tests with Docker using Spring Cloud Azure",
+      "link": "https://devblogs.microsoft.com/azure-sdk/writing-azure-service-related-unit-tests-with-docker-using-spring-cloud-azure/",
+      "published": "2026-03-30T15:00:31+00:00",
+      "summary": "This post shows how to write Azure service-related unit tests with Docker using Spring Cloud Azure. The post Writing Azure service-related unit tests with Docker using Spring Cloud Azure appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Rujun Chen"
+    },
     {
       "title": "CI/CD as a Platform: Shipping Microservices and AI Agents with Reusable GitHub Actions Workflows",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ci-cd-as-a-platform-shipping-microservices-and-ai-agents-with/ba-p/4504550",
