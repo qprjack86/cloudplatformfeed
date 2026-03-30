@@ -3,6 +3,7 @@ import sys
 import unittest
 import tempfile
 import json
+import os
 from unittest import mock
 from datetime import datetime, timedelta, timezone
 
@@ -426,6 +427,88 @@ class YouTubeVideoHelperTests(unittest.TestCase):
         )
 
         self.assertEqual(channel_id, "UC123abcXYZ")
+
+
+class FeedConcurrencyTests(unittest.TestCase):
+    def test_techcommunity_parallel_fetch_continues_after_individual_failure(self):
+        good_feed = mock.Mock()
+        good_feed.bozo = False
+        good_feed.entries = [
+            {
+                "title": "Healthy feed item",
+                "link": "https://example.com/post",
+                "published": "Mon, 24 Mar 2026 12:00:00 GMT",
+                "summary": "Hello",
+                "author": "Microsoft",
+            }
+        ]
+
+        def fake_fetch(url):
+            if "board.id=good-board" in url:
+                return good_feed
+            raise ValueError("simulated board failure")
+
+        with mock.patch.dict(
+            fetch_feeds.BLOGS,
+            {"good-board": "Good Board", "bad-board": "Bad Board"},
+            clear=True,
+        ), mock.patch.object(fetch_feeds, "fetch_feed", side_effect=fake_fetch) as fetch_mock:
+            articles = fetch_feeds.fetch_tech_community_feeds()
+
+        self.assertEqual(fetch_mock.call_count, 2)
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["blogId"], "good-board")
+
+
+class RssGenerationTests(unittest.TestCase):
+    def test_generate_rss_feed_wraps_text_fields_in_cdata(self):
+        article = {
+            "title": "Launch & Learn <Now>",
+            "link": "https://example.com/item",
+            "published": "2026-03-22T10:30:00+00:00",
+            "summary": "Summary with <b>html</b> & characters",
+            "blog": "Azure Updates",
+            "blogId": "azureupdates",
+            "author": "Microsoft",
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            old_cwd = os.getcwd()
+            os.chdir(tmpdir)
+            try:
+                os.makedirs("data", exist_ok=True)
+                fetch_feeds.generate_rss_feed([article])
+                xml_text = pathlib.Path("data/feed.xml").read_text(encoding="utf-8")
+            finally:
+                os.chdir(old_cwd)
+
+        self.assertIn("<title><![CDATA[Launch & Learn <Now>]]></title>", xml_text)
+        self.assertIn("<description><![CDATA[Summary with <b>html</b> & characters]]></description>", xml_text)
+        self.assertIn("<dc:creator><![CDATA[Microsoft]]></dc:creator>", xml_text)
+        self.assertIn("<category><![CDATA[Azure Updates]]></category>", xml_text)
+
+    def test_generate_rss_feed_handles_cdata_terminator_safely(self):
+        article = {
+            "title": "Edge Case",
+            "link": "https://example.com/item",
+            "published": "2026-03-22T10:30:00+00:00",
+            "summary": "Contains ]]> token",
+            "blog": "Azure Updates",
+            "blogId": "azureupdates",
+            "author": "Microsoft",
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            old_cwd = os.getcwd()
+            os.chdir(tmpdir)
+            try:
+                os.makedirs("data", exist_ok=True)
+                fetch_feeds.generate_rss_feed([article])
+                xml_text = pathlib.Path("data/feed.xml").read_text(encoding="utf-8")
+            finally:
+                os.chdir(old_cwd)
+
+        self.assertIn("Contains ]]&gt; token", xml_text)
 
 
 class AzureUpdatesApiFallbackTests(unittest.TestCase):

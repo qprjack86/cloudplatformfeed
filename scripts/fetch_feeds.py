@@ -5,21 +5,33 @@ Fetches articles from Azure and Microsoft 365 blog RSS feeds and generates a JSO
 """
 
 import feedparser
-import hashlib
 import json
 import os
 import re
-import time
-import math
+import concurrent.futures
 import requests
 from pathlib import Path
 from difflib import SequenceMatcher
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
-from requests.adapters import HTTPAdapter
-from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
-from urllib3.util.retry import Retry
+from urllib.parse import urlsplit
+from xml.dom.minidom import Document
+
+from feed_common import (
+    canonicalize_url,
+    create_http_session as shared_create_http_session,
+    build_checksums_payload as shared_build_checksums_payload,
+    write_checksums_file as shared_write_checksums_file,
+    evaluate_publish_failsafe as shared_evaluate_publish_failsafe,
+    extract_youtube_video_id as shared_extract_youtube_video_id,
+    build_youtube_thumbnail_from_video_url as shared_build_youtube_thumbnail_from_video_url,
+    load_previous_article_count as shared_load_previous_article_count,
+    load_site_config as shared_load_site_config,
+    normalize_host as shared_normalize_host,
+    resolve_youtube_channel_id_from_seed as shared_resolve_youtube_channel_id_from_seed,
+    select_best_youtube_video_entry as shared_select_best_youtube_video_entry,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
@@ -27,35 +39,12 @@ SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
 
 def _normalize_site_host(value):
     """Normalize a configured host value for canonical URL checks."""
-    host = (value or "").strip().lower().rstrip(".")
-    if host.startswith("www."):
-        host = host[4:]
-    return host
+    return shared_normalize_host(value)
 
 
 def load_site_config(path=SITE_CONFIG_PATH):
     """Load and validate canonical site settings from config/site.json."""
-    with open(path, "r", encoding="utf-8") as f:
-        raw = json.load(f)
-
-    canonical_host = _normalize_site_host(raw.get("canonicalHost"))
-    configured_url = (raw.get("canonicalUrl") or "").strip()
-    parsed_url = urlsplit(configured_url)
-    url_host = _normalize_site_host(parsed_url.hostname)
-
-    if not canonical_host:
-        raise ValueError("site config canonicalHost must be a non-empty string")
-    if parsed_url.scheme != "https":
-        raise ValueError("site config canonicalUrl must use https")
-    if not url_host or url_host != canonical_host:
-        raise ValueError("site config canonicalUrl host must match canonicalHost")
-    if parsed_url.path not in ("", "/") or parsed_url.query or parsed_url.fragment:
-        raise ValueError("site config canonicalUrl must point to site root")
-
-    return {
-        "canonicalHost": canonical_host,
-        "canonicalUrl": f"https://{canonical_host}",
-    }
+    return shared_load_site_config(path)
 
 
 SITE_CONFIG = load_site_config()
@@ -124,6 +113,7 @@ FEED_REQUEST_TIMEOUT = (5, 20)
 FEED_RETRY_TOTAL = 2
 FEED_BACKOFF_FACTOR = 1
 FEED_USER_AGENT = f"AzureFeedBot/1.0 (+{CANONICAL_SITE_URL})"
+FETCH_MAX_WORKERS = 4
 TRACKING_QUERY_PREFIXES = ("utm_",)
 TRACKING_QUERY_KEYS = {
     "fbclid",
@@ -157,39 +147,23 @@ CHECKSUM_OUTPUT_PATH = Path("data") / "checksums.json"
 
 def _artifact_checksum_record(path, generated_at):
     """Return checksum metadata for an existing artifact file."""
-    sha256 = hashlib.sha256()
-    with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(8192), b""):
-            sha256.update(chunk)
-
-    return {
-        "path": Path(path).as_posix(),
-        "algorithm": "sha256",
-        "value": sha256.hexdigest(),
-        "generatedAt": generated_at,
-    }
+    return shared_build_checksums_payload([path], generated_at)["artifacts"][0]
 
 
 def build_checksums_payload(paths, generated_at=None):
     """Build checksum metadata for published artifacts."""
-    timestamp = generated_at or datetime.now(timezone.utc).isoformat()
-    artifacts = [_artifact_checksum_record(path, timestamp) for path in paths]
-    return {
-        "generatedAt": timestamp,
-        "artifacts": artifacts,
-    }
+    return shared_build_checksums_payload(paths, generated_at=generated_at)
 
 
 def write_checksums_file(paths=None, output_path=CHECKSUM_OUTPUT_PATH, generated_at=None):
     """Write checksum metadata after published artifacts are finalized."""
     artifact_paths = paths or CHECKSUM_ARTIFACTS
-    payload = build_checksums_payload(artifact_paths, generated_at=generated_at)
-    output_path = Path(output_path)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2, ensure_ascii=False)
-    print(f"Checksums saved to {output_path}")
-    return payload
+    return shared_write_checksums_file(
+        artifact_paths,
+        output_path,
+        generated_at=generated_at,
+        logger=print,
+    )
 
 
 # DevBlogs definitions: slug -> (display name, feed URL)
@@ -212,10 +186,7 @@ DEVBLOGS = {
 
 def normalize_host(hostname):
     """Normalize hostnames used for feed allowlisting and URL dedupe."""
-    host = (hostname or "").strip().lower().rstrip(".")
-    if host.startswith("www."):
-        host = host[4:]
-    return host
+    return shared_normalize_host(hostname)
 
 
 def build_allowed_feed_hosts():
@@ -243,23 +214,13 @@ ALLOWED_FEED_HOSTS = build_allowed_feed_hosts()
 
 def create_http_session():
     """Create a session with bounded retries for transient feed failures."""
-    retry = Retry(
-        total=FEED_RETRY_TOTAL,
-        connect=FEED_RETRY_TOTAL,
-        read=FEED_RETRY_TOTAL,
-        status=FEED_RETRY_TOTAL,
+    return shared_create_http_session(
+        retry_total=FEED_RETRY_TOTAL,
         backoff_factor=FEED_BACKOFF_FACTOR,
-        status_forcelist=[429, 500, 502, 503, 504],
-        allowed_methods=frozenset(["GET"]),
-        respect_retry_after_header=True,
+        user_agent=FEED_USER_AGENT,
+        allowed_methods=("GET",),
         raise_on_status=False,
     )
-    adapter = HTTPAdapter(max_retries=retry)
-    session = requests.Session()
-    session.mount("https://", adapter)
-    session.mount("http://", adapter)
-    session.headers.update({"User-Agent": FEED_USER_AGENT})
-    return session
 
 
 HTTP_SESSION = create_http_session()
@@ -349,36 +310,12 @@ def _normalize_for_match(text):
 
 def normalize_article_url(url):
     """Canonicalize article URLs for more reliable deduplication."""
-    raw_url = (url or "").strip()
-    if not raw_url:
-        return ""
-
-    parsed = urlsplit(raw_url)
-    scheme = parsed.scheme.lower()
-    host = normalize_host(parsed.hostname)
-    if not scheme or not host:
-        return raw_url
-
-    port = parsed.port
-    netloc = host
-    if port and DEFAULT_PORTS.get(scheme) != port:
-        netloc = f"{host}:{port}"
-
-    path = re.sub(r"/{2,}", "/", parsed.path or "/")
-    if path != "/":
-        path = path.rstrip("/")
-
-    filtered_query = []
-    for key, value in parse_qsl(parsed.query, keep_blank_values=True):
-        normalized_key = key.lower()
-        if normalized_key.startswith(TRACKING_QUERY_PREFIXES):
-            continue
-        if normalized_key in TRACKING_QUERY_KEYS:
-            continue
-        filtered_query.append((key, value))
-
-    query = urlencode(sorted(filtered_query))
-    return urlunsplit((scheme, netloc, path, query, ""))
+    return canonicalize_url(
+        url,
+        tracking_query_prefixes=TRACKING_QUERY_PREFIXES,
+        tracking_query_keys=TRACKING_QUERY_KEYS,
+        default_ports=DEFAULT_PORTS,
+    )
 
 
 def parse_iso_datetime(value):
@@ -649,88 +586,73 @@ def parse_date(entry):
 
 def _extract_youtube_video_id(url):
     """Extract a YouTube video id from watch or youtu.be links."""
-    parsed = urlsplit((url or "").strip())
-    host = normalize_host(parsed.hostname)
-    if not host:
-        return ""
-
-    if host == "youtu.be":
-        return parsed.path.strip("/")
-
-    if host == "youtube.com":
-        query = dict(parse_qsl(parsed.query or ""))
-        return query.get("v", "")
-
-    return ""
+    return shared_extract_youtube_video_id(url)
 
 
 def _build_youtube_thumbnail_from_video_url(url):
     """Build a deterministic thumbnail URL from a YouTube video link."""
-    video_id = _extract_youtube_video_id(url)
-    if not video_id:
-        return ""
-    return f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
+    return shared_build_youtube_thumbnail_from_video_url(url)
 
 
 def _resolve_youtube_channel_id_from_seed(session, seed_url, timeout):
     """Resolve a YouTube channel id by reading the seed video page payload."""
-    response = session.get(seed_url, timeout=timeout)
-    response.raise_for_status()
-    channel_match = re.search(r'"channelId"\s*:\s*"([A-Za-z0-9_-]+)"', response.text)
-    if not channel_match:
-        return ""
-    return channel_match.group(1)
+    return shared_resolve_youtube_channel_id_from_seed(session, seed_url, timeout)
 
 
 def _select_best_youtube_video_entry(entries, match_score_fn):
     """Select highest scoring entry; fall back to latest upload when no match."""
-    if not entries:
-        return None, False
+    return shared_select_best_youtube_video_entry(entries, match_score_fn)
 
-    best = max(entries, key=match_score_fn)
-    used_fallback = match_score_fn(best) <= 0
-    if used_fallback:
-        best = entries[0]
-    return best, used_fallback
+
+def _entries_to_articles(entries, blog_name, blog_id):
+    """Convert feed entries into article payloads."""
+    articles = []
+    for entry in entries:
+        summary = clean_html(entry.get("summary", ""))
+        articles.append(
+            {
+                "title": clean_html(entry.get("title", "Untitled")),
+                "link": entry.get("link", ""),
+                "published": parse_date(entry),
+                "summary": truncate(summary),
+                "blog": blog_name,
+                "blogId": blog_id,
+                "author": entry.get("author", "Microsoft"),
+            }
+        )
+    return articles
+
+
+def _fetch_named_feed(blog_name, blog_id, feed_url):
+    """Fetch a single blog feed and return parsed article records."""
+    feed = fetch_feed(feed_url)
+
+    if feed.bozo and not feed.entries:
+        print(f"  Warning: Could not parse feed for {blog_name}")
+        return []
+
+    articles = _entries_to_articles(feed.entries, blog_name, blog_id)
+    print(f"  Found {len(articles)} articles")
+    return articles
 
 
 def fetch_tech_community_feeds():
     """Fetch articles from Tech Community blogs."""
     articles = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=FETCH_MAX_WORKERS) as executor:
+        future_to_blog = {}
+        for board_id, blog_name in BLOGS.items():
+            print(f"Fetching: {blog_name} ({board_id})...")
+            feed_url = TC_RSS_URL.format(board=board_id)
+            future = executor.submit(_fetch_named_feed, blog_name, board_id, feed_url)
+            future_to_blog[future] = blog_name
 
-    for board_id, blog_name in BLOGS.items():
-        url = TC_RSS_URL.format(board=board_id)
-        print(f"Fetching: {blog_name} ({board_id})...")
-
-        try:
-            feed = fetch_feed(url)
-
-            if feed.bozo and not feed.entries:
-                print(f"  Warning: Could not parse feed for {blog_name}")
-                continue
-
-            count = 0
-            for entry in feed.entries:
-                summary = clean_html(entry.get("summary", ""))
-                articles.append(
-                    {
-                        "title": clean_html(entry.get("title", "Untitled")),
-                        "link": entry.get("link", ""),
-                        "published": parse_date(entry),
-                        "summary": truncate(summary),
-                        "blog": blog_name,
-                        "blogId": board_id,
-                        "author": entry.get("author", "Microsoft"),
-                    }
-                )
-                count += 1
-
-            print(f"  Found {count} articles")
-
-        except Exception as e:
-            print(f"  Error fetching {blog_name}: {e}")
-
-        time.sleep(0.5)
+        for future in concurrent.futures.as_completed(future_to_blog):
+            blog_name = future_to_blog[future]
+            try:
+                articles.extend(future.result())
+            except (requests.exceptions.RequestException, ValueError, TypeError) as exc:
+                print(f"  Error fetching {blog_name}: {exc}")
 
     return articles
 
@@ -765,8 +687,8 @@ def fetch_aks_blog():
 
         print(f"  Found {count} articles")
 
-    except Exception as e:
-        print(f"  Error fetching AKS blog: {e}")
+    except (requests.exceptions.RequestException, ValueError, TypeError) as exc:
+        print(f"  Error fetching AKS blog: {exc}")
 
     return articles
 
@@ -774,39 +696,19 @@ def fetch_aks_blog():
 def fetch_devblogs_feeds():
     """Fetch articles from Microsoft DevBlogs."""
     articles = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=FETCH_MAX_WORKERS) as executor:
+        future_to_blog = {}
+        for blog_id, (blog_name, feed_url) in DEVBLOGS.items():
+            print(f"Fetching: {blog_name}...")
+            future = executor.submit(_fetch_named_feed, blog_name, blog_id, feed_url)
+            future_to_blog[future] = blog_name
 
-    for blog_id, (blog_name, feed_url) in DEVBLOGS.items():
-        print(f"Fetching: {blog_name}...")
-
-        try:
-            feed = fetch_feed(feed_url)
-
-            if feed.bozo and not feed.entries:
-                print(f"  Warning: Could not parse {blog_name} feed")
-                continue
-
-            count = 0
-            for entry in feed.entries:
-                summary = clean_html(entry.get("summary", ""))
-                articles.append(
-                    {
-                        "title": clean_html(entry.get("title", "Untitled")),
-                        "link": entry.get("link", ""),
-                        "published": parse_date(entry),
-                        "summary": truncate(summary),
-                        "blog": blog_name,
-                        "blogId": blog_id,
-                        "author": entry.get("author", "Microsoft"),
-                    }
-                )
-                count += 1
-
-            print(f"  Found {count} articles")
-
-        except Exception as e:
-            print(f"  Error fetching {blog_name}: {e}")
-
-        time.sleep(0.5)
+        for future in concurrent.futures.as_completed(future_to_blog):
+            blog_name = future_to_blog[future]
+            try:
+                articles.extend(future.result())
+            except (requests.exceptions.RequestException, ValueError, TypeError) as exc:
+                print(f"  Error fetching {blog_name}: {exc}")
 
     return articles
 
@@ -868,8 +770,14 @@ def fetch_savill_video():
         }
         print(f"  Found: {result['title'][:70]}")
         return result
-    except Exception as e:
-        print(f"  Error fetching Savill YouTube: {e}")
+    except (
+        requests.exceptions.RequestException,
+        ValueError,
+        TypeError,
+        KeyError,
+        IndexError,
+    ) as exc:
+        print(f"  Error fetching Savill YouTube: {exc}")
         return fallback
 
 
@@ -1199,54 +1107,81 @@ def fetch_azure_updates_feed():
         if api_articles:
             return api_articles
         print("  API returned zero valid dated items; falling back to RSS")
-    except Exception as e:
-        print(f"  Error fetching Azure Updates API: {e}")
+    except (
+        requests.exceptions.RequestException,
+        ValueError,
+        TypeError,
+        json.JSONDecodeError,
+        RuntimeError,
+    ) as exc:
+        print(f"  Error fetching Azure Updates API: {exc}")
         print("  Falling back to RSS feed")
 
     try:
         return fetch_azure_updates_via_rss()
-    except Exception as e:
-        print(f"  Error fetching Azure Updates RSS fallback: {e}")
+    except (
+        requests.exceptions.RequestException,
+        ValueError,
+        TypeError,
+        json.JSONDecodeError,
+        RuntimeError,
+    ) as exc:
+        print(f"  Error fetching Azure Updates RSS fallback: {exc}")
         return []
 
 
 def generate_rss_feed(articles):
     """Generate an RSS feed XML file from the aggregated articles."""
-    from xml.etree.ElementTree import Element, SubElement, tostring
+    doc = Document()
+    rss = doc.createElement("rss")
+    rss.setAttribute("version", "2.0")
+    rss.setAttribute("xmlns:dc", "http://purl.org/dc/elements/1.1/")
+    doc.appendChild(rss)
 
-    rss = Element("rss", version="2.0")
-    rss.set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
-    channel = SubElement(rss, "channel")
-    SubElement(channel, "title").text = "Microsoft Cloud Platform Feed"
-    SubElement(channel, "link").text = CANONICAL_SITE_URL
-    SubElement(channel, "description").text = (
-        "Aggregated daily updates from Azure and Microsoft 365 blogs"
+    channel = doc.createElement("channel")
+    rss.appendChild(channel)
+
+    def append_text(parent, name, text, use_cdata=False):
+        element = doc.createElement(name)
+        parent.appendChild(element)
+        value = "" if text is None else str(text)
+        if use_cdata and "]]>" not in value:
+            element.appendChild(doc.createCDATASection(value))
+        else:
+            element.appendChild(doc.createTextNode(value))
+
+    append_text(channel, "title", "Microsoft Cloud Platform Feed")
+    append_text(channel, "link", CANONICAL_SITE_URL)
+    append_text(
+        channel,
+        "description",
+        "Aggregated daily updates from Azure and Microsoft 365 blogs",
     )
-    SubElement(channel, "lastBuildDate").text = datetime.now(
-        timezone.utc
-    ).strftime("%a, %d %b %Y %H:%M:%S GMT")
-    SubElement(channel, "generator").text = "Microsoft Cloud Platform Feed"
-    SubElement(channel, "language").text = "en"
+    append_text(
+        channel,
+        "lastBuildDate",
+        datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT"),
+    )
+    append_text(channel, "generator", "Microsoft Cloud Platform Feed")
+    append_text(channel, "language", "en")
 
     for article in articles[:50]:
-        item = SubElement(channel, "item")
-        SubElement(item, "title").text = article["title"]
-        SubElement(item, "link").text = article["link"]
-        SubElement(item, "guid").text = article["link"]
-        SubElement(item, "description").text = article["summary"]
-        SubElement(item, "dc:creator").text = article["author"]
+        item = doc.createElement("item")
+        channel.appendChild(item)
+
+        append_text(item, "title", article["title"], use_cdata=True)
+        append_text(item, "link", article["link"])
+        append_text(item, "guid", article["link"])
+        append_text(item, "description", article["summary"], use_cdata=True)
+        append_text(item, "dc:creator", article["author"], use_cdata=True)
         try:
             dt = datetime.fromisoformat(article["published"])
-            SubElement(item, "pubDate").text = dt.strftime(
-                "%a, %d %b %Y %H:%M:%S GMT"
-            )
+            append_text(item, "pubDate", dt.strftime("%a, %d %b %Y %H:%M:%S GMT"))
         except (ValueError, TypeError):
             pass
-        SubElement(item, "category").text = article["blog"]
+        append_text(item, "category", article["blog"], use_cdata=True)
 
-    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n' + tostring(
-        rss, encoding="unicode"
-    )
+    xml_str = doc.toprettyxml(indent="  ", encoding="UTF-8").decode("utf-8")
     output_path = os.path.join("data", "feed.xml")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(xml_str)
@@ -1403,29 +1338,7 @@ def generate_ai_summary(articles):
 
 def load_previous_article_count(path):
     """Return prior article count from feeds.json, or None when unavailable."""
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            existing = json.load(f)
-    except FileNotFoundError:
-        print(f"Publish fail-safe baseline not found: {path}")
-        return None
-    except (OSError, json.JSONDecodeError, TypeError, ValueError) as e:
-        print(f"Publish fail-safe baseline unreadable at {path}: {e}")
-        return None
-
-    articles = existing.get("articles")
-    if isinstance(articles, list):
-        return len(articles)
-
-    total_articles = existing.get("totalArticles")
-    if isinstance(total_articles, int) and total_articles >= 0:
-        return total_articles
-
-    print(
-        "Publish fail-safe baseline missing both articles array and totalArticles; "
-        "bypassing guard for this run"
-    )
-    return None
+    return shared_load_previous_article_count(path, logger=print)
 
 
 def evaluate_publish_failsafe(
@@ -1435,25 +1348,12 @@ def evaluate_publish_failsafe(
     min_ratio=FAILSAFE_MIN_RATIO,
 ):
     """Return (triggered, details) for publish fail-safe guard logic."""
-    if previous_count is None:
-        details = (
-            f"baseline unavailable; new_count={new_count}; "
-            f"min_articles={min_articles}; min_ratio={min_ratio:.2f}"
-        )
-        return False, details
-
-    relative_threshold = math.ceil(previous_count * min_ratio)
-    relative_trigger = new_count < relative_threshold
-    absolute_trigger = previous_count >= min_articles and new_count < min_articles
-    triggered = relative_trigger or absolute_trigger
-
-    details = (
-        f"new_count={new_count}, previous_count={previous_count}, "
-        f"relative_threshold={relative_threshold} (ratio={min_ratio:.2f}), "
-        f"absolute_threshold={min_articles}, "
-        f"relative_trigger={relative_trigger}, absolute_trigger={absolute_trigger}"
+    return shared_evaluate_publish_failsafe(
+        new_count,
+        previous_count,
+        min_articles=min_articles,
+        min_ratio=min_ratio,
     )
-    return triggered, details
 
 
 def build_run_metrics(

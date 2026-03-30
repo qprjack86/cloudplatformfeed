@@ -4,18 +4,27 @@ Microsoft 365 Change Intelligence Feed - MCP Data Fetcher
 Fetches Microsoft 365 Roadmap and Message Center items from DeltaPulse MCP endpoint.
 """
 
-import hashlib
 import json
 import os
 import re
-import time
+import concurrent.futures
 import requests
 import feedparser
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
-from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+
+from feed_common import (
+    canonicalize_url,
+    create_http_session as shared_create_http_session,
+    build_checksums_payload as shared_build_checksums_payload,
+    build_youtube_thumbnail_from_video_url as shared_build_youtube_thumbnail_from_video_url,
+    evaluate_publish_failsafe as shared_evaluate_publish_failsafe,
+    extract_youtube_video_id as shared_extract_youtube_video_id,
+    load_previous_article_count as shared_load_previous_article_count,
+    load_site_config as shared_load_site_config,
+    resolve_youtube_channel_id_from_seed as shared_resolve_youtube_channel_id_from_seed,
+    select_best_youtube_video_entry as shared_select_best_youtube_video_entry,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
@@ -39,6 +48,7 @@ MCP_REQUEST_TIMEOUT = (5, 20)
 MCP_RETRY_TOTAL = 2
 MCP_BACKOFF_FACTOR = 1
 MCP_USER_AGENT = "M365FeedBot/1.0"
+MCP_MAX_WORKERS = 4
 
 M365_VIDEO_SEED_URL = "https://www.youtube.com/watch?v=HdO9NV8a9yE&t=83s"
 M365_VIDEO_TITLE_PREFIX = "what's new in microsoft 365"
@@ -49,8 +59,6 @@ TRACKING_QUERY_PREFIXES = ("utm_",)
 TRACKING_QUERY_KEYS = {
     "fbclid", "gclid", "mc_cid", "mc_eid", "mkt_tok", "ocid", "spm", "trk", "wt.mc_id",
 }
-
-DEFAULT_PORTS = {"http": 80, "https": 443}
 
 # M365 Product category mapping for high-level organization
 M365_PRODUCT_CATEGORIES = {
@@ -94,23 +102,7 @@ M365_PRODUCT_CATEGORIES = {
 
 def load_site_config(path=SITE_CONFIG_PATH):
     """Load canonical site config (same as Azure feed for consistency)."""
-    with open(path, "r", encoding="utf-8") as f:
-        raw = json.load(f)
-    
-    canonical_host = (raw.get("canonicalHost") or "").strip().lower().rstrip(".")
-    configured_url = (raw.get("canonicalUrl") or "").strip()
-    
-    if not canonical_host:
-        raise ValueError("site config canonicalHost must be a non-empty string")
-    
-    parsed_url = urlsplit(configured_url)
-    if parsed_url.scheme != "https":
-        raise ValueError("site config canonicalUrl must use https")
-    
-    return {
-        "canonicalHost": canonical_host,
-        "canonicalUrl": f"https://{canonical_host}",
-    }
+    return shared_load_site_config(path)
 
 
 SITE_CONFIG = load_site_config()
@@ -120,20 +112,13 @@ CANONICAL_SITE_URL = SITE_CONFIG["canonicalUrl"]
 
 def create_http_session():
     """Create HTTP session with retry logic."""
-    retry = Retry(
-        total=MCP_RETRY_TOTAL,
-        connect=MCP_RETRY_TOTAL,
-        read=MCP_RETRY_TOTAL,
-        status=MCP_RETRY_TOTAL,
+    return shared_create_http_session(
+        retry_total=MCP_RETRY_TOTAL,
         backoff_factor=MCP_BACKOFF_FACTOR,
-        status_forcelist=[429, 500, 502, 503, 504],
+        user_agent=MCP_USER_AGENT,
+        allowed_methods=("GET", "HEAD", "OPTIONS"),
+        raise_on_status=False,
     )
-    adapter = HTTPAdapter(max_retries=retry)
-    session = requests.Session()
-    session.mount("http://", adapter)
-    session.mount("https://", adapter)
-    session.headers.update({"User-Agent": MCP_USER_AGENT})
-    return session
 
 
 def call_mcp_tool(session: requests.Session, tool_name: str, arguments: dict = None):
@@ -187,8 +172,13 @@ def call_mcp_tool(session: requests.Session, tool_name: str, arguments: dict = N
         except (json.JSONDecodeError, KeyError, TypeError, IndexError) as e:
             print(f"Error parsing MCP response for {tool_name}: {e}")
             return []
-    except Exception as e:
-        print(f"Error calling MCP tool {tool_name}: {e}")
+    except (
+        requests.exceptions.RequestException,
+        json.JSONDecodeError,
+        TypeError,
+        ValueError,
+    ) as exc:
+        print(f"Error calling MCP tool {tool_name}: {exc}")
         return []
 
 
@@ -226,7 +216,14 @@ def call_mcp_fetch_metadata(session: requests.Session, item_id: str) -> dict:
         parsed = json.loads(text)
         metadata = parsed.get("metadata")
         return metadata if isinstance(metadata, dict) else {}
-    except Exception:
+    except (
+        requests.exceptions.RequestException,
+        json.JSONDecodeError,
+        TypeError,
+        ValueError,
+        KeyError,
+        IndexError,
+    ):
         return {}
 
 
@@ -243,7 +240,12 @@ def call_roadmap_item_details(session: requests.Session, item_id: str) -> dict:
         response.raise_for_status()
         payload = response.json()
         return payload if isinstance(payload, dict) else {}
-    except Exception:
+    except (
+        requests.exceptions.RequestException,
+        json.JSONDecodeError,
+        TypeError,
+        ValueError,
+    ):
         return {}
 
 
@@ -358,40 +360,12 @@ def extract_when_will_happen_dates(text: str) -> dict:
 
 def normalize_url(url: str) -> str:
     """Normalize DeltaPulse URLs for deduplication."""
-    if not url:
-        return ""
-    
-    # Parse URL
-    parsed = urlsplit(url.strip())
-    scheme = parsed.scheme.lower() or "https"
-    hostname = (parsed.hostname or "").lower().rstrip(".")
-    
-    # Remove www. prefix
-    if hostname.startswith("www."):
-        hostname = hostname[4:]
-    
-    # Normalize port
-    port = parsed.port or DEFAULT_PORTS.get(scheme)
-    if port and port == DEFAULT_PORTS.get(scheme):
-        port = None  # Omit default port
-    netloc = f"{hostname}:{port}" if port else hostname
-    
-    # Normalize path (remove duplicate slashes, trailing slash)
-    path = re.sub(r"/+", "/", parsed.path).rstrip("/") or "/"
-    
-    # Filter tracking parameters
-    query_params = dict(parse_qsl(parsed.query or ""))
-    query_params = {
-        k: v for k, v in query_params.items()
-        if not any(k.startswith(prefix) for prefix in TRACKING_QUERY_PREFIXES)
-        and k not in TRACKING_QUERY_KEYS
-    }
-    
-    # Sort remaining parameters
-    query = urlencode(sorted(query_params.items())) if query_params else ""
-    
-    # Reconstruct URL (no fragment)
-    return urlunsplit((scheme, netloc, path, query, ""))
+    return canonicalize_url(
+        url,
+        tracking_query_prefixes=TRACKING_QUERY_PREFIXES,
+        tracking_query_keys=TRACKING_QUERY_KEYS,
+        default_scheme="https",
+    )
 
 
 def classify_m365_lifecycle(item: dict) -> str:
@@ -538,6 +512,79 @@ def categorize_by_product(articles: list) -> dict:
     return {k: v for k, v in categories.items() if v}  # Remove empty categories
 
 
+ROADMAP_DETAIL_FIELDS = (
+    "description",
+    "product",
+    "status",
+    "releaseDate",
+    "createdDate",
+    "modifiedDate",
+    "lastUpdated",
+    "cloudInstances",
+    "releasePhase",
+    "platforms",
+    "thirdPartyLinks",
+    "isMajorChange",
+)
+
+MCP_METADATA_FIELDS = (
+    "status",
+    "severity",
+    "category",
+    "service",
+    "months",
+    "releaseDate",
+    "targetedReleaseDate",
+    "targetDate",
+    "expectedReleaseDate",
+    "deploymentDate",
+    "publishedDate",
+    "lastUpdatedDate",
+    "createdDate",
+    "modifiedDate",
+    "isMajorChange",
+)
+
+
+def _apply_patch_if_missing(item: dict, patch: dict):
+    """Apply patch fields only when item field is missing/empty."""
+    for key, value in patch.items():
+        if key not in item or item.get(key) in (None, "", []):
+            item[key] = value
+
+
+def _enrich_m365_item(session: requests.Session, item: dict) -> dict:
+    """Build enrichment patch for a single M365 item."""
+    item_id = str(item.get("id", "")).strip()
+    source = str(item.get("source", "")).strip().lower()
+    patch = {}
+
+    if source == "roadmap":
+        roadmap_details = call_roadmap_item_details(session, item_id)
+        for field in ROADMAP_DETAIL_FIELDS:
+            if field in roadmap_details:
+                patch[field] = roadmap_details.get(field)
+
+        extracted_dates = extract_when_will_happen_dates(roadmap_details.get("description", ""))
+        for key, value in extracted_dates.items():
+            if value:
+                patch[key] = value
+
+    metadata = call_mcp_fetch_metadata(session, item_id)
+    if metadata:
+        for field in MCP_METADATA_FIELDS:
+            if field in metadata:
+                patch[field] = metadata.get(field)
+
+        if source == "roadmap":
+            metadata_dates = extract_when_will_happen_dates(metadata.get("description", ""))
+            for key, value in metadata_dates.items():
+                if value:
+                    patch[key] = value
+
+    return patch
+
+
 def fetch_m365_items(session: requests.Session) -> list:
     """Fetch new and updated M365 items from DeltaPulse MCP."""
     print("Fetching M365 items from DeltaPulse MCP...")
@@ -573,65 +620,25 @@ def fetch_m365_items(session: requests.Session) -> list:
             by_key[key] = item
 
     print(f"  - Enriching metadata for {len(by_key)} unique items...")
-    for item in by_key.values():
-        item_id = str(item.get("id", "")).strip()
-        source = str(item.get("source", "")).strip().lower()
-
-        roadmap_details = {}
-        if source == "roadmap":
-            roadmap_details = call_roadmap_item_details(session, item_id)
-            for field in (
-                "description",
-                "product",
-                "status",
-                "releaseDate",
-                "createdDate",
-                "modifiedDate",
-                "lastUpdated",
-                "cloudInstances",
-                "releasePhase",
-                "platforms",
-                "thirdPartyLinks",
-                "isMajorChange",
-            ):
-                if field in roadmap_details and (field not in item or item.get(field) in (None, "", [])):
-                    item[field] = roadmap_details.get(field)
-
-            extracted_dates = extract_when_will_happen_dates(roadmap_details.get("description", ""))
-            for key, value in extracted_dates.items():
-                if value and (key not in item or item.get(key) in (None, "", [])):
-                    item[key] = value
-
-        metadata = call_mcp_fetch_metadata(session, item_id)
-        if not metadata:
-            continue
-
-        # Keep existing top-level fields when present, use metadata as fallback.
-        for field in (
-            "status",
-            "severity",
-            "category",
-            "service",
-            "months",
-            "releaseDate",
-            "targetedReleaseDate",
-            "targetDate",
-            "expectedReleaseDate",
-            "deploymentDate",
-            "publishedDate",
-            "lastUpdatedDate",
-            "createdDate",
-            "modifiedDate",
-            "isMajorChange",
-        ):
-            if field in metadata and (field not in item or item.get(field) in (None, "", [])):
-                item[field] = metadata.get(field)
-
-        if source == "roadmap":
-            metadata_dates = extract_when_will_happen_dates(metadata.get("description", ""))
-            for key, value in metadata_dates.items():
-                if value and (key not in item or item.get(key) in (None, "", [])):
-                    item[key] = value
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MCP_MAX_WORKERS) as executor:
+        future_to_item = {
+            executor.submit(_enrich_m365_item, session, item): item
+            for item in by_key.values()
+        }
+        for future in concurrent.futures.as_completed(future_to_item):
+            item = future_to_item[future]
+            try:
+                patch = future.result()
+            except (
+                requests.exceptions.RequestException,
+                json.JSONDecodeError,
+                TypeError,
+                ValueError,
+            ) as exc:
+                item_id = str(item.get("id", "")).strip() or "unknown"
+                print(f"  Warning: enrichment failed for {item_id}: {exc}")
+                continue
+            _apply_patch_if_missing(item, patch)
     
     print(f"  - Total raw items: {len(all_items)}")
     return all_items
@@ -641,24 +648,12 @@ def _extract_youtube_video_id(url: str) -> str:
     """Extract YouTube video ID from watch or youtu.be URL."""
     if not isinstance(url, str) or not url:
         return ""
-
-    parsed = urlsplit(url)
-    if parsed.netloc.endswith("youtu.be"):
-        return parsed.path.strip("/")
-
-    query = dict(parse_qsl(parsed.query or ""))
-    if "v" in query:
-        return query["v"]
-
-    return ""
+    return shared_extract_youtube_video_id(url)
 
 
 def _build_thumbnail_from_video_url(url: str) -> str:
     """Build a YouTube thumbnail URL from a video URL."""
-    video_id = _extract_youtube_video_id(url)
-    if not video_id:
-        return ""
-    return f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
+    return shared_build_youtube_thumbnail_from_video_url(url)
 
 
 def _build_youtube_thumbnail_from_video_url(url: str) -> str:
@@ -672,26 +667,12 @@ def _resolve_youtube_channel_id_from_seed(
     timeout,
 ) -> str:
     """Resolve a YouTube channel id by reading the seed video page payload."""
-    seed_resp = session.get(seed_url, timeout=timeout)
-    seed_resp.raise_for_status()
-    html = seed_resp.text
-
-    channel_match = re.search(r'"channelId"\s*:\s*"([A-Za-z0-9_-]+)"', html)
-    if not channel_match:
-        return ""
-    return channel_match.group(1)
+    return shared_resolve_youtube_channel_id_from_seed(session, seed_url, timeout)
 
 
 def _select_best_youtube_video_entry(entries: list, match_score_fn):
     """Select highest scoring entry; fall back to latest upload when no match."""
-    if not entries:
-        return None, False
-
-    best = max(entries, key=match_score_fn)
-    used_fallback = match_score_fn(best) <= 0
-    if used_fallback:
-        best = entries[0]
-    return best, used_fallback
+    return shared_select_best_youtube_video_entry(entries, match_score_fn)
 
 
 def _normalize_summary_title(value: str) -> str:
@@ -773,7 +754,14 @@ def fetch_m365_video(session: requests.Session) -> dict:
             "thumbnail": thumbnail or fallback["thumbnail"],
         }
 
-    except Exception as exc:
+    except (
+        requests.exceptions.RequestException,
+        json.JSONDecodeError,
+        TypeError,
+        ValueError,
+        KeyError,
+        IndexError,
+    ) as exc:
         print(f"  Error fetching Microsoft 365 video: {exc}")
         return fallback
 
@@ -835,33 +823,14 @@ def write_m365_data(feed_data: dict, output_path: Path = M365_DATA_OUTPUT) -> bo
             json.dump(feed_data, f, indent=2, ensure_ascii=False)
         print(f"M365 data written to {output_path}")
         return True
-    except Exception as e:
-        print(f"Error writing M365 data: {e}")
+    except (OSError, TypeError, ValueError) as exc:
+        print(f"Error writing M365 data: {exc}")
         return False
 
 
 def build_checksums_payload(paths: list, generated_at: str = None) -> dict:
     """Build checksum metadata (same pattern as Azure feed)."""
-    timestamp = generated_at or datetime.now(timezone.utc).isoformat()
-    artifacts = []
-    
-    for path in paths:
-        sha256 = hashlib.sha256()
-        with open(path, "rb") as f:
-            for chunk in iter(lambda: f.read(8192), b""):
-                sha256.update(chunk)
-        
-        artifacts.append({
-            "path": Path(path).as_posix(),
-            "algorithm": "sha256",
-            "value": sha256.hexdigest(),
-            "generatedAt": timestamp,
-        })
-    
-    return {
-        "generatedAt": timestamp,
-        "artifacts": artifacts,
-    }
+    return shared_build_checksums_payload(paths, generated_at=generated_at)
 
 
 def write_m365_checksums(m365_data_path: Path, output_path: Path = M365_CHECKSUMS_OUTPUT) -> bool:
@@ -875,35 +844,26 @@ def write_m365_checksums(m365_data_path: Path, output_path: Path = M365_CHECKSUM
         
         print(f"M365 checksums written to {output_path}")
         return True
-    except Exception as e:
-        print(f"Error writing checksums: {e}")
+    except (OSError, TypeError, ValueError) as exc:
+        print(f"Error writing checksums: {exc}")
         return False
 
 
 def load_previous_article_count(path: Path = M365_DATA_OUTPUT) -> int:
     """Load previous article count for failsafe comparison."""
-    try:
-        if not path.exists():
-            return None
-        with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data.get("totalArticles")
-    except (json.JSONDecodeError, FileNotFoundError, IOError):
-        return None
+    return shared_load_previous_article_count(path)
 
 
 def evaluate_m365_failsafe(new_count: int, previous_count: int = None) -> tuple:
     """Evaluate publish failsafe (same logic as Azure feed)."""
     if previous_count is None:
         return False, "baseline_unavailable"
-    
-    relative_trigger = (new_count / max(previous_count, 1)) < FAILSAFE_MIN_RATIO
-    absolute_trigger = new_count < FAILSAFE_MIN_ARTICLES and previous_count >= FAILSAFE_MIN_ARTICLES
-    
-    details = f"relative_trigger={relative_trigger}, absolute_trigger={absolute_trigger}"
-    triggered = relative_trigger or absolute_trigger
-    
-    return triggered, details
+    return shared_evaluate_publish_failsafe(
+        new_count,
+        previous_count,
+        min_articles=FAILSAFE_MIN_ARTICLES,
+        min_ratio=FAILSAFE_MIN_RATIO,
+    )
 
 
 def main():
