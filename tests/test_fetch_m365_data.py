@@ -76,28 +76,28 @@ class DedupeM365ArticlesTests(unittest.TestCase):
         self.assertIn("First version", titles)
         self.assertIn("Unique article", titles)
 
-        def test_keeps_distinct_message_center_ids(self):
-            """Different message IDs should not be deduped together."""
-            fresh = datetime.now(timezone.utc).isoformat()
-            articles = [
-                {
-                    "title": "Msg A",
-                    "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC100",
-                    "published": fresh,
-                    "m365Source": "message_center",
-                    "m365Id": "MC100",
-                },
-                {
-                    "title": "Msg B",
-                    "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC200",
-                    "published": fresh,
-                    "m365Source": "message_center",
-                    "m365Id": "MC200",
-                },
-            ]
+    def test_keeps_distinct_message_center_ids(self):
+        """Different message IDs should not be deduped together."""
+        fresh = datetime.now(timezone.utc).isoformat()
+        articles = [
+            {
+                "title": "Msg A",
+                "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC100",
+                "published": fresh,
+                "m365Source": "message_center",
+                "m365Id": "MC100",
+            },
+            {
+                "title": "Msg B",
+                "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC200",
+                "published": fresh,
+                "m365Source": "message_center",
+                "m365Id": "MC200",
+            },
+        ]
 
-            deduped = fetch_m365_data.dedupe_m365_articles(articles)
-            self.assertEqual(len(deduped), 2)
+        deduped = fetch_m365_data.dedupe_m365_articles(articles)
+        self.assertEqual(len(deduped), 2)
     
     def test_discards_stale_articles(self):
         """Articles older than 30 days should be discarded."""
@@ -333,19 +333,19 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         article = fetch_m365_data.build_article_from_m365_item(item)
         self.assertEqual(article["published"], "2026-03-18T10:00:00.000Z")
 
-        def test_published_date_uses_created_date(self):
-            """Roadmap items should use createdDate when datetime fields are absent."""
-            item = {
-                "id": "558435",
-                "title": "Roadmap item",
-                "source": "roadmap",
-                "status": "In development",
-                "service": [],
-                "createdDate": "2026-03-18T00:00:00.000Z",
-            }
+    def test_published_date_uses_created_date(self):
+        """Roadmap items should use createdDate when datetime fields are absent."""
+        item = {
+            "id": "558435",
+            "title": "Roadmap item",
+            "source": "roadmap",
+            "status": "In development",
+            "service": [],
+            "createdDate": "2026-03-18T00:00:00.000Z",
+        }
 
-            article = fetch_m365_data.build_article_from_m365_item(item)
-            self.assertEqual(article["published"], "2026-03-18T00:00:00.000Z")
+        article = fetch_m365_data.build_article_from_m365_item(item)
+        self.assertEqual(article["published"], "2026-03-18T00:00:00.000Z")
 
 
 class CategorizeByProductTests(unittest.TestCase):
@@ -447,6 +447,41 @@ class BuildM365FeedTests(unittest.TestCase):
             previous_count=None,
         )
         self.assertFalse(triggered)
+
+
+class M365ConcurrencyTests(unittest.TestCase):
+    """Test concurrent enrichment behavior for M365 items."""
+
+    def test_fetch_m365_items_enriches_unique_items_once(self):
+        session = mock.Mock()
+
+        new_items = [
+            {"id": "RM100", "source": "roadmap", "title": "Roadmap A"},
+            {"id": "RM100", "source": "roadmap", "title": "Roadmap A duplicate"},
+            {"id": "MC200", "source": "message_center", "title": "Message B"},
+        ]
+        updated_items = []
+
+        def enrich_side_effect(_session, item):
+            if item.get("id") == "RM100":
+                return {"status": "In Development"}
+            return {"severity": "high"}
+
+        with mock.patch.object(
+            fetch_m365_data,
+            "call_mcp_tool",
+            side_effect=[new_items, updated_items],
+        ), mock.patch.object(
+            fetch_m365_data,
+            "_enrich_m365_item",
+            side_effect=enrich_side_effect,
+        ) as enrich_mock:
+            items = fetch_m365_data.fetch_m365_items(session)
+
+        self.assertEqual(len(items), 3)
+        self.assertEqual(enrich_mock.call_count, 2)
+        self.assertEqual(items[0].get("status"), "In Development")
+        self.assertEqual(items[2].get("severity"), "high")
 
 
 class YouTubeVideoHelperTests(unittest.TestCase):
