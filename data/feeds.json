@@ -1,15 +1,131 @@
 {
-  "lastUpdated": "2026-03-27T12:09:38.480557+00:00",
-  "totalArticles": 411,
+  "lastUpdated": "2026-03-30T12:58:39.324067+00:00",
+  "totalArticles": 384,
   "articles": [
+    {
+      "title": "CI/CD as a Platform: Shipping Microservices and AI Agents with Reusable GitHub Actions Workflows",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ci-cd-as-a-platform-shipping-microservices-and-ai-agents-with/ba-p/4504550",
+      "published": "2026-03-30T10:48:39+00:00",
+      "summary": "The First Shift — Treating CI/CD as a Platform The first insight is straightforward but underused: Your CI/CD logic is infrastructure. It deserves the same design discipline as your application code. That means centralizing it. Versioning it. Exposing it as reusable, callable workflows — not...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "nasreensarah"
+    },
+    {
+      "title": "From Toil to Trust: How Azure SRE Agent Is Redefining Cloud Operations",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-toil-to-trust-how-azure-sre-agent-is-redefining-cloud/ba-p/4505875",
+      "published": "2026-03-30T07:59:46+00:00",
+      "summary": "As Azure environments scale, infrastructure teams face a familiar challenge: operating reliably at scale.Outages are no longer caused by a single VM or misconfigured service—they emerge from complex dependencies across compute, networking, storage, and platform services. Azure SRE Agent is designed...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "siddhigupta"
+    },
+    {
+      "title": "Building Your First Local RAG Application with Foundry Local",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-your-first-local-rag-application-with-foundry-local/ba-p/4501968",
+      "published": "2026-03-30T07:00:00+00:00",
+      "summary": "A developer's guide to building an offline, mobile-responsive AI support agent using Retrieval-Augmented Generation, the Foundry Local SDK, and JavaScript. Imagine you are a gas field engineer standing beside a pipeline in a remote location. There is no Wi-Fi, no mobile signal, and you need a...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "Lee_Stott"
+    },
+    {
+      "title": "Gain Visibility into Cloud Browser Usage with Browser Activity Logs in Playwright Workspaces",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/gain-visibility-into-cloud-browser-usage-with-browser-activity/ba-p/4506706",
+      "published": "2026-03-30T06:28:43+00:00",
+      "summary": "Today, we're announcing a new feature to view the usage metrics for a browser session using the Browser Activity Logs in Playwright Workspaces. Modern test automation and browser-based workflows increasingly rely on cloud-hosted browsers. As teams scale their usage across test runs, automation...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "AbhinavPremsekhar"
+    },
+    {
+      "title": "Synchronizing Azure Storage Across Isolated Private Endpoint Networks",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/synchronizing-azure-storage-across-isolated-private-endpoint/ba-p/4504564",
+      "published": "2026-03-30T05:17:31+00:00",
+      "summary": "Introduction In Azure repatriation programs, enterprises often need to migrate large volumes of blob data from a source Azure environment to a target Azure environment under strict security and network isolation constraints. A typical repatriation setup includes fully isolated source and target...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "deepakkumarv"
+    },
+    {
+      "title": "Autonomous Self-Healing for Azure VMware Solution Private Clouds",
+      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/autonomous-self-healing-for-azure-vmware-solution-private-clouds/ba-p/4506374",
+      "published": "2026-03-27T23:51:43+00:00",
+      "summary": "Overview Azure VMware Solution operates a global fleet of production private clouds, each running a full VMware NSX and vCenter Server control plane. As an example, when a VMware NSX Manager cluster loses quorum, NSX can surface multiple related alarms, but the documented impact is more specific...",
+      "blog": "Azure Migration",
+      "blogId": "azuremigrationblog",
+      "author": "RohanB"
+    },
+    {
+      "title": "What AI Agents for Modernization Look Like in Practice",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-ai-agents-for-modernization-look-like-in-practice/ba-p/4506366",
+      "published": "2026-03-27T19:50:30+00:00",
+      "summary": "We’ve all been put onto an initiative to “modernize” our company’s applications. But talk about a haphazard and confusing project to be put on. Apps are older than anyone first thought, there are dependencies nobody can explain, and business critical services blocked behind another team's roadmap....",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "PabloLopes"
+    },
     {
       "title": "Building the agentic future together at JDConf 2026",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-the-agentic-future-together-at-jdconf-2026/ba-p/4505367",
-      "published": "2026-03-27T11:00:00+00:00",
+      "published": "2026-03-27T18:39:18+00:00",
       "summary": "JDConf 2026 is just weeks away, and I’m excited to welcome Java developers, architects, and engineering leaders from around the world for two days of learning and connection. Now in its sixth year, JDConf has become a place where the Java community compares notes on their real-world production...",
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "Mayunk_Jain"
+    },
+    {
+      "title": "Introducing capacity overage flexibility when you need it most",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/introducing-capacity-overage-preview-flexibility-when-you-need-it-most/",
+      "published": "2026-03-27T09:30:00+00:00",
+      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Capacity overage, is a new opt‑in...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
+      "title": "Microsoft JDBC Driver for Microsoft Fabric Data Engineering",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-jdbc-driver-for-microsoft-fabric-data-engineering-generally-available/",
+      "published": "2026-03-27T09:00:00+00:00",
+      "summary": "The enterprise-grade JDBC driver enables secure, flexible, and performant connectivity to Spark SQL workloads running in Microsoft Fabric, using Fabric’s Livy APIs as the execution layer.Update Type: GA, Services: Microsoft Fabric, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Workspace‑level customer‑managed keys support in BYOK‑enabled Microsoft Fabric capacities",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/workspace%E2%80%91level-customer%E2%80%91managed-keys-support-in-byok%E2%80%91enabled-microsoft-fabric-capacities-preview/",
+      "published": "2026-03-27T08:30:00+00:00",
+      "summary": "Enterprise analytics platforms increasingly operate under strict security, compliance, and regulatory requirements. For many organizations, encryption is not sufficient without clear ownership and control of cryptographic keys.Update Type: Preview, Services: Microsoft Fabric, Categories:...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
+      "title": "On-premises data gateway March 2026 release",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-march-2026-release/",
+      "published": "2026-03-27T08:16:42+00:00",
+      "summary": "Here is the March 2026 release of the on-premises data gateway (version 3000.310).Update Type: Announcement, Services: , Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
+    },
+    {
+      "title": "Mastering monitoring in Microsoft Fabric Data Warehouse",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/mastering-monitoring-in-microsoft-fabric-data-warehouse/",
+      "published": "2026-03-27T08:00:00+00:00",
+      "summary": "Modern analytics workloads demand more than fast queries — they demand observability.Update Type: Announcement, Services: Microsoft Fabric, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
     },
     {
       "title": "Unit Testing Helm Charts with Terratest: A Pattern Guide for Type-Safe Validation",
@@ -1025,15 +1141,6 @@
       "author": "Microsoft",
       "announcementType": "update",
       "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Synchronizing Azure Storage Across Isolated Private Endpoint Networks",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/synchronizing-azure-storage-across-isolated-private-endpoint/ba-p/4504564",
-      "published": "2026-03-24T08:27:32+00:00",
-      "summary": "Introduction In Azure repatriation programs, enterprises often need to migrate large volumes of blob data from a source Azure environment to a target Azure environment under strict security and network isolation constraints. A typical repatriation setup includes fully isolated source and target...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "deepakkumarv"
     },
     {
       "title": "Announcing Public Preview of Argo CD extension on AKS and Azure Arc enabled Kubernetes clusters",
@@ -3224,15 +3331,6 @@
       "author": "Maddy Montaquila"
     },
     {
-      "title": "What It Takes to Give SRE Agent a Useful Starting Point",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-it-takes-to-give-sre-agent-a-useful-starting-point/ba-p/4500343",
-      "published": "2026-03-10T16:10:29+00:00",
-      "summary": "In our latest posts, The Agent that investigates itself and Azure SRE Agent Now Builds Expertise Like Your Best Engineer Introducing Deep Context, we wrote about a moment that changed how we think about agent systems. Azure SRE Agent investigated a regression in its own prompt cache, traced the...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "Dalibor_Kovacevic"
-    },
-    {
       "title": "Migrating On-prem Windows & Linux VMs to Azure Confidential Virtual Machines via Azure Migrate",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-on-prem-windows-linux-vms-to-azure-confidential/ba-p/4500898",
       "published": "2026-03-10T15:09:25+00:00",
@@ -3240,15 +3338,6 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "SamhithaGurumurthy"
-    },
-    {
-      "title": "What's new in Azure SRE Agent in the GA release",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-sre-agent-in-the-ga-release/ba-p/4500779",
-      "published": "2026-03-10T15:03:50+00:00",
-      "summary": "Azure SRE Agent is now generally available (read the GA announcement). . After months in preview with teams across Microsoft and early customers, here's what's shipping at GA. We use SRE Agent in our team We built SRE Agent to solve our own operational problems first. It investigates our...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "dchelupati"
     },
     {
       "title": "Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery",
@@ -3582,15 +3671,6 @@
       "author": "NogaRonen"
     },
     {
-      "title": "Phi-4-Reasoning-Vision-15B: Use Cases In-Depth",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/phi-4-reasoning-vision-15b-use-cases-in-depth/ba-p/4499210",
-      "published": "2026-03-04T18:00:00+00:00",
-      "summary": "Phi-4-Reasoning-vision-15B is Microsoft's latest vision reasoning model released on Microsoft Foundry. It combines high-resolution visual perception with selective, task-aware reasoning, making it the first model in the Phi-4 family to simultaneously achieve both \"seeing clearly\" and \"thinking...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "kinfey"
-    },
-    {
       "title": "Announcing the General Availability of the Azure Maps Geocode Autocomplete API",
       "link": "https://techcommunity.microsoft.com/t5/azure-maps-blog/announcing-the-general-availability-of-the-azure-maps-geocode/ba-p/4499242",
       "published": "2026-03-04T17:22:55+00:00",
@@ -3868,372 +3948,9 @@
       "blogId": "azttyupdates",
       "author": "Microsoft",
       "announcementType": "update"
-    },
-    {
-      "title": "Generally Available: DCesv6, DCedsv6, ECesv6, and ECedsv6 confidential VMs",
-      "link": "https://azure.microsoft.com/en-us/updates/558051/",
-      "published": "2026-02-27T23:15:13.568282+00:00",
-      "summary": "The DCesv6, DCedsv6, ECesv6, and ECedsv6 series are Azure’s next generation of confidential Virtual Machines (VMs) based on 5th Gen Intel® Xeon® processors with Intel® Trust Domain Extensions (Intel® TDX). These new confidential VMs help organizations to move their most sensitive workloads to the...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "launched_ga",
-      "azureGeneralAvailabilityDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "Launched"
-    },
-    {
-      "title": "Generally Available: Azure Premium SSD v2 Disk Storage is now available in a third Availability Zone in New Zealan North",
-      "link": "https://azure.microsoft.com/en-us/updates/558078/",
-      "published": "2026-02-27T23:15:13.568282+00:00",
-      "summary": "Azure Premium SSD v2 is now available in a third Availability Zone in New Zealand North. Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, offers sub-millisecond latencies and exceptional price performance for IO-intensive workloads at a...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "launched_ga",
-      "azureGeneralAvailabilityDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "Launched"
-    },
-    {
-      "title": "Azure Premium SSD v2 Disk Storage is now available in a third Availability Zone in New Zealan North",
-      "link": "https://azure.microsoft.com/updates?id=558078",
-      "published": "2026-02-27T23:15:13+00:00",
-      "summary": "Azure Premium SSD v2 is now available in a third Availability Zone in New Zealand North. Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, offers sub-millisecond latencies and exceptional priceUpdate Type: GA, Services: Virtual Machines,...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "DCesv6, DCedsv6, ECesv6, and ECedsv6 confidential VMs",
-      "link": "https://azure.microsoft.com/updates?id=558051",
-      "published": "2026-02-27T23:15:13+00:00",
-      "summary": "The DCesv6, DCedsv6, ECesv6, and ECedsv6 series are Azure’s next generation of confidential Virtual Machines (VMs) based on 5th Gen Intel® Xeon® processors with Intel® Trust Domain Extensions (Intel® TDX). These new confidential VMs help organizations toUpdate Type: GA, Services: Virtual Machines,...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Retirement: Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
-      "link": "https://azure.microsoft.com/en-us/updates/555839/",
-      "published": "2026-02-27T21:45:03.134436+00:00",
-      "summary": "The upstream Ingress-NGINX project is being deprecated and will stop receiving updates after March 2026. Microsoft will continue providing critical security patches through 30 November 2026, after which the NGINX ingress controller will no longer be supported within the Application Routing add-on....",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "retiring",
-      "azureRetirementDate": "2026-11"
-    },
-    {
-      "title": "Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
-      "link": "https://azure.microsoft.com/updates?id=555839",
-      "published": "2026-02-27T21:45:03+00:00",
-      "summary": "The upstream Ingress-NGINX project is being deprecated and will stop receiving updates after March 2026. Microsoft will continue providing critical security patches through 30 November 2026, after which the NGINX ingress controller will no longer be suppo [Sevice: Kubernetes Service, Target Date:...",
-      "blog": "Azure Deprecations (aztty)",
-      "blogId": "azuredeprecations",
-      "author": "Microsoft",
-      "announcementType": "deprecation",
-      "lifecycle": "retiring",
-      "azureRetirementDate": "2026-11"
-    },
-    {
-      "title": "Updates to Team Calendar extension",
-      "link": "https://devblogs.microsoft.com/devops/updates-to-team-calendar-extension/",
-      "published": "2026-02-27T18:30:30+00:00",
-      "summary": "We are excited to release a new update to the Team Calendar extension. This update includes a series of visual refinements across the extension, introducing a more consistent design language, smoother transitions when expanding and collapsing sections, improved contrast for better readability, an...",
-      "blog": "Azure DevOps Blog",
-      "blogId": "azuredevops",
-      "author": "Dan Hellem"
-    },
-    {
-      "title": "Generally Available: Azure Red Hat OpenShift is now available in Malaysia West, New Zealand North, and Mexico Central",
-      "link": "https://azure.microsoft.com/en-us/updates/557897/",
-      "published": "2026-02-27T17:30:41.173409+00:00",
-      "summary": "Azure Red Hat OpenShift is now generally available in three additional Azure regions: Malaysia West, New Zealand North, and Mexico Central. This expansion strengthens Azure Red Hat OpenShift’s presence across Asia Pacific and Latin America, enabling customers to deploy managed OpenShift clusters...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "launched_ga",
-      "azureGeneralAvailabilityDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "Launched"
-    },
-    {
-      "title": "Azure Red Hat OpenShift is now available in Malaysia West, New Zealand North, and Mexico Central",
-      "link": "https://azure.microsoft.com/updates?id=557897",
-      "published": "2026-02-27T17:30:41+00:00",
-      "summary": "Azure Red Hat OpenShift is now generally available in three additional Azure regions: Malaysia West, New Zealand North, and Mexico Central. This expansion strengthens Azure Red Hat OpenShift’s presence across Asia Pacific and Latin America, enabling custoUpdate Type: GA, Services: Kubernetes...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Top 5 Microsoft Sentinel Queries for Threat Hunting",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/top-5-microsoft-sentinel-queries-for-threat-hunting/ba-p/4497667",
-      "published": "2026-02-27T16:00:00+00:00",
-      "summary": "Threat hunting in Microsoft Sentinel goes beyond relying on scheduled analytics rules. It’s about proactively asking better questions of your data to uncover stealthy or emerging attacker behavior before it turns into an incident. Effective hunting helps security teams spot activity that may never...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "SonjaEd"
-    },
-    {
-      "title": "Evolving the Network Operations Agent Framework: Driving the Next Wave of Autonomous Networks",
-      "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/evolving-the-network-operations-agent-framework-driving-the-next/ba-p/4496607",
-      "published": "2026-02-27T14:23:07+00:00",
-      "summary": "The original announcement of the Network Operations Agent (NOA) Framework outlined a bold mission: provide telecom operators with a modular, multiagent foundation to accelerate the journey toward autonomous networks. NOA combined intelligent agents, unified data access, and strong governance to...",
-      "blog": "Telecommunications",
-      "blogId": "telecommunications-industry-blog",
-      "author": "rickliev"
-    },
-    {
-      "title": "Fabric Influencers Spotlight February 2026",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-february-2026/",
-      "published": "2026-02-27T10:00:00+00:00",
-      "summary": "Welcome to the February 2026 edition of the Fabric Influencers Spotlight, a recurring monthly post here to shine a bright light on the places on the internet where Microsoft MVPs & Fabric Super Users are doing some amazing work on all aspects of Microsoft Fabric. The Microsoft Fabric Community team...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Azure DocumentDB: A Fully Managed MongoDB-Compatible Database",
-      "link": "https://devblogs.microsoft.com/cosmosdb/azure-documentdb-mongodb-compatible/",
-      "published": "2026-02-27T00:58:03+00:00",
-      "summary": "Running MongoDB at scale eventually forces a trade-off: invest heavily in managing your own infrastructure or move to a managed service and risk losing the compatibility and portability your team depends on. Azure DocumentDB is a fully managed, MongoDB-compatible database on Azure, built on an...",
-      "blog": "Azure Cosmos DB Blog",
-      "blogId": "cosmosdbblog",
-      "author": "Khelan Modi"
-    },
-    {
-      "title": "Announcing new public preview capabilities in Azure Monitor pipeline",
-      "link": "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-new-public-preview-capabilities-in-azure-monitor/ba-p/4488904",
-      "published": "2026-02-26T23:27:24+00:00",
-      "summary": "Azure Monitor pipeline, similar to ETL (Extract, Transform, Load) process, enhances traditional data collection methods. It streamlines data collection from various sources through a unified ingestion pipeline and utilizes a standardized configuration approach that is more efficient and scalable....",
-      "blog": "Azure Observability",
-      "blogId": "azureobservabilityblog",
-      "author": "XemaPathak"
-    },
-    {
-      "title": "Public Preview: Azure Monitor pipeline transformations",
-      "link": "https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-azure-monitor-pipeline-transformations/ba-p/4491980",
-      "published": "2026-02-26T23:25:47+00:00",
-      "summary": "Overview The Azure Monitor pipeline extends the data collection capabilities of Azure Monitor to edge and multi-cloud environments. It enables at-scale data collection (data collection over 100k EPS), and routing of telemetry data before it's sent to the cloud. The pipeline can cache data locally...",
-      "blog": "Azure Observability",
-      "blogId": "azureobservabilityblog",
-      "author": "susaraswat4"
-    },
-    {
-      "title": "Unlocking value with Microsoft Sentinel data lake",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/unlocking-value-with-microsoft-sentinel-data-lake/ba-p/4497660",
-      "published": "2026-02-26T22:28:54+00:00",
-      "summary": "As security telemetry explodes and AI‑driven defense becomes the norm, it is critical to centralize and retain massive volumes of data for deep analysis and long‑term insights. Security teams are fundamentally rethinking how they manage, analyze, and act on security data. The Microsoft Sentinel...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "atennant"
-    },
-    {
-      "title": "Oracle Database@Azure Is Now Generally Available in West Europe (Amsterdam)",
-      "link": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-is-now-generally-available-in-west-europe/ba-p/4497632",
-      "published": "2026-02-26T21:04:54+00:00",
-      "summary": "As organizations across Europe accelerate their cloud modernization and AI adoption, data locality, compliance, and performance remain critical decision factors. Over the past year, Microsoft and Oracle have worked closely to rapidly expand the global footprint of Oracle Database@Azure, bringing...",
-      "blog": "Oracle on Azure",
-      "blogId": "oracleonazureblog",
-      "author": "SparshAgrawat"
-    },
-    {
-      "title": "Public Preview: Restrict usage of user delegation SAS to an Entra ID identity",
-      "link": "https://azure.microsoft.com/en-us/updates/557694/",
-      "published": "2026-02-26T19:45:06.065942+00:00",
-      "summary": "We’re excited to announce the addition of enhanced secure authentication in Azure Storage that combines the flexibility of user-delegation shared access signature (SAS) with the user-bound access of Entra ID. User-bound user delegation SAS is now in preview for all regions. User delegation SAS is...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "in_preview",
-      "azurePreviewDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "In preview"
-    },
-    {
-      "title": "Restrict usage of user delegation SAS to an Entra ID identity",
-      "link": "https://azure.microsoft.com/updates?id=557694",
-      "published": "2026-02-26T19:45:06+00:00",
-      "summary": "We’re excited to announce the addition of enhanced secure authentication in Azure Storage that combines the flexibility of user-delegation shared access signature (SAS) with the user-bound access of Entra ID. User-bound user delegation SAS is now in previUpdate Type: Preview, Services: Microsoft...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Accelerating revenue in telecommunications through Agentic Sales Processes",
-      "link": "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/accelerating-revenue-in-telecommunications-through-agentic-sales/ba-p/4496523",
-      "published": "2026-02-26T19:06:30+00:00",
-      "summary": "Executive Summary Telecommunications providers are under unprecedented pressure to reignite revenue growth amid market saturation, commoditization of core services, rising infrastructure costs, and intensifying competition from digital‑native players. At the same time, customers demand seamless,...",
-      "blog": "Telecommunications",
-      "blogId": "telecommunications-industry-blog",
-      "author": "rodekirk"
-    },
-    {
-      "title": "Announcing general availability of Azure Intel® TDX confidential VMs",
-      "link": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-general-availability-of-azure-intel-tdx-confidential/ba-p/4495693",
-      "published": "2026-02-26T18:56:19+00:00",
-      "summary": "We’re excited to announce the general availability of Azure’s next generation of confidential virtual machines, powered by 5th Gen Intel® Xeon® processors with Intel® Trust Domain Extensions (Intel® TDX). These new confidential VMs make it easier than ever for organizations to move their most...",
-      "blog": "Confidential Computing",
-      "blogId": "azureconfidentialcomputingblog",
-      "author": "simranparkhe"
-    },
-    {
-      "title": "Announcing Public Preview: Simplified Machine Provisioning for Azure Local",
-      "link": "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-public-preview-simplified-machine-provisioning-for/ba-p/4496811",
-      "published": "2026-02-26T18:02:37+00:00",
-      "summary": "Deploying infrastructure at the edge has always been challenging. Whether it’s retail stores, factories, branch offices, or remote sites, getting servers racked, configured, and ready for workloads often require skilled IT staff on-site. That process is slow, expensive, and error-prone, especially...",
-      "blog": "Azure Arc",
-      "blogId": "azurearcblog",
-      "author": "PragyaDwivedi"
-    },
-    {
-      "title": "Azure SDK Release (February 2026)",
-      "link": "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2026/",
-      "published": "2026-02-26T16:00:26+00:00",
-      "summary": "Azure SDK releases every month. In this post, you'll find this month's highlights and release notes. The post Azure SDK Release (February 2026) appeared first on Azure SDK Blog.",
-      "blog": "Azure SDK Blog",
-      "blogId": "azuresdkblog",
-      "author": "Ronnie Geraghty"
-    },
-    {
-      "title": "Azure Container Registry Premium SKU Now Supports 100 TiB Storage",
-      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/azure-container-registry-premium-sku-now-supports-100-tib-storage/4497651",
-      "published": "2026-02-26T12:46:00+00:00",
-      "summary": "Today, we're excited to announce that Azure Container Registry Premium SKU now supports up to 100 TiB of registry storage—a 2.5x increase from the previous 40 TiB limit, and a 5x increase from the or...Update Type: Announcement, Services: Container Registry, Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Measuring actual AI Impact for Engineering with Apache DevLake",
-      "link": "https://devblogs.microsoft.com/all-things-azure/measuring-actual-ai-impact-for-engineering-with-apache-devlake/",
-      "published": "2026-02-26T10:06:19+00:00",
-      "summary": "If you want to skip the explain and get started super quick with adoption + impact insights, use gh-devlake to deploy a GitHub Copilot impact dashboard in a few CLI commands. So! You’ve rolled out GitHub Copilot to your engineering teams. You’ve got the built-in dashboards. You know how many seats...",
-      "blog": "All Things Azure",
-      "blogId": "allthingsazure",
-      "author": "Eldrick Wega"
-    },
-    {
-      "title": "New Azure API management service limits",
-      "link": "https://techcommunity.microsoft.com/blog/integrationsonazureblog/new-azure-api-management-service-limits/4497574",
-      "published": "2026-02-26T08:48:00+00:00",
-      "summary": "Azure API Management operates on finite physical infrastructure. To ensure reliable performance for all customers, the service enforces limits calibrated based on: Azure platform capacity and per...Update Type: Announcement, Services: API Management, Categories: Management",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Building a Secure MCP Server with OAuth 2.1 and Azure AD: Lessons from the Field",
-      "link": "https://devblogs.microsoft.com/ise/aca-secure-mcp-server-oauth21-azure-ad/",
-      "published": "2026-02-26T08:00:00+00:00",
-      "summary": "How we built a production-ready MCP server with OAuth 2.1 authentication and On-Behalf-Of flow for Microsoft Graph, navigating a rapidly evolving specification. The post Building a Secure MCP Server with OAuth 2.1 and Azure AD: Lessons from the Field appeared first on ISE Developer Blog.",
-      "blog": "ISE Developer Blog",
-      "blogId": "iseblog",
-      "author": "Juan Burckhardt"
-    },
-    {
-      "title": "The Polyglot Tax",
-      "link": "https://devblogs.microsoft.com/azure-sql/the-polyglot-tax/",
-      "published": "2026-02-26T01:09:47+00:00",
-      "summary": "Part 1 of 4 – The Multimodal Database Series This is a four-part series about what happens when a single database engine handles relational, document, graph, vector, and analytical workloads natively – and what you stop paying for when it does. You spin up a database, point an agent at it, and...",
-      "blog": "Azure SQL Dev Corner",
-      "blogId": "azuresqlblog",
-      "author": "Aditya Badramraju"
-    },
-    {
-      "title": "Public Preview: Secure ingestion and pod placement for Azure Monitor pipeline",
-      "link": "https://azure.microsoft.com/en-us/updates/552808/",
-      "published": "2026-02-26T00:30:50.364008+00:00",
-      "summary": "We are announcing several capabilities in public preview with Azure Monitor pipeline. Secure Ingress to Azure Monitor pipeline from external endpoints (TLS/mTLS) with Bring Your Own Certificates: BYOC empowers enterprises to maintain control and flexibility over certificate management, meeting...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "in_preview",
-      "azurePreviewDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "In preview"
-    },
-    {
-      "title": "Generally Available: Azure SQL updates for late-February 2026",
-      "link": "https://azure.microsoft.com/en-us/updates/557517/",
-      "published": "2026-02-25T19:00:32.192186+00:00",
-      "summary": "In late-February 2026, the following updates and enhancements were made to Azure SQL: Introducing Search Database Objects in the MSSQL extension for Visual Studio Code. Instantly find tables, views, functions, and procedures with full scripting options across your SQL database. Import your settings...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "launched_ga",
-      "azureGeneralAvailabilityDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "Launched"
-    },
-    {
-      "title": "Public Preview: Azure SQL updates for late-February 2026",
-      "link": "https://azure.microsoft.com/en-us/updates/557522/",
-      "published": "2026-02-25T18:45:40.544574+00:00",
-      "summary": "In late-February 2026, the following updates and enhancements were made to Azure SQL: Manage your databases directly from the dialog using actions such as Name, Rename, and Drop. Import a flat file to your database in the MSSQL Extension for Visual Studio Code. Database Backup dialog now provides...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "in_preview",
-      "azurePreviewDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "In preview"
-    },
-    {
-      "title": "Public Preview: Geo‑redundant backups for Premium SSD v2 in Azure Database for PostgreSQL",
-      "link": "https://azure.microsoft.com/en-us/updates/557532/",
-      "published": "2026-02-25T18:30:06.431203+00:00",
-      "summary": "You can now configure geo‑redundant backups with Premium SSD v2 disks for Azure Database for PostgreSQL, giving you an additional layer of disaster recovery for mission‑critical workloads. With this release, your automated backups are securely stored in a paired Azure region, so you can restore...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "in_preview",
-      "azurePreviewDate": "2026-02",
-      "azureTargetDate": "2026-02",
-      "azureStatus": "In preview"
-    },
-    {
-      "title": "MSSQL Extension for VS Code: Query Profiler, ADS Migration Toolkit & More",
-      "link": "https://devblogs.microsoft.com/azure-sql/vscode-mssql-feb-2026/",
-      "published": "2026-02-25T17:00:27+00:00",
-      "summary": "The MSSQL Extension for VS Code continues to evolve, delivering features that make SQL development more integrated, more powerful, and more developer-friendly. In version v1.40.0, we’re introducing the ADS Migration Toolkit, Basic Database Management, Flat File Import, Database Backup & Restore,...",
-      "blog": "Azure SQL Dev Corner",
-      "blogId": "azuresqlblog",
-      "author": "Carlos Robles, Tauseef Siddique, Yo-Lei Chen"
-    },
-    {
-      "title": "Azure Developer CLI (azd) – February 2026: JMESPath Queries & Deployment Slots",
-      "link": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2026/",
-      "published": "2026-02-25T16:00:38+00:00",
-      "summary": "This post announces the February 2026 release of the Azure Developer CLI (`azd`). The post Azure Developer CLI (azd) – February 2026: JMESPath Queries & Deployment Slots appeared first on Azure SDK Blog.",
-      "blog": "Azure SDK Blog",
-      "blogId": "azuresdkblog",
-      "author": "PuiChee (PC) Chan"
-    },
-    {
-      "title": "Stop Writing Plumbing! Use the New Logic Apps MCP Server Wizard",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/stop-writing-plumbing-use-the-new-logic-apps-mcp-server-wizard/ba-p/4496702",
-      "published": "2026-02-25T14:19:26+00:00",
-      "summary": "As part of our continued investment in making Logic Apps a first‑class platform for providing AI agents with connectivity, we’ve introduced the new Logic Apps MCP server configuration experience—a guided, in‑portal workflow that lets you turn any existing Standard logic app into a fully functional...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "KentWeareMSFT"
     }
   ],
-  "summaryWindowDays": 7,
+  "summaryWindowDays": 5,
   "azureRetirementCalendar": [
     {
       "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
@@ -4333,35 +4050,6 @@
           "blogId": "azuredeprecations",
           "announcementType": "deprecation",
           "link": "https://azure.microsoft.com/updates?id=516070"
-        }
-      ],
-      "sourceCount": 2
-    },
-    {
-      "title": "Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
-      "link": "https://azure.microsoft.com/en-us/updates/555839/",
-      "retirementDate": "2026-11",
-      "datePrecision": "month",
-      "published": "2026-02-27T21:45:03.134436+00:00",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "announcementType": "",
-      "sources": [
-        "Azure Deprecations (aztty)",
-        "Azure Updates"
-      ],
-      "sourceReports": [
-        {
-          "blog": "Azure Updates",
-          "blogId": "azureupdates",
-          "announcementType": "",
-          "link": "https://azure.microsoft.com/en-us/updates/555839/"
-        },
-        {
-          "blog": "Azure Deprecations (aztty)",
-          "blogId": "azuredeprecations",
-          "announcementType": "deprecation",
-          "link": "https://azure.microsoft.com/updates?id=555839"
         }
       ],
       "sourceCount": 2
@@ -4600,22 +4288,20 @@
     }
   ],
   "summaryPublishingDays": [
+    "2026-03-30",
     "2026-03-27",
     "2026-03-26",
     "2026-03-25",
-    "2026-03-24",
-    "2026-03-23",
-    "2026-03-22",
-    "2026-03-21"
+    "2026-03-24"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 10,
   "summary": "- In preview:\n  • [Public Preview: Blue-green agent pool upgrade in AKS](https://azure.microsoft.com/en-us/updates/557862/)\n  • [Public Preview: Fabric Mirroring integration for Azure Database for MySQL](https://azure.microsoft.com/en-us/updates/558841/)\n  • [Public Preview: Azure SQL Managed Instance change event streaming](https://azure.microsoft.com/en-us/updates/558884/)\n  • [Public Preview: AI Agent for container networking troubleshooting](https://azure.microsoft.com/en-us/updates/557887/)\n  • [Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager](https://azure.microsoft.com/en-us/updates/557877/)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure SQL updates for late-March 2026](https://azure.microsoft.com/en-us/updates/558879/)\n  • [Generally Available: Cosmos DB Mirroring in Microsoft Fabric with private endpoints](https://azure.microsoft.com/en-us/updates/558836/)\n  • [Generally Available: Online migration now uses the pgoutput plugin](https://azure.microsoft.com/en-us/updates/558846/)\n  • [Generally Available: PostgreSQL migration service supports for Google AlloyDB into Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558851/)\n  • [Generally Available: PostgreSQL migration service supports compatible EDB workloads into Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558865/)\n\n- Retiring:\n  • none noted in selected window\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
-    "title": "Azure Update 20th March 2026",
-    "url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",
-    "published": "2026-03-20T16:05:24+00:00",
-    "thumbnail": "https://i3.ytimg.com/vi/jkpcFAYJjvM/hqdefault.jpg"
+    "title": "Azure Update 27th March 2026",
+    "url": "https://www.youtube.com/watch?v=rz-7PWle174",
+    "published": "2026-03-27T14:28:39+00:00",
+    "thumbnail": "https://i3.ytimg.com/vi/rz-7PWle174/hqdefault.jpg"
   }
 }
