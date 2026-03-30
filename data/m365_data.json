@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T08:21:47.071242+00:00",
+  "generatedAt": "2026-03-30T11:58:07.260169+00:00",
   "totalArticles": 88,
   "articles": [
     {
@@ -349,23 +349,23 @@
       "_normalized_url": "message_center:MC1262567"
     },
     {
-      "title": "OneDrive: Discover Copilot actions in File Preview",
-      "link": "https://deltapulse.app/item/559481",
+      "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
+      "link": "https://deltapulse.app/item/558922",
       "published": "2026-03-26T23:15:28.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "559481",
+      "m365Id": "558922",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
-      "m365TargetDate": "April 2026",
+      "m365TargetDate": "May 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:559481"
+      "_normalized_url": "roadmap:558922"
     },
     {
       "title": "Outlook: View, edit & share Copilot Pages with Outlook for Android",
@@ -387,25 +387,6 @@
       "_normalized_url": "roadmap:559389"
     },
     {
-      "title": "Microsoft Teams: Attendant Agent",
-      "link": "https://deltapulse.app/item/558680",
-      "published": "2026-03-26T23:15:28.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558680",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558680"
-    },
-    {
       "title": "Microsoft Teams: AI Interpreter Agent on Teams Phone Devices",
       "link": "https://deltapulse.app/item/559268",
       "published": "2026-03-26T23:15:28.000Z",
@@ -425,13 +406,13 @@
       "_normalized_url": "roadmap:559268"
     },
     {
-      "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
-      "link": "https://deltapulse.app/item/558922",
+      "title": "Microsoft Teams: Attendant Agent",
+      "link": "https://deltapulse.app/item/558680",
       "published": "2026-03-26T23:15:28.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558922",
+      "m365Id": "558680",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -441,7 +422,26 @@
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558922"
+      "_normalized_url": "roadmap:558680"
+    },
+    {
+      "title": "OneDrive: Discover Copilot actions in File Preview",
+      "link": "https://deltapulse.app/item/559481",
+      "published": "2026-03-26T23:15:28.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559481",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:559481"
     },
     {
       "title": "Power Platform admin center – Upcoming update to the enforcement of tenant isolation",
@@ -465,27 +465,6 @@
       "_normalized_url": "message_center:MC1262537"
     },
     {
-      "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
-      "link": "https://deltapulse.app/item/MC1262523",
-      "published": "2026-03-26T21:06:28.443Z",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1262523",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026, June 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1262523"
-    },
-    {
       "title": "The March 2026 Windows non-security preview update is now available",
       "link": "https://deltapulse.app/item/MC1262522",
       "published": "2026-03-26T21:06:28.443Z",
@@ -505,6 +484,27 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1262522"
+    },
+    {
+      "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
+      "link": "https://deltapulse.app/item/MC1262523",
+      "published": "2026-03-26T21:06:28.443Z",
+      "source": "m365",
+      "m365Service": "Windows",
+      "m365AllServices": [
+        "Windows"
+      ],
+      "m365Id": "MC1262523",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "March 2026, June 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1262523"
     },
     {
       "title": "Microsoft Copilot Studio - Analyze user sentiment from agent conversations",
@@ -859,25 +859,6 @@
       "_normalized_url": "roadmap:559310"
     },
     {
-      "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
-      "link": "https://deltapulse.app/item/559095",
-      "published": "2026-03-24T23:15:57.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559095",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:559095"
-    },
-    {
       "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
       "link": "https://deltapulse.app/item/559029",
       "published": "2026-03-24T23:15:57.000Z",
@@ -933,6 +914,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558682"
+    },
+    {
+      "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
+      "link": "https://deltapulse.app/item/559095",
+      "published": "2026-03-24T23:15:57.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559095",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:559095"
     },
     {
       "title": "(Updated) Microsoft 365 Copilot: Customize how managers are identified in Workforce Insights agent and Copilot responses",
@@ -2380,23 +2380,23 @@
         "_normalized_url": "message_center:MC1262567"
       },
       {
-        "title": "OneDrive: Discover Copilot actions in File Preview",
-        "link": "https://deltapulse.app/item/559481",
+        "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
+        "link": "https://deltapulse.app/item/558922",
         "published": "2026-03-26T23:15:28.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559481",
+        "m365Id": "558922",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "April 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559481"
+        "_normalized_url": "roadmap:558922"
       },
       {
         "title": "Outlook: View, edit & share Copilot Pages with Outlook for Android",
@@ -2418,25 +2418,6 @@
         "_normalized_url": "roadmap:559389"
       },
       {
-        "title": "Microsoft Teams: Attendant Agent",
-        "link": "https://deltapulse.app/item/558680",
-        "published": "2026-03-26T23:15:28.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558680",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558680"
-      },
-      {
         "title": "Microsoft Teams: AI Interpreter Agent on Teams Phone Devices",
         "link": "https://deltapulse.app/item/559268",
         "published": "2026-03-26T23:15:28.000Z",
@@ -2456,13 +2437,13 @@
         "_normalized_url": "roadmap:559268"
       },
       {
-        "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
-        "link": "https://deltapulse.app/item/558922",
+        "title": "Microsoft Teams: Attendant Agent",
+        "link": "https://deltapulse.app/item/558680",
         "published": "2026-03-26T23:15:28.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558922",
+        "m365Id": "558680",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -2472,7 +2453,26 @@
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558922"
+        "_normalized_url": "roadmap:558680"
+      },
+      {
+        "title": "OneDrive: Discover Copilot actions in File Preview",
+        "link": "https://deltapulse.app/item/559481",
+        "published": "2026-03-26T23:15:28.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559481",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559481"
       },
       {
         "title": "Microsoft Purview: Data Security Investigations – Introducing new personal data examination",
@@ -2570,25 +2570,6 @@
         "_normalized_url": "roadmap:559310"
       },
       {
-        "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
-        "link": "https://deltapulse.app/item/559095",
-        "published": "2026-03-24T23:15:57.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559095",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559095"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
         "link": "https://deltapulse.app/item/559029",
         "published": "2026-03-24T23:15:57.000Z",
@@ -2644,6 +2625,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558682"
+      },
+      {
+        "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
+        "link": "https://deltapulse.app/item/559095",
+        "published": "2026-03-24T23:15:57.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559095",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:559095"
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -3298,27 +3298,6 @@
         "_normalized_url": "message_center:MC1262589"
       },
       {
-        "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
-        "link": "https://deltapulse.app/item/MC1262523",
-        "published": "2026-03-26T21:06:28.443Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1262523",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262523"
-      },
-      {
         "title": "The March 2026 Windows non-security preview update is now available",
         "link": "https://deltapulse.app/item/MC1262522",
         "published": "2026-03-26T21:06:28.443Z",
@@ -3338,6 +3317,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1262522"
+      },
+      {
+        "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
+        "link": "https://deltapulse.app/item/MC1262523",
+        "published": "2026-03-26T21:06:28.443Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1262523",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026, June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1262523"
       },
       {
         "title": "Notice: Security Copilot will be included as part of your Microsoft 365 E5 plan soon",
@@ -3661,25 +3661,6 @@
         "_normalized_url": "roadmap:501120"
       },
       {
-        "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
-        "link": "https://deltapulse.app/item/559095",
-        "published": "2026-03-24T23:15:57.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559095",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559095"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Mind Maps in Copilot Notebooks",
         "link": "https://deltapulse.app/item/559029",
         "published": "2026-03-24T23:15:57.000Z",
@@ -3716,6 +3697,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558682"
+      },
+      {
+        "title": "OneNote: Multimodal capture in Copilot Notebooks (iPhone)",
+        "link": "https://deltapulse.app/item/559095",
+        "published": "2026-03-24T23:15:57.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559095",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:559095"
       },
       {
         "title": "Microsoft Purview: File Creation/Modification conditions in DLP for Sharepoint/OneDrive and AutoLabelling",
@@ -4123,23 +4123,23 @@
         "_normalized_url": "message_center:MC1262567"
       },
       {
-        "title": "OneDrive: Discover Copilot actions in File Preview",
-        "link": "https://deltapulse.app/item/559481",
+        "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
+        "link": "https://deltapulse.app/item/558922",
         "published": "2026-03-26T23:15:28.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559481",
+        "m365Id": "558922",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "April 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559481"
+        "_normalized_url": "roadmap:558922"
       },
       {
         "title": "Outlook: View, edit & share Copilot Pages with Outlook for Android",
@@ -4161,25 +4161,6 @@
         "_normalized_url": "roadmap:559389"
       },
       {
-        "title": "Microsoft Teams: Attendant Agent",
-        "link": "https://deltapulse.app/item/558680",
-        "published": "2026-03-26T23:15:28.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558680",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558680"
-      },
-      {
         "title": "Microsoft Teams: AI Interpreter Agent on Teams Phone Devices",
         "link": "https://deltapulse.app/item/559268",
         "published": "2026-03-26T23:15:28.000Z",
@@ -4199,13 +4180,13 @@
         "_normalized_url": "roadmap:559268"
       },
       {
-        "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
-        "link": "https://deltapulse.app/item/558922",
+        "title": "Microsoft Teams: Attendant Agent",
+        "link": "https://deltapulse.app/item/558680",
         "published": "2026-03-26T23:15:28.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558922",
+        "m365Id": "558680",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -4215,7 +4196,26 @@
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558922"
+        "_normalized_url": "roadmap:558680"
+      },
+      {
+        "title": "OneDrive: Discover Copilot actions in File Preview",
+        "link": "https://deltapulse.app/item/559481",
+        "published": "2026-03-26T23:15:28.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559481",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559481"
       },
       {
         "title": "Power Platform admin center – Upcoming update to the enforcement of tenant isolation",
@@ -4239,27 +4239,6 @@
         "_normalized_url": "message_center:MC1262537"
       },
       {
-        "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
-        "link": "https://deltapulse.app/item/MC1262523",
-        "published": "2026-03-26T21:06:28.443Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1262523",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262523"
-      },
-      {
         "title": "The March 2026 Windows non-security preview update is now available",
         "link": "https://deltapulse.app/item/MC1262522",
         "published": "2026-03-26T21:06:28.443Z",
@@ -4279,6 +4258,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1262522"
+      },
+      {
+        "title": "New resources to help organizations prepare for Secure Boot certificate expirations",
+        "link": "https://deltapulse.app/item/MC1262523",
+        "published": "2026-03-26T21:06:28.443Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1262523",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026, June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1262523"
       },
       {
         "title": "Microsoft Copilot Studio - Analyze user sentiment from agent conversations",

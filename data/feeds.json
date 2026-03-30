@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-30T08:21:16.691392+00:00",
-  "totalArticles": 218,
+  "lastUpdated": "2026-03-30T11:57:33.533600+00:00",
+  "totalArticles": 219,
   "articles": [
+    {
+      "title": "CI/CD as a Platform: Shipping Microservices and AI Agents with Reusable GitHub Actions Workflows",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ci-cd-as-a-platform-shipping-microservices-and-ai-agents-with/ba-p/4504550",
+      "published": "2026-03-30T10:48:39+00:00",
+      "summary": "The First Shift — Treating CI/CD as a Platform The first insight is straightforward but underused: Your CI/CD logic is infrastructure. It deserves the same design discipline as your application code. That means centralizing it. Versioning it. Exposing it as reusable, callable workflows — not...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "nasreensarah"
+    },
     {
       "title": "From Toil to Trust: How Azure SRE Agent Is Redefining Cloud Operations",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-toil-to-trust-how-azure-sre-agent-is-redefining-cloud/ba-p/4505875",
