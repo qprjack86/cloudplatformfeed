@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-03-31T11:54:55.253143+00:00",
+  "lastUpdated": "2026-03-31T15:59:37.194271+00:00",
   "totalArticles": 229,
   "articles": [
+    {
+      "title": "The Durable Task Scheduler Consumption SKU is now Generally Available",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-durable-task-scheduler-consumption-sku-is-now-generally/ba-p/4506682",
+      "published": "2026-03-31T12:00:00+00:00",
+      "summary": "Today, we're excited to announce that the Durable Task Scheduler Consumption SKU has reached General Availability. Developers can now run durable workflows and agents on Azure with pay-per-use pricing, no storage to manage, no capacity to plan, and no idle costs. Just create a scheduler, connect...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "greenie-msft"
+    },
     {
       "title": "Subscription Vending in Azure: An Implementation Overview",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/subscription-vending-in-azure-an-implementation-overview/ba-p/4506350",
@@ -1620,15 +1629,6 @@
       "blog": "AKS Blog",
       "blogId": "aksblog",
       "author": "Microsoft"
-    },
-    {
-      "title": "The Agent that investigates itself",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-agent-that-investigates-itself/ba-p/4500073",
-      "published": "2026-03-14T16:23:57+00:00",
-      "summary": "Azure SRE Agent handles tens of thousands of incident investigations each week for internal Microsoft services and external teams running it for their own systems. Last month, one of those incidents was about the agent itself. Our KV cache hit rate alert started firing. Cached token percentage was...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "sanchitmehta"
     },
     {
       "title": "March Patches for Azure DevOps Server",
