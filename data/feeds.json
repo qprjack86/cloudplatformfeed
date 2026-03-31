@@ -1,7 +1,122 @@
 {
-  "lastUpdated": "2026-03-30T16:00:25.733577+00:00",
-  "totalArticles": 220,
+  "lastUpdated": "2026-03-31T08:07:35.346786+00:00",
+  "totalArticles": 229,
   "articles": [
+    {
+      "title": "Subscription Vending in Azure: An Implementation Overview",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/subscription-vending-in-azure-an-implementation-overview/ba-p/4506350",
+      "published": "2026-03-31T07:48:15+00:00",
+      "summary": "Subscription vending is a process that enables the creation of multiple Azure subscriptions using code, based on organizational segregation or workload-specific requirements. Rather than relying on resource groups as the primary boundary, this approach treats subscriptions as the fundamental unit...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "abhilashasr"
+    },
+    {
+      "title": "Powering Event Driven Payments with Stripe and Azure Event Grid",
+      "link": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/powering-event-driven-payments-with-stripe-and-azure-event-grid/ba-p/4507094",
+      "published": "2026-03-31T04:00:52+00:00",
+      "summary": "Introduction Modern commerce systems are increasingly event-driven. Payments, subscriptions, refunds, disputes, and customer updates all generate signals that downstream systems must react quickly and reliably. Stripe events give developers real-time visibility into what is happening inside their...",
+      "blog": "Messaging on Azure",
+      "blogId": "messagingonazureblog",
+      "author": "robece"
+    },
+    {
+      "title": "Azure Developer CLI (azd) – March 2026: Run and Debug AI Agents Locally, GitHub Copilot Integration, & Container App Jobs",
+      "link": "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-march-2026/",
+      "published": "2026-03-31T03:31:29+00:00",
+      "summary": "Run, invoke, and monitor AI agents locally or in Microsoft Foundry with the new azd AI agent extension commands. Plus GitHub Copilot-powered project setup, Container App Jobs deployment, local preflight validation, and configurable timeouts. The post Azure Developer CLI (azd) – March 2026: Run and...",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "PuiChee (PC) Chan"
+    },
+    {
+      "title": "VS Code Extension",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/vs-code-extension/ba-p/4500803",
+      "published": "2026-03-31T03:00:06+00:00",
+      "summary": "What is a VS Code Extension? A VS Code Extension is a small program that adds new features or enhances existing functionality in Visual Studio Code. Extensions allow developers to tailor the editor to their needs by adding support for new languages, tools, themes, debuggers, commands, and...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "Shikhaghildiyal"
+    },
+    {
+      "title": "Public Preview: Ephemeral OS Disk with full caching for VM/VMSS",
+      "link": "https://azure.microsoft.com/en-us/updates/559322/",
+      "published": "2026-03-30T21:45:47.455887+00:00",
+      "summary": "Ephemeral OS Disk with full caching is now available in public preview for Azure VM/VMSS, bringing significantly faster and more reliable OS disk performance to your workloads. By caching the entire OS disk image on local VM storage (cache disk, resource disk, or NVMe disk), you get better IO...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
+      "published": "2026-03-30T21:38:31+00:00",
+      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "spalani"
+    },
+    {
+      "title": "Retirement: Deprecation of sidecar for remote-write for Azure Monitor managed service for Prometheus",
+      "link": "https://azure.microsoft.com/en-us/updates/550519/",
+      "published": "2026-03-30T21:30:50.093344+00:00",
+      "summary": "On March 31, 2027 Azure Monitor will be deprecating the sidecar for remote-write of Prometheus metrics to Azure Monitor Workspace. This is as part of our ongoing efforts to improve reliability and reduce complexity.We recommend configuring your self-hosted Prometheus or Prometheus Operator to...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2027-03-31"
+    },
+    {
+      "title": "Generally Available: Azure Red Hat OpenShift in Indonesia Central",
+      "link": "https://azure.microsoft.com/en-us/updates/559552/",
+      "published": "2026-03-30T21:30:50.093344+00:00",
+      "summary": "Azure Red Hat OpenShift (ARO) is now generally available in the Indonesia Central Azure region, expanding regional availability for customers running mission‑critical OpenShift workloads on Azure. This release enables organizations in Indonesia and the broader Southeast Asia region to deploy fully...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "ExpressRoute Gateway Microsoft initiated migration",
+      "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/expressroute-gateway-microsoft-initiated-migration/ba-p/4497689",
+      "published": "2026-03-30T18:20:25+00:00",
+      "summary": "Important: Microsoft initiated Gateway migrations are temporarily paused. You will be notified when migrations resume. Objective The backend migration process is an automated upgrade performed by Microsoft to ensure your ExpressRoute gateways use the Standard IP SKU. This migration enhances gateway...",
+      "blog": "Azure Networking",
+      "blogId": "azurenetworkingblog",
+      "author": "MekaylaMoore"
+    },
+    {
+      "title": "Retirement: Azure Cosmos DB for PostgreSQL will retire on March 31, 2029",
+      "link": "https://azure.microsoft.com/en-us/updates/556085/",
+      "published": "2026-03-30T17:45:08.258731+00:00",
+      "summary": "On March 31, 2029, Azure Cosmos DB for PostgreSQL will be retired, and you'll need to migrate to Azure Database for PostgreSQL Elastic Cluster by that date. Azure Database for PostgreSQL Elastic Cluster delivers the same distributed PostgreSQL capabilities as Azure Cosmos DB for PostgreSQL, with...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2029-03-31"
+    },
+    {
+      "title": "Generally Available: Azure Premium SSD v2 Disk is now available in South India",
+      "link": "https://azure.microsoft.com/en-us/updates/559526/",
+      "published": "2026-03-30T16:30:50.988605+00:00",
+      "summary": "Azure Premium SSD v2 is now available in South India (a region without Availability Zone).Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, offers sub-millisecond latencies and exceptional price performance for IO-intensive workloads at a...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
     {
       "title": "Writing Azure service-related unit tests with Docker using Spring Cloud Azure",
       "link": "https://devblogs.microsoft.com/azure-sdk/writing-azure-service-related-unit-tests-with-docker-using-spring-cloud-azure/",
@@ -716,15 +831,6 @@
       "blog": "Linux & Open Source",
       "blogId": "linuxandopensourceblog",
       "author": "johnsonshi_msft"
-    },
-    {
-      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
-      "published": "2026-03-21T16:13:26+00:00",
-      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "spalani"
     },
     {
       "title": "Detect, correlate, contain: New Azure Firewall IDPS detections in Microsoft Sentinel and XDR",
@@ -2117,15 +2223,6 @@
       "azureStatus": "Launched"
     },
     {
-      "title": "ExpressRoute Gateway Microsoft initiated migration",
-      "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/expressroute-gateway-microsoft-initiated-migration/ba-p/4497689",
-      "published": "2026-03-03T00:58:14+00:00",
-      "summary": "Objective The backend migration process is an automated upgrade performed by Microsoft to ensure your ExpressRoute gateways use the Standard IP SKU. This migration enhances gateway reliability and availability while maintaining service continuity. You receive notifications about scheduled...",
-      "blog": "Azure Networking",
-      "blogId": "azurenetworkingblog",
-      "author": "MekaylaMoore"
-    },
-    {
       "title": "Running more with less: Multi-instance GPU (MIG) with Dynamic Resource Allocation (DRA) on AKS",
       "link": "https://blog.aks.azure.com/2026/03/03/multi-instance-gpu-with-dra-on-aks",
       "published": "2026-03-03T00:00:00+00:00",
@@ -2181,16 +2278,16 @@
   ],
   "summaryWindowDays": 5,
   "summaryPublishingDays": [
+    "2026-03-31",
     "2026-03-30",
     "2026-03-27",
     "2026-03-26",
-    "2026-03-25",
-    "2026-03-24"
+    "2026-03-25"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
-  "summaryArticleCount": 10,
-  "summary": "- In preview:\n  • [Public Preview: Blue-green agent pool upgrade in AKS](https://azure.microsoft.com/en-us/updates/557862/)\n  • [Public Preview: Fabric Mirroring integration for Azure Database for MySQL](https://azure.microsoft.com/en-us/updates/558841/)\n  • [Public Preview: Azure SQL Managed Instance change event streaming](https://azure.microsoft.com/en-us/updates/558884/)\n  • [Public Preview: AI Agent for container networking troubleshooting](https://azure.microsoft.com/en-us/updates/557887/)\n  • [Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager](https://azure.microsoft.com/en-us/updates/557877/)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure SQL updates for late-March 2026](https://azure.microsoft.com/en-us/updates/558879/)\n  • [Generally Available: Cosmos DB Mirroring in Microsoft Fabric with private endpoints](https://azure.microsoft.com/en-us/updates/558836/)\n  • [Generally Available: Online migration now uses the pgoutput plugin](https://azure.microsoft.com/en-us/updates/558846/)\n  • [Generally Available: PostgreSQL migration service supports for Google AlloyDB into Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558851/)\n  • [Generally Available: PostgreSQL migration service supports compatible EDB workloads into Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/updates/558865/)\n\n- Retiring:\n  • none noted in selected window\n\n- In development:\n  • none noted in selected window",
+  "summaryArticleCount": 11,
+  "summary": "- In preview:\n  • [Public Preview: Ephemeral OS Disk with full caching for VM/VMSS](https://azure.microsoft.com/en-us/updates/559322/)\n  • [Public Preview: Blue-green agent pool upgrade in AKS](https://azure.microsoft.com/en-us/updates/557862/)\n  • [Public Preview: Fabric Mirroring integration for Azure Database for MySQL](https://azure.microsoft.com/en-us/updates/558841/)\n  • [Public Preview: Azure SQL Managed Instance change event streaming](https://azure.microsoft.com/en-us/updates/558884/)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure Red Hat OpenShift in Indonesia Central](https://azure.microsoft.com/en-us/updates/559552/)\n  • [Generally Available: Azure Premium SSD v2 Disk is now available in South India](https://azure.microsoft.com/en-us/updates/559526/)\n  • [Generally Available: Azure SQL updates for late-March 2026](https://azure.microsoft.com/en-us/updates/558879/)\n  • [Generally Available: Cosmos DB Mirroring in Microsoft Fabric with private endpoints](https://azure.microsoft.com/en-us/updates/558836/)\n  • [Generally Available: Online migration now uses the pgoutput plugin](https://azure.microsoft.com/en-us/updates/558846/)\n\n- Retiring:\n  • [Retirement: Deprecation of sidecar for remote-write for Azure Monitor managed service for Prometheus](https://azure.microsoft.com/en-us/updates/550519/)\n  • [Retirement: Azure Cosmos DB for PostgreSQL will retire on March 31, 2029](https://azure.microsoft.com/en-us/updates/556085/)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 27th March 2026",
     "url": "https://www.youtube.com/watch?v=rz-7PWle174",
