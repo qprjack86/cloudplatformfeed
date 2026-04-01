@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-04-01T08:15:14.325982+00:00",
-  "totalArticles": 245,
+  "lastUpdated": "2026-04-01T11:56:39.028891+00:00",
+  "totalArticles": 246,
   "articles": [
+    {
+      "title": "How to revoke connection OAuth programmatically in Logic Apps",
+      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-revoke-connection-oauth-programmatically-in-logic-apps/ba-p/4506825",
+      "published": "2026-04-01T11:02:44+00:00",
+      "summary": "There are multiple ways to revoke the OAuth of an API Connection other than clicking on the Revoke button in the portal: For using the \"Invoke an HTTP request\": Get the connection name: Create a Logic App (Consumption), use a trigger of your liking, then add the “Invoke an HTTP request”...",
+      "blog": "Integrations on Azure",
+      "blogId": "integrationsonazureblog",
+      "author": "Omar_Abu_Arisheh"
+    },
     {
       "title": "Agents League: Meet the Winners",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-meet-the-winners/ba-p/4507503",
