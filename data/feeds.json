@@ -1,7 +1,25 @@
 {
-  "lastUpdated": "2026-04-01T11:56:39.028891+00:00",
-  "totalArticles": 246,
+  "lastUpdated": "2026-04-01T16:02:03.306968+00:00",
+  "totalArticles": 247,
   "articles": [
+    {
+      "title": "Migrating Azure SQL Database Across Tenants Using Subscription Transfer",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-azure-sql-database-across-tenants-using-subscription/ba-p/4507002",
+      "published": "2026-04-01T16:01:18+00:00",
+      "summary": "Moving an Azure subscription between Microsoft Entra ID (formerly Azure Active Directory) tenants is a common requirement during: Mergers and acquisitions Organizational restructuring Enterprise Agreement (EA) enrollment realignment Lighthouse or multi‑tenant operating model changes However, when...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "princy_rajpoot"
+    },
+    {
+      "title": "Bookmark Studio: evolving bookmarks in Visual Studio",
+      "link": "https://devblogs.microsoft.com/visualstudio/bookmark-studio-evolving-bookmarks-in-visual-studio/",
+      "published": "2026-04-01T14:09:58+00:00",
+      "summary": "Bookmarks in Visual Studio have always been a simple, reliable feature. Many developers use them regularly, and over the years we’ve heard consistent feedback from those users. Bookmarks were useful, but there were a few core gaps that kept them from being as effective and relevant as they could...",
+      "blog": "Visual Studio Blog",
+      "blogId": "visualstudio",
+      "author": "Mads Kristensen"
+    },
     {
       "title": "How to revoke connection OAuth programmatically in Logic Apps",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-revoke-connection-oauth-programmatically-in-logic-apps/ba-p/4506825",
@@ -2446,15 +2464,6 @@
       "azureGeneralAvailabilityDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "Launched"
-    },
-    {
-      "title": "Logic Apps Aviators Newsletter - March 2026",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-march-2026/ba-p/4498260",
-      "published": "2026-03-02T16:00:00+00:00",
-      "summary": "In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month March 2026's Ace Aviator: Lilan Sameera Lilan Sameera - Senior Consulltant @ Adaptiv What's your role and title? What are your responsibilities? I’m a Senior Consultant at Adaptiv,...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "WSilveira"
     }
   ],
   "summaryWindowDays": 5,
