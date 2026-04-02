@@ -18,6 +18,13 @@
       "action": "set",
       "header": "X-Frame-Options",
       "value": "DENY"
+    },
+    {
+      "ref": "hsts",
+      "description": "Enforce HTTPS via HTTP Strict Transport Security",
+      "action": "set",
+      "header": "Strict-Transport-Security",
+      "value": "max-age=31536000; includeSubDomains; preload"
     }
   ]
 }
