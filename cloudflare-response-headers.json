@@ -7,10 +7,10 @@
   "rules": [
     {
       "ref": "anti-clickjacking-csp",
-      "description": "Set CSP frame-ancestors for all HTML and static asset responses",
+      "description": "Full Content Security Policy — allowlists self, Clarity, and Bing telemetry",
       "action": "set",
       "header": "Content-Security-Policy",
-      "value": "frame-ancestors 'none'"
+      "value": "default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://c.bing.com; connect-src 'self' https://*.clarity.ms; img-src 'self' data: https://*.ytimg.com https://*.clarity.ms; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests"
     },
     {
       "ref": "anti-clickjacking-xfo",
