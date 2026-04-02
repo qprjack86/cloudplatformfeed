@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-02T11:52:19.928427+00:00",
-  "totalArticles": 258,
+  "lastUpdated": "2026-04-02T15:50:47.668877+00:00",
+  "totalArticles": 256,
   "articles": [
     {
       "title": "Unlocking AI-Ready Unstructured Data at Scale with Komprise and Azure",
@@ -2555,24 +2555,6 @@
       "blog": "Integrations on Azure",
       "blogId": "integrationsonazureblog",
       "author": "reynaldom"
-    },
-    {
-      "title": "Microsoft Defender for Cloud Customer Newsletter",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-customer-newsletter/ba-p/4498717",
-      "published": "2026-03-03T15:30:22+00:00",
-      "summary": "Check out monthly news for the rest of the MTP suite here! What's new in Defender for Cloud? Now in public preview, Defender for Cloud provides threat protection for AI agents built with Foundry, as part of the Defender for AI Services plan. Learn more about this in our documentation. Defender for...",
-      "blog": "Microsoft Defender for Cloud",
-      "blogId": "microsoftdefendercloudblog",
-      "author": "Yura_Lee"
-    },
-    {
-      "title": "Malware scan results now in blob tags (ADLS Gen2 HNS | Public Preview)",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/malware-scan-results-now-in-blob-tags-adls-gen2-hns-public/ba-p/4498822",
-      "published": "2026-03-03T15:00:17+00:00",
-      "summary": "If you’ve been using Defender for Storage malware scanning with ADLS Gen2 storage accounts that have Hierarchical Namespace (HNS), you probably know that the scan happens, but the result isn’t easy to see right where the file lives. That changes now. Azure Storage just released a public preview...",
-      "blog": "Microsoft Defender for Cloud",
-      "blogId": "microsoftdefendercloudblog",
-      "author": "Fernanda_Vela"
     }
   ],
   "summaryWindowDays": 5,
