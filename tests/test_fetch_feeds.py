@@ -736,5 +736,190 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         rss_mock.assert_not_called()
 
 
+class AzttyFeedTests(unittest.TestCase):
+    def test_fetch_aztty_feed_maps_entries_and_retirement_fields(self):
+        feed = mock.Mock()
+        feed.bozo = False
+        feed.entries = [
+            {
+                "title": "Retirement: Example service will be retired on July 31, 2031",
+                "summary": "Migrate before the retirement date.",
+                "link": "https://aztty.azurewebsites.net/announcements/1",
+                "author": "Microsoft",
+                "published": "Mon, 24 Mar 2026 12:00:00 GMT",
+            }
+        ]
+
+        with mock.patch.object(fetch_feeds, "fetch_feed", return_value=feed) as fetch_mock:
+            articles = fetch_feeds.fetch_aztty_feed(
+                fetch_feeds.AZTTY_DEPRECATIONS_FEED,
+                "Azure Deprecations (aztty)",
+                "azuredeprecations",
+                "deprecation",
+            )
+
+        fetch_mock.assert_called_once_with(fetch_feeds.AZTTY_DEPRECATIONS_FEED)
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["announcementType"], "deprecation")
+        self.assertEqual(articles[0]["lifecycle"], "retiring")
+        self.assertEqual(articles[0]["azureRetirementDate"], "2031-07-31")
+
+    def test_fetch_aztty_announcements_continues_when_one_feed_fails(self):
+        surviving_feed_articles = [
+            {
+                "title": "Update: Example feature is now available",
+                "link": "https://aztty.azurewebsites.net/announcements/2",
+                "published": "2026-03-24T12:00:00+00:00",
+                "summary": "Example",
+                "blog": "Azure Updates (aztty)",
+                "blogId": "azttyupdates",
+                "author": "Microsoft",
+                "announcementType": "update",
+            }
+        ]
+
+        with mock.patch.object(
+            fetch_feeds,
+            "fetch_aztty_feed",
+            side_effect=[RuntimeError("deprecations unavailable"), surviving_feed_articles],
+        ) as fetch_mock:
+            results = fetch_feeds.fetch_aztty_announcements()
+
+        self.assertEqual(fetch_mock.call_count, 2)
+        self.assertEqual(results, surviving_feed_articles)
+
+
+class RetirementCalendarTests(unittest.TestCase):
+    def test_build_azure_retirement_calendar_dedupes_and_aggregates_sources(self):
+        articles = [
+            {
+                "title": "Retirement: Example service",
+                "link": "https://aztty.azurewebsites.net/announcements/1",
+                "published": "2026-03-24T12:00:00+00:00",
+                "blog": "Azure Deprecations (aztty)",
+                "blogId": "azuredeprecations",
+                "announcementType": "deprecation",
+                "azureRetirementDate": "2031-07-31",
+            },
+            {
+                "title": "Update: Example service",
+                "link": "https://azure.microsoft.com/en-us/updates/123456/",
+                "published": "2026-03-25T12:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2031-07-31",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        event = events[0]
+        self.assertEqual(event["title"], "Example service")
+        self.assertEqual(event["blogId"], "azureupdates")
+        self.assertEqual(event["link"], "https://azure.microsoft.com/en-us/updates/123456/")
+        self.assertEqual(event["retirementDate"], "2031-07-31")
+        self.assertEqual(event["sourceCount"], 2)
+        self.assertIn("Azure Deprecations (aztty)", event["sources"])
+        self.assertIn("Azure Updates", event["sources"])
+
+    def test_build_azure_retirement_calendar_filters_past_and_invalid_dates(self):
+        articles = [
+            {
+                "title": "Retirement: Valid future month",
+                "link": "https://example.com/future",
+                "published": "2026-03-24T12:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2030-11",
+            },
+            {
+                "title": "Retirement: Old item",
+                "link": "https://example.com/old",
+                "published": "2026-03-24T12:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2020-01-01",
+            },
+            {
+                "title": "Retirement: Invalid item",
+                "link": "https://example.com/invalid",
+                "published": "2026-03-24T12:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "not-a-date",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["retirementDate"], "2030-11")
+        self.assertEqual(events[0]["datePrecision"], "month")
+
+
+class MainOutputSchemaTests(unittest.TestCase):
+    def test_main_writes_azure_retirement_calendar(self):
+        aztty_articles = [
+            {
+                "title": "Retirement: Example service retirement notice",
+                "link": "https://example.com/retirement",
+                "published": "2031-01-10T12:00:00+00:00",
+                "summary": "Retirement details",
+                "blog": "Azure Deprecations (aztty)",
+                "blogId": "azuredeprecations",
+                "author": "Microsoft",
+                "announcementType": "deprecation",
+                "lifecycle": "retiring",
+                "azureRetirementDate": "2031-07-31",
+            }
+        ]
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            old_cwd = os.getcwd()
+            os.chdir(tmpdir)
+            try:
+                with mock.patch.object(fetch_feeds, "fetch_tech_community_feeds", return_value=[]), \
+                    mock.patch.object(fetch_feeds, "fetch_aks_blog", return_value=[]), \
+                    mock.patch.object(fetch_feeds, "fetch_devblogs_feeds", return_value=[]), \
+                    mock.patch.object(fetch_feeds, "fetch_azure_updates_feed", return_value=[]), \
+                    mock.patch.object(fetch_feeds, "fetch_aztty_announcements", return_value=aztty_articles), \
+                    mock.patch.object(fetch_feeds, "fetch_savill_video", return_value=None), \
+                    mock.patch.object(
+                        fetch_feeds,
+                        "generate_ai_summary",
+                        return_value={
+                            "status": "unavailable",
+                            "reason": "no_articles_in_window",
+                            "windowDays": fetch_feeds.SUMMARY_WINDOW_DAYS,
+                            "publishingDays": [],
+                        },
+                    ), \
+                    mock.patch.object(fetch_feeds, "generate_rss_feed"), \
+                    mock.patch.object(fetch_feeds, "write_checksums_file"), \
+                    mock.patch.object(fetch_feeds, "write_run_metrics"):
+                    fetch_feeds.main()
+            finally:
+                os.chdir(old_cwd)
+
+            payload = json.loads((pathlib.Path(tmpdir) / "data" / "feeds.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(payload["totalArticles"], 1)
+        self.assertIn("azureRetirementCalendar", payload)
+        self.assertEqual(len(payload["azureRetirementCalendar"]), 1)
+        self.assertEqual(
+            payload["azureRetirementCalendar"][0]["retirementDate"],
+            "2031-07-31",
+        )
+        self.assertEqual(
+            payload["azureRetirementCalendar"][0]["title"],
+            "Example service retirement notice",
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
