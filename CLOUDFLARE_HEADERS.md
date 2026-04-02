@@ -7,7 +7,7 @@ Use Cloudflare, Azure Front Door, or an equivalent CDN/proxy to inject anti-clic
 
 Create a **Response Header Transform Rule** (or equivalent Response Header Rule):
 
-- **Expression:** `(http.host eq "cloudplatformfeed.kailice.uk")`
+- **Expression:** `(http.host eq "cpfeed.cloud")`
 - **Path filter:** `/*` (all routes)
 - **Action 1 (Set static):**
   - Header: `Content-Security-Policy`
