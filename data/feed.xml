@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 03 Apr 2026 08:00:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 11:41:43 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[DevSecOps on AKS: Governance Gates That Actually Prevent Incidents]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/devsecops-on-aks-governance-gates-that-actually-prevent/ba-p/4508415</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/devsecops-on-aks-governance-gates-that-actually-prevent/ba-p/4508415</guid>
+      <description><![CDATA[This article is for AKS platform/infra engineers, SREs, and security teams who want a practical, enforceable model for stopping common Kubernetes misconfigurations before they become incidents—without turning delivery into bureaucracy. Why incidents still happen after “adding security to the...]]></description>
+      <dc:creator><![CDATA[lakshaymalik]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 10:46:12 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure SQL Managed Instance as an AI‑Enabled PaaS Platform]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-sql-managed-instance-as-an-ai-enabled-paas-platform/ba-p/4508380</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-sql-managed-instance-as-an-ai-enabled-paas-platform/ba-p/4508380</guid>
+      <description><![CDATA[AI Capabilities Built into Azure SQL Managed Instance Azure SQL MI includes multiple intelligence layers by default: Intelligent Insights for anomaly detection Automatic tuning (recommend mode) Copilot‑assisted diagnostics Native vector data types for AI workloads These capabilities work together...]]></description>
+      <dc:creator><![CDATA[ShivaniThadiyan]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 09:42:50 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[AI‑Assisted Azure Infrastructure Validation and Drift Detection]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-assisted-azure-infrastructure-validation-and-drift-detection/ba-p/4508346</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-assisted-azure-infrastructure-validation-and-drift-detection/ba-p/4508346</guid>
+      <description><![CDATA[Why Traditional Drift Detection Isn’t Enough Most teams already rely on: Terraform plan reviews Azure Policy compliance dashboards Azure Resource Graph queries Manual scripts and audits The problem isn’t missing data—it’s interpretation at scale. Validation outputs are: Verbose and noisy Spread...]]></description>
+      <dc:creator><![CDATA[ShivaniThadiyan]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 08:48:00 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[🚀 General Availability of Private Application Gateway on Azure Application Gateway v2]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/general-availability-of-private-application-gateway-on-azure/ba-p/4508294</link>
@@ -233,15 +260,6 @@
       <category><![CDATA[Azure Storage]]></category>
     </item>
     <item>
-      <title><![CDATA[Announcing Microsoft Azure Network Adapter (MANA) support for Existing VM SKUs]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-microsoft-azure-network-adapter-mana-support-for/ba-p/4493279</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-microsoft-azure-network-adapter-mana-support-for/ba-p/4493279</guid>
-      <description><![CDATA[As a leader in cloud infrastructure, Microsoft ensures that Azure’s IaaS customers always have access to the latest hardware. Our goal is to consistently deliver technology to support business critical workloads with world class efficiency, reliability, and security. Customers benefit from...]]></description>
-      <dc:creator><![CDATA[ali_sheriff]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 20:00:03 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
       <title><![CDATA[A third-party connector integrating Claude with Microsoft Sentinel is now available]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/a-third-party-connector-integrating-claude-with-microsoft/ba-p/4507013</link>
       <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/a-third-party-connector-integrating-claude-with-microsoft/ba-p/4507013</guid>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[tomasbeerthuis]]></dc:creator>
       <pubDate>Tue, 31 Mar 2026 20:25:27 GMT</pubDate>
       <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: External Data Import & Data Connections in Azure Machine Learning will be retired on September 30, 2026]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/557406/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/557406/</guid>
-      <description><![CDATA[Import data from external sources (Preview) – S3, Snowflake, Azure SQL Db along with external Data Connections (Preview) in Azure Machine Learning are being deprecated. These features will no longer be available after September 30, 2026. What this means for you: Existing external data connections...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 20:00:35 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure DevOps March 2026 updates]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559660/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559660/</guid>
-      <description><![CDATA[The following updates were made to Azure DevOps in March 2026. The Remote MCP Server entered public preview, enabling seamless AI-powered integration with Azure DevOps without requiring a local server. Security improvements included new Advanced Security PR status checks that integrate directly...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 18:15:10 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
     </item>
   </channel>
 </rss>
