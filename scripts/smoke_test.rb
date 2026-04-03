@@ -33,6 +33,7 @@ feed_xml = read_text(ROOT.join("data", "feed.xml"))
 checksums_json_text = read_text(ROOT.join("data", "checksums.json"))
 readme_text = read_text(ROOT.join("README.md"))
 cname_text = read_text(ROOT.join("CNAME"))
+headers_text = read_text(ROOT.join("_headers"))
 fetch_script = read_text(ROOT.join("scripts", "fetch_feeds.py"))
 site_config_text = read_text(ROOT.join("config", "site.json"))
 
@@ -70,6 +71,9 @@ assert(!index_html.include?("style-src 'self' 'unsafe-inline'"), "index.html CSP
 assert(!index_html.include?("www.clarity.ms/tag/\"+i"), "index.html should not inline the Clarity bootstrap")
 assert(index_html.include?("id=\"articles-grid\""), "index.html is missing articles grid container")
 assert(index_html.include?("id=\"filter-pills\""), "index.html is missing filter pills container")
+assert(headers_text.include?("Strict-Transport-Security:"), "_headers must include Strict-Transport-Security")
+assert(headers_text.match?(/Strict-Transport-Security:\s*max-age=31536000/i), "_headers HSTS max-age must be at least one year")
+assert(headers_text.include?("includeSubDomains"), "_headers HSTS policy must include includeSubDomains")
 
 feeds = JSON.parse(feeds_json_text)
 checksums = JSON.parse(checksums_json_text)
