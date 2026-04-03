@@ -189,7 +189,7 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 - GitHub Pages does not provide a native way to set custom response headers for this static site. Security response headers must therefore be set in a proxy/CDN layer (for example Cloudflare or Azure Front Door) and applied to `/*` (all routes, including static assets).
 - Template rule payloads are provided in `cloudflare-response-headers.json` (Cloudflare) and `azure-frontdoor-response-headers.json` (Azure Front Door), setting:
-  - `Content-Security-Policy: frame-ancestors 'none'`
+  - `Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://c.bing.com; connect-src 'self' https://*.clarity.ms; img-src 'self' data: https://*.ytimg.com https://*.clarity.ms; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests`
   - `X-Frame-Options: DENY`
   - `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
 - Step-by-step dashboard guidance is documented in `CLOUDFLARE_HEADERS.md`.
@@ -204,13 +204,13 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 After applying the Cloudflare or Azure Front Door response header rule:
 
 ```bash
-curl -I https://cloudplatformfeed.kailice.uk
-curl -I https://cloudplatformfeed.kailice.uk/css/styles.css
+curl -I https://cpfeed.cloud
+curl -I https://cpfeed.cloud/css/styles.css
 ```
 
 Confirm that required security response headers are present:
 
-- `Content-Security-Policy: frame-ancestors 'none'`
+- `Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://c.bing.com; connect-src 'self' https://*.clarity.ms; img-src 'self' data: https://*.ytimg.com https://*.clarity.ms; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests`
 - `X-Frame-Options: DENY`
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
 

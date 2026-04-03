@@ -4,7 +4,7 @@ Apply these response headers at the CDN/proxy layer because GitHub Pages does no
 
 ## Required headers
 
-- `Content-Security-Policy: frame-ancestors 'none'`
+- `Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://c.bing.com; connect-src 'self' https://*.clarity.ms; img-src 'self' data: https://*.ytimg.com https://*.clarity.ms; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests`
 - `X-Frame-Options: DENY`
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
 
@@ -15,7 +15,8 @@ Apply these response headers at the CDN/proxy layer because GitHub Pages does no
 3. Scope the rule expression to the host:
    - `(http.host eq "cpfeed.cloud")`
 4. Set the three required headers above to `set`.
-5. Apply the rule to all paths.
+5. Reuse the exact CSP string from `_headers` so the edge response header and local header file stay aligned.
+6. Apply the rule to all paths.
 
 ## Verify
 
@@ -26,4 +27,4 @@ curl -I https://cpfeed.cloud
 curl -I https://cpfeed.cloud/css/styles.css
 ```
 
-Confirm each response includes all required headers, including `Strict-Transport-Security`.
+Confirm each response includes the full `Content-Security-Policy` header, plus `X-Frame-Options` and `Strict-Transport-Security`.
