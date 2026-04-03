@@ -1,0 +1,22 @@
+{
+  "name": "cloudplatformfeed-security-headers",
+  "description": "Apply security response headers to all routes",
+  "expression": "(http.host eq \"cpfeed.cloud\")",
+  "action": "rewrite",
+  "action_parameters": {
+    "headers": {
+      "Content-Security-Policy": {
+        "operation": "set",
+        "value": "frame-ancestors 'none'"
+      },
+      "X-Frame-Options": {
+        "operation": "set",
+        "value": "DENY"
+      },
+      "Strict-Transport-Security": {
+        "operation": "set",
+        "value": "max-age=31536000; includeSubDomains; preload"
+      }
+    }
+  }
+}
