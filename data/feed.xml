@@ -4,9 +4,144 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 02 Apr 2026 15:50:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 08:00:47 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[🚀 General Availability of Private Application Gateway on Azure Application Gateway v2]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/general-availability-of-private-application-gateway-on-azure/ba-p/4508294</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/general-availability-of-private-application-gateway-on-azure/ba-p/4508294</guid>
+      <description><![CDATA[🔍 What Is Private Application Gateway? Historically, Application Gateway v2 required a public IP address to communicate with the Azure control plane (GatewayManager). This requirement imposed several constraints: Mandatory public IP exposure Restricted Network Security Group (NSG) rules Limited...]]></description>
+      <dc:creator><![CDATA[kumaramit1]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 07:24:09 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[oBeaver — A Beaver That Runs LLMs on Your Machine 🦫]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/obeaver-a-beaver-that-runs-llms-on-your-machine/ba-p/4507884</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/obeaver-a-beaver-that-runs-llms-on-your-machine/ba-p/4507884</guid>
+      <description><![CDATA[Hi there! I'm the creator of oBeaver. This project started from a pretty simple desire: I wanted to run large language models on my own computer. No data sent to the cloud. No API keys. No per-call charges. I'm guessing you've had the same thought. There are already great tools out there — Ollama...]]></description>
+      <dc:creator><![CDATA[kinfey]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Enterprise‑Scale Azure Subscription Vending Using Azure Verified Modules (AVM)]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-scale-azure-subscription-vending-using-azure-verified/ba-p/4507751</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-scale-azure-subscription-vending-using-azure-verified/ba-p/4507751</guid>
+      <description><![CDATA[Why Subscription Vending Is Critical at Scale Azure subscriptions define the security, governance, and billing boundary for workloads. In large organizations, manual subscription creation often leads to: Inconsistent management group placement Delayed or missing policy enforcement Incorrect RBAC...]]></description>
+      <dc:creator><![CDATA[kumaramit1]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 06:45:24 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Blue‑Green Strategy for Always‑On TCP Workloads on Azure Container Apps]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/blue-green-strategy-for-always-on-tcp-workloads-on-azure/ba-p/4507894</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/blue-green-strategy-for-always-on-tcp-workloads-on-azure/ba-p/4507894</guid>
+      <description><![CDATA[Scenario: Always‑on workloads in Azure Container Apps continuously pull from a TCP source, process the stream, and push into Azure Managed Redis, which is then consumed by another always‑on Container Apps workload that writes to a database. Challenge: Standard revision traffic splitting isn’t a fit...]]></description>
+      <dc:creator><![CDATA[srivastavani]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 05:58:36 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Bring Your Own Model (BYOM) for Azure AI Applications using Azure Machine Learning]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bring-your-own-model-byom-for-azure-ai-applications-using-azure/ba-p/4508211</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bring-your-own-model-byom-for-azure-ai-applications-using-azure/ba-p/4508211</guid>
+      <description><![CDATA[Modern AI-powered applications running on Azure increasingly require flexibility in model choice. While managed model catalogs accelerate time to value, real-world enterprise applications often need to: Host open‑source or fine‑tuned models Deploy domain‑specific or regulated models inside a tenant...]]></description>
+      <dc:creator><![CDATA[vaibhavpandey]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 02:00:40 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[MCP Apps on Azure Functions: Quick Start with TypeScript]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-apps-on-azure-functions-quick-start-with-typescript/ba-p/4507859</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-apps-on-azure-functions-quick-start-with-typescript/ba-p/4507859</guid>
+      <description><![CDATA[Azure Functions makes hosting MCP apps simple: build locally, create a secure endpoint, and deploy fast with azd. What Are MCP Apps? MCP (Model Context Protocol) apps add new features to AI assistants and clients: MCP Tools: Remote functions that clients call to perform actions (for example, fetch...]]></description>
+      <dc:creator><![CDATA[swapnil_nagar]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 01:21:43 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[AKS cluster with AGIC hits the Azure Application Gateway backend pool limit (100)]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201</guid>
+      <description><![CDATA[I’m writing this article to document a real-world scaling issue we hit while exposing many applications from an Azure Kubernetes Service (AKS) cluster using Application Gateway Ingress Controller (AGIC). The problem is easy to miss because Kubernetes resources keep applying successfully, but the...]]></description>
+      <dc:creator><![CDATA[kkaushal]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 00:42:48 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[An update to the active flow billing model for Azure SRE Agent]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/an-update-to-the-active-flow-billing-model-for-azure-sre-agent/ba-p/4507866</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/an-update-to-the-active-flow-billing-model-for-azure-sre-agent/ba-p/4507866</guid>
+      <description><![CDATA[Earlier today, we announced that Azure SRE Agent now supports multiple AI model providers, starting with Anthropic. To support multi-model choice, and make active usage costs easier to understand, we’re updating how active flow usage is measured, effective April 15, 2026. At a glance What’s...]]></description>
+      <dc:creator><![CDATA[Mayunk_Jain]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 22:53:51 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</guid>
+      <description><![CDATA[This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...]]></description>
+      <dc:creator><![CDATA[lily-ma]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 22:31:04 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure SRE Agent now supports multiple model providers, including Anthropic Claude]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-now-supports-multiple-model-providers-including/ba-p/4508111</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-now-supports-multiple-model-providers-including/ba-p/4508111</guid>
+      <description><![CDATA[Today, Azure SRE Agent adds model provider selection—choose between Azure OpenAI and Anthropic to match the right AI provider to your incident workflow. SRE Agent has saved over 20,000 engineering hours by pulling together logs, deployments, and signals into a single investigation thread, turning...]]></description>
+      <dc:creator><![CDATA[dchelupati]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 22:23:15 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Accelerate Agent Development: Hacks for Building with Microsoft Sentinel data lake]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/accelerate-agent-development-hacks-for-building-with-microsoft/ba-p/4503039</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/accelerate-agent-development-hacks-for-building-with-microsoft/ba-p/4503039</guid>
+      <description><![CDATA[As a Senior Product Manager | Developer Architect on the App Assure team working to bring Microsoft Sentinel and Security Copilot solutions to market, I interact with many ISVs building agents on Microsoft Sentinel data lake for the first time. I’ve written this article to walk you through one...]]></description>
+      <dc:creator><![CDATA[MitchellGulledge]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 21:37:47 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Microsoft Defender for Cloud Customer Newsletter]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-customer-newsletter/ba-p/4508180</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-customer-newsletter/ba-p/4508180</guid>
+      <description><![CDATA[What's new in Defender for Cloud? Kubernetes gated deployment is now generally available for AKS automatic clusters. Use help to deploy the Defender for Containers sensor to use this feature. More information can be found here. Grouped recommendations are converted into individual ones to list each...]]></description>
+      <dc:creator><![CDATA[Yura_Lee]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 20:43:28 GMT</pubDate>
+      <category><![CDATA[Microsoft Defender for Cloud]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Aspire Docs in Your Terminal (and Your AI’s Brain)]]></title>
+      <link>https://devblogs.microsoft.com/aspire/aspire-docs-in-your-terminal/</link>
+      <guid>https://devblogs.microsoft.com/aspire/aspire-docs-in-your-terminal/</guid>
+      <description><![CDATA[Aspire 13.2 ships aspire docs, a CLI for browsing, searching, and reading official aspire.dev docs from your terminal, with the same source of truth available to AI skills and automation. The post Aspire Docs in Your Terminal (and Your AI’s Brain) appeared first on Aspire Blog.]]></description>
+      <dc:creator><![CDATA[David Pine]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 17:00:00 GMT</pubDate>
+      <category><![CDATA[Aspire Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/558027/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/558027/</guid>
+      <description><![CDATA[Starting March 31, 2027, Python applications hosted on Azure App Service on Windows and Azure Functions on Windows will no longer run. After this date: Your application configuration and content will remain intact Your apps will stop running Technical support for these workloads will no longer be...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 16:45:52 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/558276/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/558276/</guid>
+      <description><![CDATA[AzureDnsZone endpoints (preview) for Azure Blob storage accounts will enter retirement in March 2027. Customers leveraging AzureDnsZone endpoints (preview) should transition to Standard endpoints for all new and existing blob storage account deployments by April 1, 2027. Standard endpoints are...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 16:30:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
     <item>
       <title><![CDATA[Unlocking AI-Ready Unstructured Data at Scale with Komprise and Azure]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-ai-ready-unstructured-data-at-scale-with-komprise-and/ba-p/4507422</link>
@@ -320,141 +455,6 @@
       <description><![CDATA[The following updates were made to Azure DevOps in March 2026. The Remote MCP Server entered public preview, enabling seamless AI-powered integration with Azure DevOps without requiring a local server. Security improvements included new Advanced Security PR status checks that integrate directly...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 31 Mar 2026 18:15:10 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559695/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559695/</guid>
-      <description><![CDATA[Azure Event Grid offers a variety of features in Public Preview – intended to help you better manage large-scale, distributed systems with improved interoperability and control. Public Preview Features: Cross-Tenant Webhook Delivery: Enables secure cross-tenant delivery using managed identity in...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 17:45:46 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Powering Event Driven Payments with Stripe and Azure Event Grid]]></title>
-      <link>https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/powering-event-driven-payments-with-stripe-and-azure-event-grid/ba-p/4507094</link>
-      <guid>https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/powering-event-driven-payments-with-stripe-and-azure-event-grid/ba-p/4507094</guid>
-      <description><![CDATA[Introduction Modern commerce systems are increasingly event-driven. Payments, subscriptions, refunds, disputes, and customer updates all generate signals that downstream systems must react quickly and reliably. Stripe events give developers real-time visibility into what is happening inside their...]]></description>
-      <dc:creator><![CDATA[robece]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 17:41:07 GMT</pubDate>
-      <category><![CDATA[Messaging on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/492542/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/492542/</guid>
-      <description><![CDATA[Azure Event Grid now offers a variety of new features intended to help you better manage large-scale, distributed systems with improved interoperability and control. Generally Available features: MQTT Message Ordering: Ensures in-order message delivery within a client session, crucial for workflows...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 17:30:08 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: User delegation SAS for Azure Tables, Azure Files, and Azure Queues]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559535/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559535/</guid>
-      <description><![CDATA[User delegation SAS for Azure Tables, Azure Files, and Azure Queues is now generally available. User delegation SAS allows users to create a more secure SAS token than account or service SAS by tying the SAS token to the delegator. This extension of UDK SAS will allow users to set SAS tokens at the...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 17:30:08 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Continued Investment in Azure App Service]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/continued-investment-in-azure-app-service/ba-p/4507398</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/continued-investment-in-azure-app-service/ba-p/4507398</guid>
-      <description><![CDATA[This blog was originally published to the App Service team blog Recent Investments Premium v4 (Pv4) Azure App Service Premium v4 delivers higher performance and scalability on newer Azure infrastructure while preserving the fully managed PaaS experience developers rely on. Premium v4 offers...]]></description>
-      <dc:creator><![CDATA[Byron Tardif]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 17:23:11 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Microsoft Azure now available from new cloud region in Denmark]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559406/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559406/</guid>
-      <description><![CDATA[Microsoft announces the opening of its cloud region in Denmark to accelerate digital transformation and AI innovation. The Denmark East region provides Danish customers with local, secure cloud infrastructure, supporting local data residency, low latency, an access to advanced cloud and AI...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 17:15:56 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Aspire 13.2: Dashboard Gets Smarter Export and Telemetry]]></title>
-      <link>https://devblogs.microsoft.com/aspire/aspire-dashboard-improvements-export-and-telemetry/</link>
-      <guid>https://devblogs.microsoft.com/aspire/aspire-dashboard-improvements-export-and-telemetry/</guid>
-      <description><![CDATA[Aspire 13.2 brings powerful new dashboard features for exporting and importing telemetry, querying telemetry via API, and improved GenAI telemetry visualization. The post Aspire 13.2: Dashboard Gets Smarter Export and Telemetry appeared first on Aspire Blog.]]></description>
-      <dc:creator><![CDATA[James Newton-King]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 17:00:00 GMT</pubDate>
-      <category><![CDATA[Aspire Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: Manually registered Azure VPN Clients for ​Azure Government and ​Microsoft Azure operated by 21Vianet clouds will be retired on March 31, 2029]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/557395/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/557395/</guid>
-      <description><![CDATA[On March 31, 2029, we’ll be retiring manually registered Azure VPN clients for point-to-site connections with Microsoft Entra ID authentication for ​Azure Government and ​Microsoft Azure operated by 21Vianet clouds. Recommended action: To prevent disruptions, migrate manually registered Azure VPN...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 16:45:33 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure Premium SSD v2 Disk is now available in US Gov Arizona]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559677/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559677/</guid>
-      <description><![CDATA[Azure Premium SSD v2 is now available in US Gov Arizona (a region without Availability Zone). Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, offers sub-millisecond latencies and exceptional price performance for IO-intensive workloads...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 16:30:51 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Visual Studio March Update – Build Your Own Custom Agents]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/visual-studio-march-update-build-your-own-custom-agents/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/visual-studio-march-update-build-your-own-custom-agents/</guid>
-      <description><![CDATA[This month’s Visual Studio update gives you new ways to customize GitHub Copilot. Custom agents allow you to build specialized Copilot agents tailored to your team’s workflow, backed by the tools and knowledge sources that matter to your project. Alongside that, agent skills bring reusable...]]></description>
-      <dc:creator><![CDATA[Mark Downie]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 16:00:18 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[The Durable Task Scheduler Consumption SKU is now Generally Available]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-durable-task-scheduler-consumption-sku-is-now-generally/ba-p/4506682</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-durable-task-scheduler-consumption-sku-is-now-generally/ba-p/4506682</guid>
-      <description><![CDATA[Today, we're excited to announce that the Durable Task Scheduler Consumption SKU has reached General Availability. Developers can now run durable workflows and agents on Azure with pay-per-use pricing, no storage to manage, no capacity to plan, and no idle costs. Just create a scheduler, connect...]]></description>
-      <dc:creator><![CDATA[greenie-msft]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 12:00:00 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Subscription Vending in Azure: An Implementation Overview]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/subscription-vending-in-azure-an-implementation-overview/ba-p/4506350</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/subscription-vending-in-azure-an-implementation-overview/ba-p/4506350</guid>
-      <description><![CDATA[Subscription vending is a process that enables the creation of multiple Azure subscriptions using code, based on organizational segregation or workload-specific requirements. Rather than relying on resource groups as the primary boundary, this approach treats subscriptions as the fundamental unit...]]></description>
-      <dc:creator><![CDATA[abhilashasr]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 07:48:15 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Developer CLI (azd) – March 2026: Run and Debug AI Agents Locally, GitHub Copilot Integration, & Container App Jobs]]></title>
-      <link>https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-march-2026/</link>
-      <guid>https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-march-2026/</guid>
-      <description><![CDATA[Run, invoke, and monitor AI agents locally or in Microsoft Foundry with the new azd AI agent extension commands. Plus GitHub Copilot-powered project setup, Container App Jobs deployment, local preflight validation, and configurable timeouts. The post Azure Developer CLI (azd) – March 2026: Run and...]]></description>
-      <dc:creator><![CDATA[PuiChee (PC) Chan]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 03:31:29 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[VS Code Extension]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/vs-code-extension/ba-p/4500803</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/vs-code-extension/ba-p/4500803</guid>
-      <description><![CDATA[What is a VS Code Extension? A VS Code Extension is a small program that adds new features or enhances existing functionality in Visual Studio Code. Extensions allow developers to tailor the editor to their needs by adding support for new languages, tools, themes, debuggers, commands, and...]]></description>
-      <dc:creator><![CDATA[Shikhaghildiyal]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 03:00:06 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Ephemeral OS Disk with full caching for VM/VMSS]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559322/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559322/</guid>
-      <description><![CDATA[Ephemeral OS Disk with full caching is now available in public preview for Azure VM/VMSS, bringing significantly faster and more reliable OS disk performance to your workloads. By caching the entire OS disk image on local VM storage (cache disk, resource disk, or NVMe disk), you get better IO...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 30 Mar 2026 21:45:47 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
     </item>
   </channel>
