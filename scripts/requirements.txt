@@ -40,7 +40,7 @@ pydantic==2.12.5
     # via openai
 pydantic-core==2.41.5
     # via pydantic
-requests==2.33.0
+requests==2.33.1
     # via -r requirements.in
 sgmllib3k==1.0.0
     # via feedparser
