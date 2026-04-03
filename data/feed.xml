@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 03 Apr 2026 11:41:43 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 15:32:30 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Demystifying On-Demand Capacity Reservations]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/demystifying-on-demand-capacity-reservations/ba-p/4504806</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/demystifying-on-demand-capacity-reservations/ba-p/4504806</guid>
+      <description><![CDATA[About On-Demand Capacity Reservations Introducing the “parking garage” metaphor There are dozens of VM types available in Azure which span multiple generations of CPU across vendors and architectures. Within each Azure region are datacenters hosting pools of hardware which runs Azure services, such...]]></description>
+      <dc:creator><![CDATA[KenHooverMSFT]]></dc:creator>
+      <pubDate>Fri, 03 Apr 2026 11:48:50 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[DevSecOps on AKS: Governance Gates That Actually Prevent Incidents]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/devsecops-on-aks-governance-gates-that-actually-prevent/ba-p/4508415</link>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[jesselopez]]></dc:creator>
       <pubDate>Tue, 31 Mar 2026 21:17:04 GMT</pubDate>
       <category><![CDATA[High Performance Computing]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft Sentinel is now supported in Unified RBAC with row-level access]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-is-now-supported-in-unified-rbac-with-row/ba-p/4503121</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-is-now-supported-in-unified-rbac-with-row/ba-p/4503121</guid>
-      <description><![CDATA[Enabling streamlined, granular, and scalable permissions We’re excited to announce the Public Preview of Unified Role Based Access Control (URBAC) for Microsoft Sentinel, together with row-level access. This new capability, available in April, extends the Microsoft Defender Unified RBAC model to...]]></description>
-      <dc:creator><![CDATA[tomasbeerthuis]]></dc:creator>
-      <pubDate>Tue, 31 Mar 2026 20:25:27 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
     </item>
   </channel>
 </rss>
