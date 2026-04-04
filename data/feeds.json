@@ -1,7 +1,79 @@
 {
-  "lastUpdated": "2026-04-03T15:32:30.140946+00:00",
+  "lastUpdated": "2026-04-04T07:46:48.484755+00:00",
   "totalArticles": 260,
   "articles": [
+    {
+      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828",
+      "published": "2026-04-04T04:21:04+00:00",
+      "summary": "This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "lily-ma"
+    },
+    {
+      "title": "MCP Apps on Azure Functions: Quick Start with TypeScript",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-apps-on-azure-functions-quick-start-with-typescript/ba-p/4507859",
+      "published": "2026-04-03T20:23:40+00:00",
+      "summary": "Azure Functions makes hosting MCP apps simple: build locally, create a secure endpoint, and deploy fast with Azure Developer CLI (azd). This guide shows you how using a weather app example. What Are MCP Apps? MCP Apps let MCP servers return interactive HTML interfaces such as data visualizations,...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "swapnil_nagar"
+    },
+    {
+      "title": "Run the latest Azure Arc agent with Automatic Agent Upgrade (Public Preview)",
+      "link": "https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535",
+      "published": "2026-04-03T19:30:06+00:00",
+      "summary": "Customers managing large fleets of Azure Arc servers need a scalable way to ensure the Azure Arc agent stays up to date without manual intervention. Per server configuration does not scale, and gaps in upgrade coverage can lead to operational drift, missed features, and delayed security updates. To...",
+      "blog": "Azure Arc",
+      "blogId": "azurearcblog",
+      "author": "yunishussein"
+    },
+    {
+      "title": "Secure HTTP‑Only AKS Ingress with Azure Front Door Premium, Firewall DNAT, and Private AGIC",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/secure-http-only-aks-ingress-with-azure-front-door-premium/ba-p/4508167",
+      "published": "2026-04-03T19:15:55+00:00",
+      "summary": "Reference architecture and runbook (Part 1: HTTP-only) for Hub-Spoke networking with private Application Gateway (AGIC), Azure Firewall DNAT, and Azure Front Door Premium (WAF) 0. When and Why to Use This Architecture Series note: This document is Part 1 and uses HTTP to keep the focus on routing...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "kkaushal"
+    },
+    {
+      "title": "From Discovery to Executive Presentation: Plan Your Migration with Azure Migrate in Hours",
+      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/from-discovery-to-executive-presentation-plan-your-migration/ba-p/4508500",
+      "published": "2026-04-03T18:06:11+00:00",
+      "summary": "The migration planning bottleneck Every migration starts with the same question: what do we have, and where should it go? Getting from that question to a clear, executive-ready answer has traditionally taken weeks. You scan the environment, export spreadsheets, manually classify workloads, run...",
+      "blog": "Azure Migration",
+      "blogId": "azuremigrationblog",
+      "author": "Shikher"
+    },
+    {
+      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
+      "published": "2026-04-03T17:54:06+00:00",
+      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "spalani"
+    },
+    {
+      "title": "Announcing general availability of Network Security Perimeter for Azure Service Bus",
+      "link": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-network-security-perimeter/ba-p/4508179",
+      "published": "2026-04-03T16:31:50+00:00",
+      "summary": "Today we are excited to announce the general availability of Network Security Perimeter (NSP) support for Azure Service Bus. Network Security Perimeter allows you to define a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, restricting public network...",
+      "blog": "Messaging on Azure",
+      "blogId": "messagingonazureblog",
+      "author": "EldertGrootenboer"
+    },
+    {
+      "title": "AKS cluster with AGIC hits the Azure Application Gateway backend pool limit (100)",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201",
+      "published": "2026-04-03T15:46:16+00:00",
+      "summary": "I’m writing this article to document a real-world scaling issue we hit while exposing many applications from an Azure Kubernetes Service (AKS) cluster using Application Gateway Ingress Controller (AGIC). The problem is easy to miss because Kubernetes resources keep applying successfully, but the...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "kkaushal"
+    },
     {
       "title": "Demystifying On-Demand Capacity Reservations",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/demystifying-on-demand-capacity-reservations/ba-p/4504806",
@@ -84,24 +156,6 @@
       "author": "vaibhavpandey"
     },
     {
-      "title": "MCP Apps on Azure Functions: Quick Start with TypeScript",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-apps-on-azure-functions-quick-start-with-typescript/ba-p/4507859",
-      "published": "2026-04-03T01:21:43+00:00",
-      "summary": "Azure Functions makes hosting MCP apps simple: build locally, create a secure endpoint, and deploy fast with azd. What Are MCP Apps? MCP (Model Context Protocol) apps add new features to AI assistants and clients: MCP Tools: Remote functions that clients call to perform actions (for example, fetch...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "swapnil_nagar"
-    },
-    {
-      "title": "AKS cluster with AGIC hits the Azure Application Gateway backend pool limit (100)",
-      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201",
-      "published": "2026-04-03T00:42:48+00:00",
-      "summary": "I’m writing this article to document a real-world scaling issue we hit while exposing many applications from an Azure Kubernetes Service (AKS) cluster using Application Gateway Ingress Controller (AGIC). The problem is easy to miss because Kubernetes resources keep applying successfully, but the...",
-      "blog": "Azure Architecture",
-      "blogId": "azurearchitectureblog",
-      "author": "kkaushal"
-    },
-    {
       "title": "An update to the active flow billing model for Azure SRE Agent",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/an-update-to-the-active-flow-billing-model-for-azure-sre-agent/ba-p/4507866",
       "published": "2026-04-02T22:53:51+00:00",
@@ -109,15 +163,6 @@
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "Mayunk_Jain"
-    },
-    {
-      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828",
-      "published": "2026-04-02T22:31:04+00:00",
-      "summary": "This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "lily-ma"
     },
     {
       "title": "Azure SRE Agent now supports multiple model providers, including Anthropic Claude",
@@ -354,12 +399,12 @@
       "title": "Retirement: Select Azure AI Language Features",
       "link": "https://azure.microsoft.com/en-us/updates/557394/",
       "published": "2026-04-01T18:00:10.492136+00:00",
-      "summary": "On March 20, 2027, Microsoft will retire the following eight Azure AI Language features: Key Phrase ExtractionSentiment Analysis and Opinion MiningCustom Text ClassificationConversational Language Understanding (CLU)Custom Question Answering (CQA)Orchestration WorkflowSummarization (extractive and...",
+      "summary": "On March 20, 2029, Microsoft will retire the following eight Azure AI Language features: Key Phrase ExtractionSentiment Analysis and Opinion MiningCustom Text ClassificationConversational Language Understanding (CLU)Custom Question Answering (CQA)Orchestration WorkflowSummarization (extractive and...",
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "retiring",
-      "azureRetirementDate": "2027-03-20"
+      "azureRetirementDate": "2029-03-20"
     },
     {
       "title": "Improving the Markdown Editor for Work Items",
@@ -673,15 +718,6 @@
       "azureStatus": "In preview"
     },
     {
-      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
-      "published": "2026-03-30T21:38:31+00:00",
-      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "spalani"
-    },
-    {
       "title": "Retirement: Deprecation of sidecar for remote-write for Azure Monitor managed service for Prometheus",
       "link": "https://azure.microsoft.com/en-us/updates/550519/",
       "published": "2026-03-30T21:30:50.093344+00:00",
@@ -791,6 +827,15 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "deepakkumarv"
+    },
+    {
+      "title": "Control where your pods land on AKS with NAP",
+      "link": "https://blog.aks.azure.com/2026/03/20/node-provisioning-best-practice",
+      "published": "2026-03-30T00:00:00+00:00",
+      "summary": "Combine taints, affinity, and topology spread constraints with AKS Node Auto-Provisioning to control where your pods land.",
+      "blog": "AKS Blog",
+      "blogId": "aksblog",
+      "author": "Microsoft"
     },
     {
       "title": "Autonomous Self-Healing for Azure VMware Solution Private Clouds",
@@ -2548,57 +2593,11 @@
       "blog": "Linux & Open Source",
       "blogId": "linuxandopensourceblog",
       "author": "CollinBrian"
-    },
-    {
-      "title": "Platform Engineering for the Agentic AI era",
-      "link": "https://devblogs.microsoft.com/all-things-azure/platform-engineering-for-the-agentic-ai-era/",
-      "published": "2026-03-05T05:47:29+00:00",
-      "summary": "For the last decade, platform engineering has relied on explicit API interaction layers: CLIs, SDKs, pipelines, wrappers, and UI workflows that translate human intent into machine‑safe API calls. AI agents are now short‑circuiting much of that stack. By combining natural language understanding,...",
-      "blog": "All Things Azure",
-      "blogId": "allthingsazure",
-      "author": "Arnaud Lheureux, davidwright"
-    },
-    {
-      "title": "The Polyglot tax – Part 2",
-      "link": "https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-2/",
-      "published": "2026-03-04T23:28:21+00:00",
-      "summary": "When JSON Met Graph Part 2 of 4 – The Multimodal Database Series A note on naming. Throughout this series, when we say “SQL Server 2025” we also mean Azure SQL. The multimodal capabilities we discuss – native JSON, graph, vector, and columnstore – are available across both the on-premises engine...",
-      "blog": "Azure SQL Dev Corner",
-      "blogId": "azuresqlblog",
-      "author": "Aditya Badramraju"
-    },
-    {
-      "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
-      "link": "https://azure.microsoft.com/en-us/updates/558102/",
-      "published": "2026-03-04T21:15:02.275174+00:00",
-      "summary": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now get enforced within 5 minutes.In light of cache refresh optimizations that are now in place, we’re...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "retiring",
-      "azureRetirementDate": "2026-04-30"
-    },
-    {
-      "title": "What’s New in Microsoft Sentinel: March 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-march-2026/ba-p/4499508",
-      "published": "2026-03-04T20:21:05+00:00",
-      "summary": "March brings a set of updates to Microsoft Sentinel focused on helping your SOC automate faster, onboard data with less friction, and detect threats across more of your environment. This month's updates include natural-language playbook generation for more flexible SOAR workflows, streamlined...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "NogaRonen"
-    },
-    {
-      "title": "Announcing the General Availability of the Azure Maps Geocode Autocomplete API",
-      "link": "https://techcommunity.microsoft.com/t5/azure-maps-blog/announcing-the-general-availability-of-the-azure-maps-geocode/ba-p/4499242",
-      "published": "2026-03-04T17:22:55+00:00",
-      "summary": "It was just last September that we were Introducing the Azure Maps Geocode Autocomplete API but now we’re excited to announce the general availability (GA) of the Azure Maps Geocode Autocomplete API, a production‑ready REST service that delivers fast, intelligent, and structured location...",
-      "blog": "Azure Maps",
-      "blogId": "azuremapsblog",
-      "author": "sinnypan"
     }
   ],
-  "summaryWindowDays": 5,
+  "summaryWindowDays": 6,
   "summaryPublishingDays": [
+    "2026-04-04",
     "2026-04-03",
     "2026-04-02",
     "2026-04-01",
@@ -2608,7 +2607,7 @@
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 15,
-  "summary": "- In preview:\n  • [Public Preview: Unlock Client-Side Configuration at Scale with Azure App Configuration and Azure Front Door](https://azure.microsoft.com/en-us/updates/537234/)\n  • [Public Preview: Azure NetApp Files storage with cool access enhancement](https://azure.microsoft.com/en-us/updates/559504/)\n  • [Public Preview: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures](https://azure.microsoft.com/en-us/updates/559695/)\n  • [Public Preview: Ephemeral OS Disk with full caching for VM/VMSS](https://azure.microsoft.com/en-us/updates/559322/)\n  • [Announcing Private Preview: Deploy Ansible Playbooks using Azure Policy via Machine Configuration](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-private-preview-deploy-ansible-playbooks-using-azure/ba-p/4507848)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure Data Box enhances compliance with automatic Secure Erasure Certificates](https://azure.microsoft.com/en-us/updates/559772/)\n  • [Generally Available: Azure Data Box now supports Azure Files Provisioned v2](https://azure.microsoft.com/en-us/updates/559767/)\n  • [Generally Available: Azure DevOps March 2026 updates](https://azure.microsoft.com/en-us/updates/559660/)\n  • [Generally Available: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures](https://azure.microsoft.com/en-us/updates/492542/)\n  • [Generally Available: User delegation SAS for Azure Tables, Azure Files, and Azure Queues](https://azure.microsoft.com/en-us/updates/559535/)\n\n- Retiring:\n  • [Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/en-us/updates/558027/)\n  • [Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/en-us/updates/558276/)\n  • [Retirement: Service Fabric support for Windows Server 2022 ends on March 31, 2027 - upgrade to Windows Server 2025](https://azure.microsoft.com/en-us/updates/558247/)\n  • [Retirement: Service Fabric support for Windows Server 2019 ends on March 31, 2027 - upgrade to Windows Server 2025](https://azure.microsoft.com/en-us/updates/558246/)\n  • [Retirement: Select Azure AI Language Features](https://azure.microsoft.com/en-us/updates/557394/)\n\n- In development:\n  • none noted in selected window",
+  "summary": "- In preview:\n  • [Public Preview: Unlock Client-Side Configuration at Scale with Azure App Configuration and Azure Front Door](https://azure.microsoft.com/en-us/updates/537234/)\n  • [Public Preview: Azure NetApp Files storage with cool access enhancement](https://azure.microsoft.com/en-us/updates/559504/)\n  • [Public Preview: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures](https://azure.microsoft.com/en-us/updates/559695/)\n  • [Public Preview: Ephemeral OS Disk with full caching for VM/VMSS](https://azure.microsoft.com/en-us/updates/559322/)\n  • [Run the latest Azure Arc agent with Automatic Agent Upgrade (Public Preview)](https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure Data Box enhances compliance with automatic Secure Erasure Certificates](https://azure.microsoft.com/en-us/updates/559772/)\n  • [Generally Available: Azure Data Box now supports Azure Files Provisioned v2](https://azure.microsoft.com/en-us/updates/559767/)\n  • [Generally Available: Azure DevOps March 2026 updates](https://azure.microsoft.com/en-us/updates/559660/)\n  • [Generally Available: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures](https://azure.microsoft.com/en-us/updates/492542/)\n  • [Generally Available: User delegation SAS for Azure Tables, Azure Files, and Azure Queues](https://azure.microsoft.com/en-us/updates/559535/)\n\n- Retiring:\n  • [Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/en-us/updates/558027/)\n  • [Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/en-us/updates/558276/)\n  • [Retirement: Service Fabric support for Windows Server 2022 ends on March 31, 2027 - upgrade to Windows Server 2025](https://azure.microsoft.com/en-us/updates/558247/)\n  • [Retirement: Service Fabric support for Windows Server 2019 ends on March 31, 2027 - upgrade to Windows Server 2025](https://azure.microsoft.com/en-us/updates/558246/)\n  • [Retirement: Select Azure AI Language Features](https://azure.microsoft.com/en-us/updates/557394/)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 3rd April 2026",
     "url": "https://www.youtube.com/watch?v=x8ULC4uDQos",
