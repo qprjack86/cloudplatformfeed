@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T11:35:03.361106+00:00",
+  "generatedAt": "2026-04-04T15:22:22.272323+00:00",
   "totalArticles": 118,
   "articles": [
     {
@@ -2371,25 +2371,6 @@
       "_normalized_url": "message_center:MC1262590"
     },
     {
-      "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
-      "link": "https://deltapulse.app/item/559387",
-      "published": "2026-03-27T22:15:31.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559387",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:559387"
-    },
-    {
       "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
       "link": "https://deltapulse.app/item/558539",
       "published": "2026-03-27T22:15:31.000Z",
@@ -2407,6 +2388,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558539"
+    },
+    {
+      "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
+      "link": "https://deltapulse.app/item/559387",
+      "published": "2026-03-27T22:15:31.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559387",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:559387"
     },
     {
       "title": "Microsoft Teams: Queues app on Teams mobile",
@@ -3618,25 +3618,6 @@
         "_normalized_url": "roadmap:558254"
       },
       {
-        "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
-        "link": "https://deltapulse.app/item/559387",
-        "published": "2026-03-27T22:15:31.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559387",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559387"
-      },
-      {
         "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
         "link": "https://deltapulse.app/item/558539",
         "published": "2026-03-27T22:15:31.000Z",
@@ -3654,6 +3635,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558539"
+      },
+      {
+        "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
+        "link": "https://deltapulse.app/item/559387",
+        "published": "2026-03-27T22:15:31.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559387",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559387"
       },
       {
         "title": "Microsoft Teams: Queues app on Teams mobile",
@@ -7244,25 +7244,6 @@
         "_normalized_url": "message_center:MC1262590"
       },
       {
-        "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
-        "link": "https://deltapulse.app/item/559387",
-        "published": "2026-03-27T22:15:31.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559387",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559387"
-      },
-      {
         "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
         "link": "https://deltapulse.app/item/558539",
         "published": "2026-03-27T22:15:31.000Z",
@@ -7280,6 +7261,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558539"
+      },
+      {
+        "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
+        "link": "https://deltapulse.app/item/559387",
+        "published": "2026-03-27T22:15:31.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559387",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559387"
       },
       {
         "title": "Microsoft Teams: Queues app on Teams mobile",
