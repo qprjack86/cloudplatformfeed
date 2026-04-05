@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T11:36:16.446891+00:00",
+  "generatedAt": "2026-04-05T15:23:26.065481+00:00",
   "totalArticles": 118,
   "articles": [
     {
@@ -318,25 +318,6 @@
       "_normalized_url": "message_center:MC1269207"
     },
     {
-      "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
-      "link": "https://deltapulse.app/item/559611",
-      "published": "2026-04-02T23:15:15.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559611",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:559611"
-    },
-    {
       "title": "Microsoft Purview: Purview in Microsoft Admin Center",
       "link": "https://deltapulse.app/item/559617",
       "published": "2026-04-02T23:15:15.000Z",
@@ -356,13 +337,13 @@
       "_normalized_url": "roadmap:559617"
     },
     {
-      "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
-      "link": "https://deltapulse.app/item/557191",
+      "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
+      "link": "https://deltapulse.app/item/559611",
       "published": "2026-04-02T23:15:15.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "557191",
+      "m365Id": "559611",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -371,8 +352,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:557191"
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:559611"
     },
     {
       "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
@@ -411,6 +392,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559266"
+    },
+    {
+      "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
+      "link": "https://deltapulse.app/item/557191",
+      "published": "2026-04-02T23:15:15.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "557191",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:557191"
     },
     {
       "title": "Viva Engage: Pinned resources and related communities in Teams for iOS",
@@ -729,6 +729,25 @@
       "_normalized_url": "message_center:MC1267957"
     },
     {
+      "title": "SharePoint: Extending AI in SharePoint using custom skills",
+      "link": "https://deltapulse.app/item/559800",
+      "published": "2026-04-01T23:15:50.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559800",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:559800"
+    },
+    {
       "title": "Microsoft Purview: Data Catalog – Migration tool in Unified Catalog to migrate classic glossary terms to Unified Catalog",
       "link": "https://deltapulse.app/item/558683",
       "published": "2026-04-01T23:15:50.000Z",
@@ -767,44 +786,6 @@
       "_normalized_url": "roadmap:559605"
     },
     {
-      "title": "Microsoft Teams: Facilitator detects and answers questions",
-      "link": "https://deltapulse.app/item/558341",
-      "published": "2026-04-01T23:15:50.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558341",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "June 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558341"
-    },
-    {
-      "title": "SharePoint: Extending AI in SharePoint using custom skills",
-      "link": "https://deltapulse.app/item/559800",
-      "published": "2026-04-01T23:15:50.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559800",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:559800"
-    },
-    {
       "title": "Microsoft Viva: Following feed in Viva Engage",
       "link": "https://deltapulse.app/item/559482",
       "published": "2026-04-01T23:15:50.000Z",
@@ -822,6 +803,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559482"
+    },
+    {
+      "title": "Microsoft Teams: Facilitator detects and answers questions",
+      "link": "https://deltapulse.app/item/558341",
+      "published": "2026-04-01T23:15:50.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558341",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "June 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:558341"
     },
     {
       "title": "Outlook for Android: Unified user interface in text and image previewers",
@@ -909,25 +909,6 @@
       "_normalized_url": "message_center:MC1267840"
     },
     {
-      "title": "Microsoft Purview: Information Protection - Apply default SharePoint library labels to data at rest",
-      "link": "https://deltapulse.app/item/559105",
-      "published": "2026-03-31T23:15:47.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559105",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:559105"
-    },
-    {
       "title": "Microsoft Teams: Quick access to read items from unread-only view",
       "link": "https://deltapulse.app/item/559608",
       "published": "2026-03-31T23:15:47.000Z",
@@ -1002,6 +983,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:559106"
+    },
+    {
+      "title": "Microsoft Purview: Information Protection - Apply default SharePoint library labels to data at rest",
+      "link": "https://deltapulse.app/item/559105",
+      "published": "2026-03-31T23:15:47.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559105",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:559105"
     },
     {
       "title": "Microsoft 365 Copilot: Intelligent Summaries in Copilot Dashboard",
@@ -1131,27 +1131,6 @@
       "_normalized_url": "message_center:MC1266895"
     },
     {
-      "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
-      "link": "https://deltapulse.app/item/MC1266857",
-      "published": "2026-03-31T21:02:37.947Z",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1266857",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1266857"
-    },
-    {
       "title": "(Updated) The March 2026 Windows non-security preview update is now available",
       "link": "https://deltapulse.app/item/MC1262522",
       "published": "2026-03-31T21:02:37.947Z",
@@ -1171,6 +1150,27 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1262522"
+    },
+    {
+      "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
+      "link": "https://deltapulse.app/item/MC1266857",
+      "published": "2026-03-31T21:02:37.947Z",
+      "source": "m365",
+      "m365Service": "Windows",
+      "m365AllServices": [
+        "Windows"
+      ],
+      "m365Id": "MC1266857",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "March 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1266857"
     },
     {
       "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -1257,13 +1257,13 @@
       "_normalized_url": "message_center:MC1266582"
     },
     {
-      "title": "Outlook: Copilot provides coaching feedback in chat as you draft, edit and format emails",
-      "link": "https://deltapulse.app/item/559418",
+      "title": "Outlook: Multiple Intune Accounts for Outlook on iOS",
+      "link": "https://deltapulse.app/item/558252",
       "published": "2026-03-30T23:00:38.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "559418",
+      "m365Id": "558252",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -1273,26 +1273,7 @@
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:559418"
-    },
-    {
-      "title": "Microsoft 365: Companion apps - Copilot prompts in the Files app now available for Copilot Chat users",
-      "link": "https://deltapulse.app/item/558595",
-      "published": "2026-03-30T23:00:38.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558595",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558595"
+      "_normalized_url": "roadmap:558252"
     },
     {
       "title": "Microsoft Copilot (Microsoft 365): Create Excel spreadsheets from Copilot Notebooks",
@@ -1333,13 +1314,13 @@
       "_normalized_url": "roadmap:559023"
     },
     {
-      "title": "Outlook: Multiple Intune Accounts for Outlook on iOS",
-      "link": "https://deltapulse.app/item/558252",
+      "title": "Microsoft 365: Companion apps - Copilot prompts in the Files app now available for Copilot Chat users",
+      "link": "https://deltapulse.app/item/558595",
       "published": "2026-03-30T23:00:38.000Z",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558252",
+      "m365Id": "558595",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -1349,7 +1330,26 @@
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558252"
+      "_normalized_url": "roadmap:558595"
+    },
+    {
+      "title": "Outlook: Copilot provides coaching feedback in chat as you draft, edit and format emails",
+      "link": "https://deltapulse.app/item/559418",
+      "published": "2026-03-30T23:00:38.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559418",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:559418"
     },
     {
       "title": "Microsoft Teams: New experience when users minimize the meeting window",
@@ -1673,25 +1673,6 @@
       "_normalized_url": "message_center:MC1265742"
     },
     {
-      "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
-      "link": "https://deltapulse.app/item/553213",
-      "published": "2026-03-30T16:15:57.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "553213",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "July 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:553213"
-    },
-    {
       "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
       "link": "https://deltapulse.app/item/558538",
       "published": "2026-03-30T16:15:57.000Z",
@@ -1709,6 +1690,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558538"
+    },
+    {
+      "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
+      "link": "https://deltapulse.app/item/553213",
+      "published": "2026-03-30T16:15:57.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "553213",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "July 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:553213"
     },
     {
       "title": "Power Platform - Move apps out of the default environment",
@@ -2371,6 +2371,25 @@
       "_normalized_url": "message_center:MC1262590"
     },
     {
+      "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
+      "link": "https://deltapulse.app/item/558539",
+      "published": "2026-03-27T22:15:31.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558539",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "June 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:558539"
+    },
+    {
       "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
       "link": "https://deltapulse.app/item/559387",
       "published": "2026-03-27T22:15:31.000Z",
@@ -2407,25 +2426,6 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559386"
-    },
-    {
-      "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
-      "link": "https://deltapulse.app/item/558539",
-      "published": "2026-03-27T22:15:31.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558539",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "June 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558539"
     }
   ],
   "byCategory": {
@@ -2959,25 +2959,6 @@
         "_normalized_url": "message_center:MC1269210"
       },
       {
-        "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
-        "link": "https://deltapulse.app/item/559611",
-        "published": "2026-04-02T23:15:15.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559611",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559611"
-      },
-      {
         "title": "Microsoft Purview: Purview in Microsoft Admin Center",
         "link": "https://deltapulse.app/item/559617",
         "published": "2026-04-02T23:15:15.000Z",
@@ -2997,13 +2978,13 @@
         "_normalized_url": "roadmap:559617"
       },
       {
-        "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
-        "link": "https://deltapulse.app/item/557191",
+        "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
+        "link": "https://deltapulse.app/item/559611",
         "published": "2026-04-02T23:15:15.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "557191",
+        "m365Id": "559611",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -3012,8 +2993,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:557191"
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559611"
       },
       {
         "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
@@ -3052,6 +3033,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559266"
+      },
+      {
+        "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
+        "link": "https://deltapulse.app/item/557191",
+        "published": "2026-04-02T23:15:15.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "557191",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:557191"
       },
       {
         "title": "Microsoft AutoUpdate (MAU) CDN Endpoint Update for Mac",
@@ -3096,6 +3096,25 @@
         "_normalized_url": "message_center:MC1267976"
       },
       {
+        "title": "SharePoint: Extending AI in SharePoint using custom skills",
+        "link": "https://deltapulse.app/item/559800",
+        "published": "2026-04-01T23:15:50.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559800",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:559800"
+      },
+      {
         "title": "Microsoft Purview: Data Catalog – Migration tool in Unified Catalog to migrate classic glossary terms to Unified Catalog",
         "link": "https://deltapulse.app/item/558683",
         "published": "2026-04-01T23:15:50.000Z",
@@ -3134,44 +3153,6 @@
         "_normalized_url": "roadmap:559605"
       },
       {
-        "title": "Microsoft Teams: Facilitator detects and answers questions",
-        "link": "https://deltapulse.app/item/558341",
-        "published": "2026-04-01T23:15:50.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558341",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558341"
-      },
-      {
-        "title": "SharePoint: Extending AI in SharePoint using custom skills",
-        "link": "https://deltapulse.app/item/559800",
-        "published": "2026-04-01T23:15:50.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559800",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559800"
-      },
-      {
         "title": "Microsoft Viva: Following feed in Viva Engage",
         "link": "https://deltapulse.app/item/559482",
         "published": "2026-04-01T23:15:50.000Z",
@@ -3189,6 +3170,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559482"
+      },
+      {
+        "title": "Microsoft Teams: Facilitator detects and answers questions",
+        "link": "https://deltapulse.app/item/558341",
+        "published": "2026-04-01T23:15:50.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558341",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558341"
       },
       {
         "title": "Microsoft 365 Copilot (Premium): Choose your AI model when editing presentations in PowerPoint",
@@ -3211,25 +3211,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1267867"
-      },
-      {
-        "title": "Microsoft Purview: Information Protection - Apply default SharePoint library labels to data at rest",
-        "link": "https://deltapulse.app/item/559105",
-        "published": "2026-03-31T23:15:47.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559105",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559105"
       },
       {
         "title": "Microsoft Teams: Quick access to read items from unread-only view",
@@ -3308,6 +3289,25 @@
         "_normalized_url": "roadmap:559106"
       },
       {
+        "title": "Microsoft Purview: Information Protection - Apply default SharePoint library labels to data at rest",
+        "link": "https://deltapulse.app/item/559105",
+        "published": "2026-03-31T23:15:47.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559105",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:559105"
+      },
+      {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
         "link": "https://deltapulse.app/item/MC1266850",
         "published": "2026-03-31T20:46:05.463Z",
@@ -3329,13 +3329,13 @@
         "_normalized_url": "message_center:MC1266850"
       },
       {
-        "title": "Outlook: Copilot provides coaching feedback in chat as you draft, edit and format emails",
-        "link": "https://deltapulse.app/item/559418",
+        "title": "Outlook: Multiple Intune Accounts for Outlook on iOS",
+        "link": "https://deltapulse.app/item/558252",
         "published": "2026-03-30T23:00:38.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559418",
+        "m365Id": "558252",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -3345,26 +3345,7 @@
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559418"
-      },
-      {
-        "title": "Microsoft 365: Companion apps - Copilot prompts in the Files app now available for Copilot Chat users",
-        "link": "https://deltapulse.app/item/558595",
-        "published": "2026-03-30T23:00:38.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558595",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558595"
+        "_normalized_url": "roadmap:558252"
       },
       {
         "title": "Microsoft Copilot (Microsoft 365): Create Excel spreadsheets from Copilot Notebooks",
@@ -3405,13 +3386,13 @@
         "_normalized_url": "roadmap:559023"
       },
       {
-        "title": "Outlook: Multiple Intune Accounts for Outlook on iOS",
-        "link": "https://deltapulse.app/item/558252",
+        "title": "Microsoft 365: Companion apps - Copilot prompts in the Files app now available for Copilot Chat users",
+        "link": "https://deltapulse.app/item/558595",
         "published": "2026-03-30T23:00:38.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558252",
+        "m365Id": "558595",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -3421,7 +3402,26 @@
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558252"
+        "_normalized_url": "roadmap:558595"
+      },
+      {
+        "title": "Outlook: Copilot provides coaching feedback in chat as you draft, edit and format emails",
+        "link": "https://deltapulse.app/item/559418",
+        "published": "2026-03-30T23:00:38.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559418",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559418"
       },
       {
         "title": "Microsoft 365 Copilot: New chat-first design for the Copilot mobile app",
@@ -3447,25 +3447,6 @@
         "_normalized_url": "message_center:MC1266021"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
-        "link": "https://deltapulse.app/item/553213",
-        "published": "2026-03-30T16:15:57.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "553213",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:553213"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
         "link": "https://deltapulse.app/item/558538",
         "published": "2026-03-30T16:15:57.000Z",
@@ -3483,6 +3464,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558538"
+      },
+      {
+        "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
+        "link": "https://deltapulse.app/item/553213",
+        "published": "2026-03-30T16:15:57.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "553213",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:553213"
       },
       {
         "title": "Microsoft Teams: Book future meetings directly from Teams panels",
@@ -3618,6 +3618,25 @@
         "_normalized_url": "roadmap:558254"
       },
       {
+        "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
+        "link": "https://deltapulse.app/item/558539",
+        "published": "2026-03-27T22:15:31.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558539",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558539"
+      },
+      {
         "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
         "link": "https://deltapulse.app/item/559387",
         "published": "2026-03-27T22:15:31.000Z",
@@ -3654,25 +3673,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559386"
-      },
-      {
-        "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
-        "link": "https://deltapulse.app/item/558539",
-        "published": "2026-03-27T22:15:31.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558539",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558539"
       }
     ],
     "AI & Automation": [
@@ -4064,27 +4064,6 @@
         "_normalized_url": "message_center:MC1266895"
       },
       {
-        "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
-        "link": "https://deltapulse.app/item/MC1266857",
-        "published": "2026-03-31T21:02:37.947Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1266857",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1266857"
-      },
-      {
         "title": "(Updated) The March 2026 Windows non-security preview update is now available",
         "link": "https://deltapulse.app/item/MC1262522",
         "published": "2026-03-31T21:02:37.947Z",
@@ -4104,6 +4083,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1262522"
+      },
+      {
+        "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
+        "link": "https://deltapulse.app/item/MC1266857",
+        "published": "2026-03-31T21:02:37.947Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1266857",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1266857"
       },
       {
         "title": "(Updated) Microsoft Entra ID: Improved readability for Authentication Methods Policy Update audit logs",
@@ -4874,25 +4874,6 @@
   "byLifecycle": {
     "in_preview": [
       {
-        "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
-        "link": "https://deltapulse.app/item/557191",
-        "published": "2026-04-02T23:15:15.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "557191",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:557191"
-      },
-      {
         "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
         "link": "https://deltapulse.app/item/558565",
         "published": "2026-04-02T23:15:15.000Z",
@@ -4912,23 +4893,23 @@
         "_normalized_url": "roadmap:558565"
       },
       {
-        "title": "Microsoft Purview: Data Catalog – Migration tool in Unified Catalog to migrate classic glossary terms to Unified Catalog",
-        "link": "https://deltapulse.app/item/558683",
-        "published": "2026-04-01T23:15:50.000Z",
+        "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
+        "link": "https://deltapulse.app/item/557191",
+        "published": "2026-04-02T23:15:15.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558683",
+        "m365Id": "557191",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "July 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558683"
+        "_normalized_url": "roadmap:557191"
       },
       {
         "title": "SharePoint: Extending AI in SharePoint using custom skills",
@@ -4950,23 +4931,23 @@
         "_normalized_url": "roadmap:559800"
       },
       {
-        "title": "Microsoft Purview: Information Protection - Apply default SharePoint library labels to data at rest",
-        "link": "https://deltapulse.app/item/559105",
-        "published": "2026-03-31T23:15:47.000Z",
+        "title": "Microsoft Purview: Data Catalog – Migration tool in Unified Catalog to migrate classic glossary terms to Unified Catalog",
+        "link": "https://deltapulse.app/item/558683",
+        "published": "2026-04-01T23:15:50.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559105",
+        "m365Id": "558683",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "May 2026",
+        "m365TargetDate": "July 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559105"
+        "_normalized_url": "roadmap:558683"
       },
       {
         "title": "Microsoft Purview: Data Loss Prevention - Apply default SharePoint library labels to data at rest",
@@ -4988,6 +4969,25 @@
         "_normalized_url": "roadmap:559106"
       },
       {
+        "title": "Microsoft Purview: Information Protection - Apply default SharePoint library labels to data at rest",
+        "link": "https://deltapulse.app/item/559105",
+        "published": "2026-03-31T23:15:47.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559105",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:559105"
+      },
+      {
         "title": "Microsoft Copilot (Microsoft 365): Create Excel spreadsheets from Copilot Notebooks",
         "link": "https://deltapulse.app/item/559480",
         "published": "2026-03-30T23:00:38.000Z",
@@ -5007,25 +5007,6 @@
         "_normalized_url": "roadmap:559480"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
-        "link": "https://deltapulse.app/item/553213",
-        "published": "2026-03-30T16:15:57.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "553213",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:553213"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
         "link": "https://deltapulse.app/item/558538",
         "published": "2026-03-30T16:15:57.000Z",
@@ -5043,6 +5024,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558538"
+      },
+      {
+        "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
+        "link": "https://deltapulse.app/item/553213",
+        "published": "2026-03-30T16:15:57.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "553213",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:553213"
       }
     ],
     "launched_ga": [
@@ -5362,25 +5362,6 @@
         "_normalized_url": "message_center:MC1269207"
       },
       {
-        "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
-        "link": "https://deltapulse.app/item/559611",
-        "published": "2026-04-02T23:15:15.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559611",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559611"
-      },
-      {
         "title": "Microsoft Purview: Purview in Microsoft Admin Center",
         "link": "https://deltapulse.app/item/559617",
         "published": "2026-04-02T23:15:15.000Z",
@@ -5398,6 +5379,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559617"
+      },
+      {
+        "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
+        "link": "https://deltapulse.app/item/559611",
+        "published": "2026-04-02T23:15:15.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559611",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559611"
       },
       {
         "title": "Microsoft Viva: Viva Glint and Viva Insights Integration - Exclusion List for data sharing",
@@ -5754,25 +5754,6 @@
         "_normalized_url": "roadmap:559605"
       },
       {
-        "title": "Microsoft Teams: Facilitator detects and answers questions",
-        "link": "https://deltapulse.app/item/558341",
-        "published": "2026-04-01T23:15:50.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558341",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558341"
-      },
-      {
         "title": "Microsoft Viva: Following feed in Viva Engage",
         "link": "https://deltapulse.app/item/559482",
         "published": "2026-04-01T23:15:50.000Z",
@@ -5790,6 +5771,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559482"
+      },
+      {
+        "title": "Microsoft Teams: Facilitator detects and answers questions",
+        "link": "https://deltapulse.app/item/558341",
+        "published": "2026-04-01T23:15:50.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558341",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558341"
       },
       {
         "title": "Outlook for Android: Unified user interface in text and image previewers",
@@ -6061,27 +6061,6 @@
         "_normalized_url": "message_center:MC1266895"
       },
       {
-        "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
-        "link": "https://deltapulse.app/item/MC1266857",
-        "published": "2026-03-31T21:02:37.947Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1266857",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1266857"
-      },
-      {
         "title": "(Updated) The March 2026 Windows non-security preview update is now available",
         "link": "https://deltapulse.app/item/MC1262522",
         "published": "2026-03-31T21:02:37.947Z",
@@ -6101,6 +6080,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1262522"
+      },
+      {
+        "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
+        "link": "https://deltapulse.app/item/MC1266857",
+        "published": "2026-03-31T21:02:37.947Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1266857",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1266857"
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -6187,13 +6187,13 @@
         "_normalized_url": "message_center:MC1266582"
       },
       {
-        "title": "Outlook: Copilot provides coaching feedback in chat as you draft, edit and format emails",
-        "link": "https://deltapulse.app/item/559418",
+        "title": "Outlook: Multiple Intune Accounts for Outlook on iOS",
+        "link": "https://deltapulse.app/item/558252",
         "published": "2026-03-30T23:00:38.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559418",
+        "m365Id": "558252",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -6203,26 +6203,7 @@
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559418"
-      },
-      {
-        "title": "Microsoft 365: Companion apps - Copilot prompts in the Files app now available for Copilot Chat users",
-        "link": "https://deltapulse.app/item/558595",
-        "published": "2026-03-30T23:00:38.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558595",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558595"
+        "_normalized_url": "roadmap:558252"
       },
       {
         "title": "Outlook: Shareable links now show as the document name in meeting descriptions",
@@ -6244,13 +6225,13 @@
         "_normalized_url": "roadmap:559023"
       },
       {
-        "title": "Outlook: Multiple Intune Accounts for Outlook on iOS",
-        "link": "https://deltapulse.app/item/558252",
+        "title": "Microsoft 365: Companion apps - Copilot prompts in the Files app now available for Copilot Chat users",
+        "link": "https://deltapulse.app/item/558595",
         "published": "2026-03-30T23:00:38.000Z",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558252",
+        "m365Id": "558595",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -6260,7 +6241,26 @@
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558252"
+        "_normalized_url": "roadmap:558595"
+      },
+      {
+        "title": "Outlook: Copilot provides coaching feedback in chat as you draft, edit and format emails",
+        "link": "https://deltapulse.app/item/559418",
+        "published": "2026-03-30T23:00:38.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559418",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559418"
       },
       {
         "title": "Microsoft Teams: New experience when users minimize the meeting window",
@@ -7244,6 +7244,25 @@
         "_normalized_url": "message_center:MC1262590"
       },
       {
+        "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
+        "link": "https://deltapulse.app/item/558539",
+        "published": "2026-03-27T22:15:31.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558539",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558539"
+      },
+      {
         "title": "Microsoft Teams: Add Breakout Room Participants in Bulk Using CSV",
         "link": "https://deltapulse.app/item/559387",
         "published": "2026-03-27T22:15:31.000Z",
@@ -7280,25 +7299,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559386"
-      },
-      {
-        "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
-        "link": "https://deltapulse.app/item/558539",
-        "published": "2026-03-27T22:15:31.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558539",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558539"
       }
     ],
     "in_development": [],
