@@ -11,13 +11,17 @@ concurrency:
   group: fetch-feeds-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: write
+# FIX: Disable all permissions at the workflow level
+permissions: {}
 
 jobs:
   fetch-feeds:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    # FIX: Grant only the permissions required for this specific job
+    permissions:
+      contents: write   # Required to commit and push feed updates
+      id-token: write  # Recommended for secure OIDC interactions
 
     steps:
       - name: Checkout repository
