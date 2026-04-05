@@ -85,10 +85,11 @@ assert(
   index_html.match?(%r{<script\s+src="js/app\.js(?:\?[^"]+)?"\s+defer></script>}),
   "index.html does not load js/app.js with defer"
 )
-assert(index_html.include?("<script src=\"js/clarity.js\" defer></script>"), "index.html does not load js/clarity.js")
+assert(!index_html.include?("js/clarity.js"), "index.html should not reference removed js/clarity.js")
 assert(index_html.include?("Content-Security-Policy"), "index.html is missing a Content-Security-Policy")
 assert(index_html.include?("style-src 'self'"), "index.html CSP should restrict styles to self")
 assert(!index_html.include?("style-src 'self' 'unsafe-inline'"), "index.html CSP should not allow unsafe-inline styles")
+assert(!index_html.include?("script-src 'self' 'unsafe-inline'"), "index.html CSP should not allow unsafe-inline scripts")
 assert(!index_html.include?("www.clarity.ms/tag/\"+i"), "index.html should not inline the Clarity bootstrap")
 assert(index_html.include?("id=\"articles-grid\""), "index.html is missing articles grid container")
 assert(index_html.include?("id=\"filter-pills\""), "index.html is missing filter pills container")
