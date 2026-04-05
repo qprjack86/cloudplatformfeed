@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sat, 04 Apr 2026 15:22:11 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 07:53:51 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[How we build Azure SRE Agent with agentic workflows]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753</guid>
+      <description><![CDATA[The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...]]></description>
+      <dc:creator><![CDATA[saziz_msft]]></dc:creator>
+      <pubDate>Sun, 05 Apr 2026 07:40:28 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
       <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</link>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[aycabas]]></dc:creator>
       <pubDate>Wed, 01 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Assess Security risks with Insights in Azure Migrate]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866</guid>
-      <description><![CDATA[Why Security matters in Migration Migrating to the cloud is not only about speed and cost efficiency, it's also about building a secure foundation on Azure. As organizations move workloads to Azure, security often slips down the priority list, overshadowed by migration tasks and timelines. But...]]></description>
-      <dc:creator><![CDATA[Nikita_Bajaj]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 05:05:22 GMT</pubDate>
-      <category><![CDATA[Azure Migration]]></category>
     </item>
   </channel>
 </rss>
