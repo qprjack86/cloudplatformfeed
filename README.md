@@ -190,12 +190,12 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 - GitHub Pages does not provide a native way to set custom response headers for this static site. Security response headers must therefore be set in a proxy/CDN layer (for example Cloudflare or Azure Front Door) and applied to `/*` (all routes, including static assets).
 - Template rule payloads are provided in `cloudflare-response-headers.json` (Cloudflare) and `azure-frontdoor-response-headers.json` (Azure Front Door), setting:
-  - `Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://c.bing.com; connect-src 'self' https://*.clarity.ms; img-src 'self' data: https://*.ytimg.com https://*.clarity.ms; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests`
+  - `Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data: https://*.ytimg.com; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests`
   - `X-Frame-Options: DENY`
   - `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
 - Step-by-step dashboard guidance is documented in `CLOUDFLARE_HEADERS.md`.
 - The page still includes a meta Content Security Policy and referrer policy for in-document browser policy controls.
-- Microsoft Clarity telemetry is integrated smoothly, with the CSP explicitly tuned to securely permit its dynamic load-balancer endpoints (`*.clarity.ms`) and required inline execution.
+- Microsoft Clarity telemetry was removed to enforce a strict `script-src 'self'` policy and eliminate the need for inline-script exceptions.
 - AI summary failures are logged in CI, but public feed data includes only safe summary reason codes.
 - Each successful fetch now writes `data/checksums.json` after `data/feeds.json` and `data/feed.xml` are finalised. The file records the artifact path, `sha256` algorithm, digest, and generation timestamp for both published outputs.
 - During incident review or debugging, compare the published artifacts against `data/checksums.json` to confirm whether a suspicious file matches the last known generated content, or to spot unexpected post-generation changes.
@@ -211,7 +211,7 @@ curl -I https://cpfeed.cloud/css/styles.css
 
 Confirm that required security response headers are present:
 
-- `Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://*.clarity.ms https://c.bing.com; connect-src 'self' https://*.clarity.ms; img-src 'self' data: https://*.ytimg.com https://*.clarity.ms; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests`
+- `Content-Security-Policy: default-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-ancestors 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data: https://*.ytimg.com; style-src 'self'; manifest-src 'self'; worker-src 'self'; media-src 'self'; upgrade-insecure-requests`
 - `X-Frame-Options: DENY`
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
 
