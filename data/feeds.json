@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-05T07:53:51.918924+00:00",
-  "totalArticles": 256,
+  "lastUpdated": "2026-04-05T11:36:06.123030+00:00",
+  "totalArticles": 255,
   "articles": [
     {
       "title": "How we build Azure SRE Agent with agentic workflows",
@@ -2548,15 +2548,6 @@
       "blog": "Microsoft Foundry Blog",
       "blogId": "foundryblog",
       "author": "Nick Brady"
-    },
-    {
-      "title": "Using Agents to Setup Experiments",
-      "link": "https://devblogs.microsoft.com/ise/using-agents-to-setup-experiments/",
-      "published": "2026-03-06T08:00:00+00:00",
-      "summary": "When setting up an experiment is complex, agents can automate the process to make it faster and more reliable. The post Using Agents to Setup Experiments appeared first on ISE Developer Blog.",
-      "blog": "ISE Developer Blog",
-      "blogId": "iseblog",
-      "author": "Peter Lasne"
     }
   ],
   "summaryWindowDays": 7,
