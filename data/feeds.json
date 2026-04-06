@@ -1,7 +1,43 @@
 {
-  "lastUpdated": "2026-04-06T11:52:35.752319+00:00",
-  "totalArticles": 253,
+  "lastUpdated": "2026-04-06T15:37:29.629920+00:00",
+  "totalArticles": 255,
   "articles": [
+    {
+      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828",
+      "published": "2026-04-06T15:32:41+00:00",
+      "summary": "This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "lily-ma"
+    },
+    {
+      "title": "MCP Apps on Azure Functions: Quickstart with TypeScript",
+      "link": "https://devblogs.microsoft.com/azure-sdk/mcp-apps-on-azure-functions-quickstart-with-typescript/",
+      "published": "2026-04-06T15:01:58+00:00",
+      "summary": "Learn how to build and deploy MCP (Model Context Protocol) apps on Azure Functions using TypeScript. This guide covers MCP tools, resources, local development, and serverless deployment with a practical weather app example. The post MCP Apps on Azure Functions: Quickstart with TypeScript appeared...",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Swapnil Nagar"
+    },
+    {
+      "title": "Logic Apps Aviators Newsletter - April 2026",
+      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-april-2026/ba-p/4508804",
+      "published": "2026-04-06T15:00:00+00:00",
+      "summary": "In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month April 2026's Ace Aviator: Marcelo Gomes Marcelo Gomes - Integration Team Leader @ COFCO International What’s your role and title? What are your responsibilities? I’m an Integration...",
+      "blog": "Integrations on Azure",
+      "blogId": "integrationsonazureblog",
+      "author": "WSilveira"
+    },
+    {
+      "title": "Azure Red Hat OpenShift: Managed Identity and Workload Identity now generally available",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940",
+      "published": "2026-04-06T14:44:45+00:00",
+      "summary": "Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, so you can run OpenShift clusters and applications on Azure without long-lived service principal credentials.​ ARO, identity, and Azure governance With GA support for managed...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "MelanieKraintz007"
+    },
     {
       "title": "Private DNS and Hub–Spoke Networking for Enterprise AI Workloads on Azure",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/private-dns-and-hub-spoke-networking-for-enterprise-ai-workloads/ba-p/4508835",
@@ -37,15 +73,6 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "whosocurious"
-    },
-    {
-      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828",
-      "published": "2026-04-04T04:21:04+00:00",
-      "summary": "This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "lily-ma"
     },
     {
       "title": "MCP Apps on Azure Functions: Quick Start with TypeScript",
@@ -1454,15 +1481,6 @@
       "author": "Maddy Montaquila, David Fowler"
     },
     {
-      "title": "Code Optimizations for Azure App Service Now Available in VS Code",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/code-optimizations-for-azure-app-service-now-available-in-vs/ba-p/4504252",
-      "published": "2026-03-23T15:18:08+00:00",
-      "summary": "Today we shipped a feature in the Azure App Service extension for VS Code that answers both questions: Code Optimizations, powered by Application Insights profiler data and GitHub Copilot. The problem: production performance is a black box You've deployed your .NET app to Azure App Service....",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "fiveisprime"
-    },
-    {
       "title": "Shaping the Next Era of Energy Decision Making with Geospatial Intelligence",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-planetary-computer/shaping-the-next-era-of-energy-decision-making-with-geospatial/ba-p/4503662",
       "published": "2026-03-23T14:36:30+00:00",
@@ -2532,10 +2550,9 @@
       "author": "Sabyasachi-Samaddar"
     }
   ],
-  "summaryWindowDays": 6,
+  "summaryWindowDays": 5,
   "summaryPublishingDays": [
     "2026-04-06",
-    "2026-04-04",
     "2026-04-03",
     "2026-04-02",
     "2026-04-01",

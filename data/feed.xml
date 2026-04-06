@@ -4,9 +4,45 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 06 Apr 2026 11:52:35 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 15:37:29 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</guid>
+      <description><![CDATA[This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...]]></description>
+      <dc:creator><![CDATA[lily-ma]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 15:32:41 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[MCP Apps on Azure Functions: Quickstart with TypeScript]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/mcp-apps-on-azure-functions-quickstart-with-typescript/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/mcp-apps-on-azure-functions-quickstart-with-typescript/</guid>
+      <description><![CDATA[Learn how to build and deploy MCP (Model Context Protocol) apps on Azure Functions using TypeScript. This guide covers MCP tools, resources, local development, and serverless deployment with a practical weather app example. The post MCP Apps on Azure Functions: Quickstart with TypeScript appeared...]]></description>
+      <dc:creator><![CDATA[Swapnil Nagar]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 15:01:58 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Logic Apps Aviators Newsletter - April 2026]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-april-2026/ba-p/4508804</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-april-2026/ba-p/4508804</guid>
+      <description><![CDATA[In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month April 2026's Ace Aviator: Marcelo Gomes Marcelo Gomes - Integration Team Leader @ COFCO International What’s your role and title? What are your responsibilities? I’m an Integration...]]></description>
+      <dc:creator><![CDATA[WSilveira]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 15:00:00 GMT</pubDate>
+      <category><![CDATA[Integrations on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Red Hat OpenShift: Managed Identity and Workload Identity now generally available]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940</guid>
+      <description><![CDATA[Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, so you can run OpenShift clusters and applications on Azure without long-lived service principal credentials.​ ARO, identity, and Azure governance With GA support for managed...]]></description>
+      <dc:creator><![CDATA[MelanieKraintz007]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 14:44:45 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[Private DNS and Hub–Spoke Networking for Enterprise AI Workloads on Azure]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/private-dns-and-hub-spoke-networking-for-enterprise-ai-workloads/ba-p/4508835</link>
@@ -42,15 +78,6 @@
       <dc:creator><![CDATA[whosocurious]]></dc:creator>
       <pubDate>Mon, 06 Apr 2026 06:28:43 GMT</pubDate>
       <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</guid>
-      <description><![CDATA[This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...]]></description>
-      <dc:creator><![CDATA[lily-ma]]></dc:creator>
-      <pubDate>Sat, 04 Apr 2026 04:21:04 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
       <title><![CDATA[MCP Apps on Azure Functions: Quick Start with TypeScript]]></title>
@@ -429,33 +456,6 @@
       <dc:creator><![CDATA[Dan Hellem]]></dc:creator>
       <pubDate>Wed, 01 Apr 2026 17:17:11 GMT</pubDate>
       <category><![CDATA[Azure DevOps Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[The Polyglot tax – Part 3]]></title>
-      <link>https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-3/</link>
-      <guid>https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-3/</guid>
-      <description><![CDATA[Vectors, Analytics, and the End of ETL Part 3 of 4 – The Multimodal Database Series In Part 1: The Polyglot Tax we laid out the fraud detection scenario: a transaction comes in, and before you approve or deny it you need five checks. Order history (relational). Device fingerprint (JSON)....]]></description>
-      <dc:creator><![CDATA[Aditya Badramraju]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 16:11:53 GMT</pubDate>
-      <category><![CDATA[Azure SQL Dev Corner]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Proactive Reliability Series — Article 1: Fault Types in Azure]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/proactive-reliability-series-article-1-fault-types-in-azure/ba-p/4507006</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/proactive-reliability-series-article-1-fault-types-in-azure/ba-p/4507006</guid>
-      <description><![CDATA[Welcome to the Proactive Reliability Series — a collection of articles dedicated to raising awareness about the importance of designing, implementing, and operating reliable solutions in Azure. Each article will focus on a specific area of reliability engineering: from identifying critical flows...]]></description>
-      <dc:creator><![CDATA[Zoran Jovanovic]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 16:11:25 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Migrating Azure SQL Database Across Tenants Using Subscription Transfer]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-azure-sql-database-across-tenants-using-subscription/ba-p/4507002</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-azure-sql-database-across-tenants-using-subscription/ba-p/4507002</guid>
-      <description><![CDATA[Moving an Azure subscription between Microsoft Entra ID (formerly Azure Active Directory) tenants is a common requirement during: Mergers and acquisitions Organizational restructuring Enterprise Agreement (EA) enrollment realignment Lighthouse or multi‑tenant operating model changes However, when...]]></description>
-      <dc:creator><![CDATA[princy_rajpoot]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 16:01:18 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
   </channel>
 </rss>
