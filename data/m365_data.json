@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-06T08:22:05.059068+00:00",
+  "generatedAt": "2026-04-06T11:52:44.425406+00:00",
   "totalArticles": 117,
   "articles": [
     {
@@ -1131,27 +1131,6 @@
       "_normalized_url": "message_center:MC1266895"
     },
     {
-      "title": "(Updated) The March 2026 Windows non-security preview update is now available",
-      "link": "https://deltapulse.app/item/MC1262522",
-      "published": "2026-03-31T21:02:37.947Z",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1262522",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1262522"
-    },
-    {
       "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
       "link": "https://deltapulse.app/item/MC1266857",
       "published": "2026-03-31T21:02:37.947Z",
@@ -1171,6 +1150,27 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1266857"
+    },
+    {
+      "title": "(Updated) The March 2026 Windows non-security preview update is now available",
+      "link": "https://deltapulse.app/item/MC1262522",
+      "published": "2026-03-31T21:02:37.947Z",
+      "source": "m365",
+      "m365Service": "Windows",
+      "m365AllServices": [
+        "Windows"
+      ],
+      "m365Id": "MC1262522",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "March 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1262522"
     },
     {
       "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -4026,27 +4026,6 @@
         "_normalized_url": "message_center:MC1266895"
       },
       {
-        "title": "(Updated) The March 2026 Windows non-security preview update is now available",
-        "link": "https://deltapulse.app/item/MC1262522",
-        "published": "2026-03-31T21:02:37.947Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1262522",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262522"
-      },
-      {
         "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
         "link": "https://deltapulse.app/item/MC1266857",
         "published": "2026-03-31T21:02:37.947Z",
@@ -4066,6 +4045,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1266857"
+      },
+      {
+        "title": "(Updated) The March 2026 Windows non-security preview update is now available",
+        "link": "https://deltapulse.app/item/MC1262522",
+        "published": "2026-03-31T21:02:37.947Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1262522",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1262522"
       },
       {
         "title": "(Updated) Microsoft Entra ID: Improved readability for Authentication Methods Policy Update audit logs",
@@ -6023,27 +6023,6 @@
         "_normalized_url": "message_center:MC1266895"
       },
       {
-        "title": "(Updated) The March 2026 Windows non-security preview update is now available",
-        "link": "https://deltapulse.app/item/MC1262522",
-        "published": "2026-03-31T21:02:37.947Z",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1262522",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262522"
-      },
-      {
         "title": "Take Action: Out-of-band update to address an issue affecting installation of the March 2026 non-security preview update",
         "link": "https://deltapulse.app/item/MC1266857",
         "published": "2026-03-31T21:02:37.947Z",
@@ -6063,6 +6042,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1266857"
+      },
+      {
+        "title": "(Updated) The March 2026 Windows non-security preview update is now available",
+        "link": "https://deltapulse.app/item/MC1262522",
+        "published": "2026-03-31T21:02:37.947Z",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1262522",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "March 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1262522"
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
