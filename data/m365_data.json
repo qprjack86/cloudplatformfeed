@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-05T15:23:26.065481+00:00",
-  "totalArticles": 118,
+  "generatedAt": "2026-04-06T08:22:05.059068+00:00",
+  "totalArticles": 117,
   "articles": [
     {
       "title": "Update to Copilot navigation pane chat history filtering",
@@ -356,6 +356,25 @@
       "_normalized_url": "roadmap:559611"
     },
     {
+      "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
+      "link": "https://deltapulse.app/item/557191",
+      "published": "2026-04-02T23:15:15.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "557191",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:557191"
+    },
+    {
       "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
       "link": "https://deltapulse.app/item/558565",
       "published": "2026-04-02T23:15:15.000Z",
@@ -392,25 +411,6 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559266"
-    },
-    {
-      "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
-      "link": "https://deltapulse.app/item/557191",
-      "published": "2026-04-02T23:15:15.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "557191",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:557191"
     },
     {
       "title": "Viva Engage: Pinned resources and related communities in Teams for iOS",
@@ -767,25 +767,6 @@
       "_normalized_url": "roadmap:558683"
     },
     {
-      "title": "Microsoft Teams: Improved organization for muted and meeting chats",
-      "link": "https://deltapulse.app/item/559605",
-      "published": "2026-04-01T23:15:50.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559605",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:559605"
-    },
-    {
       "title": "Microsoft Viva: Following feed in Viva Engage",
       "link": "https://deltapulse.app/item/559482",
       "published": "2026-04-01T23:15:50.000Z",
@@ -822,6 +803,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558341"
+    },
+    {
+      "title": "Microsoft Teams: Improved organization for muted and meeting chats",
+      "link": "https://deltapulse.app/item/559605",
+      "published": "2026-04-01T23:15:50.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "559605",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:559605"
     },
     {
       "title": "Outlook for Android: Unified user interface in text and image previewers",
@@ -2246,25 +2246,6 @@
       "_normalized_url": "roadmap:558110"
     },
     {
-      "title": "Microsoft Teams: Improved copy and paste support for @mentions and shared contacts",
-      "link": "https://deltapulse.app/item/558254",
-      "published": "2026-03-06T23:00:47.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558254",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558254"
-    },
-    {
       "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",
       "link": "https://deltapulse.app/item/MC1248389",
       "published": "2026-03-10T22:46:28.000Z",
@@ -2997,6 +2978,25 @@
         "_normalized_url": "roadmap:559611"
       },
       {
+        "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
+        "link": "https://deltapulse.app/item/557191",
+        "published": "2026-04-02T23:15:15.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "557191",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:557191"
+      },
+      {
         "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
         "link": "https://deltapulse.app/item/558565",
         "published": "2026-04-02T23:15:15.000Z",
@@ -3033,25 +3033,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559266"
-      },
-      {
-        "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
-        "link": "https://deltapulse.app/item/557191",
-        "published": "2026-04-02T23:15:15.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "557191",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:557191"
       },
       {
         "title": "Microsoft AutoUpdate (MAU) CDN Endpoint Update for Mac",
@@ -3134,25 +3115,6 @@
         "_normalized_url": "roadmap:558683"
       },
       {
-        "title": "Microsoft Teams: Improved organization for muted and meeting chats",
-        "link": "https://deltapulse.app/item/559605",
-        "published": "2026-04-01T23:15:50.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559605",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559605"
-      },
-      {
         "title": "Microsoft Viva: Following feed in Viva Engage",
         "link": "https://deltapulse.app/item/559482",
         "published": "2026-04-01T23:15:50.000Z",
@@ -3189,6 +3151,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558341"
+      },
+      {
+        "title": "Microsoft Teams: Improved organization for muted and meeting chats",
+        "link": "https://deltapulse.app/item/559605",
+        "published": "2026-04-01T23:15:50.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559605",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559605"
       },
       {
         "title": "Microsoft 365 Copilot (Premium): Choose your AI model when editing presentations in PowerPoint",
@@ -3597,25 +3578,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558110"
-      },
-      {
-        "title": "Microsoft Teams: Improved copy and paste support for @mentions and shared contacts",
-        "link": "https://deltapulse.app/item/558254",
-        "published": "2026-03-06T23:00:47.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558254",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558254"
       },
       {
         "title": "Microsoft Teams: Enhanced cross-platform join via SIP for Teams Rooms on Android",
@@ -4874,25 +4836,6 @@
   "byLifecycle": {
     "in_preview": [
       {
-        "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
-        "link": "https://deltapulse.app/item/558565",
-        "published": "2026-04-02T23:15:15.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558565",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558565"
-      },
-      {
         "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
         "link": "https://deltapulse.app/item/557191",
         "published": "2026-04-02T23:15:15.000Z",
@@ -4910,6 +4853,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:557191"
+      },
+      {
+        "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
+        "link": "https://deltapulse.app/item/558565",
+        "published": "2026-04-02T23:15:15.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558565",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558565"
       },
       {
         "title": "SharePoint: Extending AI in SharePoint using custom skills",
@@ -5735,25 +5697,6 @@
         "_normalized_url": "message_center:MC1267957"
       },
       {
-        "title": "Microsoft Teams: Improved organization for muted and meeting chats",
-        "link": "https://deltapulse.app/item/559605",
-        "published": "2026-04-01T23:15:50.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559605",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559605"
-      },
-      {
         "title": "Microsoft Viva: Following feed in Viva Engage",
         "link": "https://deltapulse.app/item/559482",
         "published": "2026-04-01T23:15:50.000Z",
@@ -5790,6 +5733,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558341"
+      },
+      {
+        "title": "Microsoft Teams: Improved organization for muted and meeting chats",
+        "link": "https://deltapulse.app/item/559605",
+        "published": "2026-04-01T23:15:50.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559605",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559605"
       },
       {
         "title": "Outlook for Android: Unified user interface in text and image previewers",
@@ -7117,25 +7079,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558110"
-      },
-      {
-        "title": "Microsoft Teams: Improved copy and paste support for @mentions and shared contacts",
-        "link": "https://deltapulse.app/item/558254",
-        "published": "2026-03-06T23:00:47.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558254",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558254"
       },
       {
         "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",

@@ -4,17 +4,44 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sun, 05 Apr 2026 15:23:17 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 08:21:54 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Private DNS and Hub–Spoke Networking for Enterprise AI Workloads on Azure]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/private-dns-and-hub-spoke-networking-for-enterprise-ai-workloads/ba-p/4508835</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/private-dns-and-hub-spoke-networking-for-enterprise-ai-workloads/ba-p/4508835</guid>
+      <description><![CDATA[Introduction As organizations deploy enterprise AI platforms on Azure, security requirements increasingly drive the adoption of private-first architectures. Private networking only Centralized firewalls or NVAs Hub–and–spoke virtual network architectures Private Endpoints for all PaaS services...]]></description>
+      <dc:creator><![CDATA[deepthihr]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 07:56:39 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[How we build Azure SRE Agent with agentic workflows]]></title>
       <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753</link>
       <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753</guid>
       <description><![CDATA[The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...]]></description>
       <dc:creator><![CDATA[saziz_msft]]></dc:creator>
-      <pubDate>Sun, 05 Apr 2026 07:40:28 GMT</pubDate>
+      <pubDate>Mon, 06 Apr 2026 07:43:19 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Building MCP servers with Entra ID and pre-authorized clients]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-mcp-servers-with-entra-id-and-pre-authorized-clients/ba-p/4508453</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-mcp-servers-with-entra-id-and-pre-authorized-clients/ba-p/4508453</guid>
+      <description><![CDATA[The Model Context Protocol (MCP) gives AI agents a standard way to call external tools, but things get more complicated when those tools need to know who the user is. In this post, I’ll show how to build an MCP server with the Python FastMCP package that authenticates users with Microsoft Entra ID...]]></description>
+      <dc:creator><![CDATA[Pamela_Fox]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Building Cost-Aware Azure Infrastructure Pipelines: Estimate Costs Before You Deploy]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-cost-aware-azure-infrastructure-pipelines-estimate/ba-p/4508776</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-cost-aware-azure-infrastructure-pipelines-estimate/ba-p/4508776</guid>
+      <description><![CDATA[The Problem: Cost Is a Blind Spot in IaC Reviews Code reviews for Bicep or Terraform templates typically focus on correctness, security, and compliance. But cost is rarely part of the review process because: Developers don't have easy access to pricing data at review time Azure pricing depends on...]]></description>
+      <dc:creator><![CDATA[whosocurious]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 06:28:43 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
     <item>
       <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
@@ -429,33 +456,6 @@
       <dc:creator><![CDATA[princy_rajpoot]]></dc:creator>
       <pubDate>Wed, 01 Apr 2026 16:01:18 GMT</pubDate>
       <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Bookmark Studio: evolving bookmarks in Visual Studio]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/bookmark-studio-evolving-bookmarks-in-visual-studio/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/bookmark-studio-evolving-bookmarks-in-visual-studio/</guid>
-      <description><![CDATA[Bookmarks in Visual Studio have always been a simple, reliable feature. Many developers use them regularly, and over the years we’ve heard consistent feedback from those users. Bookmarks were useful, but there were a few core gaps that kept them from being as effective and relevant as they could...]]></description>
-      <dc:creator><![CDATA[Mads Kristensen]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 14:09:58 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[How to revoke connection OAuth programmatically in Logic Apps]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-revoke-connection-oauth-programmatically-in-logic-apps/ba-p/4506825</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-revoke-connection-oauth-programmatically-in-logic-apps/ba-p/4506825</guid>
-      <description><![CDATA[There are multiple ways to revoke the OAuth of an API Connection other than clicking on the Revoke button in the portal: For using the "Invoke an HTTP request": Get the connection name: Create a Logic App (Consumption), use a trigger of your liking, then add the “Invoke an HTTP request”...]]></description>
-      <dc:creator><![CDATA[Omar_Abu_Arisheh]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 11:02:44 GMT</pubDate>
-      <category><![CDATA[Integrations on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Agents League: Meet the Winners]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-meet-the-winners/ba-p/4507503</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-meet-the-winners/ba-p/4507503</guid>
-      <description><![CDATA[Agents League brought together developers from around the world to build AI agents using Microsoft's developer tools. With 100+ submissions across three tracks, choosing winners was genuinely difficult. Today, we're proud to announce the category champions. 🎨 Creative Apps Winner: CodeSonify View...]]></description>
-      <dc:creator><![CDATA[aycabas]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
     </item>
   </channel>
 </rss>
