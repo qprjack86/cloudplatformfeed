@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-07T11:56:50.556950+00:00",
-  "totalArticles": 84,
+  "generatedAt": "2026-04-07T16:04:50.699578+00:00",
+  "totalArticles": 83,
   "articles": [
     {
       "title": "Viva Engage: Feature conversations to all network members",
@@ -1340,27 +1340,6 @@
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1266651"
-    },
-    {
-      "title": "Dynamics 365 Sales - Connect Fabric Lakehouse data to AI‑powered sales research",
-      "link": "https://deltapulse.app/item/MC1266582",
-      "published": "2026-03-31T15:34:17.000Z",
-      "source": "m365",
-      "m365Service": "Dynamics 365 Apps",
-      "m365AllServices": [
-        "Dynamics 365 Apps"
-      ],
-      "m365Id": "MC1266582",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1266582"
     },
     {
       "title": "(Updated) Microsoft Purview compliance portal: Data Security Investigations introduces new soft purge mitigation action",
@@ -3248,27 +3227,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1266651"
-      },
-      {
-        "title": "Dynamics 365 Sales - Connect Fabric Lakehouse data to AI‑powered sales research",
-        "link": "https://deltapulse.app/item/MC1266582",
-        "published": "2026-03-31T15:34:17.000Z",
-        "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
-        "m365AllServices": [
-          "Dynamics 365 Apps"
-        ],
-        "m365Id": "MC1266582",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1266582"
       }
     ],
     "Other": [
@@ -4826,27 +4784,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1266651"
-      },
-      {
-        "title": "Dynamics 365 Sales - Connect Fabric Lakehouse data to AI‑powered sales research",
-        "link": "https://deltapulse.app/item/MC1266582",
-        "published": "2026-03-31T15:34:17.000Z",
-        "source": "m365",
-        "m365Service": "Dynamics 365 Apps",
-        "m365AllServices": [
-          "Dynamics 365 Apps"
-        ],
-        "m365Id": "MC1266582",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1266582"
       },
       {
         "title": "(Updated) Microsoft Purview compliance portal: Data Security Investigations introduces new soft purge mitigation action",

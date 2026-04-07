@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Tue, 07 Apr 2026 11:56:42 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 16:04:40 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Take full control of your floating windows in Visual Studio]]></title>
+      <link>https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/</link>
+      <guid>https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/</guid>
+      <description><![CDATA[Make Visual Studio floating windows work perfectly with PowerToys FancyZones. Flip one option to get independent windows, better snapping, and less friction. The post Take full control of your floating windows in Visual Studio appeared first on Visual Studio Blog.]]></description>
+      <dc:creator><![CDATA[Mads Kristensen]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 14:00:39 GMT</pubDate>
+      <category><![CDATA[Visual Studio Blog]]></category>
+    </item>
     <item>
       <title><![CDATA[Discover and assess File Shares for migration to Azure Files with Azure Migrate]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-file-shares-for-migration-to-azure-files/ba-p/4509034</link>
@@ -60,6 +69,24 @@
       <dc:creator><![CDATA[Meagan McCrory]]></dc:creator>
       <pubDate>Mon, 06 Apr 2026 18:54:19 GMT</pubDate>
       <category><![CDATA[Governance & Management]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Network Security Perimeter for Azure Service Bus]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559899/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559899/</guid>
+      <description><![CDATA[Network Security Perimeter (NSP) support for Azure Service Bus is now generally available. Network Security Perimeter creates a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, blocking unauthorized public access by default and enabling secure...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 18:00:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Rule impact analysis on Azure Network Watcher]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559876/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559876/</guid>
+      <description><![CDATA[Rule impact analysis on Azure Network Watcher enables you to preview the impact of security admin rules before applying them to your environment. This feature helps you validate rule behavior, identify potential conflicts, and ensure that connectivity requirements are met without disrupting live...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 16:15:40 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
       <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
@@ -323,6 +350,24 @@
       <category><![CDATA[Aspire Blog]]></category>
     </item>
     <item>
+      <title><![CDATA[Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/558027/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/558027/</guid>
+      <description><![CDATA[Starting March 31, 2027, Python applications hosted on Azure App Service on Windows and Azure Functions on Windows will no longer run. After this date: Your application configuration and content will remain intact Your apps will stop running Technical support for these workloads will no longer be...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 16:45:52 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/558276/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/558276/</guid>
+      <description><![CDATA[AzureDnsZone endpoints (preview) for Azure Blob storage accounts will enter retirement in March 2027. Customers leveraging AzureDnsZone endpoints (preview) should transition to Standard endpoints for all new and existing blob storage account deployments by April 1, 2027. Standard endpoints are...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 02 Apr 2026 16:30:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
       <title><![CDATA[Unlocking AI-Ready Unstructured Data at Scale with Komprise and Azure]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-ai-ready-unstructured-data-at-scale-with-komprise-and/ba-p/4507422</link>
       <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-ai-ready-unstructured-data-at-scale-with-komprise-and/ba-p/4507422</guid>
@@ -386,6 +431,24 @@
       <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
+      <title><![CDATA[Retirement: Service Fabric support for Windows Server 2022 ends on March 31, 2027 - upgrade to Windows Server 2025]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/558247/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/558247/</guid>
+      <description><![CDATA[Service Fabric will end support for all clusters running on Windows Server 2022 on March 31, 2027. Customers must upgrade to Windows Server 2025 by this date to remain in a supported state. This change aligns Service Fabric’s Windows OS image support model with mainstream OS support timelines,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 01 Apr 2026 21:00:19 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Retirement: Service Fabric support for Windows Server 2019 ends on March 31, 2027 - upgrade to Windows Server 2025]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/558246/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/558246/</guid>
+      <description><![CDATA[Service Fabric will end support for all clusters running on Windows Server 2019 on March 31, 2027. Customers must upgrade to Windows Server 2025 by this date to remain in a supported state. This change aligns Service Fabric’s Windows OS image support model with mainstream OS support timelines,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 01 Apr 2026 20:30:41 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
       <title><![CDATA[User delegation SAS for Azure Tables, Azure Files, and Azure Queues is now Generally Available]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/user-delegation-sas-for-azure-tables-azure-files-and-azure/ba-p/4485693</link>
       <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/user-delegation-sas-for-azure-tables-azure-files-and-azure/ba-p/4485693</guid>
@@ -393,69 +456,6 @@
       <dc:creator><![CDATA[ellievail]]></dc:creator>
       <pubDate>Wed, 01 Apr 2026 20:27:47 GMT</pubDate>
       <category><![CDATA[Azure Storage]]></category>
-    </item>
-    <item>
-      <title><![CDATA[A third-party connector integrating Claude with Microsoft Sentinel is now available]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/a-third-party-connector-integrating-claude-with-microsoft/ba-p/4507013</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/a-third-party-connector-integrating-claude-with-microsoft/ba-p/4507013</guid>
-      <description><![CDATA[Security teams are increasingly exploring how AI assistants can support them in investigating incidents, asking questions, and exploring their data. At the same time, protecting that data, and controlling how it’s accessed, remains critical. Today, we’re sharing how Sentinel can securely support a...]]></description>
-      <dc:creator><![CDATA[mcasgrain]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 19:28:30 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[DPDK 25.11 Performance on Azure for High-Speed Packet Workloads]]></title>
-      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dpdk-25-11-performance-on-azure-for-high-speed-packet-workloads/ba-p/4424905</link>
-      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dpdk-25-11-performance-on-azure-for-high-speed-packet-workloads/ba-p/4424905</guid>
-      <description><![CDATA[At Microsoft Azure, performance is treated as an ongoing discipline grounded in careful engineering and real-world validation. As cloud workloads grow in scale and variety, customers depend on consistent, high-throughput networking. Technologies such as the Data Plane Development Kit (DPDK) play a...]]></description>
-      <dc:creator><![CDATA[KashanK]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 18:37:04 GMT</pubDate>
-      <category><![CDATA[Linux & Open Source]]></category>
-    </item>
-    <item>
-      <title><![CDATA[RSAC 2026: New Microsoft Sentinel Connectors Announcement]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</guid>
-      <description><![CDATA[Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...]]></description>
-      <dc:creator><![CDATA[JesseKopavi]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 18:36:50 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Improving the Markdown Editor for Work Items]]></title>
-      <link>https://devblogs.microsoft.com/devops/improving-the-markdown-editor-for-work-items/</link>
-      <guid>https://devblogs.microsoft.com/devops/improving-the-markdown-editor-for-work-items/</guid>
-      <description><![CDATA[We introduced the Markdown editor in July 2025 to bring Markdown support to large text fields in work items. Since then, we’ve received valuable customer feedback highlighting challenges with the editing experience, particularly when switching in and out of edit mode. Many users found the current...]]></description>
-      <dc:creator><![CDATA[Dan Hellem]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 17:17:11 GMT</pubDate>
-      <category><![CDATA[Azure DevOps Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[The Polyglot tax – Part 3]]></title>
-      <link>https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-3/</link>
-      <guid>https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-3/</guid>
-      <description><![CDATA[Vectors, Analytics, and the End of ETL Part 3 of 4 – The Multimodal Database Series In Part 1: The Polyglot Tax we laid out the fraud detection scenario: a transaction comes in, and before you approve or deny it you need five checks. Order history (relational). Device fingerprint (JSON)....]]></description>
-      <dc:creator><![CDATA[Aditya Badramraju]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 16:11:53 GMT</pubDate>
-      <category><![CDATA[Azure SQL Dev Corner]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Proactive Reliability Series — Article 1: Fault Types in Azure]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/proactive-reliability-series-article-1-fault-types-in-azure/ba-p/4507006</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/proactive-reliability-series-article-1-fault-types-in-azure/ba-p/4507006</guid>
-      <description><![CDATA[Welcome to the Proactive Reliability Series — a collection of articles dedicated to raising awareness about the importance of designing, implementing, and operating reliable solutions in Azure. Each article will focus on a specific area of reliability engineering: from identifying critical flows...]]></description>
-      <dc:creator><![CDATA[Zoran Jovanovic]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 16:11:25 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Migrating Azure SQL Database Across Tenants Using Subscription Transfer]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-azure-sql-database-across-tenants-using-subscription/ba-p/4507002</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-azure-sql-database-across-tenants-using-subscription/ba-p/4507002</guid>
-      <description><![CDATA[Moving an Azure subscription between Microsoft Entra ID (formerly Azure Active Directory) tenants is a common requirement during: Mergers and acquisitions Organizational restructuring Enterprise Agreement (EA) enrollment realignment Lighthouse or multi‑tenant operating model changes However, when...]]></description>
-      <dc:creator><![CDATA[princy_rajpoot]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 16:01:18 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
   </channel>
 </rss>
