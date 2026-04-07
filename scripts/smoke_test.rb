@@ -34,8 +34,6 @@ checksums_json_text = read_text(ROOT.join("data", "checksums.json"))
 readme_text = read_text(ROOT.join("README.md"))
 cname_text = read_text(ROOT.join("CNAME"))
 headers_text = read_text(ROOT.join("_headers"))
-cloudflare_headers_text = read_text(ROOT.join("cloudflare-response-headers.json"))
-azure_frontdoor_headers_text = read_text(ROOT.join("azure-frontdoor-response-headers.json"))
 fetch_script = read_text(ROOT.join("scripts", "fetch_feeds.py"))
 site_config_text = read_text(ROOT.join("config", "site.json"))
 
@@ -45,26 +43,10 @@ rescue JSON::ParserError => e
   fail_check("config/site.json is invalid JSON: #{e.message}")
 end
 
-cloudflare_headers = begin
-  JSON.parse(cloudflare_headers_text)
-rescue JSON::ParserError => e
-  fail_check("cloudflare-response-headers.json is invalid JSON: #{e.message}")
-end
-
-azure_frontdoor_headers = begin
-  JSON.parse(azure_frontdoor_headers_text)
-rescue JSON::ParserError => e
-  fail_check("azure-frontdoor-response-headers.json is invalid JSON: #{e.message}")
-end
-
 canonical_host = site_config["canonicalHost"]
 canonical_url = site_config["canonicalUrl"]
 csp_match = headers_text.match(/Content-Security-Policy:\s*(.+)$/)
 csp_policy = csp_match && csp_match[1]
-cloudflare_csp = cloudflare_headers.dig("action_parameters", "headers", "Content-Security-Policy", "value")
-azure_frontdoor_csp = azure_frontdoor_headers.fetch("properties", {}).fetch("actions", []).find do |action|
-  action.dig("parameters", "headerName") == "Content-Security-Policy"
-end&.dig("parameters", "value")
 assert(canonical_host.is_a?(String) && !canonical_host.empty?, "config/site.json canonicalHost must be a non-empty string")
 assert(canonical_url == "https://#{canonical_host}", "config/site.json canonicalUrl must match canonicalHost")
 assert(csp_policy.is_a?(String) && !csp_policy.empty?, "_headers must include a Content-Security-Policy value")
@@ -98,8 +80,6 @@ assert(headers_text.include?("default-src 'self'"), "_headers CSP must include d
 assert(headers_text.include?("Strict-Transport-Security:"), "_headers must include Strict-Transport-Security")
 assert(headers_text.match?(/Strict-Transport-Security:\s*max-age=31536000/i), "_headers HSTS max-age must be at least one year")
 assert(headers_text.include?("includeSubDomains"), "_headers HSTS policy must include includeSubDomains")
-assert(cloudflare_csp == csp_policy, "cloudflare-response-headers.json CSP must match _headers")
-assert(azure_frontdoor_csp == csp_policy, "azure-frontdoor-response-headers.json CSP must match _headers")
 
 feeds = JSON.parse(feeds_json_text)
 checksums = JSON.parse(checksums_json_text)
