@@ -4,9 +4,81 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 06 Apr 2026 15:37:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 08:10:50 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Discover and assess File Shares for migration to Azure Files with Azure Migrate]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-file-shares-for-migration-to-azure-files/ba-p/4509034</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-file-shares-for-migration-to-azure-files/ba-p/4509034</guid>
+      <description><![CDATA[When organizations migrate to the cloud, applications are at the center of every decision. And behind every application is data, stored in file shares, accessed by users and services, and critical to keeping the application running. Moving that data seamlessly is not optional; it is a fundamental...]]></description>
+      <dc:creator><![CDATA[ankitsurkar]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 07:00:08 GMT</pubDate>
+      <category><![CDATA[Azure Migration]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Why Data Platforms Must Become Intelligence Platforms for AI Agents to Work]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-data-platforms-must-become-intelligence-platforms-for-ai/ba-p/4505653</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-data-platforms-must-become-intelligence-platforms-for-ai/ba-p/4505653</guid>
+      <description><![CDATA[The promise and the gap Your organization has invested in an AI agent. You ask it: "Prepare a summary of Q3 revenue by region, including year-over-year trends and top product lines." The agent finds revenue numbers in a SQL warehouse, product metadata in Dataverse, regional mappings in SharePoint,...]]></description>
+      <dc:creator><![CDATA[AnjaliSadhukhan]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Agentic IIS Migration to Managed Instance on Azure App Service]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-iis-migration-to-managed-instance-on-azure-app-service/ba-p/4508969</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-iis-migration-to-managed-instance-on-azure-app-service/ba-p/4508969</guid>
+      <description><![CDATA[Introduction Enterprises running ASP.NET Framework workloads on Windows Server with IIS face a familiar dilemma: modernize or stay put. The applications work, the infrastructure is stable, and nobody wants to be the person who breaks production during a cloud migration. But the cost of maintaining...]]></description>
+      <dc:creator><![CDATA[Gaurav-Seth]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 23:58:35 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904</guid>
+      <description><![CDATA[Many organizations rely on Logstash as a flexible, trusted data pipeline for collecting, transforming, and forwarding logs from on-premises and hybrid environments. Microsoft Sentinel has long supported a Logstash output plugin, enabling customers to send data directly into Sentinel as part of...]]></description>
+      <dc:creator><![CDATA[JamesAde]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 22:28:06 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/</guid>
+      <description><![CDATA[After July 9, 2026, the Azure SDK for JavaScript will no longer support Node.js 20.x. Upgrade to an Active Node.js Long Term Support (LTS) version to stay secure and up-to-date. The post Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript appeared first on Azure SDK Blog.]]></description>
+      <dc:creator><![CDATA[Minh-Anh Phan]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 20:52:46 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Announcing Public Preview for Essential Machine Management]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721</guid>
+      <description><![CDATA[Managing servers and VMs across Azure, on premises, and multi-cloud environments often means turning on core capabilities—monitoring, updates, inventory, and configuration—through separate setup experiences. We’ve heard feedback that this makes it harder to get visibility into machine state and...]]></description>
+      <dc:creator><![CDATA[Meagan McCrory]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 18:54:19 GMT</pubDate>
+      <category><![CDATA[Governance & Management]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Network Security Perimeter for Azure Service Bus]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559899/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559899/</guid>
+      <description><![CDATA[Network Security Perimeter (NSP) support for Azure Service Bus is now generally available. Network Security Perimeter creates a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, blocking unauthorized public access by default and enabling secure...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 18:00:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Rule impact analysis on Azure Network Watcher]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559876/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559876/</guid>
+      <description><![CDATA[Rule impact analysis on Azure Network Watcher enables you to preview the impact of security admin rules before applying them to your environment. This feature helps you validate rule behavior, identify potential conflicts, and ensure that connectivity requirements are met without disrupting live...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 06 Apr 2026 16:15:40 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
     <item>
       <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
       <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</link>
@@ -384,78 +456,6 @@
       <dc:creator><![CDATA[mcasgrain]]></dc:creator>
       <pubDate>Wed, 01 Apr 2026 19:28:30 GMT</pubDate>
       <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Unlock Client-Side Configuration at Scale with Azure App Configuration and Azure Front Door]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/537234/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/537234/</guid>
-      <description><![CDATA[You can now deliver dynamic configuration directly to client-side applications—securely and at CDN scale—thanks to Azure App Configuration’s integration with Azure Front Door. This delivers new flexibility for modern apps and unlocks a critical capability for AI-powered and agentic client...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 19:00:05 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[DPDK 25.11 Performance on Azure for High-Speed Packet Workloads]]></title>
-      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dpdk-25-11-performance-on-azure-for-high-speed-packet-workloads/ba-p/4424905</link>
-      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dpdk-25-11-performance-on-azure-for-high-speed-packet-workloads/ba-p/4424905</guid>
-      <description><![CDATA[At Microsoft Azure, performance is treated as an ongoing discipline grounded in careful engineering and real-world validation. As cloud workloads grow in scale and variety, customers depend on consistent, high-throughput networking. Technologies such as the Data Plane Development Kit (DPDK) play a...]]></description>
-      <dc:creator><![CDATA[KashanK]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 18:37:04 GMT</pubDate>
-      <category><![CDATA[Linux & Open Source]]></category>
-    </item>
-    <item>
-      <title><![CDATA[RSAC 2026: New Microsoft Sentinel Connectors Announcement]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</guid>
-      <description><![CDATA[Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...]]></description>
-      <dc:creator><![CDATA[JesseKopavi]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 18:36:50 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure Data Box enhances compliance with automatic Secure Erasure Certificates]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559772/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559772/</guid>
-      <description><![CDATA[Azure Data Box now automatically generates a downloadable Secure Erasure Certificate for every completed order, providing verification that all data on the device has been securely erased in accordance with NIST 800-88 Revision 2 standards. The certificate is created as part of the standard cleanup...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 18:30:16 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Azure NetApp Files storage with cool access enhancement]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559504/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559504/</guid>
-      <description><![CDATA[QoS update with cool access enabled on Premium and Ultra service levels improves how Azure NetApp Files balances performance and cost for mixed hot and cool workloads. Throughput automatically adjusts as data moves to cool storage, maintaining hot‑tier performance while enabling customers to...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 18:15:44 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure Data Box now supports Azure Files Provisioned v2]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559767/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559767/</guid>
-      <description><![CDATA[Azure Data Box now supports ingestion of data into Azure Files Provisioned v2 storage accounts. Azure Files Provisioned v2 is a billing model where customers provision and pay for specific capacity, IOPS, and throughput values; giving greater flexibility and cost control for file share workloads....]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 18:15:44 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: Select Azure AI Language Features]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/557394/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/557394/</guid>
-      <description><![CDATA[On March 20, 2029, Microsoft will retire the following eight Azure AI Language features: Key Phrase ExtractionSentiment Analysis and Opinion MiningCustom Text ClassificationConversational Language Understanding (CLU)Custom Question Answering (CQA)Orchestration WorkflowSummarization (extractive and...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 18:00:10 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Improving the Markdown Editor for Work Items]]></title>
-      <link>https://devblogs.microsoft.com/devops/improving-the-markdown-editor-for-work-items/</link>
-      <guid>https://devblogs.microsoft.com/devops/improving-the-markdown-editor-for-work-items/</guid>
-      <description><![CDATA[We introduced the Markdown editor in July 2025 to bring Markdown support to large text fields in work items. Since then, we’ve received valuable customer feedback highlighting challenges with the editing experience, particularly when switching in and out of edit mode. Many users found the current...]]></description>
-      <dc:creator><![CDATA[Dan Hellem]]></dc:creator>
-      <pubDate>Wed, 01 Apr 2026 17:17:11 GMT</pubDate>
-      <category><![CDATA[Azure DevOps Blog]]></category>
     </item>
   </channel>
 </rss>
