@@ -1,7 +1,479 @@
 {
-  "lastUpdated": "2026-04-03T11:29:14.241154+00:00",
-  "totalArticles": 420,
+  "lastUpdated": "2026-04-07T19:40:07.447859+00:00",
+  "totalArticles": 417,
   "articles": [
+    {
+      "title": "RSAC 2026: New Microsoft Sentinel Connectors Announcement",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042",
+      "published": "2026-04-07T18:41:22+00:00",
+      "summary": "Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "JesseKopavi"
+    },
+    {
+      "title": "Generally Available: Disable HTTP proxy in AKS",
+      "link": "https://azure.microsoft.com/en-us/updates/557857/",
+      "published": "2026-04-07T17:45:41.097046+00:00",
+      "summary": "Organizations that use HTTP proxies to control outbound traffic often need to change or remove those settings as network requirements evolve, which can be disruptive in running clusters. Azure Kubernetes Service allows administrators to disable HTTP proxy variables for nodes and pods while...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Disable HTTP proxy in AKS",
+      "link": "https://azure.microsoft.com/updates?id=557857",
+      "published": "2026-04-07T17:45:41+00:00",
+      "summary": "Organizations that use HTTP proxies to control outbound traffic often need to change or remove those settings as network requirements evolve, which can be disruptive in running clusters. Azure Kubernetes Service allows administrators to disable HTTP proxyUpdate Type: GA, Services: Kubernetes...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Generally Available: Azure Functions now supports MCP resource triggers",
+      "link": "https://azure.microsoft.com/en-us/updates/559981/",
+      "published": "2026-04-07T17:15:12.253423+00:00",
+      "summary": "Developers building MCP servers on Azure Functions can expose tools but not resources. Now, Azure Functions supports MCP resource triggers, enabling developers to expose resources directly from an Azure Functions–hosted Model Context Protocol (MCP) server. Resources can include static or dynamic...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Azure Functions now supports MCP resource triggers",
+      "link": "https://azure.microsoft.com/updates?id=559981",
+      "published": "2026-04-07T17:15:12+00:00",
+      "summary": "Developers building MCP servers on Azure Functions can expose tools but not resources. Now, Azure Functions supports MCP resource triggers, enabling developers to expose resources directly from an Azure Functions–hosted Model Context Protocol (MCP) serverUpdate Type: GA, Services: Azure Functions,...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_development"
+    },
+    {
+      "title": "Generally Available: Pod CIDR expansion in AKS",
+      "link": "https://azure.microsoft.com/en-us/updates/557907/",
+      "published": "2026-04-07T17:00:23.912259+00:00",
+      "summary": "When clusters exhaust available pod IP addresses, teams have historically been forced to rebuild environments to restore capacity, creating operational disruption. Pod CIDR expansion allows overlay‑based AKS clusters to increase their pod IP range in place without cluster recreation. This enables...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-03",
+      "azureTargetDate": "2026-03",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Pod CIDR expansion in AKS",
+      "link": "https://azure.microsoft.com/updates?id=557907",
+      "published": "2026-04-07T17:00:23+00:00",
+      "summary": "When clusters exhaust available pod IP addresses, teams have historically been forced to rebuild environments to restore capacity, creating operational disruption. Pod CIDR expansion allows overlay‑based AKS clusters to increase their pod IP range in placUpdate Type: GA, Services: Kubernetes...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Agentic development aspirations: build, run, observe — without more Markdown",
+      "link": "https://devblogs.microsoft.com/aspire/agentic-dev-aspirations/",
+      "published": "2026-04-07T17:00:00+00:00",
+      "summary": "AI agents can write code but struggle to run and test it. Aspire gives your agent a codified app model to build, run, and observe your whole stack. The post Agentic development aspirations: build, run, observe — without more Markdown appeared first on Aspire Blog.",
+      "blog": "Aspire Blog",
+      "blogId": "aspireblog",
+      "author": "Maddy Montaquila"
+    },
+    {
+      "title": "Logic Apps Aviators Newsletter - April 2026",
+      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-april-2026/ba-p/4508804",
+      "published": "2026-04-07T16:55:33+00:00",
+      "summary": "In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month April 2026's Ace Aviator: Marcelo Gomes Marcelo Gomes - Integration Team Leader @ COFCO International What’s your role and title? What are your responsibilities? I’m an Integration...",
+      "blog": "Integrations on Azure",
+      "blogId": "integrationsonazureblog",
+      "author": "WSilveira"
+    },
+    {
+      "title": "Scalable AI with Azure Cosmos DB: Tredence Intelligent Document Processing (IDP) | March 2026",
+      "link": "https://devblogs.microsoft.com/cosmosdb/scalable-ai-with-azure-cosmos-db-tredence-intelligent-document-processing-idp-march-2026/",
+      "published": "2026-04-07T16:46:06+00:00",
+      "summary": "Azure Cosmos DB enables scalable AI-driven document processing, addressing one of the biggest barriers to operational scale in today’s enterprise AI landscape. Organizations continue to manage massive volumes of structured and unstructured content—contracts, regulatory filings, operational records,...",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Manish Sharma"
+    },
+    {
+      "title": "Take full control of your floating windows in Visual Studio",
+      "link": "https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/",
+      "published": "2026-04-07T14:00:39+00:00",
+      "summary": "Make Visual Studio floating windows work perfectly with PowerToys FancyZones. Flip one option to get independent windows, better snapping, and less friction. The post Take full control of your floating windows in Visual Studio appeared first on Visual Studio Blog.",
+      "blog": "Visual Studio Blog",
+      "blogId": "visualstudio",
+      "author": "Mads Kristensen"
+    },
+    {
+      "title": "Premium SSD v2 Is Now Generally Available for Azure Database for PostgreSQL",
+      "link": "https://techcommunity.microsoft.com/blog/adforpostgresql/premium-ssd-v2-is-now-generally-available-for-azure-database-for-postgresql/4508445",
+      "published": "2026-04-07T10:24:00+00:00",
+      "summary": "We are excited to announce the General Availability (GA) of Premium SSD v2 for Azure Database for PostgreSQL flexible server. With Premium SSD v2, you can achieve up to 4× higher IOPS, significantly ...Update Type: GA, Services: Database for PostgreSQL, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Shortcut transformations: Turn files into Delta tables without pipelines",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/shortcut-transformations-and-turn-files-into-delta-tables-without-pipelines-generally-available/",
+      "published": "2026-04-07T10:00:00+00:00",
+      "summary": "Organizations today manage data across multiple storage systems, often in formats like CSV, Parquet, and JSON. While this data is readily available, turning it into analytics-ready tables typically requires building and maintaining complex ETL pipelines. Shortcut transformations remove that...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Secure data streaming: Custom CA and mTLS in Fabric Eventstream connectors",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/secure-data-streaming-custom-ca-and-mtls-in-fabric-eventstream-connectors-preview/",
+      "published": "2026-04-07T09:00:00+00:00",
+      "summary": "Security is non-negotiable when it comes to real-time data streaming. In regulated industries such as banking, healthcare, and telecommunications, organizations must ensure that every data connection is encrypted and mutually authenticated. But many enterprises rely on internal Certificate...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
+      "title": "Discover and assess File Shares for migration to Azure Files with Azure Migrate",
+      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-file-shares-for-migration-to-azure-files/ba-p/4509034",
+      "published": "2026-04-07T07:00:08+00:00",
+      "summary": "When organizations migrate to the cloud, applications are at the center of every decision. And behind every application is data, stored in file shares, accessed by users and services, and critical to keeping the application running. Moving that data seamlessly is not optional; it is a fundamental...",
+      "blog": "Azure Migration",
+      "blogId": "azuremigrationblog",
+      "author": "ankitsurkar"
+    },
+    {
+      "title": "Why Data Platforms Must Become Intelligence Platforms for AI Agents to Work",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-data-platforms-must-become-intelligence-platforms-for-ai/ba-p/4505653",
+      "published": "2026-04-07T07:00:00+00:00",
+      "summary": "The promise and the gap Your organization has invested in an AI agent. You ask it: \"Prepare a summary of Q3 revenue by region, including year-over-year trends and top product lines.\" The agent finds revenue numbers in a SQL warehouse, product metadata in Dataverse, regional mappings in SharePoint,...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "AnjaliSadhukhan"
+    },
+    {
+      "title": "Agentic IIS Migration to Managed Instance on Azure App Service",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-iis-migration-to-managed-instance-on-azure-app-service/ba-p/4508969",
+      "published": "2026-04-06T23:58:35+00:00",
+      "summary": "Introduction Enterprises running ASP.NET Framework workloads on Windows Server with IIS face a familiar dilemma: modernize or stay put. The applications work, the infrastructure is stable, and nobody wants to be the person who breaks production during a cloud migration. But the cost of maintaining...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "Gaurav-Seth"
+    },
+    {
+      "title": "Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904",
+      "published": "2026-04-06T22:28:06+00:00",
+      "summary": "Many organizations rely on Logstash as a flexible, trusted data pipeline for collecting, transforming, and forwarding logs from on-premises and hybrid environments. Microsoft Sentinel has long supported a Logstash output plugin, enabling customers to send data directly into Sentinel as part of...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "JamesAde"
+    },
+    {
+      "title": "Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript",
+      "link": "https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/",
+      "published": "2026-04-06T20:52:46+00:00",
+      "summary": "After July 9, 2026, the Azure SDK for JavaScript will no longer support Node.js 20.x. Upgrade to an Active Node.js Long Term Support (LTS) version to stay secure and up-to-date. The post Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript appeared first on Azure SDK Blog.",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Minh-Anh Phan"
+    },
+    {
+      "title": "Announcing Public Preview for Essential Machine Management",
+      "link": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721",
+      "published": "2026-04-06T18:54:19+00:00",
+      "summary": "Managing servers and VMs across Azure, on premises, and multi-cloud environments often means turning on core capabilities—monitoring, updates, inventory, and configuration—through separate setup experiences. We’ve heard feedback that this makes it harder to get visibility into machine state and...",
+      "blog": "Governance & Management",
+      "blogId": "azuregovernanceandmanagementblog",
+      "author": "Meagan McCrory"
+    },
+    {
+      "title": "Generally Available: Network Security Perimeter for Azure Service Bus",
+      "link": "https://azure.microsoft.com/en-us/updates/559899/",
+      "published": "2026-04-06T18:00:04.734029+00:00",
+      "summary": "Network Security Perimeter (NSP) support for Azure Service Bus is now generally available. Network Security Perimeter creates a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, blocking unauthorized public access by default and enabling secure...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Network Security Perimeter for Azure Service Bus",
+      "link": "https://azure.microsoft.com/updates?id=559899",
+      "published": "2026-04-06T18:00:04+00:00",
+      "summary": "Network Security Perimeter (NSP) support for Azure Service Bus is now generally available. Network Security Perimeter creates a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, blocking unauthorized public accessUpdate Type: GA, Services: Service Bus,...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Public Preview: Rule impact analysis on Azure Network Watcher",
+      "link": "https://azure.microsoft.com/en-us/updates/559876/",
+      "published": "2026-04-06T16:15:40.639768+00:00",
+      "summary": "Rule impact analysis on Azure Network Watcher enables you to preview the impact of security admin rules before applying them to your environment. This feature helps you validate rule behavior, identify potential conflicts, and ensure that connectivity requirements are met without disrupting live...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Rule impact analysis on Azure Network Watcher",
+      "link": "https://azure.microsoft.com/updates?id=559876",
+      "published": "2026-04-06T16:15:40+00:00",
+      "summary": "Rule impact analysis on Azure Network Watcher enables you to preview the impact of security admin rules before applying them to your environment. This feature helps you validate rule behavior, identify potential conflicts, and ensure that connectivity reqUpdate Type: Preview, Services: Network...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
+      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828",
+      "published": "2026-04-06T15:32:41+00:00",
+      "summary": "This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "lily-ma"
+    },
+    {
+      "title": "MCP Apps on Azure Functions: Quickstart with TypeScript",
+      "link": "https://devblogs.microsoft.com/azure-sdk/mcp-apps-on-azure-functions-quickstart-with-typescript/",
+      "published": "2026-04-06T15:01:58+00:00",
+      "summary": "Learn how to build and deploy MCP (Model Context Protocol) apps on Azure Functions using TypeScript. This guide covers MCP tools, resources, local development, and serverless deployment with a practical weather app example. The post MCP Apps on Azure Functions: Quickstart with TypeScript appeared...",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Swapnil Nagar"
+    },
+    {
+      "title": "Introducing Migration assistant for SQL database in Fabric",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/",
+      "published": "2026-04-06T15:00:00+00:00",
+      "summary": "Modern organizations are at a crossroads. Legacy SQL Server workloads need modernization, but migration complexity often stands in the way. What if you could bring your SQL databases into a unified analytics platform—without the hassle of manual schema conversion, complex ETL pipelines, or costly...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
+      "title": "Azure Red Hat OpenShift: Managed Identity and Workload Identity now generally available",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940",
+      "published": "2026-04-06T14:44:45+00:00",
+      "summary": "Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, so you can run OpenShift clusters and applications on Azure without long-lived service principal credentials.​ ARO, identity, and Azure governance With GA support for managed...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "MelanieKraintz007"
+    },
+    {
+      "title": "Use ANY_VALUE() for simpler grouping of results in Fabric Data Warehouse",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/use-any_value-for-simpler-grouping-of-results-in-fabric-data-warehouse-generally-available/",
+      "published": "2026-04-06T14:00:00+00:00",
+      "summary": "Fabric Data Warehouse now supports the ANY_VALUE() aggregate, making it easier to write readable, efficient T-SQL when you want to group by a key but still return descriptive columns that are functionally the same for every row in the group. What is ANY_VALUE()? ANY_VALUE() is an aggregate or...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Working with unstructured text in Fabric Data Warehouse with built-in AI functions",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/working-with-unstructured-text-in-fabric-data-warehouse-with-built-in-ai-functions-preview/",
+      "published": "2026-04-06T12:00:00+00:00",
+      "summary": "Data warehouses traditionally focus on structured and semi-structured data. Free-form text such as notes, logs, or comments was difficult to process in data warehousing scenarios without external components. Microsoft Fabric Data Warehouse is opening new scenarios in modern data warehousing by...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
+      "title": "Update on User Experience Feedback from the Reddit Thread (General Available)",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/update-on-user-experience-feedback-from-the-reddit-thread-general-available/",
+      "published": "2026-04-06T10:00:00+00:00",
+      "summary": "Over the past few weeks, we’ve been actively reading through comments in the Reddit thread to gather UX feedback. Thank you all for taking the time to share your experiences — we appreciate your honesty and passion. Here’s a quick update on where things stand: Item dropdown no longer goes...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Microsoft ADO.NET Driver for Microsoft Fabric Data Engineering",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-ado-net-driver-for-microsoft-fabric-data-engineering-preview/",
+      "published": "2026-04-06T09:00:00+00:00",
+      "summary": "ADO.NET is a widely adopted data access technology in the .NET ecosystem that enables applications to connect to and work with data from databases and big data platforms. The Microsoft ADO.NET Driver for Fabric Data Engineering lets you connect, query, and manage Spark workloads in Microsoft Fabric...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
+      "title": "Logic Apps Aviators Newsletter - April 2026",
+      "link": "https://techcommunity.microsoft.com/blog/integrationsonazureblog/logic-apps-aviators-newsletter---april-2026/4508804",
+      "published": "2026-04-06T08:00:00+00:00",
+      "summary": "In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month April 2026's Ace Aviator: Marcelo Gomes What’s your ro...Update Type: Announcement, Services: Logic Apps, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
+    },
+    {
+      "title": "Private DNS and Hub–Spoke Networking for Enterprise AI Workloads on Azure",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/private-dns-and-hub-spoke-networking-for-enterprise-ai-workloads/ba-p/4508835",
+      "published": "2026-04-06T07:56:39+00:00",
+      "summary": "Introduction As organizations deploy enterprise AI platforms on Azure, security requirements increasingly drive the adoption of private-first architectures. Private networking only Centralized firewalls or NVAs Hub–and–spoke virtual network architectures Private Endpoints for all PaaS services...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "deepthihr"
+    },
+    {
+      "title": "How we build Azure SRE Agent with agentic workflows",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753",
+      "published": "2026-04-06T07:43:19+00:00",
+      "summary": "The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "saziz_msft"
+    },
+    {
+      "title": "Building MCP servers with Entra ID and pre-authorized clients",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-mcp-servers-with-entra-id-and-pre-authorized-clients/ba-p/4508453",
+      "published": "2026-04-06T07:00:00+00:00",
+      "summary": "The Model Context Protocol (MCP) gives AI agents a standard way to call external tools, but things get more complicated when those tools need to know who the user is. In this post, I’ll show how to build an MCP server with the Python FastMCP package that authenticates users with Microsoft Entra ID...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "Pamela_Fox"
+    },
+    {
+      "title": "Building Cost-Aware Azure Infrastructure Pipelines: Estimate Costs Before You Deploy",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-cost-aware-azure-infrastructure-pipelines-estimate/ba-p/4508776",
+      "published": "2026-04-06T06:28:43+00:00",
+      "summary": "The Problem: Cost Is a Blind Spot in IaC Reviews Code reviews for Bicep or Terraform templates typically focus on correctness, security, and compliance. But cost is rarely part of the review process because: Developers don't have easy access to pricing data at review time Azure pricing depends on...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "whosocurious"
+    },
+    {
+      "title": "Building Cost-Aware Azure Infrastructure Pipelines: Estimate Costs Before You Deploy",
+      "link": "https://techcommunity.microsoft.com/blog/azureinfrastructureblog/building-cost-aware-azure-infrastructure-pipelines-estimate-costs-before-you-dep/4508776",
+      "published": "2026-04-05T23:28:00+00:00",
+      "summary": "The Problem: Cost Is a Blind Spot in IaC Reviews Code reviews for Bicep or Terraform templates typically focus on correctness, security, and compliance. But cost is rarely part of the review proces...Update Type: Announcement, Services: , Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
+    },
+    {
+      "title": "How we build Azure SRE Agent with agentic workflows",
+      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/how-we-build-azure-sre-agent-with-agentic-workflows/4508753",
+      "published": "2026-04-05T00:40:00+00:00",
+      "summary": "The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployment...Update Type: Announcement, Services: SRE Agent, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
+    },
+    {
+      "title": "MCP Apps on Azure Functions: Quick Start with TypeScript",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-apps-on-azure-functions-quick-start-with-typescript/ba-p/4507859",
+      "published": "2026-04-03T20:23:40+00:00",
+      "summary": "Azure Functions makes hosting MCP apps simple: build locally, create a secure endpoint, and deploy fast with Azure Developer CLI (azd). This guide shows you how using a weather app example. What Are MCP Apps? MCP Apps let MCP servers return interactive HTML interfaces such as data visualizations,...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "swapnil_nagar"
+    },
+    {
+      "title": "Run the latest Azure Arc agent with Automatic Agent Upgrade (Public Preview)",
+      "link": "https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535",
+      "published": "2026-04-03T19:30:06+00:00",
+      "summary": "Customers managing large fleets of Azure Arc servers need a scalable way to ensure the Azure Arc agent stays up to date without manual intervention. Per server configuration does not scale, and gaps in upgrade coverage can lead to operational drift, missed features, and delayed security updates. To...",
+      "blog": "Azure Arc",
+      "blogId": "azurearcblog",
+      "author": "yunishussein"
+    },
+    {
+      "title": "Secure HTTP‑Only AKS Ingress with Azure Front Door Premium, Firewall DNAT, and Private AGIC",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/secure-http-only-aks-ingress-with-azure-front-door-premium/ba-p/4508167",
+      "published": "2026-04-03T19:15:55+00:00",
+      "summary": "Reference architecture and runbook (Part 1: HTTP-only) for Hub-Spoke networking with private Application Gateway (AGIC), Azure Firewall DNAT, and Azure Front Door Premium (WAF) 0. When and Why to Use This Architecture Series note: This document is Part 1 and uses HTTP to keep the focus on routing...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "kkaushal"
+    },
+    {
+      "title": "From Discovery to Executive Presentation: Plan Your Migration with Azure Migrate in Hours",
+      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/from-discovery-to-executive-presentation-plan-your-migration/ba-p/4508500",
+      "published": "2026-04-03T18:06:11+00:00",
+      "summary": "The migration planning bottleneck Every migration starts with the same question: what do we have, and where should it go? Getting from that question to a clear, executive-ready answer has traditionally taken weeks. You scan the environment, export spreadsheets, manually classify workloads, run...",
+      "blog": "Azure Migration",
+      "blogId": "azuremigrationblog",
+      "author": "Shikher"
+    },
+    {
+      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
+      "published": "2026-04-03T17:54:06+00:00",
+      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
+      "blog": "Microsoft Sentinel",
+      "blogId": "microsoftsentinelblog",
+      "author": "spalani"
+    },
+    {
+      "title": "Announcing general availability of Network Security Perimeter for Azure Service Bus",
+      "link": "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-network-security-perimeter/ba-p/4508179",
+      "published": "2026-04-03T16:31:50+00:00",
+      "summary": "Today we are excited to announce the general availability of Network Security Perimeter (NSP) support for Azure Service Bus. Network Security Perimeter allows you to define a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, restricting public network...",
+      "blog": "Messaging on Azure",
+      "blogId": "messagingonazureblog",
+      "author": "EldertGrootenboer"
+    },
+    {
+      "title": "AKS cluster with AGIC hits the Azure Application Gateway backend pool limit (100)",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201",
+      "published": "2026-04-03T15:46:16+00:00",
+      "summary": "I’m writing this article to document a real-world scaling issue we hit while exposing many applications from an Azure Kubernetes Service (AKS) cluster using Application Gateway Ingress Controller (AGIC). The problem is easy to miss because Kubernetes resources keep applying successfully, but the...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "kkaushal"
+    },
+    {
+      "title": "Demystifying On-Demand Capacity Reservations",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/demystifying-on-demand-capacity-reservations/ba-p/4504806",
+      "published": "2026-04-03T11:48:50+00:00",
+      "summary": "About On-Demand Capacity Reservations Introducing the “parking garage” metaphor There are dozens of VM types available in Azure which span multiple generations of CPU across vendors and architectures. Within each Azure region are datacenters hosting pools of hardware which runs Azure services, such...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "KenHooverMSFT"
+    },
     {
       "title": "DevSecOps on AKS: Governance Gates That Actually Prevent Incidents",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/devsecops-on-aks-governance-gates-that-actually-prevent/ba-p/4508415",
@@ -12,6 +484,17 @@
       "author": "lakshaymalik"
     },
     {
+      "title": "Workspace Customer-Managed Keys for BYOK in Microsoft Fabric",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/workspace-customer-managed-keys-for-byok-in-microsoft-fabric-preview/",
+      "published": "2026-04-03T10:00:00+00:00",
+      "summary": "Enterprise analytics platforms increasingly operate under strict security, compliance, and regulatory requirements. For many organizations, encryption is not sufficient without clear ownership and control of cryptographic keys.Update Type: Preview, Services: Microsoft Fabric, Categories:...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
       "title": "Azure SQL Managed Instance as an AI‑Enabled PaaS Platform",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-sql-managed-instance-as-an-ai-enabled-paas-platform/ba-p/4508380",
       "published": "2026-04-03T09:42:50+00:00",
@@ -19,6 +502,16 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "ShivaniThadiyan"
+    },
+    {
+      "title": "Fabric Influencers Spotlight: March 2026",
+      "link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-march-2016/",
+      "published": "2026-04-03T09:00:00+00:00",
+      "summary": "Welcome to the March 2026 edition of the Fabric Influencers Spotlight, a recurring monthly post here to shine a bright light on the places on the internet where Microsoft MVPs & Fabric Super Users are doing some amazing work on all aspects of Microsoft Fabric. The Microsoft Fabric Community team...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
     },
     {
       "title": "AI‑Assisted Azure Infrastructure Validation and Drift Detection",
@@ -75,24 +568,6 @@
       "author": "vaibhavpandey"
     },
     {
-      "title": "MCP Apps on Azure Functions: Quick Start with TypeScript",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-apps-on-azure-functions-quick-start-with-typescript/ba-p/4507859",
-      "published": "2026-04-03T01:21:43+00:00",
-      "summary": "Azure Functions makes hosting MCP apps simple: build locally, create a secure endpoint, and deploy fast with azd. What Are MCP Apps? MCP (Model Context Protocol) apps add new features to AI assistants and clients: MCP Tools: Remote functions that clients call to perform actions (for example, fetch...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "swapnil_nagar"
-    },
-    {
-      "title": "AKS cluster with AGIC hits the Azure Application Gateway backend pool limit (100)",
-      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201",
-      "published": "2026-04-03T00:42:48+00:00",
-      "summary": "I’m writing this article to document a real-world scaling issue we hit while exposing many applications from an Azure Kubernetes Service (AKS) cluster using Application Gateway Ingress Controller (AGIC). The problem is easy to miss because Kubernetes resources keep applying successfully, but the...",
-      "blog": "Azure Architecture",
-      "blogId": "azurearchitectureblog",
-      "author": "kkaushal"
-    },
-    {
       "title": "Enterprise‑Scale Azure Subscription Vending Using Azure Verified Modules (AVM)",
       "link": "https://techcommunity.microsoft.com/blog/azureinfrastructureblog/enterprise%E2%80%91scale-azure-subscription-vending-using-azure-verified-modules-avm/4507751",
       "published": "2026-04-02T23:45:00+00:00",
@@ -120,15 +595,6 @@
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "Mayunk_Jain"
-    },
-    {
-      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828",
-      "published": "2026-04-02T22:31:04+00:00",
-      "summary": "This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "lily-ma"
     },
     {
       "title": "Azure SRE Agent now supports multiple model providers, including Anthropic Claude",
@@ -241,6 +707,17 @@
       "announcementType": "deprecation",
       "lifecycle": "retiring",
       "azureRetirementDate": "2027-03"
+    },
+    {
+      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
+      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure-functions/4507828",
+      "published": "2026-04-02T12:50:00+00:00",
+      "summary": "This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authe...Update Type: Announcement, Services: Microsoft Foundry, Azure Functions, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_development"
     },
     {
       "title": "Five reasons to attend SQLBits in the UK",
@@ -420,15 +897,6 @@
       "author": "KashanK"
     },
     {
-      "title": "RSAC 2026: New Microsoft Sentinel Connectors Announcement",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042",
-      "published": "2026-04-01T18:36:50+00:00",
-      "summary": "Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "JesseKopavi"
-    },
-    {
       "title": "Generally Available: Azure Data Box enhances compliance with automatic Secure Erasure Certificates",
       "link": "https://azure.microsoft.com/en-us/updates/559772/",
       "published": "2026-04-01T18:30:16.180953+00:00",
@@ -504,12 +972,12 @@
       "title": "Retirement: Select Azure AI Language Features",
       "link": "https://azure.microsoft.com/en-us/updates/557394/",
       "published": "2026-04-01T18:00:10.492136+00:00",
-      "summary": "On March 20, 2027, Microsoft will retire the following eight Azure AI Language features: Key Phrase ExtractionSentiment Analysis and Opinion MiningCustom Text ClassificationConversational Language Understanding (CLU)Custom Question Answering (CQA)Orchestration WorkflowSummarization (extractive and...",
+      "summary": "On March 20, 2029, Microsoft will retire the following eight Azure AI Language features: Key Phrase ExtractionSentiment Analysis and Opinion MiningCustom Text ClassificationConversational Language Understanding (CLU)Custom Question Answering (CQA)Orchestration WorkflowSummarization (extractive and...",
       "blog": "Azure Updates",
       "blogId": "azureupdates",
       "author": "Microsoft",
       "lifecycle": "retiring",
-      "azureRetirementDate": "2027-03-20"
+      "azureRetirementDate": "2029-03-20"
     },
     {
       "title": "Select Azure AI Language Features",
@@ -1021,15 +1489,6 @@
       "lifecycle": "in_preview"
     },
     {
-      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971",
-      "published": "2026-03-30T21:38:31+00:00",
-      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "spalani"
-    },
-    {
       "title": "Retirement: Deprecation of sidecar for remote-write for Azure Monitor managed service for Prometheus",
       "link": "https://azure.microsoft.com/en-us/updates/550519/",
       "published": "2026-03-30T21:30:50.093344+00:00",
@@ -1217,6 +1676,15 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "deepakkumarv"
+    },
+    {
+      "title": "Control where your pods land on AKS with NAP",
+      "link": "https://blog.aks.azure.com/2026/03/20/node-provisioning-best-practice",
+      "published": "2026-03-30T00:00:00+00:00",
+      "summary": "Combine taints, affinity, and topology spread constraints with AKS Node Auto-Provisioning to control where your pods land.",
+      "blog": "AKS Blog",
+      "blogId": "aksblog",
+      "author": "Microsoft"
     },
     {
       "title": "Gain Visibility into Cloud Browser Usage with Browser Activity Logs in Playwright Workspaces",
@@ -2457,15 +2925,6 @@
       "author": "PuiChee (PC) Chan"
     },
     {
-      "title": "Migrating Ant Builds to Maven with GitHub Copilot app modernization",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-ant-builds-to-maven-with-github-copilot-app/ba-p/4491992",
-      "published": "2026-03-23T16:49:01+00:00",
-      "summary": "Many legacy Java applications still rely on Apache Ant for building, packaging, and dependency management. While Ant remains flexible, it lacks the structured lifecycle, dependency resolution, and ecosystem support that modern build tools like Maven provide. Migrating from Ant to Maven improves...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "ayangupta"
-    },
-    {
       "title": "Announcing Aspire 13.2",
       "link": "https://devblogs.microsoft.com/aspire/aspire-13-2-announcement/",
       "published": "2026-03-23T15:30:00+00:00",
@@ -2473,15 +2932,6 @@
       "blog": "Aspire Blog",
       "blogId": "aspireblog",
       "author": "Maddy Montaquila, David Fowler"
-    },
-    {
-      "title": "Code Optimizations for Azure App Service Now Available in VS Code",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/code-optimizations-for-azure-app-service-now-available-in-vs/ba-p/4504252",
-      "published": "2026-03-23T15:18:08+00:00",
-      "summary": "Today we shipped a feature in the Azure App Service extension for VS Code that answers both questions: Code Optimizations, powered by Application Insights profiler data and GitHub Copilot. The problem: production performance is a black box You've deployed your .NET app to Azure App Service....",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "fiveisprime"
     },
     {
       "title": "Shaping the Next Era of Energy Decision Making with Geospatial Intelligence",
@@ -2564,6 +3014,16 @@
       "author": "Microsoft",
       "announcementType": "update",
       "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Migrating Ant Builds to Maven with GitHub Copilot app modernization",
+      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/migrating-ant-builds-to-maven-with-github-copilot-app-modernization/4491992",
+      "published": "2026-03-23T09:49:00+00:00",
+      "summary": "Many legacy Java applications still rely on Apache Ant for building, packaging, and dependency management. While Ant remains flexible, it lacks the structured lifecycle, dependency resolution, and ec...Update Type: Announcement, Services: , Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
     },
     {
       "title": "Connection Recency for improved audit and management",
@@ -2834,52 +3294,10 @@
       "author": "parulseth"
     },
     {
-      "title": "Heroku Entered Maintenance Mode — Here's Your Next Move",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/heroku-entered-maintenance-mode-here-s-your-next-move/ba-p/4504021",
-      "published": "2026-03-20T14:27:30+00:00",
-      "summary": "Heroku has entered sustaining engineering — no new features, no new enterprise contracts. If you're running production workloads on the platform, you're probably thinking about what comes next. Azure Container Apps is worth a serious look. Scale-to-zero pricing, event-driven autoscaling, built-in...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "simonjj"
-    },
-    {
       "title": "Instantly Run and Preview Functions in Microsoft Fabric Eventhouse: No Code Required",
       "link": "https://blog.fabric.microsoft.com/en-US/blog/instantly-run-and-preview-functions-in-microsoft-fabric-eventhouse-no-code-required/",
       "published": "2026-03-20T13:00:00+00:00",
       "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Before, using an Eventhouse function...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Modernizing pipelines: New activities and innovations in Fabric Data Factory pipelines",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/modernizing-pipelines-new-activities-and-innovations-in-fabric-data-factory-pipelines/",
-      "published": "2026-03-20T11:45:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Introducing the Lakehouse utility suite in...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Fabric Notebook Public APIs",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-notebook-public-apis-generally-available/",
-      "published": "2026-03-20T11:40:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Fabric Notebook Public APIs (Generally...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Building real-time, event-driven applications with Database CDC feeds and Fabric Eventstreams DeltaFlow",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/building-real-time-event-driven-applications-with-database-cdc-feeds-and-fabric-eventstreams-deltaflow-preview/",
-      "published": "2026-03-20T10:40:00+00:00",
-      "summary": "Modern business applications win by reacting immediately, serving recommendations as users interact, alerting teams when anomalies occur, or updating dashboards the second business events happen. At the heart of these experiences are operational databases, where every insert, update, or delete...",
       "blog": "Azure Updates (aztty)",
       "blogId": "azttyupdates",
       "author": "Microsoft",
@@ -2896,89 +3314,6 @@
       "author": "Shikhaghildiyal"
     },
     {
-      "title": "Workspace Monitoring dashboard templates in Microsoft Fabric Eventhouse",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/workspace-monitoring-dashboard-templates-in-microsoft-fabric-eventhouse/",
-      "published": "2026-03-20T10:00:00+00:00",
-      "summary": "Fabric workspace monitoring provides rich telemetry across your workspace assets, including Eventhouses, Power BI Semantic Models, Data Engineering (GraphQL), and Mirrored Databases. The workspace monitoring data is stored in an Eventhouse, part of Fabric Real-Time Intelligence.Update Type:...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Fabric Extensibility—Self Service Workload Publishing",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-self-service-workload-publishing-generally-available/",
-      "published": "2026-03-20T09:15:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Fabric Extensibility—Self-Service Workload...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Fabric Extensibility—What’s new in Workload Management",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-whats-new-in-workload-management/",
-      "published": "2026-03-20T09:00:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. As the Fabric Extensibility ecosystem grows...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "RSAC 2026: New Microsoft Sentinel Connectors Announcement",
-      "link": "https://techcommunity.microsoft.com/blog/microsoftsentinelblog/rsac-2026-new-microsoft-sentinel-connectors-announcement/4503042",
-      "published": "2026-03-20T09:00:00+00:00",
-      "summary": "Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fal...Update Type: Announcement, Services: Microsoft Sentinel, Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "What’s new in Microsoft Sentinel: RSAC 2026",
-      "link": "https://techcommunity.microsoft.com/blog/microsoftsentinelblog/what%E2%80%99s-new-in-microsoft-sentinel-rsac-2026/4503971",
-      "published": "2026-03-20T09:00:00+00:00",
-      "summary": "Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approa...Update Type: Announcement, Services: Microsoft Sentinel, Categories: Security",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Stream data in near real time from SQL MI to Azure Event Hubs - Public preview",
-      "link": "https://techcommunity.microsoft.com/blog/azuresqlblog/stream-data-in-near-real-time-from-sql-mi-to-azure-event-hubs---public-preview/4504212",
-      "published": "2026-03-20T08:54:00+00:00",
-      "summary": "How do I modernize an existing application without rewriting it? Many business-critical applications still rely on architectures where the database is the most dependable integration point. These a...Update Type: Preview, Services: Event Hubs, Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "From alert overload to decisive action: How Security Copilot agents are transforming security and IT",
-      "link": "https://techcommunity.microsoft.com/blog/securitycopilotblog/from-alert-overload-to-decisive-action-how-security-copilot-agents-are-transform/4504213",
-      "published": "2026-03-20T07:57:00+00:00",
-      "summary": "Security and IT teams operate in a constant stream of alerts, incidents, and investigations. As environments expand across identities, endpoints, cloud, and data, the challenge becomes clear: identif...Update Type: Announcement, Services: Copilot for Security, Categories: Security",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Microsoft Sentinel is now supported in Unified RBAC with row-level access",
-      "link": "https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel-is-now-supported-in-unified-rbac-with-row-level-access/4503121",
-      "published": "2026-03-20T07:30:00+00:00",
-      "summary": "Enabling streamlined, granular, and scalable permissions We’re excited to announce the Public Preview of Unified Role Based Access Control (URBAC) for Microsoft Sentinel, together with row-level ac...Update Type: Announcement, Services: Microsoft Sentinel, Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
       "title": "Power Apps Vibe Experience: Build Business Apps at the Speed of Ideas",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/power-apps-vibe-experience-build-business-apps-at-the-speed-of/ba-p/4502347",
       "published": "2026-03-20T07:00:00+00:00",
@@ -2986,25 +3321,6 @@
       "blog": "Azure Dev Community",
       "blogId": "azuredevcommunityblog",
       "author": "harshul05"
-    },
-    {
-      "title": "Centralized Monitoring in Azure",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/centralized-monitoring-in-azure/ba-p/4504027",
-      "published": "2026-03-20T06:17:50+00:00",
-      "summary": "Centralized Monitoring in Azure: Automating Diagnostic Settings Across All Resources Introduction In modern cloud environments, observability is not optional—it’s foundational. As organizations scale their Azure footprint, ensuring consistent monitoring across hundreds (or thousands) of resources...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "Shikhaghildiyal"
-    },
-    {
-      "title": "Centralized Monitoring in Azure",
-      "link": "https://techcommunity.microsoft.com/blog/azureinfrastructureblog/centralized-monitoring-in-azure/4504027",
-      "published": "2026-03-19T23:17:00+00:00",
-      "summary": "Centralized Monitoring in Azure: Automating Diagnostic Settings Across All Resources Introduction In modern cloud environments, observability is not optional—it’s foundational. As organizations ...Update Type: Announcement, Services: , Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
     },
     {
       "title": "Introducing Azure Managed Grafana MCP: The Managed Telemetry Gateway for AI Agents",
@@ -3045,17 +3361,6 @@
       "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
-    },
-    {
-      "title": "Azure Databricks OneLake Catalog Federation",
-      "link": "https://azure.microsoft.com/updates?id=558927",
-      "published": "2026-03-19T17:00:53+00:00",
-      "summary": "You can now enable OneLake catalog federation in Azure Databricks to query Microsoft Fabric OneLake data without copying or moving it. By connecting Unity Catalog to a OneLake catalog, Azure Databricks automatically syncs schemas and tables so Fabric LakeUpdate Type: Preview, Services: Databricks,...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
     },
     {
       "title": "Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027",
@@ -3127,49 +3432,6 @@
       "azureRetirementDate": "2027-05-31"
     },
     {
-      "title": "Maps in Microsoft Fabric",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/maps-in-microsoft-fabric-generally-available/",
-      "published": "2026-03-19T16:30:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Everything happens somewhere When we...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Introducing the updated Copilot for data engineering and data science",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/introducing-the-updated-copilot-for-data-engineering-and-data-science-preview/",
-      "published": "2026-03-19T16:15:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Co-authors: Jene Zhang, Jenny Jiang, Qixiao...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Proactive and incremental statistics refresh for Fabric Data Warehouse and SQL Analytics Endpoint",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/proactive-and-incremental-statistics-refresh-for-fabric-data-warehouse-and-sql-analytics-endpoint/",
-      "published": "2026-03-19T15:30:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. In December, we released two new...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Unlock insights from images and PDFs with multimodal support in Fabric AI functions",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/unlock-insights-from-images-and-pdfs-with-multimodal-support-in-fabric-ai-functions-preview/",
-      "published": "2026-03-19T15:00:00+00:00",
-      "summary": "Fabric AI functions let you transform data into insights with a single line of code. Since going generally available, AI functions have helped customers dramatically accelerate their data workflows. We’re introducing multimodal support for AI functions (Preview), along with several exciting updates...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
       "title": "Azure Bastion: Enterprise-grade secure access made simple",
       "link": "https://techcommunity.microsoft.com/t5/azure-network-security-blog/azure-bastion-enterprise-grade-secure-access-made-simple/ba-p/4503833",
       "published": "2026-03-19T14:32:39+00:00",
@@ -3177,124 +3439,6 @@
       "blog": "Azure Network Security",
       "blogId": "azurenetworksecurityblog",
       "author": "ShabazShaik"
-    },
-    {
-      "title": "Microsoft Fabric Extensibility Toolkit",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-extensibility-toolkit-generally-available/",
-      "published": "2026-03-19T14:30:00+00:00",
-      "summary": "This milestone marks a significant step in Microsoft’s commitment to building an open, extensible data platform—one where every organization can bring their own tools, applications, and data experiences natively into Fabric.Update Type: GA, Services: Microsoft Fabric, Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Best Practices for Library Management with Fabric Environments",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/33772/",
-      "published": "2026-03-19T14:15:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Microsoft Fabric provides multiple ways to...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_development"
-    },
-    {
-      "title": "From legacy to Fabric: A new guided migration experience through Spectral Core Fabric Workload",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/from-legacy-to-fabric-a-new-guided-migration-experience-through-spectral-core-fabric-workload-preview/",
-      "published": "2026-03-19T14:10:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. The release of the Spectral Core migration...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Fabric Extensibility Toolkit: CI/CD, Remote Lifecycle Notifications, and Fabric Scheduler",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-ci-cd-remote-lifecycle-notifications-and-fabric-scheduler-preview/",
-      "published": "2026-03-19T14:10:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Alongside the Microsoft Fabric...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Third-party support for OneLake security",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/third-party-support-for-onelake-security/",
-      "published": "2026-03-19T14:00:00+00:00",
-      "summary": "As modern data lakes are built on open-source technology like Delta and Iceberg, customers expect to use the analytics engines and services that best fit their needs—without copying data or redefining security. This creates a clear requirement: security must be defined once and enforced...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "New data protection capabilities in Microsoft Fabric: Built‑in security for the modern data estate",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/new-data-protection-capabilities-in-microsoft-fabric-built%E2%80%91in-security-for-the-modern-data-estate/",
-      "published": "2026-03-19T11:40:00+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. As organizations continue to scale...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Extended Capabilities in Mirroring in Microsoft Fabric: Optional Enhancements to Core Mirroring",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/extended-capabilities-in-mirroring-in-microsoft-fabric-optional-enhancements-to-core-mirroring/",
-      "published": "2026-03-19T11:00:00+00:00",
-      "summary": "Mirroring in Microsoft Fabric was built to remove the friction of traditional data integration. With a simple, zero‑ETL experience, customers can continuously replicate data from operational systems directly into OneLake—making that data instantly available for analytics, AI, and reporting across...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "What’s new and improved for SQL database in Fabric",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-and-improved-for-sql-database-in-fabric-generally-available/",
-      "published": "2026-03-19T10:15:00+00:00",
-      "summary": "Following the SQL database in Microsoft Fabric (Generally Available) at Microsoft Ignite in November 2025, customer adoption has accelerated. Organizations are modernizing SQL workloads, reducing operational overhead, and bringing operational data closer to analytics and AI. This next wave of...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Audit columns in Copy job in Fabric Data Factory—every row is traceable for data lineage and compliance",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/audit-columns-in-copy-job-in-fabric-data-factory-every-row-is-traceable-for-data-lineage-and-compliance/",
-      "published": "2026-03-19T10:00:00+00:00",
-      "summary": "Copy job is the go-to solution in Microsoft Fabric Data Factory for simplified data movement across multiple clouds. With native support for bulk copy, incremental copy, and change data capture (CDC) replication, it can handle a wide range of movement scenarios through an intuitive, easy-to-use...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Custom SQL Pools for Fabric Data Warehouse",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/custom-sql-pools-for-fabric-data-warehouse-preview/",
-      "published": "2026-03-19T08:30:00+00:00",
-      "summary": "Custom SQL Pools for Microsoft Fabric Data Warehouse (Preview) is a new capability that gives workspace administrators fine-grained control over how SQL compute resources are allocated for SQL workloads in a Fabric Data Warehouse and SQL analytics endpoint.Update Type: Preview, Services: Microsoft...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Fabric Runtime 2.0",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-preview/",
-      "published": "2026-03-19T08:00:00+00:00",
-      "summary": "Fabric Runtime provides seamless integration within the Microsoft Fabric ecosystem, delivering a powerful environment for data engineering and data science projects built on Apache Spark. The next-generation runtime is purpose-built for large-scale data computations in Microsoft Fabric and...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
     },
     {
       "title": "Building Knowledge-Grounded AI Agents with Foundry IQ",
@@ -4093,24 +4237,6 @@
       "author": "Maddy Montaquila"
     },
     {
-      "title": "Migrating On-prem Windows & Linux VMs to Azure Confidential Virtual Machines via Azure Migrate",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-on-prem-windows-linux-vms-to-azure-confidential/ba-p/4500898",
-      "published": "2026-03-10T15:09:25+00:00",
-      "summary": "1. Executive Summary Enterprise cloud adoption increasingly prioritizes trust boundaries that extend beyond traditional infrastructure isolation. While encryption at rest and in transit are foundational, modern organizations must also ensure that data in use (data actively processed in CPU or...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "SamhithaGurumurthy"
-    },
-    {
-      "title": "Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-reusable-custom-images-for-azure-confidential-vms-using/ba-p/4500880",
-      "published": "2026-03-10T12:09:24+00:00",
-      "summary": "Overview Azure Confidential Virtual Machines (CVMs) provide hardware-enforced protection for sensitive workloads by encrypting data in use using AMD SEV-SNP technology. In enterprise environments, organizations typically need to: Create hardened golden images Standardize baseline configurations...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "PramodPalukuru"
-    },
-    {
       "title": "Scaling DNS on AKS with Cilium: NodeLocal DNSCache, LRP, and FQDN Policies",
       "link": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/scaling-dns-on-aks-with-cilium-nodelocal-dnscache-lrp-and-fqdn/ba-p/4486323",
       "published": "2026-03-10T09:23:51+00:00",
@@ -4118,15 +4244,6 @@
       "blog": "Linux & Open Source",
       "blogId": "linuxandopensourceblog",
       "author": "Simone_Rodigari"
-    },
-    {
-      "title": "Getting Started with Behave: Writing Cucumber Tests in VS Code",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/getting-started-with-behave-writing-cucumber-tests-in-vs-code/ba-p/4496865",
-      "published": "2026-03-10T07:00:00+00:00",
-      "summary": "What is Behave? Behave is a BDD test framework for Python that allows you to write tests in plain English using Given–When–Then syntax, backed by Python step definitions. Key benefits: Human‑readable test scenarios using Gherkin Strong alignment between business requirements and test automation...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "sabappal"
     },
     {
       "title": "How to Access a Shared OneDrive Folder in Azure Logic Apps",
@@ -4154,15 +4271,6 @@
       "blog": "All Things Azure",
       "blogId": "allthingsazure",
       "author": "Chris Harris"
-    },
-    {
-      "title": "Microsoft Agent Framework, Microsoft Foundry, MCP, Aspire を使った実践的な AI アプリを構築するサンプルが登場",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-agent-framework-microsoft-foundry-mcp-aspire-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E5%AE%9F%E8%B7%B5%E7%9A%84%E3%81%AA/ba-p/4499972",
-      "published": "2026-03-09T17:00:00+00:00",
-      "summary": "AI エージェントを作ること自体は、以前よりも簡単になってきました。しかし、それらを実際の本番運用のアプリケーションの一部としてデプロイすること (複数のサービス、永続的な状態管理、本番向けのインフラを含めた形で運用すること) になると、途端に複雑になります。 .NET コミュニティの開発者からも、ローカル環境でもクラウドでも動作する、クラウドネイティブな実運用レベルのサンプルが見たいという声が多く寄せられていました。 その声に応え、私たちはオープンソースのサンプルアプリ『Interview Coach (面接コーチ)』を作りました。模擬就職面接を行う AI チャット web アプリです。...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Madoka Chiyoda"
     },
     {
       "title": "Visual Studio Dev Essentials: Free, Practical Tools for Every Developer",
@@ -4199,163 +4307,10 @@
       "blog": "Azure Architecture",
       "blogId": "azurearchitectureblog",
       "author": "Sabyasachi-Samaddar"
-    },
-    {
-      "title": "Microsoft at NVIDIA GTC 2026",
-      "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/microsoft-at-nvidia-gtc-2026/ba-p/4497670",
-      "published": "2026-03-06T23:44:35+00:00",
-      "summary": "Microsoft returns to NVIDIA GTC 2026 in San Jose with a strong presence across conference sessions, in‑booth theater talks, live demos, and executive‑level ancillary events. Together with NVIDIA and our partner ecosystem, Microsoft is showcasing how Azure AI infrastructure enables AI training,...",
-      "blog": "High Performance Computing",
-      "blogId": "azurehighperformancecomputingblog",
-      "author": "Fernando_Aznar"
-    },
-    {
-      "title": "What’s new in Microsoft Foundry | February 2026",
-      "link": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-feb-2026/",
-      "published": "2026-03-06T23:08:31+00:00",
-      "summary": "February brings Anthropic's Claude Opus 4.6 and Sonnet 4.6 with 1M-token context, GPT-Realtime-1.5 and GPT-Audio-1.5, Grok 4.0 GA, the Microsoft Agent Framework reaching Release Candidate, and the Foundry REST API quietly going GA — laying the foundation for imminent SDK GA announcements across...",
-      "blog": "Microsoft Foundry Blog",
-      "blogId": "foundryblog",
-      "author": "Nick Brady"
-    },
-    {
-      "title": "Using Agents to Setup Experiments",
-      "link": "https://devblogs.microsoft.com/ise/using-agents-to-setup-experiments/",
-      "published": "2026-03-06T08:00:00+00:00",
-      "summary": "When setting up an experiment is complex, agents can automate the process to make it faster and more reliable. The post Using Agents to Setup Experiments appeared first on ISE Developer Blog.",
-      "blog": "ISE Developer Blog",
-      "blogId": "iseblog",
-      "author": "Peter Lasne"
-    },
-    {
-      "title": "Decision Matrix: API vs MCP Tools — The Great Integration Showdown 🥊",
-      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/decision-matrix-api-vs-mcp-tools-the-great-integration-showdown/ba-p/4499385",
-      "published": "2026-03-06T06:48:28+00:00",
-      "summary": "Audience: Engineers + Stakeholders (and anyone who's ever argued about API architecture at lunch)Date: March 2026Author: Sabyasachi Samaddar Purpose Somewhere, right now, two engineers are arguing about the \"right\" way to call an API. One swears by raw HTTP. The other just discovered MCP and thinks...",
-      "blog": "Azure Architecture",
-      "blogId": "azurearchitectureblog",
-      "author": "Sabyasachi-Samaddar"
-    },
-    {
-      "title": "Dynamic Resource Allocation (DRA) with NVIDIA virtualized GPU (vGPU) on AKS",
-      "link": "https://blog.aks.azure.com/2026/03/06/dra-with-vGPUs-on-aks",
-      "published": "2026-03-06T00:00:00+00:00",
-      "summary": "Configure dynamic resource allocation (DRA) for NVIDIA vGPU workloads and learn the prerequisites with setup steps on Azure Kubernetes Service (AKS).",
-      "blog": "AKS Blog",
-      "blogId": "aksblog",
-      "author": "Microsoft"
-    },
-    {
-      "title": "Windows Terminal Preview 1.25 Release",
-      "link": "https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-25-release/",
-      "published": "2026-03-05T22:28:49+00:00",
-      "summary": "We briefly paused our quarterly release cycle to focus on reliability and performance, but now we’re back with Windows Terminal 1.25! We are also updating Windows Terminal stable to version 1.24, which will include all of the features from this previous blog post. Some notable features to call out...",
-      "blog": "Windows Command Line",
-      "blogId": "commandline",
-      "author": "Dustin Howett"
-    },
-    {
-      "title": "How Netstar Streamlined Fleet Monitoring and Reduced Custom Integrations with Drasi",
-      "link": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/how-netstar-streamlined-fleet-monitoring-and-reduced-custom/ba-p/4499592",
-      "published": "2026-03-05T19:23:46+00:00",
-      "summary": "When a high-value container goes silent between waystations, logistics teams lose critical visibility, risking delays that can cascade into port congestion and missed connections. Netstar, a connected fleet solutions provider supporting customers like Maersk, faced this challenge as its operations...",
-      "blog": "Linux & Open Source",
-      "blogId": "linuxandopensourceblog",
-      "author": "CollinBrian"
-    },
-    {
-      "title": "Platform Engineering for the Agentic AI era",
-      "link": "https://devblogs.microsoft.com/all-things-azure/platform-engineering-for-the-agentic-ai-era/",
-      "published": "2026-03-05T05:47:29+00:00",
-      "summary": "For the last decade, platform engineering has relied on explicit API interaction layers: CLIs, SDKs, pipelines, wrappers, and UI workflows that translate human intent into machine‑safe API calls. AI agents are now short‑circuiting much of that stack. By combining natural language understanding,...",
-      "blog": "All Things Azure",
-      "blogId": "allthingsazure",
-      "author": "Arnaud Lheureux, davidwright"
-    },
-    {
-      "title": "The Polyglot tax – Part 2",
-      "link": "https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-2/",
-      "published": "2026-03-04T23:28:21+00:00",
-      "summary": "When JSON Met Graph Part 2 of 4 – The Multimodal Database Series A note on naming. Throughout this series, when we say “SQL Server 2025” we also mean Azure SQL. The multimodal capabilities we discuss – native JSON, graph, vector, and columnstore – are available across both the on-premises engine...",
-      "blog": "Azure SQL Dev Corner",
-      "blogId": "azuresqlblog",
-      "author": "Aditya Badramraju"
-    },
-    {
-      "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
-      "link": "https://azure.microsoft.com/en-us/updates/558102/",
-      "published": "2026-03-04T21:15:02.275174+00:00",
-      "summary": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now get enforced within 5 minutes.In light of cache refresh optimizations that are now in place, we’re...",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "author": "Microsoft",
-      "lifecycle": "retiring",
-      "azureRetirementDate": "2026-04-30"
-    },
-    {
-      "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
-      "link": "https://azure.microsoft.com/updates?id=558102",
-      "published": "2026-03-04T21:15:02+00:00",
-      "summary": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now get enforced within 5 minutes.In light of cache refres [Sevice: Azure Policy, Target Date: 01 Apr...",
-      "blog": "Azure Deprecations (aztty)",
-      "blogId": "azuredeprecations",
-      "author": "Microsoft",
-      "announcementType": "deprecation",
-      "lifecycle": "retiring",
-      "azureRetirementDate": "2026-04"
-    },
-    {
-      "title": "What’s New in Microsoft Sentinel: March 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-march-2026/ba-p/4499508",
-      "published": "2026-03-04T20:21:05+00:00",
-      "summary": "March brings a set of updates to Microsoft Sentinel focused on helping your SOC automate faster, onboard data with less friction, and detect threats across more of your environment. This month's updates include natural-language playbook generation for more flexible SOAR workflows, streamlined...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "NogaRonen"
-    },
-    {
-      "title": "Announcing the General Availability of the Azure Maps Geocode Autocomplete API",
-      "link": "https://techcommunity.microsoft.com/t5/azure-maps-blog/announcing-the-general-availability-of-the-azure-maps-geocode/ba-p/4499242",
-      "published": "2026-03-04T17:22:55+00:00",
-      "summary": "It was just last September that we were Introducing the Azure Maps Geocode Autocomplete API but now we’re excited to announce the general availability (GA) of the Azure Maps Geocode Autocomplete API, a production‑ready REST service that delivers fast, intelligent, and structured location...",
-      "blog": "Azure Maps",
-      "blogId": "azuremapsblog",
-      "author": "sinnypan"
-    },
-    {
-      "title": "Defending Container Runtime from Malware with Microsoft Defender for Containers",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defending-container-runtime-from-malware-with-microsoft-defender/ba-p/4499264",
-      "published": "2026-03-04T12:49:58+00:00",
-      "summary": "In cloud-native environments, malware protection is no longer traditional antivirus — it is runtime workload security, ensuring containerized applications remain safe throughout their lifecycle. Many organizations focus on scanning container images before deployment. While image scanning is...",
-      "blog": "Microsoft Defender for Cloud",
-      "blogId": "microsoftdefendercloudblog",
-      "author": "Vasavi_Pasula"
     }
   ],
   "summaryWindowDays": 6,
   "azureRetirementCalendar": [
-    {
-      "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
-      "link": "https://azure.microsoft.com/en-us/updates/558102/",
-      "retirementDate": "2026-04-30",
-      "datePrecision": "day",
-      "published": "2026-03-04T21:15:02.275174+00:00",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "announcementType": "",
-      "sources": [
-        "Azure Updates"
-      ],
-      "sourceReports": [
-        {
-          "blog": "Azure Updates",
-          "blogId": "azureupdates",
-          "announcementType": "",
-          "link": "https://azure.microsoft.com/en-us/updates/558102/"
-        }
-      ],
-      "sourceCount": 1
-    },
     {
       "title": "Flatcar Container Linux for AKS (preview)",
       "link": "https://azure.microsoft.com/en-us/updates/557929/",
@@ -4503,24 +4458,17 @@
     },
     {
       "title": "Select Azure AI Language Features",
-      "link": "https://azure.microsoft.com/en-us/updates/557394/",
+      "link": "https://azure.microsoft.com/updates?id=557394",
       "retirementDate": "2027-03-20",
       "datePrecision": "day",
-      "published": "2026-04-01T18:00:10.492136+00:00",
-      "blog": "Azure Updates",
-      "blogId": "azureupdates",
-      "announcementType": "",
+      "published": "2026-04-01T18:00:10+00:00",
+      "blog": "Azure Deprecations (aztty)",
+      "blogId": "azuredeprecations",
+      "announcementType": "deprecation",
       "sources": [
-        "Azure Deprecations (aztty)",
-        "Azure Updates"
+        "Azure Deprecations (aztty)"
       ],
       "sourceReports": [
-        {
-          "blog": "Azure Updates",
-          "blogId": "azureupdates",
-          "announcementType": "",
-          "link": "https://azure.microsoft.com/en-us/updates/557394/"
-        },
         {
           "blog": "Azure Deprecations (aztty)",
           "blogId": "azuredeprecations",
@@ -4528,7 +4476,7 @@
           "link": "https://azure.microsoft.com/updates?id=557394"
         }
       ],
-      "sourceCount": 2
+      "sourceCount": 1
     },
     {
       "title": "Azure SQL Elastic query - Shard_Map_Manager mode",
@@ -4771,6 +4719,28 @@
       "sourceCount": 2
     },
     {
+      "title": "Select Azure AI Language Features",
+      "link": "https://azure.microsoft.com/en-us/updates/557394/",
+      "retirementDate": "2029-03-20",
+      "datePrecision": "day",
+      "published": "2026-04-01T18:00:10.492136+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
+      "sources": [
+        "Azure Updates"
+      ],
+      "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/557394/"
+        }
+      ],
+      "sourceCount": 1
+    },
+    {
       "title": "Azure Cosmos DB for PostgreSQL will retire on March 31, 2029",
       "link": "https://azure.microsoft.com/en-us/updates/556085/",
       "retirementDate": "2029-03-31",
@@ -4888,17 +4858,17 @@
     }
   ],
   "summaryPublishingDays": [
+    "2026-04-07",
+    "2026-04-06",
+    "2026-04-05",
     "2026-04-03",
     "2026-04-02",
-    "2026-04-01",
-    "2026-03-31",
-    "2026-03-30",
-    "2026-03-29"
+    "2026-04-01"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
   "summaryArticleCount": 15,
-  "summary": "- In preview:\n  • [Public Preview: Unlock Client-Side Configuration at Scale with Azure App Configuration and Azure Front Door](https://azure.microsoft.com/en-us/updates/537234/)\n  • [Public Preview: Azure NetApp Files storage with cool access enhancement](https://azure.microsoft.com/en-us/updates/559504/)\n  • [Public Preview: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures](https://azure.microsoft.com/en-us/updates/559695/)\n  • [Public Preview: Ephemeral OS Disk with full caching for VM/VMSS](https://azure.microsoft.com/en-us/updates/559322/)\n  • [Announcing Private Preview: Deploy Ansible Playbooks using Azure Policy via Machine Configuration](https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-private-preview-deploy-ansible-playbooks-using-azure/ba-p/4507848)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure Data Box enhances compliance with automatic Secure Erasure Certificates](https://azure.microsoft.com/en-us/updates/559772/)\n  • [Generally Available: Azure Data Box now supports Azure Files Provisioned v2](https://azure.microsoft.com/en-us/updates/559767/)\n  • [Generally Available: Azure DevOps March 2026 updates](https://azure.microsoft.com/en-us/updates/559660/)\n  • [Generally Available: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures](https://azure.microsoft.com/en-us/updates/492542/)\n  • [Generally Available: User delegation SAS for Azure Tables, Azure Files, and Azure Queues](https://azure.microsoft.com/en-us/updates/559535/)\n\n- Retiring:\n  • [Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/en-us/updates/558027/)\n  • [Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/en-us/updates/558276/)\n  • [Retirement: Service Fabric support for Windows Server 2022 ends on March 31, 2027 - upgrade to Windows Server 2025](https://azure.microsoft.com/en-us/updates/558247/)\n  • [Retirement: Service Fabric support for Windows Server 2019 ends on March 31, 2027 - upgrade to Windows Server 2025](https://azure.microsoft.com/en-us/updates/558246/)\n  • [Retirement: Select Azure AI Language Features](https://azure.microsoft.com/en-us/updates/557394/)\n\n- In development:\n  • none noted in selected window",
+  "summary": "- In preview:\n  • [Public Preview: Rule impact analysis on Azure Network Watcher](https://azure.microsoft.com/en-us/updates/559876/)\n  • [Public Preview: Unlock Client-Side Configuration at Scale with Azure App Configuration and Azure Front Door](https://azure.microsoft.com/en-us/updates/537234/)\n  • [Public Preview: Azure NetApp Files storage with cool access enhancement](https://azure.microsoft.com/en-us/updates/559504/)\n  • [Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904)\n  • [Announcing Public Preview for Essential Machine Management](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721)\n\n- Launched / Generally Available:\n  • [Generally Available: Disable HTTP proxy in AKS](https://azure.microsoft.com/en-us/updates/557857/)\n  • [Generally Available: Azure Functions now supports MCP resource triggers](https://azure.microsoft.com/en-us/updates/559981/)\n  • [Generally Available: Pod CIDR expansion in AKS](https://azure.microsoft.com/en-us/updates/557907/)\n  • [Generally Available: Network Security Perimeter for Azure Service Bus](https://azure.microsoft.com/en-us/updates/559899/)\n  • [Generally Available: Azure Data Box enhances compliance with automatic Secure Erasure Certificates](https://azure.microsoft.com/en-us/updates/559772/)\n\n- Retiring:\n  • [Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/en-us/updates/558027/)\n  • [Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/en-us/updates/558276/)\n  • [Retirement: Service Fabric support for Windows Server 2022 ends on March 31, 2027 - upgrade to Windows Server 2025](https://azure.microsoft.com/en-us/updates/558247/)\n  • [Retirement: Service Fabric support for Windows Server 2019 ends on March 31, 2027 - upgrade to Windows Server 2025](https://azure.microsoft.com/en-us/updates/558246/)\n  • [Retirement: Select Azure AI Language Features](https://azure.microsoft.com/en-us/updates/557394/)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 3rd April 2026",
     "url": "https://www.youtube.com/watch?v=x8ULC4uDQos",
