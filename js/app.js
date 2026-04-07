@@ -585,6 +585,12 @@
     return value;
   }
 
+  function retirementPrecisionRank(precision, retirementDate) {
+    if (precision === "day") return 2;
+    if (precision === "month") return 1;
+    return /^\d{4}-\d{2}-\d{2}$/.test(String(retirementDate || "").trim()) ? 2 : 0;
+  }
+
   function updateTopPanelsLayout() {
     if (!azureTopPanelsEl) return;
     var showRetirement =
@@ -610,7 +616,7 @@
     }
 
     var dedupedByClient = {};
-    var normalizedEvents = events
+    events
       .map(function (event) {
         var retirementDate = String(event.retirementDate || "").trim();
         var parsedDate = parseRetirementEventDate(retirementDate);
@@ -625,17 +631,29 @@
         };
       })
       .filter(function (event) { return Boolean(event.parsedDate); })
-      .filter(function (event) {
-        var key = toRetirementDedupeTitle(event.title) + "|" + event.retirementDate;
-        var existing = dedupedByClient[key];
+      .forEach(function (event) {
+        var familyKey = toRetirementDedupeTitle(event.title);
+        var existing = dedupedByClient[familyKey];
         if (!existing) {
-          dedupedByClient[key] = event;
-          return true;
+          dedupedByClient[familyKey] = event;
+          return;
         }
+
+        var existingRank = retirementPrecisionRank(existing.datePrecision, existing.retirementDate);
+        var incomingRank = retirementPrecisionRank(event.datePrecision, event.retirementDate);
+        if (incomingRank > existingRank) {
+          dedupedByClient[familyKey] = event;
+          return;
+        }
+
         if (!existing.link && event.link) {
           existing.link = event.link;
         }
-        return false;
+      });
+
+    var normalizedEvents = Object.keys(dedupedByClient)
+      .map(function (key) {
+        return dedupedByClient[key];
       })
       .sort(function (a, b) { return a.parsedDate - b.parsedDate; })
       .slice(0, 60);

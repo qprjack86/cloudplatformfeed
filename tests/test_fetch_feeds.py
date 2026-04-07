@@ -512,6 +512,26 @@ class RssGenerationTests(unittest.TestCase):
 
 
 class AzureUpdatesApiFallbackTests(unittest.TestCase):
+    def test_extract_azure_update_retirement_date_from_page_prefers_body_day(self):
+        html = (
+            "<html><body>"
+            "<h1>Retirement: Example service</h1>"
+            "<div>Azure Policy RETIREMENT April 2026</div>"
+            "<p>Starting April 30, 2026, this workaround will no longer be available.</p>"
+            "</body></html>"
+        )
+        response = mock.Mock()
+        response.text = html
+        response.raise_for_status = mock.Mock()
+
+        with mock.patch.object(fetch_feeds.HTTP_SESSION, "get", return_value=response) as get_mock:
+            value = fetch_feeds._extract_azure_update_retirement_date_from_page(
+                "https://azure.microsoft.com/en-us/updates/558102/"
+            )
+
+        self.assertEqual(value, "2026-04-30")
+        get_mock.assert_called_once()
+
     def test_parse_azure_update_item_extracts_metadata_and_date(self):
         item = {
             "id": "123456",
@@ -859,6 +879,56 @@ class RetirementCalendarTests(unittest.TestCase):
 
         self.assertEqual(len(events), 1)
         self.assertEqual(events[0]["retirementDate"], "2030-11")
+        self.assertEqual(events[0]["datePrecision"], "month")
+
+    def test_build_azure_retirement_calendar_prefers_day_precision_for_same_update(self):
+        articles = [
+            {
+                "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
+                "link": "https://azure.microsoft.com/updates?id=558102",
+                "published": "2026-03-04T21:15:02+00:00",
+                "blog": "Azure Deprecations (aztty)",
+                "blogId": "azuredeprecations",
+                "announcementType": "deprecation",
+                "azureRetirementDate": "2026-04",
+            },
+            {
+                "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
+                "link": "https://azure.microsoft.com/en-us/updates/558102/",
+                "published": "2026-03-04T21:15:02.275174+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "",
+                "azureRetirementDate": "2026-04-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["retirementDate"], "2026-04-30")
+        self.assertEqual(events[0]["datePrecision"], "day")
+        self.assertEqual(events[0]["blogId"], "azureupdates")
+
+    def test_build_azure_retirement_calendar_keeps_current_month_month_precision(self):
+        today = datetime.now(timezone.utc)
+        current_month = f"{today.year:04d}-{today.month:02d}"
+        articles = [
+            {
+                "title": "Retirement: Current month timeline",
+                "link": "https://example.com/current-month",
+                "published": today.isoformat(),
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": current_month,
+            }
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["retirementDate"], current_month)
         self.assertEqual(events[0]["datePrecision"], "month")
 
 

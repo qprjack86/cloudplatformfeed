@@ -786,6 +786,7 @@ def fetch_savill_video():
 
 
 AZURE_UPDATES_MAX_PAGES = 10
+AZURE_UPDATES_RETIREMENT_ENRICH_MAX = 20
 RETIREMENT_MONTH_PATTERN = (
     r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|"
     r"Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?"
@@ -833,6 +834,109 @@ RETIREMENT_MONTH_TO_INT = {
     "nov": 11,
     "dec": 12,
 }
+
+
+def _retirement_date_precision(value):
+    """Return normalized precision label for serialized retirement dates."""
+    raw = str(value or "").strip()
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", raw):
+        return "day"
+    if re.match(r"^\d{4}-\d{2}$", raw):
+        return "month"
+    return None
+
+
+def _is_retirement_date_future(value, today=None):
+    """Return True when a retirement date is in the current/future window."""
+    precision = _retirement_date_precision(value)
+    if not precision:
+        return False
+
+    reference = today or datetime.now(timezone.utc).date()
+    raw = str(value or "").strip()
+    if precision == "month":
+        year, month = raw.split("-")
+        return (int(year), int(month)) >= (reference.year, reference.month)
+
+    sort_dt = _parse_retirement_calendar_sort_date(raw)
+    return bool(sort_dt and sort_dt.date() >= reference)
+
+
+def _extract_azure_update_id_from_url(url):
+    """Extract Azure Updates numeric ID from canonical or id= query URL variants."""
+    raw = str(url or "").strip()
+    if not raw:
+        return ""
+    id_match = re.search(r"/updates/(\d+)(?:/|$)", raw)
+    if id_match:
+        return id_match.group(1)
+    query_match = re.search(r"[?&]id=(\d+)\b", raw)
+    if query_match:
+        return query_match.group(1)
+    return ""
+
+
+def _extract_azure_update_retirement_date_from_page(url):
+    """Fetch an Azure update page and extract retirement date from full page text."""
+    raw = str(url or "").strip()
+    if not raw:
+        return None
+
+    parsed = urlsplit(raw)
+    host = normalize_host(parsed.hostname)
+    if parsed.scheme != "https" or host != "azure.microsoft.com":
+        return None
+    if "/updates" not in (parsed.path or ""):
+        return None
+
+    response = HTTP_SESSION.get(raw, timeout=FEED_REQUEST_TIMEOUT)
+    response.raise_for_status()
+    page_text = clean_html(response.text)
+    return _extract_azure_retirement_date("", page_text)
+
+
+def _retirement_date_rank_key(value):
+    """Rank retirement dates so day precision is preferred over month precision."""
+    precision = _retirement_date_precision(value)
+    sort_dt = _parse_retirement_calendar_sort_date(value)
+    return (
+        1 if precision == "day" else 0,
+        sort_dt or datetime.min.replace(tzinfo=timezone.utc),
+    )
+
+
+def _prefer_retirement_date(candidate_value, current_value):
+    """Return True when candidate retirement date should replace current value."""
+    if not candidate_value:
+        return False
+    if not current_value:
+        return True
+    return _retirement_date_rank_key(candidate_value) > _retirement_date_rank_key(current_value)
+
+
+def _retirement_event_rank_key(event):
+    """Rank merged retirement events by precision/source quality."""
+    retirement_date = event.get("retirementDate", "")
+    precision = event.get("datePrecision") or _retirement_date_precision(retirement_date)
+    sort_dt = _parse_retirement_calendar_sort_date(retirement_date)
+    published_dt = parse_iso_datetime(event.get("published", ""))
+    return (
+        1 if precision == "day" else 0,
+        1 if event.get("blogId") == "azureupdates" else 0,
+        sort_dt or datetime.min.replace(tzinfo=timezone.utc),
+        published_dt or datetime.min.replace(tzinfo=timezone.utc),
+    )
+
+
+def _azure_retirement_identity_key(title, link):
+    """Build a cross-source identity key so day/month variants collapse together."""
+    normalized_title = _normalize_calendar_title_for_dedupe(title)
+    if normalized_title:
+        return f"title:{normalized_title}"
+    update_id = _extract_azure_update_id_from_url(link)
+    if update_id:
+        return f"update-id:{update_id}"
+    return ""
 
 
 def _classify_azure_update_lifecycle(status_raw, title_raw):
@@ -1037,6 +1141,7 @@ def fetch_azure_updates_via_api():
     print("Fetching: Azure Updates API...")
     articles = []
     cutoff_dt = datetime.now(timezone.utc) - timedelta(days=30)
+    enrich_budget = AZURE_UPDATES_RETIREMENT_ENRICH_MAX
     url = AZURE_UPDATES_API + "?$orderby=created%20desc"
     page = 0
 
@@ -1057,6 +1162,31 @@ def fetch_azure_updates_via_api():
             article = _parse_azure_update_item(item)
             if not article:
                 continue
+
+            if (
+                enrich_budget > 0
+                and article.get("lifecycle") == "retiring"
+                and "azureTargetDate" not in article
+                and article.get("blogId") == "azureupdates"
+            ):
+                current_retirement_date = article.get("azureRetirementDate", "")
+                current_precision = _retirement_date_precision(current_retirement_date)
+                if current_precision in (None, "month"):
+                    try:
+                        enriched_retirement_date = _extract_azure_update_retirement_date_from_page(
+                            article.get("link", "")
+                        )
+                    except (
+                        requests.exceptions.RequestException,
+                        ValueError,
+                        TypeError,
+                        RuntimeError,
+                    ):
+                        enriched_retirement_date = None
+                    if _prefer_retirement_date(enriched_retirement_date, current_retirement_date):
+                        article["azureRetirementDate"] = enriched_retirement_date
+                    enrich_budget -= 1
+
             published_dt = parse_iso_datetime(article.get("published"))
             if not published_dt:
                 continue
@@ -1270,17 +1400,14 @@ def build_azure_retirement_calendar(articles, max_items=120):
         if not sort_dt:
             continue
 
-        if sort_dt.date() < today:
+        if not _is_retirement_date_future(retirement_date, today=today):
             continue
 
         title = article.get("title", "Untitled")
         link = article.get("link", "")
-        dedupe_key = (
-            _normalize_calendar_title_for_dedupe(title),
-            retirement_date,
-        )
-        if not dedupe_key[0]:
-            dedupe_key = (_normalize_for_match(title), retirement_date)
+        dedupe_key = _azure_retirement_identity_key(title, link)
+        if dedupe_key.endswith(":"):
+            dedupe_key = f"fallback:{_normalize_for_match(title)}"
 
         precision = "day" if re.match(r"^\d{4}-\d{2}-\d{2}$", retirement_date) else "month"
         source_label = article.get("blog", "") or article.get("blogId", "") or "Source"
@@ -1296,6 +1423,27 @@ def build_azure_retirement_calendar(articles, max_items=120):
             existing["sourceReports"].append(source_report)
             if article.get("published", "") > existing.get("published", ""):
                 existing["published"] = article.get("published", "")
+
+            replacement = {
+                "title": _display_calendar_title(title),
+                "link": link,
+                "retirementDate": retirement_date,
+                "datePrecision": precision,
+                "published": article.get("published", ""),
+                "blog": article.get("blog", ""),
+                "blogId": article.get("blogId", ""),
+                "announcementType": article.get("announcementType", ""),
+            }
+            if _retirement_event_rank_key(replacement) > _retirement_event_rank_key(existing):
+                existing["title"] = replacement["title"]
+                existing["link"] = replacement["link"] or existing.get("link", "")
+                existing["retirementDate"] = replacement["retirementDate"]
+                existing["datePrecision"] = replacement["datePrecision"]
+                existing["published"] = replacement["published"]
+                existing["blog"] = replacement["blog"]
+                existing["blogId"] = replacement["blogId"]
+                existing["announcementType"] = replacement["announcementType"]
+
             if existing.get("blogId") != "azureupdates" and article.get("blogId") == "azureupdates":
                 existing["blog"] = article.get("blog", "")
                 existing["blogId"] = article.get("blogId", "")
