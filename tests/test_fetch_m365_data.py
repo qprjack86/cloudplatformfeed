@@ -347,6 +347,36 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         article = fetch_m365_data.build_article_from_m365_item(item)
         self.assertEqual(article["published"], "2026-03-18T00:00:00.000Z")
 
+    def test_extracts_explicit_retirement_date_from_text(self):
+        item = {
+            "id": "MC200001",
+            "title": "Upcoming change: Retirement of feature X on July 31, 2026",
+            "source": "message_center",
+            "publishedDate": "2026-03-19T04:39:14.000Z",
+            "service": ["Microsoft Teams"],
+            "description": "We are retiring feature X on July 31, 2026.",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertEqual(article["m365RetirementDate"], "2026-07-31")
+        self.assertEqual(article["m365RetirementDatePrecision"], "day")
+        self.assertEqual(article["lifecycle"], "retiring")
+
+    def test_does_not_infer_retirement_date_from_target_date_only(self):
+        item = {
+            "id": "MC200002",
+            "title": "Feature rollout update",
+            "source": "message_center",
+            "publishedDate": "2026-03-19T04:39:14.000Z",
+            "service": ["Microsoft Teams"],
+            "targetDate": "July 2026",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertIsNone(article["m365RetirementDate"])
+
 
 class CategorizeByProductTests(unittest.TestCase):
     """Test M365 product categorization."""
@@ -439,6 +469,36 @@ class BuildM365FeedTests(unittest.TestCase):
 
         feed = fetch_m365_data.build_m365_feed(raw_items, m365_video)
         self.assertEqual(feed.get("m365Video"), m365_video)
+
+    def test_outputs_m365_retirement_calendar_and_buckets(self):
+        raw_items = [
+            {
+                "id": "MC3001",
+                "title": "Retirement: capability A retires on June 30, 2026",
+                "description": "This capability will retire on June 30, 2026.",
+                "source": "message_center",
+                "publishedDate": "2026-03-20T00:00:00.000Z",
+                "service": ["Microsoft Teams"],
+                "url": "https://deltapulse.app/item/MC3001",
+            },
+            {
+                "id": "MC3002",
+                "title": "Deprecation: capability B retires in October 2026",
+                "description": "Capability B retirement is planned for October 2026.",
+                "source": "message_center",
+                "publishedDate": "2026-03-20T00:00:00.000Z",
+                "service": ["SharePoint Online"],
+                "url": "https://deltapulse.app/item/MC3002",
+            },
+        ]
+
+        feed = fetch_m365_data.build_m365_feed(raw_items)
+
+        self.assertIn("m365RetirementCalendar", feed)
+        self.assertIn("m365RetirementBuckets", feed)
+        self.assertEqual(len(feed["m365RetirementCalendar"]), 2)
+        self.assertIn("windows", feed["m365RetirementBuckets"])
+        self.assertGreaterEqual(feed["m365RetirementBuckets"]["windows"]["0_3_months"]["count"], 1)
     
     def test_does_not_trigger_without_baseline(self):
         """Failsafe should not trigger if no baseline."""

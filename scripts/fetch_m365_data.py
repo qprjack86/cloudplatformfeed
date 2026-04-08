@@ -99,6 +99,54 @@ M365_PRODUCT_CATEGORIES = {
     }
 }
 
+RETIREMENT_MONTH_PATTERN = (
+    r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|"
+    r"Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?"
+)
+RETIREMENT_CONTEXT_PATTERN = re.compile(
+    r"retir|will end|end of support|end-of-support|end of life|eol|deprecated|deprecat|sunset|stop supporting",
+    re.IGNORECASE,
+)
+RETIREMENT_DATE_PATTERNS = (
+    (
+        re.compile(
+            rf"\b(?P<month>{RETIREMENT_MONTH_PATTERN})\s+"
+            r"(?P<day>\d{1,2})(?:st|nd|rd|th)?\s*,?\s*(?P<year>\d{4})\b",
+            re.IGNORECASE,
+        ),
+        "day",
+    ),
+    (
+        re.compile(
+            rf"\b(?P<day>\d{{1,2}})(?:st|nd|rd|th)?\s+"
+            rf"(?P<month>{RETIREMENT_MONTH_PATTERN})\s+(?P<year>\d{{4}})\b",
+            re.IGNORECASE,
+        ),
+        "day",
+    ),
+    (
+        re.compile(
+            rf"\b(?P<month>{RETIREMENT_MONTH_PATTERN})\s+(?P<year>\d{{4}})\b",
+            re.IGNORECASE,
+        ),
+        "month",
+    ),
+)
+RETIREMENT_MONTH_TO_INT = {
+    "jan": 1,
+    "feb": 2,
+    "mar": 3,
+    "apr": 4,
+    "may": 5,
+    "jun": 6,
+    "jul": 7,
+    "aug": 8,
+    "sep": 9,
+    "oct": 10,
+    "nov": 11,
+    "dec": 12,
+}
+
 
 def load_site_config(path=SITE_CONFIG_PATH):
     """Load canonical site config (same as Azure feed for consistency)."""
@@ -368,8 +416,279 @@ def normalize_url(url: str) -> str:
     )
 
 
+def _normalize_retirement_title(title: str) -> str:
+    """Normalize retirement titles for stable cross-item dedupe."""
+    value = _normalise_whitespace(title)
+    value = re.sub(r"^\s*(retirement|deprecation|update)\s*:\s*", "", value, flags=re.IGNORECASE)
+    value = re.sub(r"[^\w\s]", " ", value)
+    return re.sub(r"\s+", " ", value).strip().lower()
+
+
+def _m365_retirement_date_precision(value: str) -> str | None:
+    raw = str(value or "").strip()
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", raw):
+        return "day"
+    if re.match(r"^\d{4}-\d{2}$", raw):
+        return "month"
+    return None
+
+
+def _parse_retirement_calendar_sort_date(value: str):
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    day_match = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", raw)
+    if day_match:
+        return datetime(
+            int(day_match.group(1)),
+            int(day_match.group(2)),
+            int(day_match.group(3)),
+            tzinfo=timezone.utc,
+        )
+    month_match = re.match(r"^(\d{4})-(\d{2})$", raw)
+    if month_match:
+        return datetime(
+            int(month_match.group(1)),
+            int(month_match.group(2)),
+            1,
+            tzinfo=timezone.utc,
+        )
+    return None
+
+
+def _is_retirement_date_future(value: str, today=None) -> bool:
+    precision = _m365_retirement_date_precision(value)
+    if not precision:
+        return False
+
+    reference = today or datetime.now(timezone.utc).date()
+    raw = str(value or "").strip()
+    if precision == "month":
+        year, month = raw.split("-")
+        return (int(year), int(month)) >= (reference.year, reference.month)
+
+    sort_dt = _parse_retirement_calendar_sort_date(raw)
+    return bool(sort_dt and sort_dt.date() >= reference)
+
+
+def _normalize_retirement_date_candidate(match: re.Match[str], precision: str):
+    groups = match.groupdict()
+    month = RETIREMENT_MONTH_TO_INT.get((groups.get("month") or "")[:3].lower())
+    if not month:
+        return None
+
+    try:
+        year = int(groups.get("year", "0"))
+    except ValueError:
+        return None
+
+    if precision == "day":
+        try:
+            day = int(groups.get("day", "0"))
+            datetime(year, month, day)
+        except (TypeError, ValueError):
+            return None
+        value = f"{year:04d}-{month:02d}-{day:02d}"
+    else:
+        value = f"{year:04d}-{month:02d}"
+
+    return {
+        "value": value,
+        "precision": precision,
+        "sortDate": _parse_retirement_calendar_sort_date(value),
+    }
+
+
+def _extract_m365_retirement_date(title_raw: str, summary_raw: str):
+    """Extract explicit retirement/deprecation date from title or summary text."""
+    now_date = datetime.now(timezone.utc).date()
+    sources = (("title", title_raw), ("summary", summary_raw))
+    candidates = []
+
+    for source_name, text in sources:
+        cleaned = _normalise_whitespace(text)
+        if not cleaned:
+            continue
+        if not RETIREMENT_CONTEXT_PATTERN.search(cleaned):
+            continue
+
+        for pattern, precision in RETIREMENT_DATE_PATTERNS:
+            for match in pattern.finditer(cleaned):
+                candidate = _normalize_retirement_date_candidate(match, precision)
+                if not candidate:
+                    continue
+
+                if not _is_retirement_date_future(candidate["value"], today=now_date):
+                    continue
+
+                context_start = max(0, match.start() - 100)
+                context_end = min(len(cleaned), match.end() + 100)
+                context = cleaned[context_start:context_end]
+                if not RETIREMENT_CONTEXT_PATTERN.search(context):
+                    continue
+
+                candidates.append(
+                    (
+                        1 if source_name == "title" else 0,
+                        1 if candidate["precision"] == "day" else 0,
+                        candidate["sortDate"] or datetime.min.replace(tzinfo=timezone.utc),
+                        candidate["value"],
+                    )
+                )
+
+    if not candidates:
+        return None
+    candidates.sort(reverse=True)
+    return candidates[0][3]
+
+
+def build_m365_retirement_calendar(articles: list, max_items: int = 120):
+    """Build a deduplicated, date-sorted M365 retirement calendar from explicit dates."""
+    today = datetime.now(timezone.utc).date()
+    events_by_key = {}
+
+    for article in articles:
+        retirement_date = str(article.get("m365RetirementDate") or "").strip()
+        if not retirement_date:
+            retirement_date = _extract_m365_retirement_date(
+                article.get("title", ""),
+                article.get("summary", ""),
+            ) or ""
+        if not retirement_date:
+            continue
+
+        sort_dt = _parse_retirement_calendar_sort_date(retirement_date)
+        if not sort_dt:
+            continue
+        if not _is_retirement_date_future(retirement_date, today=today):
+            continue
+
+        title = _normalise_whitespace(article.get("title") or "") or "Untitled retirement notice"
+        dedupe_key = _normalize_retirement_title(title) or f"id:{article.get('m365Id', '')}"
+        source_label = article.get("m365Service") or "Microsoft 365"
+        precision = _m365_retirement_date_precision(retirement_date) or "month"
+
+        event = {
+            "title": re.sub(r"^\s*(retirement|deprecation|update)\s*:\s*", "", title, flags=re.IGNORECASE).strip() or title,
+            "link": article.get("link", ""),
+            "retirementDate": retirement_date,
+            "datePrecision": precision,
+            "published": article.get("published", ""),
+            "blog": source_label,
+            "blogId": "m365",
+            "announcementType": "retirement",
+            "sources": [source_label] if source_label else [],
+            "sourceCount": 1,
+        }
+
+        existing = events_by_key.get(dedupe_key)
+        if not existing:
+            events_by_key[dedupe_key] = event
+            continue
+
+        existing_rank = (
+            1 if existing.get("datePrecision") == "day" else 0,
+            _parse_retirement_calendar_sort_date(existing.get("retirementDate", ""))
+            or datetime.min.replace(tzinfo=timezone.utc),
+        )
+        incoming_rank = (
+            1 if precision == "day" else 0,
+            sort_dt,
+        )
+        if incoming_rank > existing_rank:
+            events_by_key[dedupe_key] = event
+            existing = events_by_key[dedupe_key]
+
+        combined_sources = sorted(
+            {
+                src
+                for src in (existing.get("sources", []) + ([source_label] if source_label else []))
+                if src
+            }
+        )
+        existing["sources"] = combined_sources
+        existing["sourceCount"] = len(combined_sources)
+        if not existing.get("link") and article.get("link"):
+            existing["link"] = article.get("link")
+
+    events = list(events_by_key.values())
+    events.sort(
+        key=lambda event: (
+            _parse_retirement_calendar_sort_date(event.get("retirementDate"))
+            or datetime.max.replace(tzinfo=timezone.utc),
+            event.get("title", "").lower(),
+        )
+    )
+    return events[:max_items]
+
+
+def build_retirement_window_buckets(events: list, today=None, preview_limit: int = 8):
+    """Build rolling retirement windows (0-3, 3-6, 6-9, 9-12 months)."""
+    reference = today or datetime.now(timezone.utc).date()
+    window_defs = (
+        ("0_3_months", 0, 3),
+        ("3_6_months", 3, 6),
+        ("6_9_months", 6, 9),
+        ("9_12_months", 9, 12),
+    )
+    buckets = {
+        key: {
+            "label": key.replace("_", "-"),
+            "startMonthOffset": start,
+            "endMonthOffset": end,
+            "count": 0,
+            "items": [],
+        }
+        for key, start, end in window_defs
+    }
+
+    for event in events or []:
+        retirement_date = event.get("retirementDate", "")
+        sort_dt = _parse_retirement_calendar_sort_date(retirement_date)
+        if not sort_dt:
+            continue
+
+        month_offset = (sort_dt.year - reference.year) * 12 + (sort_dt.month - reference.month)
+        if month_offset < 0:
+            continue
+
+        for key, start, end in window_defs:
+            if start <= month_offset < end:
+                bucket = buckets[key]
+                bucket["count"] += 1
+                if len(bucket["items"]) < preview_limit:
+                    bucket["items"].append(
+                        {
+                            "title": event.get("title", "Untitled"),
+                            "link": event.get("link", ""),
+                            "retirementDate": retirement_date,
+                            "datePrecision": event.get("datePrecision")
+                            or _m365_retirement_date_precision(retirement_date)
+                            or "month",
+                        }
+                    )
+                break
+
+    return {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "referenceMonth": f"{reference.year:04d}-{reference.month:02d}",
+        "windows": buckets,
+    }
+
+
 def classify_m365_lifecycle(item: dict) -> str:
     """Classify lifecycle status based on M365 source and status/severity."""
+    text_blob = " ".join(
+        [
+            str(item.get("title") or ""),
+            str(item.get("description") or ""),
+            str(item.get("summary") or ""),
+            str(item.get("status") or ""),
+        ]
+    )
+    if RETIREMENT_CONTEXT_PATTERN.search(text_blob):
+        return "retiring"
+
     source = item.get("source", "")
     
     if source == "roadmap":
@@ -412,8 +731,12 @@ def dedupe_m365_articles(articles: list, max_age_days: int = 30, major_change_ag
         if pub_date_str:
             try:
                 pub_date = datetime.fromisoformat(pub_date_str.replace("Z", "+00:00"))
-                age_cutoff = major_cutoff if article.get("m365IsMajorChange") else cutoff
-                if pub_date < age_cutoff:
+                retirement_date = article.get("m365RetirementDate")
+                if retirement_date and _is_retirement_date_future(retirement_date, today=now.date()):
+                    age_cutoff = None
+                else:
+                    age_cutoff = major_cutoff if article.get("m365IsMajorChange") else cutoff
+                if age_cutoff and pub_date < age_cutoff:
                     continue  # Skip stale items
             except (ValueError, AttributeError):
                 pass  # If unparseable, include it
@@ -470,10 +793,15 @@ def build_article_from_m365_item(item: dict) -> dict:
     services = item.get("service", [])
     main_service = services[0] if services else "Microsoft 365"
     
+    summary_raw = _first_non_empty(item, ("summary", "description", "message", "details"))
+    summary = _normalise_whitespace(summary_raw) if isinstance(summary_raw, str) else ""
+    retirement_date = _extract_m365_retirement_date(item.get("title", ""), summary)
+
     return {
         "title": item.get("title", ""),
         "link": resolve_m365_item_link(item),
         "published": _resolve_published_date(item),
+        "summary": summary,
         "source": "m365",
         "m365Service": main_service,
         "m365AllServices": services,
@@ -486,6 +814,8 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365PreviewDate": item.get("m365PreviewDate"),
         "m365GeneralAvailabilityDate": item.get("m365GeneralAvailabilityDate"),
         "m365IsMajorChange": item.get("isMajorChange", False),
+        "m365RetirementDate": retirement_date,
+        "m365RetirementDatePrecision": _m365_retirement_date_precision(retirement_date) if retirement_date else None,
         "lifecycle": classify_m365_lifecycle(item),
     }
 
@@ -782,6 +1112,9 @@ def build_m365_feed(raw_items: list, m365_video: dict = None) -> dict:
     by_lifecycle = {}
     for lifecycle in ["in_preview", "launched_ga", "in_development", "retiring"]:
         by_lifecycle[lifecycle] = [a for a in deduped if a.get("lifecycle") == lifecycle]
+
+    retirement_calendar = build_m365_retirement_calendar(deduped)
+    retirement_buckets = build_retirement_window_buckets(retirement_calendar)
     
     # Compute distinct publishing days for the summary date range.
     # Determine the strict 7-day calendar window backwards from the most recent article.
@@ -809,6 +1142,8 @@ def build_m365_feed(raw_items: list, m365_video: dict = None) -> dict:
         "articles": deduped,
         "byCategory": by_category,
         "byLifecycle": by_lifecycle,
+        "m365RetirementCalendar": retirement_calendar,
+        "m365RetirementBuckets": retirement_buckets,
         "m365Video": m365_video,
         "summaryPublishingDays": publishing_days,
         "source": "m365",

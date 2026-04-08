@@ -1486,6 +1486,60 @@ def build_azure_retirement_calendar(articles, max_items=120):
     return events[:max_items]
 
 
+def build_retirement_window_buckets(events, today=None, preview_limit=8):
+    """Build rolling retirement windows (0-3, 3-6, 6-9, 9-12 months)."""
+    reference = today or datetime.now(timezone.utc).date()
+    window_defs = (
+        ("0_3_months", 0, 3),
+        ("3_6_months", 3, 6),
+        ("6_9_months", 6, 9),
+        ("9_12_months", 9, 12),
+    )
+    buckets = {
+        key: {
+            "label": key.replace("_", "-"),
+            "startMonthOffset": start,
+            "endMonthOffset": end,
+            "count": 0,
+            "items": [],
+        }
+        for key, start, end in window_defs
+    }
+
+    for event in events or []:
+        retirement_date = event.get("retirementDate", "")
+        sort_dt = _parse_retirement_calendar_sort_date(retirement_date)
+        if not sort_dt:
+            continue
+
+        month_offset = (sort_dt.year - reference.year) * 12 + (sort_dt.month - reference.month)
+        if month_offset < 0:
+            continue
+
+        for key, start, end in window_defs:
+            if start <= month_offset < end:
+                bucket = buckets[key]
+                bucket["count"] += 1
+                if len(bucket["items"]) < preview_limit:
+                    bucket["items"].append(
+                        {
+                            "title": event.get("title", "Untitled"),
+                            "link": event.get("link", ""),
+                            "retirementDate": retirement_date,
+                            "datePrecision": event.get("datePrecision")
+                            or _retirement_date_precision(retirement_date)
+                            or "month",
+                        }
+                    )
+                break
+
+    return {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "referenceMonth": f"{reference.year:04d}-{reference.month:02d}",
+        "windows": buckets,
+    }
+
+
 def generate_rss_feed(articles):
     """Generate an RSS feed XML file from the aggregated articles."""
     doc = Document()
@@ -1783,6 +1837,7 @@ def main():
     # Remove duplicates and discard articles older than 30 days
     unique_articles = dedupe_articles(all_articles)
     retirement_calendar = build_azure_retirement_calendar(unique_articles)
+    retirement_buckets = build_retirement_window_buckets(retirement_calendar)
 
     discarded = len(all_articles) - len(unique_articles)
     if discarded:
@@ -1823,6 +1878,7 @@ def main():
         "articles": unique_articles,
         "summaryWindowDays": summary_payload.get("windowDays", SUMMARY_WINDOW_DAYS),
         "azureRetirementCalendar": retirement_calendar,
+        "azureRetirementBuckets": retirement_buckets,
     }
     if summary_payload.get("publishingDays"):
         data["summaryPublishingDays"] = summary_payload["publishingDays"]

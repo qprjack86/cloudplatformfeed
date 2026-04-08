@@ -931,6 +931,47 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(events[0]["retirementDate"], current_month)
         self.assertEqual(events[0]["datePrecision"], "month")
 
+    def test_build_retirement_window_buckets_assigns_rolling_windows(self):
+        events = [
+            {
+                "title": "Soon",
+                "retirementDate": "2026-05-15",
+                "datePrecision": "day",
+                "link": "https://example.com/soon",
+            },
+            {
+                "title": "Three to six",
+                "retirementDate": "2026-08",
+                "datePrecision": "month",
+                "link": "https://example.com/three-six",
+            },
+            {
+                "title": "Six to nine",
+                "retirementDate": "2026-11-10",
+                "datePrecision": "day",
+                "link": "https://example.com/six-nine",
+            },
+            {
+                "title": "Nine to twelve",
+                "retirementDate": "2027-03",
+                "datePrecision": "month",
+                "link": "https://example.com/nine-twelve",
+            },
+        ]
+
+        buckets = fetch_feeds.build_retirement_window_buckets(
+            events,
+            today=datetime(2026, 4, 8, tzinfo=timezone.utc).date(),
+        )
+
+        windows = buckets["windows"]
+        self.assertEqual(windows["0_3_months"]["count"], 1)
+        self.assertEqual(windows["3_6_months"]["count"], 1)
+        self.assertEqual(windows["6_9_months"]["count"], 1)
+        self.assertEqual(windows["9_12_months"]["count"], 1)
+        self.assertEqual(windows["3_6_months"]["items"][0]["retirementDate"], "2026-08")
+        self.assertEqual(windows["9_12_months"]["items"][0]["retirementDate"], "2027-03")
+
 
 class MainOutputSchemaTests(unittest.TestCase):
     def test_main_writes_azure_retirement_calendar(self):
@@ -980,6 +1021,7 @@ class MainOutputSchemaTests(unittest.TestCase):
 
         self.assertEqual(payload["totalArticles"], 1)
         self.assertIn("azureRetirementCalendar", payload)
+        self.assertIn("azureRetirementBuckets", payload)
         self.assertEqual(len(payload["azureRetirementCalendar"]), 1)
         self.assertEqual(
             payload["azureRetirementCalendar"][0]["retirementDate"],
@@ -989,6 +1031,7 @@ class MainOutputSchemaTests(unittest.TestCase):
             payload["azureRetirementCalendar"][0]["title"],
             "Example service retirement notice",
         )
+        self.assertIn("windows", payload["azureRetirementBuckets"])
 
 
 if __name__ == "__main__":

@@ -83,6 +83,7 @@
 
   var azureFeedData = null;
   var m365FeedData = null;
+  var retirementCalendarViewState = { azure: null, m365: null };
   
   // Tab buttons (M365 feature)
   var tabButtons = document.querySelectorAll(".tab-button");
@@ -591,25 +592,87 @@
     return /^\d{4}-\d{2}-\d{2}$/.test(String(retirementDate || "").trim()) ? 2 : 0;
   }
 
+  function startOfMonth(date) {
+    return new Date(date.getFullYear(), date.getMonth(), 1);
+  }
+
+  function monthOffsetFrom(referenceDate, targetDate) {
+    return (targetDate.getFullYear() - referenceDate.getFullYear()) * 12 + (targetDate.getMonth() - referenceDate.getMonth());
+  }
+
+  function clampMonthDate(date, minDate, maxDate) {
+    if (date < minDate) return new Date(minDate.getFullYear(), minDate.getMonth(), 1);
+    if (date > maxDate) return new Date(maxDate.getFullYear(), maxDate.getMonth(), 1);
+    return new Date(date.getFullYear(), date.getMonth(), 1);
+  }
+
+  function getRetirementCalendarPayload() {
+    if (currentSource === "m365") {
+      if (!m365FeedData) return { events: [], buckets: null, label: "Microsoft 365" };
+      return {
+        events: Array.isArray(m365FeedData.m365RetirementCalendar) ? m365FeedData.m365RetirementCalendar : [],
+        buckets: m365FeedData.m365RetirementBuckets || null,
+        label: "Microsoft 365"
+      };
+    }
+
+    if (!azureFeedData) return { events: [], buckets: null, label: "Azure" };
+    return {
+      events: Array.isArray(azureFeedData.azureRetirementCalendar) ? azureFeedData.azureRetirementCalendar : [],
+      buckets: azureFeedData.azureRetirementBuckets || null,
+      label: "Azure"
+    };
+  }
+
+  function buildRetirementWindowCounts(events, bucketPayload) {
+    var keys = ["0_3_months", "3_6_months", "6_9_months", "9_12_months"];
+    var labels = {
+      "0_3_months": "0-3m",
+      "3_6_months": "3-6m",
+      "6_9_months": "6-9m",
+      "9_12_months": "9-12m"
+    };
+
+    var countsByKey = {
+      "0_3_months": 0,
+      "3_6_months": 0,
+      "6_9_months": 0,
+      "9_12_months": 0
+    };
+
+    var windows = bucketPayload && bucketPayload.windows ? bucketPayload.windows : null;
+    if (windows) {
+      keys.forEach(function (key) {
+        var bucket = windows[key] || {};
+        countsByKey[key] = Number(bucket.count || 0);
+      });
+    } else {
+      var reference = startOfMonth(new Date());
+      events.forEach(function (event) {
+        var offset = monthOffsetFrom(reference, event.parsedDate);
+        if (offset < 0) return;
+        if (offset < 3) countsByKey["0_3_months"] += 1;
+        else if (offset < 6) countsByKey["3_6_months"] += 1;
+        else if (offset < 9) countsByKey["6_9_months"] += 1;
+        else if (offset < 12) countsByKey["9_12_months"] += 1;
+      });
+    }
+
+    return keys.map(function (key) {
+      return { key: key, label: labels[key], count: countsByKey[key] };
+    });
+  }
+
   function updateTopPanelsLayout() {
     if (!azureTopPanelsEl) return;
-    var showRetirement =
-      currentSource === "azure" &&
-      retirementCalendarEl &&
-      !retirementCalendarEl.classList.contains("is-hidden");
+    var showRetirement = retirementCalendarEl && !retirementCalendarEl.classList.contains("is-hidden");
     azureTopPanelsEl.classList.toggle("split-view", showRetirement);
   }
 
   function renderRetirementCalendarPanel() {
     if (!retirementCalendarEl) return;
-    if (currentSource !== "azure" || !azureFeedData) {
-      hideElement(retirementCalendarEl);
-      return;
-    }
-
-    var events = Array.isArray(azureFeedData.azureRetirementCalendar)
-      ? azureFeedData.azureRetirementCalendar
-      : [];
+    var payload = getRetirementCalendarPayload();
+    var events = payload.events;
     if (!events.length) {
       hideElement(retirementCalendarEl);
       return;
@@ -663,12 +726,18 @@
       return;
     }
 
-    var today = new Date();
-    var currentMonthStart = new Date(today.getFullYear(), today.getMonth(), 1);
-    var earliest = normalizedEvents[0].parsedDate;
-    var anchorMonth = earliest > currentMonthStart
-      ? new Date(earliest.getFullYear(), earliest.getMonth(), 1)
-      : currentMonthStart;
+    var sourceKey = currentSource === "m365" ? "m365" : "azure";
+    var currentMonthStart = startOfMonth(new Date());
+    var earliestMonth = startOfMonth(normalizedEvents[0].parsedDate);
+    var latestMonth = startOfMonth(normalizedEvents[normalizedEvents.length - 1].parsedDate);
+
+    var initialAnchor = earliestMonth > currentMonthStart ? earliestMonth : currentMonthStart;
+    var storedAnchor = retirementCalendarViewState[sourceKey];
+    var anchorCandidate = storedAnchor ? parseRetirementEventDate(storedAnchor) : null;
+    var anchorMonth = anchorCandidate ? startOfMonth(anchorCandidate) : initialAnchor;
+    anchorMonth = clampMonthDate(anchorMonth, earliestMonth, latestMonth);
+    retirementCalendarViewState[sourceKey] =
+      anchorMonth.getFullYear() + "-" + String(anchorMonth.getMonth() + 1).padStart(2, "0");
 
     var monthEvents = normalizedEvents.filter(function (event) {
       return (
@@ -723,11 +792,48 @@
       return "<li>" + label + "</li>";
     }).join("");
 
+    var windowCounts = buildRetirementWindowCounts(normalizedEvents, payload.buckets);
+    var monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    var monthOptions = monthNames.map(function (name, idx) {
+      var selected = idx === anchorMonth.getMonth() ? ' selected="selected"' : "";
+      return '<option value="' + idx + '"' + selected + '>' + escapeHtml(name) + "</option>";
+    }).join("");
+
+    var yearOptions = [];
+    for (var year = earliestMonth.getFullYear(); year <= latestMonth.getFullYear(); year++) {
+      var selectedYear = year === anchorMonth.getFullYear() ? ' selected="selected"' : "";
+      yearOptions.push('<option value="' + year + '"' + selectedYear + '>' + year + "</option>");
+    }
+
+    var prevMonth = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() - 1, 1);
+    var nextMonth = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1);
+    var disablePrev = prevMonth < earliestMonth ? ' disabled="disabled"' : "";
+    var disableNext = nextMonth > latestMonth ? ' disabled="disabled"' : "";
+
+    var chipsHtml = windowCounts.map(function (window) {
+      return (
+        '<span class="retirement-window-chip" data-window="' + window.key + '">' +
+          '<span class="retirement-window-label">' + escapeHtml(window.label) + '</span>' +
+          '<span class="retirement-window-count">' + window.count + '</span>' +
+        "</span>"
+      );
+    }).join("");
+
     retirementCalendarEl.innerHTML =
       '<div class="retirement-mini-header">' +
         "<h2>🗓️ Retirement Calendar</h2>" +
-        "<p>" + escapeHtml(formatLocalDate(anchorMonth, { month: "long", year: "numeric" })) + "</p>" +
+        "<p>" + escapeHtml(payload.label) + " · " + escapeHtml(formatLocalDate(anchorMonth, { month: "long", year: "numeric" })) + "</p>" +
       "</div>" +
+      '<div class="retirement-mini-controls">' +
+        '<button type="button" class="retirement-mini-nav-btn" data-retirement-nav="prev" aria-label="Previous month"' + disablePrev + '>◀</button>' +
+        '<label class="retirement-mini-select-wrap"><span class="sr-only">Month</span><select data-retirement-select="month">' + monthOptions + "</select></label>" +
+        '<label class="retirement-mini-select-wrap"><span class="sr-only">Year</span><select data-retirement-select="year">' + yearOptions.join("") + "</select></label>" +
+        '<button type="button" class="retirement-mini-nav-btn" data-retirement-nav="next" aria-label="Next month"' + disableNext + '>▶</button>' +
+      "</div>" +
+      '<div class="retirement-window-chips">' + chipsHtml + "</div>" +
       '<div class="retirement-mini-weekdays"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>' +
       '<div class="retirement-mini-grid">' + dayCells.join("") + "</div>" +
       (nextItemsHtml
@@ -736,6 +842,43 @@
       (monthOnlyHtml
         ? '<div class="retirement-mini-list month-only"><h3>Month-level notices</h3><ul>' + monthOnlyHtml + "</ul></div>"
         : "");
+
+    var monthSelect = retirementCalendarEl.querySelector('[data-retirement-select="month"]');
+    var yearSelect = retirementCalendarEl.querySelector('[data-retirement-select="year"]');
+    var prevBtn = retirementCalendarEl.querySelector('[data-retirement-nav="prev"]');
+    var nextBtn = retirementCalendarEl.querySelector('[data-retirement-nav="next"]');
+
+    function updateAnchor(newMonthDate) {
+      var clamped = clampMonthDate(startOfMonth(newMonthDate), earliestMonth, latestMonth);
+      retirementCalendarViewState[sourceKey] =
+        clamped.getFullYear() + "-" + String(clamped.getMonth() + 1).padStart(2, "0");
+      renderRetirementCalendarPanel();
+      updateTopPanelsLayout();
+    }
+
+    if (monthSelect && yearSelect) {
+      monthSelect.addEventListener("change", function () {
+        var target = new Date(Number(yearSelect.value), Number(monthSelect.value), 1);
+        updateAnchor(target);
+      });
+      yearSelect.addEventListener("change", function () {
+        var target = new Date(Number(yearSelect.value), Number(monthSelect.value), 1);
+        updateAnchor(target);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        updateAnchor(new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() - 1, 1));
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        updateAnchor(new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1));
+      });
+    }
+
     showElement(retirementCalendarEl);
   }
 
