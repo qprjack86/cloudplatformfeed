@@ -596,10 +596,6 @@
     return new Date(date.getFullYear(), date.getMonth(), 1);
   }
 
-  function monthOffsetFrom(referenceDate, targetDate) {
-    return (targetDate.getFullYear() - referenceDate.getFullYear()) * 12 + (targetDate.getMonth() - referenceDate.getMonth());
-  }
-
   function clampMonthDate(date, minDate, maxDate) {
     if (date < minDate) return new Date(minDate.getFullYear(), minDate.getMonth(), 1);
     if (date > maxDate) return new Date(maxDate.getFullYear(), maxDate.getMonth(), 1);
@@ -608,60 +604,20 @@
 
   function getRetirementCalendarPayload() {
     if (currentSource === "m365") {
-      if (!m365FeedData) return { events: [], buckets: null, label: "Microsoft 365" };
+      if (!m365FeedData) return { events: [], label: "Microsoft 365" };
       return {
         events: Array.isArray(m365FeedData.m365RetirementCalendar) ? m365FeedData.m365RetirementCalendar : [],
-        buckets: m365FeedData.m365RetirementBuckets || null,
         label: "Microsoft 365"
       };
     }
 
-    if (!azureFeedData) return { events: [], buckets: null, label: "Azure" };
+    if (!azureFeedData) return { events: [], label: "Azure" };
     return {
       events: Array.isArray(azureFeedData.azureRetirementCalendar) ? azureFeedData.azureRetirementCalendar : [],
-      buckets: azureFeedData.azureRetirementBuckets || null,
       label: "Azure"
     };
   }
 
-  function buildRetirementWindowCounts(events, bucketPayload) {
-    var keys = ["0_3_months", "3_6_months", "6_9_months", "9_12_months"];
-    var labels = {
-      "0_3_months": "0-3m",
-      "3_6_months": "3-6m",
-      "6_9_months": "6-9m",
-      "9_12_months": "9-12m"
-    };
-
-    var countsByKey = {
-      "0_3_months": 0,
-      "3_6_months": 0,
-      "6_9_months": 0,
-      "9_12_months": 0
-    };
-
-    var windows = bucketPayload && bucketPayload.windows ? bucketPayload.windows : null;
-    if (windows) {
-      keys.forEach(function (key) {
-        var bucket = windows[key] || {};
-        countsByKey[key] = Number(bucket.count || 0);
-      });
-    } else {
-      var reference = startOfMonth(new Date());
-      events.forEach(function (event) {
-        var offset = monthOffsetFrom(reference, event.parsedDate);
-        if (offset < 0) return;
-        if (offset < 3) countsByKey["0_3_months"] += 1;
-        else if (offset < 6) countsByKey["3_6_months"] += 1;
-        else if (offset < 9) countsByKey["6_9_months"] += 1;
-        else if (offset < 12) countsByKey["9_12_months"] += 1;
-      });
-    }
-
-    return keys.map(function (key) {
-      return { key: key, label: labels[key], count: countsByKey[key] };
-    });
-  }
 
   function updateTopPanelsLayout() {
     if (!azureTopPanelsEl) return;
@@ -746,11 +702,9 @@
       );
     });
     var dayCounts = {};
-    var monthOnlyEvents = [];
     monthEvents.forEach(function (event) {
       if (event.datePrecision === "month") {
-        monthOnlyEvents.push(event);
-        return;
+        return; // month-only precision: no specific day to mark on the grid
       }
       var day = event.parsedDate.getDate();
       dayCounts[day] = (dayCounts[day] || 0) + 1;
@@ -772,7 +726,7 @@
       );
     }
 
-    var nextItemsHtml = normalizedEvents.slice(0, 4).map(function (entry) {
+    var monthItemsHtml = monthEvents.map(function (entry) {
       var dateLabel = formatRetirementCalendarDate(entry.retirementDate, entry.datePrecision);
       var sourceHint = entry.sourceCount > 1
         ? " · " + entry.sourceCount + " sources"
@@ -784,15 +738,6 @@
       return "<li>" + content + "</li>";
     }).join("");
 
-    var monthOnlyHtml = monthOnlyEvents.slice(0, 3).map(function (entry) {
-      var label = escapeHtml(entry.title || "Untitled retirement notice");
-      if (entry.link) {
-        return '<li><a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' + label + "</a></li>";
-      }
-      return "<li>" + label + "</li>";
-    }).join("");
-
-    var windowCounts = buildRetirementWindowCounts(normalizedEvents, payload.buckets);
     var monthNames = [
       "January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
@@ -813,15 +758,6 @@
     var disablePrev = prevMonth < earliestMonth ? ' disabled="disabled"' : "";
     var disableNext = nextMonth > latestMonth ? ' disabled="disabled"' : "";
 
-    var chipsHtml = windowCounts.map(function (window) {
-      return (
-        '<span class="retirement-window-chip" data-window="' + window.key + '">' +
-          '<span class="retirement-window-label">' + escapeHtml(window.label) + '</span>' +
-          '<span class="retirement-window-count">' + window.count + '</span>' +
-        "</span>"
-      );
-    }).join("");
-
     retirementCalendarEl.innerHTML =
       '<div class="retirement-mini-header">' +
         "<h2>🗓️ Retirement Calendar</h2>" +
@@ -833,14 +769,10 @@
         '<label class="retirement-mini-select-wrap"><span class="sr-only">Year</span><select data-retirement-select="year">' + yearOptions.join("") + "</select></label>" +
         '<button type="button" class="retirement-mini-nav-btn" data-retirement-nav="next" aria-label="Next month"' + disableNext + '>▶</button>' +
       "</div>" +
-      '<div class="retirement-window-chips">' + chipsHtml + "</div>" +
       '<div class="retirement-mini-weekdays"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>' +
       '<div class="retirement-mini-grid">' + dayCells.join("") + "</div>" +
-      (nextItemsHtml
-        ? '<div class="retirement-mini-list"><h3>Next retirements</h3><ul>' + nextItemsHtml + "</ul></div>"
-        : "") +
-      (monthOnlyHtml
-        ? '<div class="retirement-mini-list month-only"><h3>Month-level notices</h3><ul>' + monthOnlyHtml + "</ul></div>"
+      (monthItemsHtml
+        ? '<div class="retirement-mini-list"><h3>Retiring this month</h3><ul>' + monthItemsHtml + "</ul></div>"
         : "");
 
     var monthSelect = retirementCalendarEl.querySelector('[data-retirement-select="month"]');
