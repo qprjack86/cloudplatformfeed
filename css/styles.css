@@ -1135,35 +1135,6 @@ footer a:hover {
   padding: 0.2rem 0.4rem;
 }
 
-.retirement-window-chips {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.3rem;
-  margin-bottom: 0.45rem;
-}
-
-.retirement-window-chip {
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  background: var(--bg-primary);
-  padding: 0.25rem 0.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.2rem;
-}
-
-.retirement-window-label {
-  font-size: 0.64rem;
-  color: var(--text-secondary);
-}
-
-.retirement-window-count {
-  font-size: 0.73rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
 .retirement-mini-weekdays {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -1318,10 +1289,6 @@ footer a:hover {
 
   .retirement-mini-select-wrap {
     min-width: calc(50% - 0.25rem);
-  }
-
-  .retirement-window-chips {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
