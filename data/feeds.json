@@ -1,7 +1,157 @@
 {
-  "lastUpdated": "2026-04-08T14:05:46.969875+00:00",
-  "totalArticles": 503,
+  "lastUpdated": "2026-04-08T20:33:32.639599+00:00",
+  "totalArticles": 506,
   "articles": [
+    {
+      "title": "Enabling AI-Driven Enterprise Intelligence Using SAP and Microsoft 3-IQ Layers",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-ai-driven-enterprise-intelligence-using-sap-and/ba-p/4509721",
+      "published": "2026-04-08T19:24:25+00:00",
+      "summary": "Architectural Context Enterprise SAP platforms such as SAP ECC, SAP S/4HANA, and SAP BW continue to function as authoritative transactional systems supporting financial accounting, treasury management, portfolio reporting, and regulatory compliance workflows. These environments are optimized for...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "srhulsus"
+    },
+    {
+      "title": "Build and Host MCP Apps on Azure App Service",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-and-host-mcp-apps-on-azure-app-service/ba-p/4509705",
+      "published": "2026-04-08T18:10:03+00:00",
+      "summary": "MCP Apps are here, and they're a game-changer for building AI tools with interactive UIs. If you've been following the Model Context Protocol (MCP) ecosystem, you've probably heard about the MCP Apps spec — the first official MCP extension that lets your tools return rich, interactive UIs that...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "jordanselig"
+    },
+    {
+      "title": "Fast cloud migration, measurable ROI: Forrester Total Economic Impact study of Azure VMware Solution",
+      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/fast-cloud-migration-measurable-roi-forrester-total-economic/ba-p/4508136",
+      "published": "2026-04-08T17:59:23+00:00",
+      "summary": "Many organizations are balancing near-term continuity for VMware-based workloads with longer-term cloud modernization goals – all while managing cost, security, and resiliency. Azure VMware Solution (AVS) is built for this moment: a Microsoft-managed service verified by VMware that enables running...",
+      "blog": "Azure Migration",
+      "blogId": "azuremigrationblog",
+      "author": "BritneyCretella"
+    },
+    {
+      "title": "Generally Available: PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server",
+      "link": "https://azure.microsoft.com/en-us/updates/559623/",
+      "published": "2026-04-08T17:45:09.303049+00:00",
+      "summary": "PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by efficiently managing idle and short-lived connections.With this update, you benefit from the latest...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Generally Available: Enhancements to maintenance notifications in Azure Service Health",
+      "link": "https://azure.microsoft.com/en-us/updates/559628/",
+      "published": "2026-04-08T17:45:09.303049+00:00",
+      "summary": "We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per server, now you receive a single notification per region that consolidates maintenance details for...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Enhancements to maintenance notifications in Azure Service Health",
+      "link": "https://azure.microsoft.com/updates?id=559628",
+      "published": "2026-04-08T17:45:09+00:00",
+      "summary": "We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per server, now you receive a single notification per regioUpdate Type: GA, Services: Database for...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server",
+      "link": "https://azure.microsoft.com/updates?id=559623",
+      "published": "2026-04-08T17:45:09+00:00",
+      "summary": "PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by efficiently managing idle and short-lived connections.With tUpdate Type: GA, Services: Database for...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Public Preview: Azure Files assessments are now available using Azure Migrate",
+      "link": "https://azure.microsoft.com/en-us/updates/560025/",
+      "published": "2026-04-08T17:30:02.440448+00:00",
+      "summary": "Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility into capacity and sources, and provides Azure...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-02",
+      "azureTargetDate": "2026-02",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Generally Available: Observability in AKS Namespace and Workload Views",
+      "link": "https://azure.microsoft.com/en-us/updates/560039/",
+      "published": "2026-04-08T17:30:02.440448+00:00",
+      "summary": "AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilization across Nodes, Namespaces, Workloads, and...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Observability in AKS Namespace and Workload Views",
+      "link": "https://azure.microsoft.com/updates?id=560039",
+      "published": "2026-04-08T17:30:02+00:00",
+      "summary": "AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilizatioUpdate Type: GA, Services: Kubernetes...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "launched_ga"
+    },
+    {
+      "title": "Azure Files assessments are now available using Azure Migrate",
+      "link": "https://azure.microsoft.com/updates?id=560025",
+      "published": "2026-04-08T17:30:02+00:00",
+      "summary": "Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility intUpdate Type: Preview, Services: Azure...",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_preview"
+    },
+    {
+      "title": "Introducing SQL MCP Server",
+      "link": "https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/",
+      "published": "2026-04-08T16:01:37+00:00",
+      "summary": "SQL MCP Server gives enterprises a secure, feature-rich way to enable agents to access data. This is accomplished without exposing the schema, risking consistency, or relying on fragile natural language parsing. SQL MCP Server is a feature of Data API builder, so deployments have a proven entity...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Jerry Nixon"
+    },
+    {
+      "title": "How we build and use Azure SRE Agent with agentic workflows",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753",
+      "published": "2026-04-08T16:00:40+00:00",
+      "summary": "The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "Shamir_AbdulAziz"
+    },
+    {
+      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
+      "link": "https://devblogs.microsoft.com/azure-sdk/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure-functions/",
+      "published": "2026-04-08T15:00:50+00:00",
+      "summary": "Learn how to connect your MCP server hosted on Azure Functions to Microsoft Foundry agents. This post covers authentication options and setup steps to give your AI agent access to custom MCP tools. The post Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions appeared first on...",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Lily Ma"
+    },
     {
       "title": "Build Your AI Agent in 5 Minutes with AI Toolkit for VS Code",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/build-your-ai-agent-in-5-minutes-with-ai-toolkit-for-vs-code/ba-p/4509578",
@@ -489,15 +639,6 @@
       "author": "deepthihr"
     },
     {
-      "title": "How we build Azure SRE Agent with agentic workflows",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753",
-      "published": "2026-04-06T07:43:19+00:00",
-      "summary": "The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "saziz_msft"
-    },
-    {
       "title": "Building MCP servers with Entra ID and pre-authorized clients",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-mcp-servers-with-entra-id-and-pre-authorized-clients/ba-p/4508453",
       "published": "2026-04-06T07:00:00+00:00",
@@ -520,6 +661,16 @@
       "link": "https://techcommunity.microsoft.com/blog/azureinfrastructureblog/building-cost-aware-azure-infrastructure-pipelines-estimate-costs-before-you-dep/4508776",
       "published": "2026-04-05T23:28:00+00:00",
       "summary": "The Problem: Cost Is a Blind Spot in IaC Reviews Code reviews for Bicep or Terraform templates typically focus on correctness, security, and compliance. But cost is rarely part of the review proces...Update Type: Announcement, Services: , Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
+    },
+    {
+      "title": "How we build and use Azure SRE Agent with agentic workflows",
+      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/4508753",
+      "published": "2026-04-05T07:40:00+00:00",
+      "summary": "The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployment...Update Type: Announcement, Services: SRE Agent, Categories:",
       "blog": "Azure Updates (aztty)",
       "blogId": "azttyupdates",
       "author": "Microsoft",
@@ -1802,15 +1953,6 @@
       "author": "AbhinavPremsekhar"
     },
     {
-      "title": "Synchronizing Azure Storage Across Isolated Private Endpoint Networks",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/synchronizing-azure-storage-across-isolated-private-endpoint/ba-p/4504564",
-      "published": "2026-03-30T05:17:31+00:00",
-      "summary": "Introduction In Azure repatriation programs, enterprises often need to migrate large volumes of blob data from a source Azure environment to a target Azure environment under strict security and network isolation constraints. A typical repatriation setup includes fully isolated source and target...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "deepakkumarv"
-    },
-    {
       "title": "Control where your pods land on AKS with NAP",
       "link": "https://blog.aks.azure.com/2026/03/20/node-provisioning-best-practice",
       "published": "2026-03-30T00:00:00+00:00",
@@ -2580,15 +2722,6 @@
       "lifecycle": "in_preview"
     },
     {
-      "title": "HTTP Triggers in Azure SRE Agent: From Jira Ticket to Automated Investigation",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/http-triggers-in-azure-sre-agent-from-jira-ticket-to-automated/ba-p/4504960",
-      "published": "2026-03-24T21:09:11+00:00",
-      "summary": "Introduction Many teams run their observability, incident management, ticketing, and deployment on platforms outside of Azure—Jira, Opsgenie, Grafana, Zendesk, GitLab, Jenkins, Harness, or homegrown internal tools. These are the systems where alerts fire, tickets get filed, deployments happen, and...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "Vineela-Suri"
-    },
-    {
       "title": "Hosted Containers and AI Agent Solutions",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/hosted-containers-and-ai-agent-solutions/ba-p/4500627",
       "published": "2026-03-24T18:32:11+00:00",
@@ -2904,6 +3037,16 @@
       "lifecycle": "in_preview"
     },
     {
+      "title": "HTTP Triggers in Azure SRE Agent: From Jira Ticket to Automated Investigation",
+      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/http-triggers-in-azure-sre-agent-from-jira-ticket-to-automated-investigation/4504960",
+      "published": "2026-03-24T11:13:00+00:00",
+      "summary": "Introduction Many teams run their observability, incident management, ticketing, and deployment on platforms outside of Azure—Jira, Opsgenie, Grafana, Zendesk, GitLab, Jenkins, Harness, or homegrow...Update Type: Announcement, Services: SRE Agent, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
+    },
+    {
       "title": "Incremental copy gets more flexible—New watermark column types in Copy job in Fabric Data Factory",
       "link": "https://blog.fabric.microsoft.com/en-US/blog/incremental-copy-gets-more-flexible-new-watermark-column-types-in-copy-job-in-fabric-data-factory-generally-available/",
       "published": "2026-03-24T11:00:00+00:00",
@@ -3100,27 +3243,6 @@
       "lifecycle": "in_preview"
     },
     {
-      "title": "Get started with NeuBird Hawkeye MCP server in Azure SRE Agent",
-      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/get-started-with-neubird-hawkeye-mcp-server-in-azure-sre-agent/4504860",
-      "published": "2026-03-23T11:07:00+00:00",
-      "summary": "Integrate NeuBird Hawkeye MCP with Azure SRE Agent TL;DR If your infrastructure spans multiple clouds say Azure and GCP, or Azure alongside any other cloud provider investigating incidents mea...Update Type: Announcement, Services: SRE Agent, Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Certificate and Proxy Support for VNET Data Gateway",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/certificate-and-proxy-support-for-vnet-data-gateway-generally-available/",
-      "published": "2026-03-23T11:00:00+00:00",
-      "summary": "Certificate and Proxy Support for VNET Data Gateway now delivers stronger security controls and greater network flexibility for enterprise and regulated environments.Update Type: GA, Services: Virtual Network, Categories: Security",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
       "title": "Reliable blob processing using Azure Logic Apps: Recommended architecture",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/reliable-blob-processing-using-azure-logic-apps-recommended/ba-p/4408091",
       "published": "2026-03-23T10:53:35+00:00",
@@ -3128,71 +3250,6 @@
       "blog": "Integrations on Azure",
       "blogId": "integrationsonazureblog",
       "author": "SwathiK"
-    },
-    {
-      "title": "Dataflow Gen2: Variable Library integration in Microsoft Fabric",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/dataflow-gen2-variable-library-integration-in-microsoft-fabric-generally-available/",
-      "published": "2026-03-23T10:30:00+00:00",
-      "summary": "Production data integration requires more than functional transformations—it requires consistency across environments, repeatable deployments, and governance at scale. With Variable Library integration now generally available, Dataflow Gen2 supports enterprise‑grade CI/CD and ALM patterns by...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Migrating Ant Builds to Maven with GitHub Copilot app modernization",
-      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/migrating-ant-builds-to-maven-with-github-copilot-app-modernization/4491992",
-      "published": "2026-03-23T09:49:00+00:00",
-      "summary": "Many legacy Java applications still rely on Apache Ant for building, packaging, and dependency management. While Ant remains flexible, it lacks the structured lifecycle, dependency resolution, and ec...Update Type: Announcement, Services: , Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update"
-    },
-    {
-      "title": "Connection Recency for improved audit and management",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/connection-recency-for-improved-audit-and-management-preview/",
-      "published": "2026-03-23T09:00:48+00:00",
-      "summary": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Introducing a new connection recency...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "PowerShell Module for Gateways with Expanded Automation Capabilities",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/powershell-module-for-gateways-with-expanded-automation-capabilities-generally-available/",
-      "published": "2026-03-23T09:00:00+00:00",
-      "summary": "The PowerShell module for gateways delivers a fully supported, enterprise-ready command surface for managing on-premises data gateways and VNET data gateways through automation and scripting.Update Type: GA, Services: Virtual Network, Categories:",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
-    },
-    {
-      "title": "Batteries included: Database DevOps with SQL projects",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/batteries-included-database-devops-with-sql-projects/",
-      "published": "2026-03-23T09:00:00+00:00",
-      "summary": "Database changes shouldn’t be the last manual step in your release process. As teams adopt DevOps practices to ship application code faster and more reliably, the database has remained a sticking point—manual scripts, inconsistent deployments, and limited visibility into what changed and when. SQL...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_development"
-    },
-    {
-      "title": "API for GraphQL source control and CI/CD support",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/api-for-graphql-source-control-and-ci-cd-support-generally-available/",
-      "published": "2026-03-23T08:30:00+00:00",
-      "summary": "Source control and deployment capabilities for the API for GraphQL in Microsoft Fabric Data Engineering are now available. This release improves reliability and performance for Fabric CI/CD and deployment pipelines, so you can version GraphQL artifacts in Git, collaborate through pull requests, and...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "launched_ga"
     },
     {
       "title": "Building real-world AI automation with Foundry Local and the Microsoft Agent Framework",
@@ -3996,6 +4053,15 @@
       "azureRetirementDate": "2026-06-08"
     },
     {
+      "title": "Awesome GitHub Copilot just got a website, and a learning hub, and plugins!",
+      "link": "https://devblogs.microsoft.com/blog/awesome-github-copilot-just-got-a-website-and-a-learning-hub-and-plugins",
+      "published": "2026-03-16T17:00:33+00:00",
+      "summary": "Back in July, we launched the Awesome GitHub Copilot Customizations repo with a simple goal: give the community a place to share custom instructions, prompts, and chat modes to customize the AI responses from GitHub Copilot. We were hoping for maybe one community contribution per week. That… did...",
+      "blog": "Microsoft Developers Blog",
+      "blogId": "msdevblog",
+      "author": "Matt Soucoup"
+    },
+    {
       "title": "Azure Cosmos DB at FOSSASIA Summit 2026: Sessions, Conversations, and Community",
       "link": "https://devblogs.microsoft.com/cosmosdb/azure-cosmos-db-at-fossasia-summit-2026-sessions-community/",
       "published": "2026-03-16T16:24:05+00:00",
@@ -4283,33 +4349,6 @@
       "blog": "Analytics on Azure",
       "blogId": "analyticsonazure",
       "author": "Rafia_Aqil"
-    },
-    {
-      "title": "Announcing the Azure Skills Plugin",
-      "link": "https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/",
-      "published": "2026-03-09T20:02:13+00:00",
-      "summary": "Part 1 of the Azure Skills Plugin series Coding agents like GitHub Copilot and Claude Code are great at code, but getting your app to production on Azure is not just about writing code. Really, it is about making the right calls. Which service fits this app? Which SKU fits this workload? Should...",
-      "blog": "All Things Azure",
-      "blogId": "allthingsazure",
-      "author": "Chris Harris"
-    },
-    {
-      "title": "Visual Studio Dev Essentials: Free, Practical Tools for Every Developer",
-      "link": "https://devblogs.microsoft.com/visualstudio/visual-studio-dev-essentials-free-practical-tools-for-every-developer/",
-      "published": "2026-03-09T15:35:00+00:00",
-      "summary": "When I first found Visual Studio Dev Essentials, it felt like discovering a hidden door in the developer toolkit world. I’d heard about free tools and cloud credits, but I wasn’t sure if it would really matter in day-to-day coding life. The short answer: it absolutely does. What struck me most was...",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "Jim Harrer"
-    },
-    {
-      "title": "Upcoming Compute API Change: Always return non-null securityType",
-      "link": "https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387",
-      "published": "2026-03-09T14:16:14+00:00",
-      "summary": "Overview Starting with Azure Compute API version 2025‑11‑01, responses for Azure Virtual Machines (VMs) and Virtual Machine Scale Sets (VMSS) will include a non‑null securityType value in all operations. While this is a small behavioral change, it can impact deployments if they rely on null checks...",
-      "blog": "Azure Compute",
-      "blogId": "azurecompute",
-      "author": "AjKundnani"
     },
     {
       "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
@@ -7704,7 +7743,7 @@
     }
   ],
   "azureRetirementBuckets": {
-    "generatedAt": "2026-04-08T14:05:29.382804+00:00",
+    "generatedAt": "2026-04-08T20:33:16.646402+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -7931,8 +7970,8 @@
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
-  "summaryArticleCount": 13,
-  "summary": "- In preview:\n  • [Public Preview: Rule impact analysis on Azure Network Watcher](https://azure.microsoft.com/en-us/updates/559876/)\n  • [Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904)\n  • [Announcing Public Preview for Essential Machine Management](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721)\n  • [Run the latest Azure Arc agent with Automatic Agent Upgrade (Public Preview)](https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support](https://azure.microsoft.com/en-us/updates/559547/)\n  • [Generally Available: Disable HTTP proxy in AKS](https://azure.microsoft.com/en-us/updates/557857/)\n  • [Generally Available: Azure Functions now supports MCP resource triggers](https://azure.microsoft.com/en-us/updates/559981/)\n  • [Generally Available: Pod CIDR expansion in AKS](https://azure.microsoft.com/en-us/updates/557907/)\n  • [Generally Available: Network Security Perimeter for Azure Service Bus](https://azure.microsoft.com/en-us/updates/559899/)\n\n- Retiring:\n  • [Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/en-us/updates/558027/)\n  • [Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/en-us/updates/558276/)\n  • [Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/updates?id=558027)\n  • [AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/updates?id=558276)\n\n- In development:\n  • none noted in selected window",
+  "summaryArticleCount": 14,
+  "summary": "- In preview:\n  • [Public Preview: Azure Files assessments are now available using Azure Migrate](https://azure.microsoft.com/en-us/updates/560025/)\n  • [Public Preview: Rule impact analysis on Azure Network Watcher](https://azure.microsoft.com/en-us/updates/559876/)\n  • [Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904)\n  • [Announcing Public Preview for Essential Machine Management](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721)\n  • [Run the latest Azure Arc agent with Automatic Agent Upgrade (Public Preview)](https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535)\n\n- Launched / Generally Available:\n  • [Generally Available: PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server](https://azure.microsoft.com/en-us/updates/559623/)\n  • [Generally Available: Enhancements to maintenance notifications in Azure Service Health](https://azure.microsoft.com/en-us/updates/559628/)\n  • [Generally Available: Observability in AKS Namespace and Workload Views](https://azure.microsoft.com/en-us/updates/560039/)\n  • [Generally Available: Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support](https://azure.microsoft.com/en-us/updates/559547/)\n  • [Generally Available: Disable HTTP proxy in AKS](https://azure.microsoft.com/en-us/updates/557857/)\n\n- Retiring:\n  • [Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/en-us/updates/558027/)\n  • [Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/en-us/updates/558276/)\n  • [Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/updates?id=558027)\n  • [AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/updates?id=558276)\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 3rd April 2026",
     "url": "https://www.youtube.com/watch?v=x8ULC4uDQos",

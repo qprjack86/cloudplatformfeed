@@ -1,7 +1,32 @@
 {
-  "generatedAt": "2026-04-08T14:05:53.900288+00:00",
-  "totalArticles": 76,
+  "generatedAt": "2026-04-08T20:33:39.429795+00:00",
+  "totalArticles": 77,
   "articles": [
+    {
+      "title": "New Overview experience and agent categories in Agent Dashboard",
+      "link": "https://deltapulse.app/item/MC1274322",
+      "published": "2026-04-08T16:29:12.000Z",
+      "summary": "",
+      "source": "m365",
+      "m365Service": "Microsoft Viva",
+      "m365AllServices": [
+        "Microsoft Viva",
+        "Microsoft Copilot (Microsoft 365)"
+      ],
+      "m365Id": "MC1274322",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "May 2026, June 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1274322"
+    },
     {
       "title": "Microsoft Whiteboard content is now viewable in Microsoft Purview eDiscovery",
       "link": "https://deltapulse.app/item/MC1273444",
@@ -3393,6 +3418,31 @@
     ],
     "Other": [
       {
+        "title": "New Overview experience and agent categories in Agent Dashboard",
+        "link": "https://deltapulse.app/item/MC1274322",
+        "published": "2026-04-08T16:29:12.000Z",
+        "summary": "",
+        "source": "m365",
+        "m365Service": "Microsoft Viva",
+        "m365AllServices": [
+          "Microsoft Viva",
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1274322",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026, June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1274322"
+      },
+      {
         "title": "(Updated) Viva Engage: Feature conversations to all network members",
         "link": "https://deltapulse.app/item/MC1272652",
         "published": "2026-04-07T01:58:10.000Z",
@@ -3789,6 +3839,31 @@
       }
     ],
     "launched_ga": [
+      {
+        "title": "New Overview experience and agent categories in Agent Dashboard",
+        "link": "https://deltapulse.app/item/MC1274322",
+        "published": "2026-04-08T16:29:12.000Z",
+        "summary": "",
+        "source": "m365",
+        "m365Service": "Microsoft Viva",
+        "m365AllServices": [
+          "Microsoft Viva",
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1274322",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026, June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1274322"
+      },
       {
         "title": "Microsoft Whiteboard content is now viewable in Microsoft Purview eDiscovery",
         "link": "https://deltapulse.app/item/MC1273444",
@@ -5381,7 +5456,7 @@
   },
   "m365RetirementCalendar": [],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-08T14:05:53.900068+00:00",
+    "generatedAt": "2026-04-08T20:33:39.429582+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -5421,6 +5496,7 @@
     "thumbnail": "https://i1.ytimg.com/vi/H9zJ5x99q98/hqdefault.jpg"
   },
   "summaryPublishingDays": [
+    "2026-04-08",
     "2026-04-07",
     "2026-04-06",
     "2026-04-03",
