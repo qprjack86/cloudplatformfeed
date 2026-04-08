@@ -78,6 +78,25 @@ class DedupeArticlesTests(unittest.TestCase):
             ],
         )
 
+    def test_keeps_stale_articles_with_future_retirement_date(self):
+        now = datetime.now(timezone.utc).replace(hour=12, minute=0, second=0)
+        stale = (now - timedelta(days=180)).isoformat()
+        next_month = now + timedelta(days=35)
+        future_retirement = f"{next_month.year:04d}-{next_month.month:02d}"
+
+        articles = [
+            {
+                "title": "Retirement: Legacy service is retiring soon",
+                "link": "https://example.com/path/to/retirement",
+                "published": stale,
+                "azureRetirementDate": future_retirement,
+            }
+        ]
+
+        deduped = fetch_feeds.dedupe_articles(articles)
+        self.assertEqual(len(deduped), 1)
+        self.assertEqual(deduped[0]["azureRetirementDate"], future_retirement)
+
 
 class ParseIsoDatetimeTests(unittest.TestCase):
     def test_parses_high_precision_fractional_seconds(self):

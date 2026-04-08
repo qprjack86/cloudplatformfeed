@@ -364,8 +364,10 @@ def dedupe_articles(articles):
 
     for article in articles:
         if not article_is_recent(article, cutoff_dt):
-            print(f"Discarding stale/undated article: {article.get('title', 'Untitled')}")
-            continue
+            retirement_date = article.get("azureRetirementDate")
+            if not _is_retirement_date_future(retirement_date):
+                print(f"Discarding stale/undated article: {article.get('title', 'Untitled')}")
+                continue
 
         canonical_link = normalize_article_url(article.get("link", ""))
         title_key = None
