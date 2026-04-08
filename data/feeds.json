@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-04-08T08:12:06.591990+00:00",
-  "totalArticles": 274,
+  "lastUpdated": "2026-04-08T11:58:11.273649+00:00",
+  "totalArticles": 273,
   "articles": [
+    {
+      "title": "Build Your AI Agent in 5 Minutes with AI Toolkit for VS Code",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/build-your-ai-agent-in-5-minutes-with-ai-toolkit-for-vs-code/ba-p/4509578",
+      "published": "2026-04-08T09:59:38+00:00",
+      "summary": "What if building an AI agent was as easy as filling out a form? No frameworks to install. No boilerplate to copy-paste from GitHub. No YAML to debug at midnight. Just VS Code, one extension, and an idea. AI Toolkit for VS Code turns agent development into something anyone can do — whether you're a...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "isha_sahni"
+    },
     {
       "title": "AZD for Beginners: A Practical Introduction to Azure Developer CLI",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/azd-for-beginners-a-practical-introduction-to-azure-developer/ba-p/4503747",
@@ -1855,15 +1864,6 @@
       "author": "parulseth"
     },
     {
-      "title": "Designing an Azure Disaster Recovery Strategy for Enterprise Workloads",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/designing-an-azure-disaster-recovery-strategy-for-enterprise/ba-p/4504142",
-      "published": "2026-03-20T10:08:28+00:00",
-      "summary": "Introduction As organizations accelerate their cloud adoption journey, ensuring resiliency and disaster recovery (DR) becomes a foundational requirement for maintaining business continuity. In large-scale Azure environments, customers often operate critical workloads in a primary region and later...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "Shikhaghildiyal"
-    },
-    {
       "title": "Power Apps Vibe Experience: Build Business Apps at the Speed of Ideas",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/power-apps-vibe-experience-build-business-apps-at-the-speed-of/ba-p/4502347",
       "published": "2026-03-20T07:00:00+00:00",
@@ -2734,15 +2734,6 @@
       "blog": "Azure Compute",
       "blogId": "azurecompute",
       "author": "AjKundnani"
-    },
-    {
-      "title": "AI Inferencing in Air-Gapped Environments",
-      "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ai-inferencing-in-air-gapped-environments/ba-p/4498594",
-      "published": "2026-03-09T09:18:31+00:00",
-      "summary": "If you had to point out the top trends of IT these days, two strong candidates would be Generative AI and Cybersecurity. Especially around the latter, sophistication, reach and volume of cyberattacks have seen significant increases in the last years, with added ingredients such as advanced...",
-      "blog": "High Performance Computing",
-      "blogId": "azurehighperformancecomputingblog",
-      "author": "damocelj"
     }
   ],
   "summaryWindowDays": 5,

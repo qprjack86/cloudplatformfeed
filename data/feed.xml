@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 08 Apr 2026 08:12:06 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 11:58:11 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Build Your AI Agent in 5 Minutes with AI Toolkit for VS Code]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/build-your-ai-agent-in-5-minutes-with-ai-toolkit-for-vs-code/ba-p/4509578</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/build-your-ai-agent-in-5-minutes-with-ai-toolkit-for-vs-code/ba-p/4509578</guid>
+      <description><![CDATA[What if building an AI agent was as easy as filling out a form? No frameworks to install. No boilerplate to copy-paste from GitHub. No YAML to debug at midnight. Just VS Code, one extension, and an idea. AI Toolkit for VS Code turns agent development into something anyone can do — whether you're a...]]></description>
+      <dc:creator><![CDATA[isha_sahni]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 09:59:38 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[AZD for Beginners: A Practical Introduction to Azure Developer CLI]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/azd-for-beginners-a-practical-introduction-to-azure-developer/ba-p/4503747</link>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[srivastavani]]></dc:creator>
       <pubDate>Fri, 03 Apr 2026 05:58:36 GMT</pubDate>
       <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Bring Your Own Model (BYOM) for Azure AI Applications using Azure Machine Learning]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bring-your-own-model-byom-for-azure-ai-applications-using-azure/ba-p/4508211</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bring-your-own-model-byom-for-azure-ai-applications-using-azure/ba-p/4508211</guid>
-      <description><![CDATA[Modern AI-powered applications running on Azure increasingly require flexibility in model choice. While managed model catalogs accelerate time to value, real-world enterprise applications often need to: Host open‑source or fine‑tuned models Deploy domain‑specific or regulated models inside a tenant...]]></description>
-      <dc:creator><![CDATA[vaibhavpandey]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 02:00:40 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
     </item>
   </channel>
 </rss>
