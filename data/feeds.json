@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-04-08T11:58:11.273649+00:00",
+  "lastUpdated": "2026-04-08T16:08:32.522411+00:00",
   "totalArticles": 273,
   "articles": [
+    {
+      "title": "Introducing SQL MCP Server",
+      "link": "https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/",
+      "published": "2026-04-08T16:01:37+00:00",
+      "summary": "SQL MCP Server gives enterprises a secure, feature-rich way to enable agents to access data. This is accomplished without exposing the schema, risking consistency, or relying on fragile natural language parsing. SQL MCP Server is a feature of Data API builder, so deployments have a proven entity...",
+      "blog": "Azure SQL Dev Corner",
+      "blogId": "azuresqlblog",
+      "author": "Jerry Nixon"
+    },
+    {
+      "title": "How we build and use Azure SRE Agent with agentic workflows",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753",
+      "published": "2026-04-08T16:00:40+00:00",
+      "summary": "The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "Shamir_AbdulAziz"
+    },
+    {
+      "title": "Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions",
+      "link": "https://devblogs.microsoft.com/azure-sdk/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure-functions/",
+      "published": "2026-04-08T15:00:50+00:00",
+      "summary": "Learn how to connect your MCP server hosted on Azure Functions to Microsoft Foundry agents. This post covers authentication options and setup steps to give your AI agent access to custom MCP tools. The post Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions appeared first on...",
+      "blog": "Azure SDK Blog",
+      "blogId": "azuresdkblog",
+      "author": "Lily Ma"
+    },
     {
       "title": "Build Your AI Agent in 5 Minutes with AI Toolkit for VS Code",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/build-your-ai-agent-in-5-minutes-with-ai-toolkit-for-vs-code/ba-p/4509578",
@@ -313,15 +340,6 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "deepthihr"
-    },
-    {
-      "title": "How we build Azure SRE Agent with agentic workflows",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753",
-      "published": "2026-04-06T07:43:19+00:00",
-      "summary": "The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "saziz_msft"
     },
     {
       "title": "Building MCP servers with Entra ID and pre-authorized clients",
@@ -2716,24 +2734,6 @@
       "blog": "All Things Azure",
       "blogId": "allthingsazure",
       "author": "Chris Harris"
-    },
-    {
-      "title": "Visual Studio Dev Essentials: Free, Practical Tools for Every Developer",
-      "link": "https://devblogs.microsoft.com/visualstudio/visual-studio-dev-essentials-free-practical-tools-for-every-developer/",
-      "published": "2026-03-09T15:35:00+00:00",
-      "summary": "When I first found Visual Studio Dev Essentials, it felt like discovering a hidden door in the developer toolkit world. I’d heard about free tools and cloud credits, but I wasn’t sure if it would really matter in day-to-day coding life. The short answer: it absolutely does. What struck me most was...",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "Jim Harrer"
-    },
-    {
-      "title": "Upcoming Compute API Change: Always return non-null securityType",
-      "link": "https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387",
-      "published": "2026-03-09T14:16:14+00:00",
-      "summary": "Overview Starting with Azure Compute API version 2025‑11‑01, responses for Azure Virtual Machines (VMs) and Virtual Machine Scale Sets (VMSS) will include a non‑null securityType value in all operations. While this is a small behavioral change, it can impact deployments if they rely on null checks...",
-      "blog": "Azure Compute",
-      "blogId": "azurecompute",
-      "author": "AjKundnani"
     }
   ],
   "summaryWindowDays": 5,

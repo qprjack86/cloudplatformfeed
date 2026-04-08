@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 08 Apr 2026 11:58:11 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 16:08:32 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Introducing SQL MCP Server]]></title>
+      <link>https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/</link>
+      <guid>https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/</guid>
+      <description><![CDATA[SQL MCP Server gives enterprises a secure, feature-rich way to enable agents to access data. This is accomplished without exposing the schema, risking consistency, or relying on fragile natural language parsing. SQL MCP Server is a feature of Data API builder, so deployments have a proven entity...]]></description>
+      <dc:creator><![CDATA[Jerry Nixon]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 16:01:37 GMT</pubDate>
+      <category><![CDATA[Azure SQL Dev Corner]]></category>
+    </item>
+    <item>
+      <title><![CDATA[How we build and use Azure SRE Agent with agentic workflows]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</guid>
+      <description><![CDATA[The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...]]></description>
+      <dc:creator><![CDATA[Shamir_AbdulAziz]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 16:00:40 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure-functions/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure-functions/</guid>
+      <description><![CDATA[Learn how to connect your MCP server hosted on Azure Functions to Microsoft Foundry agents. This post covers authentication options and setup steps to give your AI agent access to custom MCP tools. The post Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions appeared first on...]]></description>
+      <dc:creator><![CDATA[Lily Ma]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 15:00:50 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
     <item>
       <title><![CDATA[Build Your AI Agent in 5 Minutes with AI Toolkit for VS Code]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/build-your-ai-agent-in-5-minutes-with-ai-toolkit-for-vs-code/ba-p/4509578</link>
@@ -296,15 +323,6 @@
       <category><![CDATA[Azure Infrastructure]]></category>
     </item>
     <item>
-      <title><![CDATA[How we build Azure SRE Agent with agentic workflows]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-azure-sre-agent-with-agentic-workflows/ba-p/4508753</guid>
-      <description><![CDATA[The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...]]></description>
-      <dc:creator><![CDATA[saziz_msft]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 07:43:19 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
       <title><![CDATA[Building MCP servers with Entra ID and pre-authorized clients]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-mcp-servers-with-entra-id-and-pre-authorized-clients/ba-p/4508453</link>
       <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-mcp-servers-with-entra-id-and-pre-authorized-clients/ba-p/4508453</guid>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[kinfey]]></dc:creator>
       <pubDate>Fri, 03 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Enterprise‑Scale Azure Subscription Vending Using Azure Verified Modules (AVM)]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-scale-azure-subscription-vending-using-azure-verified/ba-p/4507751</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-scale-azure-subscription-vending-using-azure-verified/ba-p/4507751</guid>
-      <description><![CDATA[Why Subscription Vending Is Critical at Scale Azure subscriptions define the security, governance, and billing boundary for workloads. In large organizations, manual subscription creation often leads to: Inconsistent management group placement Delayed or missing policy enforcement Incorrect RBAC...]]></description>
-      <dc:creator><![CDATA[kumaramit1]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 06:45:24 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Blue‑Green Strategy for Always‑On TCP Workloads on Azure Container Apps]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/blue-green-strategy-for-always-on-tcp-workloads-on-azure/ba-p/4507894</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/blue-green-strategy-for-always-on-tcp-workloads-on-azure/ba-p/4507894</guid>
-      <description><![CDATA[Scenario: Always‑on workloads in Azure Container Apps continuously pull from a TCP source, process the stream, and push into Azure Managed Redis, which is then consumed by another always‑on Container Apps workload that writes to a database. Challenge: Standard revision traffic splitting isn’t a fit...]]></description>
-      <dc:creator><![CDATA[srivastavani]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 05:58:36 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
     </item>
   </channel>
 </rss>
