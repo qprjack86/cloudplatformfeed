@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 09 Apr 2026 13:39:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 15:55:42 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -13,7 +13,7 @@
       <guid>https://learn.microsoft.com/en-us/azure/azure-fluid-relay/concepts/version-compatibility</guid>
       <description><![CDATA[Outdated client library. Service: FluidRelay Server. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -22,7 +22,7 @@
       <guid>https://azure.microsoft.com/updates?id=application-gateway-v1-will-be-retired-on-28-april-2026-transition-to-application-gateway-v2</guid>
       <description><![CDATA[V1. Service: Application gateway. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -31,7 +31,7 @@
       <guid>https://azure.microsoft.com/updates?id=community-support-for-standardm192idsv2-is-ending-on-31-march-2027</guid>
       <description><![CDATA[Standard_M192ids_v2. Service: Virtual machine. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -40,7 +40,7 @@
       <guid>https://azure.microsoft.com/updates?id=smart-on-fhir-proxy-feature-in-azure-health-data-services-will-be-retired-on-21st-september-2026-transition-to-smart-on-fhir</guid>
       <description><![CDATA[SMART on FHIR proxy. Service: FHIR service. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -49,7 +49,7 @@
       <guid>https://azure.microsoft.com/updates?id=Azure-CDN-Standard-from-Microsoft-classic-will-be-retired-on-30-September-2027</guid>
       <description><![CDATA[Standard from Microsoft (classic). Service: Front Door Profile. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -58,7 +58,7 @@
       <guid>https://azure.microsoft.com/updates?id=vpngw1-5-non-az-skus-will-be-retired-on-30-september-2026</guid>
       <description><![CDATA[Non-AZ VPNs. Service: Virtual network gateway. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -67,7 +67,7 @@
       <guid>https://azure.microsoft.com/updates?id=Retirement-notice-Azure-Load-Balancer-Inbound-NAT-rule-V1-for-Azure-VMs-and-Azure-VMSS-will-be-retired</guid>
       <description><![CDATA[Inbound NAT rule V1. Service: Load balancer. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -76,7 +76,7 @@
       <guid>https://learn.microsoft.com/azure/web-application-firewall/ag/upgrade-ag-waf-policy?tabs=portal#upgrade-waf-v2-with-legacy-waf-configuration-to-waf-policy</guid>
       <description><![CDATA[WAF v2 Config. Service: Application gateway. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -85,7 +85,7 @@
       <guid>https://azure.microsoft.com/updates?id=transition-to-using-standard-tests-for-singlestep-availability-testing-in-azure-monitor-application-insights-by-30-september</guid>
       <description><![CDATA[Single URL Ping Test. Service: Availability test. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -94,7 +94,7 @@
       <guid>https://azure.microsoft.com/updates/v2/Planned-Service-Retirement-Azure-Automation-State-Configuration-16-September-2027</guid>
       <description><![CDATA[State Configuration (DSC). Service: Automation account. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -103,7 +103,7 @@
       <guid>https://azure.microsoft.com/updates/azure-maps-web-sdk-map-controls-version-1xx-will-be-retired-on-19-september-2026/</guid>
       <description><![CDATA[Web SDK Map Controls v1.xx. Service: Azure Maps Account. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -112,7 +112,7 @@
       <guid>https://azure.microsoft.com/updates/v2/Azure-Sphere-Legacy-Interface-Retirement</guid>
       <description><![CDATA[Public API. Service: Azure Sphere Catalog. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -121,7 +121,7 @@
       <guid>https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement</guid>
       <description><![CDATA[Azure Virtual Desktop Classic. Service: Subscription. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -130,7 +130,7 @@
       <guid>https://azure.microsoft.com/updates/v2/Azure-Docuement-Intelligence-V2-retirement</guid>
       <description><![CDATA[Studio v2.1. Service: Cognitive Service. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -139,7 +139,7 @@
       <guid>https://learn.microsoft.com/azure/azure-monitor/logs/custom-logs-migrate</guid>
       <description><![CDATA[HTTP Data Collector API. Service: Log Analytics workspace. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -148,7 +148,7 @@
       <guid>https://azure.microsoft.com/updates/v2/open-service-mesh-extension-for-aks-retirement</guid>
       <description><![CDATA[Open Service Mesh add-on. Service: Kubernetes - Azure Arc. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -157,7 +157,7 @@
       <guid>https://azure.microsoft.com/updates/azure-front-door-classic-will-be-retired-on-31-march-2027/</guid>
       <description><![CDATA[Classic. Service: Front Door Web Application Firewall policy. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -166,7 +166,7 @@
       <guid>https://azure.microsoft.com/updates/retirement-support-for-the-inprocess-model-for-net-apps-in-azure-functions-ends-10-november-2026/</guid>
       <description><![CDATA[In-process model. Service: App service. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -175,7 +175,7 @@
       <guid>https://azure.microsoft.com/updates/v2/azure-site-recovery-classic-alerts-retirement</guid>
       <description><![CDATA[Classic Alerts. Service: Recovery Services vault. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -184,7 +184,7 @@
       <guid>https://azure.microsoft.com/updates/begin-using-azure-monitor-based-dashboards-in-azure-api-management-before-the-builtin-analytics-dashboards-are-retired-on-15/</guid>
       <description><![CDATA[Built-in Analytics. Service: Api Management. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -193,7 +193,7 @@
       <guid>https://azure.microsoft.com/updates/support-for-the-1x-version-of-azure-functions-ends-14-september-2026/</guid>
       <description><![CDATA[Version 1.x runtime. Service: App service. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -202,7 +202,7 @@
       <guid>https://azure.microsoft.com/updates/hpc-pack-2016-will-be-retired-on-12-january-2027/</guid>
       <description><![CDATA[HPC Pack 2016. Service: Subscription. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -211,7 +211,7 @@
       <guid>https://azure.microsoft.com/updates/we-re-ending-support-for-the-20170301ga-api/</guid>
       <description><![CDATA[2017-01-01-(GA) API. Service: Container registry. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -220,7 +220,7 @@
       <guid>https://azure.microsoft.com/updates?id=ai-services-personalizer-will-be-retired-on-1-october-2026</guid>
       <description><![CDATA[Azure Personalizer. Service: Cognitive Service. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -229,7 +229,7 @@
       <guid>https://azure.microsoft.com/updates?id=ai-services-anomaly-detector-will-be-retired-on-1-october-2026</guid>
       <description><![CDATA[Azure Anomaly Detector. Service: Cognitive Service. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -238,7 +238,7 @@
       <guid>https://azure.microsoft.com/updates?id=azure-api-for-fhir-retirement</guid>
       <description><![CDATA[Entire service. Service: Azure API for FHIR. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -247,7 +247,7 @@
       <guid>https://azure.microsoft.com/updates?id=ai-services-metrics-advisor-will-be-retired-on-1-october-2026</guid>
       <description><![CDATA[Azure Metrics Advisor. Service: Cognitive Service. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -256,7 +256,7 @@
       <guid>https://azure.microsoft.com/updates?id=community-support-for-standardm192isv2-is-ending-on-31-march-2027</guid>
       <description><![CDATA[Standard_M192is_v2. Service: Virtual machine. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -265,7 +265,7 @@
       <guid>https://azure.microsoft.com/updates?id=community-support-for-standardm192imsv2-is-ending-on-31-march-2027</guid>
       <description><![CDATA[Standard_M192ims_v2. Service: Virtual machine. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -274,7 +274,7 @@
       <guid>https://azure.microsoft.com/updates?id=support-for-standardm192idmsv2-will-be-retired-on-31-march-2027</guid>
       <description><![CDATA[Standard_M192idms_v2. Service: Virtual machine. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -283,7 +283,7 @@
       <guid>https://azure.microsoft.com/updates?id=azure-maps-gen1-price-tier-retirement</guid>
       <description><![CDATA[Gen1 price tier. Service: Azure Maps Account. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -292,7 +292,7 @@
       <guid>https://azure.microsoft.com/updates?id=Azure-Lab-Services-is-being-retired</guid>
       <description><![CDATA[V1 and V2. Service: Lab plan. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -301,7 +301,7 @@
       <guid>https://azure.microsoft.com/updates?id=azure-content-moderator-retirement</guid>
       <description><![CDATA[Azure Content Moderator. Service: Cognitive Service. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -310,7 +310,7 @@
       <guid>https://azure.microsoft.com/updates/action-required-migrate-to-using-arg-query-for-get-alert-summary-in-azure-monitor/</guid>
       <description><![CDATA[Alerts - GetAlertSummary API. Service: Activity log alert rule. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -319,7 +319,7 @@
       <guid>https://azure.microsoft.com/updates/retirement-azure-ai-document-intelligence-v20-api-will-be-retired-on-31-august-2026/</guid>
       <description><![CDATA[v2.0 API. Service: Cognitive Service. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -328,7 +328,7 @@
       <guid>https://azure.microsoft.com/updates/azure-maps-render-v1-apis-will-be-retired-on-17-september-2026/</guid>
       <description><![CDATA[Render V1 APIs. Service: Azure Maps Account. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -337,7 +337,7 @@
       <guid>https://azure.microsoft.com/updates/azure-monitor-for-aksengine-will-not-be-supported-on-14-september-2026/</guid>
       <description><![CDATA[Monitoring Support. Service: Application Insights. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -346,7 +346,7 @@
       <guid>https://azure.microsoft.com/updates/v2/SQL-Data-Sync-Retirement</guid>
       <description><![CDATA[Data Sync. Service: SQL database. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -355,7 +355,7 @@
       <guid>https://azure.microsoft.com/updates/long-audio-api-will-be-retired-on-31-march-2027-migrate-to-the-new-batch-synthesis-api/</guid>
       <description><![CDATA[Long audio API. Service: Cognitive Service. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -364,7 +364,7 @@
       <guid>https://azure.microsoft.com/updates/were-retiring-memory-optimized-data-flows-in-azure-data-factory-use-general-purpose-for-better-performance-at-a-lower-price/</guid>
       <description><![CDATA[Memory Optimized Data Flows. Service: Data factory. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -373,7 +373,7 @@
       <guid>https://learn.microsoft.com/rest/api/sql/retirement</guid>
       <description><![CDATA[Microsoft.SQL 2014-04-01 stable APIs. Service: SQL server. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -382,7 +382,7 @@
       <guid>https://azure.microsoft.com/updates/azure-ai-translator-s2s4-billing-instances-will-be-retired-on-1-october-2026-transition-to-commitment-tiers-for-discounted-pr/</guid>
       <description><![CDATA[S2, S3, and S4 price instances. Service: Cognitive Service. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -391,7 +391,7 @@
       <guid>https://azure.microsoft.com/updates/retirement-notice-update-your-azure-service-bus-sdk-libraries-by-30-september-2026/</guid>
       <description><![CDATA[WindowsAzure.ServiceBus, Microsoft.Azure.ServiceBus and com.microsoft.azure.servicebus. Service: Service bus namespace. Impacted services: No]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -400,7 +400,7 @@
       <guid>https://azure.microsoft.com/updates/?id=485819</guid>
       <description><![CDATA[Route v1 APIs. Service: Azure Maps Account. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -409,7 +409,7 @@
       <guid>https://azure.microsoft.com/updates/?id=485172</guid>
       <description><![CDATA[Support for Ubuntu 20.04. Service: Kubernetes service. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -418,7 +418,7 @@
       <guid>https://azure.microsoft.com/updates/?id=485241</guid>
       <description><![CDATA[Support for Docker Content Trust. Service: Container registry. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -427,7 +427,7 @@
       <guid>https://azure.microsoft.com/updates/?id=485167</guid>
       <description><![CDATA[Docker Compose. Service: App service. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -436,7 +436,7 @@
       <guid>https://azure.microsoft.com/updates?filters=%5B%22Retirements%22%5D</guid>
       <description><![CDATA[Deployments on Windows Server 2019 and Windows Server 2022. Service: Kubernetes - Azure Arc. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -445,7 +445,7 @@
       <guid>https://azure.microsoft.com/updates/?id=485535</guid>
       <description><![CDATA[Manually registered Azure VPN clients. Service: Virtual network gateway. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
     <item>
@@ -454,7 +454,7 @@
       <guid>https://azure.microsoft.com/updates/?id=486344</guid>
       <description><![CDATA[Extended Support. Service: Cloud Service. Impacted services: Yes]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 13:39:29 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 15:55:15 GMT</pubDate>
       <category><![CDATA[Azure Retirements Workbook]]></category>
     </item>
   </channel>
