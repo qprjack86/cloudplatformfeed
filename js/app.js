@@ -602,6 +602,32 @@
     return new Date(date.getFullYear(), date.getMonth(), 1);
   }
 
+  function getAzureRetirementsIcsAbsoluteUrl() {
+    return new URL("data/azure-retirements.ics", window.location.href).href;
+  }
+
+  function toWebcalUrl(httpsUrl) {
+    if (!httpsUrl) return "";
+    if (httpsUrl.indexOf("https://") === 0) {
+      return "webcal://" + httpsUrl.slice("https://".length);
+    }
+    return httpsUrl;
+  }
+
+  function setRetirementExportStatus(statusEl, message, isError) {
+    if (!statusEl) return;
+    statusEl.textContent = message || "";
+    statusEl.classList.toggle("is-error", Boolean(isError));
+    statusEl.classList.toggle("is-success", Boolean(message && !isError));
+  }
+
+  function copyTextToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return Promise.reject(new Error("Clipboard API unavailable"));
+  }
+
   function getRetirementCalendarPayload() {
     if (currentSource === "m365") {
       if (!m365FeedData) return { events: [], label: "Microsoft 365" };
@@ -756,6 +782,20 @@
     var nextMonth = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1);
     var disablePrev = prevMonth < earliestMonth ? ' disabled="disabled"' : "";
     var disableNext = nextMonth > latestMonth ? ' disabled="disabled"' : "";
+    var showAzureExport = currentSource === "azure";
+    var exportControlsHtml = showAzureExport
+      ? '<div class="retirement-mini-export">' +
+          '<button type="button" class="retirement-mini-export-btn" data-retirement-export-toggle aria-haspopup="true" aria-expanded="false">Export ▾</button>' +
+          '<div class="retirement-mini-export-menu" data-retirement-export-menu hidden="hidden">' +
+            '<button type="button" data-retirement-export-action="download-ics">Download .ics</button>' +
+            '<button type="button" data-retirement-export-action="copy-subscribe">Copy subscribe URL</button>' +
+            '<button type="button" data-retirement-export-action="open-outlook">Open in Outlook / Microsoft 365</button>' +
+          "</div>" +
+        "</div>"
+      : "";
+    var exportStatusHtml = showAzureExport
+      ? '<p class="retirement-mini-export-status" data-retirement-export-status aria-live="polite"></p>'
+      : "";
 
     retirementCalendarEl.innerHTML =
       '<div class="retirement-mini-header">' +
@@ -767,7 +807,9 @@
         '<label class="retirement-mini-select-wrap"><span class="sr-only">Month</span><select data-retirement-select="month">' + monthOptions + "</select></label>" +
         '<label class="retirement-mini-select-wrap"><span class="sr-only">Year</span><select data-retirement-select="year">' + yearOptions.join("") + "</select></label>" +
         '<button type="button" class="retirement-mini-nav-btn" data-retirement-nav="next" aria-label="Next month"' + disableNext + '>▶</button>' +
+        exportControlsHtml +
       "</div>" +
+      exportStatusHtml +
       '<div class="retirement-mini-weekdays"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>' +
       '<div class="retirement-mini-grid">' + dayCells.join("") + "</div>" +
       (monthItemsHtml
@@ -778,6 +820,9 @@
     var yearSelect = retirementCalendarEl.querySelector('[data-retirement-select="year"]');
     var prevBtn = retirementCalendarEl.querySelector('[data-retirement-nav="prev"]');
     var nextBtn = retirementCalendarEl.querySelector('[data-retirement-nav="next"]');
+    var exportToggleBtn = retirementCalendarEl.querySelector('[data-retirement-export-toggle]');
+    var exportMenu = retirementCalendarEl.querySelector('[data-retirement-export-menu]');
+    var exportStatus = retirementCalendarEl.querySelector('[data-retirement-export-status]');
 
     function updateAnchor(newMonthDate) {
       var clamped = clampMonthDate(startOfMonth(newMonthDate), earliestMonth, latestMonth);
@@ -807,6 +852,56 @@
     if (nextBtn) {
       nextBtn.addEventListener("click", function () {
         updateAnchor(new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1));
+      });
+    }
+
+    if (exportToggleBtn && exportMenu) {
+      exportToggleBtn.addEventListener("click", function () {
+        var isHidden = exportMenu.hasAttribute("hidden");
+        if (isHidden) {
+          exportMenu.removeAttribute("hidden");
+        } else {
+          exportMenu.setAttribute("hidden", "hidden");
+        }
+        exportToggleBtn.setAttribute("aria-expanded", isHidden ? "true" : "false");
+      });
+
+      exportMenu.querySelectorAll("[data-retirement-export-action]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var action = btn.getAttribute("data-retirement-export-action");
+          var icsUrl = getAzureRetirementsIcsAbsoluteUrl();
+          var subscribeUrl = toWebcalUrl(icsUrl);
+          setRetirementExportStatus(exportStatus, "", false);
+
+          if (action === "download-ics") {
+            var link = document.createElement("a");
+            link.href = icsUrl;
+            link.download = "azure-retirements.ics";
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            setRetirementExportStatus(exportStatus, "ICS download started.", false);
+          } else if (action === "copy-subscribe") {
+            copyTextToClipboard(subscribeUrl + "\n" + icsUrl)
+              .then(function () {
+                setRetirementExportStatus(exportStatus, "Subscribe URL copied.", false);
+              })
+              .catch(function () {
+                setRetirementExportStatus(exportStatus, "Could not copy URL. Please copy manually from the address bar.", true);
+              });
+          } else if (action === "open-outlook") {
+            var outlookUrl =
+              "https://outlook.office.com/calendar/0/addfromweb?url=" +
+              encodeURIComponent(icsUrl) +
+              "&name=" +
+              encodeURIComponent("Azure Retirement Calendar");
+            window.open(outlookUrl, "_blank", "noopener,noreferrer");
+            setRetirementExportStatus(exportStatus, "Opened Outlook / Microsoft 365 calendar flow.", false);
+          }
+
+          exportMenu.setAttribute("hidden", "hidden");
+          exportToggleBtn.setAttribute("aria-expanded", "false");
+        });
       });
     }
 

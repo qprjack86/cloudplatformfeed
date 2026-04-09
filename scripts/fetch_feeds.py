@@ -145,8 +145,10 @@ RUN_METRICS_ENV_VAR = "AZUREFEED_RUN_METRICS_PATH"
 CHECKSUM_ARTIFACTS = [
     Path("data") / "feeds.json",
     Path("data") / "feed.xml",
+    Path("data") / "azure-retirements.ics",
 ]
 CHECKSUM_OUTPUT_PATH = Path("data") / "checksums.json"
+AZURE_RETIREMENTS_ICS_PATH = Path("data") / "azure-retirements.ics"
 
 
 def _artifact_checksum_record(path, generated_at):
@@ -293,6 +295,121 @@ def get_recent_publishing_days(articles, max_days):
         if datetime.fromisoformat(day_str).replace(tzinfo=timezone.utc) > cutoff_date
     ]
 
+
+
+def _ics_escape_text(value):
+    """Escape text for iCalendar property values (RFC 5545)."""
+    raw = str(value or "")
+    raw = raw.replace("\\", "\\\\")
+    raw = raw.replace(";", "\\;")
+    raw = raw.replace(",", "\\,")
+    raw = raw.replace("\r\n", "\\n").replace("\n", "\\n").replace("\r", "\\n")
+    return raw
+
+
+def _ics_fold_line(line, limit=75):
+    """Fold long iCalendar lines to improve client compatibility."""
+    if len(line) <= limit:
+        return line
+    parts = [line[:limit]]
+    remainder = line[limit:]
+    while remainder:
+        parts.append(" " + remainder[: limit - 1])
+        remainder = remainder[limit - 1 :]
+    return "\r\n".join(parts)
+
+
+def _ics_uid_for_event(event):
+    """Build a deterministic UID for an Azure retirement calendar event."""
+    title_token = re.sub(r"\s+", "-", _normalize_for_match(event.get("title", "untitled"))) or "untitled"
+    date_token = re.sub(r"[^0-9]", "", str(event.get("retirementDate", ""))) or "nodate"
+    link = event.get("link", "")
+    update_id = _extract_azure_update_id_from_url(link)
+    suffix = update_id or title_token[:40]
+    return f"azure-retirement-{date_token}-{suffix}@{CANONICAL_SITE_HOST}"
+
+
+def _ics_date_fields(retirement_date, precision):
+    """Return DTSTART/DTEND fields for a retirement event."""
+    parsed = _parse_retirement_calendar_sort_date(retirement_date)
+    if not parsed:
+        return None
+
+    start = parsed.date()
+    if precision == "day":
+        end = start + timedelta(days=1)
+    else:
+        # Month precision uses a one-day placeholder at month start.
+        end = start + timedelta(days=1)
+
+    return {
+        "dtstart": start.strftime("%Y%m%d"),
+        "dtend": end.strftime("%Y%m%d"),
+    }
+
+
+def generate_azure_retirements_ics(events, generated_at=None):
+    """Generate an ICS calendar payload for Azure retirement events."""
+    stamp = generated_at or datetime.now(timezone.utc)
+    dtstamp = stamp.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Cloud Platform Feed//Azure Retirement Calendar//EN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        f"X-WR-CALNAME:{_ics_escape_text('Azure Retirement Calendar')}",
+        f"X-WR-CALDESC:{_ics_escape_text('Upcoming Azure retirement announcements from Cloud Platform Feed')}",
+    ]
+
+    for event in events:
+        retirement_date = str(event.get("retirementDate", "")).strip()
+        precision = event.get("datePrecision") or _retirement_date_precision(retirement_date)
+        date_fields = _ics_date_fields(retirement_date, precision)
+        if not date_fields:
+            continue
+
+        sources = event.get("sources", [])
+        source_label = ", ".join(str(src) for src in sources if src)
+        description_lines = [
+            f"Retirement date: {retirement_date}",
+            f"Date precision: {precision}",
+        ]
+        if source_label:
+            description_lines.append(f"Sources: {source_label}")
+        if precision != "day":
+            description_lines.append("This event uses month-level precision in source data.")
+
+        summary = event.get("title", "Untitled retirement notice")
+        link = event.get("link", "")
+
+        lines.extend(
+            [
+                "BEGIN:VEVENT",
+                f"UID:{_ics_escape_text(_ics_uid_for_event(event))}",
+                f"DTSTAMP:{dtstamp}",
+                f"DTSTART;VALUE=DATE:{date_fields['dtstart']}",
+                f"DTEND;VALUE=DATE:{date_fields['dtend']}",
+                f"SUMMARY:{_ics_escape_text(summary)}",
+                f"DESCRIPTION:{_ics_escape_text('\\n'.join(description_lines))}",
+                f"URL:{_ics_escape_text(link)}" if link else "",
+                "END:VEVENT",
+            ]
+        )
+
+    lines.append("END:VCALENDAR")
+    folded = [_ics_fold_line(line) for line in lines if line]
+    return "\r\n".join(folded) + "\r\n"
+
+
+def write_azure_retirements_ics(events, output_path=AZURE_RETIREMENTS_ICS_PATH, generated_at=None):
+    """Write Azure retirement events as an ICS artifact."""
+    payload = generate_azure_retirements_ics(events, generated_at=generated_at)
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(payload, encoding="utf-8")
+    print(f"ICS calendar saved to {path.as_posix()}")
 
 def get_articles_for_publishing_days(articles, publishing_days):
     """Return articles whose published date falls within the selected publishing days."""
@@ -2418,6 +2535,9 @@ def main():
 
     # Generate RSS feed
     generate_rss_feed(unique_articles)
+
+    # Generate ICS calendar for subscription/sync scenarios.
+    write_azure_retirements_ics(retirement_calendar)
 
     write_checksums_file()
 

@@ -1398,6 +1398,72 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(windows["24_plus_months"]["items"][0]["retirementDate"], "2028-09-30")
 
 
+class RetirementCalendarIcsTests(unittest.TestCase):
+    def test_generate_azure_retirements_ics_contains_required_fields(self):
+        events = [
+            {
+                "title": "App service - Support for Node 20 LTS",
+                "link": "https://azure.microsoft.com/en-us/updates/558102/",
+                "retirementDate": "2030-04-30",
+                "datePrecision": "day",
+                "sources": ["Azure Updates"],
+            }
+        ]
+
+        payload = fetch_feeds.generate_azure_retirements_ics(
+            events,
+            generated_at=datetime(2026, 4, 9, 12, 0, tzinfo=timezone.utc),
+        )
+
+        self.assertIn("BEGIN:VCALENDAR", payload)
+        self.assertIn("BEGIN:VEVENT", payload)
+        self.assertIn("SUMMARY:App service - Support for Node 20 LTS", payload)
+        self.assertIn("DTSTART;VALUE=DATE:20300430", payload)
+        self.assertIn("DTEND;VALUE=DATE:20300501", payload)
+        self.assertIn("URL:https://azure.microsoft.com/en-us/updates/558102/", payload)
+
+    def test_generate_azure_retirements_ics_marks_month_precision(self):
+        events = [
+            {
+                "title": "Storage account - Legacy accounts",
+                "link": "https://learn.microsoft.com/example/legacy",
+                "retirementDate": "2030-05",
+                "datePrecision": "month",
+                "sources": ["Azure Retirements Workbook"],
+            }
+        ]
+
+        payload = fetch_feeds.generate_azure_retirements_ics(
+            events,
+            generated_at=datetime(2026, 4, 9, 12, 0, tzinfo=timezone.utc),
+        )
+
+        self.assertIn("DTSTART;VALUE=DATE:20300501", payload)
+        self.assertIn("DTEND;VALUE=DATE:20300502", payload)
+        self.assertIn("Date precision: month", payload)
+        self.assertIn("month-level precision", payload)
+
+    def test_write_azure_retirements_ics_creates_file(self):
+        events = [
+            {
+                "title": "Example service retirement",
+                "link": "https://example.com/retirement",
+                "retirementDate": "2031-01-10",
+                "datePrecision": "day",
+                "sources": ["Azure Updates"],
+            }
+        ]
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_path = pathlib.Path(temp_dir) / "retirements.ics"
+            fetch_feeds.write_azure_retirements_ics(events, output_path=output_path)
+            content = output_path.read_text(encoding="utf-8")
+
+        self.assertIn("BEGIN:VCALENDAR", content)
+        self.assertIn("END:VCALENDAR", content)
+        self.assertIn("SUMMARY:Example service retirement", content)
+
+
 class MainOutputSchemaTests(unittest.TestCase):
     def test_main_writes_azure_retirement_calendar(self):
         aztty_articles = [
