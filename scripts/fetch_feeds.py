@@ -314,6 +314,79 @@ def _normalize_for_match(text):
     return value
 
 
+# Words that are too common to be used as distinctive identity tokens for cross-source dedupe.
+_CALENDAR_DEDUPE_STOP_WORDS = frozenset({
+    # Articles, conjunctions, prepositions
+    "the", "and", "for", "to", "in", "on", "by", "of", "or", "an", "a",
+    "into", "from", "with", "than", "about",
+    # Auxiliary / common verbs
+    "will", "be", "is", "are", "was", "been", "has", "have", "had",
+    "do", "does", "did", "can", "could", "may", "would", "should",
+    "use", "used", "using", "need", "know",
+    # Pronouns / determiners
+    "you", "your", "our", "we", "it", "its", "this", "that", "these",
+    "those", "them", "they", "their", "any", "all", "some", "each",
+    "what", "how", "when", "where", "who", "which",
+    # Adverbs / discourse words
+    "not", "but", "just", "also", "more", "other", "now", "then",
+    "please", "before", "after", "only", "still", "soon", "get",
+    # Retirement-specific noise words (appear in most retirement titles)
+    "retirement", "retiring", "retired", "deprecation", "deprecated",
+    "end", "notice", "reminder", "migration", "migrate", "transition",
+    "upgrade", "announcement", "announcing", "announces", "begins", "beginning",
+    "update", "updates", "life", "review", "move", "switch", "action", "required",
+    # Very common vendor context (adds no discrimination)
+    "azure", "microsoft",
+    # Months (appear in date references)
+    "january", "february", "march", "april", "june", "july", "august",
+    "september", "october", "november", "december",
+})
+
+
+def _split_camel_case(text):
+    """Insert spaces around CamelCase / PascalCase boundaries."""
+    text = re.sub(r"([a-z])([A-Z])", r"\1 \2", text)
+    text = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1 \2", text)
+    return text
+
+
+def _calendar_identity_tokens(title):
+    """Extract distinctive identity tokens from a retirement calendar title.
+
+    Returns a frozenset of lower-cased, punctuation-stripped tokens (length >= 3)
+    that survive stop-word filtering.  Used for cross-source same-date fuzzy dedupe.
+    """
+    value = clean_html(title or "")
+    # Strip leading 'Retirement:' / 'Deprecation:' prefixes
+    value = re.sub(r"^\s*(retirement|deprecation|update)\s*:\s*", "", value, flags=re.IGNORECASE)
+    # Expand CamelCase so 'ContainerLog' → 'Container Log', 'GetAlertSummary' → 'Get Alert Summary'
+    value = _split_camel_case(value)
+    # Remove years and standalone numbers (dates add noise)
+    value = re.sub(r"\b20\d{2}\b", " ", value)
+    value = re.sub(r"\b\d+\b", " ", value)
+    # Lowercase and strip non-alphanumeric
+    value = _normalize_for_match(value)
+    tokens = frozenset(
+        w for w in value.split()
+        if len(w) >= 3 and w not in _CALENDAR_DEDUPE_STOP_WORDS
+    )
+    return tokens
+
+
+def _tokens_are_same_event(tokens_a, tokens_b):
+    """Return True when two token sets look like the same retirement event.
+
+    Requires at least 2 overlapping tokens.  A single shared token is not
+    sufficient because common Azure infrastructure words (e.g. 'virtual', 'service',
+    'container') appear across many unrelated service titles and would cause
+    false-positive merges.
+    """
+    if not tokens_a or not tokens_b:
+        return False
+    overlap = tokens_a & tokens_b
+    return len(overlap) >= 2
+
+
 def normalize_article_url(url):
     """Canonicalize article URLs for more reliable deduplication."""
     return canonicalize_url(
@@ -1711,7 +1784,17 @@ def build_azure_retirement_calendar(articles, max_items=120):
     today = datetime.now(timezone.utc).date()
     events_by_key = {}
 
-    for article in articles:
+    # Index: retirement_date -> list of (token_frozenset, dedupe_key) for token-overlap dedupe.
+    # Populated as events are registered; used to catch cross-source near-duplicates whose
+    # titles are too different for exact-string matching.
+    date_event_tokens = {}
+
+    # Process azureretirements (workbook) articles first so their structured short titles
+    # serve as the reference when matching verbose RSS blog-post titles.
+    def _source_priority(a):
+        return 0 if a.get("blogId") == "azureretirements" else 1
+
+    for article in sorted(articles, key=_source_priority):
         retirement_date = article.get("azureRetirementDate")
         if not retirement_date:
             continue
@@ -1741,11 +1824,35 @@ def build_azure_retirement_calendar(articles, max_items=120):
             "link": link,
         }
 
+        # --- Exact / structured key lookups ---
         existing = events_by_key.get(dedupe_key)
         if not existing and update_id_key:
             existing = events_by_key.get(update_id_key)
         if not existing and runtime_alias_key:
             existing = events_by_key.get(runtime_alias_key)
+
+        # --- Cross-source fuzzy token-overlap lookup (same retirement date) ---
+        # This catches cases where an azureretirements workbook entry (short structured
+        # title like "Subscription - Azure Virtual Desktop Classic") and an
+        # azuredeprecations RSS entry (long blog title) describe the same event.
+        if not existing:
+            article_blog_id = article.get("blogId", "")
+            article_tokens = _calendar_identity_tokens(title)
+            for reg_tokens, reg_key, reg_runtime_key, reg_blog_id in date_event_tokens.get(retirement_date, []):
+                # Skip if both articles come from the same feed — same-source deduplication
+                # is handled by exact key matching above; fuzzy matching within the same feed
+                # causes false merges on dates with many unrelated entries sharing common words.
+                if article_blog_id == reg_blog_id:
+                    continue
+                # If both sides have a runtime alias key and the keys differ, they are
+                # different runtime versions (e.g. Node 20 vs Node 22) — do not merge.
+                if runtime_alias_key and reg_runtime_key and runtime_alias_key != reg_runtime_key:
+                    continue
+                if _tokens_are_same_event(article_tokens, reg_tokens):
+                    existing = events_by_key.get(reg_key)
+                    if existing is not None:
+                        break
+
         if existing:
             existing["sourceReports"].append(source_report)
             if article.get("published", "") > existing.get("published", ""):
@@ -1808,6 +1915,15 @@ def build_azure_retirement_calendar(articles, max_items=120):
             events_by_key[update_id_key] = event
         if runtime_alias_key:
             events_by_key[runtime_alias_key] = event
+
+        # Register this event's identity tokens for same-date fuzzy matching of later articles.
+        # Store runtime_alias_key and blogId alongside so version-distinct and same-feed
+        # entries are not falsely merged.
+        event_tokens = _calendar_identity_tokens(title)
+        if event_tokens:
+            date_event_tokens.setdefault(retirement_date, []).append(
+                (event_tokens, dedupe_key, runtime_alias_key, article.get("blogId", ""))
+            )
 
     events = []
     seen_ids = set()

@@ -1235,6 +1235,61 @@ class RetirementCalendarTests(unittest.TestCase):
 
         self.assertEqual(len(events), 2)
 
+    def test_build_azure_retirement_calendar_dedupes_cross_source_verbose_titles(self):
+        """Workbook short title and RSS verbose title for same event on same date merge into one."""
+        articles = [
+            {
+                "title": "Retirement: Subscription - Azure Virtual Desktop Classic",
+                "link": "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+            {
+                "title": "Azure Virtual Desktop (classic) will be retired on 30 September 2026 - Please transition to Azure Virtual Desktop",
+                "link": "https://azure.microsoft.com/en-us/updates/azure-virtual-desktop-classic-will-be-retired-on-30-september-2026/",
+                "published": "2026-04-09T09:00:00+00:00",
+                "blog": "Azure Deprecations",
+                "blogId": "azuredeprecations",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1, "workbook and RSS entries for same retirement should merge")
+        self.assertEqual(len(events[0]["sourceReports"]), 2, "merged event should carry both source reports")
+
+    def test_build_azure_retirement_calendar_cross_source_keeps_different_events_same_date(self):
+        """Two genuinely different retirements on the same date must not be merged."""
+        articles = [
+            {
+                "title": "Retirement: Azure API for FHIR - Entire service",
+                "link": "https://azure.microsoft.com/updates?id=azure-api-for-fhir-retirement",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+            {
+                "title": "Azure Virtual Desktop (classic) will be retired on 30 September 2030",
+                "link": "https://azure.microsoft.com/en-us/updates/avd-classic-retirement/",
+                "published": "2026-04-09T09:00:00+00:00",
+                "blog": "Azure Deprecations",
+                "blogId": "azuredeprecations",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 2, "distinct retirements on same date must remain separate")
+
     def test_build_retirement_window_buckets_assigns_rolling_windows(self):
         events = [
             {
