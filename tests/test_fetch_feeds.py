@@ -105,6 +105,26 @@ class ParseIsoDatetimeTests(unittest.TestCase):
         self.assertEqual(parsed.isoformat(), "2026-03-20T19:15:35.220679+00:00")
 
 
+class AzureUpdateIdentityExtractionTests(unittest.TestCase):
+    def test_extract_azure_update_id_from_query_slug(self):
+        value = fetch_feeds._extract_azure_update_id_from_url(
+            "https://azure.microsoft.com/updates?id=application-gateway-v1-will-be-retired"
+        )
+        self.assertEqual(value, "application-gateway-v1-will-be-retired")
+
+    def test_extract_azure_update_id_from_path_numeric(self):
+        value = fetch_feeds._extract_azure_update_id_from_url(
+            "https://azure.microsoft.com/en-us/updates/558102/"
+        )
+        self.assertEqual(value, "558102")
+
+    def test_extract_azure_update_id_from_v2_path_slug(self):
+        value = fetch_feeds._extract_azure_update_id_from_url(
+            "https://azure.microsoft.com/updates/v2/open-service-mesh-extension-for-aks-retirement"
+        )
+        self.assertEqual(value, "open-service-mesh-extension-for-aks-retirement")
+
+
 class ClassifyLifecycleTests(unittest.TestCase):
     def test_detects_preview_titles(self):
         article = {"title": "[In preview] New accelerator for distributed workloads"}
@@ -913,6 +933,58 @@ class AzttyFeedTests(unittest.TestCase):
         self.assertEqual(results, surviving_feed_articles)
 
 
+class WorkbookCsvRetirementTests(unittest.TestCase):
+    def test_fetch_azure_retirements_from_csv_maps_rows(self):
+        csv_content = (
+            '"Service Name","Retiring Feature","Retirement Date","Actions","Is Available under the Impacted Services?"\n'
+            '"Application gateway","V1","2026-04-28","https://azure.microsoft.com/updates?id=example-1","Yes"\n'
+            '"Azure Maps Account","Render V1 APIs","2026-09-17","https://azure.microsoft.com/updates?id=example-2","No"\n'
+        )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csv_path = pathlib.Path(tmpdir) / "export_data.csv"
+            csv_path.write_text(csv_content, encoding="utf-8")
+
+            articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+
+        self.assertEqual(len(articles), 2)
+        self.assertEqual(
+            articles[0]["title"],
+            "Retirement: Application gateway - V1",
+        )
+        self.assertEqual(articles[0]["azureRetirementDate"], "2026-04-28")
+        self.assertEqual(
+            articles[0]["link"],
+            "https://azure.microsoft.com/updates?id=example-1",
+        )
+        self.assertEqual(articles[0]["blogId"], "azureretirements")
+        self.assertTrue(articles[0]["impactedServicesAvailable"])
+        self.assertFalse(articles[1]["impactedServicesAvailable"])
+
+    def test_fetch_azure_retirements_from_csv_skips_invalid_rows(self):
+        csv_content = (
+            '"Service Name","Retiring Feature","Retirement Date","Actions","Is Available under the Impacted Services?"\n'
+            '"Example Service","Feature A","not-a-date","https://azure.microsoft.com/updates?id=bad","Yes"\n'
+            '"Example Service","Feature B","2027-01-15","https://azure.microsoft.com/updates?id=good","Yes"\n'
+        )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csv_path = pathlib.Path(tmpdir) / "export_data.csv"
+            csv_path.write_text(csv_content, encoding="utf-8")
+
+            articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["azureRetirementDate"], "2027-01-15")
+
+    def test_fetch_azure_retirements_from_csv_missing_file_returns_empty_list(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            missing = pathlib.Path(tmpdir) / "does-not-exist.csv"
+            articles = fetch_feeds.fetch_azure_retirements_from_csv(missing)
+
+        self.assertEqual(articles, [])
+
+
 class RetirementCalendarTests(unittest.TestCase):
     def test_build_azure_retirement_calendar_dedupes_and_aggregates_sources(self):
         articles = [
@@ -1014,6 +1086,34 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(events[0]["datePrecision"], "day")
         self.assertEqual(events[0]["blogId"], "azureupdates")
 
+    def test_build_azure_retirement_calendar_prefers_update_id_over_title_for_dedupe(self):
+        articles = [
+            {
+                "title": "Retirement: Application gateway - V1",
+                "link": "https://azure.microsoft.com/updates?id=558102",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2026-04-30",
+            },
+            {
+                "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
+                "link": "https://azure.microsoft.com/en-us/updates/558102/",
+                "published": "2026-03-04T21:15:02.275174+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2026-04-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["blogId"], "azureupdates")
+        self.assertEqual(events[0]["sourceCount"], 2)
+
     def test_build_azure_retirement_calendar_keeps_current_month_month_precision(self):
         today = datetime.now(timezone.utc)
         current_month = f"{today.year:04d}-{today.month:02d}"
@@ -1093,6 +1193,20 @@ class MainOutputSchemaTests(unittest.TestCase):
                 "azureRetirementDate": "2031-07-31",
             }
         ]
+        workbook_articles = [
+            {
+                "title": "Retirement: Workbook service - Feature",
+                "link": "https://azure.microsoft.com/updates?id=workbook",
+                "published": "2031-01-11T12:00:00+00:00",
+                "summary": "Workbook retirement details",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "author": "Microsoft",
+                "announcementType": "retirement",
+                "lifecycle": "retiring",
+                "azureRetirementDate": "2031-08-31",
+            }
+        ]
 
         with tempfile.TemporaryDirectory() as tmpdir:
             old_cwd = os.getcwd()
@@ -1103,6 +1217,7 @@ class MainOutputSchemaTests(unittest.TestCase):
                     mock.patch.object(fetch_feeds, "fetch_devblogs_feeds", return_value=[]), \
                     mock.patch.object(fetch_feeds, "fetch_azure_updates_feed", return_value=[]), \
                     mock.patch.object(fetch_feeds, "fetch_aztty_announcements", return_value=aztty_articles), \
+                    mock.patch.object(fetch_feeds, "fetch_azure_retirements_from_csv", return_value=workbook_articles), \
                     mock.patch.object(fetch_feeds, "fetch_savill_video", return_value=None), \
                     mock.patch.object(
                         fetch_feeds,
@@ -1123,10 +1238,10 @@ class MainOutputSchemaTests(unittest.TestCase):
 
             payload = json.loads((pathlib.Path(tmpdir) / "data" / "feeds.json").read_text(encoding="utf-8"))
 
-        self.assertEqual(payload["totalArticles"], 1)
+        self.assertEqual(payload["totalArticles"], 2)
         self.assertIn("azureRetirementCalendar", payload)
         self.assertIn("azureRetirementBuckets", payload)
-        self.assertEqual(len(payload["azureRetirementCalendar"]), 1)
+        self.assertEqual(len(payload["azureRetirementCalendar"]), 2)
         self.assertEqual(
             payload["azureRetirementCalendar"][0]["retirementDate"],
             "2031-07-31",
@@ -1134,6 +1249,10 @@ class MainOutputSchemaTests(unittest.TestCase):
         self.assertEqual(
             payload["azureRetirementCalendar"][0]["title"],
             "Example service retirement notice",
+        )
+        self.assertEqual(
+            payload["azureRetirementCalendar"][1]["retirementDate"],
+            "2031-08-31",
         )
         self.assertIn("windows", payload["azureRetirementBuckets"])
 

@@ -5,6 +5,7 @@ Fetches articles from Azure and Microsoft 365 blog RSS feeds and generates a JSO
 """
 
 import feedparser
+import csv
 import json
 import os
 import re
@@ -97,6 +98,7 @@ AZURE_UPDATES_FEED = "https://www.microsoft.com/releasecommunications/api/v2/azu
 AZURE_UPDATES_API = "https://www.microsoft.com/releasecommunications/api/v2/azure"
 AZTTY_DEPRECATIONS_FEED = "https://aztty.azurewebsites.net/rss/deprecations"
 AZTTY_UPDATES_FEED = "https://aztty.azurewebsites.net/rss/updates"
+AZURE_RETIREMENTS_EXPORT_PATH = REPO_ROOT / "data" / "export_data.csv"
 YOUTUBE_RSS_BASE = "https://www.youtube.com/feeds/videos.xml"
 SAVILL_VIDEO_SEED_URL = "https://www.youtube.com/watch?v=17uHDPjdkto"
 SUMMARY_WINDOW_DAYS = 7
@@ -865,16 +867,35 @@ def _is_retirement_date_future(value, today=None):
 
 
 def _extract_azure_update_id_from_url(url):
-    """Extract Azure Updates numeric ID from canonical or id= query URL variants."""
+    """Extract Azure Updates identity token from canonical path or id= query variants."""
     raw = str(url or "").strip()
     if not raw:
         return ""
-    id_match = re.search(r"/updates/(\d+)(?:/|$)", raw)
-    if id_match:
-        return id_match.group(1)
-    query_match = re.search(r"[?&]id=(\d+)\b", raw)
+
+    parsed = urlsplit(raw)
+    query_match = re.search(r"(?:^|&)id=([^&]+)", parsed.query)
     if query_match:
-        return query_match.group(1)
+        return query_match.group(1).strip().lower()
+
+    path_segments = [seg for seg in (parsed.path or "").split("/") if seg]
+    try:
+        updates_index = path_segments.index("updates")
+    except ValueError:
+        return ""
+
+    candidate_index = updates_index + 1
+    if candidate_index >= len(path_segments):
+        return ""
+    candidate = path_segments[candidate_index]
+    if candidate.lower() == "v2":
+        candidate_index += 1
+        if candidate_index >= len(path_segments):
+            return ""
+        candidate = path_segments[candidate_index]
+
+    candidate = candidate.strip().lower()
+    if candidate:
+        return candidate
     return ""
 
 
@@ -1379,6 +1400,128 @@ def fetch_aztty_announcements():
     return articles
 
 
+def _get_first_row_value(row, keys):
+    """Return the first non-empty CSV value found for any candidate key."""
+    for key in keys:
+        value = clean_html(str(row.get(key, "") or "")).strip()
+        if value:
+            return value
+    return ""
+
+
+def _normalize_csv_retirement_date(raw_value):
+    """Normalize workbook retirement dates to YYYY-MM or YYYY-MM-DD."""
+    candidate = clean_html(str(raw_value or "")).strip()
+    if not candidate:
+        return None
+
+    normalized = _normalize_structured_retirement_date(candidate)
+    if normalized:
+        return normalized
+
+    for pattern in ("%m/%d/%Y", "%Y/%m/%d", "%d-%m-%Y"):
+        try:
+            dt = datetime.strptime(candidate, pattern)
+            return dt.date().isoformat()
+        except ValueError:
+            continue
+
+    extracted = _extract_azure_retirement_date("", candidate)
+    if extracted:
+        return extracted
+
+    return None
+
+
+def _parse_impacted_services_flag(raw_value):
+    """Parse workbook impacted-services indicator into boolean metadata."""
+    value = clean_html(str(raw_value or "")).strip().lower()
+    if value in {"yes", "y", "true", "1"}:
+        return True
+    if value in {"no", "n", "false", "0"}:
+        return False
+    return None
+
+
+def fetch_azure_retirements_from_csv(csv_path=AZURE_RETIREMENTS_EXPORT_PATH):
+    """Load Azure retirement rows from workbook CSV export and map to article schema."""
+    path = Path(csv_path)
+    if not path.exists():
+        print(f"CSV retirement source not found at {path}; skipping")
+        return []
+
+    print(f"Fetching: Azure Retirements workbook CSV ({path})...")
+    articles = []
+    now_iso = datetime.now(timezone.utc).isoformat()
+
+    with path.open("r", encoding="utf-8-sig", newline="") as csv_file:
+        reader = csv.DictReader(csv_file)
+        if not reader.fieldnames:
+            print("  Warning: workbook CSV has no header row")
+            return []
+
+        for row_number, row in enumerate(reader, start=2):
+            service_name = _get_first_row_value(row, ["Service Name", "serviceName", "name", "service"])
+            retiring_feature = _get_first_row_value(
+                row,
+                ["Retiring Feature", "retiringFeature", "feature", "title"],
+            )
+            retirement_date = _normalize_csv_retirement_date(
+                _get_first_row_value(row, ["Retirement Date", "retirementDate", "date"])
+            )
+
+            if not retirement_date:
+                print(f"  Skipping workbook row {row_number}: invalid retirement date")
+                continue
+
+            identity_bits = [bit for bit in (service_name, retiring_feature) if bit]
+            if identity_bits:
+                title = f"Retirement: {' - '.join(identity_bits)}"
+            else:
+                title = f"Retirement: Azure service update ({row_number})"
+
+            link = _get_first_row_value(row, ["Actions", "actions", "link", "url"])
+            impacted_raw = _get_first_row_value(
+                row,
+                [
+                    "Is Available under the Impacted Services?",
+                    "isAvailableUnderImpactedServices",
+                    "impactedServices",
+                ],
+            )
+            impacted_flag = _parse_impacted_services_flag(impacted_raw)
+
+            summary_parts = []
+            if retiring_feature:
+                summary_parts.append(retiring_feature)
+            if service_name:
+                summary_parts.append(f"Service: {service_name}")
+            if impacted_raw:
+                summary_parts.append(f"Impacted services: {impacted_raw}")
+
+            article = {
+                "title": title,
+                "link": link,
+                "published": now_iso,
+                "summary": truncate(". ".join(summary_parts) or "Workbook retirement entry"),
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "author": "Microsoft",
+                "announcementType": "retirement",
+                "lifecycle": "retiring",
+                "azureRetirementDate": retirement_date,
+            }
+            if impacted_flag is not None:
+                article["impactedServicesAvailable"] = impacted_flag
+            if impacted_raw:
+                article["impactedServicesRaw"] = impacted_raw
+
+            articles.append(article)
+
+    print(f"  Loaded {len(articles)} retirement rows from workbook CSV")
+    return articles
+
+
 def _parse_retirement_calendar_sort_date(value):
     """Parse YYYY-MM or YYYY-MM-DD values into a datetime for sorting/calendar use."""
     raw = str(value or "").strip()
@@ -1441,6 +1584,8 @@ def build_azure_retirement_calendar(articles, max_items=120):
         title = article.get("title", "Untitled")
         link = article.get("link", "")
         dedupe_key = _azure_retirement_identity_key(title, link)
+        update_id = _extract_azure_update_id_from_url(link)
+        update_id_key = f"update-id:{update_id}" if update_id else ""
         if dedupe_key.endswith(":"):
             dedupe_key = f"fallback:{_normalize_for_match(title)}"
 
@@ -1454,6 +1599,8 @@ def build_azure_retirement_calendar(articles, max_items=120):
         }
 
         existing = events_by_key.get(dedupe_key)
+        if not existing and update_id_key:
+            existing = events_by_key.get(update_id_key)
         if existing:
             existing["sourceReports"].append(source_report)
             if article.get("published", "") > existing.get("published", ""):
@@ -1492,9 +1639,12 @@ def build_azure_retirement_calendar(articles, max_items=120):
                     if src
                 }
             )
+            events_by_key[dedupe_key] = existing
+            if update_id_key:
+                events_by_key[update_id_key] = existing
             continue
 
-        events_by_key[dedupe_key] = {
+        event = {
             "title": _display_calendar_title(title),
             "link": link,
             "retirementDate": retirement_date,
@@ -1506,8 +1656,18 @@ def build_azure_retirement_calendar(articles, max_items=120):
             "sources": [source_label] if source_label else [],
             "sourceReports": [source_report],
         }
+        events_by_key[dedupe_key] = event
+        if update_id_key:
+            events_by_key[update_id_key] = event
 
-    events = list(events_by_key.values())
+    events = []
+    seen_ids = set()
+    for event in events_by_key.values():
+        event_identity = id(event)
+        if event_identity in seen_ids:
+            continue
+        seen_ids.add(event_identity)
+        events.append(event)
     for event in events:
         event["sourceCount"] = len(event.get("sourceReports", []))
 
@@ -1892,6 +2052,7 @@ def main():
     all_articles.extend(fetch_devblogs_feeds())
     all_articles.extend(fetch_azure_updates_feed())
     all_articles.extend(fetch_aztty_announcements())
+    all_articles.extend(fetch_azure_retirements_from_csv())
     raw_article_count = len(all_articles)
 
     # Fetch Savill video (independent of article feeds)
