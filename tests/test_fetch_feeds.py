@@ -459,6 +459,49 @@ class PublishFailsafeTests(unittest.TestCase):
         self.assertIn("absolute_trigger=False", details)
 
 
+class MainFeedFilteringTests(unittest.TestCase):
+    def test_filter_main_feed_articles_excludes_workbook_entries(self):
+        articles = [
+            {"title": "Workbook retirement", "blogId": "azureretirements"},
+            {"title": "Azure Update", "blogId": "azureupdates"},
+        ]
+
+        filtered = fetch_feeds.filter_main_feed_articles(articles)
+
+        self.assertEqual(len(filtered), 1)
+        self.assertEqual(filtered[0]["blogId"], "azureupdates")
+
+    def test_load_previous_main_feed_article_count_uses_filtered_articles(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = pathlib.Path(tmpdir) / "feeds.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "totalArticles": 3,
+                        "articles": [
+                            {"title": "Workbook", "blogId": "azureretirements"},
+                            {"title": "Azure Update", "blogId": "azureupdates"},
+                            {"title": "AKS", "blogId": "aksblog"},
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            count = fetch_feeds.load_previous_main_feed_article_count(str(path))
+
+        self.assertEqual(count, 2)
+
+    def test_load_previous_main_feed_article_count_falls_back_to_total_articles(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = pathlib.Path(tmpdir) / "feeds.json"
+            path.write_text(json.dumps({"totalArticles": 17}), encoding="utf-8")
+
+            count = fetch_feeds.load_previous_main_feed_article_count(str(path))
+
+        self.assertEqual(count, 17)
+
+
 class YouTubeVideoHelperTests(unittest.TestCase):
     def test_extract_youtube_video_id_supports_watch_and_short_urls(self):
         self.assertEqual(
@@ -1525,7 +1568,9 @@ class MainOutputSchemaTests(unittest.TestCase):
 
             payload = json.loads((pathlib.Path(tmpdir) / "data" / "feeds.json").read_text(encoding="utf-8"))
 
-        self.assertEqual(payload["totalArticles"], 2)
+        self.assertEqual(payload["totalArticles"], 1)
+        self.assertEqual(len(payload["articles"]), 1)
+        self.assertEqual(payload["articles"][0]["blogId"], "azuredeprecations")
         self.assertIn("azureRetirementCalendar", payload)
         self.assertIn("azureRetirementBuckets", payload)
         self.assertEqual(len(payload["azureRetirementCalendar"]), 2)

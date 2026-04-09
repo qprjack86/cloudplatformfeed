@@ -140,6 +140,7 @@ PUBLIC_SUMMARY_REASONS = {
 FAILSAFE_MIN_ARTICLES = 80
 FAILSAFE_MIN_RATIO = 0.60
 RUN_METRICS_ENV_VAR = "AZUREFEED_RUN_METRICS_PATH"
+WORKBOOK_BLOG_ID = "azureretirements"
 
 
 CHECKSUM_ARTIFACTS = [
@@ -2349,6 +2350,37 @@ def load_previous_article_count(path):
     return shared_load_previous_article_count(path, logger=print)
 
 
+def filter_main_feed_articles(articles):
+    """Exclude calendar-only sources from the main feed article list."""
+    return [
+        article
+        for article in (articles or [])
+        if article.get("blogId") != WORKBOOK_BLOG_ID
+    ]
+
+
+def load_previous_main_feed_article_count(path):
+    """Return previous main feed count using current exclusion rules."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        print(f"No previous output found at {path}; skip publish fail-safe baseline")
+        return None
+    except (json.JSONDecodeError, OSError, ValueError) as e:
+        print(f"Could not load previous output {path} ({e}); skip publish fail-safe baseline")
+        return None
+
+    previous_articles = data.get("articles")
+    if isinstance(previous_articles, list):
+        return len(filter_main_feed_articles(previous_articles))
+
+    # Fallback for legacy payloads that only expose totalArticles.
+    if isinstance(data.get("totalArticles"), int):
+        return data.get("totalArticles")
+    return None
+
+
 def evaluate_publish_failsafe(
     new_count,
     previous_count,
@@ -2468,15 +2500,16 @@ def main():
     unique_articles = dedupe_articles(all_articles)
     retirement_calendar = build_azure_retirement_calendar(unique_articles)
     retirement_buckets = build_retirement_window_buckets(retirement_calendar)
+    main_feed_articles = filter_main_feed_articles(unique_articles)
 
     discarded = len(all_articles) - len(unique_articles)
     if discarded:
         print(f"Filtered out {discarded} duplicate/older-than-30-days articles")
 
     output_path = os.path.join("data", "feeds.json")
-    previous_count = load_previous_article_count(output_path)
+    previous_count = load_previous_main_feed_article_count(output_path)
     failsafe_triggered, failsafe_details = evaluate_publish_failsafe(
-        len(unique_articles), previous_count
+        len(main_feed_articles), previous_count
     )
     if previous_count is None:
         print("Publish fail-safe bypassed due to missing or unreadable baseline")
@@ -2485,7 +2518,7 @@ def main():
         print(f"  {failsafe_details}")
         run_metrics = build_run_metrics(
             raw_article_count=raw_article_count,
-            unique_article_count=len(unique_articles),
+            unique_article_count=len(main_feed_articles),
             previous_article_count=previous_count,
             failsafe_triggered=True,
             failsafe_details=failsafe_details,
@@ -2502,12 +2535,12 @@ def main():
         print(f"  {failsafe_details}")
 
     # Generate AI summary (optional)
-    summary_payload = generate_ai_summary(unique_articles)
+    summary_payload = generate_ai_summary(main_feed_articles)
 
     data = {
         "lastUpdated": datetime.now(timezone.utc).isoformat(),
-        "totalArticles": len(unique_articles),
-        "articles": unique_articles,
+        "totalArticles": len(main_feed_articles),
+        "articles": main_feed_articles,
         "summaryWindowDays": summary_payload.get("windowDays", SUMMARY_WINDOW_DAYS),
         "azureRetirementCalendar": retirement_calendar,
         "azureRetirementBuckets": retirement_buckets,
@@ -2534,7 +2567,7 @@ def main():
         json.dump(data, f, indent=2, ensure_ascii=False)
 
     # Generate RSS feed
-    generate_rss_feed(unique_articles)
+    generate_rss_feed(main_feed_articles)
 
     # Generate ICS calendar for subscription/sync scenarios.
     write_azure_retirements_ics(retirement_calendar)
@@ -2543,7 +2576,7 @@ def main():
 
     run_metrics = build_run_metrics(
         raw_article_count=raw_article_count,
-        unique_article_count=len(unique_articles),
+        unique_article_count=len(main_feed_articles),
         previous_article_count=previous_count,
         failsafe_triggered=False,
         failsafe_details=failsafe_details,
@@ -2556,7 +2589,10 @@ def main():
     write_run_metrics(run_metrics)
 
     print(f"\n{'=' * 60}")
-    print(f"Done! {len(unique_articles)} unique articles saved to {output_path}")
+    print(
+        f"Done! {len(main_feed_articles)} feed articles "
+        f"(from {len(unique_articles)} unique source articles) saved to {output_path}"
+    )
     print(f"{'=' * 60}")
 
 

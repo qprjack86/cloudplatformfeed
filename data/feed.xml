@@ -4,458 +4,458 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 09 Apr 2026 17:16:40 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 18:03:31 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
-      <title><![CDATA[Retirement: FluidRelay Server - Outdated client library]]></title>
-      <link>https://learn.microsoft.com/en-us/azure/azure-fluid-relay/concepts/version-compatibility</link>
-      <guid>https://learn.microsoft.com/en-us/azure/azure-fluid-relay/concepts/version-compatibility</guid>
-      <description><![CDATA[Outdated client library. Service: FluidRelay Server. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[How we build and use Azure SRE Agent with agentic workflows]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</guid>
+      <description><![CDATA[The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...]]></description>
+      <dc:creator><![CDATA[Shamir_AbdulAziz]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 17:52:27 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Application gateway - V1]]></title>
-      <link>https://azure.microsoft.com/updates?id=application-gateway-v1-will-be-retired-on-28-april-2026-transition-to-application-gateway-v2</link>
-      <guid>https://azure.microsoft.com/updates?id=application-gateway-v1-will-be-retired-on-28-april-2026-transition-to-application-gateway-v2</guid>
-      <description><![CDATA[V1. Service: Application gateway. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Advancing to Agentic AI with Azure NetApp Files VS Code Extension v1.2.0]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/advancing-to-agentic-ai-with-azure-netapp-files-vs-code/ba-p/4500383</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/advancing-to-agentic-ai-with-azure-netapp-files-vs-code/ba-p/4500383</guid>
+      <description><![CDATA[Table of Contents Abstract Introducing Agentic AI: The Agent Volume Scan Why This Matters Why AI-Informed Operations Core Components Enhanced Natural Language Interface AI-Powered Analysis and Templates What are the Benefits? Business Benefits Economic Benefits Technical Benefits Real‑World...]]></description>
+      <dc:creator><![CDATA[GeertVanTeylingen]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 17:03:05 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Virtual machine - Standard_M192ids_v2]]></title>
-      <link>https://azure.microsoft.com/updates?id=community-support-for-standardm192idsv2-is-ending-on-31-march-2027</link>
-      <guid>https://azure.microsoft.com/updates?id=community-support-for-standardm192idsv2-is-ending-on-31-march-2027</guid>
-      <description><![CDATA[Standard_M192ids_v2. Service: Virtual machine. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Running Multiple Instances of an Aspire AppHost Without Port Conflicts]]></title>
+      <link>https://devblogs.microsoft.com/aspire/aspire-isolated-mode-parallel-development/</link>
+      <guid>https://devblogs.microsoft.com/aspire/aspire-isolated-mode-parallel-development/</guid>
+      <description><![CDATA[Aspire 13.2 introduces isolated mode, letting you run multiple instances of the same AppHost in parallel without port conflicts. Learn how the --isolated flag solves development and testing workflows. The post Running Multiple Instances of an Aspire AppHost Without Port Conflicts appeared first on...]]></description>
+      <dc:creator><![CDATA[James Newton-King]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 17:00:00 GMT</pubDate>
+      <category><![CDATA[Aspire Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: FHIR service - SMART on FHIR proxy]]></title>
-      <link>https://azure.microsoft.com/updates?id=smart-on-fhir-proxy-feature-in-azure-health-data-services-will-be-retired-on-21st-september-2026-transition-to-smart-on-fhir</link>
-      <guid>https://azure.microsoft.com/updates?id=smart-on-fhir-proxy-feature-in-azure-health-data-services-will-be-retired-on-21st-september-2026-transition-to-smart-on-fhir</guid>
-      <description><![CDATA[SMART on FHIR proxy. Service: FHIR service. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Monitor AI Agents on App Service with OpenTelemetry and the New Application Insights Agents View]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/monitor-ai-agents-on-app-service-with-opentelemetry-and-the-new/ba-p/4510023</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/monitor-ai-agents-on-app-service-with-opentelemetry-and-the-new/ba-p/4510023</guid>
+      <description><![CDATA[Part 2 of 2: In Blog 1, we deployed a multi-agent travel planner on Azure App Service using the Microsoft Agent Framework (MAF) 1.0 GA. This post dives deep into how we instrumented those agents with OpenTelemetry and lit up the brand-new Agents (Preview) view in Application Insights. 📋...]]></description>
+      <dc:creator><![CDATA[jordanselig]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 16:43:43 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Front Door Profile - Standard from Microsoft (classic)]]></title>
-      <link>https://azure.microsoft.com/updates?id=Azure-CDN-Standard-from-Microsoft-classic-will-be-retired-on-30-September-2027</link>
-      <guid>https://azure.microsoft.com/updates?id=Azure-CDN-Standard-from-Microsoft-classic-will-be-retired-on-30-September-2027</guid>
-      <description><![CDATA[Standard from Microsoft (classic). Service: Front Door Profile. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Announcing Private Preview: Deploy Ansible Playbooks using Azure Policy via Machine Configuration]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-private-preview-deploy-ansible-playbooks-using-azure/ba-p/4507848</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-private-preview-deploy-ansible-playbooks-using-azure/ba-p/4507848</guid>
+      <description><![CDATA[Azure Arc is on a mission to unify security, compliance, and management for Windows and Linux machines—anywhere. By extending Azure’s control plane beyond the cloud, Azure Arc enables organizations to unify governance, compliance, security and management of servers across on‑premises, edge, and...]]></description>
+      <dc:creator><![CDATA[alinetran]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 16:25:52 GMT</pubDate>
+      <category><![CDATA[Azure Arc]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Virtual network gateway - Non-AZ VPNs]]></title>
-      <link>https://azure.microsoft.com/updates?id=vpngw1-5-non-az-skus-will-be-retired-on-30-september-2026</link>
-      <guid>https://azure.microsoft.com/updates?id=vpngw1-5-non-az-skus-will-be-retired-on-30-september-2026</guid>
-      <description><![CDATA[Non-AZ VPNs. Service: Virtual network gateway. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Build Multi-Agent AI Apps on Azure App Service with Microsoft Agent Framework 1.0]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-apps-on-azure-app-service-with-microsoft/ba-p/4510017</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-apps-on-azure-app-service-with-microsoft/ba-p/4510017</guid>
+      <description><![CDATA[A couple of months ago, we published a three-part series showing how to build multi-agent AI systems on Azure App Service using preview packages from the Microsoft Agent Framework (MAF) (formerly AutoGen / Semantic Kernel Agents). The series walked through async processing, the request-reply...]]></description>
+      <dc:creator><![CDATA[jordanselig]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 16:24:13 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Load balancer - Inbound NAT rule V1]]></title>
-      <link>https://azure.microsoft.com/updates?id=Retirement-notice-Azure-Load-Balancer-Inbound-NAT-rule-V1-for-Azure-VMs-and-Azure-VMSS-will-be-retired</link>
-      <guid>https://azure.microsoft.com/updates?id=Retirement-notice-Azure-Load-Balancer-Inbound-NAT-rule-V1-for-Azure-VMs-and-Azure-VMSS-will-be-retired</guid>
-      <description><![CDATA[Inbound NAT rule V1. Service: Load balancer. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Sovereignty in Azure Belgium Central: A Three-Layer Technical Deep Dive]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-confidential-computing/sovereignty-in-azure-belgium-central-a-three-layer-technical/ba-p/4506936</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-confidential-computing/sovereignty-in-azure-belgium-central-a-three-layer-technical/ba-p/4506936</guid>
+      <description><![CDATA[When Belgium Central went live in November 2025, it marked the launch of a new Azure region for Belgian organizations operating in the EU. For many scenarios, it enables customers to run workloads in-country and apply technical controls that can support sovereignty requirements. But "sovereignty"...]]></description>
+      <dc:creator><![CDATA[wesback]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 16:00:00 GMT</pubDate>
+      <category><![CDATA[Confidential Computing]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Application gateway - WAF v2 Config]]></title>
-      <link>https://learn.microsoft.com/azure/web-application-firewall/ag/upgrade-ag-waf-policy?tabs=portal#upgrade-waf-v2-with-legacy-waf-configuration-to-waf-policy</link>
-      <guid>https://learn.microsoft.com/azure/web-application-firewall/ag/upgrade-ag-waf-policy?tabs=portal#upgrade-waf-v2-with-legacy-waf-configuration-to-waf-policy</guid>
-      <description><![CDATA[WAF v2 Config. Service: Application gateway. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Building an End-to-End MLOps Pipeline: From Training to Managed Endpoints on Azure]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-end-to-end-mlops-pipeline-from-training-to-managed/ba-p/4509852</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-end-to-end-mlops-pipeline-from-training-to-managed/ba-p/4509852</guid>
+      <description><![CDATA[Introduction Machine learning models are only as valuable as the infrastructure that supports them. A model trained in a Jupyter notebook and saved to a shared folder creates a chain of problems: no versioning, no reproducibility, no clear ownership, and no automated path to production. When the...]]></description>
+      <dc:creator><![CDATA[Gapandey]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 10:45:39 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Availability test - Single URL Ping Test]]></title>
-      <link>https://azure.microsoft.com/updates?id=transition-to-using-standard-tests-for-singlestep-availability-testing-in-azure-monitor-application-insights-by-30-september</link>
-      <guid>https://azure.microsoft.com/updates?id=transition-to-using-standard-tests-for-singlestep-availability-testing-in-azure-monitor-application-insights-by-30-september</guid>
-      <description><![CDATA[Single URL Ping Test. Service: Availability test. Impacted services: Yes]]></description>
+      <title><![CDATA[What’s new in Fabric Eventstream: 2026 Q1 Edition]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-eventstream-2026-q1-edition/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-eventstream-2026-q1-edition/</guid>
+      <description><![CDATA[Coauthor: Arindam Chatterjee Over the first quarter of 2026, Fabric Eventstreams shipped meaningful improvements across three themes that have repeatedly come up in feedback from our broad community of customers and partners: broader connectivity, richer real-time processing, and secure...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Thu, 09 Apr 2026 10:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Automation account - State Configuration (DSC)]]></title>
-      <link>https://azure.microsoft.com/updates/v2/Planned-Service-Retirement-Azure-Automation-State-Configuration-16-September-2027</link>
-      <guid>https://azure.microsoft.com/updates/v2/Planned-Service-Retirement-Azure-Automation-State-Configuration-16-September-2027</guid>
-      <description><![CDATA[State Configuration (DSC). Service: Automation account. Impacted services: No]]></description>
+      <title><![CDATA[Associated identities for items]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/associated-identities-for-items-preview/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/associated-identities-for-items-preview/</guid>
+      <description><![CDATA[Background Currently, many items still rely on the item’s owner identity for accessing connections and certain features (like delegated mode in SQL endpoint) specific to the item. If the owner leaves the organization or their credentials expire, items can become partially or fully non-functional....]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Thu, 09 Apr 2026 09:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Azure Maps Account - Web SDK Map Controls v1.xx]]></title>
-      <link>https://azure.microsoft.com/updates/azure-maps-web-sdk-map-controls-version-1xx-will-be-retired-on-19-september-2026/</link>
-      <guid>https://azure.microsoft.com/updates/azure-maps-web-sdk-map-controls-version-1xx-will-be-retired-on-19-september-2026/</guid>
-      <description><![CDATA[Web SDK Map Controls v1.xx. Service: Azure Maps Account. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Enterprise UAMI Design in Azure: Trust Boundaries and Blast Radius]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614</guid>
+      <description><![CDATA[As organizations move toward secretless authentication models in Azure, Managed Identity has become the preferred approach for enabling secure communication between services. User Assigned Managed Identity (UAMI) in particular offers flexibility that allows identity reuse across multiple compute...]]></description>
+      <dc:creator><![CDATA[AmitManchanda28]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 08:13:33 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Azure Sphere Catalog - Public API]]></title>
-      <link>https://azure.microsoft.com/updates/v2/Azure-Sphere-Legacy-Interface-Retirement</link>
-      <guid>https://azure.microsoft.com/updates/v2/Azure-Sphere-Legacy-Interface-Retirement</guid>
-      <description><![CDATA[Public API. Service: Azure Sphere Catalog. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Understanding Agentic Function-Calling with Multi-Modal Data Access]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-agentic-function-calling-with-multi-modal-data/ba-p/4504151</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-agentic-function-calling-with-multi-modal-data/ba-p/4504151</guid>
+      <description><![CDATA[What You'll Learn Why traditional API design struggles when questions span multiple data sources, and how function-calling solves this. How the iterative tool-use loop works — the model plans, calls tools, inspects results, and repeats until it has a complete answer. What makes an agent truly...]]></description>
+      <dc:creator><![CDATA[jayesh_mevada]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Subscription - Azure Virtual Desktop Classic]]></title>
-      <link>https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement</link>
-      <guid>https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement</guid>
-      <description><![CDATA[Azure Virtual Desktop Classic. Service: Subscription. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Deploying to Azure Web App from Azure DevOps Using UAMI]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800</guid>
+      <description><![CDATA[TOC UAMI Configuration App Configuration Azure DevOps Configuration Logs UAMI Configuration Create a User Assigned Managed Identity with no additional configuration.This identity will be mentioned in later steps, especially at Object ID. App Configuration On an existing Azure Web App, enable...]]></description>
+      <dc:creator><![CDATA[theringe]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 05:53:29 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cognitive Service - Studio v2.1]]></title>
-      <link>https://azure.microsoft.com/updates/v2/Azure-Docuement-Intelligence-V2-retirement</link>
-      <guid>https://azure.microsoft.com/updates/v2/Azure-Docuement-Intelligence-V2-retirement</guid>
-      <description><![CDATA[Studio v2.1. Service: Cognitive Service. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Designing Reliable Health Check Endpoints for IIS Behind Azure Application Gateway]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938</guid>
+      <description><![CDATA[Why Health Probes Matter in Azure Application Gateway Azure Application Gateway relies entirely on health probes to determine whether backend instances should receive traffic. If a probe: Receives a non‑200 response Times out Gets redirected Requires authentication …the backend is marked Unhealthy,...]]></description>
+      <dc:creator><![CDATA[AjaySingh_]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 23:18:05 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Log Analytics workspace - HTTP Data Collector API]]></title>
-      <link>https://learn.microsoft.com/azure/azure-monitor/logs/custom-logs-migrate</link>
-      <guid>https://learn.microsoft.com/azure/azure-monitor/logs/custom-logs-migrate</guid>
-      <description><![CDATA[HTTP Data Collector API. Service: Log Analytics workspace. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Enabling AI-Driven Enterprise Intelligence Using SAP and Microsoft 3-IQ Layers]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-ai-driven-enterprise-intelligence-using-sap-and/ba-p/4509721</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-ai-driven-enterprise-intelligence-using-sap-and/ba-p/4509721</guid>
+      <description><![CDATA[Architectural Context Enterprise SAP platforms such as SAP ECC, SAP S/4HANA, and SAP BW continue to function as authoritative transactional systems supporting financial accounting, treasury management, portfolio reporting, and regulatory compliance workflows. These environments are optimized for...]]></description>
+      <dc:creator><![CDATA[srhulsus]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 19:24:25 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Kubernetes - Azure Arc - Open Service Mesh add-on]]></title>
-      <link>https://azure.microsoft.com/updates/v2/open-service-mesh-extension-for-aks-retirement</link>
-      <guid>https://azure.microsoft.com/updates/v2/open-service-mesh-extension-for-aks-retirement</guid>
-      <description><![CDATA[Open Service Mesh add-on. Service: Kubernetes - Azure Arc. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Build and Host MCP Apps on Azure App Service]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-and-host-mcp-apps-on-azure-app-service/ba-p/4509705</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-and-host-mcp-apps-on-azure-app-service/ba-p/4509705</guid>
+      <description><![CDATA[MCP Apps are here, and they're a game-changer for building AI tools with interactive UIs. If you've been following the Model Context Protocol (MCP) ecosystem, you've probably heard about the MCP Apps spec — the first official MCP extension that lets your tools return rich, interactive UIs that...]]></description>
+      <dc:creator><![CDATA[jordanselig]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 18:10:03 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Front Door Web Application Firewall policy - Classic]]></title>
-      <link>https://azure.microsoft.com/updates/azure-front-door-classic-will-be-retired-on-31-march-2027/</link>
-      <guid>https://azure.microsoft.com/updates/azure-front-door-classic-will-be-retired-on-31-march-2027/</guid>
-      <description><![CDATA[Classic. Service: Front Door Web Application Firewall policy. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Fast cloud migration, measurable ROI: Forrester Total Economic Impact study of Azure VMware Solution]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-migration-and/fast-cloud-migration-measurable-roi-forrester-total-economic/ba-p/4508136</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-migration-and/fast-cloud-migration-measurable-roi-forrester-total-economic/ba-p/4508136</guid>
+      <description><![CDATA[Many organizations are balancing near-term continuity for VMware-based workloads with longer-term cloud modernization goals – all while managing cost, security, and resiliency. Azure VMware Solution (AVS) is built for this moment: a Microsoft-managed service verified by VMware that enables running...]]></description>
+      <dc:creator><![CDATA[BritneyCretella]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:59:23 GMT</pubDate>
+      <category><![CDATA[Azure Migration]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: App service - In-process model]]></title>
-      <link>https://azure.microsoft.com/updates/retirement-support-for-the-inprocess-model-for-net-apps-in-azure-functions-ends-10-november-2026/</link>
-      <guid>https://azure.microsoft.com/updates/retirement-support-for-the-inprocess-model-for-net-apps-in-azure-functions-ends-10-november-2026/</guid>
-      <description><![CDATA[In-process model. Service: App service. Impacted services: No]]></description>
+      <title><![CDATA[Generally Available: PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559623/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559623/</guid>
+      <description><![CDATA[PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by efficiently managing idle and short-lived connections.With this update, you benefit from the latest...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 17:45:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Recovery Services vault - Classic Alerts]]></title>
-      <link>https://azure.microsoft.com/updates/v2/azure-site-recovery-classic-alerts-retirement</link>
-      <guid>https://azure.microsoft.com/updates/v2/azure-site-recovery-classic-alerts-retirement</guid>
-      <description><![CDATA[Classic Alerts. Service: Recovery Services vault. Impacted services: No]]></description>
+      <title><![CDATA[Generally Available: Enhancements to maintenance notifications in Azure Service Health]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559628/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559628/</guid>
+      <description><![CDATA[We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per server, now you receive a single notification per region that consolidates maintenance details for...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 17:45:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Api Management - Built-in Analytics]]></title>
-      <link>https://azure.microsoft.com/updates/begin-using-azure-monitor-based-dashboards-in-azure-api-management-before-the-builtin-analytics-dashboards-are-retired-on-15/</link>
-      <guid>https://azure.microsoft.com/updates/begin-using-azure-monitor-based-dashboards-in-azure-api-management-before-the-builtin-analytics-dashboards-are-retired-on-15/</guid>
-      <description><![CDATA[Built-in Analytics. Service: Api Management. Impacted services: No]]></description>
+      <title><![CDATA[Enhancements to maintenance notifications in Azure Service Health]]></title>
+      <link>https://azure.microsoft.com/updates?id=559628</link>
+      <guid>https://azure.microsoft.com/updates?id=559628</guid>
+      <description><![CDATA[We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per server, now you receive a single notification per regioUpdate Type: GA, Services: Database for...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 17:45:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: App service - Version 1.x runtime]]></title>
-      <link>https://azure.microsoft.com/updates/support-for-the-1x-version-of-azure-functions-ends-14-september-2026/</link>
-      <guid>https://azure.microsoft.com/updates/support-for-the-1x-version-of-azure-functions-ends-14-september-2026/</guid>
-      <description><![CDATA[Version 1.x runtime. Service: App service. Impacted services: No]]></description>
+      <title><![CDATA[PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server]]></title>
+      <link>https://azure.microsoft.com/updates?id=559623</link>
+      <guid>https://azure.microsoft.com/updates?id=559623</guid>
+      <description><![CDATA[PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by efficiently managing idle and short-lived connections.With tUpdate Type: GA, Services: Database for...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 17:45:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Subscription - HPC Pack 2016]]></title>
-      <link>https://azure.microsoft.com/updates/hpc-pack-2016-will-be-retired-on-12-january-2027/</link>
-      <guid>https://azure.microsoft.com/updates/hpc-pack-2016-will-be-retired-on-12-january-2027/</guid>
-      <description><![CDATA[HPC Pack 2016. Service: Subscription. Impacted services: No]]></description>
+      <title><![CDATA[Public Preview: Azure Files assessments are now available using Azure Migrate]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560025/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560025/</guid>
+      <description><![CDATA[Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility into capacity and sources, and provides Azure...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Container registry - 2017-01-01-(GA) API]]></title>
-      <link>https://azure.microsoft.com/updates/we-re-ending-support-for-the-20170301ga-api/</link>
-      <guid>https://azure.microsoft.com/updates/we-re-ending-support-for-the-20170301ga-api/</guid>
-      <description><![CDATA[2017-01-01-(GA) API. Service: Container registry. Impacted services: No]]></description>
+      <title><![CDATA[Generally Available: Observability in AKS Namespace and Workload Views]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560039/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560039/</guid>
+      <description><![CDATA[AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilization across Nodes, Namespaces, Workloads, and...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cognitive Service - Azure Personalizer]]></title>
-      <link>https://azure.microsoft.com/updates?id=ai-services-personalizer-will-be-retired-on-1-october-2026</link>
-      <guid>https://azure.microsoft.com/updates?id=ai-services-personalizer-will-be-retired-on-1-october-2026</guid>
-      <description><![CDATA[Azure Personalizer. Service: Cognitive Service. Impacted services: Yes]]></description>
+      <title><![CDATA[Observability in AKS Namespace and Workload Views]]></title>
+      <link>https://azure.microsoft.com/updates?id=560039</link>
+      <guid>https://azure.microsoft.com/updates?id=560039</guid>
+      <description><![CDATA[AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilizatioUpdate Type: GA, Services: Kubernetes...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cognitive Service - Azure Anomaly Detector]]></title>
-      <link>https://azure.microsoft.com/updates?id=ai-services-anomaly-detector-will-be-retired-on-1-october-2026</link>
-      <guid>https://azure.microsoft.com/updates?id=ai-services-anomaly-detector-will-be-retired-on-1-october-2026</guid>
-      <description><![CDATA[Azure Anomaly Detector. Service: Cognitive Service. Impacted services: Yes]]></description>
+      <title><![CDATA[Azure Files assessments are now available using Azure Migrate]]></title>
+      <link>https://azure.microsoft.com/updates?id=560025</link>
+      <guid>https://azure.microsoft.com/updates?id=560025</guid>
+      <description><![CDATA[Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility intUpdate Type: Preview, Services: Azure...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Azure API for FHIR - Entire service]]></title>
-      <link>https://azure.microsoft.com/updates?id=azure-api-for-fhir-retirement</link>
-      <guid>https://azure.microsoft.com/updates?id=azure-api-for-fhir-retirement</guid>
-      <description><![CDATA[Entire service. Service: Azure API for FHIR. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Introducing SQL MCP Server]]></title>
+      <link>https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/</link>
+      <guid>https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/</guid>
+      <description><![CDATA[SQL MCP Server gives enterprises a secure, feature-rich way to enable agents to access data. This is accomplished without exposing the schema, risking consistency, or relying on fragile natural language parsing. SQL MCP Server is a feature of Data API builder, so deployments have a proven entity...]]></description>
+      <dc:creator><![CDATA[Jerry Nixon]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 16:01:37 GMT</pubDate>
+      <category><![CDATA[Azure SQL Dev Corner]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cognitive Service - Azure Metrics Advisor]]></title>
-      <link>https://azure.microsoft.com/updates?id=ai-services-metrics-advisor-will-be-retired-on-1-october-2026</link>
-      <guid>https://azure.microsoft.com/updates?id=ai-services-metrics-advisor-will-be-retired-on-1-october-2026</guid>
-      <description><![CDATA[Azure Metrics Advisor. Service: Cognitive Service. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure-functions/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure-functions/</guid>
+      <description><![CDATA[Learn how to connect your MCP server hosted on Azure Functions to Microsoft Foundry agents. This post covers authentication options and setup steps to give your AI agent access to custom MCP tools. The post Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions appeared first on...]]></description>
+      <dc:creator><![CDATA[Lily Ma]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 15:00:50 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Virtual machine - Standard_M192is_v2]]></title>
-      <link>https://azure.microsoft.com/updates?id=community-support-for-standardm192isv2-is-ending-on-31-march-2027</link>
-      <guid>https://azure.microsoft.com/updates?id=community-support-for-standardm192isv2-is-ending-on-31-march-2027</guid>
-      <description><![CDATA[Standard_M192is_v2. Service: Virtual machine. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Build Your AI Agent in 5 Minutes with AI Toolkit for VS Code]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/build-your-ai-agent-in-5-minutes-with-ai-toolkit-for-vs-code/ba-p/4509578</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/build-your-ai-agent-in-5-minutes-with-ai-toolkit-for-vs-code/ba-p/4509578</guid>
+      <description><![CDATA[What if building an AI agent was as easy as filling out a form? No frameworks to install. No boilerplate to copy-paste from GitHub. No YAML to debug at midnight. Just VS Code, one extension, and an idea. AI Toolkit for VS Code turns agent development into something anyone can do — whether you're a...]]></description>
+      <dc:creator><![CDATA[isha_sahni]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 09:59:38 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Virtual machine - Standard_M192ims_v2]]></title>
-      <link>https://azure.microsoft.com/updates?id=community-support-for-standardm192imsv2-is-ending-on-31-march-2027</link>
-      <guid>https://azure.microsoft.com/updates?id=community-support-for-standardm192imsv2-is-ending-on-31-march-2027</guid>
-      <description><![CDATA[Standard_M192ims_v2. Service: Virtual machine. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[AZD for Beginners: A Practical Introduction to Azure Developer CLI]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/azd-for-beginners-a-practical-introduction-to-azure-developer/ba-p/4503747</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/azd-for-beginners-a-practical-introduction-to-azure-developer/ba-p/4503747</guid>
+      <description><![CDATA[If you are learning how to get an application from your machine into Azure without stitching together every deployment step by hand, Azure Developer CLI, usually shortened to azd, is one of the most useful tools to understand early. It gives developers a workflow-focused command line for...]]></description>
+      <dc:creator><![CDATA[Lee_Stott]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Virtual machine - Standard_M192idms_v2]]></title>
-      <link>https://azure.microsoft.com/updates?id=support-for-standardm192idmsv2-will-be-retired-on-31-march-2027</link>
-      <guid>https://azure.microsoft.com/updates?id=support-for-standardm192idmsv2-will-be-retired-on-31-march-2027</guid>
-      <description><![CDATA[Standard_M192idms_v2. Service: Virtual machine. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Simplify Azure Arc Server Onboarding with Ansible and the New Onboarding Role]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new/ba-p/4509481</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new/ba-p/4509481</guid>
+      <description><![CDATA[If you’re already using Ansible to manage your infrastructure, there’s now a simpler—and more secure—way to bring machines under Azure Arc management. We’ve introduced a new Azure Arc onboarding role designed specifically for automated scenarios like Ansible playbooks. This role follows the...]]></description>
+      <dc:creator><![CDATA[alinetran]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 06:40:42 GMT</pubDate>
+      <category><![CDATA[Azure Arc]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Azure Maps Account - Gen1 price tier]]></title>
-      <link>https://azure.microsoft.com/updates?id=azure-maps-gen1-price-tier-retirement</link>
-      <guid>https://azure.microsoft.com/updates?id=azure-maps-gen1-price-tier-retirement</guid>
-      <description><![CDATA[Gen1 price tier. Service: Azure Maps Account. Impacted services: Yes]]></description>
+      <title><![CDATA[Azure Container Storage v2.1.0: Now GA with Elastic SAN]]></title>
+      <link>https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga</link>
+      <guid>https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga</guid>
+      <description><![CDATA[Explore what’s new in Azure Container Storage v2.1.0 with Elastic SAN integration, modular on-demand installation, and enhanced node selector support.]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[AKS Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Lab plan - V1 and V2]]></title>
-      <link>https://azure.microsoft.com/updates?id=Azure-Lab-Services-is-being-retired</link>
-      <guid>https://azure.microsoft.com/updates?id=Azure-Lab-Services-is-being-retired</guid>
-      <description><![CDATA[V1 and V2. Service: Lab plan. Impacted services: Yes]]></description>
+      <title><![CDATA[Turn your agents into AKS experts: Agent Skills for AKS]]></title>
+      <link>https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks</link>
+      <guid>https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks</guid>
+      <description><![CDATA[Announcing agent skills for AKS, easily pluggable into any agent to enhance them with built-in AKS expertise, safer workflows, and reduced developer overhead.]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[AKS Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cognitive Service - Azure Content Moderator]]></title>
-      <link>https://azure.microsoft.com/updates?id=azure-content-moderator-retirement</link>
-      <guid>https://azure.microsoft.com/updates?id=azure-content-moderator-retirement</guid>
-      <description><![CDATA[Azure Content Moderator. Service: Cognitive Service. Impacted services: Yes]]></description>
+      <title><![CDATA[Simplify Azure Arc Server Onboarding with Ansible and the New Onboarding Role]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azurearcblog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new-onboarding-role/4509481</link>
+      <guid>https://techcommunity.microsoft.com/blog/azurearcblog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new-onboarding-role/4509481</guid>
+      <description><![CDATA[If you’re already using Ansible to manage your infrastructure, there’s now a simpler—and more secure—way to bring machines under Azure Arc management. We’ve introduced a new Azure Arc onboarding role...Update Type: Announcement, Services: Azure Arc, Categories:]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 23:40:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Activity log alert rule - Alerts - GetAlertSummary API]]></title>
-      <link>https://azure.microsoft.com/updates/action-required-migrate-to-using-arg-query-for-get-alert-summary-in-azure-monitor/</link>
-      <guid>https://azure.microsoft.com/updates/action-required-migrate-to-using-arg-query-for-get-alert-summary-in-azure-monitor/</guid>
-      <description><![CDATA[Alerts - GetAlertSummary API. Service: Activity log alert rule. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[3 Ways to Get More from Azure SRE Agent]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/3-ways-to-get-more-from-azure-sre-agent/ba-p/4508993</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/3-ways-to-get-more-from-azure-sre-agent/ba-p/4508993</guid>
+      <description><![CDATA[When you first set up Azure SRE Agent, it’s tempting to give it everything. Connect all your alert sources, route every severity, set up scheduled tasks to poll your channels every 30 seconds. The agent can handle all of it. But a few simple configuration choices can help you get more value from...]]></description>
+      <dc:creator><![CDATA[dchelupati]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 23:33:10 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cognitive Service - v2.0 API]]></title>
-      <link>https://azure.microsoft.com/updates/retirement-azure-ai-document-intelligence-v20-api-will-be-retired-on-31-august-2026/</link>
-      <guid>https://azure.microsoft.com/updates/retirement-azure-ai-document-intelligence-v20-api-will-be-retired-on-31-august-2026/</guid>
-      <description><![CDATA[v2.0 API. Service: Cognitive Service. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Azure Monitor in Azure SRE Agent: Autonomous Alert Investigation and Intelligent Merging]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-monitor-in-azure-sre-agent-autonomous-alert-investigation/ba-p/4509069</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-monitor-in-azure-sre-agent-autonomous-alert-investigation/ba-p/4509069</guid>
+      <description><![CDATA[Azure Monitor is great at telling you something is wrong. But once the alert fires, the real work begins — someone has to open the portal, triage it, dig into logs, and figure out what happened. That takes time. And while they're investigating, the same alert keeps firing every few minutes,...]]></description>
+      <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 22:20:53 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Azure Maps Account - Render V1 APIs]]></title>
-      <link>https://azure.microsoft.com/updates/azure-maps-render-v1-apis-will-be-retired-on-17-september-2026/</link>
-      <guid>https://azure.microsoft.com/updates/azure-maps-render-v1-apis-will-be-retired-on-17-september-2026/</guid>
-      <description><![CDATA[Render V1 APIs. Service: Azure Maps Account. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[MCP as Easy as 1-2-3: Introducing the Fluent API for MCP Apps]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/mcp-as-easy-as-1-2-3-introducing-the-fluent-api-for-mcp-apps/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/mcp-as-easy-as-1-2-3-introducing-the-fluent-api-for-mcp-apps/</guid>
+      <description><![CDATA[Build MCP tools with rich UI experiences using the new Fluent API for MCP Apps in the .NET isolated worker. Configure views, permissions, and security policies with just a few lines of code. The post MCP as Easy as 1-2-3: Introducing the Fluent API for MCP Apps appeared first on Azure SDK Blog.]]></description>
+      <dc:creator><![CDATA[Lilian Kasem (she/her)]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 21:16:11 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Application Insights - Monitoring Support]]></title>
-      <link>https://azure.microsoft.com/updates/azure-monitor-for-aksengine-will-not-be-supported-on-14-september-2026/</link>
-      <guid>https://azure.microsoft.com/updates/azure-monitor-for-aksengine-will-not-be-supported-on-14-september-2026/</guid>
-      <description><![CDATA[Monitoring Support. Service: Application Insights. Impacted services: No]]></description>
+      <title><![CDATA[Generally Available: Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559547/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559547/</guid>
+      <description><![CDATA[Azure Red Hat OpenShift (ARO) now supports NVIDIA H100 and H200 GPU-based Azure Virtual Machine SKUs, enabling customers to run large-scale AI, machine learning, and high-performance computing (HPC) workloads on a fully managed OpenShift service. This update allows organizations to deploy...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 19:30:53 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: SQL database - Data Sync]]></title>
-      <link>https://azure.microsoft.com/updates/v2/SQL-Data-Sync-Retirement</link>
-      <guid>https://azure.microsoft.com/updates/v2/SQL-Data-Sync-Retirement</guid>
-      <description><![CDATA[Data Sync. Service: SQL database. Impacted services: No]]></description>
+      <title><![CDATA[Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support]]></title>
+      <link>https://azure.microsoft.com/updates?id=559547</link>
+      <guid>https://azure.microsoft.com/updates?id=559547</guid>
+      <description><![CDATA[Azure Red Hat OpenShift (ARO) now supports NVIDIA H100 and H200 GPU-based Azure Virtual Machine SKUs, enabling customers to run large-scale AI, machine learning, and high-performance computing (HPC) workloads on a fully managed OpenShift service. This updUpdate Type: GA, Services: Machine Learning,...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 19:30:53 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cognitive Service - Long audio API]]></title>
-      <link>https://azure.microsoft.com/updates/long-audio-api-will-be-retired-on-31-march-2027-migrate-to-the-new-batch-synthesis-api/</link>
-      <guid>https://azure.microsoft.com/updates/long-audio-api-will-be-retired-on-31-march-2027-migrate-to-the-new-batch-synthesis-api/</guid>
-      <description><![CDATA[Long audio API. Service: Cognitive Service. Impacted services: No]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[RSAC 2026: New Microsoft Sentinel Connectors Announcement]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</guid>
+      <description><![CDATA[Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...]]></description>
+      <dc:creator><![CDATA[JesseKopavi]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 18:41:22 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Data factory - Memory Optimized Data Flows]]></title>
-      <link>https://azure.microsoft.com/updates/were-retiring-memory-optimized-data-flows-in-azure-data-factory-use-general-purpose-for-better-performance-at-a-lower-price/</link>
-      <guid>https://azure.microsoft.com/updates/were-retiring-memory-optimized-data-flows-in-azure-data-factory-use-general-purpose-for-better-performance-at-a-lower-price/</guid>
-      <description><![CDATA[Memory Optimized Data Flows. Service: Data factory. Impacted services: No]]></description>
+      <title><![CDATA[Generally Available: Disable HTTP proxy in AKS]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/557857/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/557857/</guid>
+      <description><![CDATA[Organizations that use HTTP proxies to control outbound traffic often need to change or remove those settings as network requirements evolve, which can be disruptive in running clusters. Azure Kubernetes Service allows administrators to disable HTTP proxy variables for nodes and pods while...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 17:45:41 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: SQL server - Microsoft.SQL 2014-04-01 stable APIs]]></title>
-      <link>https://learn.microsoft.com/rest/api/sql/retirement</link>
-      <guid>https://learn.microsoft.com/rest/api/sql/retirement</guid>
-      <description><![CDATA[Microsoft.SQL 2014-04-01 stable APIs. Service: SQL server. Impacted services: No]]></description>
+      <title><![CDATA[Disable HTTP proxy in AKS]]></title>
+      <link>https://azure.microsoft.com/updates?id=557857</link>
+      <guid>https://azure.microsoft.com/updates?id=557857</guid>
+      <description><![CDATA[Organizations that use HTTP proxies to control outbound traffic often need to change or remove those settings as network requirements evolve, which can be disruptive in running clusters. Azure Kubernetes Service allows administrators to disable HTTP proxyUpdate Type: GA, Services: Kubernetes...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 17:45:41 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cognitive Service - S2, S3, and S4 price instances]]></title>
-      <link>https://azure.microsoft.com/updates/azure-ai-translator-s2s4-billing-instances-will-be-retired-on-1-october-2026-transition-to-commitment-tiers-for-discounted-pr/</link>
-      <guid>https://azure.microsoft.com/updates/azure-ai-translator-s2s4-billing-instances-will-be-retired-on-1-october-2026-transition-to-commitment-tiers-for-discounted-pr/</guid>
-      <description><![CDATA[S2, S3, and S4 price instances. Service: Cognitive Service. Impacted services: No]]></description>
+      <title><![CDATA[Generally Available: Azure Functions now supports MCP resource triggers]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559981/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559981/</guid>
+      <description><![CDATA[Developers building MCP servers on Azure Functions can expose tools but not resources. Now, Azure Functions supports MCP resource triggers, enabling developers to expose resources directly from an Azure Functions–hosted Model Context Protocol (MCP) server. Resources can include static or dynamic...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 17:15:12 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Service bus namespace - WindowsAzure.ServiceBus, Microsoft.Azure.ServiceBus and com.microsoft.azure.servicebus]]></title>
-      <link>https://azure.microsoft.com/updates/retirement-notice-update-your-azure-service-bus-sdk-libraries-by-30-september-2026/</link>
-      <guid>https://azure.microsoft.com/updates/retirement-notice-update-your-azure-service-bus-sdk-libraries-by-30-september-2026/</guid>
-      <description><![CDATA[WindowsAzure.ServiceBus, Microsoft.Azure.ServiceBus and com.microsoft.azure.servicebus. Service: Service bus namespace. Impacted services: No]]></description>
+      <title><![CDATA[Azure Functions now supports MCP resource triggers]]></title>
+      <link>https://azure.microsoft.com/updates?id=559981</link>
+      <guid>https://azure.microsoft.com/updates?id=559981</guid>
+      <description><![CDATA[Developers building MCP servers on Azure Functions can expose tools but not resources. Now, Azure Functions supports MCP resource triggers, enabling developers to expose resources directly from an Azure Functions–hosted Model Context Protocol (MCP) serverUpdate Type: GA, Services: Azure Functions,...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 17:15:12 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Azure Maps Account - Route v1 APIs]]></title>
-      <link>https://azure.microsoft.com/updates/?id=485819</link>
-      <guid>https://azure.microsoft.com/updates/?id=485819</guid>
-      <description><![CDATA[Route v1 APIs. Service: Azure Maps Account. Impacted services: Yes]]></description>
+      <title><![CDATA[Generally Available: Pod CIDR expansion in AKS]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/557907/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/557907/</guid>
+      <description><![CDATA[When clusters exhaust available pod IP addresses, teams have historically been forced to rebuild environments to restore capacity, creating operational disruption. Pod CIDR expansion allows overlay‑based AKS clusters to increase their pod IP range in place without cluster recreation. This enables...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 17:00:23 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Kubernetes service - Support for Ubuntu 20.04]]></title>
-      <link>https://azure.microsoft.com/updates/?id=485172</link>
-      <guid>https://azure.microsoft.com/updates/?id=485172</guid>
-      <description><![CDATA[Support for Ubuntu 20.04. Service: Kubernetes service. Impacted services: Yes]]></description>
+      <title><![CDATA[Pod CIDR expansion in AKS]]></title>
+      <link>https://azure.microsoft.com/updates?id=557907</link>
+      <guid>https://azure.microsoft.com/updates?id=557907</guid>
+      <description><![CDATA[When clusters exhaust available pod IP addresses, teams have historically been forced to rebuild environments to restore capacity, creating operational disruption. Pod CIDR expansion allows overlay‑based AKS clusters to increase their pod IP range in placUpdate Type: GA, Services: Kubernetes...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 17:00:23 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Container registry - Support for Docker Content Trust]]></title>
-      <link>https://azure.microsoft.com/updates/?id=485241</link>
-      <guid>https://azure.microsoft.com/updates/?id=485241</guid>
-      <description><![CDATA[Support for Docker Content Trust. Service: Container registry. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Agentic development aspirations: build, run, observe — without more Markdown]]></title>
+      <link>https://devblogs.microsoft.com/aspire/agentic-dev-aspirations/</link>
+      <guid>https://devblogs.microsoft.com/aspire/agentic-dev-aspirations/</guid>
+      <description><![CDATA[AI agents can write code but struggle to run and test it. Aspire gives your agent a codified app model to build, run, and observe your whole stack. The post Agentic development aspirations: build, run, observe — without more Markdown appeared first on Aspire Blog.]]></description>
+      <dc:creator><![CDATA[Maddy Montaquila]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 17:00:00 GMT</pubDate>
+      <category><![CDATA[Aspire Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: App service - Docker Compose]]></title>
-      <link>https://azure.microsoft.com/updates/?id=485167</link>
-      <guid>https://azure.microsoft.com/updates/?id=485167</guid>
-      <description><![CDATA[Docker Compose. Service: App service. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Logic Apps Aviators Newsletter - April 2026]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-april-2026/ba-p/4508804</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-april-2026/ba-p/4508804</guid>
+      <description><![CDATA[In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month April 2026's Ace Aviator: Marcelo Gomes Marcelo Gomes - Integration Team Leader @ COFCO International What’s your role and title? What are your responsibilities? I’m an Integration...]]></description>
+      <dc:creator><![CDATA[WSilveira]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 16:55:33 GMT</pubDate>
+      <category><![CDATA[Integrations on Azure]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Kubernetes - Azure Arc - Deployments on Windows Server 2019 and Windows Server 2022]]></title>
-      <link>https://azure.microsoft.com/updates?filters=%5B%22Retirements%22%5D</link>
-      <guid>https://azure.microsoft.com/updates?filters=%5B%22Retirements%22%5D</guid>
-      <description><![CDATA[Deployments on Windows Server 2019 and Windows Server 2022. Service: Kubernetes - Azure Arc. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Scalable AI with Azure Cosmos DB: Tredence Intelligent Document Processing (IDP) | March 2026]]></title>
+      <link>https://devblogs.microsoft.com/cosmosdb/scalable-ai-with-azure-cosmos-db-tredence-intelligent-document-processing-idp-march-2026/</link>
+      <guid>https://devblogs.microsoft.com/cosmosdb/scalable-ai-with-azure-cosmos-db-tredence-intelligent-document-processing-idp-march-2026/</guid>
+      <description><![CDATA[Azure Cosmos DB enables scalable AI-driven document processing, addressing one of the biggest barriers to operational scale in today’s enterprise AI landscape. Organizations continue to manage massive volumes of structured and unstructured content—contracts, regulatory filings, operational records,...]]></description>
+      <dc:creator><![CDATA[Manish Sharma]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 16:46:06 GMT</pubDate>
+      <category><![CDATA[Azure Cosmos DB Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Virtual network gateway - Manually registered Azure VPN clients]]></title>
-      <link>https://azure.microsoft.com/updates/?id=485535</link>
-      <guid>https://azure.microsoft.com/updates/?id=485535</guid>
-      <description><![CDATA[Manually registered Azure VPN clients. Service: Virtual network gateway. Impacted services: Yes]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <title><![CDATA[Take full control of your floating windows in Visual Studio]]></title>
+      <link>https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/</link>
+      <guid>https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/</guid>
+      <description><![CDATA[Make Visual Studio floating windows work perfectly with PowerToys FancyZones. Flip one option to get independent windows, better snapping, and less friction. The post Take full control of your floating windows in Visual Studio appeared first on Visual Studio Blog.]]></description>
+      <dc:creator><![CDATA[Mads Kristensen]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 14:00:39 GMT</pubDate>
+      <category><![CDATA[Visual Studio Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: Cloud Service - Extended Support]]></title>
-      <link>https://azure.microsoft.com/updates/?id=486344</link>
-      <guid>https://azure.microsoft.com/updates/?id=486344</guid>
-      <description><![CDATA[Extended Support. Service: Cloud Service. Impacted services: Yes]]></description>
+      <title><![CDATA[Premium SSD v2 Is Now Generally Available for Azure Database for PostgreSQL]]></title>
+      <link>https://techcommunity.microsoft.com/blog/adforpostgresql/premium-ssd-v2-is-now-generally-available-for-azure-database-for-postgresql/4508445</link>
+      <guid>https://techcommunity.microsoft.com/blog/adforpostgresql/premium-ssd-v2-is-now-generally-available-for-azure-database-for-postgresql/4508445</guid>
+      <description><![CDATA[We are excited to announce the General Availability (GA) of Premium SSD v2 for Azure Database for PostgreSQL flexible server. With Premium SSD v2, you can achieve up to 4× higher IOPS, significantly ...Update Type: GA, Services: Database for PostgreSQL, Categories:]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 17:16:26 GMT</pubDate>
-      <category><![CDATA[Azure Retirements Workbook]]></category>
+      <pubDate>Tue, 07 Apr 2026 10:24:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
