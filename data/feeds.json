@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-04-09T08:18:47.271802+00:00",
-  "totalArticles": 278,
+  "lastUpdated": "2026-04-09T11:58:13.825371+00:00",
+  "totalArticles": 277,
   "articles": [
+    {
+      "title": "Building an End-to-End MLOps Pipeline: From Training to Managed Endpoints on Azure",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-end-to-end-mlops-pipeline-from-training-to-managed/ba-p/4509852",
+      "published": "2026-04-09T10:45:39+00:00",
+      "summary": "Introduction Machine learning models are only as valuable as the infrastructure that supports them. A model trained in a Jupyter notebook and saved to a shared folder creates a chain of problems: no versioning, no reproducibility, no clear ownership, and no automated path to production. When the...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "Gapandey"
+    },
     {
       "title": "Enterprise UAMI Design in Azure: Trust Boundaries and Blast Radius",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614",
@@ -1580,15 +1589,6 @@
       "author": "Rajapriya"
     },
     {
-      "title": "🚀 Securing Enterprise AI: From Red Teaming to Risk Cards and Azure Guardrails",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/securing-enterprise-ai-from-red-teaming-to-risk-cards-and-azure/ba-p/4505388",
-      "published": "2026-03-25T05:03:42+00:00",
-      "summary": "AI is no longer experimental—it’s deeply embedded into critical business workflows. From copilots to decision intelligence systems, organizations are rapidly adopting large language models (LLMs). But here’s the reality: AI is not just another application layer—it’s a new attack surface. 🧠 Why...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "adityakumar60"
-    },
-    {
       "title": "Your Entire Engineering Floor Just Stopped Coding",
       "link": "https://devblogs.microsoft.com/all-things-azure/your-entire-engineering-floor-just-stopped-coding/",
       "published": "2026-03-25T03:38:23+00:00",
@@ -2786,15 +2786,6 @@
       "blog": "Aspire Blog",
       "blogId": "aspireblog",
       "author": "Maddy Montaquila"
-    },
-    {
-      "title": "Scaling DNS on AKS with Cilium: NodeLocal DNSCache, LRP, and FQDN Policies",
-      "link": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/scaling-dns-on-aks-with-cilium-nodelocal-dnscache-lrp-and-fqdn/ba-p/4486323",
-      "published": "2026-03-10T09:23:51+00:00",
-      "summary": "Why Adopt NodeLocal DNSCache? The primary drivers for adoption are usually: Eliminating Conntrack Pressure: In high-QPS UDP DNS scenarios, conntrack contention and UDP tracking can cause intermittent DNS response loss and retries; depending on resolver retry/timeouts, this can appear as...",
-      "blog": "Linux & Open Source",
-      "blogId": "linuxandopensourceblog",
-      "author": "Simone_Rodigari"
     }
   ],
   "summaryWindowDays": 5,
