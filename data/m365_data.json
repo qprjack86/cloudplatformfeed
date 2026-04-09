@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-09T16:03:33.668744+00:00",
-  "totalArticles": 73,
+  "generatedAt": "2026-04-09T16:59:29.012126+00:00",
+  "totalArticles": 70,
   "articles": [
     {
       "title": "Outlook: Upgraded Video and Audio Player for iOS",
@@ -1278,30 +1278,6 @@
       "_normalized_url": "message_center:MC1268714"
     },
     {
-      "title": "Microsoft Copilot Studio - Enable express mode for flows invoked by an agent or app",
-      "link": "https://deltapulse.app/item/MC1268694",
-      "published": "2026-04-02T16:26:58.000Z",
-      "summary": "",
-      "source": "m365",
-      "m365Service": "Microsoft Copilot (Power Platform)",
-      "m365AllServices": [
-        "Microsoft Copilot (Power Platform)"
-      ],
-      "m365Id": "MC1268694",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1268694"
-    },
-    {
       "title": "Windows 365: Windows 365 Link - Market Expansion",
       "link": "https://deltapulse.app/item/558253",
       "published": "2026-03-12T23:00:54.000Z",
@@ -1668,55 +1644,6 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268680"
-    },
-    {
-      "title": "(Updated) Updated UX in Viva Connections on Teams mobile",
-      "link": "https://deltapulse.app/item/MC1262585",
-      "published": "2026-03-26T23:43:35.000Z",
-      "summary": "",
-      "source": "m365",
-      "m365Service": "Microsoft Viva",
-      "m365AllServices": [
-        "Microsoft Viva"
-      ],
-      "m365Id": "MC1262585",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1262585"
-    },
-    {
-      "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-      "link": "https://deltapulse.app/item/MC1250279",
-      "published": "2026-03-12T23:42:55.000Z",
-      "summary": "",
-      "source": "m365",
-      "m365Service": "Planner",
-      "m365AllServices": [
-        "Planner",
-        "Microsoft Copilot (Microsoft 365)"
-      ],
-      "m365Id": "MC1250279",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026, April 2026, May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250279"
     }
   ],
   "byCategory": {
@@ -2887,30 +2814,6 @@
         "_normalized_url": "message_center:MC1269870"
       },
       {
-        "title": "Microsoft Copilot Studio - Enable express mode for flows invoked by an agent or app",
-        "link": "https://deltapulse.app/item/MC1268694",
-        "published": "2026-04-02T16:26:58.000Z",
-        "summary": "",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Power Platform)",
-        "m365AllServices": [
-          "Microsoft Copilot (Power Platform)"
-        ],
-        "m365Id": "MC1268694",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268694"
-      },
-      {
         "title": "Copilot Cowork now available in Frontier",
         "link": "https://deltapulse.app/item/MC1265767",
         "published": "2026-03-30T17:15:40.000Z",
@@ -3401,55 +3304,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1251200"
-      },
-      {
-        "title": "(Updated) Updated UX in Viva Connections on Teams mobile",
-        "link": "https://deltapulse.app/item/MC1262585",
-        "published": "2026-03-26T23:43:35.000Z",
-        "summary": "",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1262585",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262585"
-      },
-      {
-        "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-        "link": "https://deltapulse.app/item/MC1250279",
-        "published": "2026-03-12T23:42:55.000Z",
-        "summary": "",
-        "source": "m365",
-        "m365Service": "Planner",
-        "m365AllServices": [
-          "Planner",
-          "Microsoft Copilot (Microsoft 365)"
-        ],
-        "m365Id": "MC1250279",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026, May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250279"
       }
     ]
   },
@@ -4656,30 +4510,6 @@
         "_normalized_url": "message_center:MC1268714"
       },
       {
-        "title": "Microsoft Copilot Studio - Enable express mode for flows invoked by an agent or app",
-        "link": "https://deltapulse.app/item/MC1268694",
-        "published": "2026-04-02T16:26:58.000Z",
-        "summary": "",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Power Platform)",
-        "m365AllServices": [
-          "Microsoft Copilot (Power Platform)"
-        ],
-        "m365Id": "MC1268694",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268694"
-      },
-      {
         "title": "Windows 365: Windows 365 Link - Market Expansion",
         "link": "https://deltapulse.app/item/558253",
         "published": "2026-03-12T23:00:54.000Z",
@@ -5002,55 +4832,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268680"
-      },
-      {
-        "title": "(Updated) Updated UX in Viva Connections on Teams mobile",
-        "link": "https://deltapulse.app/item/MC1262585",
-        "published": "2026-03-26T23:43:35.000Z",
-        "summary": "",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1262585",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262585"
-      },
-      {
-        "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-        "link": "https://deltapulse.app/item/MC1250279",
-        "published": "2026-03-12T23:42:55.000Z",
-        "summary": "",
-        "source": "m365",
-        "m365Service": "Planner",
-        "m365AllServices": [
-          "Planner",
-          "Microsoft Copilot (Microsoft 365)"
-        ],
-        "m365Id": "MC1250279",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026, May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250279"
       }
     ],
     "in_development": [],
@@ -5180,7 +4961,7 @@
   },
   "m365RetirementCalendar": [],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-09T16:03:33.668544+00:00",
+    "generatedAt": "2026-04-09T16:59:29.011883+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
