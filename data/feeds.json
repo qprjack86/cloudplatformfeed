@@ -1,7 +1,16 @@
 {
-  "lastUpdated": "2026-04-09T11:58:13.825371+00:00",
-  "totalArticles": 277,
+  "lastUpdated": "2026-04-09T16:12:19.439889+00:00",
+  "totalArticles": 278,
   "articles": [
+    {
+      "title": "Sovereignty in Azure Belgium Central: A Three-Layer Technical Deep Dive",
+      "link": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/sovereignty-in-azure-belgium-central-a-three-layer-technical/ba-p/4506936",
+      "published": "2026-04-09T16:00:00+00:00",
+      "summary": "When Belgium Central went live in November 2025, it marked the launch of a new Azure region for Belgian organizations operating in the EU. For many scenarios, it enables customers to run workloads in-country and apply technical controls that can support sovereignty requirements. But \"sovereignty\"...",
+      "blog": "Confidential Computing",
+      "blogId": "azureconfidentialcomputingblog",
+      "author": "wesback"
+    },
     {
       "title": "Building an End-to-End MLOps Pipeline: From Training to Managed Endpoints on Azure",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-end-to-end-mlops-pipeline-from-training-to-managed/ba-p/4509852",

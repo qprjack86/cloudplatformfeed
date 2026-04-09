@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 09 Apr 2026 11:58:13 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 16:12:19 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Sovereignty in Azure Belgium Central: A Three-Layer Technical Deep Dive]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-confidential-computing/sovereignty-in-azure-belgium-central-a-three-layer-technical/ba-p/4506936</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-confidential-computing/sovereignty-in-azure-belgium-central-a-three-layer-technical/ba-p/4506936</guid>
+      <description><![CDATA[When Belgium Central went live in November 2025, it marked the launch of a new Azure region for Belgian organizations operating in the EU. For many scenarios, it enables customers to run workloads in-country and apply technical controls that can support sovereignty requirements. But "sovereignty"...]]></description>
+      <dc:creator><![CDATA[wesback]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 16:00:00 GMT</pubDate>
+      <category><![CDATA[Confidential Computing]]></category>
+    </item>
     <item>
       <title><![CDATA[Building an End-to-End MLOps Pipeline: From Training to Managed Endpoints on Azure]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-end-to-end-mlops-pipeline-from-training-to-managed/ba-p/4509852</link>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Pamela_Fox]]></dc:creator>
       <pubDate>Mon, 06 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Building Cost-Aware Azure Infrastructure Pipelines: Estimate Costs Before You Deploy]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-cost-aware-azure-infrastructure-pipelines-estimate/ba-p/4508776</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-cost-aware-azure-infrastructure-pipelines-estimate/ba-p/4508776</guid>
-      <description><![CDATA[The Problem: Cost Is a Blind Spot in IaC Reviews Code reviews for Bicep or Terraform templates typically focus on correctness, security, and compliance. But cost is rarely part of the review process because: Developers don't have easy access to pricing data at review time Azure pricing depends on...]]></description>
-      <dc:creator><![CDATA[whosocurious]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 06:28:43 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
   </channel>
 </rss>

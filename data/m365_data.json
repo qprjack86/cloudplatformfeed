@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-09T11:58:22.824322+00:00",
-  "totalArticles": 74,
+  "generatedAt": "2026-04-09T16:12:27.937772+00:00",
+  "totalArticles": 73,
   "articles": [
     {
       "title": "Outlook: Upgraded Video and Audio Player for iOS",
@@ -1137,48 +1137,6 @@
       "_normalized_url": "message_center:MC1268694"
     },
     {
-      "title": "Power Automate - Analyze processes using object-centric process mining",
-      "link": "https://deltapulse.app/item/MC1268680",
-      "published": "2026-04-02T15:54:53.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Power Automate",
-      "m365AllServices": [
-        "Microsoft Power Automate"
-      ],
-      "m365Id": "MC1268680",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1268680"
-    },
-    {
-      "title": "Power Apps – Build generative pages using external code generations tools",
-      "link": "https://deltapulse.app/item/MC1268500",
-      "published": "2026-04-02T14:22:40.000Z",
-      "source": "m365",
-      "m365Service": "Power Apps",
-      "m365AllServices": [
-        "Power Apps"
-      ],
-      "m365Id": "MC1268500",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "February 2026, April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1268500"
-    },
-    {
       "title": "Windows 365: Windows 365 Link - Market Expansion",
       "link": "https://deltapulse.app/item/558253",
       "published": "2026-03-12T23:00:54.000Z",
@@ -1198,25 +1156,6 @@
       "_normalized_url": "roadmap:558253"
     },
     {
-      "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
-      "link": "https://deltapulse.app/item/558538",
-      "published": "2026-03-30T16:15:57.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558538",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "July 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:558538"
-    },
-    {
       "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
       "link": "https://deltapulse.app/item/553213",
       "published": "2026-03-30T16:15:57.000Z",
@@ -1234,6 +1173,25 @@
       "m365IsMajorChange": false,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:553213"
+    },
+    {
+      "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
+      "link": "https://deltapulse.app/item/558538",
+      "published": "2026-03-30T16:15:57.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558538",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "July 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:558538"
     },
     {
       "title": "Microsoft Teams: Attendee capacity packs for Teams events",
@@ -1440,6 +1398,25 @@
       "_normalized_url": "message_center:MC1251200"
     },
     {
+      "title": "Microsoft Teams: Facilitator detects and answers questions",
+      "link": "https://deltapulse.app/item/558341",
+      "published": "2026-04-01T23:15:50.000Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558341",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "June 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:558341"
+    },
+    {
       "title": "Microsoft Teams: Improved organization for muted and meeting chats",
       "link": "https://deltapulse.app/item/559605",
       "published": "2026-04-01T23:15:50.000Z",
@@ -1459,23 +1436,25 @@
       "_normalized_url": "roadmap:559605"
     },
     {
-      "title": "Microsoft Teams: Facilitator detects and answers questions",
-      "link": "https://deltapulse.app/item/558341",
-      "published": "2026-04-01T23:15:50.000Z",
+      "title": "Power Automate - Analyze processes using object-centric process mining",
+      "link": "https://deltapulse.app/item/MC1268680",
+      "published": "2026-04-02T15:54:53.000Z",
       "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558341",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
+      "m365Service": "Microsoft Power Automate",
+      "m365AllServices": [
+        "Microsoft Power Automate"
+      ],
+      "m365Id": "MC1268680",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
       "m365Status": null,
-      "m365TargetDate": "June 2026",
+      "m365TargetDate": "May 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558341"
+      "_normalized_url": "message_center:MC1268680"
     },
     {
       "title": "(Updated) Updated UX in Viva Connections on Teams mobile",
@@ -2321,25 +2300,6 @@
         "_normalized_url": "roadmap:558253"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
-        "link": "https://deltapulse.app/item/558538",
-        "published": "2026-03-30T16:15:57.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558538",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558538"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
         "link": "https://deltapulse.app/item/553213",
         "published": "2026-03-30T16:15:57.000Z",
@@ -2357,6 +2317,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:553213"
+      },
+      {
+        "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
+        "link": "https://deltapulse.app/item/558538",
+        "published": "2026-03-30T16:15:57.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558538",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558538"
       },
       {
         "title": "Microsoft Teams: Attendee capacity packs for Teams events",
@@ -2456,25 +2435,6 @@
         "_normalized_url": "roadmap:558287"
       },
       {
-        "title": "Microsoft Teams: Improved organization for muted and meeting chats",
-        "link": "https://deltapulse.app/item/559605",
-        "published": "2026-04-01T23:15:50.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559605",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559605"
-      },
-      {
         "title": "Microsoft Teams: Facilitator detects and answers questions",
         "link": "https://deltapulse.app/item/558341",
         "published": "2026-04-01T23:15:50.000Z",
@@ -2492,6 +2452,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558341"
+      },
+      {
+        "title": "Microsoft Teams: Improved organization for muted and meeting chats",
+        "link": "https://deltapulse.app/item/559605",
+        "published": "2026-04-01T23:15:50.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559605",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559605"
       }
     ],
     "AI & Automation": [
@@ -2560,27 +2539,6 @@
         "_normalized_url": "message_center:MC1268694"
       },
       {
-        "title": "Power Automate - Analyze processes using object-centric process mining",
-        "link": "https://deltapulse.app/item/MC1268680",
-        "published": "2026-04-02T15:54:53.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Power Automate",
-        "m365AllServices": [
-          "Microsoft Power Automate"
-        ],
-        "m365Id": "MC1268680",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268680"
-      },
-      {
         "title": "Copilot Cowork now available in Frontier",
         "link": "https://deltapulse.app/item/MC1265767",
         "published": "2026-03-30T17:15:40.000Z",
@@ -2601,6 +2559,27 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1265767"
+      },
+      {
+        "title": "Power Automate - Analyze processes using object-centric process mining",
+        "link": "https://deltapulse.app/item/MC1268680",
+        "published": "2026-04-02T15:54:53.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft Power Automate",
+        "m365AllServices": [
+          "Microsoft Power Automate"
+        ],
+        "m365Id": "MC1268680",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1268680"
       }
     ],
     "Data & Analytics": [
@@ -2840,27 +2819,6 @@
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268720"
-      },
-      {
-        "title": "Power Apps – Build generative pages using external code generations tools",
-        "link": "https://deltapulse.app/item/MC1268500",
-        "published": "2026-04-02T14:22:40.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1268500",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "February 2026, April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268500"
       }
     ],
     "Other": [
@@ -3155,25 +3113,6 @@
         "_normalized_url": "roadmap:558565"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
-        "link": "https://deltapulse.app/item/558538",
-        "published": "2026-03-30T16:15:57.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558538",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558538"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
         "link": "https://deltapulse.app/item/553213",
         "published": "2026-03-30T16:15:57.000Z",
@@ -3191,6 +3130,25 @@
         "m365IsMajorChange": false,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:553213"
+      },
+      {
+        "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
+        "link": "https://deltapulse.app/item/558538",
+        "published": "2026-03-30T16:15:57.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558538",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558538"
       }
     ],
     "launched_ga": [
@@ -4234,48 +4192,6 @@
         "_normalized_url": "message_center:MC1268694"
       },
       {
-        "title": "Power Automate - Analyze processes using object-centric process mining",
-        "link": "https://deltapulse.app/item/MC1268680",
-        "published": "2026-04-02T15:54:53.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Power Automate",
-        "m365AllServices": [
-          "Microsoft Power Automate"
-        ],
-        "m365Id": "MC1268680",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268680"
-      },
-      {
-        "title": "Power Apps – Build generative pages using external code generations tools",
-        "link": "https://deltapulse.app/item/MC1268500",
-        "published": "2026-04-02T14:22:40.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1268500",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "February 2026, April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268500"
-      },
-      {
         "title": "Windows 365: Windows 365 Link - Market Expansion",
         "link": "https://deltapulse.app/item/558253",
         "published": "2026-03-12T23:00:54.000Z",
@@ -4499,6 +4415,25 @@
         "_normalized_url": "message_center:MC1251200"
       },
       {
+        "title": "Microsoft Teams: Facilitator detects and answers questions",
+        "link": "https://deltapulse.app/item/558341",
+        "published": "2026-04-01T23:15:50.000Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558341",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:558341"
+      },
+      {
         "title": "Microsoft Teams: Improved organization for muted and meeting chats",
         "link": "https://deltapulse.app/item/559605",
         "published": "2026-04-01T23:15:50.000Z",
@@ -4518,23 +4453,25 @@
         "_normalized_url": "roadmap:559605"
       },
       {
-        "title": "Microsoft Teams: Facilitator detects and answers questions",
-        "link": "https://deltapulse.app/item/558341",
-        "published": "2026-04-01T23:15:50.000Z",
+        "title": "Power Automate - Analyze processes using object-centric process mining",
+        "link": "https://deltapulse.app/item/MC1268680",
+        "published": "2026-04-02T15:54:53.000Z",
         "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558341",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
+        "m365Service": "Microsoft Power Automate",
+        "m365AllServices": [
+          "Microsoft Power Automate"
+        ],
+        "m365Id": "MC1268680",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
         "m365Status": null,
-        "m365TargetDate": "June 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558341"
+        "_normalized_url": "message_center:MC1268680"
       },
       {
         "title": "(Updated) Updated UX in Viva Connections on Teams mobile",
