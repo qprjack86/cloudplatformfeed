@@ -940,6 +940,12 @@
       var azureData = await azureResponse.json();
       azureFeedData = azureData;
       var azureArticles = azureData.articles || [];
+      var azureCutoff = localDaysAgo(30);
+      azureArticles = azureArticles.filter(function (article) {
+        var articleDate = getArticleDate(article);
+        if (!articleDate) return false;
+        return articleDate >= azureCutoff;
+      });
       
       // Mark Azure articles with source
       azureArticles.forEach(function (a) { a.source = "azure"; });

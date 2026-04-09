@@ -1,7 +1,43 @@
 {
-  "lastUpdated": "2026-04-08T20:33:32.639599+00:00",
-  "totalArticles": 506,
+  "lastUpdated": "2026-04-09T08:27:38.883337+00:00",
+  "totalArticles": 513,
   "articles": [
+    {
+      "title": "Enterprise UAMI Design in Azure: Trust Boundaries and Blast Radius",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614",
+      "published": "2026-04-09T08:13:33+00:00",
+      "summary": "As organizations move toward secretless authentication models in Azure, Managed Identity has become the preferred approach for enabling secure communication between services. User Assigned Managed Identity (UAMI) in particular offers flexibility that allows identity reuse across multiple compute...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "AmitManchanda28"
+    },
+    {
+      "title": "Understanding Agentic Function-Calling with Multi-Modal Data Access",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-agentic-function-calling-with-multi-modal-data/ba-p/4504151",
+      "published": "2026-04-09T07:00:00+00:00",
+      "summary": "What You'll Learn Why traditional API design struggles when questions span multiple data sources, and how function-calling solves this. How the iterative tool-use loop works — the model plans, calls tools, inspects results, and repeats until it has a complete answer. What makes an agent truly...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "jayesh_mevada"
+    },
+    {
+      "title": "Deploying to Azure Web App from Azure DevOps Using UAMI",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800",
+      "published": "2026-04-09T05:53:29+00:00",
+      "summary": "TOC UAMI Configuration App Configuration Azure DevOps Configuration Logs UAMI Configuration Create a User Assigned Managed Identity with no additional configuration.This identity will be mentioned in later steps, especially at Object ID. App Configuration On an existing Azure Web App, enable...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "theringe"
+    },
+    {
+      "title": "Designing Reliable Health Check Endpoints for IIS Behind Azure Application Gateway",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938",
+      "published": "2026-04-08T23:18:05+00:00",
+      "summary": "Why Health Probes Matter in Azure Application Gateway Azure Application Gateway relies entirely on health probes to determine whether backend instances should receive traffic. If a probe: Receives a non‑200 response Times out Gets redirected Requires authentication …the backend is marked Unhealthy,...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "AjaySingh_"
+    },
     {
       "title": "Enabling AI-Driven Enterprise Intelligence Using SAP and Microsoft 3-IQ Layers",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-ai-driven-enterprise-intelligence-using-sap-and/ba-p/4509721",
@@ -184,6 +220,15 @@
       "link": "https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga",
       "published": "2026-04-08T00:00:00+00:00",
       "summary": "Explore what’s new in Azure Container Storage v2.1.0 with Elastic SAN integration, modular on-demand installation, and enhanced node selector support.",
+      "blog": "AKS Blog",
+      "blogId": "aksblog",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Turn your agents into AKS experts: Agent Skills for AKS",
+      "link": "https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks",
+      "published": "2026-04-08T00:00:00+00:00",
+      "summary": "Announcing agent skills for AKS, easily pluggable into any agent to enhance them with built-in AKS expertise, safer workflows, and reduced developer overhead.",
       "blog": "AKS Blog",
       "blogId": "aksblog",
       "author": "Microsoft"
@@ -655,6 +700,16 @@
       "blog": "Azure Infrastructure",
       "blogId": "azureinfrastructureblog",
       "author": "whosocurious"
+    },
+    {
+      "title": "A simpler way to deploy your code to Azure App Service for Linux",
+      "link": "https://azure.github.io/AppService/2026/04/06/quickdeploy.html",
+      "published": "2026-04-06T00:00:00+00:00",
+      "summary": "We’ve added a new deployment experience for Azure App Service for Linux that makes it easier to get your code running on your web app.Update Type: Announcement, Services: App Service, Categories: Services",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
     },
     {
       "title": "Building Cost-Aware Azure Infrastructure Pipelines: Estimate Costs Before You Deploy",
@@ -2503,15 +2558,6 @@
       "author": "Jason_Pereira"
     },
     {
-      "title": "Aspire on Azure App Service is now Generally Available",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aspire-on-azure-app-service-is-now-generally-available/ba-p/4505549",
-      "published": "2026-03-25T14:04:28+00:00",
-      "summary": "Today we are announcing General Availability of Aspire on Azure App Service, making it easier to take distributed applications from local development to a fully managed production environment on Azure App Service. With the Aspire.Hosting.Azure.AppService package, you can define your hosting...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "TulikaC"
-    },
-    {
       "title": "Use Copilot to create visuals in Real-Time Dashboards",
       "link": "https://blog.fabric.microsoft.com/en-US/blog/use-copilot-to-create-visuals-in-real-time-dashboards-preview/",
       "published": "2026-03-25T13:30:00+00:00",
@@ -2616,6 +2662,17 @@
       "author": "Microsoft",
       "announcementType": "update",
       "lifecycle": "in_preview"
+    },
+    {
+      "title": "Aspire on Azure App Service is now Generally Available",
+      "link": "https://techcommunity.microsoft.com/blog/appsonazureblog/aspire-on-azure-app-service-is-now-generally-available/4505549",
+      "published": "2026-03-25T07:04:00+00:00",
+      "summary": "Today we are announcing General Availability of Aspire on Azure App Service, making it easier to take distributed applications from local development to a fully managed production environment on Azur...Update Type: GA, Services: App Service, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update",
+      "lifecycle": "in_development"
     },
     {
       "title": "Microsoft Foundry Labs: A Practical Fast Lane from Research to Real Developer Work",
@@ -2987,15 +3044,6 @@
       "lifecycle": "in_preview"
     },
     {
-      "title": "Automating Azure OpenAI Cost Control Using Budgets, Action Groups, and Automation Runbooks",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/automating-azure-openai-cost-control-using-budgets-action-groups/ba-p/4505164",
-      "published": "2026-03-24T13:28:40+00:00",
-      "summary": "Introduction As organizations increasingly adopt Azure OpenAI for use cases such as generative AI, analytics, and experimentation, cost governance becomes a critical operational concern. Azure OpenAI workloads can scale quickly, and without proper controls, unmonitored usage may lead to unexpected...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "trisha1302"
-    },
-    {
       "title": "Outstanding connectivity for data movement in Fabric Data Factory",
       "link": "https://blog.fabric.microsoft.com/en-US/blog/outstanding-connectivity-for-data-movement-in-fabric-data-factory/",
       "published": "2026-03-24T13:00:00+00:00",
@@ -3108,6 +3156,16 @@
       "author": "SparshAgrawat"
     },
     {
+      "title": "Automating Azure OpenAI Cost Control Using Budgets, Action Groups, and Automation Runbooks",
+      "link": "https://techcommunity.microsoft.com/blog/azureinfrastructureblog/automating-azure-openai-cost-control-using-budgets-action-groups-and-automation-/4505164",
+      "published": "2026-03-24T06:28:00+00:00",
+      "summary": "Introduction As organizations increasingly adopt Azure OpenAI for use cases such as generative AI, analytics, and experimentation, cost governance becomes a critical operational concern. Azure Open...Update Type: Announcement, Services: Azure AI Services, Categories:",
+      "blog": "Azure Updates (aztty)",
+      "blogId": "azttyupdates",
+      "author": "Microsoft",
+      "announcementType": "update"
+    },
+    {
       "title": "SQL code analysis in VS Code: Configure rules without editing your project file",
       "link": "https://devblogs.microsoft.com/azure-sql/sql-code-analysis-in-vs-code-configure-rules-without-editing-your-project-file/",
       "published": "2026-03-24T03:30:13+00:00",
@@ -3208,39 +3266,6 @@
       "blog": "Azure PaaS",
       "blogId": "azurepaasblog",
       "author": "ruineiva"
-    },
-    {
-      "title": "Business Events in Microsoft Fabric",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/business-events-in-microsoft-fabric-preview/",
-      "published": "2026-03-23T13:30:00+00:00",
-      "summary": "Modern organizations generate countless signals as customers interact with applications; operations evolve, and market conditions change—but most of these signals remain locked in data and are often discovered too late for action. With Business Events in Microsoft Fabric (Preview), organizations...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Fabric CLI in Azure DevOps: automation without friction",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-cli-in-azure-devops-automation-without-friction-preview/",
-      "published": "2026-03-23T13:00:00+00:00",
-      "summary": "Modern analytics platforms demand modern DevOps practices. As organizations standardize Azure DevOps for CI/CD, they expect seamless integration with the services that power their data and analytics workloads. With Microsoft Fabric, that expectation is fully met.Update Type: Preview, Services:...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
-    },
-    {
-      "title": "Public APIs – bulk import and export items definition",
-      "link": "https://blog.fabric.microsoft.com/en-US/blog/public-apis-bulk-import-and-export-items-definition-preview/",
-      "published": "2026-03-23T11:30:00+00:00",
-      "summary": "Every Fabric item—whether a Notebook, Report, Semantic Model, Pipeline, or KQL Dashboard—has an underlying item definition: a portable, structured payload containing the item’s full configuration and content encoded in Base64. Bulk Import & Export APIs enables.Update Type: Preview, Services: ,...",
-      "blog": "Azure Updates (aztty)",
-      "blogId": "azttyupdates",
-      "author": "Microsoft",
-      "announcementType": "update",
-      "lifecycle": "in_preview"
     },
     {
       "title": "Reliable blob processing using Azure Logic Apps: Recommended architecture",
@@ -4205,15 +4230,6 @@
       "author": "shashban"
     },
     {
-      "title": "Building a Multi-Agent On-Call Copilot with Microsoft Agent Framework",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-multi-agent-on-call-copilot-with-microsoft-agent/ba-p/4499962",
-      "published": "2026-03-12T07:00:00+00:00",
-      "summary": "Four AI agents, one incident payload, structured triage in under 60 seconds powered by Microsoft Agent Framework and Foundry Hosted Agents. Multi-Agent Microsoft Agent Framework Foundry Hosted Agents Python SRE / Incident Response When an incident fires at 3 AM, every second the on-call engineer...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Lee_Stott"
-    },
-    {
       "title": "Temporary rollback: build identities can access Advanced Security: read alerts again",
       "link": "https://devblogs.microsoft.com/devops/temporary-rollback-build-identities-can-access-advanced-security-read-alerts-again/",
       "published": "2026-03-11T23:46:28+00:00",
@@ -4333,22 +4349,15 @@
       "author": "Simone_Rodigari"
     },
     {
-      "title": "How to Access a Shared OneDrive Folder in Azure Logic Apps",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-access-a-shared-onedrive-folder-in-azure-logic-apps/ba-p/4484962",
-      "published": "2026-03-10T06:39:31+00:00",
-      "summary": "What is the problem? A common enterprise automation scenario involves copying files from a OneDrive folder shared by a colleague into another storage service such as SharePoint or Azure Blob Storage using Azure Logic Apps. However, when you configure the OneDrive for Business – “List files in...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "Arpit_MSFT"
-    },
-    {
-      "title": "Azure Databricks & Fabric Disaster Recovery: The Better Together Story",
-      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323",
-      "published": "2026-03-10T01:46:28+00:00",
-      "summary": "Author's: Amudha Palani amudhapalani​, Oscar Alvarado oscaralvarado​, Eric Kwashie ekwashie​, Peter Lo PeterLo​ and Rafia Aqil Rafia_Aqil​ Disaster recovery (DR) is a critical component of any cloud-native data analytics platform, ensuring business continuity even during rare regional outages...",
-      "blog": "Analytics on Azure",
-      "blogId": "analyticsonazure",
-      "author": "Rafia_Aqil"
+      "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
+      "link": "https://azure.microsoft.com/en-us/updates/558102/",
+      "published": "2026-03-04T21:15:02.275174+00:00",
+      "summary": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now get enforced within 5 minutes.In light of cache refresh optimizations that are now in place, we’re...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-04-30"
     },
     {
       "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
@@ -4363,6 +4372,17 @@
       "azureRetirementDate": "2026-04"
     },
     {
+      "title": "Retirement: Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
+      "link": "https://azure.microsoft.com/en-us/updates/555839/",
+      "published": "2026-02-27T21:45:03.134436+00:00",
+      "summary": "The upstream Ingress-NGINX project is being deprecated and will stop receiving updates after March 2026. Microsoft will continue providing critical security patches through 30 November 2026, after which the NGINX ingress controller will no longer be supported within the Application Routing add-on....",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-11"
+    },
+    {
       "title": "Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
       "link": "https://azure.microsoft.com/updates?id=555839",
       "published": "2026-02-27T21:45:03+00:00",
@@ -4373,6 +4393,17 @@
       "announcementType": "deprecation",
       "lifecycle": "retiring",
       "azureRetirementDate": "2026-11"
+    },
+    {
+      "title": "Retirement: Windows Server Annual Channel (preview)",
+      "link": "https://azure.microsoft.com/en-us/updates/557224/",
+      "published": "2026-02-23T18:15:17.630857+00:00",
+      "summary": "Windows Server Annual Channel (Preview) on AKS will be retired on May 15, 2026, please transition to Long Term Servicing Channel (LTSC) by that date. We encourage you to transition to Long Term Servicing Channel (LTSC) prior to the retirement date to experience the benefits of LTSC including longer...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-05-15"
     },
     {
       "title": "Windows Server Annual Channel (preview)",
@@ -4387,6 +4418,17 @@
       "azureRetirementDate": "2026-05-15"
     },
     {
+      "title": "Retirement: \"Send data to Event Hubs & Storage (Preview)\" retiring July 31, 2026",
+      "link": "https://azure.microsoft.com/en-us/updates/551523/",
+      "published": "2026-01-30T18:30:02.620592+00:00",
+      "summary": "On July 31, 2026, we'll retire preview feature “Send virtual machine client data to Event Hubs and Storage (Preview)” and it'll no longer be supported by Microsoft. You will not be able to create any new data collection rules using this feature, and any existing configurations using this capability...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-07-31"
+    },
+    {
       "title": "\"Send data to Event Hubs & Storage (Preview)\" retiring July 31, 2026",
       "link": "https://azure.microsoft.com/updates?id=551523",
       "published": "2026-01-30T18:30:02+00:00",
@@ -4397,6 +4439,39 @@
       "announcementType": "deprecation",
       "lifecycle": "retiring",
       "azureRetirementDate": "2026-07-31"
+    },
+    {
+      "title": "Retirement: Support for Python 3.10 ends on October 1, 2026 – upgrade your Azure Functions apps to Python 3.13",
+      "link": "https://azure.microsoft.com/en-us/updates/545771/",
+      "published": "2026-01-28T23:15:47.914991+00:00",
+      "summary": "In alignment with the end of community support, on October 1, 2026, support for Python 3.10 in Azure Functions will end. Your apps that are hosted on Functions will continue to run, but security updates and performance optimizations will no longer be available and we'll no longer provide customer...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-10-01"
+    },
+    {
+      "title": "Retirement: Deprecation of Custom Resource Providers",
+      "link": "https://azure.microsoft.com/en-us/updates/513892/",
+      "published": "2025-12-29T17:30:40.793175+00:00",
+      "summary": "In 2026, Azure Resource Manager will be deprecating the Custom Resource Provider (CuRP) service.We will retire the feature by October 31, 2026. We will be performing a scream test on October 27, 2025, as part of this deprecation. On July 31, 2026, creates, updates, patches, and actions to custom...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-10-31"
+    },
+    {
+      "title": "Retirement: Remove dependency on these Azure ML SDKs before June 30, 2026",
+      "link": "https://azure.microsoft.com/en-us/updates/501668/",
+      "published": "2025-12-03T21:00:12.798141+00:00",
+      "summary": "On June 30, 2026, AzureML SDK V1 will reach end of life. The following SDKs which work in tandem with the AzureML SDK V1 will also be retired. azureml-train-core azureml-pipeline azureml-pipeline-core azureml-pipeline-internal azureml-pipeline-steps After June 30, 2026, you can continue to use...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "retiring",
+      "azureRetirementDate": "2026-06-30"
     },
     {
       "title": "Remove dependency on these Azure ML SDKs before June 30, 2026",
@@ -5374,28 +5449,6 @@
   "summaryWindowDays": 6,
   "azureRetirementCalendar": [
     {
-      "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
-      "link": "https://azure.microsoft.com/updates?id=558102",
-      "retirementDate": "2026-04",
-      "datePrecision": "month",
-      "published": "2026-03-04T21:15:02+00:00",
-      "blog": "Azure Deprecations (aztty)",
-      "blogId": "azuredeprecations",
-      "announcementType": "deprecation",
-      "sources": [
-        "Azure Deprecations (aztty)"
-      ],
-      "sourceReports": [
-        {
-          "blog": "Azure Deprecations (aztty)",
-          "blogId": "azuredeprecations",
-          "announcementType": "deprecation",
-          "link": "https://azure.microsoft.com/updates?id=558102"
-        }
-      ],
-      "sourceCount": 1
-    },
-    {
       "title": "Application Gateway V1 will be retired on 28 April 2026– Transition to Application Gateway V2",
       "link": "https://azure.microsoft.com/en-us/updates/application-gateway-v1-will-be-retired-on-28-april-2026-transition-to-application-gateway-v2/",
       "retirementDate": "2026-04-28",
@@ -5416,6 +5469,35 @@
         }
       ],
       "sourceCount": 1
+    },
+    {
+      "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
+      "link": "https://azure.microsoft.com/en-us/updates/558102/",
+      "retirementDate": "2026-04-30",
+      "datePrecision": "day",
+      "published": "2026-03-04T21:15:02.275174+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
+      "sources": [
+        "Azure Deprecations (aztty)",
+        "Azure Updates"
+      ],
+      "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/558102/"
+        },
+        {
+          "blog": "Azure Deprecations (aztty)",
+          "blogId": "azuredeprecations",
+          "announcementType": "deprecation",
+          "link": "https://azure.microsoft.com/updates?id=558102"
+        }
+      ],
+      "sourceCount": 2
     },
     {
       "title": "Cognitive Services Custom Commands feature is being retired on April 30, 2026",
@@ -5441,17 +5523,24 @@
     },
     {
       "title": "Windows Server Annual Channel (preview)",
-      "link": "https://azure.microsoft.com/updates?id=557224",
+      "link": "https://azure.microsoft.com/en-us/updates/557224/",
       "retirementDate": "2026-05-15",
       "datePrecision": "day",
-      "published": "2026-02-23T18:15:17+00:00",
-      "blog": "Azure Deprecations (aztty)",
-      "blogId": "azuredeprecations",
-      "announcementType": "deprecation",
+      "published": "2026-02-23T18:15:17.630857+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
       "sources": [
-        "Azure Deprecations (aztty)"
+        "Azure Deprecations (aztty)",
+        "Azure Updates"
       ],
       "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/557224/"
+        },
         {
           "blog": "Azure Deprecations (aztty)",
           "blogId": "azuredeprecations",
@@ -5459,7 +5548,7 @@
           "link": "https://azure.microsoft.com/updates?id=557224"
         }
       ],
-      "sourceCount": 1
+      "sourceCount": 2
     },
     {
       "title": "Flatcar Container Linux for AKS (preview)",
@@ -5514,17 +5603,24 @@
     },
     {
       "title": "Remove dependency on these Azure ML SDKs before June 30, 2026",
-      "link": "https://azure.microsoft.com/updates?id=501668",
+      "link": "https://azure.microsoft.com/en-us/updates/501668/",
       "retirementDate": "2026-06-30",
       "datePrecision": "day",
-      "published": "2025-12-03T21:00:12+00:00",
-      "blog": "Azure Deprecations (aztty)",
-      "blogId": "azuredeprecations",
-      "announcementType": "deprecation",
+      "published": "2025-12-03T21:00:12.798141+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
       "sources": [
-        "Azure Deprecations (aztty)"
+        "Azure Deprecations (aztty)",
+        "Azure Updates"
       ],
       "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/501668/"
+        },
         {
           "blog": "Azure Deprecations (aztty)",
           "blogId": "azuredeprecations",
@@ -5532,21 +5628,28 @@
           "link": "https://azure.microsoft.com/updates?id=501668"
         }
       ],
-      "sourceCount": 1
+      "sourceCount": 2
     },
     {
       "title": "\"Send data to Event Hubs & Storage (Preview)\" retiring July 31, 2026",
-      "link": "https://azure.microsoft.com/updates?id=551523",
+      "link": "https://azure.microsoft.com/en-us/updates/551523/",
       "retirementDate": "2026-07-31",
       "datePrecision": "day",
-      "published": "2026-01-30T18:30:02+00:00",
-      "blog": "Azure Deprecations (aztty)",
-      "blogId": "azuredeprecations",
-      "announcementType": "deprecation",
+      "published": "2026-01-30T18:30:02.620592+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
       "sources": [
-        "Azure Deprecations (aztty)"
+        "Azure Deprecations (aztty)",
+        "Azure Updates"
       ],
       "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/551523/"
+        },
         {
           "blog": "Azure Deprecations (aztty)",
           "blogId": "azuredeprecations",
@@ -5554,7 +5657,7 @@
           "link": "https://azure.microsoft.com/updates?id=551523"
         }
       ],
-      "sourceCount": 1
+      "sourceCount": 2
     },
     {
       "title": "Microsoft Defender for Cloud Deprecation in Microsoft Azure Operated by 21Vianet Announcement",
@@ -6209,18 +6312,69 @@
       "sourceCount": 1
     },
     {
-      "title": "Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
-      "link": "https://azure.microsoft.com/updates?id=555839",
-      "retirementDate": "2026-11",
-      "datePrecision": "month",
-      "published": "2026-02-27T21:45:03+00:00",
-      "blog": "Azure Deprecations (aztty)",
-      "blogId": "azuredeprecations",
-      "announcementType": "deprecation",
+      "title": "Support for Python 3.10 ends on October 1, 2026 – upgrade your Azure Functions apps to Python 3.13",
+      "link": "https://azure.microsoft.com/en-us/updates/545771/",
+      "retirementDate": "2026-10-01",
+      "datePrecision": "day",
+      "published": "2026-01-28T23:15:47.914991+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
       "sources": [
-        "Azure Deprecations (aztty)"
+        "Azure Updates"
       ],
       "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/545771/"
+        }
+      ],
+      "sourceCount": 1
+    },
+    {
+      "title": "Deprecation of Custom Resource Providers",
+      "link": "https://azure.microsoft.com/en-us/updates/513892/",
+      "retirementDate": "2026-10-31",
+      "datePrecision": "day",
+      "published": "2025-12-29T17:30:40.793175+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
+      "sources": [
+        "Azure Updates"
+      ],
+      "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/513892/"
+        }
+      ],
+      "sourceCount": 1
+    },
+    {
+      "title": "Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
+      "link": "https://azure.microsoft.com/en-us/updates/555839/",
+      "retirementDate": "2026-11",
+      "datePrecision": "month",
+      "published": "2026-02-27T21:45:03.134436+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
+      "sources": [
+        "Azure Deprecations (aztty)",
+        "Azure Updates"
+      ],
+      "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/555839/"
+        },
         {
           "blog": "Azure Deprecations (aztty)",
           "blogId": "azuredeprecations",
@@ -6228,7 +6382,7 @@
           "link": "https://azure.microsoft.com/updates?id=555839"
         }
       ],
-      "sourceCount": 1
+      "sourceCount": 2
     },
     {
       "title": "Support for the in-process model for .NET apps in Azure Functions ends 10 November 2026.",
@@ -7743,7 +7897,7 @@
     }
   ],
   "azureRetirementBuckets": {
-    "generatedAt": "2026-04-08T20:33:16.646402+00:00",
+    "generatedAt": "2026-04-09T08:27:38.876604+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -7753,15 +7907,15 @@
         "count": 7,
         "items": [
           {
-            "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
-            "link": "https://azure.microsoft.com/updates?id=558102",
-            "retirementDate": "2026-04",
-            "datePrecision": "month"
-          },
-          {
             "title": "Application Gateway V1 will be retired on 28 April 2026– Transition to Application Gateway V2",
             "link": "https://azure.microsoft.com/en-us/updates/application-gateway-v1-will-be-retired-on-28-april-2026-transition-to-application-gateway-v2/",
             "retirementDate": "2026-04-28",
+            "datePrecision": "day"
+          },
+          {
+            "title": "Azure Policy faster enforcement and retirement of login/logout workaround",
+            "link": "https://azure.microsoft.com/en-us/updates/558102/",
+            "retirementDate": "2026-04-30",
             "datePrecision": "day"
           },
           {
@@ -7772,7 +7926,7 @@
           },
           {
             "title": "Windows Server Annual Channel (preview)",
-            "link": "https://azure.microsoft.com/updates?id=557224",
+            "link": "https://azure.microsoft.com/en-us/updates/557224/",
             "retirementDate": "2026-05-15",
             "datePrecision": "day"
           },
@@ -7790,7 +7944,7 @@
           },
           {
             "title": "Remove dependency on these Azure ML SDKs before June 30, 2026",
-            "link": "https://azure.microsoft.com/updates?id=501668",
+            "link": "https://azure.microsoft.com/en-us/updates/501668/",
             "retirementDate": "2026-06-30",
             "datePrecision": "day"
           }
@@ -7804,7 +7958,7 @@
         "items": [
           {
             "title": "\"Send data to Event Hubs & Storage (Preview)\" retiring July 31, 2026",
-            "link": "https://azure.microsoft.com/updates?id=551523",
+            "link": "https://azure.microsoft.com/en-us/updates/551523/",
             "retirementDate": "2026-07-31",
             "datePrecision": "day"
           },
@@ -7856,7 +8010,7 @@
         "label": "6-9-months",
         "startMonthOffset": 6,
         "endMonthOffset": 9,
-        "count": 7,
+        "count": 9,
         "items": [
           {
             "title": "AI Services Anomaly Detector will be retired on 1 October 2026",
@@ -7883,8 +8037,20 @@
             "datePrecision": "month"
           },
           {
+            "title": "Support for Python 3.10 ends on October 1, 2026 – upgrade your Azure Functions apps to Python 3.13",
+            "link": "https://azure.microsoft.com/en-us/updates/545771/",
+            "retirementDate": "2026-10-01",
+            "datePrecision": "day"
+          },
+          {
+            "title": "Deprecation of Custom Resource Providers",
+            "link": "https://azure.microsoft.com/en-us/updates/513892/",
+            "retirementDate": "2026-10-31",
+            "datePrecision": "day"
+          },
+          {
             "title": "Managed NGINX Ingress with Application Routing Add-on Retiring November 2026",
-            "link": "https://azure.microsoft.com/updates?id=555839",
+            "link": "https://azure.microsoft.com/en-us/updates/555839/",
             "retirementDate": "2026-11",
             "datePrecision": "month"
           },
@@ -7892,12 +8058,6 @@
             "title": "Support for the in-process model for .NET apps in Azure Functions ends 10 November 2026.",
             "link": "https://azure.microsoft.com/en-us/updates/retirement-support-for-the-inprocess-model-for-net-apps-in-azure-functions-ends-10-november-2026/",
             "retirementDate": "2026-11-10",
-            "datePrecision": "day"
-          },
-          {
-            "title": "Extended support for PHP 8.2 ends December 31st, 2026 – upgrade apps to PHP 8.3",
-            "link": "https://azure.microsoft.com/en-us/updates/v2/php-82-app-svc",
-            "retirementDate": "2026-12-31",
             "datePrecision": "day"
           }
         ]

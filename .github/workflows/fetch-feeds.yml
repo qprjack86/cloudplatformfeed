@@ -140,6 +140,13 @@ jobs:
           savill_found = metrics.get("savillVideoFound")
           published = metrics.get("published")
           generated_at = metrics.get("generatedAt")
+          retirement_total = metrics.get("retirementTotalCount")
+          retirement_sources = metrics.get("retirementSourceCount")
+          retirement_window_counts = metrics.get("retirementWindowCounts") or {}
+          window_0_3 = retirement_window_counts.get("0_3_months")
+          window_3_6 = retirement_window_counts.get("3_6_months")
+          window_6_9 = retirement_window_counts.get("6_9_months")
+          window_9_12 = retirement_window_counts.get("9_12_months")
 
           if committed:
               short_sha = commit_sha[:7] if commit_sha else "unknown"
@@ -173,6 +180,14 @@ jobs:
               f"- Reason: `{to_text(summary_reason)}`",
               f"- Article count: **{to_text(summary_article_count)}**",
               "",
+                "### Retirement Coverage",
+                f"- Future retirement events: **{to_text(retirement_total)}**",
+                f"- Distinct retirement sources: **{to_text(retirement_sources)}**",
+                f"- 0-3 months: **{to_text(window_0_3)}**",
+                f"- 3-6 months: **{to_text(window_3_6)}**",
+                f"- 6-9 months: **{to_text(window_6_9)}**",
+                f"- 9-12 months: **{to_text(window_9_12)}**",
+                "",
               "### Extras",
               f"- Savill video found: **{to_text(savill_found)}**",
               f"- Metrics artifact path: `{metrics_path}`",

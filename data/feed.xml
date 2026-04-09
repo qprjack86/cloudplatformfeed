@@ -4,9 +4,45 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 08 Apr 2026 20:33:32 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 08:27:38 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Enterprise UAMI Design in Azure: Trust Boundaries and Blast Radius]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614</guid>
+      <description><![CDATA[As organizations move toward secretless authentication models in Azure, Managed Identity has become the preferred approach for enabling secure communication between services. User Assigned Managed Identity (UAMI) in particular offers flexibility that allows identity reuse across multiple compute...]]></description>
+      <dc:creator><![CDATA[AmitManchanda28]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 08:13:33 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Understanding Agentic Function-Calling with Multi-Modal Data Access]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-agentic-function-calling-with-multi-modal-data/ba-p/4504151</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-agentic-function-calling-with-multi-modal-data/ba-p/4504151</guid>
+      <description><![CDATA[What You'll Learn Why traditional API design struggles when questions span multiple data sources, and how function-calling solves this. How the iterative tool-use loop works — the model plans, calls tools, inspects results, and repeats until it has a complete answer. What makes an agent truly...]]></description>
+      <dc:creator><![CDATA[jayesh_mevada]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Deploying to Azure Web App from Azure DevOps Using UAMI]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800</guid>
+      <description><![CDATA[TOC UAMI Configuration App Configuration Azure DevOps Configuration Logs UAMI Configuration Create a User Assigned Managed Identity with no additional configuration.This identity will be mentioned in later steps, especially at Object ID. App Configuration On an existing Azure Web App, enable...]]></description>
+      <dc:creator><![CDATA[theringe]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 05:53:29 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Designing Reliable Health Check Endpoints for IIS Behind Azure Application Gateway]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938</guid>
+      <description><![CDATA[Why Health Probes Matter in Azure Application Gateway Azure Application Gateway relies entirely on health probes to determine whether backend instances should receive traffic. If a probe: Receives a non‑200 response Times out Gets redirected Requires authentication …the backend is marked Unhealthy,...]]></description>
+      <dc:creator><![CDATA[AjaySingh_]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 23:18:05 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
     <item>
       <title><![CDATA[Enabling AI-Driven Enterprise Intelligence Using SAP and Microsoft 3-IQ Layers]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-ai-driven-enterprise-intelligence-using-sap-and/ba-p/4509721</link>
@@ -165,6 +201,15 @@
       <link>https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga</link>
       <guid>https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga</guid>
       <description><![CDATA[Explore what’s new in Azure Container Storage v2.1.0 with Elastic SAN integration, modular on-demand installation, and enhanced node selector support.]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[AKS Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Turn your agents into AKS experts: Agent Skills for AKS]]></title>
+      <link>https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks</link>
+      <guid>https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks</guid>
+      <description><![CDATA[Announcing agent skills for AKS, easily pluggable into any agent to enhance them with built-in AKS expertise, safer workflows, and reduced developer overhead.]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
       <category><![CDATA[AKS Blog]]></category>
@@ -411,51 +456,6 @@
       <dc:creator><![CDATA[Gaurav-Seth]]></dc:creator>
       <pubDate>Mon, 06 Apr 2026 23:58:35 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904</guid>
-      <description><![CDATA[Many organizations rely on Logstash as a flexible, trusted data pipeline for collecting, transforming, and forwarding logs from on-premises and hybrid environments. Microsoft Sentinel has long supported a Logstash output plugin, enabling customers to send data directly into Sentinel as part of...]]></description>
-      <dc:creator><![CDATA[JamesAde]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 22:28:06 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript]]></title>
-      <link>https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/</link>
-      <guid>https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/</guid>
-      <description><![CDATA[After July 9, 2026, the Azure SDK for JavaScript will no longer support Node.js 20.x. Upgrade to an Active Node.js Long Term Support (LTS) version to stay secure and up-to-date. The post Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript appeared first on Azure SDK Blog.]]></description>
-      <dc:creator><![CDATA[Minh-Anh Phan]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 20:52:46 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing Public Preview for Essential Machine Management]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721</guid>
-      <description><![CDATA[Managing servers and VMs across Azure, on premises, and multi-cloud environments often means turning on core capabilities—monitoring, updates, inventory, and configuration—through separate setup experiences. We’ve heard feedback that this makes it harder to get visibility into machine state and...]]></description>
-      <dc:creator><![CDATA[Meagan McCrory]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 18:54:19 GMT</pubDate>
-      <category><![CDATA[Governance & Management]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Network Security Perimeter for Azure Service Bus]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559899/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559899/</guid>
-      <description><![CDATA[Network Security Perimeter (NSP) support for Azure Service Bus is now generally available. Network Security Perimeter creates a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, blocking unauthorized public access by default and enabling secure...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 18:00:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Network Security Perimeter for Azure Service Bus]]></title>
-      <link>https://azure.microsoft.com/updates?id=559899</link>
-      <guid>https://azure.microsoft.com/updates?id=559899</guid>
-      <description><![CDATA[Network Security Perimeter (NSP) support for Azure Service Bus is now generally available. Network Security Perimeter creates a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, blocking unauthorized public accessUpdate Type: GA, Services: Service Bus,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 18:00:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>

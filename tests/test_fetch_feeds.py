@@ -295,6 +295,24 @@ class RunMetricsTests(unittest.TestCase):
                 "articleCount": 7,
             },
             savill_video={"title": "Latest Azure Infrastructure Update"},
+            retirement_calendar=[
+                {
+                    "title": "Retirement one",
+                    "sources": ["Azure Updates", "Azure Deprecations (aztty)"],
+                },
+                {
+                    "title": "Retirement two",
+                    "blog": "Azure Updates",
+                },
+            ],
+            retirement_buckets={
+                "windows": {
+                    "0_3_months": {"count": 1},
+                    "3_6_months": {"count": 2},
+                    "6_9_months": {"count": 3},
+                    "9_12_months": {"count": 4},
+                }
+            },
         )
 
         self.assertIsInstance(metrics.get("generatedAt"), str)
@@ -307,6 +325,17 @@ class RunMetricsTests(unittest.TestCase):
         self.assertIsNone(metrics["summaryReason"])
         self.assertEqual(metrics["summaryArticleCount"], 7)
         self.assertTrue(metrics["savillVideoFound"])
+        self.assertEqual(metrics["retirementTotalCount"], 2)
+        self.assertEqual(metrics["retirementSourceCount"], 2)
+        self.assertEqual(
+            metrics["retirementWindowCounts"],
+            {
+                "0_3_months": 1,
+                "3_6_months": 2,
+                "6_9_months": 3,
+                "9_12_months": 4,
+            },
+        )
 
     def test_build_run_metrics_for_failsafe_early_exit(self):
         metrics = fetch_feeds.build_run_metrics(
@@ -327,6 +356,9 @@ class RunMetricsTests(unittest.TestCase):
         self.assertIsNone(metrics["summaryReason"])
         self.assertIsNone(metrics["summaryArticleCount"])
         self.assertFalse(metrics["savillVideoFound"])
+        self.assertEqual(metrics["retirementTotalCount"], 0)
+        self.assertEqual(metrics["retirementSourceCount"], 0)
+        self.assertEqual(metrics["retirementWindowCounts"], {})
 
     def test_write_run_metrics_skips_when_path_missing(self):
         result = fetch_feeds.write_run_metrics({"hello": "world"}, output_path="")
@@ -664,6 +696,25 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertIsNotNone(article)
         self.assertEqual(article["azureRetirementDate"], "2026-11")
 
+    def test_parse_azure_update_item_uses_structured_retirement_type_and_target_date(self):
+        item = {
+            "id": "889002b",
+            "title": "Example platform announcement",
+            "description": "Migration guidance published for this service.",
+            "status": "Update",
+            "type": "Retirement",
+            "targetDate": "2028-09",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["lifecycle"], "retiring")
+        self.assertEqual(article["azureUpdateType"], "Retirement")
+        self.assertEqual(article["azureTargetDate"], "2028-09")
+        self.assertEqual(article["azureRetirementDate"], "2028-09")
+
     def test_parse_azure_update_item_prefers_retirement_context_date(self):
         item = {
             "id": "889003",
@@ -693,7 +744,7 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertIsNotNone(article)
         self.assertNotIn("azureRetirementDate", article)
 
-    def test_parse_azure_update_item_does_not_override_structured_dates_for_retirement(self):
+    def test_parse_azure_update_item_uses_target_date_for_retirement(self):
         item = {
             "id": "889005",
             "title": "Retirement: Example feature",
@@ -706,7 +757,7 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
 
         self.assertIsNotNone(article)
         self.assertEqual(article["azureTargetDate"], "2027-04")
-        self.assertNotIn("azureRetirementDate", article)
+        self.assertEqual(article["azureRetirementDate"], "2031-07-31")
 
     def test_parse_azure_update_item_prefers_later_title_retirement_date(self):
         item = {
@@ -773,6 +824,40 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertEqual(result, api_articles)
         api_mock.assert_called_once()
         rss_mock.assert_not_called()
+
+    def test_fetch_azure_updates_via_api_keeps_stale_future_retirements(self):
+        now = datetime.now(timezone.utc)
+        stale_created = (now - timedelta(days=90)).isoformat().replace("+00:00", "Z")
+        future_month = now + timedelta(days=180)
+        future_target = f"{future_month.year:04d}-{future_month.month:02d}"
+        payload = {
+            "value": [
+                {
+                    "id": "future-retire",
+                    "title": "Retirement notice from API metadata",
+                    "status": "Update",
+                    "type": "Retirement",
+                    "targetDate": future_target,
+                    "created": stale_created,
+                },
+                {
+                    "id": "stale-non-retire",
+                    "title": "Launched update",
+                    "status": "Launched",
+                    "created": stale_created,
+                },
+            ]
+        }
+        response = mock.Mock()
+        response.raise_for_status = mock.Mock()
+        response.json.return_value = payload
+
+        with mock.patch.object(fetch_feeds.HTTP_SESSION, "get", return_value=response):
+            articles = fetch_feeds.fetch_azure_updates_via_api()
+
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["link"], "https://azure.microsoft.com/en-us/updates/future-retire/")
+        self.assertEqual(articles[0]["azureRetirementDate"], future_target)
 
 
 class AzttyFeedTests(unittest.TestCase):

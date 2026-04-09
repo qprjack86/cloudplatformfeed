@@ -941,11 +941,12 @@ def _azure_retirement_identity_key(title, link):
     return ""
 
 
-def _classify_azure_update_lifecycle(status_raw, title_raw):
+def _classify_azure_update_lifecycle(status_raw, title_raw, update_type_raw=""):
     """Derive lifecycle bucket from Azure Updates API status/title signals."""
     status = (status_raw or "").lower()
     title = (title_raw or "").lower()
-    text = f"{status} {title}".strip()
+    update_type = (update_type_raw or "").lower()
+    text = f"{status} {update_type} {title}".strip()
 
     if re.search(r"retir|deprecat|sunset|end of support", text):
         return "retiring"
@@ -988,6 +989,27 @@ def _normalize_retirement_date_candidate(match, precision):
         "day_sort": day_sort,
         "precision": precision,
     }
+
+
+def _normalize_structured_retirement_date(value):
+    """Normalize structured API retirement dates to YYYY-MM or YYYY-MM-DD."""
+    raw = clean_html(str(value or "").strip())
+    if not raw:
+        return None
+
+    match_day = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", raw)
+    if match_day:
+        return raw
+
+    match_month = re.match(r"^(\d{4})-(\d{2})$", raw)
+    if match_month:
+        return raw
+
+    dt = parse_iso_datetime(raw)
+    if dt:
+        return dt.date().isoformat()
+
+    return None
 
 
 def _extract_azure_retirement_date(title_raw, summary_raw):
@@ -1088,9 +1110,18 @@ def _parse_azure_update_item(item):
     title = clean_html(item.get("title", "Untitled"))
     summary_full = clean_html(item.get("description") or item.get("summary") or "")
     status_raw = clean_html(str(item.get("status", "") or "").strip())
-    lifecycle = _classify_azure_update_lifecycle(status_raw, title)
+    update_type_raw = clean_html(
+        str(
+            item.get("type")
+            or item.get("notificationType")
+            or item.get("announcementType")
+            or ""
+        ).strip()
+    )
+    lifecycle = _classify_azure_update_lifecycle(status_raw, title, update_type_raw)
     preview_date = clean_html(str(item.get("previewAvailabilityDate") or "").strip())
     ga_date = clean_html(str(item.get("generalAvailabilityDate") or "").strip())
+    target_date_raw = clean_html(str(item.get("targetDate") or "").strip())
     legacy_target_date = clean_html(
         str(
             item.get("generalAvailabilityDate")
@@ -1124,17 +1155,17 @@ def _parse_azure_update_item(item):
         article["azureGeneralAvailabilityDate"] = ga_date
     if legacy_target_date:
         article["azureTargetDate"] = legacy_target_date
-    if (
-        lifecycle == "retiring"
-        and not preview_date
-        and not ga_date
-        and not legacy_target_date
-    ):
-        retirement_date = _extract_azure_retirement_date(title, summary_full)
+    if lifecycle == "retiring":
+        retirement_date = _normalize_structured_retirement_date(target_date_raw)
+        extracted_retirement_date = _extract_azure_retirement_date(title, summary_full)
+        if _prefer_retirement_date(extracted_retirement_date, retirement_date):
+            retirement_date = extracted_retirement_date
         if retirement_date:
             article["azureRetirementDate"] = retirement_date
     if status_raw:
         article["azureStatus"] = status_raw
+    if update_type_raw:
+        article["azureUpdateType"] = update_type_raw
     return article
 
 
@@ -1192,7 +1223,9 @@ def fetch_azure_updates_via_api():
             published_dt = parse_iso_datetime(article.get("published"))
             if not published_dt:
                 continue
-            if published_dt >= cutoff_dt:
+            retirement_date = article.get("azureRetirementDate")
+            keep_for_future_retirement = _is_retirement_date_future(retirement_date)
+            if published_dt >= cutoff_dt or keep_for_future_retirement:
                 all_before_cutoff = False
                 articles.append(article)
 
@@ -1768,6 +1801,31 @@ def evaluate_publish_failsafe(
     )
 
 
+def _build_retirement_run_metrics(retirement_calendar, retirement_buckets):
+    """Return retirement coverage metrics for CI observability."""
+    events = retirement_calendar or []
+    windows = (retirement_buckets or {}).get("windows", {})
+
+    unique_sources = set()
+    for event in events:
+        source_list = event.get("sources") or []
+        if source_list:
+            unique_sources.update(src for src in source_list if src)
+        else:
+            fallback = event.get("blog")
+            if fallback:
+                unique_sources.add(fallback)
+
+    return {
+        "retirementTotalCount": len(events),
+        "retirementSourceCount": len(unique_sources),
+        "retirementWindowCounts": {
+            key: int((value or {}).get("count", 0))
+            for key, value in windows.items()
+        },
+    }
+
+
 def build_run_metrics(
     raw_article_count,
     unique_article_count,
@@ -1777,10 +1835,12 @@ def build_run_metrics(
     published,
     summary_payload,
     savill_video,
+    retirement_calendar=None,
+    retirement_buckets=None,
 ):
     """Build the core observability payload for a fetch run."""
     summary_data = summary_payload or {}
-    return {
+    metrics = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "rawArticleCount": raw_article_count,
         "uniqueArticleCount": unique_article_count,
@@ -1793,6 +1853,10 @@ def build_run_metrics(
         "summaryArticleCount": summary_data.get("articleCount"),
         "savillVideoFound": bool(savill_video),
     }
+    metrics.update(
+        _build_retirement_run_metrics(retirement_calendar, retirement_buckets)
+    )
+    return metrics
 
 
 def write_run_metrics(metrics, output_path=None):
@@ -1864,6 +1928,8 @@ def main():
             published=False,
             summary_payload=None,
             savill_video=savill_video,
+            retirement_calendar=retirement_calendar,
+            retirement_buckets=retirement_buckets,
         )
         write_run_metrics(run_metrics)
         return
@@ -1917,6 +1983,8 @@ def main():
         published=True,
         summary_payload=summary_payload,
         savill_video=savill_video,
+        retirement_calendar=retirement_calendar,
+        retirement_buckets=retirement_buckets,
     )
     write_run_metrics(run_metrics)
 
