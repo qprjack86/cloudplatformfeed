@@ -1140,6 +1140,10 @@ footer a:hover {
   z-index: 10;
 }
 
+.retirement-mini-export-menu[hidden] {
+  display: none !important;
+}
+
 .retirement-mini-export-menu button {
   border: 0;
   background: transparent;

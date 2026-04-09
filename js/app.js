@@ -823,6 +823,7 @@
     var exportToggleBtn = retirementCalendarEl.querySelector('[data-retirement-export-toggle]');
     var exportMenu = retirementCalendarEl.querySelector('[data-retirement-export-menu]');
     var exportStatus = retirementCalendarEl.querySelector('[data-retirement-export-status]');
+    var removeExportDropdownListeners = null;
 
     function updateAnchor(newMonthDate) {
       var clamped = clampMonthDate(startOfMonth(newMonthDate), earliestMonth, latestMonth);
@@ -856,15 +857,44 @@
     }
 
     if (exportToggleBtn && exportMenu) {
+      function closeExportMenu() {
+        exportMenu.setAttribute("hidden", "hidden");
+        exportToggleBtn.setAttribute("aria-expanded", "false");
+      }
+
+      function openExportMenu() {
+        exportMenu.removeAttribute("hidden");
+        exportToggleBtn.setAttribute("aria-expanded", "true");
+      }
+
+      function onDocumentClick(event) {
+        if (!retirementCalendarEl.contains(event.target)) {
+          closeExportMenu();
+        }
+      }
+
+      function onDocumentKeydown(event) {
+        if (event.key === "Escape") {
+          closeExportMenu();
+          exportToggleBtn.focus();
+        }
+      }
+
       exportToggleBtn.addEventListener("click", function () {
         var isHidden = exportMenu.hasAttribute("hidden");
         if (isHidden) {
-          exportMenu.removeAttribute("hidden");
+          openExportMenu();
         } else {
-          exportMenu.setAttribute("hidden", "hidden");
+          closeExportMenu();
         }
-        exportToggleBtn.setAttribute("aria-expanded", isHidden ? "true" : "false");
       });
+
+      document.addEventListener("click", onDocumentClick);
+      document.addEventListener("keydown", onDocumentKeydown);
+      removeExportDropdownListeners = function () {
+        document.removeEventListener("click", onDocumentClick);
+        document.removeEventListener("keydown", onDocumentKeydown);
+      };
 
       exportMenu.querySelectorAll("[data-retirement-export-action]").forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -899,13 +929,19 @@
             setRetirementExportStatus(exportStatus, "Opened Outlook / Microsoft 365 calendar flow.", false);
           }
 
-          exportMenu.setAttribute("hidden", "hidden");
-          exportToggleBtn.setAttribute("aria-expanded", "false");
+          closeExportMenu();
         });
       });
     }
 
     showElement(retirementCalendarEl);
+    if (typeof removeExportDropdownListeners === "function") {
+      var previousCleanup = retirementCalendarEl._cleanupRetirementExportDropdown;
+      if (typeof previousCleanup === "function") {
+        previousCleanup();
+      }
+      retirementCalendarEl._cleanupRetirementExportDropdown = removeExportDropdownListeners;
+    }
   }
 
   function renderM365VideoPanel() {
