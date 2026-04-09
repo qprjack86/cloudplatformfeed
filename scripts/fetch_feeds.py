@@ -1048,6 +1048,24 @@ def _retirement_event_rank_key(event):
     )
 
 
+def _preferred_retirement_event_link(event):
+    """Pick the canonical link for a merged retirement event.
+
+    For single-source events, keep the original URL. For merged events, prefer an
+    Azure Updates URL when present because it is the most stable public landing page
+    for the announcement. Otherwise keep the current event URL.
+    """
+    source_reports = event.get("sourceReports", [])
+    if len(source_reports) <= 1:
+        return event.get("link", "")
+
+    for source_report in source_reports:
+        if source_report.get("blogId") == "azureupdates" and source_report.get("link"):
+            return source_report["link"]
+
+    return event.get("link", "")
+
+
 def _azure_retirement_identity_key(title, link):
     """Build a cross-source identity key so day/month variants collapse together."""
     normalized_title = _normalize_calendar_title_for_dedupe(title)
@@ -1935,6 +1953,7 @@ def build_azure_retirement_calendar(articles, max_items=120):
         events.append(event)
     for event in events:
         event["sourceCount"] = len(event.get("sourceReports", []))
+        event["link"] = _preferred_retirement_event_link(event)
 
     events.sort(
         key=lambda event: (

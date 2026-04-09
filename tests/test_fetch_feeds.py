@@ -1263,6 +1263,56 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(len(events), 1, "workbook and RSS entries for same retirement should merge")
         self.assertEqual(len(events[0]["sourceReports"]), 2, "merged event should carry both source reports")
 
+    def test_build_azure_retirement_calendar_prefers_azure_updates_link_for_multi_source_event(self):
+        articles = [
+            {
+                "title": "Retirement: Subscription - Azure Virtual Desktop Classic",
+                "link": "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+            {
+                "title": "Retirement: Azure Virtual Desktop (classic) transition guidance",
+                "link": "https://azure.microsoft.com/en-us/updates/558999/",
+                "published": "2026-04-09T09:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2030-09-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["sourceCount"], 2)
+        self.assertEqual(events[0]["link"], "https://azure.microsoft.com/en-us/updates/558999/")
+
+    def test_build_azure_retirement_calendar_keeps_single_source_link(self):
+        articles = [
+            {
+                "title": "Retirement: Subscription - Azure Virtual Desktop Classic",
+                "link": "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            }
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["sourceCount"], 1)
+        self.assertEqual(
+            events[0]["link"],
+            "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
+        )
+
     def test_build_azure_retirement_calendar_cross_source_keeps_different_events_same_date(self):
         """Two genuinely different retirements on the same date must not be merged."""
         articles = [
