@@ -38,11 +38,6 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
 
 
-def _normalize_site_host(value):
-    """Normalize a configured host value for canonical URL checks."""
-    return shared_normalize_host(value)
-
-
 def load_site_config(path=SITE_CONFIG_PATH):
     """Load and validate canonical site settings from config/site.json."""
     return shared_load_site_config(path)

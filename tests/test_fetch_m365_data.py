@@ -8,7 +8,6 @@ import pathlib
 import sys
 import unittest
 import tempfile
-import json
 from unittest import mock
 from datetime import datetime, timedelta, timezone
 

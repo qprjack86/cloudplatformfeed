@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Debug M365 deduplication"""
 
-import requests
 import json
 import sys
 from pathlib import Path

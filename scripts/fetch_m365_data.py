@@ -5,7 +5,6 @@ Fetches Microsoft 365 Roadmap and Message Center items from DeltaPulse MCP endpo
 """
 
 import json
-import os
 import re
 import concurrent.futures
 import requests
@@ -31,14 +30,11 @@ SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
 
 # DeltaPulse MCP Endpoint Configuration
 DELTAPULSE_MCP_ENDPOINT = "https://deltapulse.app/mcp"
-DELTAPULSE_PRODUCTS_API = "https://deltapulse.app/mcp"
 DELTAPULSE_ROADMAP_ITEM_API = "https://deltapulse.app/api/roadmap/items"
 
 # Data configuration
 M365_DATA_OUTPUT = REPO_ROOT / "data" / "m365_data.json"
 M365_CHECKSUMS_OUTPUT = REPO_ROOT / "data" / "m365_checksums.json"
-M365_PREVIOUS_COUNT_FILE = M365_DATA_OUTPUT  # Read totalArticles from previous m365_data.json
-
 # Failsafe configuration (same as Azure)
 FAILSAFE_MIN_ARTICLES = 80
 FAILSAFE_MIN_RATIO = 0.60
@@ -703,7 +699,6 @@ def classify_m365_lifecycle(item: dict) -> str:
         return "in_preview"  # Default for roadmap items
     
     elif source == "message_center":
-        severity = (item.get("severity") or "").lower()
         # Message Center items are operational updates, not lifecycle-based
         # Treat all as "launched_ga" since they're current/operational
         return "launched_ga"
