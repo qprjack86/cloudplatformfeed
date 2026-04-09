@@ -934,7 +934,7 @@
     showLoading(true);
     try {
       // Load Azure feeds
-      var azureResponse = await fetch("data/feeds.json");
+      var azureResponse = await fetch("data/feeds.json", { cache: "no-store" });
       if (!azureResponse.ok) throw new Error("Failed to load Azure feeds");
       var azureData = await azureResponse.json();
       azureFeedData = azureData;
@@ -952,7 +952,7 @@
       // Try to load M365 data (graceful fallback if not available)
       var m365Articles = [];
       try {
-        var m365Response = await fetch("data/m365_data.json");
+        var m365Response = await fetch("data/m365_data.json", { cache: "no-store" });
         if (m365Response.ok) {
           var m365Data = await m365Response.json();
           m365FeedData = m365Data;
