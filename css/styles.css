@@ -208,6 +208,7 @@ header {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  scroll-snap-type: x proximity;
 }
 
 .tab-button {
@@ -223,6 +224,7 @@ header {
   cursor: pointer;
   transition: all var(--transition);
   white-space: nowrap;
+  scroll-snap-align: start;
 }
 
 .tab-button:hover {
@@ -303,6 +305,18 @@ main {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1.25rem 2rem 2rem;
+}
+
+.azure-top-panels {
+  display: block;
+}
+
+.azure-top-panels.split-view {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 0.9rem;
+  align-items: start;
+  margin-bottom: 0.35rem;
 }
 
 .controls {
@@ -680,7 +694,7 @@ main {
 /* ===== Toast ===== */
 .toast {
   position: fixed;
-  bottom: 2rem;
+  bottom: max(0.9rem, env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%) translateY(120px);
   background: var(--text-primary);
@@ -721,22 +735,32 @@ footer a:hover {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   header {
-    padding: 1rem;
+    padding: 0.8rem 0.85rem 0.65rem;
   }
 
   .header-content {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   .logo {
     justify-content: center;
   }
 
+  .subtitle {
+    display: none;
+  }
+
   .header-actions {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 0.45rem;
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
   }
 
   .search-box input {
@@ -748,22 +772,40 @@ footer a:hover {
   }
 
   .stats-bar {
-    justify-content: center;
-    font-size: 0.75rem;
+    display: none;
   }
 
   .filters {
     padding: 0.5rem 1rem;
-    top: calc(var(--header-height) + var(--tabs-height));
+    position: static;
+    top: auto;
   }
 
   .filter-pills {
     flex-wrap: nowrap;
     overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+
+  .pill {
+    scroll-snap-align: start;
   }
 
   main {
-    padding: 1rem;
+    padding: 0.85rem;
+  }
+
+  .ai-summary {
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  #savill-video {
+    margin-bottom: 0.85rem;
+  }
+
+  .azure-top-panels.split-view {
+    display: block;
   }
 
   .articles-grid {
@@ -773,31 +815,122 @@ footer a:hover {
   .controls {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
   }
 
   .controls-right {
-    justify-content: flex-end;
+    justify-content: stretch;
     flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .controls-right > * {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  #showing-count {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
+  .logo {
+    gap: 0.5rem;
+  }
+
   .logo h1 {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 
   .brand-logo {
-    width: 96px;
+    width: 82px;
   }
 
   .header-actions {
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .search-box {
+    grid-column: 1 / -1;
+  }
+
+  .tabs-container {
+    padding: 0 0.5rem;
+    overflow-x: auto;
+  }
+
+  .tab-button {
+    min-width: 118px;
+    padding: 0.62rem 0.7rem;
+    font-size: 0.86rem;
+  }
+
+  .filters {
+    padding: 0.45rem 0.55rem;
+  }
+
+  .pill {
+    font-size: 0.74rem;
+    padding: 0.28rem 0.62rem;
+  }
+
+  .retirement-calendar {
+    padding: 0.8rem 0.85rem;
+  }
+
+  .retirement-mini-controls {
+    gap: 0.3rem;
+  }
+
+  .retirement-mini-weekdays {
+    gap: 0.18rem;
+    font-size: 0.6rem;
+  }
+
+  .retirement-mini-grid {
+    gap: 0.18rem;
+  }
+
+  .retirement-mini-day {
+    min-height: 26px;
+  }
+
+  .retirement-mini-day-num {
+    font-size: 0.62rem;
+  }
+
+  .retirement-mini-dot {
+    bottom: 3px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .retirement-mini-export-menu {
+    min-width: 190px;
+    right: auto;
+    left: 0;
   }
 
   #bookmarks-toggle {
     font-size: 0.75rem;
     padding: 0.35rem 0.65rem;
+  }
+
+  #theme-toggle {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1003,6 +1136,435 @@ footer a:hover {
 
 .ai-section .ai-link:hover {
   color: var(--primary-dark);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.retirement-calendar {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.retirement-calendar h2 {
+  font-size: 1.02rem;
+  margin-bottom: 0.2rem;
+}
+
+.retirement-calendar > p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.retirement-calendar-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.retirement-calendar-item {
+  font-size: 0.86rem;
+}
+
+.retirement-calendar-item a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.retirement-calendar-item a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.retirement-calendar-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.08rem;
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+}
+
+.retirement-calendar-date {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.retirement-mini-header h2 {
+  font-size: 0.98rem;
+  margin-bottom: 0.05rem;
+}
+
+.retirement-mini-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.retirement-mini-collapse-btn {
+  display: none;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 999px;
+  min-height: 1.7rem;
+  padding: 0 0.6rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.retirement-mini-collapse-btn:hover {
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--border-color));
+}
+
+.retirement-mini-body.is-collapsed {
+  display: none;
+}
+
+.retirement-mini-header p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.45rem;
+}
+
+.retirement-mini-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.45rem;
+}
+
+.retirement-mini-export {
+  position: relative;
+}
+
+.retirement-mini-export-btn {
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 7px;
+  min-height: 1.9rem;
+  padding: 0 0.6rem;
+  font-size: 0.74rem;
+  cursor: pointer;
+}
+
+.retirement-mini-export-btn:hover {
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--border-color));
+}
+
+.retirement-mini-export-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.3rem);
+  min-width: 220px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--bg-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.35rem;
+  z-index: 10;
+}
+
+.retirement-mini-export-menu.align-left {
+  right: auto;
+  left: 0;
+}
+
+.retirement-mini-export-menu[hidden] {
+  display: none !important;
+}
+
+.retirement-mini-export-menu button {
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  text-align: left;
+  border-radius: 7px;
+  padding: 0.4rem 0.45rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.retirement-mini-export-menu button:hover {
+  background: color-mix(in srgb, var(--primary) 14%, var(--bg-primary));
+}
+
+.retirement-mini-export-status {
+  min-height: 1.1rem;
+  margin: -0.15rem 0 0.35rem;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.retirement-mini-export-status.is-success {
+  color: var(--text-secondary);
+}
+
+.retirement-mini-export-status.is-error {
+  color: #b42318;
+}
+
+.retirement-mini-nav-btn {
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 7px;
+  min-width: 1.9rem;
+  min-height: 1.9rem;
+  cursor: pointer;
+}
+
+.retirement-mini-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.retirement-mini-select-wrap {
+  flex: 1;
+  min-width: 90px;
+}
+
+.retirement-mini-select-wrap select {
+  width: 100%;
+  min-height: 1.9rem;
+  border-radius: 7px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.74rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.retirement-mini-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.25rem;
+  font-size: 0.66rem;
+  color: var(--text-tertiary);
+  margin-bottom: 0.2rem;
+}
+
+.retirement-mini-weekdays span {
+  text-align: center;
+}
+
+.retirement-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+.retirement-mini-day {
+  min-height: 32px;
+  border-radius: 7px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.retirement-mini-day.is-empty {
+  visibility: hidden;
+  border: 0;
+}
+
+.retirement-mini-day.has-events {
+  border-color: color-mix(in srgb, var(--primary) 50%, var(--border-color));
+  background: color-mix(in srgb, var(--primary) 12%, var(--bg-primary));
+}
+
+.retirement-mini-day-num {
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+}
+
+.retirement-mini-dot {
+  position: absolute;
+  bottom: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.retirement-mini-list {
+  margin-top: 0.55rem;
+}
+
+.retirement-mini-list h3 {
+  font-size: 0.74rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-secondary);
+}
+
+.retirement-mini-list ul {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.retirement-mini-list li {
+  margin-bottom: 0.2rem;
+}
+
+.retirement-mini-list a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.retirement-mini-list a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.retirement-calendar-month {
+  margin-top: 0.8rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.7rem;
+}
+
+.retirement-calendar-month h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.retirement-calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-bottom: 0.2rem;
+}
+
+.retirement-calendar-weekdays span {
+  text-align: center;
+}
+
+.retirement-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.retirement-calendar-day {
+  min-height: 92px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.25rem 0.35rem;
+  background: var(--bg-primary);
+}
+
+.retirement-calendar-day.is-empty {
+  visibility: hidden;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+}
+
+.retirement-calendar-day.has-events {
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--border-color));
+}
+
+.retirement-calendar-day-num {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-bottom: 0.15rem;
+}
+
+.retirement-calendar-day-events {
+  font-size: 0.68rem;
+  line-height: 1.35;
+  display: grid;
+  gap: 0.25rem;
+}
+
+@media (max-width: 680px) {
+  .retirement-mini-collapse-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .retirement-mini-controls {
+    flex-wrap: wrap;
+  }
+
+  .retirement-mini-select-wrap {
+    min-width: calc(50% - 0.25rem);
+  }
+
+  .retirement-mini-day {
+    min-height: 28px;
+  }
+
+  .retirement-mini-grid,
+  .retirement-mini-weekdays {
+    gap: 0.2rem;
+  }
+
+  .retirement-mini-day-num {
+    font-size: 0.64rem;
+  }
+}
+
+.retirement-calendar-day-events a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.retirement-calendar-day-events a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.retirement-source-count {
+  display: inline-block;
+  margin-left: 0.2rem;
+  color: var(--text-tertiary);
+  font-size: 0.64rem;
+}
+
+.retirement-month-only {
+  margin-top: 0.55rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  border: 1px dashed var(--border-color);
+}
+
+.retirement-month-only h4 {
+  font-size: 0.72rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+}
+
+.retirement-month-only ul {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 0.74rem;
 }
 
 /* ===== John Savill Video Card ===== */

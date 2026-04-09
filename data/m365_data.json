@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-04-09T16:12:27.937772+00:00",
-  "totalArticles": 73,
+  "generatedAt": "2026-04-09T16:59:29.012126+00:00",
+  "totalArticles": 70,
   "articles": [
     {
       "title": "Outlook: Upgraded Video and Audio Player for iOS",
       "link": "https://deltapulse.app/item/560056",
       "published": "2026-04-08T23:00:03.000Z",
+      "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -18,6 +19,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:560056"
     },
@@ -25,6 +28,7 @@
       "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
       "link": "https://deltapulse.app/item/558933",
       "published": "2026-04-08T23:00:03.000Z",
+      "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -37,6 +41,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558933"
     },
@@ -44,6 +50,7 @@
       "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
       "link": "https://deltapulse.app/item/558853",
       "published": "2026-04-08T23:00:03.000Z",
+      "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -56,6 +63,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558853"
     },
@@ -63,6 +72,7 @@
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
       "link": "https://deltapulse.app/item/MC1274562",
       "published": "2026-04-08T22:42:45.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Copilot (Power Platform)",
       "m365AllServices": [
@@ -77,13 +87,16 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1274562"
     },
     {
       "title": "Microsoft Teams: Book future meetings from Microsoft Teams panels (Android)",
       "link": "https://deltapulse.app/item/MC1274551",
       "published": "2026-04-08T22:17:35.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -98,6 +111,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1274551"
     },
@@ -105,6 +120,7 @@
       "title": "Microsoft Teams: Quick access to read items while using unread only mode",
       "link": "https://deltapulse.app/item/MC1274550",
       "published": "2026-04-08T22:17:03.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -119,6 +135,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1274550"
     },
@@ -126,6 +144,7 @@
       "title": "Extended Security Updates (ESU) available for Windows 10 Enterprise LTSB 2016",
       "link": "https://deltapulse.app/item/MC1274396",
       "published": "2026-04-08T19:58:31.567Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Windows",
       "m365AllServices": [
@@ -140,6 +159,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1274396"
     },
@@ -147,6 +168,7 @@
       "title": "ESR management is moving to Windows Backup for Organizations",
       "link": "https://deltapulse.app/item/MC1274349",
       "published": "2026-04-08T17:16:01.437Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Windows",
       "m365AllServices": [
@@ -161,6 +183,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1274349"
     },
@@ -168,6 +192,7 @@
       "title": "Upcoming change: Microsoft 365 Apps SAEC and MEC will unify",
       "link": "https://deltapulse.app/item/MC1274325",
       "published": "2026-04-08T16:33:04.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft 365 apps",
       "m365AllServices": [
@@ -182,6 +207,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1274325"
     },
@@ -189,6 +216,7 @@
       "title": "SharePoint Advanced Management: Delegate management of Restricted Access Control (RAC) to site admins",
       "link": "https://deltapulse.app/item/MC1274323",
       "published": "2026-04-08T16:31:01.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "SharePoint Online",
       "m365AllServices": [
@@ -204,6 +232,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1274323"
     },
@@ -211,6 +241,7 @@
       "title": "New Overview experience and agent categories in Agent Dashboard",
       "link": "https://deltapulse.app/item/MC1274322",
       "published": "2026-04-08T16:29:12.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Viva",
       "m365AllServices": [
@@ -226,6 +257,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1274322"
     },
@@ -233,6 +266,7 @@
       "title": "Microsoft Whiteboard content is now viewable in Microsoft Purview eDiscovery",
       "link": "https://deltapulse.app/item/MC1273444",
       "published": "2026-04-07T23:25:13.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Purview",
       "m365AllServices": [
@@ -247,6 +281,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1273444"
     },
@@ -254,6 +290,7 @@
       "title": "Microsoft Teams: Smarter auto suggestions to help you search faster",
       "link": "https://deltapulse.app/item/MC1273443",
       "published": "2026-04-07T23:24:47.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -268,6 +305,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1273443"
     },
@@ -275,6 +314,7 @@
       "title": "Outlook: Copilot Search Suggestions for Outlook",
       "link": "https://deltapulse.app/item/559990",
       "published": "2026-04-07T23:15:03.000Z",
+      "summary": "Get Copilot suggestions in the Outlook search menu to help you stay on top of your inbox and calendar, find what you are looking for and get more done in Outlook.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -287,6 +327,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559990"
     },
@@ -294,6 +336,7 @@
       "title": "Microsoft Viva: New Overview experience and agent categories in Agent Dashboard",
       "link": "https://deltapulse.app/item/559996",
       "published": "2026-04-07T23:00:18.000Z",
+      "summary": "Customers can now view and understand their agent landscape through the new Overview page that will be included as part of the Agent Dashboard in Microsoft Viva. This experience will provide customers with key at-a-glance insights on adoption in their organizations, visibility into who’s creating agents used in their organization, and details on what business process categories these agents are used for.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -306,6 +349,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:559996"
     },
@@ -313,6 +358,7 @@
       "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
       "link": "https://deltapulse.app/item/558689",
       "published": "2026-04-07T23:00:18.000Z",
+      "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -325,6 +371,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558689"
     },
@@ -332,6 +380,7 @@
       "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
       "link": "https://deltapulse.app/item/559995",
       "published": "2026-04-07T23:00:18.000Z",
+      "summary": "Enable Global and Insights admins to turn on additional attributes as filters in Power BI reports, including reserved attributes and your organization’s custom attributes. Users who have access to Power BI reports can then use these newly enabled filters to tailor reports to their business needs.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -344,6 +393,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559995"
     },
@@ -351,6 +402,7 @@
       "title": "Power Apps - Microsoft 365 Copilot will be available in model-driven apps",
       "link": "https://deltapulse.app/item/MC1273407",
       "published": "2026-04-07T21:08:13.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Power Apps",
       "m365AllServices": [
@@ -365,6 +417,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1273407"
     },
@@ -372,6 +426,7 @@
       "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
       "link": "https://deltapulse.app/item/MC1273328",
       "published": "2026-04-07T19:29:05.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Power Apps",
       "m365AllServices": [
@@ -386,13 +441,16 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1273328"
     },
     {
       "title": "Microsoft Dataverse - Enable makers to create Dataverse AI prompt columns",
       "link": "https://deltapulse.app/item/MC1273097",
       "published": "2026-04-07T14:55:15.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Dataverse",
       "m365AllServices": [
@@ -407,6 +465,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1273097"
     },
@@ -414,6 +474,7 @@
       "title": "(Updated) Viva Engage: Feature conversations to all network members",
       "link": "https://deltapulse.app/item/MC1272652",
       "published": "2026-04-07T01:58:10.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Viva",
       "m365AllServices": [
@@ -428,6 +489,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1272652"
     },
@@ -435,6 +498,7 @@
       "title": "Top domain mail flow report in Exchange Online is retiring",
       "link": "https://deltapulse.app/item/MC1272554",
       "published": "2026-04-06T22:06:03.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Exchange Online",
       "m365AllServices": [
@@ -449,13 +513,16 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
-      "lifecycle": "launched_ga",
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1272554"
     },
     {
       "title": "Workweek view for Outlook on iOS and iPad",
       "link": "https://deltapulse.app/item/MC1272552",
       "published": "2026-04-06T22:00:36.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Exchange Online",
       "m365AllServices": [
@@ -470,6 +537,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1272552"
     },
@@ -477,6 +546,7 @@
       "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
       "link": "https://deltapulse.app/item/MC1272549",
       "published": "2026-04-06T21:59:59.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "SharePoint Online",
       "m365AllServices": [
@@ -492,13 +562,16 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
-      "lifecycle": "launched_ga",
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1272549"
     },
     {
       "title": "Microsoft Teams | RemoteApp support for Azure Virtual Desktop and Windows 365 with SlimCore optimization",
       "link": "https://deltapulse.app/item/MC1272546",
       "published": "2026-04-06T21:58:14.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -513,6 +586,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1272546"
     },
@@ -520,6 +595,7 @@
       "title": "Update to Copilot navigation pane chat history filtering",
       "link": "https://deltapulse.app/item/MC1269870",
       "published": "2026-04-03T22:24:39.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Copilot (Microsoft 365)",
       "m365AllServices": [
@@ -535,6 +611,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269870"
     },
@@ -542,6 +620,7 @@
       "title": "Microsoft Teams: New chat sections for muted and meeting chats",
       "link": "https://deltapulse.app/item/MC1269864",
       "published": "2026-04-03T22:23:30.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -556,6 +635,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269864"
     },
@@ -563,6 +644,7 @@
       "title": "OneDrive and SharePoint: Undo and Redo for PDF annotations on OneDrive for web",
       "link": "https://deltapulse.app/item/MC1269863",
       "published": "2026-04-03T22:23:04.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "SharePoint Online",
       "m365AllServices": [
@@ -578,6 +660,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269863"
     },
@@ -585,6 +669,7 @@
       "title": "OneDrive: Files deleted from the cloud will no longer appear in the local Recycle Bin or Trash",
       "link": "https://deltapulse.app/item/MC1269861",
       "published": "2026-04-03T22:22:02.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft OneDrive",
       "m365AllServices": [
@@ -599,6 +684,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269861"
     },
@@ -606,6 +693,7 @@
       "title": "Microsoft Teams: Sharing recap access",
       "link": "https://deltapulse.app/item/559606",
       "published": "2026-04-03T22:15:57.000Z",
+      "summary": "Recording and transcript owners can now grant recording and transcript access to specified people when copying or sharing recap link, and the specified people can access the recap without having to request access.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -618,6 +706,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559606"
     },
@@ -625,6 +715,7 @@
       "title": "Replacement of the Microsoft SaRA command-line utility in Windows",
       "link": "https://deltapulse.app/item/MC1269727",
       "published": "2026-04-03T17:00:49.660Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Windows",
       "m365AllServices": [
@@ -639,6 +730,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269727"
     },
@@ -646,6 +739,7 @@
       "title": "Outlook for Android and iOS: Support for shareable links beautification and permissions in meeting description",
       "link": "https://deltapulse.app/item/MC1269216",
       "published": "2026-04-03T05:16:27.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Exchange Online",
       "m365AllServices": [
@@ -660,6 +754,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269216"
     },
@@ -667,6 +763,7 @@
       "title": "Microsoft Teams: Honor Windows “Do not disturb” setting",
       "link": "https://deltapulse.app/item/MC1269215",
       "published": "2026-04-03T05:15:53.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -681,6 +778,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269215"
     },
@@ -688,6 +787,7 @@
       "title": "Viva Engage: At-Mentions & Replies notifications improvements",
       "link": "https://deltapulse.app/item/MC1269214",
       "published": "2026-04-03T05:15:13.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Viva",
       "m365AllServices": [
@@ -702,6 +802,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269214"
     },
@@ -709,6 +811,7 @@
       "title": "New meeting response option: decline and propose a new time in Outlook Mobile",
       "link": "https://deltapulse.app/item/MC1269213",
       "published": "2026-04-03T05:14:37.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Exchange Online",
       "m365AllServices": [
@@ -723,6 +826,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269213"
     },
@@ -730,6 +835,7 @@
       "title": "New option to keep or delete meeting invitations after responding",
       "link": "https://deltapulse.app/item/MC1269212",
       "published": "2026-04-03T05:13:55.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Exchange Online",
       "m365AllServices": [
@@ -744,6 +850,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269212"
     },
@@ -751,6 +859,7 @@
       "title": "Clearer RSVP selection in Outlook Mobile",
       "link": "https://deltapulse.app/item/MC1269211",
       "published": "2026-04-03T05:13:19.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Exchange Online",
       "m365AllServices": [
@@ -765,6 +874,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269211"
     },
@@ -772,6 +883,7 @@
       "title": "Classic Outlook: Retirement of people card expanded view",
       "link": "https://deltapulse.app/item/MC1269210",
       "published": "2026-04-03T05:12:41.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft 365 apps",
       "m365AllServices": [
@@ -786,13 +898,16 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
-      "lifecycle": "launched_ga",
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1269210"
     },
     {
       "title": "Extending AI in SharePoint using custom skills",
       "link": "https://deltapulse.app/item/MC1269209",
       "published": "2026-04-03T05:11:53.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "SharePoint Online",
       "m365AllServices": [
@@ -807,6 +922,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269209"
     },
@@ -814,6 +931,7 @@
       "title": "Viva Engage digest updates: Improvements to weekly",
       "link": "https://deltapulse.app/item/MC1269207",
       "published": "2026-04-03T05:10:49.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Viva",
       "m365AllServices": [
@@ -828,6 +946,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1269207"
     },
@@ -835,6 +955,7 @@
       "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
       "link": "https://deltapulse.app/item/559611",
       "published": "2026-04-02T23:15:15.000Z",
+      "summary": "Presenters can now share a single application window and enable participants to annotate directly on top of that content, without exposing their entire desktop. This means cleaner presentations, protected privacy, and more engaging discussions across training sessions, workshops, and client meetings.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -847,6 +968,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559611"
     },
@@ -854,6 +977,7 @@
       "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
       "link": "https://deltapulse.app/item/557191",
       "published": "2026-04-02T23:15:15.000Z",
+      "summary": "Block External Domain/User action in Microsoft Purview DLP for SharePoint and OneDrive, gives organizations stronger control over who can access sensitive files. With this enhancement, admins can configure DLP policies that block file access for specific external domains or individual users. This capability helps prevent unintended exposure by external users and supports enterprise compliance requirements.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -866,6 +990,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:557191"
     },
@@ -873,6 +999,7 @@
       "title": "Microsoft Purview: Purview in Microsoft Admin Center",
       "link": "https://deltapulse.app/item/559617",
       "published": "2026-04-02T23:15:15.000Z",
+      "summary": "AI and IT admins in Microsoft Admin Center can 1) gain visibility around oversharing risks and drive remediations 2) Understand how much of sensitive copilot interactions are protected and turn on Purview DLP for M365 Copilot right from there. Enables secure adoption of Copilot.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -885,6 +1012,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559617"
     },
@@ -892,6 +1021,7 @@
       "title": "Microsoft Viva: Viva Glint and Viva Insights Integration - Exclusion List for data sharing",
       "link": "https://deltapulse.app/item/559266",
       "published": "2026-04-02T23:15:15.000Z",
+      "summary": "Viva Glint admins will be able to manage an exclusion list in Viva Feature Access Management that prevents selected people and groups from being included in Viva Insights data shared with Viva Glint. This simplifies configuration and helps organizations apply consistent, privacy-conscious controls for the integration.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -904,6 +1034,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559266"
     },
@@ -911,6 +1043,7 @@
       "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
       "link": "https://deltapulse.app/item/558565",
       "published": "2026-04-02T23:15:15.000Z",
+      "summary": "With Purview enabled in Microsoft Foundry, Purview admins can setup inline DLP policies to prompts on Foundry built apps and agents to ensure data loss prevention of sensitive data.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -923,6 +1056,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558565"
     },
@@ -930,6 +1065,7 @@
       "title": "Viva Engage: Pinned resources and related communities in Teams for iOS",
       "link": "https://deltapulse.app/item/MC1268933",
       "published": "2026-04-02T21:02:30.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Viva",
       "m365AllServices": [
@@ -944,6 +1080,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268933"
     },
@@ -951,6 +1089,7 @@
       "title": "Microsoft Viva: Manage data sharing exclusions for Viva Glint and Viva Insights",
       "link": "https://deltapulse.app/item/MC1268931",
       "published": "2026-04-02T21:02:05.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Viva",
       "m365AllServices": [
@@ -965,6 +1104,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268931"
     },
@@ -972,6 +1113,7 @@
       "title": "Microsoft AutoUpdate (MAU) CDN Endpoint Update for Mac",
       "link": "https://deltapulse.app/item/MC1268926",
       "published": "2026-04-02T20:59:02.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft 365 suite",
       "m365AllServices": [
@@ -986,6 +1128,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": true,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268926"
     },
@@ -993,6 +1137,7 @@
       "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
       "link": "https://deltapulse.app/item/MC1268925",
       "published": "2026-04-02T20:58:31.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -1007,6 +1152,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268925"
     },
@@ -1014,6 +1161,7 @@
       "title": "Microsoft Defender XDR: Email summary powered by Security Copilot on the email entity page",
       "link": "https://deltapulse.app/item/MC1268924",
       "published": "2026-04-02T20:58:01.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Defender XDR",
       "m365AllServices": [
@@ -1028,6 +1176,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268924"
     },
@@ -1035,6 +1185,7 @@
       "title": "Microsoft Teams: Badging updates to help users find messages that count",
       "link": "https://deltapulse.app/item/MC1268911",
       "published": "2026-04-02T20:35:45.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -1049,6 +1200,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268911"
     },
@@ -1056,6 +1209,7 @@
       "title": "Improved secure file preview experience in OneDrive for iOS and iPadOS",
       "link": "https://deltapulse.app/item/MC1268909",
       "published": "2026-04-02T20:33:16.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft OneDrive",
       "m365AllServices": [
@@ -1070,6 +1224,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268909"
     },
@@ -1077,6 +1233,7 @@
       "title": "Dynamics 365 Sales - Get integrated inbound and outbound calling with Sales Hub dialer",
       "link": "https://deltapulse.app/item/MC1268720",
       "published": "2026-04-02T17:14:14.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Dynamics 365 Apps",
       "m365AllServices": [
@@ -1091,6 +1248,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268720"
     },
@@ -1098,6 +1257,7 @@
       "title": "Enable Secure Boot certificate update status in the Windows Security app",
       "link": "https://deltapulse.app/item/MC1268714",
       "published": "2026-04-02T17:05:07.543Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Windows",
       "m365AllServices": [
@@ -1112,34 +1272,16 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268714"
-    },
-    {
-      "title": "Microsoft Copilot Studio - Enable express mode for flows invoked by an agent or app",
-      "link": "https://deltapulse.app/item/MC1268694",
-      "published": "2026-04-02T16:26:58.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Copilot (Power Platform)",
-      "m365AllServices": [
-        "Microsoft Copilot (Power Platform)"
-      ],
-      "m365Id": "MC1268694",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1268694"
     },
     {
       "title": "Windows 365: Windows 365 Link - Market Expansion",
       "link": "https://deltapulse.app/item/558253",
       "published": "2026-03-12T23:00:54.000Z",
+      "summary": "Windows 365 Link will be available for sale in Norway",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1152,6 +1294,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558253"
     },
@@ -1159,6 +1303,7 @@
       "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
       "link": "https://deltapulse.app/item/553213",
       "published": "2026-03-30T16:15:57.000Z",
+      "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1171,6 +1316,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:553213"
     },
@@ -1178,6 +1325,7 @@
       "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
       "link": "https://deltapulse.app/item/558538",
       "published": "2026-03-30T16:15:57.000Z",
+      "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1190,6 +1338,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558538"
     },
@@ -1197,6 +1347,7 @@
       "title": "Microsoft Teams: Attendee capacity packs for Teams events",
       "link": "https://deltapulse.app/item/558856",
       "published": "2026-03-20T22:00:36.000Z",
+      "summary": "Attendee capacity packs provide increased capacity limits for Teams events. Organizers can scale event attendance beyond base limits while maintaining a consistent Teams events experience.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1209,6 +1360,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558856"
     },
@@ -1216,6 +1369,7 @@
       "title": "Microsoft Teams: Video recap in Teams",
       "link": "https://deltapulse.app/item/558540",
       "published": "2026-03-12T23:00:54.000Z",
+      "summary": "Intelligent meeting recap will now include video-based recaps. Video recap creates narrated video highlights from recorded meetings, featuring key takeaways and short clips that showcase important moments.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1228,6 +1382,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558540"
     },
@@ -1235,6 +1391,7 @@
       "title": "(Updated) Improved OneDrive sync experience for macOS users",
       "link": "https://deltapulse.app/item/MC1255404",
       "published": "2026-03-18T22:28:44.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft OneDrive",
       "m365AllServices": [
@@ -1249,6 +1406,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1255404"
     },
@@ -1256,6 +1415,7 @@
       "title": "(Updated) Microsoft Edge: Copilot new tab page",
       "link": "https://deltapulse.app/item/MC1250274",
       "published": "2026-03-12T23:41:53.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft 365 suite",
       "m365AllServices": [
@@ -1270,6 +1430,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1250274"
     },
@@ -1277,6 +1439,7 @@
       "title": "(Updated) Microsoft Teams: AI Interpreter (simultaneous) quality improvements and new Traditional Chinese support",
       "link": "https://deltapulse.app/item/MC1267977",
       "published": "2026-04-02T02:28:50.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Teams",
       "m365AllServices": [
@@ -1292,6 +1455,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1267977"
     },
@@ -1299,6 +1464,7 @@
       "title": "(Updated) Microsoft Purview compliance portal: Data Security Investigations introduces new soft purge mitigation action",
       "link": "https://deltapulse.app/item/MC1249429",
       "published": "2026-03-12T00:06:58.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Purview",
       "m365AllServices": [
@@ -1313,6 +1479,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1249429"
     },
@@ -1320,6 +1488,7 @@
       "title": "Microsoft Teams: Spoken language detection is now automatic",
       "link": "https://deltapulse.app/item/558543",
       "published": "2026-03-12T23:00:54.000Z",
+      "summary": "Spoken language detection is now fully automatic. Teams will automatically detect each speaker’s spoken language and update it in real time as the conversation evolves. Manual spoken language selection will no longer be available. This applies to both live captions and transcripts when Interpreter is enabled or when multilingual speech recognition is turned on in meeting options, helping deliver more accurate language recognition and a more consistent multilingual meeting experience.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1332,6 +1501,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558543"
     },
@@ -1339,6 +1510,7 @@
       "title": "Copilot Cowork now available in Frontier",
       "link": "https://deltapulse.app/item/MC1265767",
       "published": "2026-03-30T17:15:40.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Copilot (Microsoft 365)",
       "m365AllServices": [
@@ -1354,6 +1526,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1265767"
     },
@@ -1361,6 +1535,7 @@
       "title": "Microsoft Teams: Book future meetings directly from Teams panels",
       "link": "https://deltapulse.app/item/558287",
       "published": "2026-03-27T22:15:31.000Z",
+      "summary": "This item is cancelled as a duplicate of 557168. We are sorry for any inconvenience it may cause. You can now make an upcoming meeting reservation from a Teams panel by browsing the calendar on the device and choosing any open time slot through midnight the next day. Add a guest during booking, streamlining ad-hoc scheduling and coordination. Available with Teams Rooms Pro and Shared Device licenses.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1373,6 +1548,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558287"
     },
@@ -1380,6 +1557,7 @@
       "title": "(Updated) Microsoft Viva Engage | Email sender domain migration from @yammer.com to @engage.mail.microsoft",
       "link": "https://deltapulse.app/item/MC1251200",
       "published": "2026-03-13T22:45:08.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Viva",
       "m365AllServices": [
@@ -1394,6 +1572,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1251200"
     },
@@ -1401,6 +1581,7 @@
       "title": "Microsoft Teams: Facilitator detects and answers questions",
       "link": "https://deltapulse.app/item/558341",
       "published": "2026-04-01T23:15:50.000Z",
+      "summary": "Facilitator now automatically detects open questions raised during a Teams meeting and offers to help answer them using web search. When a participant asks a question (e.g., “What is an LLM?”) and no one answers, Facilitator posts a prompt offering to find an answer. Participants can select “Yes” to have the agent retrieve and share the information.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1413,6 +1594,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:558341"
     },
@@ -1420,6 +1603,7 @@
       "title": "Microsoft Teams: Improved organization for muted and meeting chats",
       "link": "https://deltapulse.app/item/559605",
       "published": "2026-04-01T23:15:50.000Z",
+      "summary": "Microsoft Teams automatically organizes your chats with new built in sections that help reduce clutter and keep conversations easy to find. Muted chats (on by default) are grouped together in a dedicated area, while meeting chats (off by default) can be collected into a single section for quick access. You’re always in control, as each section can be turned on or off based on your preferences.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
@@ -1432,6 +1616,8 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:559605"
     },
@@ -1439,6 +1625,7 @@
       "title": "Power Automate - Analyze processes using object-centric process mining",
       "link": "https://deltapulse.app/item/MC1268680",
       "published": "2026-04-02T15:54:53.000Z",
+      "summary": "",
       "source": "m365",
       "m365Service": "Microsoft Power Automate",
       "m365AllServices": [
@@ -1453,51 +1640,10 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1268680"
-    },
-    {
-      "title": "(Updated) Updated UX in Viva Connections on Teams mobile",
-      "link": "https://deltapulse.app/item/MC1262585",
-      "published": "2026-03-26T23:43:35.000Z",
-      "source": "m365",
-      "m365Service": "Microsoft Viva",
-      "m365AllServices": [
-        "Microsoft Viva"
-      ],
-      "m365Id": "MC1262585",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1262585"
-    },
-    {
-      "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-      "link": "https://deltapulse.app/item/MC1250279",
-      "published": "2026-03-12T23:42:55.000Z",
-      "source": "m365",
-      "m365Service": "Planner",
-      "m365AllServices": [
-        "Planner",
-        "Microsoft Copilot (Microsoft 365)"
-      ],
-      "m365Id": "MC1250279",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "March 2026, April 2026, May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1250279"
     }
   ],
   "byCategory": {
@@ -1506,6 +1652,7 @@
         "title": "Microsoft Teams: Book future meetings from Microsoft Teams panels (Android)",
         "link": "https://deltapulse.app/item/MC1274551",
         "published": "2026-04-08T22:17:35.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1520,6 +1667,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274551"
       },
@@ -1527,6 +1676,7 @@
         "title": "Microsoft Teams: Quick access to read items while using unread only mode",
         "link": "https://deltapulse.app/item/MC1274550",
         "published": "2026-04-08T22:17:03.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1541,6 +1691,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274550"
       },
@@ -1548,6 +1700,7 @@
         "title": "SharePoint Advanced Management: Delegate management of Restricted Access Control (RAC) to site admins",
         "link": "https://deltapulse.app/item/MC1274323",
         "published": "2026-04-08T16:31:01.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "SharePoint Online",
         "m365AllServices": [
@@ -1563,6 +1716,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274323"
       },
@@ -1570,6 +1725,7 @@
         "title": "Microsoft Teams: Smarter auto suggestions to help you search faster",
         "link": "https://deltapulse.app/item/MC1273443",
         "published": "2026-04-07T23:24:47.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1584,6 +1740,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273443"
       },
@@ -1591,6 +1749,7 @@
         "title": "Top domain mail flow report in Exchange Online is retiring",
         "link": "https://deltapulse.app/item/MC1272554",
         "published": "2026-04-06T22:06:03.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -1605,13 +1764,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1272554"
       },
       {
         "title": "Workweek view for Outlook on iOS and iPad",
         "link": "https://deltapulse.app/item/MC1272552",
         "published": "2026-04-06T22:00:36.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -1626,6 +1788,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1272552"
       },
@@ -1633,6 +1797,7 @@
         "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
         "link": "https://deltapulse.app/item/MC1272549",
         "published": "2026-04-06T21:59:59.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "SharePoint Online",
         "m365AllServices": [
@@ -1648,13 +1813,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1272549"
       },
       {
         "title": "Microsoft Teams | RemoteApp support for Azure Virtual Desktop and Windows 365 with SlimCore optimization",
         "link": "https://deltapulse.app/item/MC1272546",
         "published": "2026-04-06T21:58:14.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1669,6 +1837,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1272546"
       },
@@ -1676,6 +1846,7 @@
         "title": "Microsoft Teams: New chat sections for muted and meeting chats",
         "link": "https://deltapulse.app/item/MC1269864",
         "published": "2026-04-03T22:23:30.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1690,6 +1861,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269864"
       },
@@ -1697,6 +1870,7 @@
         "title": "OneDrive and SharePoint: Undo and Redo for PDF annotations on OneDrive for web",
         "link": "https://deltapulse.app/item/MC1269863",
         "published": "2026-04-03T22:23:04.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "SharePoint Online",
         "m365AllServices": [
@@ -1712,6 +1886,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269863"
       },
@@ -1719,6 +1895,7 @@
         "title": "OneDrive: Files deleted from the cloud will no longer appear in the local Recycle Bin or Trash",
         "link": "https://deltapulse.app/item/MC1269861",
         "published": "2026-04-03T22:22:02.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
         "m365AllServices": [
@@ -1733,6 +1910,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269861"
       },
@@ -1740,6 +1919,7 @@
         "title": "Outlook for Android and iOS: Support for shareable links beautification and permissions in meeting description",
         "link": "https://deltapulse.app/item/MC1269216",
         "published": "2026-04-03T05:16:27.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -1754,6 +1934,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269216"
       },
@@ -1761,6 +1943,7 @@
         "title": "Microsoft Teams: Honor Windows “Do not disturb” setting",
         "link": "https://deltapulse.app/item/MC1269215",
         "published": "2026-04-03T05:15:53.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1775,6 +1958,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269215"
       },
@@ -1782,6 +1967,7 @@
         "title": "New meeting response option: decline and propose a new time in Outlook Mobile",
         "link": "https://deltapulse.app/item/MC1269213",
         "published": "2026-04-03T05:14:37.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -1796,6 +1982,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269213"
       },
@@ -1803,6 +1991,7 @@
         "title": "New option to keep or delete meeting invitations after responding",
         "link": "https://deltapulse.app/item/MC1269212",
         "published": "2026-04-03T05:13:55.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -1817,6 +2006,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269212"
       },
@@ -1824,6 +2015,7 @@
         "title": "Clearer RSVP selection in Outlook Mobile",
         "link": "https://deltapulse.app/item/MC1269211",
         "published": "2026-04-03T05:13:19.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -1838,6 +2030,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269211"
       },
@@ -1845,6 +2039,7 @@
         "title": "Extending AI in SharePoint using custom skills",
         "link": "https://deltapulse.app/item/MC1269209",
         "published": "2026-04-03T05:11:53.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "SharePoint Online",
         "m365AllServices": [
@@ -1859,6 +2054,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269209"
       },
@@ -1866,6 +2063,7 @@
         "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
         "link": "https://deltapulse.app/item/MC1268925",
         "published": "2026-04-02T20:58:31.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1880,6 +2078,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268925"
       },
@@ -1887,6 +2087,7 @@
         "title": "Microsoft Teams: Badging updates to help users find messages that count",
         "link": "https://deltapulse.app/item/MC1268911",
         "published": "2026-04-02T20:35:45.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1901,6 +2102,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268911"
       },
@@ -1908,6 +2111,7 @@
         "title": "Improved secure file preview experience in OneDrive for iOS and iPadOS",
         "link": "https://deltapulse.app/item/MC1268909",
         "published": "2026-04-02T20:33:16.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
         "m365AllServices": [
@@ -1922,6 +2126,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268909"
       },
@@ -1929,6 +2135,7 @@
         "title": "(Updated) Improved OneDrive sync experience for macOS users",
         "link": "https://deltapulse.app/item/MC1255404",
         "published": "2026-03-18T22:28:44.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
         "m365AllServices": [
@@ -1943,6 +2150,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255404"
       },
@@ -1950,6 +2159,7 @@
         "title": "(Updated) Microsoft Teams: AI Interpreter (simultaneous) quality improvements and new Traditional Chinese support",
         "link": "https://deltapulse.app/item/MC1267977",
         "published": "2026-04-02T02:28:50.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -1965,6 +2175,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1267977"
       }
@@ -1974,6 +2186,7 @@
         "title": "Outlook: Upgraded Video and Audio Player for iOS",
         "link": "https://deltapulse.app/item/560056",
         "published": "2026-04-08T23:00:03.000Z",
+        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -1986,6 +2199,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:560056"
       },
@@ -1993,6 +2208,7 @@
         "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
         "link": "https://deltapulse.app/item/558933",
         "published": "2026-04-08T23:00:03.000Z",
+        "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2005,6 +2221,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558933"
       },
@@ -2012,6 +2230,7 @@
         "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
         "link": "https://deltapulse.app/item/558853",
         "published": "2026-04-08T23:00:03.000Z",
+        "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2024,6 +2243,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558853"
       },
@@ -2031,6 +2252,7 @@
         "title": "Upcoming change: Microsoft 365 Apps SAEC and MEC will unify",
         "link": "https://deltapulse.app/item/MC1274325",
         "published": "2026-04-08T16:33:04.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
         "m365AllServices": [
@@ -2045,6 +2267,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274325"
       },
@@ -2052,6 +2276,7 @@
         "title": "Outlook: Copilot Search Suggestions for Outlook",
         "link": "https://deltapulse.app/item/559990",
         "published": "2026-04-07T23:15:03.000Z",
+        "summary": "Get Copilot suggestions in the Outlook search menu to help you stay on top of your inbox and calendar, find what you are looking for and get more done in Outlook.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2064,6 +2289,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559990"
       },
@@ -2071,6 +2298,7 @@
         "title": "Microsoft Viva: New Overview experience and agent categories in Agent Dashboard",
         "link": "https://deltapulse.app/item/559996",
         "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Customers can now view and understand their agent landscape through the new Overview page that will be included as part of the Agent Dashboard in Microsoft Viva. This experience will provide customers with key at-a-glance insights on adoption in their organizations, visibility into who’s creating agents used in their organization, and details on what business process categories these agents are used for.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2083,6 +2311,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:559996"
       },
@@ -2090,6 +2320,7 @@
         "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
         "link": "https://deltapulse.app/item/558689",
         "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2102,6 +2333,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558689"
       },
@@ -2109,6 +2342,7 @@
         "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
         "link": "https://deltapulse.app/item/559995",
         "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Enable Global and Insights admins to turn on additional attributes as filters in Power BI reports, including reserved attributes and your organization’s custom attributes. Users who have access to Power BI reports can then use these newly enabled filters to tailor reports to their business needs.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2121,6 +2355,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559995"
       },
@@ -2128,6 +2364,7 @@
         "title": "Microsoft Teams: Sharing recap access",
         "link": "https://deltapulse.app/item/559606",
         "published": "2026-04-03T22:15:57.000Z",
+        "summary": "Recording and transcript owners can now grant recording and transcript access to specified people when copying or sharing recap link, and the specified people can access the recap without having to request access.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2140,6 +2377,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559606"
       },
@@ -2147,6 +2386,7 @@
         "title": "Classic Outlook: Retirement of people card expanded view",
         "link": "https://deltapulse.app/item/MC1269210",
         "published": "2026-04-03T05:12:41.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
         "m365AllServices": [
@@ -2161,13 +2401,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1269210"
       },
       {
         "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
         "link": "https://deltapulse.app/item/559611",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "Presenters can now share a single application window and enable participants to annotate directly on top of that content, without exposing their entire desktop. This means cleaner presentations, protected privacy, and more engaging discussions across training sessions, workshops, and client meetings.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2180,6 +2423,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559611"
       },
@@ -2187,6 +2432,7 @@
         "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
         "link": "https://deltapulse.app/item/557191",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "Block External Domain/User action in Microsoft Purview DLP for SharePoint and OneDrive, gives organizations stronger control over who can access sensitive files. With this enhancement, admins can configure DLP policies that block file access for specific external domains or individual users. This capability helps prevent unintended exposure by external users and supports enterprise compliance requirements.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2199,6 +2445,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:557191"
       },
@@ -2206,6 +2454,7 @@
         "title": "Microsoft Purview: Purview in Microsoft Admin Center",
         "link": "https://deltapulse.app/item/559617",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "AI and IT admins in Microsoft Admin Center can 1) gain visibility around oversharing risks and drive remediations 2) Understand how much of sensitive copilot interactions are protected and turn on Purview DLP for M365 Copilot right from there. Enables secure adoption of Copilot.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2218,6 +2467,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559617"
       },
@@ -2225,6 +2476,7 @@
         "title": "Microsoft Viva: Viva Glint and Viva Insights Integration - Exclusion List for data sharing",
         "link": "https://deltapulse.app/item/559266",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "Viva Glint admins will be able to manage an exclusion list in Viva Feature Access Management that prevents selected people and groups from being included in Viva Insights data shared with Viva Glint. This simplifies configuration and helps organizations apply consistent, privacy-conscious controls for the integration.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2237,6 +2489,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559266"
       },
@@ -2244,6 +2498,7 @@
         "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
         "link": "https://deltapulse.app/item/558565",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "With Purview enabled in Microsoft Foundry, Purview admins can setup inline DLP policies to prompts on Foundry built apps and agents to ensure data loss prevention of sensitive data.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2256,6 +2511,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558565"
       },
@@ -2263,6 +2520,7 @@
         "title": "Microsoft AutoUpdate (MAU) CDN Endpoint Update for Mac",
         "link": "https://deltapulse.app/item/MC1268926",
         "published": "2026-04-02T20:59:02.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
         "m365AllServices": [
@@ -2277,6 +2535,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268926"
       },
@@ -2284,6 +2544,7 @@
         "title": "Windows 365: Windows 365 Link - Market Expansion",
         "link": "https://deltapulse.app/item/558253",
         "published": "2026-03-12T23:00:54.000Z",
+        "summary": "Windows 365 Link will be available for sale in Norway",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2296,6 +2557,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558253"
       },
@@ -2303,6 +2566,7 @@
         "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
         "link": "https://deltapulse.app/item/553213",
         "published": "2026-03-30T16:15:57.000Z",
+        "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2315,6 +2579,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:553213"
       },
@@ -2322,6 +2588,7 @@
         "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
         "link": "https://deltapulse.app/item/558538",
         "published": "2026-03-30T16:15:57.000Z",
+        "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2334,6 +2601,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558538"
       },
@@ -2341,6 +2610,7 @@
         "title": "Microsoft Teams: Attendee capacity packs for Teams events",
         "link": "https://deltapulse.app/item/558856",
         "published": "2026-03-20T22:00:36.000Z",
+        "summary": "Attendee capacity packs provide increased capacity limits for Teams events. Organizers can scale event attendance beyond base limits while maintaining a consistent Teams events experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2353,6 +2623,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558856"
       },
@@ -2360,6 +2632,7 @@
         "title": "Microsoft Teams: Video recap in Teams",
         "link": "https://deltapulse.app/item/558540",
         "published": "2026-03-12T23:00:54.000Z",
+        "summary": "Intelligent meeting recap will now include video-based recaps. Video recap creates narrated video highlights from recorded meetings, featuring key takeaways and short clips that showcase important moments.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2372,6 +2645,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558540"
       },
@@ -2379,6 +2654,7 @@
         "title": "(Updated) Microsoft Edge: Copilot new tab page",
         "link": "https://deltapulse.app/item/MC1250274",
         "published": "2026-03-12T23:41:53.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
         "m365AllServices": [
@@ -2393,6 +2669,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1250274"
       },
@@ -2400,6 +2678,7 @@
         "title": "Microsoft Teams: Spoken language detection is now automatic",
         "link": "https://deltapulse.app/item/558543",
         "published": "2026-03-12T23:00:54.000Z",
+        "summary": "Spoken language detection is now fully automatic. Teams will automatically detect each speaker’s spoken language and update it in real time as the conversation evolves. Manual spoken language selection will no longer be available. This applies to both live captions and transcripts when Interpreter is enabled or when multilingual speech recognition is turned on in meeting options, helping deliver more accurate language recognition and a more consistent multilingual meeting experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2412,6 +2691,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558543"
       },
@@ -2419,6 +2700,7 @@
         "title": "Microsoft Teams: Book future meetings directly from Teams panels",
         "link": "https://deltapulse.app/item/558287",
         "published": "2026-03-27T22:15:31.000Z",
+        "summary": "This item is cancelled as a duplicate of 557168. We are sorry for any inconvenience it may cause. You can now make an upcoming meeting reservation from a Teams panel by browsing the calendar on the device and choosing any open time slot through midnight the next day. Add a guest during booking, streamlining ad-hoc scheduling and coordination. Available with Teams Rooms Pro and Shared Device licenses.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2431,6 +2713,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558287"
       },
@@ -2438,6 +2722,7 @@
         "title": "Microsoft Teams: Facilitator detects and answers questions",
         "link": "https://deltapulse.app/item/558341",
         "published": "2026-04-01T23:15:50.000Z",
+        "summary": "Facilitator now automatically detects open questions raised during a Teams meeting and offers to help answer them using web search. When a participant asks a question (e.g., “What is an LLM?”) and no one answers, Facilitator posts a prompt offering to find an answer. Participants can select “Yes” to have the agent retrieve and share the information.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2450,6 +2735,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558341"
       },
@@ -2457,6 +2744,7 @@
         "title": "Microsoft Teams: Improved organization for muted and meeting chats",
         "link": "https://deltapulse.app/item/559605",
         "published": "2026-04-01T23:15:50.000Z",
+        "summary": "Microsoft Teams automatically organizes your chats with new built in sections that help reduce clutter and keep conversations easy to find. Muted chats (on by default) are grouped together in a dedicated area, while meeting chats (off by default) can be collected into a single section for quick access. You’re always in control, as each section can be turned on or off based on your preferences.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -2469,6 +2757,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559605"
       }
@@ -2478,6 +2768,7 @@
         "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
         "link": "https://deltapulse.app/item/MC1274562",
         "published": "2026-04-08T22:42:45.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Power Platform)",
         "m365AllServices": [
@@ -2492,13 +2783,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1274562"
       },
       {
         "title": "Update to Copilot navigation pane chat history filtering",
         "link": "https://deltapulse.app/item/MC1269870",
         "published": "2026-04-03T22:24:39.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
         "m365AllServices": [
@@ -2514,34 +2808,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269870"
-      },
-      {
-        "title": "Microsoft Copilot Studio - Enable express mode for flows invoked by an agent or app",
-        "link": "https://deltapulse.app/item/MC1268694",
-        "published": "2026-04-02T16:26:58.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Power Platform)",
-        "m365AllServices": [
-          "Microsoft Copilot (Power Platform)"
-        ],
-        "m365Id": "MC1268694",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268694"
       },
       {
         "title": "Copilot Cowork now available in Frontier",
         "link": "https://deltapulse.app/item/MC1265767",
         "published": "2026-03-30T17:15:40.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
         "m365AllServices": [
@@ -2557,6 +2833,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1265767"
       },
@@ -2564,6 +2842,7 @@
         "title": "Power Automate - Analyze processes using object-centric process mining",
         "link": "https://deltapulse.app/item/MC1268680",
         "published": "2026-04-02T15:54:53.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Power Automate",
         "m365AllServices": [
@@ -2578,6 +2857,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268680"
       }
@@ -2587,6 +2868,7 @@
         "title": "Microsoft Dataverse - Enable makers to create Dataverse AI prompt columns",
         "link": "https://deltapulse.app/item/MC1273097",
         "published": "2026-04-07T14:55:15.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Dataverse",
         "m365AllServices": [
@@ -2601,6 +2883,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273097"
       }
@@ -2610,6 +2894,7 @@
         "title": "Microsoft Whiteboard content is now viewable in Microsoft Purview eDiscovery",
         "link": "https://deltapulse.app/item/MC1273444",
         "published": "2026-04-07T23:25:13.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Purview",
         "m365AllServices": [
@@ -2624,6 +2909,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273444"
       },
@@ -2631,6 +2918,7 @@
         "title": "Microsoft Defender XDR: Email summary powered by Security Copilot on the email entity page",
         "link": "https://deltapulse.app/item/MC1268924",
         "published": "2026-04-02T20:58:01.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Defender XDR",
         "m365AllServices": [
@@ -2645,6 +2933,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268924"
       },
@@ -2652,6 +2942,7 @@
         "title": "(Updated) Microsoft Purview compliance portal: Data Security Investigations introduces new soft purge mitigation action",
         "link": "https://deltapulse.app/item/MC1249429",
         "published": "2026-03-12T00:06:58.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Purview",
         "m365AllServices": [
@@ -2666,6 +2957,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1249429"
       }
@@ -2675,6 +2968,7 @@
         "title": "Extended Security Updates (ESU) available for Windows 10 Enterprise LTSB 2016",
         "link": "https://deltapulse.app/item/MC1274396",
         "published": "2026-04-08T19:58:31.567Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Windows",
         "m365AllServices": [
@@ -2689,6 +2983,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274396"
       },
@@ -2696,6 +2992,7 @@
         "title": "ESR management is moving to Windows Backup for Organizations",
         "link": "https://deltapulse.app/item/MC1274349",
         "published": "2026-04-08T17:16:01.437Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Windows",
         "m365AllServices": [
@@ -2710,6 +3007,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274349"
       },
@@ -2717,6 +3016,7 @@
         "title": "Replacement of the Microsoft SaRA command-line utility in Windows",
         "link": "https://deltapulse.app/item/MC1269727",
         "published": "2026-04-03T17:00:49.660Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Windows",
         "m365AllServices": [
@@ -2731,6 +3031,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269727"
       },
@@ -2738,6 +3040,7 @@
         "title": "Enable Secure Boot certificate update status in the Windows Security app",
         "link": "https://deltapulse.app/item/MC1268714",
         "published": "2026-04-02T17:05:07.543Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Windows",
         "m365AllServices": [
@@ -2752,6 +3055,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268714"
       }
@@ -2761,6 +3066,7 @@
         "title": "Power Apps - Microsoft 365 Copilot will be available in model-driven apps",
         "link": "https://deltapulse.app/item/MC1273407",
         "published": "2026-04-07T21:08:13.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Power Apps",
         "m365AllServices": [
@@ -2775,6 +3081,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273407"
       },
@@ -2782,6 +3090,7 @@
         "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
         "link": "https://deltapulse.app/item/MC1273328",
         "published": "2026-04-07T19:29:05.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Power Apps",
         "m365AllServices": [
@@ -2796,13 +3105,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1273328"
       },
       {
         "title": "Dynamics 365 Sales - Get integrated inbound and outbound calling with Sales Hub dialer",
         "link": "https://deltapulse.app/item/MC1268720",
         "published": "2026-04-02T17:14:14.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
         "m365AllServices": [
@@ -2817,6 +3129,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268720"
       }
@@ -2826,6 +3140,7 @@
         "title": "New Overview experience and agent categories in Agent Dashboard",
         "link": "https://deltapulse.app/item/MC1274322",
         "published": "2026-04-08T16:29:12.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -2841,6 +3156,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274322"
       },
@@ -2848,6 +3165,7 @@
         "title": "(Updated) Viva Engage: Feature conversations to all network members",
         "link": "https://deltapulse.app/item/MC1272652",
         "published": "2026-04-07T01:58:10.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -2862,6 +3180,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1272652"
       },
@@ -2869,6 +3189,7 @@
         "title": "Viva Engage: At-Mentions & Replies notifications improvements",
         "link": "https://deltapulse.app/item/MC1269214",
         "published": "2026-04-03T05:15:13.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -2883,6 +3204,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269214"
       },
@@ -2890,6 +3213,7 @@
         "title": "Viva Engage digest updates: Improvements to weekly",
         "link": "https://deltapulse.app/item/MC1269207",
         "published": "2026-04-03T05:10:49.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -2904,6 +3228,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269207"
       },
@@ -2911,6 +3237,7 @@
         "title": "Viva Engage: Pinned resources and related communities in Teams for iOS",
         "link": "https://deltapulse.app/item/MC1268933",
         "published": "2026-04-02T21:02:30.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -2925,6 +3252,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268933"
       },
@@ -2932,6 +3261,7 @@
         "title": "Microsoft Viva: Manage data sharing exclusions for Viva Glint and Viva Insights",
         "link": "https://deltapulse.app/item/MC1268931",
         "published": "2026-04-02T21:02:05.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -2946,6 +3276,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268931"
       },
@@ -2953,6 +3285,7 @@
         "title": "(Updated) Microsoft Viva Engage | Email sender domain migration from @yammer.com to @engage.mail.microsoft",
         "link": "https://deltapulse.app/item/MC1251200",
         "published": "2026-03-13T22:45:08.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -2967,51 +3300,10 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1251200"
-      },
-      {
-        "title": "(Updated) Updated UX in Viva Connections on Teams mobile",
-        "link": "https://deltapulse.app/item/MC1262585",
-        "published": "2026-03-26T23:43:35.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1262585",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262585"
-      },
-      {
-        "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-        "link": "https://deltapulse.app/item/MC1250279",
-        "published": "2026-03-12T23:42:55.000Z",
-        "source": "m365",
-        "m365Service": "Planner",
-        "m365AllServices": [
-          "Planner",
-          "Microsoft Copilot (Microsoft 365)"
-        ],
-        "m365Id": "MC1250279",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026, May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250279"
       }
     ]
   },
@@ -3021,6 +3313,7 @@
         "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
         "link": "https://deltapulse.app/item/558933",
         "published": "2026-04-08T23:00:03.000Z",
+        "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3033,6 +3326,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558933"
       },
@@ -3040,6 +3335,7 @@
         "title": "Microsoft Viva: New Overview experience and agent categories in Agent Dashboard",
         "link": "https://deltapulse.app/item/559996",
         "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Customers can now view and understand their agent landscape through the new Overview page that will be included as part of the Agent Dashboard in Microsoft Viva. This experience will provide customers with key at-a-glance insights on adoption in their organizations, visibility into who’s creating agents used in their organization, and details on what business process categories these agents are used for.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3052,6 +3348,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:559996"
       },
@@ -3059,6 +3357,7 @@
         "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
         "link": "https://deltapulse.app/item/558689",
         "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3071,6 +3370,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558689"
       },
@@ -3078,6 +3379,7 @@
         "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
         "link": "https://deltapulse.app/item/557191",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "Block External Domain/User action in Microsoft Purview DLP for SharePoint and OneDrive, gives organizations stronger control over who can access sensitive files. With this enhancement, admins can configure DLP policies that block file access for specific external domains or individual users. This capability helps prevent unintended exposure by external users and supports enterprise compliance requirements.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3090,6 +3392,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:557191"
       },
@@ -3097,6 +3401,7 @@
         "title": "Microsoft Purview: Data Loss Prevention – Inline DLP for Prompts for Microsoft Foundry apps and agents",
         "link": "https://deltapulse.app/item/558565",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "With Purview enabled in Microsoft Foundry, Purview admins can setup inline DLP policies to prompts on Foundry built apps and agents to ensure data loss prevention of sensitive data.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3109,6 +3414,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558565"
       },
@@ -3116,6 +3423,7 @@
         "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
         "link": "https://deltapulse.app/item/553213",
         "published": "2026-03-30T16:15:57.000Z",
+        "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3128,6 +3436,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:553213"
       },
@@ -3135,6 +3445,7 @@
         "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
         "link": "https://deltapulse.app/item/558538",
         "published": "2026-03-30T16:15:57.000Z",
+        "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3147,6 +3458,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558538"
       }
@@ -3156,6 +3469,7 @@
         "title": "Outlook: Upgraded Video and Audio Player for iOS",
         "link": "https://deltapulse.app/item/560056",
         "published": "2026-04-08T23:00:03.000Z",
+        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3168,6 +3482,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:560056"
       },
@@ -3175,6 +3491,7 @@
         "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
         "link": "https://deltapulse.app/item/558853",
         "published": "2026-04-08T23:00:03.000Z",
+        "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3187,34 +3504,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558853"
-      },
-      {
-        "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
-        "link": "https://deltapulse.app/item/MC1274562",
-        "published": "2026-04-08T22:42:45.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Power Platform)",
-        "m365AllServices": [
-          "Microsoft Copilot (Power Platform)"
-        ],
-        "m365Id": "MC1274562",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1274562"
       },
       {
         "title": "Microsoft Teams: Book future meetings from Microsoft Teams panels (Android)",
         "link": "https://deltapulse.app/item/MC1274551",
         "published": "2026-04-08T22:17:35.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -3229,6 +3528,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274551"
       },
@@ -3236,6 +3537,7 @@
         "title": "Microsoft Teams: Quick access to read items while using unread only mode",
         "link": "https://deltapulse.app/item/MC1274550",
         "published": "2026-04-08T22:17:03.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -3250,6 +3552,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274550"
       },
@@ -3257,6 +3561,7 @@
         "title": "Extended Security Updates (ESU) available for Windows 10 Enterprise LTSB 2016",
         "link": "https://deltapulse.app/item/MC1274396",
         "published": "2026-04-08T19:58:31.567Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Windows",
         "m365AllServices": [
@@ -3271,6 +3576,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274396"
       },
@@ -3278,6 +3585,7 @@
         "title": "ESR management is moving to Windows Backup for Organizations",
         "link": "https://deltapulse.app/item/MC1274349",
         "published": "2026-04-08T17:16:01.437Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Windows",
         "m365AllServices": [
@@ -3292,6 +3600,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274349"
       },
@@ -3299,6 +3609,7 @@
         "title": "Upcoming change: Microsoft 365 Apps SAEC and MEC will unify",
         "link": "https://deltapulse.app/item/MC1274325",
         "published": "2026-04-08T16:33:04.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft 365 apps",
         "m365AllServices": [
@@ -3313,6 +3624,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274325"
       },
@@ -3320,6 +3633,7 @@
         "title": "SharePoint Advanced Management: Delegate management of Restricted Access Control (RAC) to site admins",
         "link": "https://deltapulse.app/item/MC1274323",
         "published": "2026-04-08T16:31:01.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "SharePoint Online",
         "m365AllServices": [
@@ -3335,6 +3649,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274323"
       },
@@ -3342,6 +3658,7 @@
         "title": "New Overview experience and agent categories in Agent Dashboard",
         "link": "https://deltapulse.app/item/MC1274322",
         "published": "2026-04-08T16:29:12.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -3357,6 +3674,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1274322"
       },
@@ -3364,6 +3683,7 @@
         "title": "Microsoft Whiteboard content is now viewable in Microsoft Purview eDiscovery",
         "link": "https://deltapulse.app/item/MC1273444",
         "published": "2026-04-07T23:25:13.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Purview",
         "m365AllServices": [
@@ -3378,6 +3698,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273444"
       },
@@ -3385,6 +3707,7 @@
         "title": "Microsoft Teams: Smarter auto suggestions to help you search faster",
         "link": "https://deltapulse.app/item/MC1273443",
         "published": "2026-04-07T23:24:47.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -3399,6 +3722,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273443"
       },
@@ -3406,6 +3731,7 @@
         "title": "Outlook: Copilot Search Suggestions for Outlook",
         "link": "https://deltapulse.app/item/559990",
         "published": "2026-04-07T23:15:03.000Z",
+        "summary": "Get Copilot suggestions in the Outlook search menu to help you stay on top of your inbox and calendar, find what you are looking for and get more done in Outlook.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3418,6 +3744,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559990"
       },
@@ -3425,6 +3753,7 @@
         "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
         "link": "https://deltapulse.app/item/559995",
         "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Enable Global and Insights admins to turn on additional attributes as filters in Power BI reports, including reserved attributes and your organization’s custom attributes. Users who have access to Power BI reports can then use these newly enabled filters to tailor reports to their business needs.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3437,6 +3766,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559995"
       },
@@ -3444,6 +3775,7 @@
         "title": "Power Apps - Microsoft 365 Copilot will be available in model-driven apps",
         "link": "https://deltapulse.app/item/MC1273407",
         "published": "2026-04-07T21:08:13.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Power Apps",
         "m365AllServices": [
@@ -3458,34 +3790,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273407"
-      },
-      {
-        "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
-        "link": "https://deltapulse.app/item/MC1273328",
-        "published": "2026-04-07T19:29:05.000Z",
-        "source": "m365",
-        "m365Service": "Power Apps",
-        "m365AllServices": [
-          "Power Apps"
-        ],
-        "m365Id": "MC1273328",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1273328"
       },
       {
         "title": "Microsoft Dataverse - Enable makers to create Dataverse AI prompt columns",
         "link": "https://deltapulse.app/item/MC1273097",
         "published": "2026-04-07T14:55:15.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Dataverse",
         "m365AllServices": [
@@ -3500,6 +3814,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273097"
       },
@@ -3507,6 +3823,7 @@
         "title": "(Updated) Viva Engage: Feature conversations to all network members",
         "link": "https://deltapulse.app/item/MC1272652",
         "published": "2026-04-07T01:58:10.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -3521,34 +3838,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1272652"
-      },
-      {
-        "title": "Top domain mail flow report in Exchange Online is retiring",
-        "link": "https://deltapulse.app/item/MC1272554",
-        "published": "2026-04-06T22:06:03.000Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1272554",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1272554"
       },
       {
         "title": "Workweek view for Outlook on iOS and iPad",
         "link": "https://deltapulse.app/item/MC1272552",
         "published": "2026-04-06T22:00:36.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -3563,35 +3862,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1272552"
-      },
-      {
-        "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
-        "link": "https://deltapulse.app/item/MC1272549",
-        "published": "2026-04-06T21:59:59.000Z",
-        "source": "m365",
-        "m365Service": "SharePoint Online",
-        "m365AllServices": [
-          "SharePoint Online",
-          "Microsoft OneDrive"
-        ],
-        "m365Id": "MC1272549",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "July 2026, August 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1272549"
       },
       {
         "title": "Microsoft Teams | RemoteApp support for Azure Virtual Desktop and Windows 365 with SlimCore optimization",
         "link": "https://deltapulse.app/item/MC1272546",
         "published": "2026-04-06T21:58:14.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -3606,6 +3886,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1272546"
       },
@@ -3613,6 +3895,7 @@
         "title": "Update to Copilot navigation pane chat history filtering",
         "link": "https://deltapulse.app/item/MC1269870",
         "published": "2026-04-03T22:24:39.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
         "m365AllServices": [
@@ -3628,6 +3911,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269870"
       },
@@ -3635,6 +3920,7 @@
         "title": "Microsoft Teams: New chat sections for muted and meeting chats",
         "link": "https://deltapulse.app/item/MC1269864",
         "published": "2026-04-03T22:23:30.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -3649,6 +3935,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269864"
       },
@@ -3656,6 +3944,7 @@
         "title": "OneDrive and SharePoint: Undo and Redo for PDF annotations on OneDrive for web",
         "link": "https://deltapulse.app/item/MC1269863",
         "published": "2026-04-03T22:23:04.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "SharePoint Online",
         "m365AllServices": [
@@ -3671,6 +3960,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269863"
       },
@@ -3678,6 +3969,7 @@
         "title": "OneDrive: Files deleted from the cloud will no longer appear in the local Recycle Bin or Trash",
         "link": "https://deltapulse.app/item/MC1269861",
         "published": "2026-04-03T22:22:02.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
         "m365AllServices": [
@@ -3692,6 +3984,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269861"
       },
@@ -3699,6 +3993,7 @@
         "title": "Microsoft Teams: Sharing recap access",
         "link": "https://deltapulse.app/item/559606",
         "published": "2026-04-03T22:15:57.000Z",
+        "summary": "Recording and transcript owners can now grant recording and transcript access to specified people when copying or sharing recap link, and the specified people can access the recap without having to request access.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3711,6 +4006,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559606"
       },
@@ -3718,6 +4015,7 @@
         "title": "Replacement of the Microsoft SaRA command-line utility in Windows",
         "link": "https://deltapulse.app/item/MC1269727",
         "published": "2026-04-03T17:00:49.660Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Windows",
         "m365AllServices": [
@@ -3732,6 +4030,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269727"
       },
@@ -3739,6 +4039,7 @@
         "title": "Outlook for Android and iOS: Support for shareable links beautification and permissions in meeting description",
         "link": "https://deltapulse.app/item/MC1269216",
         "published": "2026-04-03T05:16:27.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -3753,6 +4054,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269216"
       },
@@ -3760,6 +4063,7 @@
         "title": "Microsoft Teams: Honor Windows “Do not disturb” setting",
         "link": "https://deltapulse.app/item/MC1269215",
         "published": "2026-04-03T05:15:53.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -3774,6 +4078,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269215"
       },
@@ -3781,6 +4087,7 @@
         "title": "Viva Engage: At-Mentions & Replies notifications improvements",
         "link": "https://deltapulse.app/item/MC1269214",
         "published": "2026-04-03T05:15:13.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -3795,6 +4102,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269214"
       },
@@ -3802,6 +4111,7 @@
         "title": "New meeting response option: decline and propose a new time in Outlook Mobile",
         "link": "https://deltapulse.app/item/MC1269213",
         "published": "2026-04-03T05:14:37.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -3816,6 +4126,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269213"
       },
@@ -3823,6 +4135,7 @@
         "title": "New option to keep or delete meeting invitations after responding",
         "link": "https://deltapulse.app/item/MC1269212",
         "published": "2026-04-03T05:13:55.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -3837,6 +4150,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269212"
       },
@@ -3844,6 +4159,7 @@
         "title": "Clearer RSVP selection in Outlook Mobile",
         "link": "https://deltapulse.app/item/MC1269211",
         "published": "2026-04-03T05:13:19.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Exchange Online",
         "m365AllServices": [
@@ -3858,34 +4174,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269211"
-      },
-      {
-        "title": "Classic Outlook: Retirement of people card expanded view",
-        "link": "https://deltapulse.app/item/MC1269210",
-        "published": "2026-04-03T05:12:41.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft 365 apps",
-        "m365AllServices": [
-          "Microsoft 365 apps"
-        ],
-        "m365Id": "MC1269210",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": true,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1269210"
       },
       {
         "title": "Extending AI in SharePoint using custom skills",
         "link": "https://deltapulse.app/item/MC1269209",
         "published": "2026-04-03T05:11:53.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "SharePoint Online",
         "m365AllServices": [
@@ -3900,6 +4198,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269209"
       },
@@ -3907,6 +4207,7 @@
         "title": "Viva Engage digest updates: Improvements to weekly",
         "link": "https://deltapulse.app/item/MC1269207",
         "published": "2026-04-03T05:10:49.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -3921,6 +4222,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1269207"
       },
@@ -3928,6 +4231,7 @@
         "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
         "link": "https://deltapulse.app/item/559611",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "Presenters can now share a single application window and enable participants to annotate directly on top of that content, without exposing their entire desktop. This means cleaner presentations, protected privacy, and more engaging discussions across training sessions, workshops, and client meetings.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3940,6 +4244,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559611"
       },
@@ -3947,6 +4253,7 @@
         "title": "Microsoft Purview: Purview in Microsoft Admin Center",
         "link": "https://deltapulse.app/item/559617",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "AI and IT admins in Microsoft Admin Center can 1) gain visibility around oversharing risks and drive remediations 2) Understand how much of sensitive copilot interactions are protected and turn on Purview DLP for M365 Copilot right from there. Enables secure adoption of Copilot.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3959,6 +4266,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559617"
       },
@@ -3966,6 +4275,7 @@
         "title": "Microsoft Viva: Viva Glint and Viva Insights Integration - Exclusion List for data sharing",
         "link": "https://deltapulse.app/item/559266",
         "published": "2026-04-02T23:15:15.000Z",
+        "summary": "Viva Glint admins will be able to manage an exclusion list in Viva Feature Access Management that prevents selected people and groups from being included in Viva Insights data shared with Viva Glint. This simplifies configuration and helps organizations apply consistent, privacy-conscious controls for the integration.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -3978,6 +4288,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559266"
       },
@@ -3985,6 +4297,7 @@
         "title": "Viva Engage: Pinned resources and related communities in Teams for iOS",
         "link": "https://deltapulse.app/item/MC1268933",
         "published": "2026-04-02T21:02:30.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -3999,6 +4312,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268933"
       },
@@ -4006,6 +4321,7 @@
         "title": "Microsoft Viva: Manage data sharing exclusions for Viva Glint and Viva Insights",
         "link": "https://deltapulse.app/item/MC1268931",
         "published": "2026-04-02T21:02:05.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -4020,6 +4336,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268931"
       },
@@ -4027,6 +4345,7 @@
         "title": "Microsoft AutoUpdate (MAU) CDN Endpoint Update for Mac",
         "link": "https://deltapulse.app/item/MC1268926",
         "published": "2026-04-02T20:59:02.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
         "m365AllServices": [
@@ -4041,6 +4360,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268926"
       },
@@ -4048,6 +4369,7 @@
         "title": "Microsoft Teams: Enhanced media quality for Direct Guest Join",
         "link": "https://deltapulse.app/item/MC1268925",
         "published": "2026-04-02T20:58:31.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -4062,6 +4384,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268925"
       },
@@ -4069,6 +4393,7 @@
         "title": "Microsoft Defender XDR: Email summary powered by Security Copilot on the email entity page",
         "link": "https://deltapulse.app/item/MC1268924",
         "published": "2026-04-02T20:58:01.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Defender XDR",
         "m365AllServices": [
@@ -4083,6 +4408,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268924"
       },
@@ -4090,6 +4417,7 @@
         "title": "Microsoft Teams: Badging updates to help users find messages that count",
         "link": "https://deltapulse.app/item/MC1268911",
         "published": "2026-04-02T20:35:45.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -4104,6 +4432,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268911"
       },
@@ -4111,6 +4441,7 @@
         "title": "Improved secure file preview experience in OneDrive for iOS and iPadOS",
         "link": "https://deltapulse.app/item/MC1268909",
         "published": "2026-04-02T20:33:16.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
         "m365AllServices": [
@@ -4125,6 +4456,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268909"
       },
@@ -4132,6 +4465,7 @@
         "title": "Dynamics 365 Sales - Get integrated inbound and outbound calling with Sales Hub dialer",
         "link": "https://deltapulse.app/item/MC1268720",
         "published": "2026-04-02T17:14:14.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Dynamics 365 Apps",
         "m365AllServices": [
@@ -4146,6 +4480,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268720"
       },
@@ -4153,6 +4489,7 @@
         "title": "Enable Secure Boot certificate update status in the Windows Security app",
         "link": "https://deltapulse.app/item/MC1268714",
         "published": "2026-04-02T17:05:07.543Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Windows",
         "m365AllServices": [
@@ -4167,34 +4504,16 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268714"
-      },
-      {
-        "title": "Microsoft Copilot Studio - Enable express mode for flows invoked by an agent or app",
-        "link": "https://deltapulse.app/item/MC1268694",
-        "published": "2026-04-02T16:26:58.000Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Power Platform)",
-        "m365AllServices": [
-          "Microsoft Copilot (Power Platform)"
-        ],
-        "m365Id": "MC1268694",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268694"
       },
       {
         "title": "Windows 365: Windows 365 Link - Market Expansion",
         "link": "https://deltapulse.app/item/558253",
         "published": "2026-03-12T23:00:54.000Z",
+        "summary": "Windows 365 Link will be available for sale in Norway",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -4207,6 +4526,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558253"
       },
@@ -4214,6 +4535,7 @@
         "title": "Microsoft Teams: Attendee capacity packs for Teams events",
         "link": "https://deltapulse.app/item/558856",
         "published": "2026-03-20T22:00:36.000Z",
+        "summary": "Attendee capacity packs provide increased capacity limits for Teams events. Organizers can scale event attendance beyond base limits while maintaining a consistent Teams events experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -4226,6 +4548,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558856"
       },
@@ -4233,6 +4557,7 @@
         "title": "Microsoft Teams: Video recap in Teams",
         "link": "https://deltapulse.app/item/558540",
         "published": "2026-03-12T23:00:54.000Z",
+        "summary": "Intelligent meeting recap will now include video-based recaps. Video recap creates narrated video highlights from recorded meetings, featuring key takeaways and short clips that showcase important moments.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -4245,6 +4570,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558540"
       },
@@ -4252,6 +4579,7 @@
         "title": "(Updated) Improved OneDrive sync experience for macOS users",
         "link": "https://deltapulse.app/item/MC1255404",
         "published": "2026-03-18T22:28:44.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft OneDrive",
         "m365AllServices": [
@@ -4266,6 +4594,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1255404"
       },
@@ -4273,6 +4603,7 @@
         "title": "(Updated) Microsoft Edge: Copilot new tab page",
         "link": "https://deltapulse.app/item/MC1250274",
         "published": "2026-03-12T23:41:53.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft 365 suite",
         "m365AllServices": [
@@ -4287,6 +4618,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1250274"
       },
@@ -4294,6 +4627,7 @@
         "title": "(Updated) Microsoft Teams: AI Interpreter (simultaneous) quality improvements and new Traditional Chinese support",
         "link": "https://deltapulse.app/item/MC1267977",
         "published": "2026-04-02T02:28:50.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Teams",
         "m365AllServices": [
@@ -4309,6 +4643,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1267977"
       },
@@ -4316,6 +4652,7 @@
         "title": "(Updated) Microsoft Purview compliance portal: Data Security Investigations introduces new soft purge mitigation action",
         "link": "https://deltapulse.app/item/MC1249429",
         "published": "2026-03-12T00:06:58.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Purview",
         "m365AllServices": [
@@ -4330,6 +4667,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1249429"
       },
@@ -4337,6 +4676,7 @@
         "title": "Microsoft Teams: Spoken language detection is now automatic",
         "link": "https://deltapulse.app/item/558543",
         "published": "2026-03-12T23:00:54.000Z",
+        "summary": "Spoken language detection is now fully automatic. Teams will automatically detect each speaker’s spoken language and update it in real time as the conversation evolves. Manual spoken language selection will no longer be available. This applies to both live captions and transcripts when Interpreter is enabled or when multilingual speech recognition is turned on in meeting options, helping deliver more accurate language recognition and a more consistent multilingual meeting experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -4349,6 +4689,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558543"
       },
@@ -4356,6 +4698,7 @@
         "title": "Copilot Cowork now available in Frontier",
         "link": "https://deltapulse.app/item/MC1265767",
         "published": "2026-03-30T17:15:40.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Copilot (Microsoft 365)",
         "m365AllServices": [
@@ -4371,6 +4714,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1265767"
       },
@@ -4378,6 +4723,7 @@
         "title": "Microsoft Teams: Book future meetings directly from Teams panels",
         "link": "https://deltapulse.app/item/558287",
         "published": "2026-03-27T22:15:31.000Z",
+        "summary": "This item is cancelled as a duplicate of 557168. We are sorry for any inconvenience it may cause. You can now make an upcoming meeting reservation from a Teams panel by browsing the calendar on the device and choosing any open time slot through midnight the next day. Add a guest during booking, streamlining ad-hoc scheduling and coordination. Available with Teams Rooms Pro and Shared Device licenses.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -4390,6 +4736,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558287"
       },
@@ -4397,6 +4745,7 @@
         "title": "(Updated) Microsoft Viva Engage | Email sender domain migration from @yammer.com to @engage.mail.microsoft",
         "link": "https://deltapulse.app/item/MC1251200",
         "published": "2026-03-13T22:45:08.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Viva",
         "m365AllServices": [
@@ -4411,6 +4760,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1251200"
       },
@@ -4418,6 +4769,7 @@
         "title": "Microsoft Teams: Facilitator detects and answers questions",
         "link": "https://deltapulse.app/item/558341",
         "published": "2026-04-01T23:15:50.000Z",
+        "summary": "Facilitator now automatically detects open questions raised during a Teams meeting and offers to help answer them using web search. When a participant asks a question (e.g., “What is an LLM?”) and no one answers, Facilitator posts a prompt offering to find an answer. Participants can select “Yes” to have the agent retrieve and share the information.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -4430,6 +4782,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:558341"
       },
@@ -4437,6 +4791,7 @@
         "title": "Microsoft Teams: Improved organization for muted and meeting chats",
         "link": "https://deltapulse.app/item/559605",
         "published": "2026-04-01T23:15:50.000Z",
+        "summary": "Microsoft Teams automatically organizes your chats with new built in sections that help reduce clutter and keep conversations easy to find. Muted chats (on by default) are grouped together in a dedicated area, while meeting chats (off by default) can be collected into a single section for quick access. You’re always in control, as each section can be turned on or off based on your preferences.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
@@ -4449,6 +4804,8 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:559605"
       },
@@ -4456,6 +4813,7 @@
         "title": "Power Automate - Analyze processes using object-centric process mining",
         "link": "https://deltapulse.app/item/MC1268680",
         "published": "2026-04-02T15:54:53.000Z",
+        "summary": "",
         "source": "m365",
         "m365Service": "Microsoft Power Automate",
         "m365AllServices": [
@@ -4470,19 +4828,25 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1268680"
-      },
+      }
+    ],
+    "in_development": [],
+    "retiring": [
       {
-        "title": "(Updated) Updated UX in Viva Connections on Teams mobile",
-        "link": "https://deltapulse.app/item/MC1262585",
-        "published": "2026-03-26T23:43:35.000Z",
+        "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
+        "link": "https://deltapulse.app/item/MC1274562",
+        "published": "2026-04-08T22:42:45.000Z",
+        "summary": "",
         "source": "m365",
-        "m365Service": "Microsoft Viva",
+        "m365Service": "Microsoft Copilot (Power Platform)",
         "m365AllServices": [
-          "Microsoft Viva"
+          "Microsoft Copilot (Power Platform)"
         ],
-        "m365Id": "MC1262585",
+        "m365Id": "MC1274562",
         "m365Source": "message_center",
         "m365Category": "stayInformed",
         "m365Severity": "normal",
@@ -4491,34 +4855,144 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1262585"
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
+        "_normalized_url": "message_center:MC1274562"
       },
       {
-        "title": "(Updated) Microsoft 365 Copilot: Planner Agent rename and rollout to premium and basic plans",
-        "link": "https://deltapulse.app/item/MC1250279",
-        "published": "2026-03-12T23:42:55.000Z",
+        "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
+        "link": "https://deltapulse.app/item/MC1273328",
+        "published": "2026-04-07T19:29:05.000Z",
+        "summary": "",
         "source": "m365",
-        "m365Service": "Planner",
+        "m365Service": "Power Apps",
         "m365AllServices": [
-          "Planner",
-          "Microsoft Copilot (Microsoft 365)"
+          "Power Apps"
         ],
-        "m365Id": "MC1250279",
+        "m365Id": "MC1273328",
         "m365Source": "message_center",
         "m365Category": "stayInformed",
         "m365Severity": "normal",
         "m365Status": null,
-        "m365TargetDate": "March 2026, April 2026, May 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1250279"
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
+        "_normalized_url": "message_center:MC1273328"
+      },
+      {
+        "title": "Top domain mail flow report in Exchange Online is retiring",
+        "link": "https://deltapulse.app/item/MC1272554",
+        "published": "2026-04-06T22:06:03.000Z",
+        "summary": "",
+        "source": "m365",
+        "m365Service": "Exchange Online",
+        "m365AllServices": [
+          "Exchange Online"
+        ],
+        "m365Id": "MC1272554",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
+        "_normalized_url": "message_center:MC1272554"
+      },
+      {
+        "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
+        "link": "https://deltapulse.app/item/MC1272549",
+        "published": "2026-04-06T21:59:59.000Z",
+        "summary": "",
+        "source": "m365",
+        "m365Service": "SharePoint Online",
+        "m365AllServices": [
+          "SharePoint Online",
+          "Microsoft OneDrive"
+        ],
+        "m365Id": "MC1272549",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "July 2026, August 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
+        "_normalized_url": "message_center:MC1272549"
+      },
+      {
+        "title": "Classic Outlook: Retirement of people card expanded view",
+        "link": "https://deltapulse.app/item/MC1269210",
+        "published": "2026-04-03T05:12:41.000Z",
+        "summary": "",
+        "source": "m365",
+        "m365Service": "Microsoft 365 apps",
+        "m365AllServices": [
+          "Microsoft 365 apps"
+        ],
+        "m365Id": "MC1269210",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": true,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "retiring",
+        "_normalized_url": "message_center:MC1269210"
       }
-    ],
-    "in_development": [],
-    "retiring": []
+    ]
+  },
+  "m365RetirementCalendar": [],
+  "m365RetirementBuckets": {
+    "generatedAt": "2026-04-09T16:59:29.011883+00:00",
+    "referenceMonth": "2026-04",
+    "windows": {
+      "0_3_months": {
+        "label": "0-3-months",
+        "startMonthOffset": 0,
+        "endMonthOffset": 3,
+        "count": 0,
+        "items": []
+      },
+      "3_6_months": {
+        "label": "3-6-months",
+        "startMonthOffset": 3,
+        "endMonthOffset": 6,
+        "count": 0,
+        "items": []
+      },
+      "6_9_months": {
+        "label": "6-9-months",
+        "startMonthOffset": 6,
+        "endMonthOffset": 9,
+        "count": 0,
+        "items": []
+      },
+      "9_12_months": {
+        "label": "9-12-months",
+        "startMonthOffset": 9,
+        "endMonthOffset": 12,
+        "count": 0,
+        "items": []
+      }
+    }
   },
   "m365Video": {
     "title": "What’s New in Microsoft 365 | Latest Updates",

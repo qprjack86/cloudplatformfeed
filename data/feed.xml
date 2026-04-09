@@ -4,9 +4,63 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 09 Apr 2026 16:12:19 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 18:03:31 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[How we build and use Azure SRE Agent with agentic workflows]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</guid>
+      <description><![CDATA[The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...]]></description>
+      <dc:creator><![CDATA[Shamir_AbdulAziz]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 17:52:27 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Advancing to Agentic AI with Azure NetApp Files VS Code Extension v1.2.0]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/advancing-to-agentic-ai-with-azure-netapp-files-vs-code/ba-p/4500383</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/advancing-to-agentic-ai-with-azure-netapp-files-vs-code/ba-p/4500383</guid>
+      <description><![CDATA[Table of Contents Abstract Introducing Agentic AI: The Agent Volume Scan Why This Matters Why AI-Informed Operations Core Components Enhanced Natural Language Interface AI-Powered Analysis and Templates What are the Benefits? Business Benefits Economic Benefits Technical Benefits Real‑World...]]></description>
+      <dc:creator><![CDATA[GeertVanTeylingen]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 17:03:05 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Running Multiple Instances of an Aspire AppHost Without Port Conflicts]]></title>
+      <link>https://devblogs.microsoft.com/aspire/aspire-isolated-mode-parallel-development/</link>
+      <guid>https://devblogs.microsoft.com/aspire/aspire-isolated-mode-parallel-development/</guid>
+      <description><![CDATA[Aspire 13.2 introduces isolated mode, letting you run multiple instances of the same AppHost in parallel without port conflicts. Learn how the --isolated flag solves development and testing workflows. The post Running Multiple Instances of an Aspire AppHost Without Port Conflicts appeared first on...]]></description>
+      <dc:creator><![CDATA[James Newton-King]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 17:00:00 GMT</pubDate>
+      <category><![CDATA[Aspire Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Monitor AI Agents on App Service with OpenTelemetry and the New Application Insights Agents View]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/monitor-ai-agents-on-app-service-with-opentelemetry-and-the-new/ba-p/4510023</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/monitor-ai-agents-on-app-service-with-opentelemetry-and-the-new/ba-p/4510023</guid>
+      <description><![CDATA[Part 2 of 2: In Blog 1, we deployed a multi-agent travel planner on Azure App Service using the Microsoft Agent Framework (MAF) 1.0 GA. This post dives deep into how we instrumented those agents with OpenTelemetry and lit up the brand-new Agents (Preview) view in Application Insights. 📋...]]></description>
+      <dc:creator><![CDATA[jordanselig]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 16:43:43 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Announcing Private Preview: Deploy Ansible Playbooks using Azure Policy via Machine Configuration]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-private-preview-deploy-ansible-playbooks-using-azure/ba-p/4507848</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-private-preview-deploy-ansible-playbooks-using-azure/ba-p/4507848</guid>
+      <description><![CDATA[Azure Arc is on a mission to unify security, compliance, and management for Windows and Linux machines—anywhere. By extending Azure’s control plane beyond the cloud, Azure Arc enables organizations to unify governance, compliance, security and management of servers across on‑premises, edge, and...]]></description>
+      <dc:creator><![CDATA[alinetran]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 16:25:52 GMT</pubDate>
+      <category><![CDATA[Azure Arc]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Build Multi-Agent AI Apps on Azure App Service with Microsoft Agent Framework 1.0]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-apps-on-azure-app-service-with-microsoft/ba-p/4510017</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-apps-on-azure-app-service-with-microsoft/ba-p/4510017</guid>
+      <description><![CDATA[A couple of months ago, we published a three-part series showing how to build multi-agent AI systems on Azure App Service using preview packages from the Microsoft Agent Framework (MAF) (formerly AutoGen / Semantic Kernel Agents). The series walked through async processing, the request-reply...]]></description>
+      <dc:creator><![CDATA[jordanselig]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 16:24:13 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[Sovereignty in Azure Belgium Central: A Three-Layer Technical Deep Dive]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-confidential-computing/sovereignty-in-azure-belgium-central-a-three-layer-technical/ba-p/4506936</link>
@@ -24,6 +78,24 @@
       <dc:creator><![CDATA[Gapandey]]></dc:creator>
       <pubDate>Thu, 09 Apr 2026 10:45:39 GMT</pubDate>
       <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[What’s new in Fabric Eventstream: 2026 Q1 Edition]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-eventstream-2026-q1-edition/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-eventstream-2026-q1-edition/</guid>
+      <description><![CDATA[Coauthor: Arindam Chatterjee Over the first quarter of 2026, Fabric Eventstreams shipped meaningful improvements across three themes that have repeatedly come up in feedback from our broad community of customers and partners: broader connectivity, richer real-time processing, and secure...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 10:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Associated identities for items]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/associated-identities-for-items-preview/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/associated-identities-for-items-preview/</guid>
+      <description><![CDATA[Background Currently, many items still rely on the item’s owner identity for accessing connections and certain features (like delegated mode in SQL endpoint) specific to the item. If the owner leaves the organization or their credentials expire, items can become partially or fully non-functional....]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 09:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Enterprise UAMI Design in Azure: Trust Boundaries and Blast Radius]]></title>
@@ -107,6 +179,24 @@
       <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
+      <title><![CDATA[Enhancements to maintenance notifications in Azure Service Health]]></title>
+      <link>https://azure.microsoft.com/updates?id=559628</link>
+      <guid>https://azure.microsoft.com/updates?id=559628</guid>
+      <description><![CDATA[We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per server, now you receive a single notification per regioUpdate Type: GA, Services: Database for...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:45:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server]]></title>
+      <link>https://azure.microsoft.com/updates?id=559623</link>
+      <guid>https://azure.microsoft.com/updates?id=559623</guid>
+      <description><![CDATA[PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by efficiently managing idle and short-lived connections.With tUpdate Type: GA, Services: Database for...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:45:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
       <title><![CDATA[Public Preview: Azure Files assessments are now available using Azure Migrate]]></title>
       <link>https://azure.microsoft.com/en-us/updates/560025/</link>
       <guid>https://azure.microsoft.com/en-us/updates/560025/</guid>
@@ -125,6 +215,24 @@
       <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
+      <title><![CDATA[Observability in AKS Namespace and Workload Views]]></title>
+      <link>https://azure.microsoft.com/updates?id=560039</link>
+      <guid>https://azure.microsoft.com/updates?id=560039</guid>
+      <description><![CDATA[AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilizatioUpdate Type: GA, Services: Kubernetes...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Files assessments are now available using Azure Migrate]]></title>
+      <link>https://azure.microsoft.com/updates?id=560025</link>
+      <guid>https://azure.microsoft.com/updates?id=560025</guid>
+      <description><![CDATA[Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility intUpdate Type: Preview, Services: Azure...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
       <title><![CDATA[Introducing SQL MCP Server]]></title>
       <link>https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/</link>
       <guid>https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/</guid>
@@ -132,15 +240,6 @@
       <dc:creator><![CDATA[Jerry Nixon]]></dc:creator>
       <pubDate>Wed, 08 Apr 2026 16:01:37 GMT</pubDate>
       <category><![CDATA[Azure SQL Dev Corner]]></category>
-    </item>
-    <item>
-      <title><![CDATA[How we build and use Azure SRE Agent with agentic workflows]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</guid>
-      <description><![CDATA[The Challenge: Ops is critical but takes time from innovation Microsoft operates always-on, mission-critical production systems at extraordinary scale. Thousands of services, millions of deployments, and constant change are the reality of modern cloud engineering. These are titan systems that power...]]></description>
-      <dc:creator><![CDATA[Shamir_AbdulAziz]]></dc:creator>
-      <pubDate>Wed, 08 Apr 2026 16:00:40 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
     </item>
     <item>
       <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
@@ -197,6 +296,15 @@
       <category><![CDATA[AKS Blog]]></category>
     </item>
     <item>
+      <title><![CDATA[Simplify Azure Arc Server Onboarding with Ansible and the New Onboarding Role]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azurearcblog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new-onboarding-role/4509481</link>
+      <guid>https://techcommunity.microsoft.com/blog/azurearcblog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new-onboarding-role/4509481</guid>
+      <description><![CDATA[If you’re already using Ansible to manage your infrastructure, there’s now a simpler—and more secure—way to bring machines under Azure Arc management. We’ve introduced a new Azure Arc onboarding role...Update Type: Announcement, Services: Azure Arc, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 23:40:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
       <title><![CDATA[3 Ways to Get More from Azure SRE Agent]]></title>
       <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/3-ways-to-get-more-from-azure-sre-agent/ba-p/4508993</link>
       <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/3-ways-to-get-more-from-azure-sre-agent/ba-p/4508993</guid>
@@ -233,6 +341,15 @@
       <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
+      <title><![CDATA[Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support]]></title>
+      <link>https://azure.microsoft.com/updates?id=559547</link>
+      <guid>https://azure.microsoft.com/updates?id=559547</guid>
+      <description><![CDATA[Azure Red Hat OpenShift (ARO) now supports NVIDIA H100 and H200 GPU-based Azure Virtual Machine SKUs, enabling customers to run large-scale AI, machine learning, and high-performance computing (HPC) workloads on a fully managed OpenShift service. This updUpdate Type: GA, Services: Machine Learning,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 19:30:53 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
       <title><![CDATA[RSAC 2026: New Microsoft Sentinel Connectors Announcement]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</link>
       <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</guid>
@@ -251,6 +368,15 @@
       <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
+      <title><![CDATA[Disable HTTP proxy in AKS]]></title>
+      <link>https://azure.microsoft.com/updates?id=557857</link>
+      <guid>https://azure.microsoft.com/updates?id=557857</guid>
+      <description><![CDATA[Organizations that use HTTP proxies to control outbound traffic often need to change or remove those settings as network requirements evolve, which can be disruptive in running clusters. Azure Kubernetes Service allows administrators to disable HTTP proxyUpdate Type: GA, Services: Kubernetes...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 17:45:41 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
       <title><![CDATA[Generally Available: Azure Functions now supports MCP resource triggers]]></title>
       <link>https://azure.microsoft.com/en-us/updates/559981/</link>
       <guid>https://azure.microsoft.com/en-us/updates/559981/</guid>
@@ -260,6 +386,15 @@
       <category><![CDATA[Azure Updates]]></category>
     </item>
     <item>
+      <title><![CDATA[Azure Functions now supports MCP resource triggers]]></title>
+      <link>https://azure.microsoft.com/updates?id=559981</link>
+      <guid>https://azure.microsoft.com/updates?id=559981</guid>
+      <description><![CDATA[Developers building MCP servers on Azure Functions can expose tools but not resources. Now, Azure Functions supports MCP resource triggers, enabling developers to expose resources directly from an Azure Functions–hosted Model Context Protocol (MCP) serverUpdate Type: GA, Services: Azure Functions,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 17:15:12 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
       <title><![CDATA[Generally Available: Pod CIDR expansion in AKS]]></title>
       <link>https://azure.microsoft.com/en-us/updates/557907/</link>
       <guid>https://azure.microsoft.com/en-us/updates/557907/</guid>
@@ -267,6 +402,15 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 07 Apr 2026 17:00:23 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Pod CIDR expansion in AKS]]></title>
+      <link>https://azure.microsoft.com/updates?id=557907</link>
+      <guid>https://azure.microsoft.com/updates?id=557907</guid>
+      <description><![CDATA[When clusters exhaust available pod IP addresses, teams have historically been forced to rebuild environments to restore capacity, creating operational disruption. Pod CIDR expansion allows overlay‑based AKS clusters to increase their pod IP range in placUpdate Type: GA, Services: Kubernetes...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 07 Apr 2026 17:00:23 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Agentic development aspirations: build, run, observe — without more Markdown]]></title>
@@ -305,157 +449,13 @@
       <category><![CDATA[Visual Studio Blog]]></category>
     </item>
     <item>
-      <title><![CDATA[Discover and assess File Shares for migration to Azure Files with Azure Migrate]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-file-shares-for-migration-to-azure-files/ba-p/4509034</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-file-shares-for-migration-to-azure-files/ba-p/4509034</guid>
-      <description><![CDATA[When organizations migrate to the cloud, applications are at the center of every decision. And behind every application is data, stored in file shares, accessed by users and services, and critical to keeping the application running. Moving that data seamlessly is not optional; it is a fundamental...]]></description>
-      <dc:creator><![CDATA[ankitsurkar]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 07:00:08 GMT</pubDate>
-      <category><![CDATA[Azure Migration]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Why Data Platforms Must Become Intelligence Platforms for AI Agents to Work]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-data-platforms-must-become-intelligence-platforms-for-ai/ba-p/4505653</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-data-platforms-must-become-intelligence-platforms-for-ai/ba-p/4505653</guid>
-      <description><![CDATA[The promise and the gap Your organization has invested in an AI agent. You ask it: "Prepare a summary of Q3 revenue by region, including year-over-year trends and top product lines." The agent finds revenue numbers in a SQL warehouse, product metadata in Dataverse, regional mappings in SharePoint,...]]></description>
-      <dc:creator><![CDATA[AnjaliSadhukhan]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[AI Inference on AKS enabled by Azure Arc: Predictive AI using Triton and ResNet-50]]></title>
-      <link>https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-4</link>
-      <guid>https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-4</guid>
-      <description><![CDATA[Run predictive AI at the edge by deploying Triton with the ONNX backend on AKS enabled by Azure Arc for local ResNet 50 GPU inference without cloud dependency.]]></description>
+      <title><![CDATA[Premium SSD v2 Is Now Generally Available for Azure Database for PostgreSQL]]></title>
+      <link>https://techcommunity.microsoft.com/blog/adforpostgresql/premium-ssd-v2-is-now-generally-available-for-azure-database-for-postgresql/4508445</link>
+      <guid>https://techcommunity.microsoft.com/blog/adforpostgresql/premium-ssd-v2-is-now-generally-available-for-azure-database-for-postgresql/4508445</guid>
+      <description><![CDATA[We are excited to announce the General Availability (GA) of Premium SSD v2 for Azure Database for PostgreSQL flexible server. With Premium SSD v2, you can achieve up to 4× higher IOPS, significantly ...Update Type: GA, Services: Database for PostgreSQL, Categories:]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 00:01:03 GMT</pubDate>
-      <category><![CDATA[AKS Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[AI Inference on AKS enabled by Azure Arc: Generative AI with Open‑Source LLM Server]]></title>
-      <link>https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-3</link>
-      <guid>https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-3</guid>
-      <description><![CDATA[Run generative AI at the edge with Ollama and vLLM on AKS enabled by Azure Arc, enabling local LLM inference on GPU hardware without dependency or data egress.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 00:01:02 GMT</pubDate>
-      <category><![CDATA[AKS Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[AI Inference on AKS enabled by Azure Arc: Series Introduction and Scope]]></title>
-      <link>https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-2</link>
-      <guid>https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-2</guid>
-      <description><![CDATA[Scenario driven series for generative and predictive AI inference on AKS enabled by Azure Arc, across CPUs, GPUs, and NPUs in on-premises and edge environments.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 00:01:01 GMT</pubDate>
-      <category><![CDATA[AKS Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[AI Inference on AKS enabled by Azure Arc: Bringing AI to the Edge and On‑Premises]]></title>
-      <link>https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-1</link>
-      <guid>https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-1</guid>
-      <description><![CDATA[Learn how to bring AI inference closer to your data with AKS enabled by Azure Arc, with practical hybrid and edge scenarios for secure, low-latency workloads.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 00:01:00 GMT</pubDate>
-      <category><![CDATA[AKS Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Agentic IIS Migration to Managed Instance on Azure App Service]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-iis-migration-to-managed-instance-on-azure-app-service/ba-p/4508969</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-iis-migration-to-managed-instance-on-azure-app-service/ba-p/4508969</guid>
-      <description><![CDATA[Introduction Enterprises running ASP.NET Framework workloads on Windows Server with IIS face a familiar dilemma: modernize or stay put. The applications work, the infrastructure is stable, and nobody wants to be the person who breaks production during a cloud migration. But the cost of maintaining...]]></description>
-      <dc:creator><![CDATA[Gaurav-Seth]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 23:58:35 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904</guid>
-      <description><![CDATA[Many organizations rely on Logstash as a flexible, trusted data pipeline for collecting, transforming, and forwarding logs from on-premises and hybrid environments. Microsoft Sentinel has long supported a Logstash output plugin, enabling customers to send data directly into Sentinel as part of...]]></description>
-      <dc:creator><![CDATA[JamesAde]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 22:28:06 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript]]></title>
-      <link>https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/</link>
-      <guid>https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/</guid>
-      <description><![CDATA[After July 9, 2026, the Azure SDK for JavaScript will no longer support Node.js 20.x. Upgrade to an Active Node.js Long Term Support (LTS) version to stay secure and up-to-date. The post Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript appeared first on Azure SDK Blog.]]></description>
-      <dc:creator><![CDATA[Minh-Anh Phan]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 20:52:46 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing Public Preview for Essential Machine Management]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721</guid>
-      <description><![CDATA[Managing servers and VMs across Azure, on premises, and multi-cloud environments often means turning on core capabilities—monitoring, updates, inventory, and configuration—through separate setup experiences. We’ve heard feedback that this makes it harder to get visibility into machine state and...]]></description>
-      <dc:creator><![CDATA[Meagan McCrory]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 18:54:19 GMT</pubDate>
-      <category><![CDATA[Governance & Management]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Network Security Perimeter for Azure Service Bus]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559899/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559899/</guid>
-      <description><![CDATA[Network Security Perimeter (NSP) support for Azure Service Bus is now generally available. Network Security Perimeter creates a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, blocking unauthorized public access by default and enabling secure...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 18:00:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Rule impact analysis on Azure Network Watcher]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559876/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559876/</guid>
-      <description><![CDATA[Rule impact analysis on Azure Network Watcher enables you to preview the impact of security admin rules before applying them to your environment. This feature helps you validate rule behavior, identify potential conflicts, and ensure that connectivity requirements are met without disrupting live...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 16:15:40 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Give your Foundry Agent Custom Tools with MCP Servers on Azure Functions]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/give-your-foundry-agent-custom-tools-with-mcp-servers-on-azure/ba-p/4507828</guid>
-      <description><![CDATA[This blog post is for developers who have an MCP server deployed to Azure Functions and want to connect it to Microsoft Foundry agents. It walks through why you'd want to do this, the different authentication options available, and how to get your agent calling your MCP tools. Connect your MCP...]]></description>
-      <dc:creator><![CDATA[lily-ma]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 15:32:41 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[MCP Apps on Azure Functions: Quickstart with TypeScript]]></title>
-      <link>https://devblogs.microsoft.com/azure-sdk/mcp-apps-on-azure-functions-quickstart-with-typescript/</link>
-      <guid>https://devblogs.microsoft.com/azure-sdk/mcp-apps-on-azure-functions-quickstart-with-typescript/</guid>
-      <description><![CDATA[Learn how to build and deploy MCP (Model Context Protocol) apps on Azure Functions using TypeScript. This guide covers MCP tools, resources, local development, and serverless deployment with a practical weather app example. The post MCP Apps on Azure Functions: Quickstart with TypeScript appeared...]]></description>
-      <dc:creator><![CDATA[Swapnil Nagar]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 15:01:58 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Red Hat OpenShift: Managed Identity and Workload Identity now generally available]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940</guid>
-      <description><![CDATA[Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, so you can run OpenShift clusters and applications on Azure without long-lived service principal credentials.​ ARO, identity, and Azure governance With GA support for managed...]]></description>
-      <dc:creator><![CDATA[MelanieKraintz007]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 14:44:45 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Private DNS and Hub–Spoke Networking for Enterprise AI Workloads on Azure]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/private-dns-and-hub-spoke-networking-for-enterprise-ai-workloads/ba-p/4508835</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/private-dns-and-hub-spoke-networking-for-enterprise-ai-workloads/ba-p/4508835</guid>
-      <description><![CDATA[Introduction As organizations deploy enterprise AI platforms on Azure, security requirements increasingly drive the adoption of private-first architectures. Private networking only Centralized firewalls or NVAs Hub–and–spoke virtual network architectures Private Endpoints for all PaaS services...]]></description>
-      <dc:creator><![CDATA[deepthihr]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 07:56:39 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Building MCP servers with Entra ID and pre-authorized clients]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-mcp-servers-with-entra-id-and-pre-authorized-clients/ba-p/4508453</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-mcp-servers-with-entra-id-and-pre-authorized-clients/ba-p/4508453</guid>
-      <description><![CDATA[The Model Context Protocol (MCP) gives AI agents a standard way to call external tools, but things get more complicated when those tools need to know who the user is. In this post, I’ll show how to build an MCP server with the Python FastMCP package that authenticates users with Microsoft Entra ID...]]></description>
-      <dc:creator><![CDATA[Pamela_Fox]]></dc:creator>
-      <pubDate>Mon, 06 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
+      <pubDate>Tue, 07 Apr 2026 10:24:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>

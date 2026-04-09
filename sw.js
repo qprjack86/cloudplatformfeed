@@ -78,7 +78,8 @@ self.addEventListener("fetch", (event) => {
   var isFeedData =
     url.pathname.includes("feeds.json") ||
     url.pathname.includes("feed.xml") ||
-    url.pathname.includes("m365_data.json");
+    url.pathname.includes("m365_data.json") ||
+    url.pathname.endsWith(".ics");
   var isIconAsset =
     url.pathname.startsWith("/icons/") ||
     url.pathname.endsWith(".ico") ||

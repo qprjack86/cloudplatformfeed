@@ -78,12 +78,51 @@ class DedupeArticlesTests(unittest.TestCase):
             ],
         )
 
+    def test_keeps_stale_articles_with_future_retirement_date(self):
+        now = datetime.now(timezone.utc).replace(hour=12, minute=0, second=0)
+        stale = (now - timedelta(days=180)).isoformat()
+        next_month = now + timedelta(days=35)
+        future_retirement = f"{next_month.year:04d}-{next_month.month:02d}"
+
+        articles = [
+            {
+                "title": "Retirement: Legacy service is retiring soon",
+                "link": "https://example.com/path/to/retirement",
+                "published": stale,
+                "azureRetirementDate": future_retirement,
+            }
+        ]
+
+        deduped = fetch_feeds.dedupe_articles(articles)
+        self.assertEqual(len(deduped), 1)
+        self.assertEqual(deduped[0]["azureRetirementDate"], future_retirement)
+
 
 class ParseIsoDatetimeTests(unittest.TestCase):
     def test_parses_high_precision_fractional_seconds(self):
         parsed = fetch_feeds.parse_iso_datetime("2026-03-20T19:15:35.2206794Z")
         self.assertIsNotNone(parsed)
         self.assertEqual(parsed.isoformat(), "2026-03-20T19:15:35.220679+00:00")
+
+
+class AzureUpdateIdentityExtractionTests(unittest.TestCase):
+    def test_extract_azure_update_id_from_query_slug(self):
+        value = fetch_feeds._extract_azure_update_id_from_url(
+            "https://azure.microsoft.com/updates?id=application-gateway-v1-will-be-retired"
+        )
+        self.assertEqual(value, "application-gateway-v1-will-be-retired")
+
+    def test_extract_azure_update_id_from_path_numeric(self):
+        value = fetch_feeds._extract_azure_update_id_from_url(
+            "https://azure.microsoft.com/en-us/updates/558102/"
+        )
+        self.assertEqual(value, "558102")
+
+    def test_extract_azure_update_id_from_v2_path_slug(self):
+        value = fetch_feeds._extract_azure_update_id_from_url(
+            "https://azure.microsoft.com/updates/v2/open-service-mesh-extension-for-aks-retirement"
+        )
+        self.assertEqual(value, "open-service-mesh-extension-for-aks-retirement")
 
 
 class ClassifyLifecycleTests(unittest.TestCase):
@@ -276,6 +315,24 @@ class RunMetricsTests(unittest.TestCase):
                 "articleCount": 7,
             },
             savill_video={"title": "Latest Azure Infrastructure Update"},
+            retirement_calendar=[
+                {
+                    "title": "Retirement one",
+                    "sources": ["Azure Updates", "Azure Deprecations (aztty)"],
+                },
+                {
+                    "title": "Retirement two",
+                    "blog": "Azure Updates",
+                },
+            ],
+            retirement_buckets={
+                "windows": {
+                    "0_3_months": {"count": 1},
+                    "3_6_months": {"count": 2},
+                    "6_9_months": {"count": 3},
+                    "9_12_months": {"count": 4},
+                }
+            },
         )
 
         self.assertIsInstance(metrics.get("generatedAt"), str)
@@ -288,6 +345,17 @@ class RunMetricsTests(unittest.TestCase):
         self.assertIsNone(metrics["summaryReason"])
         self.assertEqual(metrics["summaryArticleCount"], 7)
         self.assertTrue(metrics["savillVideoFound"])
+        self.assertEqual(metrics["retirementTotalCount"], 2)
+        self.assertEqual(metrics["retirementSourceCount"], 2)
+        self.assertEqual(
+            metrics["retirementWindowCounts"],
+            {
+                "0_3_months": 1,
+                "3_6_months": 2,
+                "6_9_months": 3,
+                "9_12_months": 4,
+            },
+        )
 
     def test_build_run_metrics_for_failsafe_early_exit(self):
         metrics = fetch_feeds.build_run_metrics(
@@ -308,6 +376,9 @@ class RunMetricsTests(unittest.TestCase):
         self.assertIsNone(metrics["summaryReason"])
         self.assertIsNone(metrics["summaryArticleCount"])
         self.assertFalse(metrics["savillVideoFound"])
+        self.assertEqual(metrics["retirementTotalCount"], 0)
+        self.assertEqual(metrics["retirementSourceCount"], 0)
+        self.assertEqual(metrics["retirementWindowCounts"], {})
 
     def test_write_run_metrics_skips_when_path_missing(self):
         result = fetch_feeds.write_run_metrics({"hello": "world"}, output_path="")
@@ -386,6 +457,49 @@ class PublishFailsafeTests(unittest.TestCase):
         )
         self.assertFalse(triggered)
         self.assertIn("absolute_trigger=False", details)
+
+
+class MainFeedFilteringTests(unittest.TestCase):
+    def test_filter_main_feed_articles_excludes_workbook_entries(self):
+        articles = [
+            {"title": "Workbook retirement", "blogId": "azureretirements"},
+            {"title": "Azure Update", "blogId": "azureupdates"},
+        ]
+
+        filtered = fetch_feeds.filter_main_feed_articles(articles)
+
+        self.assertEqual(len(filtered), 1)
+        self.assertEqual(filtered[0]["blogId"], "azureupdates")
+
+    def test_load_previous_main_feed_article_count_uses_filtered_articles(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = pathlib.Path(tmpdir) / "feeds.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "totalArticles": 3,
+                        "articles": [
+                            {"title": "Workbook", "blogId": "azureretirements"},
+                            {"title": "Azure Update", "blogId": "azureupdates"},
+                            {"title": "AKS", "blogId": "aksblog"},
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            count = fetch_feeds.load_previous_main_feed_article_count(str(path))
+
+        self.assertEqual(count, 2)
+
+    def test_load_previous_main_feed_article_count_falls_back_to_total_articles(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = pathlib.Path(tmpdir) / "feeds.json"
+            path.write_text(json.dumps({"totalArticles": 17}), encoding="utf-8")
+
+            count = fetch_feeds.load_previous_main_feed_article_count(str(path))
+
+        self.assertEqual(count, 17)
 
 
 class YouTubeVideoHelperTests(unittest.TestCase):
@@ -512,6 +626,26 @@ class RssGenerationTests(unittest.TestCase):
 
 
 class AzureUpdatesApiFallbackTests(unittest.TestCase):
+    def test_extract_azure_update_retirement_date_from_page_prefers_body_day(self):
+        html = (
+            "<html><body>"
+            "<h1>Retirement: Example service</h1>"
+            "<div>Azure Policy RETIREMENT April 2026</div>"
+            "<p>Starting April 30, 2026, this workaround will no longer be available.</p>"
+            "</body></html>"
+        )
+        response = mock.Mock()
+        response.text = html
+        response.raise_for_status = mock.Mock()
+
+        with mock.patch.object(fetch_feeds.HTTP_SESSION, "get", return_value=response) as get_mock:
+            value = fetch_feeds._extract_azure_update_retirement_date_from_page(
+                "https://azure.microsoft.com/en-us/updates/558102/"
+            )
+
+        self.assertEqual(value, "2026-04-30")
+        get_mock.assert_called_once()
+
     def test_parse_azure_update_item_extracts_metadata_and_date(self):
         item = {
             "id": "123456",
@@ -625,6 +759,25 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertIsNotNone(article)
         self.assertEqual(article["azureRetirementDate"], "2026-11")
 
+    def test_parse_azure_update_item_uses_structured_retirement_type_and_target_date(self):
+        item = {
+            "id": "889002b",
+            "title": "Example platform announcement",
+            "description": "Migration guidance published for this service.",
+            "status": "Update",
+            "type": "Retirement",
+            "targetDate": "2028-09",
+            "created": "2026-03-22T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertEqual(article["lifecycle"], "retiring")
+        self.assertEqual(article["azureUpdateType"], "Retirement")
+        self.assertEqual(article["azureTargetDate"], "2028-09")
+        self.assertEqual(article["azureRetirementDate"], "2028-09")
+
     def test_parse_azure_update_item_prefers_retirement_context_date(self):
         item = {
             "id": "889003",
@@ -654,7 +807,7 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertIsNotNone(article)
         self.assertNotIn("azureRetirementDate", article)
 
-    def test_parse_azure_update_item_does_not_override_structured_dates_for_retirement(self):
+    def test_parse_azure_update_item_uses_target_date_for_retirement(self):
         item = {
             "id": "889005",
             "title": "Retirement: Example feature",
@@ -667,7 +820,7 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
 
         self.assertIsNotNone(article)
         self.assertEqual(article["azureTargetDate"], "2027-04")
-        self.assertNotIn("azureRetirementDate", article)
+        self.assertEqual(article["azureRetirementDate"], "2031-07-31")
 
     def test_parse_azure_update_item_prefers_later_title_retirement_date(self):
         item = {
@@ -734,6 +887,706 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertEqual(result, api_articles)
         api_mock.assert_called_once()
         rss_mock.assert_not_called()
+
+    def test_fetch_azure_updates_via_api_keeps_stale_future_retirements(self):
+        now = datetime.now(timezone.utc)
+        stale_created = (now - timedelta(days=90)).isoformat().replace("+00:00", "Z")
+        future_month = now + timedelta(days=180)
+        future_target = f"{future_month.year:04d}-{future_month.month:02d}"
+        payload = {
+            "value": [
+                {
+                    "id": "future-retire",
+                    "title": "Retirement notice from API metadata",
+                    "status": "Update",
+                    "type": "Retirement",
+                    "targetDate": future_target,
+                    "created": stale_created,
+                },
+                {
+                    "id": "stale-non-retire",
+                    "title": "Launched update",
+                    "status": "Launched",
+                    "created": stale_created,
+                },
+            ]
+        }
+        response = mock.Mock()
+        response.raise_for_status = mock.Mock()
+        response.json.return_value = payload
+
+        with mock.patch.object(fetch_feeds.HTTP_SESSION, "get", return_value=response):
+            articles = fetch_feeds.fetch_azure_updates_via_api()
+
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["link"], "https://azure.microsoft.com/en-us/updates/future-retire/")
+        self.assertEqual(articles[0]["azureRetirementDate"], future_target)
+
+
+class AzttyFeedTests(unittest.TestCase):
+    def test_fetch_aztty_feed_maps_entries_and_retirement_fields(self):
+        feed = mock.Mock()
+        feed.bozo = False
+        feed.entries = [
+            {
+                "title": "Retirement: Example service will be retired on July 31, 2031",
+                "summary": "Migrate before the retirement date.",
+                "link": "https://aztty.azurewebsites.net/announcements/1",
+                "author": "Microsoft",
+                "published": "Mon, 24 Mar 2026 12:00:00 GMT",
+            }
+        ]
+
+        with mock.patch.object(fetch_feeds, "fetch_feed", return_value=feed) as fetch_mock:
+            articles = fetch_feeds.fetch_aztty_feed(
+                fetch_feeds.AZTTY_DEPRECATIONS_FEED,
+                "Azure Deprecations (aztty)",
+                "azuredeprecations",
+                "deprecation",
+            )
+
+        fetch_mock.assert_called_once_with(fetch_feeds.AZTTY_DEPRECATIONS_FEED)
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["announcementType"], "deprecation")
+        self.assertEqual(articles[0]["lifecycle"], "retiring")
+        self.assertEqual(articles[0]["azureRetirementDate"], "2031-07-31")
+
+    def test_fetch_aztty_announcements_continues_when_one_feed_fails(self):
+        surviving_feed_articles = [
+            {
+                "title": "Update: Example feature is now available",
+                "link": "https://aztty.azurewebsites.net/announcements/2",
+                "published": "2026-03-24T12:00:00+00:00",
+                "summary": "Example",
+                "blog": "Azure Updates (aztty)",
+                "blogId": "azttyupdates",
+                "author": "Microsoft",
+                "announcementType": "update",
+            }
+        ]
+
+        with mock.patch.object(
+            fetch_feeds,
+            "fetch_aztty_feed",
+            side_effect=[RuntimeError("deprecations unavailable"), surviving_feed_articles],
+        ) as fetch_mock:
+            results = fetch_feeds.fetch_aztty_announcements()
+
+        self.assertEqual(fetch_mock.call_count, 2)
+        self.assertEqual(results, surviving_feed_articles)
+
+
+class WorkbookCsvRetirementTests(unittest.TestCase):
+    def test_fetch_azure_retirements_from_csv_maps_rows(self):
+        csv_content = (
+            '"Service Name","Retiring Feature","Retirement Date","Actions","Is Available under the Impacted Services?"\n'
+            '"Application gateway","V1","2026-04-28","https://azure.microsoft.com/updates?id=example-1","Yes"\n'
+            '"Azure Maps Account","Render V1 APIs","2026-09-17","https://azure.microsoft.com/updates?id=example-2","No"\n'
+        )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csv_path = pathlib.Path(tmpdir) / "export_data.csv"
+            csv_path.write_text(csv_content, encoding="utf-8")
+
+            with mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_by_id",
+                return_value=None,
+            ), mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_from_page",
+                return_value=None,
+            ):
+                articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+
+        self.assertEqual(len(articles), 2)
+        self.assertEqual(
+            articles[0]["title"],
+            "Retirement: Application gateway - V1",
+        )
+        self.assertEqual(articles[0]["azureRetirementDate"], "2026-04-28")
+        self.assertEqual(
+            articles[0]["link"],
+            "https://azure.microsoft.com/updates?id=example-1",
+        )
+        self.assertEqual(articles[0]["blogId"], "azureretirements")
+        self.assertEqual(articles[0]["azureRetirementDateSource"], "csv")
+        self.assertTrue(articles[0]["impactedServicesAvailable"])
+        self.assertFalse(articles[1]["impactedServicesAvailable"])
+
+    def test_fetch_azure_retirements_from_csv_skips_invalid_rows(self):
+        csv_content = (
+            '"Service Name","Retiring Feature","Retirement Date","Actions","Is Available under the Impacted Services?"\n'
+            '"Example Service","Feature A","not-a-date","https://azure.microsoft.com/updates?id=bad","Yes"\n'
+            '"Example Service","Feature B","2027-01-15","https://azure.microsoft.com/updates?id=good","Yes"\n'
+        )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csv_path = pathlib.Path(tmpdir) / "export_data.csv"
+            csv_path.write_text(csv_content, encoding="utf-8")
+
+            with mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_by_id",
+                return_value=None,
+            ), mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_from_page",
+                return_value=None,
+            ):
+                articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["azureRetirementDate"], "2027-01-15")
+
+    def test_fetch_azure_retirements_from_csv_prefers_linked_page_date_on_conflict(self):
+        csv_content = (
+            '"Service Name","Retiring Feature","Retirement Date","Actions","Is Available under the Impacted Services?"\n'
+            '"App service",".NET 9 (STS)","2026-05-12","https://azure.microsoft.com/updates/?id=485077","Yes"\n'
+        )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csv_path = pathlib.Path(tmpdir) / "export_data.csv"
+            csv_path.write_text(csv_content, encoding="utf-8")
+
+            with mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_by_id",
+                return_value="2026-11-10",
+            ) as by_id_mock, mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_from_page",
+                return_value=None,
+            ) as enrich_mock:
+                articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+
+        self.assertEqual(by_id_mock.call_count, 1)
+        self.assertEqual(enrich_mock.call_count, 0)
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["azureRetirementDate"], "2026-11-10")
+        self.assertEqual(articles[0]["azureRetirementDateCsv"], "2026-05-12")
+        self.assertEqual(articles[0]["azureRetirementDateSource"], "linked_page")
+
+    def test_fetch_azure_retirements_from_csv_missing_file_returns_empty_list(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            missing = pathlib.Path(tmpdir) / "does-not-exist.csv"
+            articles = fetch_feeds.fetch_azure_retirements_from_csv(missing)
+
+        self.assertEqual(articles, [])
+
+
+class RetirementCalendarTests(unittest.TestCase):
+    def test_build_azure_retirement_calendar_dedupes_and_aggregates_sources(self):
+        articles = [
+            {
+                "title": "Retirement: Example service",
+                "link": "https://aztty.azurewebsites.net/announcements/1",
+                "published": "2026-03-24T12:00:00+00:00",
+                "blog": "Azure Deprecations (aztty)",
+                "blogId": "azuredeprecations",
+                "announcementType": "deprecation",
+                "azureRetirementDate": "2031-07-31",
+            },
+            {
+                "title": "Update: Example service",
+                "link": "https://azure.microsoft.com/en-us/updates/123456/",
+                "published": "2026-03-25T12:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2031-07-31",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        event = events[0]
+        self.assertEqual(event["title"], "Example service")
+        self.assertEqual(event["blogId"], "azureupdates")
+        self.assertEqual(event["link"], "https://azure.microsoft.com/en-us/updates/123456/")
+        self.assertEqual(event["retirementDate"], "2031-07-31")
+        self.assertEqual(event["sourceCount"], 2)
+        self.assertIn("Azure Deprecations (aztty)", event["sources"])
+        self.assertIn("Azure Updates", event["sources"])
+
+    def test_build_azure_retirement_calendar_filters_past_and_invalid_dates(self):
+        articles = [
+            {
+                "title": "Retirement: Valid future month",
+                "link": "https://example.com/future",
+                "published": "2026-03-24T12:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2030-11",
+            },
+            {
+                "title": "Retirement: Old item",
+                "link": "https://example.com/old",
+                "published": "2026-03-24T12:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2020-01-01",
+            },
+            {
+                "title": "Retirement: Invalid item",
+                "link": "https://example.com/invalid",
+                "published": "2026-03-24T12:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "not-a-date",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["retirementDate"], "2030-11")
+        self.assertEqual(events[0]["datePrecision"], "month")
+
+    def test_build_azure_retirement_calendar_prefers_day_precision_for_same_update(self):
+        articles = [
+            {
+                "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
+                "link": "https://azure.microsoft.com/updates?id=558102",
+                "published": "2026-03-04T21:15:02+00:00",
+                "blog": "Azure Deprecations (aztty)",
+                "blogId": "azuredeprecations",
+                "announcementType": "deprecation",
+                "azureRetirementDate": "2026-04",
+            },
+            {
+                "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
+                "link": "https://azure.microsoft.com/en-us/updates/558102/",
+                "published": "2026-03-04T21:15:02.275174+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "",
+                "azureRetirementDate": "2026-04-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["retirementDate"], "2026-04-30")
+        self.assertEqual(events[0]["datePrecision"], "day")
+        self.assertEqual(events[0]["blogId"], "azureupdates")
+
+    def test_build_azure_retirement_calendar_prefers_update_id_over_title_for_dedupe(self):
+        articles = [
+            {
+                "title": "Retirement: Application gateway - V1",
+                "link": "https://azure.microsoft.com/updates?id=558102",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2026-04-30",
+            },
+            {
+                "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround",
+                "link": "https://azure.microsoft.com/en-us/updates/558102/",
+                "published": "2026-03-04T21:15:02.275174+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2026-04-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["blogId"], "azureupdates")
+        self.assertEqual(events[0]["sourceCount"], 2)
+
+    def test_build_azure_retirement_calendar_keeps_current_month_month_precision(self):
+        today = datetime.now(timezone.utc)
+        current_month = f"{today.year:04d}-{today.month:02d}"
+        articles = [
+            {
+                "title": "Retirement: Current month timeline",
+                "link": "https://example.com/current-month",
+                "published": today.isoformat(),
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": current_month,
+            }
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["retirementDate"], current_month)
+        self.assertEqual(events[0]["datePrecision"], "month")
+
+    def test_build_azure_retirement_calendar_dedupes_runtime_alias_wording(self):
+        articles = [
+            {
+                "title": "Retirement: App service - Azure Functions - Node.js 20",
+                "link": "https://azure.microsoft.com/updates/?id=502957",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-04-30",
+            },
+            {
+                "title": "Retirement: App service - Support for Node 20 LTS",
+                "link": "https://azure.microsoft.com/updates/?id=485072",
+                "published": "2026-04-10T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-04-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["sourceCount"], 2)
+
+    def test_build_azure_retirement_calendar_keeps_distinct_runtime_versions(self):
+        articles = [
+            {
+                "title": "Retirement: App service - Support for Node 20 LTS",
+                "link": "https://azure.microsoft.com/updates/?id=485072",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-04-30",
+            },
+            {
+                "title": "Retirement: App service - Support for Node 22 LTS",
+                "link": "https://azure.microsoft.com/updates/?id=999999",
+                "published": "2026-04-10T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-04-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 2)
+
+    def test_build_azure_retirement_calendar_dedupes_cross_source_verbose_titles(self):
+        """Workbook short title and RSS verbose title for same event on same date merge into one."""
+        articles = [
+            {
+                "title": "Retirement: Subscription - Azure Virtual Desktop Classic",
+                "link": "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+            {
+                "title": "Azure Virtual Desktop (classic) will be retired on 30 September 2026 - Please transition to Azure Virtual Desktop",
+                "link": "https://azure.microsoft.com/en-us/updates/azure-virtual-desktop-classic-will-be-retired-on-30-september-2026/",
+                "published": "2026-04-09T09:00:00+00:00",
+                "blog": "Azure Deprecations",
+                "blogId": "azuredeprecations",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1, "workbook and RSS entries for same retirement should merge")
+        self.assertEqual(len(events[0]["sourceReports"]), 2, "merged event should carry both source reports")
+
+    def test_build_azure_retirement_calendar_prefers_azure_updates_link_for_multi_source_event(self):
+        articles = [
+            {
+                "title": "Retirement: Subscription - Azure Virtual Desktop Classic",
+                "link": "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+            {
+                "title": "Retirement: Azure Virtual Desktop (classic) transition guidance",
+                "link": "https://azure.microsoft.com/en-us/updates/558999/",
+                "published": "2026-04-09T09:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2030-09-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["sourceCount"], 2)
+        self.assertEqual(events[0]["link"], "https://azure.microsoft.com/en-us/updates/558999/")
+
+    def test_build_azure_retirement_calendar_keeps_single_source_link(self):
+        articles = [
+            {
+                "title": "Retirement: Subscription - Azure Virtual Desktop Classic",
+                "link": "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            }
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["sourceCount"], 1)
+        self.assertEqual(
+            events[0]["link"],
+            "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
+        )
+
+    def test_build_azure_retirement_calendar_cross_source_keeps_different_events_same_date(self):
+        """Two genuinely different retirements on the same date must not be merged."""
+        articles = [
+            {
+                "title": "Retirement: Azure API for FHIR - Entire service",
+                "link": "https://azure.microsoft.com/updates?id=azure-api-for-fhir-retirement",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+            {
+                "title": "Azure Virtual Desktop (classic) will be retired on 30 September 2030",
+                "link": "https://azure.microsoft.com/en-us/updates/avd-classic-retirement/",
+                "published": "2026-04-09T09:00:00+00:00",
+                "blog": "Azure Deprecations",
+                "blogId": "azuredeprecations",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-09-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 2, "distinct retirements on same date must remain separate")
+
+    def test_build_retirement_window_buckets_assigns_rolling_windows(self):
+        events = [
+            {
+                "title": "Soon",
+                "retirementDate": "2026-05-15",
+                "datePrecision": "day",
+                "link": "https://example.com/soon",
+            },
+            {
+                "title": "Three to six",
+                "retirementDate": "2026-08",
+                "datePrecision": "month",
+                "link": "https://example.com/three-six",
+            },
+            {
+                "title": "Six to nine",
+                "retirementDate": "2026-11-10",
+                "datePrecision": "day",
+                "link": "https://example.com/six-nine",
+            },
+            {
+                "title": "Nine to twelve",
+                "retirementDate": "2027-03",
+                "datePrecision": "month",
+                "link": "https://example.com/nine-twelve",
+            },
+            {
+                "title": "Twelve to twenty-four",
+                "retirementDate": "2027-09-30",
+                "datePrecision": "day",
+                "link": "https://example.com/twelve-twenty-four",
+            },
+            {
+                "title": "Twenty-four plus",
+                "retirementDate": "2028-09-30",
+                "datePrecision": "day",
+                "link": "https://example.com/twenty-four-plus",
+            },
+        ]
+
+        buckets = fetch_feeds.build_retirement_window_buckets(
+            events,
+            today=datetime(2026, 4, 8, tzinfo=timezone.utc).date(),
+        )
+
+        windows = buckets["windows"]
+        self.assertEqual(windows["0_3_months"]["count"], 1)
+        self.assertEqual(windows["3_6_months"]["count"], 1)
+        self.assertEqual(windows["6_9_months"]["count"], 1)
+        self.assertEqual(windows["9_12_months"]["count"], 1)
+        self.assertEqual(windows["12_24_months"]["count"], 1)
+        self.assertEqual(windows["24_plus_months"]["count"], 1)
+        self.assertEqual(windows["3_6_months"]["items"][0]["retirementDate"], "2026-08")
+        self.assertEqual(windows["9_12_months"]["items"][0]["retirementDate"], "2027-03")
+        self.assertEqual(windows["12_24_months"]["items"][0]["retirementDate"], "2027-09-30")
+        self.assertEqual(windows["24_plus_months"]["items"][0]["retirementDate"], "2028-09-30")
+
+
+class RetirementCalendarIcsTests(unittest.TestCase):
+    def test_generate_azure_retirements_ics_contains_required_fields(self):
+        events = [
+            {
+                "title": "App service - Support for Node 20 LTS",
+                "link": "https://azure.microsoft.com/en-us/updates/558102/",
+                "retirementDate": "2030-04-30",
+                "datePrecision": "day",
+                "sources": ["Azure Updates"],
+            }
+        ]
+
+        payload = fetch_feeds.generate_azure_retirements_ics(
+            events,
+            generated_at=datetime(2026, 4, 9, 12, 0, tzinfo=timezone.utc),
+        )
+
+        self.assertIn("BEGIN:VCALENDAR", payload)
+        self.assertIn("BEGIN:VEVENT", payload)
+        self.assertIn("SUMMARY:App service - Support for Node 20 LTS", payload)
+        self.assertIn("DTSTART;VALUE=DATE:20300430", payload)
+        self.assertIn("DTEND;VALUE=DATE:20300501", payload)
+        self.assertIn("URL:https://azure.microsoft.com/en-us/updates/558102/", payload)
+
+    def test_generate_azure_retirements_ics_marks_month_precision(self):
+        events = [
+            {
+                "title": "Storage account - Legacy accounts",
+                "link": "https://learn.microsoft.com/example/legacy",
+                "retirementDate": "2030-05",
+                "datePrecision": "month",
+                "sources": ["Azure Retirements Workbook"],
+            }
+        ]
+
+        payload = fetch_feeds.generate_azure_retirements_ics(
+            events,
+            generated_at=datetime(2026, 4, 9, 12, 0, tzinfo=timezone.utc),
+        )
+
+        self.assertIn("DTSTART;VALUE=DATE:20300501", payload)
+        self.assertIn("DTEND;VALUE=DATE:20300502", payload)
+        self.assertIn("Date precision: month", payload)
+        self.assertIn("month-level precision", payload)
+
+    def test_write_azure_retirements_ics_creates_file(self):
+        events = [
+            {
+                "title": "Example service retirement",
+                "link": "https://example.com/retirement",
+                "retirementDate": "2031-01-10",
+                "datePrecision": "day",
+                "sources": ["Azure Updates"],
+            }
+        ]
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_path = pathlib.Path(temp_dir) / "retirements.ics"
+            fetch_feeds.write_azure_retirements_ics(events, output_path=output_path)
+            content = output_path.read_text(encoding="utf-8")
+
+        self.assertIn("BEGIN:VCALENDAR", content)
+        self.assertIn("END:VCALENDAR", content)
+        self.assertIn("SUMMARY:Example service retirement", content)
+
+
+class MainOutputSchemaTests(unittest.TestCase):
+    def test_main_writes_azure_retirement_calendar(self):
+        aztty_articles = [
+            {
+                "title": "Retirement: Example service retirement notice",
+                "link": "https://example.com/retirement",
+                "published": "2031-01-10T12:00:00+00:00",
+                "summary": "Retirement details",
+                "blog": "Azure Deprecations (aztty)",
+                "blogId": "azuredeprecations",
+                "author": "Microsoft",
+                "announcementType": "deprecation",
+                "lifecycle": "retiring",
+                "azureRetirementDate": "2031-07-31",
+            }
+        ]
+        workbook_articles = [
+            {
+                "title": "Retirement: Workbook service - Feature",
+                "link": "https://azure.microsoft.com/updates?id=workbook",
+                "published": "2031-01-11T12:00:00+00:00",
+                "summary": "Workbook retirement details",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "author": "Microsoft",
+                "announcementType": "retirement",
+                "lifecycle": "retiring",
+                "azureRetirementDate": "2031-08-31",
+            }
+        ]
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            old_cwd = os.getcwd()
+            os.chdir(tmpdir)
+            try:
+                with mock.patch.object(fetch_feeds, "fetch_tech_community_feeds", return_value=[]), \
+                    mock.patch.object(fetch_feeds, "fetch_aks_blog", return_value=[]), \
+                    mock.patch.object(fetch_feeds, "fetch_devblogs_feeds", return_value=[]), \
+                    mock.patch.object(fetch_feeds, "fetch_azure_updates_feed", return_value=[]), \
+                    mock.patch.object(fetch_feeds, "fetch_aztty_announcements", return_value=aztty_articles), \
+                    mock.patch.object(fetch_feeds, "fetch_azure_retirements_from_csv", return_value=workbook_articles), \
+                    mock.patch.object(fetch_feeds, "fetch_savill_video", return_value=None), \
+                    mock.patch.object(
+                        fetch_feeds,
+                        "generate_ai_summary",
+                        return_value={
+                            "status": "unavailable",
+                            "reason": "no_articles_in_window",
+                            "windowDays": fetch_feeds.SUMMARY_WINDOW_DAYS,
+                            "publishingDays": [],
+                        },
+                    ), \
+                    mock.patch.object(fetch_feeds, "generate_rss_feed"), \
+                    mock.patch.object(fetch_feeds, "write_checksums_file"), \
+                    mock.patch.object(fetch_feeds, "write_run_metrics"):
+                    fetch_feeds.main()
+            finally:
+                os.chdir(old_cwd)
+
+            payload = json.loads((pathlib.Path(tmpdir) / "data" / "feeds.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(payload["totalArticles"], 1)
+        self.assertEqual(len(payload["articles"]), 1)
+        self.assertEqual(payload["articles"][0]["blogId"], "azuredeprecations")
+        self.assertIn("azureRetirementCalendar", payload)
+        self.assertIn("azureRetirementBuckets", payload)
+        self.assertEqual(len(payload["azureRetirementCalendar"]), 2)
+        self.assertEqual(
+            payload["azureRetirementCalendar"][0]["retirementDate"],
+            "2031-07-31",
+        )
+        self.assertEqual(
+            payload["azureRetirementCalendar"][0]["title"],
+            "Example service retirement notice",
+        )
+        self.assertEqual(
+            payload["azureRetirementCalendar"][1]["retirementDate"],
+            "2031-08-31",
+        )
+        self.assertIn("windows", payload["azureRetirementBuckets"])
 
 
 if __name__ == "__main__":

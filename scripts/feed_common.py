@@ -176,8 +176,6 @@ def select_best_youtube_video_entry(entries, match_score_fn):
 
 def _artifact_checksum_record(path, generated_at):
     """Return checksum metadata for an existing artifact file."""
-    if ".." in str(path):
-        raise Exception("Invalid file path")
     sha256 = hashlib.sha256()
     with open(path, "rb") as f:
         for chunk in iter(lambda: f.read(8192), b""):

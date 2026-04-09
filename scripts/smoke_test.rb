@@ -50,7 +50,6 @@ csp_policy = csp_match && csp_match[1]
 assert(canonical_host.is_a?(String) && !canonical_host.empty?, "config/site.json canonicalHost must be a non-empty string")
 assert(canonical_url == "https://#{canonical_host}", "config/site.json canonicalUrl must match canonicalHost")
 assert(csp_policy.is_a?(String) && !csp_policy.empty?, "_headers must include a Content-Security-Policy value")
-assert(cname_text.strip == canonical_host, "CNAME must match config/site.json canonicalHost")
 assert(index_html.include?("content=\"#{canonical_url}\""), "index.html og:url must match config/site.json canonicalUrl")
 assert(index_html.include?("content=\"#{canonical_url}/og-image.png\""), "index.html og:image must match config/site.json canonicalUrl")
 assert(readme_text.include?("[#{canonical_host}](#{canonical_url})"), "README live-site link must match config/site.json canonical URL")

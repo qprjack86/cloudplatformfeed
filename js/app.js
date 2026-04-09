@@ -75,12 +75,16 @@
   var bookmarksToggle = document.getElementById("bookmarks-toggle");
   var otherBlogsToggle = document.getElementById("other-blogs-toggle");
   var aiSummaryEl = document.getElementById("ai-summary");
+  var azureTopPanelsEl = document.getElementById("azure-top-panels");
+  var retirementCalendarEl = document.getElementById("retirement-calendar");
   var savillVideoEl = document.getElementById("savill-video");
   var subtitleEl = document.querySelector(".subtitle");
   var tabsContainerEl = document.querySelector(".tabs-container");
 
   var azureFeedData = null;
   var m365FeedData = null;
+  var retirementCalendarViewState = { azure: null, m365: null };
+  var retirementCalendarCollapsedState = { azure: null, m365: null };
   
   // Tab buttons (M365 feature)
   var tabButtons = document.querySelectorAll(".tab-button");
@@ -535,6 +539,452 @@
     showElement(savillVideoEl);
   }
 
+  function formatRetirementCalendarDate(value, precision) {
+    if (!value) return "";
+    var raw = String(value).trim();
+    if (!raw) return "";
+
+    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
+    if (dayMatch) {
+      var dayDate = new Date(
+        Number(dayMatch[1]),
+        Number(dayMatch[2]) - 1,
+        Number(dayMatch[3])
+      );
+      return formatUkNumericDate(dayDate);
+    }
+
+    var monthMatch = /^(\d{4})-(\d{2})$/.exec(raw);
+    if (monthMatch) {
+      var monthDate = new Date(Number(monthMatch[1]), Number(monthMatch[2]) - 1, 1);
+      return formatLocalDate(monthDate, { month: "short", year: "numeric" });
+    }
+
+    if (precision === "month" || precision === "day") {
+      return raw;
+    }
+    return raw;
+  }
+
+  function parseRetirementEventDate(value) {
+    if (!value) return null;
+    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value).trim());
+    if (dayMatch) {
+      return new Date(Number(dayMatch[1]), Number(dayMatch[2]) - 1, Number(dayMatch[3]));
+    }
+    var monthMatch = /^(\d{4})-(\d{2})$/.exec(String(value).trim());
+    if (monthMatch) {
+      return new Date(Number(monthMatch[1]), Number(monthMatch[2]) - 1, 1);
+    }
+    return null;
+  }
+
+  function toRetirementDedupeTitle(title) {
+    var value = String(title || "").toLowerCase().trim();
+    value = value.replace(/^(retirement|deprecation|update)\s*:\s*/i, "");
+    value = value.replace(/[^\w\s]/g, " ");
+    value = value.replace(/\s+/g, " ").trim();
+    return value;
+  }
+
+  function retirementPrecisionRank(precision, retirementDate) {
+    if (precision === "day") return 2;
+    if (precision === "month") return 1;
+    return /^\d{4}-\d{2}-\d{2}$/.test(String(retirementDate || "").trim()) ? 2 : 0;
+  }
+
+  function startOfMonth(date) {
+    return new Date(date.getFullYear(), date.getMonth(), 1);
+  }
+
+  function clampMonthDate(date, minDate, maxDate) {
+    if (date < minDate) return new Date(minDate.getFullYear(), minDate.getMonth(), 1);
+    if (date > maxDate) return new Date(maxDate.getFullYear(), maxDate.getMonth(), 1);
+    return new Date(date.getFullYear(), date.getMonth(), 1);
+  }
+
+  function getAzureRetirementsIcsAbsoluteUrl() {
+    return new URL("data/azure-retirements.ics", window.location.href).href;
+  }
+
+  function toWebcalUrl(httpsUrl) {
+    if (!httpsUrl) return "";
+    if (httpsUrl.indexOf("https://") === 0) {
+      return "webcal://" + httpsUrl.slice("https://".length);
+    }
+    return httpsUrl;
+  }
+
+  function setRetirementExportStatus(statusEl, message, isError) {
+    if (!statusEl) return;
+    statusEl.textContent = message || "";
+    statusEl.classList.toggle("is-error", Boolean(isError));
+    statusEl.classList.toggle("is-success", Boolean(message && !isError));
+  }
+
+  function copyTextToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return Promise.reject(new Error("Clipboard API unavailable"));
+  }
+
+  function isPhoneViewport() {
+    return window.matchMedia && window.matchMedia("(max-width: 680px)").matches;
+  }
+
+  function getRetirementCalendarPayload() {
+    if (currentSource === "m365") {
+      if (!m365FeedData) return { events: [], label: "Microsoft 365" };
+      return {
+        events: Array.isArray(m365FeedData.m365RetirementCalendar) ? m365FeedData.m365RetirementCalendar : [],
+        label: "Microsoft 365"
+      };
+    }
+
+    if (!azureFeedData) return { events: [], label: "Azure" };
+    return {
+      events: Array.isArray(azureFeedData.azureRetirementCalendar) ? azureFeedData.azureRetirementCalendar : [],
+      label: "Azure"
+    };
+  }
+
+
+  function updateTopPanelsLayout() {
+    if (!azureTopPanelsEl) return;
+    var showRetirement = retirementCalendarEl && !retirementCalendarEl.classList.contains("is-hidden");
+    azureTopPanelsEl.classList.toggle("split-view", showRetirement);
+  }
+
+  function renderRetirementCalendarPanel() {
+    if (!retirementCalendarEl) return;
+    var payload = getRetirementCalendarPayload();
+    var events = payload.events;
+    if (!events.length) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
+
+    var dedupedByClient = {};
+    events
+      .map(function (event) {
+        var retirementDate = String(event.retirementDate || "").trim();
+        var parsedDate = parseRetirementEventDate(retirementDate);
+        return {
+          title: event.title || "Untitled retirement notice",
+          link: event.link || "",
+          retirementDate: retirementDate,
+          datePrecision: event.datePrecision || (/^\d{4}-\d{2}-\d{2}$/.test(retirementDate) ? "day" : "month"),
+          sources: Array.isArray(event.sources) ? event.sources : [],
+          sourceCount: Number(event.sourceCount || 0),
+          parsedDate: parsedDate
+        };
+      })
+      .filter(function (event) { return Boolean(event.parsedDate); })
+      .forEach(function (event) {
+        var familyKey = toRetirementDedupeTitle(event.title);
+        var existing = dedupedByClient[familyKey];
+        if (!existing) {
+          dedupedByClient[familyKey] = event;
+          return;
+        }
+
+        var existingRank = retirementPrecisionRank(existing.datePrecision, existing.retirementDate);
+        var incomingRank = retirementPrecisionRank(event.datePrecision, event.retirementDate);
+        if (incomingRank > existingRank) {
+          dedupedByClient[familyKey] = event;
+          return;
+        }
+
+        if (!existing.link && event.link) {
+          existing.link = event.link;
+        }
+      });
+
+    var normalizedEvents = Object.keys(dedupedByClient)
+      .map(function (key) {
+        return dedupedByClient[key];
+      })
+      .sort(function (a, b) { return a.parsedDate - b.parsedDate; });
+
+    if (!normalizedEvents.length) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
+
+    var sourceKey = currentSource === "m365" ? "m365" : "azure";
+    if (retirementCalendarCollapsedState[sourceKey] === null) {
+      retirementCalendarCollapsedState[sourceKey] = isPhoneViewport();
+    }
+    var isCollapsed = Boolean(retirementCalendarCollapsedState[sourceKey]);
+    var currentMonthStart = startOfMonth(new Date());
+    var earliestMonth = startOfMonth(normalizedEvents[0].parsedDate);
+    var latestMonth = startOfMonth(normalizedEvents[normalizedEvents.length - 1].parsedDate);
+
+    var initialAnchor = earliestMonth > currentMonthStart ? earliestMonth : currentMonthStart;
+    var storedAnchor = retirementCalendarViewState[sourceKey];
+    var anchorCandidate = storedAnchor ? parseRetirementEventDate(storedAnchor) : null;
+    var anchorMonth = anchorCandidate ? startOfMonth(anchorCandidate) : initialAnchor;
+    anchorMonth = clampMonthDate(anchorMonth, earliestMonth, latestMonth);
+    retirementCalendarViewState[sourceKey] =
+      anchorMonth.getFullYear() + "-" + String(anchorMonth.getMonth() + 1).padStart(2, "0");
+
+    var monthEvents = normalizedEvents.filter(function (event) {
+      return (
+        event.parsedDate.getFullYear() === anchorMonth.getFullYear() &&
+        event.parsedDate.getMonth() === anchorMonth.getMonth()
+      );
+    });
+    var dayCounts = {};
+    monthEvents.forEach(function (event) {
+      if (event.datePrecision === "month") {
+        return; // month-only precision: no specific day to mark on the grid
+      }
+      var day = event.parsedDate.getDate();
+      dayCounts[day] = (dayCounts[day] || 0) + 1;
+    });
+
+    var monthEndDay = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 0).getDate();
+    var firstWeekday = (anchorMonth.getDay() + 6) % 7; // Monday first
+    var dayCells = [];
+    for (var i = 0; i < firstWeekday; i++) {
+      dayCells.push('<div class="retirement-mini-day is-empty"></div>');
+    }
+    for (var dayNum = 1; dayNum <= monthEndDay; dayNum++) {
+      var count = dayCounts[dayNum] || 0;
+      dayCells.push(
+        '<div class="retirement-mini-day' + (count ? " has-events" : "") + '">' +
+          '<span class="retirement-mini-day-num">' + dayNum + "</span>" +
+          (count ? '<span class="retirement-mini-dot" title="' + count + ' retirement notice(s)"></span>' : "") +
+        "</div>"
+      );
+    }
+
+    var monthItemsHtml = monthEvents.map(function (entry) {
+      var dateLabel = formatRetirementCalendarDate(entry.retirementDate, entry.datePrecision);
+      var sourceHint = entry.sourceCount > 1
+        ? " · " + entry.sourceCount + " sources"
+        : "";
+      var content = escapeHtml(dateLabel + " — " + (entry.title || "Untitled retirement notice") + sourceHint);
+      if (entry.link) {
+        return '<li><a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' + content + "</a></li>";
+      }
+      return "<li>" + content + "</li>";
+    }).join("");
+
+    var monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    var monthOptions = monthNames.map(function (name, idx) {
+      var selected = idx === anchorMonth.getMonth() ? ' selected="selected"' : "";
+      return '<option value="' + idx + '"' + selected + '>' + escapeHtml(name) + "</option>";
+    }).join("");
+
+    var yearOptions = [];
+    for (var year = earliestMonth.getFullYear(); year <= latestMonth.getFullYear(); year++) {
+      var selectedYear = year === anchorMonth.getFullYear() ? ' selected="selected"' : "";
+      yearOptions.push('<option value="' + year + '"' + selectedYear + '>' + year + "</option>");
+    }
+
+    var prevMonth = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() - 1, 1);
+    var nextMonth = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1);
+    var disablePrev = prevMonth < earliestMonth ? ' disabled="disabled"' : "";
+    var disableNext = nextMonth > latestMonth ? ' disabled="disabled"' : "";
+    var showAzureExport = currentSource === "azure";
+    var exportControlsHtml = showAzureExport
+      ? '<div class="retirement-mini-export">' +
+          '<button type="button" class="retirement-mini-export-btn" data-retirement-export-toggle aria-haspopup="true" aria-expanded="false">Export ▾</button>' +
+          '<div class="retirement-mini-export-menu" data-retirement-export-menu hidden="hidden">' +
+            '<button type="button" data-retirement-export-action="download-ics">Download .ics</button>' +
+            '<button type="button" data-retirement-export-action="copy-subscribe">Copy subscribe URL</button>' +
+            '<button type="button" data-retirement-export-action="open-outlook">Open in Outlook / Microsoft 365</button>' +
+          "</div>" +
+        "</div>"
+      : "";
+    var exportStatusHtml = showAzureExport
+      ? '<p class="retirement-mini-export-status" data-retirement-export-status aria-live="polite"></p>'
+      : "";
+    var collapseLabel = isCollapsed ? "Show calendar" : "Hide calendar";
+    var collapseButtonHtml =
+      '<button type="button" class="retirement-mini-collapse-btn" data-retirement-collapse-toggle aria-expanded="' +
+      (isCollapsed ? "false" : "true") +
+      '">' +
+      collapseLabel +
+      "</button>";
+
+    retirementCalendarEl.innerHTML =
+      '<div class="retirement-mini-header">' +
+        '<div class="retirement-mini-title-row"><h2>🗓️ Retirement Calendar</h2>' + collapseButtonHtml + "</div>" +
+        "<p>" + escapeHtml(payload.label) + " · " + escapeHtml(formatLocalDate(anchorMonth, { month: "long", year: "numeric" })) + "</p>" +
+      "</div>" +
+      '<div class="retirement-mini-body' + (isCollapsed ? " is-collapsed" : "") + '">' +
+      '<div class="retirement-mini-controls">' +
+        '<button type="button" class="retirement-mini-nav-btn" data-retirement-nav="prev" aria-label="Previous month"' + disablePrev + '>◀</button>' +
+        '<label class="retirement-mini-select-wrap"><span class="sr-only">Month</span><select data-retirement-select="month">' + monthOptions + "</select></label>" +
+        '<label class="retirement-mini-select-wrap"><span class="sr-only">Year</span><select data-retirement-select="year">' + yearOptions.join("") + "</select></label>" +
+        '<button type="button" class="retirement-mini-nav-btn" data-retirement-nav="next" aria-label="Next month"' + disableNext + '>▶</button>' +
+        exportControlsHtml +
+      "</div>" +
+      exportStatusHtml +
+      '<div class="retirement-mini-weekdays"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>' +
+      '<div class="retirement-mini-grid">' + dayCells.join("") + "</div>" +
+      (monthItemsHtml
+        ? '<div class="retirement-mini-list"><h3>Retiring this month</h3><ul>' + monthItemsHtml + "</ul></div>"
+        : "") +
+      "</div>";
+
+    var monthSelect = retirementCalendarEl.querySelector('[data-retirement-select="month"]');
+    var yearSelect = retirementCalendarEl.querySelector('[data-retirement-select="year"]');
+    var prevBtn = retirementCalendarEl.querySelector('[data-retirement-nav="prev"]');
+    var nextBtn = retirementCalendarEl.querySelector('[data-retirement-nav="next"]');
+    var exportToggleBtn = retirementCalendarEl.querySelector('[data-retirement-export-toggle]');
+    var exportMenu = retirementCalendarEl.querySelector('[data-retirement-export-menu]');
+    var exportStatus = retirementCalendarEl.querySelector('[data-retirement-export-status]');
+    var collapseToggleBtn = retirementCalendarEl.querySelector('[data-retirement-collapse-toggle]');
+    var calendarBodyEl = retirementCalendarEl.querySelector(".retirement-mini-body");
+    var removeExportDropdownListeners = null;
+
+    function updateAnchor(newMonthDate) {
+      var clamped = clampMonthDate(startOfMonth(newMonthDate), earliestMonth, latestMonth);
+      retirementCalendarViewState[sourceKey] =
+        clamped.getFullYear() + "-" + String(clamped.getMonth() + 1).padStart(2, "0");
+      renderRetirementCalendarPanel();
+      updateTopPanelsLayout();
+    }
+
+    if (monthSelect && yearSelect) {
+      monthSelect.addEventListener("change", function () {
+        var target = new Date(Number(yearSelect.value), Number(monthSelect.value), 1);
+        updateAnchor(target);
+      });
+      yearSelect.addEventListener("change", function () {
+        var target = new Date(Number(yearSelect.value), Number(monthSelect.value), 1);
+        updateAnchor(target);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        updateAnchor(new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() - 1, 1));
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        updateAnchor(new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1));
+      });
+    }
+
+    if (collapseToggleBtn && calendarBodyEl) {
+      collapseToggleBtn.addEventListener("click", function () {
+        isCollapsed = !isCollapsed;
+        retirementCalendarCollapsedState[sourceKey] = isCollapsed;
+        calendarBodyEl.classList.toggle("is-collapsed", isCollapsed);
+        collapseToggleBtn.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+        collapseToggleBtn.textContent = isCollapsed ? "Show calendar" : "Hide calendar";
+      });
+    }
+
+    if (exportToggleBtn && exportMenu) {
+      function applyExportMenuPlacement() {
+        exportMenu.classList.remove("align-left");
+        var bounds = exportMenu.getBoundingClientRect();
+        if (bounds.right > window.innerWidth - 8) {
+          exportMenu.classList.add("align-left");
+        }
+      }
+
+      function closeExportMenu() {
+        exportMenu.setAttribute("hidden", "hidden");
+        exportToggleBtn.setAttribute("aria-expanded", "false");
+      }
+
+      function openExportMenu() {
+        exportMenu.removeAttribute("hidden");
+        exportToggleBtn.setAttribute("aria-expanded", "true");
+        applyExportMenuPlacement();
+      }
+
+      function onDocumentClick(event) {
+        if (!retirementCalendarEl.contains(event.target)) {
+          closeExportMenu();
+        }
+      }
+
+      function onDocumentKeydown(event) {
+        if (event.key === "Escape") {
+          closeExportMenu();
+          exportToggleBtn.focus();
+        }
+      }
+
+      exportToggleBtn.addEventListener("click", function () {
+        var isHidden = exportMenu.hasAttribute("hidden");
+        if (isHidden) {
+          openExportMenu();
+        } else {
+          closeExportMenu();
+        }
+      });
+
+      document.addEventListener("click", onDocumentClick);
+      document.addEventListener("keydown", onDocumentKeydown);
+      window.addEventListener("resize", applyExportMenuPlacement);
+      removeExportDropdownListeners = function () {
+        document.removeEventListener("click", onDocumentClick);
+        document.removeEventListener("keydown", onDocumentKeydown);
+        window.removeEventListener("resize", applyExportMenuPlacement);
+      };
+
+      exportMenu.querySelectorAll("[data-retirement-export-action]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var action = btn.getAttribute("data-retirement-export-action");
+          var icsUrl = getAzureRetirementsIcsAbsoluteUrl();
+          var subscribeUrl = toWebcalUrl(icsUrl);
+          setRetirementExportStatus(exportStatus, "", false);
+
+          if (action === "download-ics") {
+            var link = document.createElement("a");
+            link.href = icsUrl;
+            link.download = "azure-retirements.ics";
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            setRetirementExportStatus(exportStatus, "ICS download started.", false);
+          } else if (action === "copy-subscribe") {
+            copyTextToClipboard(subscribeUrl + "\n" + icsUrl)
+              .then(function () {
+                setRetirementExportStatus(exportStatus, "Subscribe URL copied.", false);
+              })
+              .catch(function () {
+                setRetirementExportStatus(exportStatus, "Could not copy URL. Please copy manually from the address bar.", true);
+              });
+          } else if (action === "open-outlook") {
+            var outlookUrl =
+              "https://outlook.office.com/calendar/0/addfromweb?url=" +
+              encodeURIComponent(icsUrl) +
+              "&name=" +
+              encodeURIComponent("Azure Retirement Calendar");
+            window.open(outlookUrl, "_blank", "noopener,noreferrer");
+            setRetirementExportStatus(exportStatus, "Opened Outlook / Microsoft 365 calendar flow.", false);
+          }
+
+          closeExportMenu();
+        });
+      });
+    }
+
+    showElement(retirementCalendarEl);
+    if (typeof removeExportDropdownListeners === "function") {
+      var previousCleanup = retirementCalendarEl._cleanupRetirementExportDropdown;
+      if (typeof previousCleanup === "function") {
+        previousCleanup();
+      }
+      retirementCalendarEl._cleanupRetirementExportDropdown = removeExportDropdownListeners;
+    }
+  }
+
   function renderM365VideoPanel() {
     if (!savillVideoEl) return;
 
@@ -589,6 +1039,8 @@
   function refreshSourcePanels() {
     updateOtherBlogsToggleVisibility();
     renderSummaryPanel();
+    renderRetirementCalendarPanel();
+    updateTopPanelsLayout();
     if (currentSource === "m365") {
       renderM365VideoPanel();
       return;
@@ -654,11 +1106,17 @@
     showLoading(true);
     try {
       // Load Azure feeds
-      var azureResponse = await fetch("data/feeds.json");
+      var azureResponse = await fetch("data/feeds.json", { cache: "no-store" });
       if (!azureResponse.ok) throw new Error("Failed to load Azure feeds");
       var azureData = await azureResponse.json();
       azureFeedData = azureData;
       var azureArticles = azureData.articles || [];
+      var azureCutoff = localDaysAgo(30);
+      azureArticles = azureArticles.filter(function (article) {
+        var articleDate = getArticleDate(article);
+        if (!articleDate) return false;
+        return articleDate >= azureCutoff;
+      });
       
       // Mark Azure articles with source
       azureArticles.forEach(function (a) { a.source = "azure"; });
@@ -666,7 +1124,7 @@
       // Try to load M365 data (graceful fallback if not available)
       var m365Articles = [];
       try {
-        var m365Response = await fetch("data/m365_data.json");
+        var m365Response = await fetch("data/m365_data.json", { cache: "no-store" });
         if (m365Response.ok) {
           var m365Data = await m365Response.json();
           m365FeedData = m365Data;
