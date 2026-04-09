@@ -791,6 +791,7 @@ def fetch_savill_video():
 
 AZURE_UPDATES_MAX_PAGES = 10
 AZURE_UPDATES_RETIREMENT_ENRICH_MAX = 20
+WORKBOOK_RETIREMENT_ENRICH_MAX = 60
 RETIREMENT_MONTH_PATTERN = (
     r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|"
     r"Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?"
@@ -916,6 +917,29 @@ def _extract_azure_update_retirement_date_from_page(url):
     response.raise_for_status()
     page_text = clean_html(response.text)
     return _extract_azure_retirement_date("", page_text)
+
+
+def _extract_azure_update_retirement_date_by_id(update_id):
+    """Fetch one Azure Updates item by id and extract retirement date from API fields/text."""
+    token = str(update_id or "").strip()
+    if not token:
+        return None
+
+    url = f"{AZURE_UPDATES_API}?$filter=id%20eq%20'{token}'"
+    response = HTTP_SESSION.get(url, timeout=FEED_REQUEST_TIMEOUT)
+    response.raise_for_status()
+    payload = response.json()
+    items = payload.get("value", []) if isinstance(payload, dict) else payload
+    if not isinstance(items, list):
+        return None
+
+    for item in items:
+        if str(item.get("id", "") or "").strip() != token:
+            continue
+        article = _parse_azure_update_item(item)
+        if article:
+            return article.get("azureRetirementDate")
+    return None
 
 
 def _retirement_date_rank_key(value):
@@ -1409,6 +1433,71 @@ def _get_first_row_value(row, keys):
     return ""
 
 
+def _is_azure_updates_link(url):
+    """Return True when a URL points to an Azure Updates article page."""
+    raw = str(url or "").strip()
+    if not raw:
+        return False
+
+    parsed = urlsplit(raw)
+    return (
+        parsed.scheme == "https"
+        and normalize_host(parsed.hostname) == "azure.microsoft.com"
+        and "/updates" in (parsed.path or "")
+    )
+
+
+def _build_workbook_retirement_cache_key(link):
+    """Build a stable cache key for workbook link enrichment."""
+    update_id = _extract_azure_update_id_from_url(link)
+    if update_id:
+        return f"update-id:{update_id}"
+
+    parsed = urlsplit(str(link or "").strip())
+    host = normalize_host(parsed.hostname)
+    path = (parsed.path or "").rstrip("/").lower()
+    if not host and not path:
+        return ""
+    return f"url:{host}{path}"
+
+
+def _resolve_workbook_retirement_date(csv_retirement_date, link, cache, enrich_budget):
+    """Resolve workbook retirement date, preferring linked article date on conflict."""
+    if not _is_azure_updates_link(link):
+        return csv_retirement_date, False, enrich_budget
+
+    update_id = _extract_azure_update_id_from_url(link)
+    cache_key = _build_workbook_retirement_cache_key(link)
+    linked_retirement_date = None
+    has_cached_value = cache_key in cache if cache_key else False
+    if has_cached_value:
+        linked_retirement_date = cache.get(cache_key)
+
+    if not has_cached_value:
+        if enrich_budget <= 0:
+            return csv_retirement_date, False, enrich_budget
+        try:
+            if update_id:
+                linked_retirement_date = _extract_azure_update_retirement_date_by_id(update_id)
+            if not linked_retirement_date:
+                linked_retirement_date = _extract_azure_update_retirement_date_from_page(link)
+        except (
+            requests.exceptions.RequestException,
+            ValueError,
+            TypeError,
+            RuntimeError,
+        ):
+            linked_retirement_date = None
+        enrich_budget -= 1
+        if cache_key:
+            cache[cache_key] = linked_retirement_date
+
+    if linked_retirement_date and linked_retirement_date != csv_retirement_date:
+        return linked_retirement_date, True, enrich_budget
+
+    return csv_retirement_date, False, enrich_budget
+
+
 def _normalize_csv_retirement_date(raw_value):
     """Normalize workbook retirement dates to YYYY-MM or YYYY-MM-DD."""
     candidate = clean_html(str(raw_value or "")).strip()
@@ -1453,6 +1542,9 @@ def fetch_azure_retirements_from_csv(csv_path=AZURE_RETIREMENTS_EXPORT_PATH):
     print(f"Fetching: Azure Retirements workbook CSV ({path})...")
     articles = []
     now_iso = datetime.now(timezone.utc).isoformat()
+    enrich_cache = {}
+    enrich_budget = WORKBOOK_RETIREMENT_ENRICH_MAX
+    override_count = 0
 
     with path.open("r", encoding="utf-8-sig", newline="") as csv_file:
         reader = csv.DictReader(csv_file)
@@ -1481,6 +1573,15 @@ def fetch_azure_retirements_from_csv(csv_path=AZURE_RETIREMENTS_EXPORT_PATH):
                 title = f"Retirement: Azure service update ({row_number})"
 
             link = _get_first_row_value(row, ["Actions", "actions", "link", "url"])
+            csv_retirement_date = retirement_date
+            retirement_date, was_overridden, enrich_budget = _resolve_workbook_retirement_date(
+                csv_retirement_date,
+                link,
+                enrich_cache,
+                enrich_budget,
+            )
+            if was_overridden:
+                override_count += 1
             impacted_raw = _get_first_row_value(
                 row,
                 [
@@ -1511,6 +1612,11 @@ def fetch_azure_retirements_from_csv(csv_path=AZURE_RETIREMENTS_EXPORT_PATH):
                 "lifecycle": "retiring",
                 "azureRetirementDate": retirement_date,
             }
+            if was_overridden:
+                article["azureRetirementDateCsv"] = csv_retirement_date
+                article["azureRetirementDateSource"] = "linked_page"
+            else:
+                article["azureRetirementDateSource"] = "csv"
             if impacted_flag is not None:
                 article["impactedServicesAvailable"] = impacted_flag
             if impacted_raw:
@@ -1519,6 +1625,8 @@ def fetch_azure_retirements_from_csv(csv_path=AZURE_RETIREMENTS_EXPORT_PATH):
             articles.append(article)
 
     print(f"  Loaded {len(articles)} retirement rows from workbook CSV")
+    if override_count:
+        print(f"  Overrode {override_count} workbook retirement dates using linked Azure Updates pages")
     return articles
 
 
@@ -1682,13 +1790,15 @@ def build_azure_retirement_calendar(articles, max_items=120):
 
 
 def build_retirement_window_buckets(events, today=None, preview_limit=8):
-    """Build rolling retirement windows (0-3, 3-6, 6-9, 9-12 months)."""
+    """Build rolling retirement windows, including long-range future buckets."""
     reference = today or datetime.now(timezone.utc).date()
     window_defs = (
         ("0_3_months", 0, 3),
         ("3_6_months", 3, 6),
         ("6_9_months", 6, 9),
         ("9_12_months", 9, 12),
+        ("12_24_months", 12, 24),
+        ("24_plus_months", 24, 10_000),
     )
     buckets = {
         key: {

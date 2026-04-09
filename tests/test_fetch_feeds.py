@@ -945,7 +945,16 @@ class WorkbookCsvRetirementTests(unittest.TestCase):
             csv_path = pathlib.Path(tmpdir) / "export_data.csv"
             csv_path.write_text(csv_content, encoding="utf-8")
 
-            articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+            with mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_by_id",
+                return_value=None,
+            ), mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_from_page",
+                return_value=None,
+            ):
+                articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
 
         self.assertEqual(len(articles), 2)
         self.assertEqual(
@@ -958,6 +967,7 @@ class WorkbookCsvRetirementTests(unittest.TestCase):
             "https://azure.microsoft.com/updates?id=example-1",
         )
         self.assertEqual(articles[0]["blogId"], "azureretirements")
+        self.assertEqual(articles[0]["azureRetirementDateSource"], "csv")
         self.assertTrue(articles[0]["impactedServicesAvailable"])
         self.assertFalse(articles[1]["impactedServicesAvailable"])
 
@@ -972,10 +982,47 @@ class WorkbookCsvRetirementTests(unittest.TestCase):
             csv_path = pathlib.Path(tmpdir) / "export_data.csv"
             csv_path.write_text(csv_content, encoding="utf-8")
 
-            articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+            with mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_by_id",
+                return_value=None,
+            ), mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_from_page",
+                return_value=None,
+            ):
+                articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
 
         self.assertEqual(len(articles), 1)
         self.assertEqual(articles[0]["azureRetirementDate"], "2027-01-15")
+
+    def test_fetch_azure_retirements_from_csv_prefers_linked_page_date_on_conflict(self):
+        csv_content = (
+            '"Service Name","Retiring Feature","Retirement Date","Actions","Is Available under the Impacted Services?"\n'
+            '"App service",".NET 9 (STS)","2026-05-12","https://azure.microsoft.com/updates/?id=485077","Yes"\n'
+        )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csv_path = pathlib.Path(tmpdir) / "export_data.csv"
+            csv_path.write_text(csv_content, encoding="utf-8")
+
+            with mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_by_id",
+                return_value="2026-11-10",
+            ) as by_id_mock, mock.patch.object(
+                fetch_feeds,
+                "_extract_azure_update_retirement_date_from_page",
+                return_value=None,
+            ) as enrich_mock:
+                articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+
+        self.assertEqual(by_id_mock.call_count, 1)
+        self.assertEqual(enrich_mock.call_count, 0)
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0]["azureRetirementDate"], "2026-11-10")
+        self.assertEqual(articles[0]["azureRetirementDateCsv"], "2026-05-12")
+        self.assertEqual(articles[0]["azureRetirementDateSource"], "linked_page")
 
     def test_fetch_azure_retirements_from_csv_missing_file_returns_empty_list(self):
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -1161,6 +1208,18 @@ class RetirementCalendarTests(unittest.TestCase):
                 "datePrecision": "month",
                 "link": "https://example.com/nine-twelve",
             },
+            {
+                "title": "Twelve to twenty-four",
+                "retirementDate": "2027-09-30",
+                "datePrecision": "day",
+                "link": "https://example.com/twelve-twenty-four",
+            },
+            {
+                "title": "Twenty-four plus",
+                "retirementDate": "2028-09-30",
+                "datePrecision": "day",
+                "link": "https://example.com/twenty-four-plus",
+            },
         ]
 
         buckets = fetch_feeds.build_retirement_window_buckets(
@@ -1173,8 +1232,12 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(windows["3_6_months"]["count"], 1)
         self.assertEqual(windows["6_9_months"]["count"], 1)
         self.assertEqual(windows["9_12_months"]["count"], 1)
+        self.assertEqual(windows["12_24_months"]["count"], 1)
+        self.assertEqual(windows["24_plus_months"]["count"], 1)
         self.assertEqual(windows["3_6_months"]["items"][0]["retirementDate"], "2026-08")
         self.assertEqual(windows["9_12_months"]["items"][0]["retirementDate"], "2027-03")
+        self.assertEqual(windows["12_24_months"]["items"][0]["retirementDate"], "2027-09-30")
+        self.assertEqual(windows["24_plus_months"]["items"][0]["retirementDate"], "2028-09-30")
 
 
 class MainOutputSchemaTests(unittest.TestCase):

@@ -674,8 +674,7 @@
       .map(function (key) {
         return dedupedByClient[key];
       })
-      .sort(function (a, b) { return a.parsedDate - b.parsedDate; })
-      .slice(0, 60);
+      .sort(function (a, b) { return a.parsedDate - b.parsedDate; });
 
     if (!normalizedEvents.length) {
       hideElement(retirementCalendarEl);
