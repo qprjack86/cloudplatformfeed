@@ -84,6 +84,7 @@
   var azureFeedData = null;
   var m365FeedData = null;
   var retirementCalendarViewState = { azure: null, m365: null };
+  var retirementCalendarCollapsedState = { azure: null, m365: null };
   
   // Tab buttons (M365 feature)
   var tabButtons = document.querySelectorAll(".tab-button");
@@ -628,6 +629,10 @@
     return Promise.reject(new Error("Clipboard API unavailable"));
   }
 
+  function isPhoneViewport() {
+    return window.matchMedia && window.matchMedia("(max-width: 680px)").matches;
+  }
+
   function getRetirementCalendarPayload() {
     if (currentSource === "m365") {
       if (!m365FeedData) return { events: [], label: "Microsoft 365" };
@@ -708,6 +713,10 @@
     }
 
     var sourceKey = currentSource === "m365" ? "m365" : "azure";
+    if (retirementCalendarCollapsedState[sourceKey] === null) {
+      retirementCalendarCollapsedState[sourceKey] = isPhoneViewport();
+    }
+    var isCollapsed = Boolean(retirementCalendarCollapsedState[sourceKey]);
     var currentMonthStart = startOfMonth(new Date());
     var earliestMonth = startOfMonth(normalizedEvents[0].parsedDate);
     var latestMonth = startOfMonth(normalizedEvents[normalizedEvents.length - 1].parsedDate);
@@ -796,12 +805,20 @@
     var exportStatusHtml = showAzureExport
       ? '<p class="retirement-mini-export-status" data-retirement-export-status aria-live="polite"></p>'
       : "";
+    var collapseLabel = isCollapsed ? "Show calendar" : "Hide calendar";
+    var collapseButtonHtml =
+      '<button type="button" class="retirement-mini-collapse-btn" data-retirement-collapse-toggle aria-expanded="' +
+      (isCollapsed ? "false" : "true") +
+      '">' +
+      collapseLabel +
+      "</button>";
 
     retirementCalendarEl.innerHTML =
       '<div class="retirement-mini-header">' +
-        "<h2>🗓️ Retirement Calendar</h2>" +
+        '<div class="retirement-mini-title-row"><h2>🗓️ Retirement Calendar</h2>' + collapseButtonHtml + "</div>" +
         "<p>" + escapeHtml(payload.label) + " · " + escapeHtml(formatLocalDate(anchorMonth, { month: "long", year: "numeric" })) + "</p>" +
       "</div>" +
+      '<div class="retirement-mini-body' + (isCollapsed ? " is-collapsed" : "") + '">' +
       '<div class="retirement-mini-controls">' +
         '<button type="button" class="retirement-mini-nav-btn" data-retirement-nav="prev" aria-label="Previous month"' + disablePrev + '>◀</button>' +
         '<label class="retirement-mini-select-wrap"><span class="sr-only">Month</span><select data-retirement-select="month">' + monthOptions + "</select></label>" +
@@ -814,7 +831,8 @@
       '<div class="retirement-mini-grid">' + dayCells.join("") + "</div>" +
       (monthItemsHtml
         ? '<div class="retirement-mini-list"><h3>Retiring this month</h3><ul>' + monthItemsHtml + "</ul></div>"
-        : "");
+        : "") +
+      "</div>";
 
     var monthSelect = retirementCalendarEl.querySelector('[data-retirement-select="month"]');
     var yearSelect = retirementCalendarEl.querySelector('[data-retirement-select="year"]');
@@ -823,6 +841,8 @@
     var exportToggleBtn = retirementCalendarEl.querySelector('[data-retirement-export-toggle]');
     var exportMenu = retirementCalendarEl.querySelector('[data-retirement-export-menu]');
     var exportStatus = retirementCalendarEl.querySelector('[data-retirement-export-status]');
+    var collapseToggleBtn = retirementCalendarEl.querySelector('[data-retirement-collapse-toggle]');
+    var calendarBodyEl = retirementCalendarEl.querySelector(".retirement-mini-body");
     var removeExportDropdownListeners = null;
 
     function updateAnchor(newMonthDate) {
@@ -856,7 +876,25 @@
       });
     }
 
+    if (collapseToggleBtn && calendarBodyEl) {
+      collapseToggleBtn.addEventListener("click", function () {
+        isCollapsed = !isCollapsed;
+        retirementCalendarCollapsedState[sourceKey] = isCollapsed;
+        calendarBodyEl.classList.toggle("is-collapsed", isCollapsed);
+        collapseToggleBtn.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+        collapseToggleBtn.textContent = isCollapsed ? "Show calendar" : "Hide calendar";
+      });
+    }
+
     if (exportToggleBtn && exportMenu) {
+      function applyExportMenuPlacement() {
+        exportMenu.classList.remove("align-left");
+        var bounds = exportMenu.getBoundingClientRect();
+        if (bounds.right > window.innerWidth - 8) {
+          exportMenu.classList.add("align-left");
+        }
+      }
+
       function closeExportMenu() {
         exportMenu.setAttribute("hidden", "hidden");
         exportToggleBtn.setAttribute("aria-expanded", "false");
@@ -865,6 +903,7 @@
       function openExportMenu() {
         exportMenu.removeAttribute("hidden");
         exportToggleBtn.setAttribute("aria-expanded", "true");
+        applyExportMenuPlacement();
       }
 
       function onDocumentClick(event) {
@@ -891,9 +930,11 @@
 
       document.addEventListener("click", onDocumentClick);
       document.addEventListener("keydown", onDocumentKeydown);
+      window.addEventListener("resize", applyExportMenuPlacement);
       removeExportDropdownListeners = function () {
         document.removeEventListener("click", onDocumentClick);
         document.removeEventListener("keydown", onDocumentKeydown);
+        window.removeEventListener("resize", applyExportMenuPlacement);
       };
 
       exportMenu.querySelectorAll("[data-retirement-export-action]").forEach(function (btn) {
