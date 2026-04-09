@@ -1,7 +1,122 @@
 {
-  "lastUpdated": "2026-04-08T16:08:32.522411+00:00",
-  "totalArticles": 273,
+  "lastUpdated": "2026-04-09T08:18:47.271802+00:00",
+  "totalArticles": 278,
   "articles": [
+    {
+      "title": "Enterprise UAMI Design in Azure: Trust Boundaries and Blast Radius",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614",
+      "published": "2026-04-09T08:13:33+00:00",
+      "summary": "As organizations move toward secretless authentication models in Azure, Managed Identity has become the preferred approach for enabling secure communication between services. User Assigned Managed Identity (UAMI) in particular offers flexibility that allows identity reuse across multiple compute...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "AmitManchanda28"
+    },
+    {
+      "title": "Understanding Agentic Function-Calling with Multi-Modal Data Access",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-agentic-function-calling-with-multi-modal-data/ba-p/4504151",
+      "published": "2026-04-09T07:00:00+00:00",
+      "summary": "What You'll Learn Why traditional API design struggles when questions span multiple data sources, and how function-calling solves this. How the iterative tool-use loop works — the model plans, calls tools, inspects results, and repeats until it has a complete answer. What makes an agent truly...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "jayesh_mevada"
+    },
+    {
+      "title": "Deploying to Azure Web App from Azure DevOps Using UAMI",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800",
+      "published": "2026-04-09T05:53:29+00:00",
+      "summary": "TOC UAMI Configuration App Configuration Azure DevOps Configuration Logs UAMI Configuration Create a User Assigned Managed Identity with no additional configuration.This identity will be mentioned in later steps, especially at Object ID. App Configuration On an existing Azure Web App, enable...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "theringe"
+    },
+    {
+      "title": "Designing Reliable Health Check Endpoints for IIS Behind Azure Application Gateway",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938",
+      "published": "2026-04-08T23:18:05+00:00",
+      "summary": "Why Health Probes Matter in Azure Application Gateway Azure Application Gateway relies entirely on health probes to determine whether backend instances should receive traffic. If a probe: Receives a non‑200 response Times out Gets redirected Requires authentication …the backend is marked Unhealthy,...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "AjaySingh_"
+    },
+    {
+      "title": "Enabling AI-Driven Enterprise Intelligence Using SAP and Microsoft 3-IQ Layers",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-ai-driven-enterprise-intelligence-using-sap-and/ba-p/4509721",
+      "published": "2026-04-08T19:24:25+00:00",
+      "summary": "Architectural Context Enterprise SAP platforms such as SAP ECC, SAP S/4HANA, and SAP BW continue to function as authoritative transactional systems supporting financial accounting, treasury management, portfolio reporting, and regulatory compliance workflows. These environments are optimized for...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "srhulsus"
+    },
+    {
+      "title": "Build and Host MCP Apps on Azure App Service",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-and-host-mcp-apps-on-azure-app-service/ba-p/4509705",
+      "published": "2026-04-08T18:10:03+00:00",
+      "summary": "MCP Apps are here, and they're a game-changer for building AI tools with interactive UIs. If you've been following the Model Context Protocol (MCP) ecosystem, you've probably heard about the MCP Apps spec — the first official MCP extension that lets your tools return rich, interactive UIs that...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "jordanselig"
+    },
+    {
+      "title": "Fast cloud migration, measurable ROI: Forrester Total Economic Impact study of Azure VMware Solution",
+      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/fast-cloud-migration-measurable-roi-forrester-total-economic/ba-p/4508136",
+      "published": "2026-04-08T17:59:23+00:00",
+      "summary": "Many organizations are balancing near-term continuity for VMware-based workloads with longer-term cloud modernization goals – all while managing cost, security, and resiliency. Azure VMware Solution (AVS) is built for this moment: a Microsoft-managed service verified by VMware that enables running...",
+      "blog": "Azure Migration",
+      "blogId": "azuremigrationblog",
+      "author": "BritneyCretella"
+    },
+    {
+      "title": "Generally Available: PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server",
+      "link": "https://azure.microsoft.com/en-us/updates/559623/",
+      "published": "2026-04-08T17:45:09.303049+00:00",
+      "summary": "PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by efficiently managing idle and short-lived connections.With this update, you benefit from the latest...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Generally Available: Enhancements to maintenance notifications in Azure Service Health",
+      "link": "https://azure.microsoft.com/en-us/updates/559628/",
+      "published": "2026-04-08T17:45:09.303049+00:00",
+      "summary": "We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per server, now you receive a single notification per region that consolidates maintenance details for...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "Launched"
+    },
+    {
+      "title": "Public Preview: Azure Files assessments are now available using Azure Migrate",
+      "link": "https://azure.microsoft.com/en-us/updates/560025/",
+      "published": "2026-04-08T17:30:02.440448+00:00",
+      "summary": "Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility into capacity and sources, and provides Azure...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "in_preview",
+      "azurePreviewDate": "2026-02",
+      "azureTargetDate": "2026-02",
+      "azureStatus": "In preview"
+    },
+    {
+      "title": "Generally Available: Observability in AKS Namespace and Workload Views",
+      "link": "https://azure.microsoft.com/en-us/updates/560039/",
+      "published": "2026-04-08T17:30:02.440448+00:00",
+      "summary": "AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilization across Nodes, Namespaces, Workloads, and...",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "author": "Microsoft",
+      "lifecycle": "launched_ga",
+      "azureGeneralAvailabilityDate": "2026-04",
+      "azureTargetDate": "2026-04",
+      "azureStatus": "Launched"
+    },
     {
       "title": "Introducing SQL MCP Server",
       "link": "https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/",
@@ -61,6 +176,15 @@
       "link": "https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga",
       "published": "2026-04-08T00:00:00+00:00",
       "summary": "Explore what’s new in Azure Container Storage v2.1.0 with Elastic SAN integration, modular on-demand installation, and enhanced node selector support.",
+      "blog": "AKS Blog",
+      "blogId": "aksblog",
+      "author": "Microsoft"
+    },
+    {
+      "title": "Turn your agents into AKS experts: Agent Skills for AKS",
+      "link": "https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks",
+      "published": "2026-04-08T00:00:00+00:00",
+      "summary": "Announcing agent skills for AKS, easily pluggable into any agent to enhance them with built-in AKS expertise, safer workflows, and reduced developer overhead.",
       "blog": "AKS Blog",
       "blogId": "aksblog",
       "author": "Microsoft"
@@ -1159,15 +1283,6 @@
       "author": "AbhinavPremsekhar"
     },
     {
-      "title": "Synchronizing Azure Storage Across Isolated Private Endpoint Networks",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/synchronizing-azure-storage-across-isolated-private-endpoint/ba-p/4504564",
-      "published": "2026-03-30T05:17:31+00:00",
-      "summary": "Introduction In Azure repatriation programs, enterprises often need to migrate large volumes of blob data from a source Azure environment to a target Azure environment under strict security and network isolation constraints. A typical repatriation setup includes fully isolated source and target...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "deepakkumarv"
-    },
-    {
       "title": "Control where your pods land on AKS with NAP",
       "link": "https://blog.aks.azure.com/2026/03/20/node-provisioning-best-practice",
       "published": "2026-03-30T00:00:00+00:00",
@@ -1438,15 +1553,6 @@
       "author": "Jason_Pereira"
     },
     {
-      "title": "Aspire on Azure App Service is now Generally Available",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aspire-on-azure-app-service-is-now-generally-available/ba-p/4505549",
-      "published": "2026-03-25T14:04:28+00:00",
-      "summary": "Today we are announcing General Availability of Aspire on Azure App Service, making it easier to take distributed applications from local development to a fully managed production environment on Azure App Service. With the Aspire.Hosting.Azure.AppService package, you can define your hosting...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "TulikaC"
-    },
-    {
       "title": "🚀GitHub Copilot CLI: AI Assistance from the Command Line for Infrastructure Deployments",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/github-copilot-cli-ai-assistance-from-the-command-line-for/ba-p/4500796",
       "published": "2026-03-25T09:43:34+00:00",
@@ -1516,15 +1622,6 @@
       "azurePreviewDate": "2026-03",
       "azureTargetDate": "2026-03",
       "azureStatus": "In preview"
-    },
-    {
-      "title": "HTTP Triggers in Azure SRE Agent: From Jira Ticket to Automated Investigation",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/http-triggers-in-azure-sre-agent-from-jira-ticket-to-automated/ba-p/4504960",
-      "published": "2026-03-24T21:09:11+00:00",
-      "summary": "Introduction Many teams run their observability, incident management, ticketing, and deployment on platforms outside of Azure—Jira, Opsgenie, Grafana, Zendesk, GitLab, Jenkins, Harness, or homegrown internal tools. These are the systems where alerts fire, tickets get filed, deployments happen, and...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "Vineela-Suri"
     },
     {
       "title": "Hosted Containers and AI Agent Solutions",
@@ -1647,15 +1744,6 @@
       "blog": "Visual Studio Blog",
       "blogId": "visualstudio",
       "author": "Jim Harrer"
-    },
-    {
-      "title": "Automating Azure OpenAI Cost Control Using Budgets, Action Groups, and Automation Runbooks",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/automating-azure-openai-cost-control-using-budgets-action-groups/ba-p/4505164",
-      "published": "2026-03-24T13:28:40+00:00",
-      "summary": "Introduction As organizations increasingly adopt Azure OpenAI for use cases such as generative AI, analytics, and experimentation, cost governance becomes a critical operational concern. Azure OpenAI workloads can scale quickly, and without proper controls, unmonitored usage may lead to unexpected...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "trisha1302"
     },
     {
       "title": "Announcing Public Preview of Argo CD extension on AKS and Azure Arc enabled Kubernetes clusters",
@@ -2438,6 +2526,15 @@
       "azureRetirementDate": "2026-06-08"
     },
     {
+      "title": "Awesome GitHub Copilot just got a website, and a learning hub, and plugins!",
+      "link": "https://devblogs.microsoft.com/blog/awesome-github-copilot-just-got-a-website-and-a-learning-hub-and-plugins",
+      "published": "2026-03-16T17:00:33+00:00",
+      "summary": "Back in July, we launched the Awesome GitHub Copilot Customizations repo with a simple goal: give the community a place to share custom instructions, prompts, and chat modes to customize the AI responses from GitHub Copilot. We were hoping for maybe one community contribution per week. That… did...",
+      "blog": "Microsoft Developers Blog",
+      "blogId": "msdevblog",
+      "author": "Matt Soucoup"
+    },
+    {
       "title": "Azure Cosmos DB at FOSSASIA Summit 2026: Sessions, Conversations, and Community",
       "link": "https://devblogs.microsoft.com/cosmosdb/azure-cosmos-db-at-fossasia-summit-2026-sessions-community/",
       "published": "2026-03-16T16:24:05+00:00",
@@ -2581,15 +2678,6 @@
       "author": "shashban"
     },
     {
-      "title": "Building a Multi-Agent On-Call Copilot with Microsoft Agent Framework",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-multi-agent-on-call-copilot-with-microsoft-agent/ba-p/4499962",
-      "published": "2026-03-12T07:00:00+00:00",
-      "summary": "Four AI agents, one incident payload, structured triage in under 60 seconds powered by Microsoft Agent Framework and Foundry Hosted Agents. Multi-Agent Microsoft Agent Framework Foundry Hosted Agents Python SRE / Incident Response When an incident fires at 3 AM, every second the on-call engineer...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Lee_Stott"
-    },
-    {
       "title": "Temporary rollback: build identities can access Advanced Security: read alerts again",
       "link": "https://devblogs.microsoft.com/devops/temporary-rollback-build-identities-can-access-advanced-security-read-alerts-again/",
       "published": "2026-03-11T23:46:28+00:00",
@@ -2707,47 +2795,20 @@
       "blog": "Linux & Open Source",
       "blogId": "linuxandopensourceblog",
       "author": "Simone_Rodigari"
-    },
-    {
-      "title": "How to Access a Shared OneDrive Folder in Azure Logic Apps",
-      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-access-a-shared-onedrive-folder-in-azure-logic-apps/ba-p/4484962",
-      "published": "2026-03-10T06:39:31+00:00",
-      "summary": "What is the problem? A common enterprise automation scenario involves copying files from a OneDrive folder shared by a colleague into another storage service such as SharePoint or Azure Blob Storage using Azure Logic Apps. However, when you configure the OneDrive for Business – “List files in...",
-      "blog": "Integrations on Azure",
-      "blogId": "integrationsonazureblog",
-      "author": "Arpit_MSFT"
-    },
-    {
-      "title": "Azure Databricks & Fabric Disaster Recovery: The Better Together Story",
-      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323",
-      "published": "2026-03-10T01:46:28+00:00",
-      "summary": "Author's: Amudha Palani amudhapalani​, Oscar Alvarado oscaralvarado​, Eric Kwashie ekwashie​, Peter Lo PeterLo​ and Rafia Aqil Rafia_Aqil​ Disaster recovery (DR) is a critical component of any cloud-native data analytics platform, ensuring business continuity even during rare regional outages...",
-      "blog": "Analytics on Azure",
-      "blogId": "analyticsonazure",
-      "author": "Rafia_Aqil"
-    },
-    {
-      "title": "Announcing the Azure Skills Plugin",
-      "link": "https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/",
-      "published": "2026-03-09T20:02:13+00:00",
-      "summary": "Part 1 of the Azure Skills Plugin series Coding agents like GitHub Copilot and Claude Code are great at code, but getting your app to production on Azure is not just about writing code. Really, it is about making the right calls. Which service fits this app? Which SKU fits this workload? Should...",
-      "blog": "All Things Azure",
-      "blogId": "allthingsazure",
-      "author": "Chris Harris"
     }
   ],
   "summaryWindowDays": 5,
   "summaryPublishingDays": [
+    "2026-04-09",
     "2026-04-08",
     "2026-04-07",
     "2026-04-06",
-    "2026-04-03",
-    "2026-04-02"
+    "2026-04-03"
   ],
   "summaryStatus": "available",
   "summarySource": "azure-openai",
-  "summaryArticleCount": 11,
-  "summary": "- In preview:\n  • [Public Preview: Rule impact analysis on Azure Network Watcher](https://azure.microsoft.com/en-us/updates/559876/)\n  • [Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904)\n  • [Announcing Public Preview for Essential Machine Management](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721)\n  • [Run the latest Azure Arc agent with Automatic Agent Upgrade (Public Preview)](https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535)\n\n- Launched / Generally Available:\n  • [Generally Available: Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support](https://azure.microsoft.com/en-us/updates/559547/)\n  • [Generally Available: Disable HTTP proxy in AKS](https://azure.microsoft.com/en-us/updates/557857/)\n  • [Generally Available: Azure Functions now supports MCP resource triggers](https://azure.microsoft.com/en-us/updates/559981/)\n  • [Generally Available: Pod CIDR expansion in AKS](https://azure.microsoft.com/en-us/updates/557907/)\n  • [Generally Available: Network Security Perimeter for Azure Service Bus](https://azure.microsoft.com/en-us/updates/559899/)\n\n- Retiring:\n  • [Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027](https://azure.microsoft.com/en-us/updates/558027/)\n  • [Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027](https://azure.microsoft.com/en-us/updates/558276/)\n\n- In development:\n  • none noted in selected window",
+  "summaryArticleCount": 10,
+  "summary": "- In preview:\n  • [Public Preview: Azure Files assessments are now available using Azure Migrate](https://azure.microsoft.com/en-us/updates/560025/)\n  • [Public Preview: Rule impact analysis on Azure Network Watcher](https://azure.microsoft.com/en-us/updates/559876/)\n  • [Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904)\n  • [Announcing Public Preview for Essential Machine Management](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721)\n  • [Run the latest Azure Arc agent with Automatic Agent Upgrade (Public Preview)](https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535)\n\n- Launched / Generally Available:\n  • [Generally Available: PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server](https://azure.microsoft.com/en-us/updates/559623/)\n  • [Generally Available: Enhancements to maintenance notifications in Azure Service Health](https://azure.microsoft.com/en-us/updates/559628/)\n  • [Generally Available: Observability in AKS Namespace and Workload Views](https://azure.microsoft.com/en-us/updates/560039/)\n  • [Generally Available: Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support](https://azure.microsoft.com/en-us/updates/559547/)\n  • [Generally Available: Disable HTTP proxy in AKS](https://azure.microsoft.com/en-us/updates/557857/)\n\n- Retiring:\n  • none noted in selected window\n\n- In development:\n  • none noted in selected window",
   "savillVideo": {
     "title": "Azure Update 3rd April 2026",
     "url": "https://www.youtube.com/watch?v=x8ULC4uDQos",

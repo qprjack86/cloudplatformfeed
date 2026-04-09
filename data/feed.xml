@@ -4,9 +4,108 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 08 Apr 2026 16:08:32 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 08:18:47 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Enterprise UAMI Design in Azure: Trust Boundaries and Blast Radius]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enterprise-uami-design-in-azure-trust-boundaries-and-blast/ba-p/4509614</guid>
+      <description><![CDATA[As organizations move toward secretless authentication models in Azure, Managed Identity has become the preferred approach for enabling secure communication between services. User Assigned Managed Identity (UAMI) in particular offers flexibility that allows identity reuse across multiple compute...]]></description>
+      <dc:creator><![CDATA[AmitManchanda28]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 08:13:33 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Understanding Agentic Function-Calling with Multi-Modal Data Access]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-agentic-function-calling-with-multi-modal-data/ba-p/4504151</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-agentic-function-calling-with-multi-modal-data/ba-p/4504151</guid>
+      <description><![CDATA[What You'll Learn Why traditional API design struggles when questions span multiple data sources, and how function-calling solves this. How the iterative tool-use loop works — the model plans, calls tools, inspects results, and repeats until it has a complete answer. What makes an agent truly...]]></description>
+      <dc:creator><![CDATA[jayesh_mevada]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Deploying to Azure Web App from Azure DevOps Using UAMI]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-to-azure-web-app-from-azure-devops-using-uami/ba-p/4509800</guid>
+      <description><![CDATA[TOC UAMI Configuration App Configuration Azure DevOps Configuration Logs UAMI Configuration Create a User Assigned Managed Identity with no additional configuration.This identity will be mentioned in later steps, especially at Object ID. App Configuration On an existing Azure Web App, enable...]]></description>
+      <dc:creator><![CDATA[theringe]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 05:53:29 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Designing Reliable Health Check Endpoints for IIS Behind Azure Application Gateway]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-reliable-health-check-endpoints-for-iis-behind-azure/ba-p/4507938</guid>
+      <description><![CDATA[Why Health Probes Matter in Azure Application Gateway Azure Application Gateway relies entirely on health probes to determine whether backend instances should receive traffic. If a probe: Receives a non‑200 response Times out Gets redirected Requires authentication …the backend is marked Unhealthy,...]]></description>
+      <dc:creator><![CDATA[AjaySingh_]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 23:18:05 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Enabling AI-Driven Enterprise Intelligence Using SAP and Microsoft 3-IQ Layers]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-ai-driven-enterprise-intelligence-using-sap-and/ba-p/4509721</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-ai-driven-enterprise-intelligence-using-sap-and/ba-p/4509721</guid>
+      <description><![CDATA[Architectural Context Enterprise SAP platforms such as SAP ECC, SAP S/4HANA, and SAP BW continue to function as authoritative transactional systems supporting financial accounting, treasury management, portfolio reporting, and regulatory compliance workflows. These environments are optimized for...]]></description>
+      <dc:creator><![CDATA[srhulsus]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 19:24:25 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Build and Host MCP Apps on Azure App Service]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-and-host-mcp-apps-on-azure-app-service/ba-p/4509705</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-and-host-mcp-apps-on-azure-app-service/ba-p/4509705</guid>
+      <description><![CDATA[MCP Apps are here, and they're a game-changer for building AI tools with interactive UIs. If you've been following the Model Context Protocol (MCP) ecosystem, you've probably heard about the MCP Apps spec — the first official MCP extension that lets your tools return rich, interactive UIs that...]]></description>
+      <dc:creator><![CDATA[jordanselig]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 18:10:03 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Fast cloud migration, measurable ROI: Forrester Total Economic Impact study of Azure VMware Solution]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-migration-and/fast-cloud-migration-measurable-roi-forrester-total-economic/ba-p/4508136</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-migration-and/fast-cloud-migration-measurable-roi-forrester-total-economic/ba-p/4508136</guid>
+      <description><![CDATA[Many organizations are balancing near-term continuity for VMware-based workloads with longer-term cloud modernization goals – all while managing cost, security, and resiliency. Azure VMware Solution (AVS) is built for this moment: a Microsoft-managed service verified by VMware that enables running...]]></description>
+      <dc:creator><![CDATA[BritneyCretella]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:59:23 GMT</pubDate>
+      <category><![CDATA[Azure Migration]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559623/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559623/</guid>
+      <description><![CDATA[PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by efficiently managing idle and short-lived connections.With this update, you benefit from the latest...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:45:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Enhancements to maintenance notifications in Azure Service Health]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559628/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559628/</guid>
+      <description><![CDATA[We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per server, now you receive a single notification per region that consolidates maintenance details for...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:45:09 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Azure Files assessments are now available using Azure Migrate]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560025/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560025/</guid>
+      <description><![CDATA[Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility into capacity and sources, and provides Azure...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Observability in AKS Namespace and Workload Views]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560039/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560039/</guid>
+      <description><![CDATA[AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilization across Nodes, Namespaces, Workloads, and...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
     <item>
       <title><![CDATA[Introducing SQL MCP Server]]></title>
       <link>https://devblogs.microsoft.com/azure-sql/introducing-sql-mcp-server/</link>
@@ -66,6 +165,15 @@
       <link>https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga</link>
       <guid>https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga</guid>
       <description><![CDATA[Explore what’s new in Azure Container Storage v2.1.0 with Elastic SAN integration, modular on-demand installation, and enhanced node selector support.]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[AKS Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Turn your agents into AKS experts: Agent Skills for AKS]]></title>
+      <link>https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks</link>
+      <guid>https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks</guid>
+      <description><![CDATA[Announcing agent skills for AKS, easily pluggable into any agent to enhance them with built-in AKS expertise, safer workflows, and reduced developer overhead.]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
       <category><![CDATA[AKS Blog]]></category>
@@ -348,114 +456,6 @@
       <dc:creator><![CDATA[swapnil_nagar]]></dc:creator>
       <pubDate>Fri, 03 Apr 2026 20:23:40 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Run the latest Azure Arc agent with Automatic Agent Upgrade (Public Preview)]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/run-the-latest-azure-arc-agent-with-automatic-agent-upgrade/ba-p/4508535</guid>
-      <description><![CDATA[Customers managing large fleets of Azure Arc servers need a scalable way to ensure the Azure Arc agent stays up to date without manual intervention. Per server configuration does not scale, and gaps in upgrade coverage can lead to operational drift, missed features, and delayed security updates. To...]]></description>
-      <dc:creator><![CDATA[yunishussein]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 19:30:06 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Secure HTTP‑Only AKS Ingress with Azure Front Door Premium, Firewall DNAT, and Private AGIC]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/secure-http-only-aks-ingress-with-azure-front-door-premium/ba-p/4508167</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/secure-http-only-aks-ingress-with-azure-front-door-premium/ba-p/4508167</guid>
-      <description><![CDATA[Reference architecture and runbook (Part 1: HTTP-only) for Hub-Spoke networking with private Application Gateway (AGIC), Azure Firewall DNAT, and Azure Front Door Premium (WAF) 0. When and Why to Use This Architecture Series note: This document is Part 1 and uses HTTP to keep the focus on routing...]]></description>
-      <dc:creator><![CDATA[kkaushal]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 19:15:55 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[From Discovery to Executive Presentation: Plan Your Migration with Azure Migrate in Hours]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-migration-and/from-discovery-to-executive-presentation-plan-your-migration/ba-p/4508500</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-migration-and/from-discovery-to-executive-presentation-plan-your-migration/ba-p/4508500</guid>
-      <description><![CDATA[The migration planning bottleneck Every migration starts with the same question: what do we have, and where should it go? Getting from that question to a clear, executive-ready answer has traditionally taken weeks. You scan the environment, export spreadsheets, manually classify workloads, run...]]></description>
-      <dc:creator><![CDATA[Shikher]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 18:06:11 GMT</pubDate>
-      <category><![CDATA[Azure Migration]]></category>
-    </item>
-    <item>
-      <title><![CDATA[What’s new in Microsoft Sentinel: RSAC 2026]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-rsac-2026/ba-p/4503971</guid>
-      <description><![CDATA[Security is entering a new era, one defined by explosive data growth, increasingly sophisticated threats, and the rise of AI-enabled operations. To keep pace, security teams need an AI-powered approach to collect, reason over, and act on security data at scale. At RSA Conference 2026 (RSAC), we’re...]]></description>
-      <dc:creator><![CDATA[spalani]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 17:54:06 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing general availability of Network Security Perimeter for Azure Service Bus]]></title>
-      <link>https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-network-security-perimeter/ba-p/4508179</link>
-      <guid>https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-network-security-perimeter/ba-p/4508179</guid>
-      <description><![CDATA[Today we are excited to announce the general availability of Network Security Perimeter (NSP) support for Azure Service Bus. Network Security Perimeter allows you to define a logical network boundary around your Service Bus namespaces and other Azure PaaS resources, restricting public network...]]></description>
-      <dc:creator><![CDATA[EldertGrootenboer]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 16:31:50 GMT</pubDate>
-      <category><![CDATA[Messaging on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[AKS cluster with AGIC hits the Azure Application Gateway backend pool limit (100)]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/aks-cluster-with-agic-hits-the-azure-application-gateway-backend/ba-p/4508201</guid>
-      <description><![CDATA[I’m writing this article to document a real-world scaling issue we hit while exposing many applications from an Azure Kubernetes Service (AKS) cluster using Application Gateway Ingress Controller (AGIC). The problem is easy to miss because Kubernetes resources keep applying successfully, but the...]]></description>
-      <dc:creator><![CDATA[kkaushal]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 15:46:16 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Demystifying On-Demand Capacity Reservations]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/demystifying-on-demand-capacity-reservations/ba-p/4504806</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/demystifying-on-demand-capacity-reservations/ba-p/4504806</guid>
-      <description><![CDATA[About On-Demand Capacity Reservations Introducing the “parking garage” metaphor There are dozens of VM types available in Azure which span multiple generations of CPU across vendors and architectures. Within each Azure region are datacenters hosting pools of hardware which runs Azure services, such...]]></description>
-      <dc:creator><![CDATA[KenHooverMSFT]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 11:48:50 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[DevSecOps on AKS: Governance Gates That Actually Prevent Incidents]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/devsecops-on-aks-governance-gates-that-actually-prevent/ba-p/4508415</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/devsecops-on-aks-governance-gates-that-actually-prevent/ba-p/4508415</guid>
-      <description><![CDATA[This article is for AKS platform/infra engineers, SREs, and security teams who want a practical, enforceable model for stopping common Kubernetes misconfigurations before they become incidents—without turning delivery into bureaucracy. Why incidents still happen after “adding security to the...]]></description>
-      <dc:creator><![CDATA[lakshaymalik]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 10:46:12 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure SQL Managed Instance as an AI‑Enabled PaaS Platform]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-sql-managed-instance-as-an-ai-enabled-paas-platform/ba-p/4508380</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-sql-managed-instance-as-an-ai-enabled-paas-platform/ba-p/4508380</guid>
-      <description><![CDATA[AI Capabilities Built into Azure SQL Managed Instance Azure SQL MI includes multiple intelligence layers by default: Intelligent Insights for anomaly detection Automatic tuning (recommend mode) Copilot‑assisted diagnostics Native vector data types for AI workloads These capabilities work together...]]></description>
-      <dc:creator><![CDATA[ShivaniThadiyan]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 09:42:50 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[AI‑Assisted Azure Infrastructure Validation and Drift Detection]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-assisted-azure-infrastructure-validation-and-drift-detection/ba-p/4508346</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-assisted-azure-infrastructure-validation-and-drift-detection/ba-p/4508346</guid>
-      <description><![CDATA[Why Traditional Drift Detection Isn’t Enough Most teams already rely on: Terraform plan reviews Azure Policy compliance dashboards Azure Resource Graph queries Manual scripts and audits The problem isn’t missing data—it’s interpretation at scale. Validation outputs are: Verbose and noisy Spread...]]></description>
-      <dc:creator><![CDATA[ShivaniThadiyan]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 08:48:00 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[🚀 General Availability of Private Application Gateway on Azure Application Gateway v2]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/general-availability-of-private-application-gateway-on-azure/ba-p/4508294</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/general-availability-of-private-application-gateway-on-azure/ba-p/4508294</guid>
-      <description><![CDATA[🔍 What Is Private Application Gateway? Historically, Application Gateway v2 required a public IP address to communicate with the Azure control plane (GatewayManager). This requirement imposed several constraints: Mandatory public IP exposure Restricted Network Security Group (NSG) rules Limited...]]></description>
-      <dc:creator><![CDATA[kumaramit1]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 07:24:09 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[oBeaver — A Beaver That Runs LLMs on Your Machine 🦫]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/obeaver-a-beaver-that-runs-llms-on-your-machine/ba-p/4507884</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/obeaver-a-beaver-that-runs-llms-on-your-machine/ba-p/4507884</guid>
-      <description><![CDATA[Hi there! I'm the creator of oBeaver. This project started from a pretty simple desire: I wanted to run large language models on my own computer. No data sent to the cloud. No API keys. No per-call charges. I'm guessing you've had the same thought. There are already great tools out there — Ollama...]]></description>
-      <dc:creator><![CDATA[kinfey]]></dc:creator>
-      <pubDate>Fri, 03 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
     </item>
   </channel>
 </rss>
