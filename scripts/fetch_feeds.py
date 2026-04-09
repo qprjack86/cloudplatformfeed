@@ -986,6 +986,40 @@ def _azure_retirement_identity_key(title, link):
     return ""
 
 
+def _azure_runtime_retirement_alias_key(title, retirement_date):
+    """Return a stable alias key for runtime retirements that use variant wording."""
+    parsed_date = _parse_retirement_calendar_sort_date(retirement_date)
+    if not parsed_date:
+        return ""
+
+    display_title = _display_calendar_title(title)
+    parts = [part.strip() for part in display_title.split(" - ", 1)]
+    if len(parts) != 2:
+        return ""
+
+    service_name, feature_name = parts
+    if not service_name or not feature_name:
+        return ""
+
+    normalized_feature = _normalize_for_match(feature_name)
+    runtime_match = re.search(r"\b(node(?:\s*js)?|python|php|\.net|dotnet|java)\s*(\d+)\b", normalized_feature)
+    if not runtime_match:
+        return ""
+
+    runtime = runtime_match.group(1).replace(" ", "")
+    if runtime in {".net", "dotnet"}:
+        runtime = "dotnet"
+    if runtime.startswith("node"):
+        runtime = "node"
+
+    major_version = runtime_match.group(2)
+    normalized_service = _normalize_for_match(service_name)
+    if not normalized_service:
+        return ""
+
+    return f"runtime:{normalized_service}:{runtime}:{major_version}:{retirement_date}"
+
+
 def _classify_azure_update_lifecycle(status_raw, title_raw, update_type_raw=""):
     """Derive lifecycle bucket from Azure Updates API status/title signals."""
     status = (status_raw or "").lower()
@@ -1694,6 +1728,7 @@ def build_azure_retirement_calendar(articles, max_items=120):
         dedupe_key = _azure_retirement_identity_key(title, link)
         update_id = _extract_azure_update_id_from_url(link)
         update_id_key = f"update-id:{update_id}" if update_id else ""
+        runtime_alias_key = _azure_runtime_retirement_alias_key(title, retirement_date)
         if dedupe_key.endswith(":"):
             dedupe_key = f"fallback:{_normalize_for_match(title)}"
 
@@ -1709,6 +1744,8 @@ def build_azure_retirement_calendar(articles, max_items=120):
         existing = events_by_key.get(dedupe_key)
         if not existing and update_id_key:
             existing = events_by_key.get(update_id_key)
+        if not existing and runtime_alias_key:
+            existing = events_by_key.get(runtime_alias_key)
         if existing:
             existing["sourceReports"].append(source_report)
             if article.get("published", "") > existing.get("published", ""):
@@ -1750,6 +1787,8 @@ def build_azure_retirement_calendar(articles, max_items=120):
             events_by_key[dedupe_key] = existing
             if update_id_key:
                 events_by_key[update_id_key] = existing
+            if runtime_alias_key:
+                events_by_key[runtime_alias_key] = existing
             continue
 
         event = {
@@ -1767,6 +1806,8 @@ def build_azure_retirement_calendar(articles, max_items=120):
         events_by_key[dedupe_key] = event
         if update_id_key:
             events_by_key[update_id_key] = event
+        if runtime_alias_key:
+            events_by_key[runtime_alias_key] = event
 
     events = []
     seen_ids = set()

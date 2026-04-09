@@ -1182,6 +1182,59 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(events[0]["retirementDate"], current_month)
         self.assertEqual(events[0]["datePrecision"], "month")
 
+    def test_build_azure_retirement_calendar_dedupes_runtime_alias_wording(self):
+        articles = [
+            {
+                "title": "Retirement: App service - Azure Functions - Node.js 20",
+                "link": "https://azure.microsoft.com/updates/?id=502957",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-04-30",
+            },
+            {
+                "title": "Retirement: App service - Support for Node 20 LTS",
+                "link": "https://azure.microsoft.com/updates/?id=485072",
+                "published": "2026-04-10T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-04-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["sourceCount"], 2)
+
+    def test_build_azure_retirement_calendar_keeps_distinct_runtime_versions(self):
+        articles = [
+            {
+                "title": "Retirement: App service - Support for Node 20 LTS",
+                "link": "https://azure.microsoft.com/updates/?id=485072",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-04-30",
+            },
+            {
+                "title": "Retirement: App service - Support for Node 22 LTS",
+                "link": "https://azure.microsoft.com/updates/?id=999999",
+                "published": "2026-04-10T08:00:00+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-04-30",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 2)
+
     def test_build_retirement_window_buckets_assigns_rolling_windows(self):
         events = [
             {
