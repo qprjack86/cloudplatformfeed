@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Microsoft Cloud Platform Feed</title>
-    <link>https://cloudplatformfeed.kailice.uk</link>
+    <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
     <lastBuildDate>Fri, 10 Apr 2026 15:41:18 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>

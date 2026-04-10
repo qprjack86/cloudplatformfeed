@@ -45,15 +45,18 @@ end
 
 canonical_host = site_config["canonicalHost"]
 canonical_url = site_config["canonicalUrl"]
+configured_cname = cname_text.strip
 csp_match = headers_text.match(/Content-Security-Policy:\s*(.+)$/)
 csp_policy = csp_match && csp_match[1]
 assert(canonical_host.is_a?(String) && !canonical_host.empty?, "config/site.json canonicalHost must be a non-empty string")
 assert(canonical_url == "https://#{canonical_host}", "config/site.json canonicalUrl must match canonicalHost")
+assert(configured_cname == canonical_host, "CNAME must match config/site.json canonicalHost")
 assert(csp_policy.is_a?(String) && !csp_policy.empty?, "_headers must include a Content-Security-Policy value")
 assert(index_html.include?("content=\"#{canonical_url}\""), "index.html og:url must match config/site.json canonicalUrl")
 assert(index_html.include?("content=\"#{canonical_url}/og-image.png\""), "index.html og:image must match config/site.json canonicalUrl")
 assert(readme_text.include?("[#{canonical_host}](#{canonical_url})"), "README live-site link must match config/site.json canonical URL")
 assert(readme_text.include?("`#{canonical_url}`"), "README setup URL must match config/site.json canonical URL")
+assert(!readme_text.include?("cloudplatformfeed.kailice.uk"), "README must not reference legacy domain")
 assert(feed_xml.include?("<link>#{canonical_url}</link>"), "data/feed.xml channel link must match config/site.json canonicalUrl")
 assert(fetch_script.include?("load_site_config"), "fetch_feeds.py must load canonical URL from config/site.json")
 assert(!fetch_script.include?(canonical_host), "fetch_feeds.py should not hardcode canonical host")
@@ -66,6 +69,18 @@ assert(
   index_html.match?(%r{<script\s+src="js/app\.js(?:\?[^"]+)?"\s+defer></script>}),
   "index.html does not load js/app.js with defer"
 )
+assert(
+  index_html.match?(%r{<script\s+src="js/modules/state-store\.js(?:\?[^\"]+)?"\s+defer></script>}),
+  "index.html does not load js/modules/state-store.js with defer"
+)
+assert(
+  index_html.match?(%r{<script\s+src="js/modules/checksum-watcher\.js(?:\?[^\"]+)?"\s+defer></script>}),
+  "index.html does not load js/modules/checksum-watcher.js with defer"
+)
+assert(
+  index_html.match?(%r{<script\s+src="js/modules/filter-helpers\.js(?:\?[^\"]+)?"\s+defer></script>}),
+  "index.html does not load js/modules/filter-helpers.js with defer"
+)
 assert(!index_html.include?("js/clarity.js"), "index.html should not reference removed js/clarity.js")
 assert(index_html.include?("Content-Security-Policy"), "index.html is missing a Content-Security-Policy")
 assert(index_html.include?("style-src 'self'"), "index.html CSP should restrict styles to self")
@@ -74,6 +89,10 @@ assert(!index_html.include?("script-src 'self' 'unsafe-inline'"), "index.html CS
 assert(!index_html.include?("www.clarity.ms/tag/\"+i"), "index.html should not inline the Clarity bootstrap")
 assert(index_html.include?("id=\"articles-grid\""), "index.html is missing articles grid container")
 assert(index_html.include?("id=\"filter-pills\""), "index.html is missing filter pills container")
+assert(index_html.include?("id=\"category-selection-summary\""), "index.html is missing category selection summary")
+assert(index_html.include?("id=\"clear-category-selection\""), "index.html is missing clear category selection button")
+assert(app_js.include?("Ctrl/Cmd+click to multi-select categories"), "js/app.js is missing multi-select category affordance")
+assert(app_js.include?("updateCategorySelectionSummary"), "js/app.js is missing category selection summary logic")
 assert(headers_text.include?("Content-Security-Policy:"), "_headers must include Content-Security-Policy")
 assert(headers_text.include?("default-src 'self'"), "_headers CSP must include default-src 'self'")
 assert(headers_text.include?("Strict-Transport-Security:"), "_headers must include Strict-Transport-Security")

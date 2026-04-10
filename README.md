@@ -3,7 +3,7 @@
 
 A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It collects articles from Azure and Microsoft 365 blogs and presents them in a clean, searchable interface covering the last 30 days.
 
-**Live site:** [cloudplatformfeed.kailice.uk](https://cloudplatformfeed.kailice.uk)
+**Live site:** [cpfeed.cloud](https://cpfeed.cloud)
 
 ## Features
 
@@ -13,15 +13,20 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 - 🎬 **Latest update videos** — Shows the latest Azure and Microsoft 365 update videos in the UI
 - 🤖 **AI-generated summaries** — Summaries for both Azure and M365 feeds (if configured)
 - 🔍 **Search & filter** — Find articles by keyword, blog category, product area, or date range
+- 🧩 **Multi-category filtering** — Ctrl/Cmd+click category pills to combine filters, persisted per source tab
 - ⭐ **Bookmarks** — Save articles for later (stored locally per browser)
 - 🌙 **Dark mode** — Easy on the eyes
 - 📱 **Responsive** — Works on desktop, tablet, and mobile
 - 🧭 **Tabbed navigation** — Switch between Azure and M365 feeds with a single click
-- 🛠️ **Debug & schema tools** — Scripts for DeltaPulse MCP debugging, schema discovery, and deduplication logic
-- 🤖 **Auto-updated** — GitHub Actions fetches new articles and M365 data three times a day at 8 AM, 12 PM, and 4 PM UTC
+- 🔁 **Auto-refresh on new data** — Lightweight checksum polling refreshes the UI when published artifacts change
+- 🛠️ **Debug, validation, and schema tools** — Scripts for DeltaPulse MCP debugging, schema discovery, deduplication, feed validation, and category management
+- 🧪 **Schema validation guardrails** — Feed schema validators and publish-time validation checks reduce bad publishes
+- 🧰 **Config-driven category mappings** — Azure/M365 category mappings now live in `config/site.json` with helper CLI management
+- ♻️ **M365 MCP resilience** — Retry/backoff and local cache fallback protect M365 output during transient endpoint failures
+- 🤖 **Auto-updated** — GitHub Actions fetches new articles and M365 data three times a day at 7 AM, 11 AM, and 3 PM UTC
 - 📅 **Last 30 days** — Keeps only recent articles for a lean, fast experience
 - 🔒 **Hardened publish surface** — AI summary failures expose only safe status codes, not raw Azure OpenAI diagnostics
-- 🛡️ **Browser hardening** — CSP and referrer policy limit third-party script and data exposure while preserving Microsoft Clarity
+- 🛡️ **Browser hardening** — CSP and referrer policy limit third-party script and data exposure
 
 ## Blog Sources
 
@@ -30,12 +35,14 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 | **Azure** | Compute, Data & AI, Infrastructure, Security, Architecture, Apps & Platform, Operations, Community, Developer Tools, and specialized Azure product blogs |
 | **Microsoft 365** | Microsoft 365 apps, Teams, SharePoint, OneDrive, Exchange, Microsoft Viva, Microsoft 365 Defender, Purview, Intune, Copilot, and related admin/community blogs |
 
-## New & Updated Scripts
+## Scripts
 
 - `scripts/fetch_m365_data.py` — Fetches Microsoft 365 Roadmap and Message Center items from DeltaPulse MCP, writes to `data/m365_data.json` and `data/m365_checksums.json`.
 - `scripts/debug_mcp.py` — Debugs DeltaPulse MCP tool calls, prints payloads and responses.
 - `scripts/discover_deltapulse_schema.py` — Discovers available MCP tools and schemas.
 - `scripts/debug_dedup.py` — Tests and debugs M365 deduplication logic.
+- `scripts/validate_feeds.py` — Validates generated `feeds.json` and `m365_data.json` shape and key fields.
+- `scripts/manage_categories.py` — Lists/adds/removes Azure and M365 category mapping keywords in `config/site.json`.
 
 ## Data Files
 
@@ -46,6 +53,8 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 ## UI/UX Improvements
 
 - Tabbed navigation for Azure/M365 feeds
+- Multi-select category pills with per-source selection persistence
+- Frontend modules for state persistence, checksum watching, and filter helpers
 - Product category mapping and filtering for M365 (including complete mapping for Entra, OneDrive, Defender, and Windows)
 - AI-generated summaries for both Azure and M365 (calculating precise 7-day windows anchored to the most recent matching article)
 - Video panels for latest Azure and M365 update videos
@@ -96,7 +105,7 @@ Go to **Actions → Fetch Cloud Platform Feeds → Run workflow** to populate th
 
 ### 5. Visit your site
 
-Your feed will be live at `https://cloudplatformfeed.kailice.uk`
+Your feed will be live at `https://cpfeed.cloud`
 
 ## Local Development
 
@@ -124,7 +133,13 @@ To test the feed fetchers locally:
   python scripts/fetch_m365_data.py
   ```
 
-4. **Run tests:**
+4. **Validate generated artifacts (recommended):**
+
+  ```bash
+  python scripts/validate_feeds.py
+  ```
+
+5. **Run tests:**
 
   ```bash
   python -m unittest discover -s tests -p "test_*.py"
@@ -146,7 +161,7 @@ To test the feed fetchers locally:
 
 - Canonical host/URL is centralized in `config/site.json`.
 - Keep `canonicalHost` and `canonicalUrl` in sync (`https://<host>`).
-- Smoke checks enforce consistency across `CNAME`, `index.html` metadata, `README.md`, and generated RSS output.
+- Smoke checks enforce consistency across `config/site.json`, `CNAME`, `index.html` metadata, `README.md`, and generated RSS output.
 
 ### Publish fail-safe (maintainers)
 
@@ -180,7 +195,7 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## How It Works
 
-1. **GitHub Actions** runs at 8 AM, 12 PM, and 4 PM UTC each day (or manually)
+1. **GitHub Actions** runs at 7 AM, 11 AM, and 3 PM UTC each day (or manually)
 2. **Python scripts** fetch RSS feeds from Azure, Microsoft 365, and Microsoft developer blogs plus Azure Updates using allowlisted HTTPS requests with explicit timeouts and retries
 3. Articles from the last 30 days are deduplicated with canonical URL normalization, sorted, and saved to `data/feeds.json` (Azure) and `data/m365_data.json` (M365)
 4. The commit triggers **GitHub Pages** to redeploy
