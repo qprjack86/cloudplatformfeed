@@ -13,10 +13,12 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 - 🎬 **Latest update videos** — Shows the latest Azure and Microsoft 365 update videos in the UI
 - 🤖 **AI-generated summaries** — Summaries for both Azure and M365 feeds (if configured)
 - 🔍 **Search & filter** — Find articles by keyword, blog category, product area, or date range
+- 🧩 **Multi-category filtering** — Ctrl/Cmd+click category pills to combine filters, persisted per source tab
 - ⭐ **Bookmarks** — Save articles for later (stored locally per browser)
 - 🌙 **Dark mode** — Easy on the eyes
 - 📱 **Responsive** — Works on desktop, tablet, and mobile
 - 🧭 **Tabbed navigation** — Switch between Azure and M365 feeds with a single click
+- 🔁 **Auto-refresh on new data** — Lightweight checksum polling refreshes the UI when published artifacts change
 - 🛠️ **Debug, validation, and schema tools** — Scripts for DeltaPulse MCP debugging, schema discovery, deduplication, feed validation, and category management
 - 🧪 **Schema validation guardrails** — Feed schema validators and publish-time validation checks reduce bad publishes
 - 🧰 **Config-driven category mappings** — Azure/M365 category mappings now live in `config/site.json` with helper CLI management
@@ -51,6 +53,8 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 ## UI/UX Improvements
 
 - Tabbed navigation for Azure/M365 feeds
+- Multi-select category pills with per-source selection persistence
+- Frontend modules for state persistence, checksum watching, and filter helpers
 - Product category mapping and filtering for M365 (including complete mapping for Entra, OneDrive, Defender, and Windows)
 - AI-generated summaries for both Azure and M365 (calculating precise 7-day windows anchored to the most recent matching article)
 - Video panels for latest Azure and M365 update videos
