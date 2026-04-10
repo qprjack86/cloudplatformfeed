@@ -61,43 +61,61 @@ TRACKING_QUERY_KEYS = {
 }
 
 # M365 Product category mapping for high-level organization
-M365_PRODUCT_CATEGORIES = {
-    "Collaboration": [
-        "Teams", "SharePoint Online", "Outlook", "Exchange Online", "OneDrive for Business",
-        "Yammer", "Skype for Business", "Stream", "OneDrive"
-    ],
-    "Productivity": [
-        "Word", "Excel", "PowerPoint", "OneNote", "Access", "Publisher", "Project", "Visio",
-        "Microsoft 365 apps", "Microsoft 365 suite"
-    ],
-    "AI & Automation": [
-        "Microsoft Copilot", "Copilot Pro", "Power Automate", "Copilot in Teams", 
-        "Copilot for Microsoft 365", "Copilot Studio", "Microsoft Foundry"
-    ],
-    "Data & Analytics": [
-        "Power BI", "Power Query", "Analysis Services", "Data Factory", "Microsoft Fabric",
-        "Excel Services", "Dataverse"
-    ],
-    "Security & Compliance": [
-        "Microsoft 365 Defender", "Azure Information Protection", "Advanced Threat Protection",
-        "Security & Compliance Center", "Insider Risk Management", "Microsoft Purview",
-        "Microsoft Defender XDR"
-    ],
-    "Administration": [
-        "Microsoft 365 Admin Center", "Entra ID", "Active Directory", "Intune",
-        "Endpoint Manager", "Compliance Manager", "Microsoft 365 Lighthouse",
-        "Entra", "Windows", "Windows 365"
-    ],
-    "Business Applications": [
-        "Dynamics 365 Apps", "Dynamics 365 Sales", "Dynamics 365 Customer Service",
-        "Dynamics 365 Finance", "Dynamics 365 Supply Chain", "Project Operations",
-        "Business Central", "Finance and Operations Apps", "Power Apps", "Power Platform"
-    ],
-    "Other": { # Fallback
-        "Bookings", "Forms", "Lists", "Planner", "Shifts", "To Do", "Viva",
-        "Viva Engage", "Viva Topics", "Viva Learning", "Viva Goals"
+# (Improvement #4: Configurable Category Mappings - loaded from config/site.json)
+def _load_m365_category_mappings(config_path=SITE_CONFIG_PATH):
+    """Load M365 category mappings from config, with fallback to defaults."""
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            mappings = config.get("categoryMappings", {}).get("m365", {})
+            if mappings:
+                print(f"✅ Loaded M365 category mappings from config ({len(mappings)} categories)")
+                return mappings
+    except Exception as e:
+        print(f"⚠️  Could not load M365 mappings from config: {e}")
+    
+    # Fallback to built-in defaults
+    print("✅ Using built-in M365 category mappings")
+    return {
+        "Collaboration": [
+            "Teams", "SharePoint Online", "Outlook", "Exchange Online", "OneDrive for Business",
+            "Yammer", "Skype for Business", "Stream", "OneDrive"
+        ],
+        "Productivity": [
+            "Word", "Excel", "PowerPoint", "OneNote", "Access", "Publisher", "Project", "Visio",
+            "Microsoft 365 apps", "Microsoft 365 suite"
+        ],
+        "AI & Automation": [
+            "Microsoft Copilot", "Copilot Pro", "Power Automate", "Copilot in Teams", 
+            "Copilot for Microsoft 365", "Copilot Studio", "Microsoft Foundry"
+        ],
+        "Data & Analytics": [
+            "Power BI", "Power Query", "Analysis Services", "Data Factory", "Microsoft Fabric",
+            "Excel Services", "Dataverse"
+        ],
+        "Security & Compliance": [
+            "Microsoft 365 Defender", "Azure Information Protection", "Advanced Threat Protection",
+            "Security & Compliance Center", "Insider Risk Management", "Microsoft Purview",
+            "Microsoft Defender XDR"
+        ],
+        "Administration": [
+            "Microsoft 365 Admin Center", "Entra ID", "Active Directory", "Intune",
+            "Endpoint Manager", "Compliance Manager", "Microsoft 365 Lighthouse",
+            "Entra", "Windows", "Windows 365"
+        ],
+        "Business Applications": [
+            "Dynamics 365 Apps", "Dynamics 365 Sales", "Dynamics 365 Customer Service",
+            "Dynamics 365 Finance", "Dynamics 365 Supply Chain", "Project Operations",
+            "Business Central", "Finance and Operations Apps", "Power Apps", "Power Platform"
+        ],
+        "Other": [
+            "Bookings", "Forms", "Lists", "Planner", "Shifts", "To Do", "Viva",
+            "Viva Engage", "Viva Topics", "Viva Learning", "Viva Goals"
+        ]
     }
-}
+
+
+M365_PRODUCT_CATEGORIES = _load_m365_category_mappings()
 
 RETIREMENT_MONTH_PATTERN = (
     r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|"
@@ -157,6 +175,40 @@ SITE_CONFIG = load_site_config()
 CANONICAL_SITE_HOST = SITE_CONFIG["canonicalHost"]
 CANONICAL_SITE_URL = SITE_CONFIG["canonicalUrl"]
 
+# M365 cache for fallback (Improvement #3: Resilient MCP Layer)
+M365_CACHE_PATH = REPO_ROOT / "data" / ".m365_cache.json"
+
+
+def load_m365_cache():
+    """Load last successful M365 response from cache for fallback."""
+    if not M365_CACHE_PATH.exists():
+        return None
+    try:
+        with open(M365_CACHE_PATH, 'r', encoding='utf-8') as f:
+            cache_data = json.load(f)
+            cached_at = cache_data.get("cachedAt", "unknown")
+            print(f"⚠️  Loading cached M365 data (cached at {cached_at})")
+            return cache_data
+    except Exception as e:
+        print(f"⚠️  Could not load M365 cache: {e}")
+        return None
+
+
+def save_m365_cache(data):
+    """Save successful M365 response to cache for fallback."""
+    try:
+        M365_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        cache_data = {
+            "items": data,
+            "cachedAt": datetime.now(timezone.utc).isoformat()
+        }
+        with open(M365_CACHE_PATH, 'w', encoding='utf-8') as f:
+            json.dump(cache_data, f, ensure_ascii=False)
+        print(f"💾 M365 cache updated: {M365_CACHE_PATH}")
+    except Exception as e:
+        print(f"⚠️  Could not save M365 cache: {e}")
+
+
 
 def create_http_session():
     """Create HTTP session with retry logic."""
@@ -169,65 +221,84 @@ def create_http_session():
     )
 
 
-def call_mcp_tool(session: requests.Session, tool_name: str, arguments: dict = None):
-    """Call a DeltaPulse MCP tool."""
-    payload = {
-        "jsonrpc": "2.0",
-        "method": "tools/call",
-        "params": {
-            "name": tool_name,
-            "arguments": arguments or {}
-        },
-        "id": 1,
-    }
+def call_mcp_tool(session: requests.Session, tool_name: str, arguments: dict = None, max_retries=3):
+    """Call a DeltaPulse MCP tool with retry logic and graceful error handling.
     
-    try:
-        response = session.post(
-            DELTAPULSE_MCP_ENDPOINT,
-            json=payload,
-            timeout=MCP_REQUEST_TIMEOUT,
-        )
-        response.raise_for_status()
-        result = response.json()
-        
-        if "error" in result:
-            error = result["error"]
-            print(f"MCP tool error calling {tool_name}: {error.get('message', 'Unknown error')}")
-            return []
-        
-        # Extract items from nested MCP response structure
-        # Structure: result.content[0].text = JSON string
-        #           → parse → content[0].text = JSON string  
-        #           → parse → items array
-        content = result.get("result", {}).get("content", [])
-        if not content:
-            return []
-        
-        # First level: content[0].text
-        outer_text = content[0].get("text", "{}")
+    (Improvement #3: Resilient MCP Layer)
+    """
+    import time
+    
+    for attempt in range(max_retries):
         try:
-            outer_json = json.loads(outer_text)
-            inner_content = outer_json.get("content", [])
+            payload = {
+                "jsonrpc": "2.0",
+                "method": "tools/call",
+                "params": {
+                    "name": tool_name,
+                    "arguments": arguments or {}
+                },
+                "id": 1,
+            }
             
-            if not inner_content or not isinstance(inner_content, list):
+            response = session.post(
+                DELTAPULSE_MCP_ENDPOINT,
+                json=payload,
+                timeout=MCP_REQUEST_TIMEOUT,
+            )
+            response.raise_for_status()
+            result = response.json()
+            
+            if "error" in result:
+                error = result["error"]
+                error_msg = error.get('message', 'Unknown error')
+                print(f"❌ MCP tool error calling {tool_name}: {error_msg}")
+                
+                if attempt < max_retries - 1:
+                    backoff = 2 ** attempt  # Exponential backoff: 1s, 2s, 4s
+                    print(f"   Retrying in {backoff}s... (attempt {attempt + 1}/{max_retries})")
+                    time.sleep(backoff)
+                    continue
+                else:
+                    return []
+            
+            # Extract items from nested MCP response structure
+            content = result.get("result", {}).get("content", [])
+            if not content:
                 return []
             
-            # Second level: content[0].text
-            inner_text = inner_content[0].get("text", "{}") if inner_content else "{}"
-            inner_json = json.loads(inner_text)
-            
-            return inner_json.get("items", [])
-        except (json.JSONDecodeError, KeyError, TypeError, IndexError) as e:
-            print(f"Error parsing MCP response for {tool_name}: {e}")
-            return []
-    except (
-        requests.exceptions.RequestException,
-        json.JSONDecodeError,
-        TypeError,
-        ValueError,
-    ) as exc:
-        print(f"Error calling MCP tool {tool_name}: {exc}")
-        return []
+            outer_text = content[0].get("text", "{}")
+            try:
+                outer_json = json.loads(outer_text)
+                inner_content = outer_json.get("content", [])
+                
+                if not inner_content or not isinstance(inner_content, list):
+                    return []
+                
+                inner_text = inner_content[0].get("text", "{}") if inner_content else "{}"
+                inner_json = json.loads(inner_text)
+                
+                print(f"✅ MCP tool {tool_name} succeeded (attempt {attempt + 1})")
+                return inner_json.get("items", [])
+            except (json.JSONDecodeError, KeyError, TypeError, IndexError) as e:
+                print(f"❌ Error parsing MCP response for {tool_name}: {e}")
+                if attempt < max_retries - 1:
+                    backoff = 2 ** attempt
+                    print(f"   Retrying in {backoff}s... (attempt {attempt + 1}/{max_retries})")
+                    time.sleep(backoff)
+                    continue
+                return []
+                
+        except requests.exceptions.RequestException as exc:
+            print(f"❌ Network error calling MCP tool {tool_name}: {exc}")
+            if attempt < max_retries - 1:
+                backoff = 2 ** attempt
+                print(f"   Retrying in {backoff}s... (attempt {attempt + 1}/{max_retries})")
+                time.sleep(backoff)
+                continue
+            else:
+                return []
+    
+    return []
 
 
 def call_mcp_fetch_metadata(session: requests.Session, item_id: str) -> dict:
@@ -916,62 +987,87 @@ def _enrich_m365_item(session: requests.Session, item: dict) -> dict:
 
 
 def fetch_m365_items(session: requests.Session) -> list:
-    """Fetch new and updated M365 items from DeltaPulse MCP."""
+    """Fetch new and updated M365 items from DeltaPulse MCP with cache fallback.
+    
+    (Improvement #3: Resilient MCP Layer & Graceful Degradation)
+    """
     print("Fetching M365 items from DeltaPulse MCP...")
     
-    all_items = []
+    try:
+        all_items = []
+        
+        # Fetch new items from last 7 days
+        print("  - Fetching new items (last 7 days)...")
+        new_items = call_mcp_tool(session, "list_new_items", {
+            "limit": 100,
+            "dateRange": "last_7_days",
+        })
+        all_items.extend(new_items)
+        print(f"    Found {len(new_items)} new items")
+        
+        # Fetch updated items from last 7 days
+        print("  - Fetching updated items (last 7 days)...")
+        updated_items = call_mcp_tool(session, "list_updated_items", {
+            "limit": 100,
+            "dateRange": "last_7_days",
+        })
+        all_items.extend(updated_items)
+        print(f"    Found {len(updated_items)} updated items")
     
-    # Fetch new items from last 7 days
-    print("  - Fetching new items (last 7 days)...")
-    new_items = call_mcp_tool(session, "list_new_items", {
-        "limit": 100,
-        "dateRange": "last_7_days",
-    })
-    all_items.extend(new_items)
-    print(f"    Found {len(new_items)} new items")
-    
-    # Fetch updated items from last 7 days
-    print("  - Fetching updated items (last 7 days)...")
-    updated_items = call_mcp_tool(session, "list_updated_items", {
-        "limit": 100,
-        "dateRange": "last_7_days",
-    })
-    all_items.extend(updated_items)
-    print(f"    Found {len(updated_items)} updated items")
+        # If both fetches returned nothing, try cache fallback
+        if not all_items:
+            print("⚠️  MCP fetch returned no items; attempting cache fallback...")
+            cache = load_m365_cache()
+            if cache and cache.get("items"):
+                return cache["items"]
+            else:
+                print("❌ No M365 data available (cache empty/missing)")
+                return []
 
-    # Enrich each unique item with metadata from fetch(id), which contains
-    # release timeline fields (for example months / releaseDate variants).
-    by_key = {}
-    for item in all_items:
-        source = str(item.get("source", "")).strip()
-        item_id = str(item.get("id", "")).strip()
-        key = f"{source}:{item_id}" if source and item_id else ""
-        if key and key not in by_key:
-            by_key[key] = item
+        # Enrich each unique item with metadata from fetch(id)
+        by_key = {}
+        for item in all_items:
+            source = str(item.get("source", "")).strip()
+            item_id = str(item.get("id", "")).strip()
+            key = f"{source}:{item_id}" if source and item_id else ""
+            if key and key not in by_key:
+                by_key[key] = item
 
-    print(f"  - Enriching metadata for {len(by_key)} unique items...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=MCP_MAX_WORKERS) as executor:
-        future_to_item = {
-            executor.submit(_enrich_m365_item, session, item): item
-            for item in by_key.values()
-        }
-        for future in concurrent.futures.as_completed(future_to_item):
-            item = future_to_item[future]
-            try:
-                patch = future.result()
-            except (
-                requests.exceptions.RequestException,
-                json.JSONDecodeError,
-                TypeError,
-                ValueError,
-            ) as exc:
-                item_id = str(item.get("id", "")).strip() or "unknown"
-                print(f"  Warning: enrichment failed for {item_id}: {exc}")
-                continue
-            _apply_patch_if_missing(item, patch)
-    
-    print(f"  - Total raw items: {len(all_items)}")
-    return all_items
+        print(f"  - Enriching metadata for {len(by_key)} unique items...")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=MCP_MAX_WORKERS) as executor:
+            future_to_item = {
+                executor.submit(_enrich_m365_item, session, item): item
+                for item in by_key.values()
+            }
+            for future in concurrent.futures.as_completed(future_to_item):
+                item = future_to_item[future]
+                try:
+                    patch = future.result()
+                except (
+                    requests.exceptions.RequestException,
+                    json.JSONDecodeError,
+                    TypeError,
+                    ValueError,
+                ) as exc:
+                    item_id = str(item.get("id", "")).strip() or "unknown"
+                    print(f"  Warning: enrichment failed for {item_id}: {exc}")
+                    continue
+                _apply_patch_if_missing(item, patch)
+        
+        print(f"  - Total raw items: {len(all_items)}")
+        
+        # Save successful fetch to cache
+        save_m365_cache(all_items)
+        
+        return all_items
+        
+    except Exception as e:
+        print(f"❌ Error fetching M365 items: {e}")
+        # Try cache fallback on any error
+        cache = load_m365_cache()
+        if cache and cache.get("items"):
+            return cache["items"]
+        return []
 
 
 def _extract_youtube_video_id(url: str) -> str:

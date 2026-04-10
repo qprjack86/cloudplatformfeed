@@ -262,3 +262,67 @@ def evaluate_publish_failsafe(new_count, previous_count, min_articles=80, min_ra
         f"relative_trigger={relative_trigger}, absolute_trigger={absolute_trigger}"
     )
     return triggered, details
+
+
+def validate_article_schema(article, required_fields=None):
+    """Validate article against required schema with sensible defaults.
+    
+    Returns (is_valid, error_message_or_empty_string).
+    Sets default values for lifecycleState and datePrecision if missing.
+    """
+    if required_fields is None:
+        required_fields = ["title", "link", "published", "summary", "blog", "blogId", "author"]
+    
+    # Check required fields
+    errors = []
+    for field in required_fields:
+        if field not in article or not str(article.get(field, "")).strip():
+            errors.append(f"Missing or empty required field: {field}")
+    
+    # Set defaults for optional fields
+    if "lifecycleState" not in article or not article.get("lifecycleState"):
+        article["lifecycleState"] = "ga"
+    
+    if "datePrecision" not in article or not article.get("datePrecision"):
+        article["datePrecision"] = "day"
+    
+    if errors:
+        return False, "; ".join(errors)
+    
+    return True, ""
+
+
+def validate_feed_data(articles, min_coverage_percent=85):
+    """Validate entire feed for schema compliance and data quality.
+    
+    Returns (is_valid, summary_message).
+    """
+    if not articles:
+        return False, "No articles to validate"
+    
+    total = len(articles)
+    valid_count = 0
+    validation_issues = []
+    
+    for idx, article in enumerate(articles):
+        is_valid, msg = validate_article_schema(article)
+        if is_valid:
+            valid_count += 1
+        else:
+            # Only record first 5 issues to avoid excessive logging
+            if len(validation_issues) < 5:
+                validation_issues.append(f"Article {idx}: {msg}")
+    
+    coverage = (valid_count / total) * 100
+    
+    if coverage < min_coverage_percent:
+        return False, f"Coverage {coverage:.1f}% below threshold {min_coverage_percent}%"
+    
+    summary = f"Validation passed: {valid_count}/{total} articles valid ({coverage:.1f}%)"
+    
+    # Log issues if any (but validation still passes if coverage is sufficient)
+    if validation_issues:
+        for issue in validation_issues:
+            print(f"  ⚠️  {issue}")
+    
+    return True, summary

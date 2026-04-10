@@ -1,4 +1,133 @@
 {
   "canonicalHost": "cloudplatformfeed.kailice.uk",
-  "canonicalUrl": "https://cloudplatformfeed.kailice.uk"
+  "canonicalUrl": "https://cloudplatformfeed.kailice.uk",
+  "validation": {
+    "requiredArticleFields": [
+      "title",
+      "link",
+      "published",
+      "summary",
+      "blog",
+      "blogId",
+      "author"
+    ],
+    "optionalArticleFieldsWithDefaults": {
+      "lifecycleState": "ga",
+      "datePrecision": "day"
+    },
+    "minArticleCoveragePercent": 85
+  },
+  "deduplication": {
+    "keepRetirementDatesEvenIfDuplicate": true,
+    "titleNormalizationThreshold": 85,
+    "urlNormalizationStrict": true
+  },
+  "categoryMappings": {
+    "azure": {
+      "Compute": [
+        "azurecompute",
+        "container",
+        "virtual machine",
+        "aks",
+        "aspire"
+      ],
+      "Data & AI": [
+        "azure-databricks",
+        "data",
+        "machine learning",
+        "cognitive",
+        "analytics"
+      ],
+      "Infrastructure": [
+        "azureinfrastructureblog",
+        "network",
+        "storage",
+        "database"
+      ],
+      "Security": [
+        "microsoftsentinelblog",
+        "defender",
+        "security",
+        "compliance",
+        "sentinel"
+      ],
+      "Management & Governance": [
+        "azuregovernanceandmanagementblog",
+        "monitor",
+        "policy",
+        "management"
+      ],
+      "Integration": [
+        "integrationsonazureblog",
+        "messaging",
+        "integration"
+      ],
+      "Identity & Access": [
+        "identity",
+        "entra",
+        "active directory"
+      ],
+      "Migration": [
+        "azuremigrationblog",
+        "migrate"
+      ],
+      "Azure Stack": [
+        "azurestackblog"
+      ],
+      "Other": []
+    },
+    "m365": {
+      "Collaboration": [
+        "Teams",
+        "SharePoint",
+        "Outlook",
+        "Exchange",
+        "OneDrive",
+        "Yammer",
+        "Skype"
+      ],
+      "Productivity": [
+        "Word",
+        "Excel",
+        "PowerPoint",
+        "OneNote",
+        "Project",
+        "Visio",
+        "Access"
+      ],
+      "AI & Automation": [
+        "Copilot",
+        "Power Automate",
+        "AI",
+        "Foundry",
+        "GitHub Copilot"
+      ],
+      "Data & Analytics": [
+        "Power BI",
+        "Power Query",
+        "Fabric",
+        "Dataverse",
+        "Analysis"
+      ],
+      "Security & Compliance": [
+        "Defender",
+        "Purview",
+        "Insider Risk",
+        "ProtectionPolicy"
+      ],
+      "Administration": [
+        "Admin Center",
+        "Entra",
+        "Intune",
+        "Windows",
+        "Endpoint"
+      ],
+      "Business Applications": [
+        "Dynamics 365",
+        "Power Apps",
+        "Business Central"
+      ],
+      "Other": []
+    }
+  }
 }

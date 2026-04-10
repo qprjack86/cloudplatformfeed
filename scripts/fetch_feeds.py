@@ -32,6 +32,8 @@ from feed_common import (
     normalize_host as shared_normalize_host,
     resolve_youtube_channel_id_from_seed as shared_resolve_youtube_channel_id_from_seed,
     select_best_youtube_video_entry as shared_select_best_youtube_video_entry,
+    validate_feed_data,
+    validate_article_schema,
 )
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -804,7 +806,7 @@ def _select_best_youtube_video_entry(entries, match_score_fn):
 
 
 def _entries_to_articles(entries, blog_name, blog_id):
-    """Convert feed entries into article payloads."""
+    """Convert feed entries into article payloads with lifecycle and precision fields."""
     articles = []
     for entry in entries:
         summary = clean_html(entry.get("summary", ""))
@@ -817,6 +819,8 @@ def _entries_to_articles(entries, blog_name, blog_id):
                 "blog": blog_name,
                 "blogId": blog_id,
                 "author": entry.get("author", "Microsoft"),
+                "lifecycleState": "ga",
+                "datePrecision": "day",
             }
         )
     return articles
@@ -2505,6 +2509,32 @@ def main():
     discarded = len(all_articles) - len(unique_articles)
     if discarded:
         print(f"Filtered out {discarded} duplicate/older-than-30-days articles")
+
+    # Validate feed data schema and quality (NEW: Improvement #1)
+    is_valid, validation_msg = validate_feed_data(main_feed_articles, min_coverage_percent=85)
+    if not is_valid:
+        print(f"❌ Feed validation failed: {validation_msg}")
+        print("Aborting publish to preserve data integrity")
+        # Skip publish but log metrics as failed
+        previous_count = load_previous_main_feed_article_count(output_path)
+        failsafe_triggered = True
+        failsafe_details = f"Feed validation failed: {validation_msg}"
+        run_metrics = build_run_metrics(
+            raw_article_count=raw_article_count,
+            unique_article_count=len(main_feed_articles),
+            previous_article_count=previous_count,
+            failsafe_triggered=True,
+            failsafe_details=failsafe_details,
+            published=False,
+            summary_payload=None,
+            savill_video=savill_video,
+            retirement_calendar=retirement_calendar,
+            retirement_buckets=retirement_buckets,
+        )
+        write_run_metrics(run_metrics)
+        return
+    
+    print(f"✅ {validation_msg}")
 
     output_path = os.path.join("data", "feeds.json")
     previous_count = load_previous_main_feed_article_count(output_path)
