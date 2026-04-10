@@ -30,7 +30,7 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@319994f95fa847cf3fb3cd3dbe89f6dcde9f178f # v1
+        uses: ruby/setup-ruby@e65c17d16e57e481586a6a5a0282698790062f92 # v1
         with:
           ruby-version: '3.3'
 
@@ -66,13 +66,13 @@ jobs:
           commit_sha=
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/feeds.json data/feed.xml data/m365_data.json data/m365_checksums.json data/checksums.json
+          git add data/feeds.json data/feed.xml data/m365_data.json data/m365_checksums.json data/checksums.json data/azure-retirements.ics
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             branch_name="${GITHUB_REF_NAME:-main}"
             git commit -m "📰 Update Azure blog feeds and M365 data - $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git pull --rebase origin "$branch_name"
+            git pull --rebase --autostash origin "$branch_name"
 
             push_attempt=1
             max_attempts=3
@@ -82,7 +82,7 @@ jobs:
                 exit 1
               fi
               push_attempt=$((push_attempt + 1))
-              git pull --rebase origin "$branch_name"
+              git pull --rebase --autostash origin "$branch_name"
             done
             committed=true
             commit_sha="$(git rev-parse HEAD)"
