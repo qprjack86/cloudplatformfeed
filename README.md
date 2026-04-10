@@ -3,7 +3,7 @@
 
 A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It collects articles from Azure and Microsoft 365 blogs and presents them in a clean, searchable interface covering the last 30 days.
 
-**Live site:** [cloudplatformfeed.kailice.uk](https://cloudplatformfeed.kailice.uk)
+**Live site:** [cpfeed.cloud](https://cpfeed.cloud)
 
 ## Features
 
