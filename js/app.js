@@ -415,6 +415,14 @@
     return lines.join("\n");
   }
 
+  function renderAnnouncementWindowHint() {
+    return (
+      '<p class="ai-summary-meta">' +
+      "Announcement window only: dates above reflect publish dates, and any retirement timing mentioned may be later." +
+      "</p>"
+    );
+  }
+
   function renderSummaryPanel() {
     if (!aiSummaryEl) return;
 
@@ -442,7 +450,7 @@
       } else if (m365Days.length === 1) {
         m365DateLabel = toM365Date(m365Days[0]);
       }
-      var m365Label = "Microsoft 365 Updates" + (m365DateLabel ? ": " + m365DateLabel : "");
+      var m365Label = "Microsoft 365 Announcement Summary" + (m365DateLabel ? ": " + m365DateLabel : "");
       var m365SummaryText = m365FeedData.summary || buildLifecycleSummaryMarkdown(m365FeedData.byLifecycle || {});
 
       aiSummaryEl.innerHTML =
@@ -479,10 +487,11 @@
       } else if (publishingDays.length === 1) {
         azureDateLabel = toLocalPublishingDate(publishingDays[0]);
       }
-      var summaryLabel = "Azure Updates" + (azureDateLabel ? ": " + azureDateLabel : "");
+      var summaryLabel = "Microsoft Azure Announcement Summary" + (azureDateLabel ? ": " + azureDateLabel : "");
 
       aiSummaryEl.innerHTML =
         "<h2>🤖 " + escapeHtml(summaryLabel) + "</h2>" +
+        renderAnnouncementWindowHint() +
         renderSummaryHtml(azureFeedData.summary);
       aiSummaryEl.classList.remove("is-unavailable");
       showElement(aiSummaryEl);
