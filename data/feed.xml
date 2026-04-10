@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 10 Apr 2026 09:04:26 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 11:53:40 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Securing multicloud (Azure, AWS & GCP) with Microsoft Defender for Cloud: Connector best practices]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/securing-multicloud-azure-aws-gcp-with-microsoft-defender-for/ba-p/4508563</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/securing-multicloud-azure-aws-gcp-with-microsoft-defender-for/ba-p/4508563</guid>
+      <description><![CDATA[Many organizations run workloads across multiple cloud providers and need to maintain a strong security posture while ensuring interoperability. Microsoft Defender for Cloud is a cloud-native application protection platform (CNAPP) solution that helps secure these environments by providing unified...]]></description>
+      <dc:creator><![CDATA[ckyalo]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 11:43:36 GMT</pubDate>
+      <category><![CDATA[Microsoft Defender for Cloud]]></category>
+    </item>
+    <item>
+      <title><![CDATA[PHP 8.5 is now available on Azure App Service for Linux]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/php-8-5-is-now-available-on-azure-app-service-for-linux/ba-p/4510254</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/php-8-5-is-now-available-on-azure-app-service-for-linux/ba-p/4510254</guid>
+      <description><![CDATA[PHP 8.5 is now available on Azure App Service for Linux across all public regions. You can create a new PHP 8.5 app through the Azure portal, automate it with the Azure CLI, or deploy using ARM/Bicep templates. PHP 8.5 brings several useful runtime improvements. It includes better diagnostics, with...]]></description>
+      <dc:creator><![CDATA[TulikaC]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 10:11:11 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[A simpler way to deploy your code to Azure App Service for Linux]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-simpler-way-to-deploy-your-code-to-azure-app-service-for-linux/ba-p/4510240</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-simpler-way-to-deploy-your-code-to-azure-app-service-for-linux/ba-p/4510240</guid>
+      <description><![CDATA[We’ve added a new deployment experience for Azure App Service for Linux that makes it easier to get your code running on your web app. To get started, go to the Kudu/SCM site for your app: <sitename>.scm.azurewebsites.net From there, open the new Deployments experience. You can now deploy your app...]]></description>
+      <dc:creator><![CDATA[TulikaC]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 09:48:40 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[The "IQ Layer": Microsoft’s Blueprint for the Agentic Enterprise]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-quot-iq-layer-quot-microsoft-s-blueprint-for-the-agentic/ba-p/4504421</link>
@@ -30,7 +57,7 @@
       <link>https://devblogs.microsoft.com/all-things-azure/putting-agentic-platform-engineering-to-the-test/</link>
       <guid>https://devblogs.microsoft.com/all-things-azure/putting-agentic-platform-engineering-to-the-test/</guid>
       <description><![CDATA[In Part 1 of this blog series set the stage for why platform engineering is being reshaped by agentic AI. (read it here) Basically we outline how instead of humans translating intent through layers of CLIs, SDKs, and bespoke workflows, capable agents can interpret natural-language goals and turn...]]></description>
-      <dc:creator><![CDATA[Arnaud Lheureux, davidwright, sdaniels]]></dc:creator>
+      <dc:creator><![CDATA[Arnaud Lheureux, davidwright, Suzanne Daniels]]></dc:creator>
       <pubDate>Fri, 10 Apr 2026 01:45:08 GMT</pubDate>
       <category><![CDATA[All Things Azure]]></category>
     </item>
@@ -429,33 +456,6 @@
       <dc:creator><![CDATA[JesseKopavi]]></dc:creator>
       <pubDate>Tue, 07 Apr 2026 18:41:22 GMT</pubDate>
       <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Disable HTTP proxy in AKS]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/557857/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/557857/</guid>
-      <description><![CDATA[Organizations that use HTTP proxies to control outbound traffic often need to change or remove those settings as network requirements evolve, which can be disruptive in running clusters. Azure Kubernetes Service allows administrators to disable HTTP proxy variables for nodes and pods while...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 17:45:41 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Disable HTTP proxy in AKS]]></title>
-      <link>https://azure.microsoft.com/updates?id=557857</link>
-      <guid>https://azure.microsoft.com/updates?id=557857</guid>
-      <description><![CDATA[Organizations that use HTTP proxies to control outbound traffic often need to change or remove those settings as network requirements evolve, which can be disruptive in running clusters. Azure Kubernetes Service allows administrators to disable HTTP proxyUpdate Type: GA, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 17:45:41 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure Functions now supports MCP resource triggers]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559981/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559981/</guid>
-      <description><![CDATA[Developers building MCP servers on Azure Functions can expose tools but not resources. Now, Azure Functions supports MCP resource triggers, enabling developers to expose resources directly from an Azure Functions–hosted Model Context Protocol (MCP) server. Resources can include static or dynamic...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 17:15:12 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
     </item>
   </channel>
 </rss>
