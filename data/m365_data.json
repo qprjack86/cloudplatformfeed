@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T11:53:46.482117+00:00",
+  "generatedAt": "2026-04-10T15:41:26.274319+00:00",
   "totalArticles": 60,
   "articles": [
     {
@@ -27,28 +27,6 @@
       "_normalized_url": "message_center:MC1275659"
     },
     {
-      "title": "SharePoint: Create charts on pages with AI",
-      "link": "https://deltapulse.app/item/560076",
-      "published": "2026-04-09T23:15:51.000Z",
-      "summary": "This feature empowers authors to create rich, interactive charts with AI in SharePoint when editing SharePoint pages. Authors can describe the chart they want to create in plain language within a chat on a SharePoint page.",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "560076",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:560076"
-    },
-    {
       "title": "Microsoft Purview: Insider Risk Management- IRM alerts in XDR",
       "link": "https://deltapulse.app/item/560075",
       "published": "2026-04-09T23:15:51.000Z",
@@ -71,14 +49,14 @@
       "_normalized_url": "roadmap:560075"
     },
     {
-      "title": "Microsoft Teams: Multi‑camera view support for GCC-H and DoD in Teams Rooms on Windows",
-      "link": "https://deltapulse.app/item/560049",
+      "title": "SharePoint: Create charts on pages with AI",
+      "link": "https://deltapulse.app/item/560076",
       "published": "2026-04-09T23:15:51.000Z",
-      "summary": "GCC-H and DoD cloud customers can now experience multi-camera views in Microsoft Teams Rooms on Windows, allowing remote participants to switch between multiple in-room camera feeds for improved visibility and engagement in larger spaces. Find camera requirements here. Available with Teams Rooms Pro.",
+      "summary": "This feature empowers authors to create rich, interactive charts with AI in SharePoint when editing SharePoint pages. Authors can describe the chart they want to create in plain language within a chat on a SharePoint page.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "560049",
+      "m365Id": "560076",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -90,7 +68,7 @@
       "m365RetirementDate": null,
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:560049"
+      "_normalized_url": "roadmap:560076"
     },
     {
       "title": "Microsoft Teams: Multi-stream IntelliFrame support for GCC-H and DoD in Teams Rooms on Windows",
@@ -113,6 +91,28 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:560052"
+    },
+    {
+      "title": "Microsoft Teams: Multi‑camera view support for GCC-H and DoD in Teams Rooms on Windows",
+      "link": "https://deltapulse.app/item/560049",
+      "published": "2026-04-09T23:15:51.000Z",
+      "summary": "GCC-H and DoD cloud customers can now experience multi-camera views in Microsoft Teams Rooms on Windows, allowing remote participants to switch between multiple in-room camera feeds for improved visibility and engagement in larger spaces. Find camera requirements here. Available with Teams Rooms Pro.",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "560049",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:560049"
     },
     {
       "title": "Microsoft 365 Copilot: Multimodal capture in Copilot Notebooks in the OneNote mobile app (iOS)",
@@ -262,14 +262,14 @@
       "_normalized_url": "message_center:MC1275311"
     },
     {
-      "title": "Outlook: Upgraded Video and Audio Player for iOS",
-      "link": "https://deltapulse.app/item/560056",
+      "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
+      "link": "https://deltapulse.app/item/558933",
       "published": "2026-04-08T23:00:03.000Z",
-      "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
+      "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "560056",
+      "m365Id": "558933",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -281,7 +281,7 @@
       "m365RetirementDate": null,
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:560056"
+      "_normalized_url": "roadmap:558933"
     },
     {
       "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
@@ -306,14 +306,14 @@
       "_normalized_url": "roadmap:558853"
     },
     {
-      "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
-      "link": "https://deltapulse.app/item/558933",
+      "title": "Outlook: Upgraded Video and Audio Player for iOS",
+      "link": "https://deltapulse.app/item/560056",
       "published": "2026-04-08T23:00:03.000Z",
-      "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
+      "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558933",
+      "m365Id": "560056",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -325,7 +325,7 @@
       "m365RetirementDate": null,
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558933"
+      "_normalized_url": "roadmap:560056"
     },
     {
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
@@ -592,6 +592,28 @@
       "_normalized_url": "roadmap:559990"
     },
     {
+      "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
+      "link": "https://deltapulse.app/item/558689",
+      "published": "2026-04-07T23:00:18.000Z",
+      "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558689",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:558689"
+    },
+    {
       "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
       "link": "https://deltapulse.app/item/559995",
       "published": "2026-04-07T23:00:18.000Z",
@@ -634,28 +656,6 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:559996"
-    },
-    {
-      "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
-      "link": "https://deltapulse.app/item/558689",
-      "published": "2026-04-07T23:00:18.000Z",
-      "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558689",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:558689"
     },
     {
       "title": "Power Apps - Microsoft 365 Copilot will be available in model-driven apps",
@@ -1109,28 +1109,6 @@
       "_normalized_url": "roadmap:558253"
     },
     {
-      "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
-      "link": "https://deltapulse.app/item/558538",
-      "published": "2026-03-30T16:15:57.000Z",
-      "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "558538",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "July 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:558538"
-    },
-    {
       "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
       "link": "https://deltapulse.app/item/553213",
       "published": "2026-03-30T16:15:57.000Z",
@@ -1151,6 +1129,28 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:553213"
+    },
+    {
+      "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
+      "link": "https://deltapulse.app/item/558538",
+      "published": "2026-03-30T16:15:57.000Z",
+      "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "558538",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "July 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:558538"
     },
     {
       "title": "Microsoft Teams: Attendee capacity packs for Teams events",
@@ -1777,28 +1777,6 @@
         "_normalized_url": "message_center:MC1275659"
       },
       {
-        "title": "SharePoint: Create charts on pages with AI",
-        "link": "https://deltapulse.app/item/560076",
-        "published": "2026-04-09T23:15:51.000Z",
-        "summary": "This feature empowers authors to create rich, interactive charts with AI in SharePoint when editing SharePoint pages. Authors can describe the chart they want to create in plain language within a chat on a SharePoint page.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "560076",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560076"
-      },
-      {
         "title": "Microsoft Purview: Insider Risk Management- IRM alerts in XDR",
         "link": "https://deltapulse.app/item/560075",
         "published": "2026-04-09T23:15:51.000Z",
@@ -1821,14 +1799,14 @@
         "_normalized_url": "roadmap:560075"
       },
       {
-        "title": "Microsoft Teams: Multi‑camera view support for GCC-H and DoD in Teams Rooms on Windows",
-        "link": "https://deltapulse.app/item/560049",
+        "title": "SharePoint: Create charts on pages with AI",
+        "link": "https://deltapulse.app/item/560076",
         "published": "2026-04-09T23:15:51.000Z",
-        "summary": "GCC-H and DoD cloud customers can now experience multi-camera views in Microsoft Teams Rooms on Windows, allowing remote participants to switch between multiple in-room camera feeds for improved visibility and engagement in larger spaces. Find camera requirements here. Available with Teams Rooms Pro.",
+        "summary": "This feature empowers authors to create rich, interactive charts with AI in SharePoint when editing SharePoint pages. Authors can describe the chart they want to create in plain language within a chat on a SharePoint page.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "560049",
+        "m365Id": "560076",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -1840,7 +1818,7 @@
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560049"
+        "_normalized_url": "roadmap:560076"
       },
       {
         "title": "Microsoft Teams: Multi-stream IntelliFrame support for GCC-H and DoD in Teams Rooms on Windows",
@@ -1863,6 +1841,28 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:560052"
+      },
+      {
+        "title": "Microsoft Teams: Multi‑camera view support for GCC-H and DoD in Teams Rooms on Windows",
+        "link": "https://deltapulse.app/item/560049",
+        "published": "2026-04-09T23:15:51.000Z",
+        "summary": "GCC-H and DoD cloud customers can now experience multi-camera views in Microsoft Teams Rooms on Windows, allowing remote participants to switch between multiple in-room camera feeds for improved visibility and engagement in larger spaces. Find camera requirements here. Available with Teams Rooms Pro.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "560049",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:560049"
       },
       {
         "title": "Microsoft 365 Copilot: Multimodal capture in Copilot Notebooks in the OneNote mobile app (iOS)",
@@ -1915,14 +1915,14 @@
         "_normalized_url": "message_center:MC1275564"
       },
       {
-        "title": "Outlook: Upgraded Video and Audio Player for iOS",
-        "link": "https://deltapulse.app/item/560056",
+        "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
+        "link": "https://deltapulse.app/item/558933",
         "published": "2026-04-08T23:00:03.000Z",
-        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
+        "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "560056",
+        "m365Id": "558933",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -1934,7 +1934,7 @@
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560056"
+        "_normalized_url": "roadmap:558933"
       },
       {
         "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
@@ -1959,14 +1959,14 @@
         "_normalized_url": "roadmap:558853"
       },
       {
-        "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
-        "link": "https://deltapulse.app/item/558933",
+        "title": "Outlook: Upgraded Video and Audio Player for iOS",
+        "link": "https://deltapulse.app/item/560056",
         "published": "2026-04-08T23:00:03.000Z",
-        "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
+        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558933",
+        "m365Id": "560056",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -1978,7 +1978,7 @@
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558933"
+        "_normalized_url": "roadmap:560056"
       },
       {
         "title": "Upcoming change: Microsoft 365 Apps SAEC and MEC will unify",
@@ -2027,6 +2027,28 @@
         "_normalized_url": "roadmap:559990"
       },
       {
+        "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
+        "link": "https://deltapulse.app/item/558689",
+        "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558689",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558689"
+      },
+      {
         "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
         "link": "https://deltapulse.app/item/559995",
         "published": "2026-04-07T23:00:18.000Z",
@@ -2069,28 +2091,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:559996"
-      },
-      {
-        "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
-        "link": "https://deltapulse.app/item/558689",
-        "published": "2026-04-07T23:00:18.000Z",
-        "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558689",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558689"
       },
       {
         "title": "Microsoft Teams: Sharing recap access",
@@ -2205,28 +2205,6 @@
         "_normalized_url": "roadmap:558253"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
-        "link": "https://deltapulse.app/item/558538",
-        "published": "2026-03-30T16:15:57.000Z",
-        "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558538",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558538"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
         "link": "https://deltapulse.app/item/553213",
         "published": "2026-03-30T16:15:57.000Z",
@@ -2247,6 +2225,28 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:553213"
+      },
+      {
+        "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
+        "link": "https://deltapulse.app/item/558538",
+        "published": "2026-03-30T16:15:57.000Z",
+        "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558538",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558538"
       },
       {
         "title": "Microsoft Teams: Attendee capacity packs for Teams events",
@@ -2832,28 +2832,6 @@
   "byLifecycle": {
     "in_preview": [
       {
-        "title": "Microsoft Viva: New Overview experience and agent categories in Agent Dashboard",
-        "link": "https://deltapulse.app/item/559996",
-        "published": "2026-04-07T23:00:18.000Z",
-        "summary": "Customers can now view and understand their agent landscape through the new Overview page that will be included as part of the Agent Dashboard in Microsoft Viva. This experience will provide customers with key at-a-glance insights on adoption in their organizations, visibility into who’s creating agents used in their organization, and details on what business process categories these agents are used for.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559996",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:559996"
-      },
-      {
         "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
         "link": "https://deltapulse.app/item/558689",
         "published": "2026-04-07T23:00:18.000Z",
@@ -2874,6 +2852,28 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558689"
+      },
+      {
+        "title": "Microsoft Viva: New Overview experience and agent categories in Agent Dashboard",
+        "link": "https://deltapulse.app/item/559996",
+        "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Customers can now view and understand their agent landscape through the new Overview page that will be included as part of the Agent Dashboard in Microsoft Viva. This experience will provide customers with key at-a-glance insights on adoption in their organizations, visibility into who’s creating agents used in their organization, and details on what business process categories these agents are used for.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "559996",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "June 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:559996"
       },
       {
         "title": "Microsoft Purview: File Creation/Modification conditions in DLP for Sharepoint/OneDrive and AutoLabelling",
@@ -2898,28 +2898,6 @@
         "_normalized_url": "roadmap:557590"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
-        "link": "https://deltapulse.app/item/558538",
-        "published": "2026-03-30T16:15:57.000Z",
-        "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558538",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558538"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
         "link": "https://deltapulse.app/item/553213",
         "published": "2026-03-30T16:15:57.000Z",
@@ -2940,6 +2918,28 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:553213"
+      },
+      {
+        "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
+        "link": "https://deltapulse.app/item/558538",
+        "published": "2026-03-30T16:15:57.000Z",
+        "summary": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558538",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558538"
       },
       {
         "title": "Microsoft Purview: Data Loss Prevention – Block External Domain/User action in DLP for SharePoint/OneDrive",
@@ -2990,28 +2990,6 @@
         "_normalized_url": "message_center:MC1275659"
       },
       {
-        "title": "SharePoint: Create charts on pages with AI",
-        "link": "https://deltapulse.app/item/560076",
-        "published": "2026-04-09T23:15:51.000Z",
-        "summary": "This feature empowers authors to create rich, interactive charts with AI in SharePoint when editing SharePoint pages. Authors can describe the chart they want to create in plain language within a chat on a SharePoint page.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "560076",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560076"
-      },
-      {
         "title": "Microsoft Purview: Insider Risk Management- IRM alerts in XDR",
         "link": "https://deltapulse.app/item/560075",
         "published": "2026-04-09T23:15:51.000Z",
@@ -3034,14 +3012,14 @@
         "_normalized_url": "roadmap:560075"
       },
       {
-        "title": "Microsoft Teams: Multi‑camera view support for GCC-H and DoD in Teams Rooms on Windows",
-        "link": "https://deltapulse.app/item/560049",
+        "title": "SharePoint: Create charts on pages with AI",
+        "link": "https://deltapulse.app/item/560076",
         "published": "2026-04-09T23:15:51.000Z",
-        "summary": "GCC-H and DoD cloud customers can now experience multi-camera views in Microsoft Teams Rooms on Windows, allowing remote participants to switch between multiple in-room camera feeds for improved visibility and engagement in larger spaces. Find camera requirements here. Available with Teams Rooms Pro.",
+        "summary": "This feature empowers authors to create rich, interactive charts with AI in SharePoint when editing SharePoint pages. Authors can describe the chart they want to create in plain language within a chat on a SharePoint page.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "560049",
+        "m365Id": "560076",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -3053,7 +3031,7 @@
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560049"
+        "_normalized_url": "roadmap:560076"
       },
       {
         "title": "Microsoft Teams: Multi-stream IntelliFrame support for GCC-H and DoD in Teams Rooms on Windows",
@@ -3076,6 +3054,28 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:560052"
+      },
+      {
+        "title": "Microsoft Teams: Multi‑camera view support for GCC-H and DoD in Teams Rooms on Windows",
+        "link": "https://deltapulse.app/item/560049",
+        "published": "2026-04-09T23:15:51.000Z",
+        "summary": "GCC-H and DoD cloud customers can now experience multi-camera views in Microsoft Teams Rooms on Windows, allowing remote participants to switch between multiple in-room camera feeds for improved visibility and engagement in larger spaces. Find camera requirements here. Available with Teams Rooms Pro.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "560049",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:560049"
       },
       {
         "title": "Microsoft 365 Copilot: Multimodal capture in Copilot Notebooks in the OneNote mobile app (iOS)",
@@ -3225,14 +3225,14 @@
         "_normalized_url": "message_center:MC1275311"
       },
       {
-        "title": "Outlook: Upgraded Video and Audio Player for iOS",
-        "link": "https://deltapulse.app/item/560056",
+        "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
+        "link": "https://deltapulse.app/item/558933",
         "published": "2026-04-08T23:00:03.000Z",
-        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
+        "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "560056",
+        "m365Id": "558933",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -3244,7 +3244,7 @@
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560056"
+        "_normalized_url": "roadmap:558933"
       },
       {
         "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
@@ -3269,14 +3269,14 @@
         "_normalized_url": "roadmap:558853"
       },
       {
-        "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
-        "link": "https://deltapulse.app/item/558933",
+        "title": "Outlook: Upgraded Video and Audio Player for iOS",
+        "link": "https://deltapulse.app/item/560056",
         "published": "2026-04-08T23:00:03.000Z",
-        "summary": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
+        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558933",
+        "m365Id": "560056",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -3288,7 +3288,7 @@
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558933"
+        "_normalized_url": "roadmap:560056"
       },
       {
         "title": "Microsoft Teams: Book future meetings from Microsoft Teams panels (Android)",
@@ -4244,7 +4244,7 @@
   },
   "m365RetirementCalendar": [],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-10T11:53:46.481962+00:00",
+    "generatedAt": "2026-04-10T15:41:26.274155+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {

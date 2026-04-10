@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 10 Apr 2026 11:53:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 15:41:18 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -204,6 +204,15 @@
       <dc:creator><![CDATA[theringe]]></dc:creator>
       <pubDate>Thu, 09 Apr 2026 05:53:29 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[AI Inference on AKS enabled by Azure Arc: Generative AI using Triton and TensorRT‑LLM]]></title>
+      <link>https://blog.aks.azure.com/2026/04/09/ai-inference-on-aks-arc-part-5</link>
+      <guid>https://blog.aks.azure.com/2026/04/09/ai-inference-on-aks-arc-part-5</guid>
+      <description><![CDATA[Run local edge generative AI by deploying Triton with the TensorRT-LLM backend on AKS enabled by Azure Arc to serve Qwen2.5 7B Instruct with GPU acceleration.]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[AKS Blog]]></category>
     </item>
     <item>
       <title><![CDATA[Agentic IIS Migration to Managed Instance on Azure App Service]]></title>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 07 Apr 2026 19:30:53 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[RSAC 2026: New Microsoft Sentinel Connectors Announcement]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/rsac-2026-new-microsoft-sentinel-connectors-announcement/ba-p/4503042</guid>
-      <description><![CDATA[Microsoft Sentinel helps organizations detect, investigate, and respond to security threats across increasingly complex environments. With the rollout of the Microsoft Sentinel data lake in the fall, and the App Assure-backed Sentinel promise that supports it, customers now have access to...]]></description>
-      <dc:creator><![CDATA[JesseKopavi]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 18:41:22 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
     </item>
   </channel>
 </rss>
