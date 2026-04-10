@@ -4,9 +4,63 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cloudplatformfeed.kailice.uk</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 09 Apr 2026 18:03:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 09:04:26 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[The "IQ Layer": Microsoft’s Blueprint for the Agentic Enterprise]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-quot-iq-layer-quot-microsoft-s-blueprint-for-the-agentic/ba-p/4504421</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-quot-iq-layer-quot-microsoft-s-blueprint-for-the-agentic/ba-p/4504421</guid>
+      <description><![CDATA[The "IQ Layer": Microsoft’s Blueprint for the Agentic Enterprise Modern enterprises have experimented with artificial intelligence for years, yet many deployments have struggled to move beyond basic automation and conversational interfaces. The fundamental limitation has not been the reasoning...]]></description>
+      <dc:creator><![CDATA[harshul05]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Agent Governance Toolkit: Architecture Deep Dive, Policy Engines, Trust, and SRE for AI Agents]]></title>
+      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/agent-governance-toolkit-architecture-deep-dive-policy-engines/ba-p/4510105</link>
+      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/agent-governance-toolkit-architecture-deep-dive-policy-engines/ba-p/4510105</guid>
+      <description><![CDATA[Last week we announced the Agent Governance Toolkit on the Microsoft Open Source Blog, an open-source project that brings runtime security governance to autonomous AI agents. In that announcement, we covered the why: AI agents are making autonomous decisions in production, and the security patterns...]]></description>
+      <dc:creator><![CDATA[mosiddi]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 04:55:22 GMT</pubDate>
+      <category><![CDATA[Linux & Open Source]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Putting Agentic Platform Engineering to the test]]></title>
+      <link>https://devblogs.microsoft.com/all-things-azure/putting-agentic-platform-engineering-to-the-test/</link>
+      <guid>https://devblogs.microsoft.com/all-things-azure/putting-agentic-platform-engineering-to-the-test/</guid>
+      <description><![CDATA[In Part 1 of this blog series set the stage for why platform engineering is being reshaped by agentic AI. (read it here) Basically we outline how instead of humans translating intent through layers of CLIs, SDKs, and bespoke workflows, capable agents can interpret natural-language goals and turn...]]></description>
+      <dc:creator><![CDATA[Arnaud Lheureux, davidwright, sdaniels]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 01:45:08 GMT</pubDate>
+      <category><![CDATA[All Things Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[What’s new in Microsoft Foundry | March 2026]]></title>
+      <link>https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/</link>
+      <guid>https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/</guid>
+      <description><![CDATA[﻿March ships Foundry Agent Service GA with private networking, GPT-5.4 and GPT-5.4 Mini, Priority Processing, Phi-4 Reasoning Vision, SDK 2.0 GA across Python, JS/TS, Java, and .NET, Fireworks AI and NVIDIA Nemotron models, and third-party guardrails from Palo Alto and Zenity. The post What’s new...]]></description>
+      <dc:creator><![CDATA[Nick Brady]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 23:33:53 GMT</pubDate>
+      <category><![CDATA[Microsoft Foundry Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Estimate Microsoft Sentinel Costs with Confidence Using the New Sentinel Cost Estimator]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/estimate-microsoft-sentinel-costs-with-confidence-using-the-new/ba-p/4507062</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/estimate-microsoft-sentinel-costs-with-confidence-using-the-new/ba-p/4507062</guid>
+      <description><![CDATA[One of the first questions teams ask when evaluating Microsoft Sentinel is simple: what will this actually cost? Today, many customers and partners estimate Sentinel costs using the Azure Pricing Calculator, but it doesn’t provide the Sentinel-specific usage guidance needed to understand how each...]]></description>
+      <dc:creator><![CDATA[shubh_khandhadia]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 22:26:18 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Foundry Local is now Generally Available]]></title>
+      <link>https://devblogs.microsoft.com/foundry/foundry-local-ga/</link>
+      <guid>https://devblogs.microsoft.com/foundry/foundry-local-ga/</guid>
+      <description><![CDATA[Ship local AI to millions of devices - fast, private on-device inference with no per-token costs. The post Foundry Local is now Generally Available appeared first on Microsoft Foundry Blog.]]></description>
+      <dc:creator><![CDATA[samkemp]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 19:00:00 GMT</pubDate>
+      <category><![CDATA[Microsoft Foundry Blog]]></category>
+    </item>
     <item>
       <title><![CDATA[How we build and use Azure SRE Agent with agentic workflows]]></title>
       <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-we-build-and-use-azure-sre-agent-with-agentic-workflows/ba-p/4508753</link>
@@ -123,6 +177,24 @@
       <dc:creator><![CDATA[theringe]]></dc:creator>
       <pubDate>Thu, 09 Apr 2026 05:53:29 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Agentic IIS Migration to Managed Instance on Azure App Service]]></title>
+      <link>https://azure.github.io/AppService/2026/04/09/Agentic_IIS_Migration_to_Managed_Instance_On_AppService.html</link>
+      <guid>https://azure.github.io/AppService/2026/04/09/Agentic_IIS_Migration_to_Managed_Instance_On_AppService.html</guid>
+      <description><![CDATA[Migrating legacy ASP.NET Framework applications from IIS to Azure App Service — guided by AI agents, powered by the Model Context Protocol.Update Type: Announcement, Services: App Service, Categories: Services]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms]]></title>
+      <link>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms</link>
+      <guid>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms</guid>
+      <description><![CDATA[Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms Microsoft is named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms, recognizing Microsoft Sovereign Cloud leadership in evolving sovereignty needs.Update Type: Announcement, Services: Azure Arc, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Designing Reliable Health Check Endpoints for IIS Behind Azure Application Gateway]]></title>
@@ -384,78 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 07 Apr 2026 17:15:12 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Functions now supports MCP resource triggers]]></title>
-      <link>https://azure.microsoft.com/updates?id=559981</link>
-      <guid>https://azure.microsoft.com/updates?id=559981</guid>
-      <description><![CDATA[Developers building MCP servers on Azure Functions can expose tools but not resources. Now, Azure Functions supports MCP resource triggers, enabling developers to expose resources directly from an Azure Functions–hosted Model Context Protocol (MCP) serverUpdate Type: GA, Services: Azure Functions,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 17:15:12 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Pod CIDR expansion in AKS]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/557907/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/557907/</guid>
-      <description><![CDATA[When clusters exhaust available pod IP addresses, teams have historically been forced to rebuild environments to restore capacity, creating operational disruption. Pod CIDR expansion allows overlay‑based AKS clusters to increase their pod IP range in place without cluster recreation. This enables...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 17:00:23 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Pod CIDR expansion in AKS]]></title>
-      <link>https://azure.microsoft.com/updates?id=557907</link>
-      <guid>https://azure.microsoft.com/updates?id=557907</guid>
-      <description><![CDATA[When clusters exhaust available pod IP addresses, teams have historically been forced to rebuild environments to restore capacity, creating operational disruption. Pod CIDR expansion allows overlay‑based AKS clusters to increase their pod IP range in placUpdate Type: GA, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 17:00:23 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Agentic development aspirations: build, run, observe — without more Markdown]]></title>
-      <link>https://devblogs.microsoft.com/aspire/agentic-dev-aspirations/</link>
-      <guid>https://devblogs.microsoft.com/aspire/agentic-dev-aspirations/</guid>
-      <description><![CDATA[AI agents can write code but struggle to run and test it. Aspire gives your agent a codified app model to build, run, and observe your whole stack. The post Agentic development aspirations: build, run, observe — without more Markdown appeared first on Aspire Blog.]]></description>
-      <dc:creator><![CDATA[Maddy Montaquila]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 17:00:00 GMT</pubDate>
-      <category><![CDATA[Aspire Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Logic Apps Aviators Newsletter - April 2026]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-april-2026/ba-p/4508804</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-april-2026/ba-p/4508804</guid>
-      <description><![CDATA[In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month April 2026's Ace Aviator: Marcelo Gomes Marcelo Gomes - Integration Team Leader @ COFCO International What’s your role and title? What are your responsibilities? I’m an Integration...]]></description>
-      <dc:creator><![CDATA[WSilveira]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 16:55:33 GMT</pubDate>
-      <category><![CDATA[Integrations on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Scalable AI with Azure Cosmos DB: Tredence Intelligent Document Processing (IDP) | March 2026]]></title>
-      <link>https://devblogs.microsoft.com/cosmosdb/scalable-ai-with-azure-cosmos-db-tredence-intelligent-document-processing-idp-march-2026/</link>
-      <guid>https://devblogs.microsoft.com/cosmosdb/scalable-ai-with-azure-cosmos-db-tredence-intelligent-document-processing-idp-march-2026/</guid>
-      <description><![CDATA[Azure Cosmos DB enables scalable AI-driven document processing, addressing one of the biggest barriers to operational scale in today’s enterprise AI landscape. Organizations continue to manage massive volumes of structured and unstructured content—contracts, regulatory filings, operational records,...]]></description>
-      <dc:creator><![CDATA[Manish Sharma]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 16:46:06 GMT</pubDate>
-      <category><![CDATA[Azure Cosmos DB Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Take full control of your floating windows in Visual Studio]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/</guid>
-      <description><![CDATA[Make Visual Studio floating windows work perfectly with PowerToys FancyZones. Flip one option to get independent windows, better snapping, and less friction. The post Take full control of your floating windows in Visual Studio appeared first on Visual Studio Blog.]]></description>
-      <dc:creator><![CDATA[Mads Kristensen]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 14:00:39 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Premium SSD v2 Is Now Generally Available for Azure Database for PostgreSQL]]></title>
-      <link>https://techcommunity.microsoft.com/blog/adforpostgresql/premium-ssd-v2-is-now-generally-available-for-azure-database-for-postgresql/4508445</link>
-      <guid>https://techcommunity.microsoft.com/blog/adforpostgresql/premium-ssd-v2-is-now-generally-available-for-azure-database-for-postgresql/4508445</guid>
-      <description><![CDATA[We are excited to announce the General Availability (GA) of Premium SSD v2 for Azure Database for PostgreSQL flexible server. With Premium SSD v2, you can achieve up to 4× higher IOPS, significantly ...Update Type: GA, Services: Database for PostgreSQL, Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 10:24:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
