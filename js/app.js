@@ -32,7 +32,11 @@
   // ===== State =====
   var articles = [];
   var filteredArticles = [];
+  var stateStore = window.CPFeedStateStore;
+  var filterHelpers = window.CPFeedFilterHelpers;
+  var checksumWatcherFactory = window.CPFeedChecksumWatcher;
   var currentCategory = "all";
+  var selectedCategories = new Set(["all"]);
   var currentFilter = "all";
   var currentSource = "azure";  // New: track active feed source (azure|m365)
   var searchQuery = "";
@@ -83,6 +87,7 @@
 
   var azureFeedData = null;
   var m365FeedData = null;
+  var checksumWatcher = null;
   var retirementCalendarViewState = { azure: null, m365: null };
   var retirementCalendarCollapsedState = { azure: null, m365: null };
   
@@ -1073,7 +1078,9 @@
     loadTheme();
     updateHeaderOffset();
     registerServiceWorker();
+    loadCategorySelectionForSource(currentSource);
     setupInfiniteScroll();
+    ensureChecksumWatcher();
     await loadData();
     updateHeaderOffset();
     setupEventListeners();
@@ -1272,26 +1279,88 @@
       : "Show non-Updates blogs";
   }
 
+  function getActiveCategories() {
+    if (filterHelpers && filterHelpers.activeCategoryList) {
+      return filterHelpers.activeCategoryList(selectedCategories);
+    }
+    if (!selectedCategories.size || selectedCategories.has("all")) return [];
+    return Array.from(selectedCategories);
+  }
+
+  function getPrimaryCategory() {
+    if (filterHelpers && filterHelpers.firstSelectedOrAll) {
+      return filterHelpers.firstSelectedOrAll(selectedCategories);
+    }
+    var active = getActiveCategories();
+    return active.length ? active[0] : "all";
+  }
+
+  function saveCategorySelection() {
+    if (!stateStore || !stateStore.writeJson) return;
+    stateStore.writeJson("selected-categories:" + currentSource, Array.from(selectedCategories));
+  }
+
+  function loadCategorySelectionForSource(source) {
+    if (!stateStore || !stateStore.readJson) {
+      selectedCategories = new Set(["all"]);
+      currentCategory = "all";
+      return;
+    }
+
+    var raw = stateStore.readJson("selected-categories:" + source, ["all"]);
+    var normalized = Array.isArray(raw) ? raw.filter(Boolean) : ["all"];
+    if (!normalized.length) normalized = ["all"];
+    selectedCategories = new Set(normalized);
+    if (selectedCategories.size > 1 && selectedCategories.has("all")) {
+      selectedCategories.delete("all");
+    }
+    currentCategory = getPrimaryCategory();
+  }
+
+  function notifyDataRefreshAvailable() {
+    showToast("New feed data detected. Refreshing now...");
+    loadData();
+  }
+
+  function ensureChecksumWatcher() {
+    if (!checksumWatcherFactory || !checksumWatcherFactory.create || checksumWatcher) return;
+    checksumWatcher = checksumWatcherFactory.create({
+      url: "data/checksums.json",
+      pollIntervalMs: 5 * 60 * 1000,
+      onChange: notifyDataRefreshAvailable
+    });
+    checksumWatcher.start();
+  }
+
   function syncActiveCategoryPill() {
     var categoryButtons = filterPills.querySelectorAll(".category-pill");
+    var activeFound = 0;
     categoryButtons.forEach(function (p) {
       p.classList.remove("active");
     });
 
-    var activeCategoryButton = filterPills.querySelector(
-      '.category-pill[data-category="' + currentCategory + '"]'
-    );
+    categoryButtons.forEach(function (btn) {
+      var cat = btn.dataset.category || "all";
+      if (selectedCategories.has(cat)) {
+        btn.classList.add("active");
+        activeFound++;
+      }
+    });
 
-    if (!activeCategoryButton) {
-      currentCategory = "all";
-      activeCategoryButton = filterPills.querySelector(
-        '.category-pill[data-category="all"]'
-      );
+    if (!selectedCategories.size) {
+      selectedCategories = new Set(["all"]);
     }
 
-    if (activeCategoryButton) {
-      activeCategoryButton.classList.add("active");
+    if (!activeFound) {
+      selectedCategories = new Set(["all"]);
     }
+
+    if (selectedCategories.has("all")) {
+      var allButton = filterPills.querySelector('.category-pill[data-category="all"]');
+      if (allButton) allButton.classList.add("active");
+    }
+
+    currentCategory = getPrimaryCategory();
   }
 
   // ===== Render Filter Pills (with category grouping) =====
@@ -1338,6 +1407,9 @@
       var button = document.createElement("button");
       button.className = "category-pill";
       button.dataset.category = categoryValue;
+      if (categoryValue !== "all") {
+        button.title = "Ctrl/Cmd+click to multi-select categories";
+      }
       button.appendChild(document.createTextNode(label + " "));
 
       var countEl = document.createElement("span");
@@ -1401,6 +1473,9 @@
       var button = document.createElement("button");
       button.className = "category-pill";
       button.dataset.category = categoryValue;
+      if (categoryValue !== "all") {
+        button.title = "Ctrl/Cmd+click to multi-select categories";
+      }
       button.appendChild(document.createTextNode(label + " "));
 
       var countEl = document.createElement("span");
@@ -1443,6 +1518,9 @@
       var button = document.createElement("button");
       button.className = "category-pill";
       button.dataset.category = categoryValue;
+      if (categoryValue !== "all") {
+        button.title = "Ctrl/Cmd+click to multi-select categories";
+      }
       button.appendChild(document.createTextNode(label + " "));
 
       var countEl = document.createElement("span");
@@ -1472,8 +1550,9 @@
   function renderBlogPills(categoryName) {
     var blogPillsRow = document.getElementById("blog-pills-row");
     var blogFilterPillsEl = document.getElementById("blog-filter-pills");
+    var activeCategories = getActiveCategories();
 
-    if (currentSource === "m365" || categoryName === "all" || isAzureLifecyclePillMode()) {
+    if (currentSource === "m365" || categoryName === "all" || isAzureLifecyclePillMode() || activeCategories.length !== 1) {
       hideElement(blogPillsRow);
       return;
     }
@@ -1530,10 +1609,13 @@
       return (a.source || "azure") === currentSource;
     });
 
-    // Category filter
-    if (currentCategory !== "all") {
+    // Category filter (supports multi-select)
+    var activeCategories = getActiveCategories();
+    if (activeCategories.length) {
       result = result.filter(function (a) {
-        return articleMatchesCategory(a, currentCategory);
+        return activeCategories.some(function (categoryName) {
+          return articleMatchesCategory(a, categoryName);
+        });
       });
     }
 
@@ -1997,6 +2079,7 @@
     tabButtons.forEach(function (btn) {
       btn.addEventListener("click", function () {
         currentSource = btn.dataset.source;
+        loadCategorySelectionForSource(currentSource);
         
         // Update active state on tab buttons
         tabButtons.forEach(function (b) {
@@ -2016,12 +2099,11 @@
         // Reset search and category filters when switching sources
         searchInput.value = "";
         searchQuery = "";
-        currentCategory = "all";
         currentFilter = "all";
         
         // Re-render filters and articles for the new source
         renderFilters();
-        renderBlogPills(currentCategory);
+        renderBlogPills(getPrimaryCategory());
         refreshSourcePanels();
         applyFilters();
       });
@@ -2032,11 +2114,26 @@
       // Category pill click
       var catPill = e.target.closest(".category-pill");
       if (catPill) {
-        filterPills.querySelectorAll(".category-pill").forEach(function (p) {
-          p.classList.remove("active");
-        });
-        catPill.classList.add("active");
-        currentCategory = catPill.dataset.category;
+        var selected = catPill.dataset.category || "all";
+        var allowMulti = e.metaKey || e.ctrlKey;
+
+        if (selected === "all") {
+          selectedCategories = new Set(["all"]);
+        } else if (!allowMulti) {
+          selectedCategories = new Set([selected]);
+        } else {
+          if (selectedCategories.has("all")) selectedCategories.delete("all");
+          if (selectedCategories.has(selected)) {
+            selectedCategories.delete(selected);
+          } else {
+            selectedCategories.add(selected);
+          }
+          if (!selectedCategories.size) selectedCategories = new Set(["all"]);
+        }
+
+        currentCategory = getPrimaryCategory();
+        syncActiveCategoryPill();
+        saveCategorySelection();
         currentFilter = "all";
         renderBlogPills(currentCategory);
         applyFilters();
@@ -2076,11 +2173,13 @@
         localStorage.setItem("cloudplatformfeed-other-blogs", String(showOtherBlogs));
         currentFilter = "all";
         if (wasLifecycleMode !== isAzureLifecyclePillMode()) {
+          selectedCategories = new Set(["all"]);
           currentCategory = "all";
+          saveCategorySelection();
         }
         updateOtherBlogsToggleUI();
         renderFilters();
-        renderBlogPills(currentCategory);
+        renderBlogPills(getPrimaryCategory());
         applyFilters();
       });
     }
