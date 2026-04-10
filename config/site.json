@@ -1,6 +1,6 @@
 {
-  "canonicalHost": "cloudplatformfeed.kailice.uk",
-  "canonicalUrl": "https://cloudplatformfeed.kailice.uk",
+  "canonicalHost": "cpfeed.cloud",
+  "canonicalUrl": "https://cpfeed.cloud",
   "validation": {
     "requiredArticleFields": [
       "title",

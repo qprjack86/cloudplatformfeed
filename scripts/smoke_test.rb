@@ -45,10 +45,12 @@ end
 
 canonical_host = site_config["canonicalHost"]
 canonical_url = site_config["canonicalUrl"]
+configured_cname = cname_text.strip
 csp_match = headers_text.match(/Content-Security-Policy:\s*(.+)$/)
 csp_policy = csp_match && csp_match[1]
 assert(canonical_host.is_a?(String) && !canonical_host.empty?, "config/site.json canonicalHost must be a non-empty string")
 assert(canonical_url == "https://#{canonical_host}", "config/site.json canonicalUrl must match canonicalHost")
+assert(configured_cname == canonical_host, "CNAME must match config/site.json canonicalHost")
 assert(csp_policy.is_a?(String) && !csp_policy.empty?, "_headers must include a Content-Security-Policy value")
 assert(index_html.include?("content=\"#{canonical_url}\""), "index.html og:url must match config/site.json canonicalUrl")
 assert(index_html.include?("content=\"#{canonical_url}/og-image.png\""), "index.html og:image must match config/site.json canonicalUrl")

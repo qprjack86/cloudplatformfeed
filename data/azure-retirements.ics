@@ -20,7 +20,7 @@ URL:https://azure.microsoft.com/updates?id=application-gateway-v1-will-be-r
  etired-on-28-april-2026-transition-to-application-gateway-v2
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260430-485072@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260430-485072@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
@@ -30,7 +30,7 @@ DESCRIPTION:Retirement date: 2026-04-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485072
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260430-558102@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260430-558102@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
@@ -42,7 +42,7 @@ URL:https://azure.microsoft.com/en-us/updates/558102/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260430-retirement-notice-custom-commands-will-retire
- -on-30-april-2026@cloudplatformfeed.kailice.uk
+ -on-30-april-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
@@ -53,7 +53,7 @@ URL:https://azure.microsoft.com/updates?id=retirement-notice-custom-command
  s-will-retire-on-30-april-2026
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260515-557224@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260515-557224@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
@@ -76,7 +76,7 @@ URL:https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260601-cost-management-download-by-billing-account-a
- pi-version-retirement@cloudplatformfeed.kailice.uk
+ pi-version-retirement@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
@@ -88,7 +88,7 @@ URL:https://azure.microsoft.com/updates?id=Cost-Management-Download-by-Bill
  ing-Account-API-version-retirement
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260608-557929@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260608-557929@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260608
 DTEND;VALUE=DATE:20260609
@@ -98,7 +98,7 @@ DESCRIPTION:Retirement date: 2026-06-08\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/557929/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260630-501668@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260630-501668@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
@@ -119,7 +119,7 @@ DESCRIPTION:Retirement date: 2026-06-30\\nDate precision: day\\nSources: Az
 URL:https://learn.microsoft.com/rest/api/sql/retirement
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260630-496104@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260630-496104@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
@@ -129,7 +129,7 @@ DESCRIPTION:Retirement date: 2026-06-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=496104
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260731-551523@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260731-551523@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260731
 DTEND;VALUE=DATE:20260801
@@ -140,7 +140,7 @@ DESCRIPTION:Retirement date: 2026-07-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/551523/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260801-498749@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260801-498749@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
@@ -151,7 +151,7 @@ DESCRIPTION:Retirement date: 2026-08-01\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates?id=498749
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260801-498754@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260801-498754@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
@@ -163,7 +163,7 @@ URL:https://azure.microsoft.com/updates?id=498754
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260831-retirement-azure-ai-document-intelligence-v20
- -api-will-be-retired-on-31-august-2026@cloudplatformfeed.kailice.uk
+ -api-will-be-retired-on-31-august-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
@@ -175,7 +175,7 @@ URL:https://azure.microsoft.com/updates/retirement-azure-ai-document-intell
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260831-migrate-to-azure-ai-document-intelligence-v31
- -ga-version@cloudplatformfeed.kailice.uk
+ -ga-version@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
@@ -200,7 +200,7 @@ URL:https://azure.microsoft.com/updates/computer-vision-api-retirements-13-
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260914-support-for-the-1x-version-of-azure-functions
- -ends-14-september-2026@cloudplatformfeed.kailice.uk
+ -ends-14-september-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260915
@@ -212,7 +212,7 @@ URL:https://azure.microsoft.com/updates/support-for-the-1x-version-of-azure
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260914-azure-monitor-for-aksengine-will-not-be-suppo
- rted-on-14-september-2026@cloudplatformfeed.kailice.uk
+ rted-on-14-september-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260915
@@ -248,7 +248,7 @@ URL:https://azure.microsoft.com/updates?id=azure-maps-gen1-price-tier-retir
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260915-azure-activity-logs-legacy-solution-is-replac
- ed-by-diagnostic-settings@cloudplatformfeed.kailice.uk
+ ed-by-diagnostic-settings@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260915
 DTEND;VALUE=DATE:20260916
@@ -261,7 +261,7 @@ URL:https://azure.microsoft.com/updates?id=azure-activity-logs-legacy-solut
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260917-azure-maps-render-v1-apis-will-be-retired-on-
- 17-september-2026@cloudplatformfeed.kailice.uk
+ 17-september-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
@@ -273,7 +273,7 @@ URL:https://azure.microsoft.com/updates/azure-maps-render-v1-apis-will-be-r
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260918-azure-monitor-data-collection-api-retirement@
- cloudplatformfeed.kailice.uk
+ cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
@@ -285,7 +285,7 @@ URL:https://azure.microsoft.com/en-us/updates/azure-monitor-data-collection
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260919-azure-maps-web-sdk-map-controls-version-1xx-w
- ill-be-retired-on-19-september-2026@cloudplatformfeed.kailice.uk
+ ill-be-retired-on-19-september-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20260920
@@ -298,7 +298,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260921-smart-on-fhir-proxy-feature-in-azure-health-d
  ata-services-will-be-retired-on-21st-september-2026-transition-to-smart-on
- -fhir@cloudplatformfeed.kailice.uk
+ -fhir@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260921
 DTEND;VALUE=DATE:20260922
@@ -311,7 +311,7 @@ URL:https://azure.microsoft.com/updates?id=smart-on-fhir-proxy-feature-in-a
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-action-required-migrate-to-using-arg-query-fo
- r-get-alert-summary-in-azure-monitor@cloudplatformfeed.kailice.uk
+ r-get-alert-summary-in-azure-monitor@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -324,7 +324,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-transition-to-using-standard-tests-for-single
  step-availability-testing-in-azure-monitor-application-insights-by-30-sept
- ember@cloudplatformfeed.kailice.uk
+ ember@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -386,7 +386,7 @@ URL:https://azure.microsoft.com/updates/we-re-ending-support-for-the-201703
  01ga-api/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260930-516070@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260930-516070@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -397,7 +397,7 @@ DESCRIPTION:Retirement date: 2026-09-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/516070/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260930-557406@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260930-557406@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -408,7 +408,7 @@ DESCRIPTION:Retirement date: 2026-09-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/557406/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260930-500273@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260930-500273@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -418,7 +418,7 @@ DESCRIPTION:Retirement date: 2026-09-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=500273
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260930-500853@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260930-500853@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -430,7 +430,7 @@ URL:https://azure.microsoft.com/updates/?id=500853
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-migrate-to-azure-resource-manager-control-pla
- ne-api-version-20211101-by-30-september-2026@cloudplatformfeed.kailice.uk
+ ne-api-version-20211101-by-30-september-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -443,7 +443,7 @@ URL:https://azure.microsoft.com/en-us/updates/migrate-to-azure-resource-man
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-retirement-notice-update-your-azure-service-b
- us-sdk-libraries-by-30-september-2026@cloudplatformfeed.kailice.uk
+ us-sdk-libraries-by-30-september-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -455,7 +455,7 @@ URL:https://azure.microsoft.com/updates/retirement-notice-update-your-azure
  -service-bus-sdk-libraries-by-30-september-2026/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260930-501673@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260930-501673@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -465,7 +465,7 @@ DESCRIPTION:Retirement date: 2026-09-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=501673
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260930-498563@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260930-498563@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -487,7 +487,7 @@ URL:https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-
  2019/classic-retirement
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20260930-500578@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20260930-500578@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -498,7 +498,7 @@ URL:https://azure.microsoft.com/updates/?id=500578
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-vpngw1-5-non-az-skus-will-be-retired-on-30-se
- ptember-2026@cloudplatformfeed.kailice.uk
+ ptember-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
@@ -510,7 +510,7 @@ URL:https://azure.microsoft.com/updates?id=vpngw1-5-non-az-skus-will-be-ret
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-ai-services-anomaly-detector-will-be-retired-
- on-1-october-2026@cloudplatformfeed.kailice.uk
+ on-1-october-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
@@ -522,7 +522,7 @@ URL:https://azure.microsoft.com/updates?id=ai-services-anomaly-detector-wil
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-ai-services-metrics-advisor-will-be-retired-o
- n-1-october-2026@cloudplatformfeed.kailice.uk
+ n-1-october-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
@@ -534,7 +534,7 @@ URL:https://azure.microsoft.com/updates?id=ai-services-metrics-advisor-will
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-ai-services-personalizer-will-be-retired-on-1
- -october-2026@cloudplatformfeed.kailice.uk
+ -october-2026@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
@@ -547,7 +547,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-azure-ai-translator-s2s4-billing-instances-wi
  ll-be-retired-on-1-october-2026-transition-to-commitment-tiers-for-discoun
- ted-pr@cloudplatformfeed.kailice.uk
+ ted-pr@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
@@ -559,7 +559,7 @@ URL:https://azure.microsoft.com/updates/azure-ai-translator-s2s4-billing-in
  or-discounted-pr/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-202610-502623@cloudplatformfeed.kailice.uk
+UID:azure-retirement-202610-502623@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
@@ -570,7 +570,7 @@ DESCRIPTION:Retirement date: 2026-10\\nDate precision: month\\nSources: Azu
 URL:https://azure.microsoft.com/updates/?id=502623
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261001-485030@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261001-485030@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
@@ -580,7 +580,7 @@ DESCRIPTION:Retirement date: 2026-10-01\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485030
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261001-545771@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261001-545771@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
@@ -591,7 +591,7 @@ DESCRIPTION:Retirement date: 2026-10-01\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/545771/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261013-496964@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261013-496964@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
@@ -602,7 +602,7 @@ DESCRIPTION:Retirement date: 2026-10-13\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=496964
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261031-513892@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261031-513892@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
@@ -612,7 +612,7 @@ DESCRIPTION:Retirement date: 2026-10-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/513892/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261031-499906@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261031-499906@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
@@ -622,7 +622,7 @@ DESCRIPTION:Retirement date: 2026-10-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=499906
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261110-485077@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261110-485077@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
@@ -645,7 +645,7 @@ URL:https://azure.microsoft.com/updates/retirement-support-for-the-inproces
  s-model-for-net-apps-in-azure-functions-ends-10-november-2026/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261130-555839@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261130-555839@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
@@ -655,7 +655,7 @@ DESCRIPTION:Retirement date: 2026-11-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/555839/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261231-php-82-app-svc@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261231-php-82-app-svc@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
@@ -665,7 +665,7 @@ DESCRIPTION:Retirement date: 2026-12-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates?id=php-82-app-svc
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20261231-fxtretirement@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20261231-fxtretirement@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
@@ -677,7 +677,7 @@ URL:https://azure.microsoft.com/updates?id=fxtretirement
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270112-hpc-pack-2016-will-be-retired-on-12-january-2
- 027@cloudplatformfeed.kailice.uk
+ 027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
@@ -688,7 +688,7 @@ URL:https://azure.microsoft.com/updates/hpc-pack-2016-will-be-retired-on-12
  -january-2027/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270112-549077@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270112-549077@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
@@ -711,7 +711,7 @@ URL:https://learn.microsoft.com/azure/key-vault/general/access-control-defa
  ult?tabs=azure-cli
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-202703-558276@cloudplatformfeed.kailice.uk
+UID:azure-retirement-202703-558276@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270301
 DTEND;VALUE=DATE:20270302
@@ -725,7 +725,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270315-begin-using-azure-monitor-based-dashboards-in
  -azure-api-management-before-the-builtin-analytics-dashboards-are-retired-
- on-15@cloudplatformfeed.kailice.uk
+ on-15@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
@@ -787,7 +787,7 @@ URL:https://learn.microsoft.com/azure/web-application-firewall/ag/upgrade-a
  af-policy
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270331-499606@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270331-499606@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -797,7 +797,7 @@ DESCRIPTION:Retirement date: 2027-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=499606
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270331-558086@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270331-558086@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -807,7 +807,7 @@ DESCRIPTION:Retirement date: 2027-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/558086/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270331-499923@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270331-499923@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -819,7 +819,7 @@ URL:https://azure.microsoft.com/updates?id=499923
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-long-audio-api-will-be-retired-on-31-march-20
- 27-migrate-to-the-new-batch-synthesis-api@cloudplatformfeed.kailice.uk
+ 27-migrate-to-the-new-batch-synthesis-api@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -830,7 +830,7 @@ URL:https://azure.microsoft.com/updates/long-audio-api-will-be-retired-on-3
  1-march-2027-migrate-to-the-new-batch-synthesis-api/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270331-550519@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270331-550519@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -841,7 +841,7 @@ DESCRIPTION:Retirement date: 2027-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/550519/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270331-558278@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270331-558278@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -852,7 +852,7 @@ URL:https://azure.microsoft.com/en-us/updates/558278/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-azure-front-door-classic-will-be-retired-on-3
- 1-march-2027@cloudplatformfeed.kailice.uk
+ 1-march-2027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -863,7 +863,7 @@ URL:https://azure.microsoft.com/updates/azure-front-door-classic-will-be-re
  tired-on-31-march-2027/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270331-558027@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270331-558027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -874,7 +874,7 @@ DESCRIPTION:Retirement date: 2027-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/558027/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270331-558247@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270331-558247@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -886,7 +886,7 @@ URL:https://azure.microsoft.com/en-us/updates/558247/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-support-for-standardm192idmsv2-will-be-retire
- d-on-31-march-2027@cloudplatformfeed.kailice.uk
+ d-on-31-march-2027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -898,7 +898,7 @@ URL:https://azure.microsoft.com/updates?id=support-for-standardm192idmsv2-w
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-community-support-for-standardm192idsv2-is-en
- ding-on-31-march-2027@cloudplatformfeed.kailice.uk
+ ding-on-31-march-2027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -910,7 +910,7 @@ URL:https://azure.microsoft.com/updates?id=community-support-for-standardm1
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-community-support-for-standardm192imsv2-is-en
- ding-on-31-march-2027@cloudplatformfeed.kailice.uk
+ ding-on-31-march-2027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -922,7 +922,7 @@ URL:https://azure.microsoft.com/updates?id=community-support-for-standardm1
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-community-support-for-standardm192isv2-is-end
- ing-on-31-march-2027@cloudplatformfeed.kailice.uk
+ ing-on-31-march-2027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
@@ -935,7 +935,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270401-were-retiring-memory-optimized-data-flows-in-
  azure-data-factory-use-general-purpose-for-better-performance-at-a-lower-p
- rice@cloudplatformfeed.kailice.uk
+ rice@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
@@ -947,7 +947,7 @@ URL:https://azure.microsoft.com/updates/were-retiring-memory-optimized-data
  -a-lower-price/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270531-548525@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270531-548525@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
@@ -957,7 +957,7 @@ DESCRIPTION:Retirement date: 2027-05-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/548525/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270531-548543@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270531-548543@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
@@ -967,7 +967,7 @@ DESCRIPTION:Retirement date: 2027-05-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/en-us/updates/548543/
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20270531-548497@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20270531-548497@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
@@ -1028,7 +1028,7 @@ URL:https://azure.microsoft.com/updates/v2/Azure-Docuement-Intelligence-V2-
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270915-automated-patching-deprecation-and-replacemen
- t-with-azure-update-manager@cloudplatformfeed.kailice.uk
+ t-with-azure-update-manager@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
@@ -1040,7 +1040,7 @@ URL:https://azure.microsoft.com/updates?id=Automated-Patching-deprecation-a
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270923-azure-site-recovery-classic-alerts-retirement
- @cloudplatformfeed.kailice.uk
+ @cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270923
 DTEND;VALUE=DATE:20270924
@@ -1064,7 +1064,7 @@ URL:https://azure.microsoft.com/updates/v2/Azure-Sphere-Legacy-Interface-Re
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-azure-automanage-best-practices-retirement-mi
- grate-to-azure-policy@cloudplatformfeed.kailice.uk
+ grate-to-azure-policy@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
@@ -1076,7 +1076,7 @@ URL:https://azure.microsoft.com/updates/v2/Azure-Automanage-Best-Practices-
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-planned-service-retirement-azure-automation-s
- tate-configuration-16-september-2027@cloudplatformfeed.kailice.uk
+ tate-configuration-16-september-2027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
@@ -1099,7 +1099,7 @@ URL:https://azure.microsoft.com/updates/v2/Azure-NSG-flow-logs-Retirement
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-azure-cdn-standard-from-microsoft-classic-wil
- l-be-retired-on-30-september-2027@cloudplatformfeed.kailice.uk
+ l-be-retired-on-30-september-2027@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
@@ -1111,7 +1111,7 @@ URL:https://azure.microsoft.com/updates?id=Azure-CDN-Standard-from-Microsof
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-open-service-mesh-extension-for-aks-retiremen
- t@cloudplatformfeed.kailice.uk
+ t@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
@@ -1146,7 +1146,7 @@ DESCRIPTION:Retirement date: 2027-09-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/v2/SQL-Data-Sync-Retirement
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20271031-467330@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20271031-467330@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20271031
 DTEND;VALUE=DATE:20271101
@@ -1168,7 +1168,7 @@ DESCRIPTION:Retirement date: 2028-03-17\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates?filters=%5B%22Retirements%22%5D
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280327-485893@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280327-485893@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280327
 DTEND;VALUE=DATE:20280328
@@ -1179,7 +1179,7 @@ DESCRIPTION:Retirement date: 2028-03-27\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485893
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-485047@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-485047@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1189,7 +1189,7 @@ DESCRIPTION:Retirement date: 2028-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485047
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-489009@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-489009@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1199,7 +1199,7 @@ DESCRIPTION:Retirement date: 2028-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=489009
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-485819@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-485819@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1209,7 +1209,7 @@ DESCRIPTION:Retirement date: 2028-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485819
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-485810@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-485810@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1220,7 +1220,7 @@ URL:https://azure.microsoft.com/updates/?id=485810
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280331-azure-spring-apps-will-be-retired-on-march-31
- -2028@cloudplatformfeed.kailice.uk
+ -2028@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1231,7 +1231,7 @@ URL:https://azure.microsoft.com/en-us/updates/v2/Azure-Spring-Apps-will-be-
  retired-on-March-31-2028
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-485241@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-485241@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1241,7 +1241,7 @@ DESCRIPTION:Retirement date: 2028-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485241
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-485172@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-485172@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1263,7 +1263,7 @@ URL:https://learn.microsoft.com/azure/azure-monitor/logs/api/migrate-batch-
  and-beta
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-485865@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-485865@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1273,7 +1273,7 @@ DESCRIPTION:Retirement date: 2028-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485865
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-485828@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-485828@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1283,7 +1283,7 @@ DESCRIPTION:Retirement date: 2028-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485828
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280331-485535@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280331-485535@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
@@ -1293,7 +1293,7 @@ DESCRIPTION:Retirement date: 2028-03-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485535
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280501-485569@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280501-485569@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280501
 DTEND;VALUE=DATE:20280502
@@ -1303,7 +1303,7 @@ DESCRIPTION:Retirement date: 2028-05-01\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=485569
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280630-503883@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280630-503883@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280630
 DTEND;VALUE=DATE:20280701
@@ -1313,7 +1313,7 @@ DESCRIPTION:Retirement date: 2028-06-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=503883
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280630-491629@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280630-491629@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280630
 DTEND;VALUE=DATE:20280701
@@ -1323,7 +1323,7 @@ DESCRIPTION:Retirement date: 2028-06-30\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates?id=491629
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280731-499214@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280731-499214@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280731
 DTEND;VALUE=DATE:20280801
@@ -1333,7 +1333,7 @@ DESCRIPTION:Retirement date: 2028-07-31\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates?id=499214
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280908-499851@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280908-499851@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280908
 DTEND;VALUE=DATE:20280909
@@ -1344,7 +1344,7 @@ DESCRIPTION:Retirement date: 2028-09-08\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates?id=499851
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280908-500157@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280908-500157@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280908
 DTEND;VALUE=DATE:20280909
@@ -1354,7 +1354,7 @@ DESCRIPTION:Retirement date: 2028-09-08\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=500157
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280915-494676@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280915-494676@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280915
 DTEND;VALUE=DATE:20280916
@@ -1364,7 +1364,7 @@ DESCRIPTION:Retirement date: 2028-09-15\\nDate precision: day\\nSources: Az
 URL:https://azure.microsoft.com/updates/?id=494676
 END:VEVENT
 BEGIN:VEVENT
-UID:azure-retirement-20280915-493779@cloudplatformfeed.kailice.uk
+UID:azure-retirement-20280915-493779@cpfeed.cloud
 DTSTAMP:20260409T180331Z
 DTSTART;VALUE=DATE:20280915
 DTEND;VALUE=DATE:20280916
