@@ -263,6 +263,37 @@ header {
   padding-bottom: 0.15rem;
 }
 
+.filter-meta {
+  max-width: 1440px;
+  margin: 0.35rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.category-selection-summary {
+  color: var(--text-tertiary);
+  font-size: 0.76rem;
+}
+
+.filter-reset-btn {
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border-radius: 14px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+
+.filter-reset-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
 .pill {
   padding: 0.3rem 0.75rem;
   border-radius: 20px;
@@ -785,6 +816,13 @@ footer a:hover {
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x proximity;
+  }
+
+  .filter-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.25rem;
+    gap: 0.4rem;
   }
 
   .pill {

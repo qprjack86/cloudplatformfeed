@@ -71,6 +71,8 @@
   var dateFilter = document.getElementById("date-filter");
   var themeToggle = document.getElementById("theme-toggle");
   var filterPills = document.getElementById("filter-pills");
+  var categorySelectionSummary = document.getElementById("category-selection-summary");
+  var clearCategorySelectionButton = document.getElementById("clear-category-selection");
   var showingCount = document.getElementById("showing-count");
   var lastUpdated = document.getElementById("last-updated");
   var totalCount = document.getElementById("total-count");
@@ -1332,6 +1334,23 @@
     checksumWatcher.start();
   }
 
+  function updateCategorySelectionSummary() {
+    if (!categorySelectionSummary) return;
+
+    var activeCategories = getActiveCategories();
+    if (!activeCategories.length) {
+      categorySelectionSummary.textContent = "Tip: Ctrl/Cmd+click category pills to combine filters.";
+      if (clearCategorySelectionButton) hideElement(clearCategorySelectionButton);
+      return;
+    }
+
+    var label = activeCategories.length === 1
+      ? ("Category: " + activeCategories[0])
+      : ("Categories: " + activeCategories.length + " selected");
+    categorySelectionSummary.textContent = label;
+    if (clearCategorySelectionButton) showElement(clearCategorySelectionButton);
+  }
+
   function syncActiveCategoryPill() {
     var categoryButtons = filterPills.querySelectorAll(".category-pill");
     var activeFound = 0;
@@ -1361,6 +1380,7 @@
     }
 
     currentCategory = getPrimaryCategory();
+    updateCategorySelectionSummary();
   }
 
   // ===== Render Filter Pills (with category grouping) =====
@@ -2180,6 +2200,18 @@
         updateOtherBlogsToggleUI();
         renderFilters();
         renderBlogPills(getPrimaryCategory());
+        applyFilters();
+      });
+    }
+
+    if (clearCategorySelectionButton) {
+      clearCategorySelectionButton.addEventListener("click", function () {
+        selectedCategories = new Set(["all"]);
+        currentCategory = "all";
+        currentFilter = "all";
+        syncActiveCategoryPill();
+        saveCategorySelection();
+        renderBlogPills(currentCategory);
         applyFilters();
       });
     }
