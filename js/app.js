@@ -418,7 +418,7 @@
   function renderAnnouncementWindowHint() {
     return (
       '<p class="ai-summary-meta">' +
-      "Announcement window only: dates above reflect publish dates, and any retirement timing mentioned may be later." +
+      "Announcement window only: dates above reflect article publish dates. Any timings mentioned may be later." +
       "</p>"
     );
   }
@@ -455,6 +455,7 @@
 
       aiSummaryEl.innerHTML =
         "<h2>🤖 " + escapeHtml(m365Label) + "</h2>" +
+        renderAnnouncementWindowHint() +
         renderSummaryHtml(m365SummaryText);
       aiSummaryEl.classList.remove("is-unavailable");
       showElement(aiSummaryEl);
