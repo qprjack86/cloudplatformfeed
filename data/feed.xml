@@ -4,17 +4,89 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 10 Apr 2026 15:41:18 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2026 07:48:19 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[From Toil to Trust: How Azure SRE Agent Is Redefining Cloud Operations]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-toil-to-trust-how-azure-sre-agent-is-redefining-cloud/ba-p/4505875</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-toil-to-trust-how-azure-sre-agent-is-redefining-cloud/ba-p/4505875</guid>
+      <description><![CDATA[As Azure environments scale, infrastructure teams face a familiar challenge: operating reliably at scale.Outages are no longer caused by a single VM or misconfigured service—they emerge from complex dependencies across compute, networking, storage, and platform services. Azure SRE Agent is designed...]]></description>
+      <dc:creator><![CDATA[siddhigupta]]></dc:creator>
+      <pubDate>Sat, 11 Apr 2026 05:36:05 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[An update to the active flow billing model for Azure SRE Agent]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/an-update-to-the-active-flow-billing-model-for-azure-sre-agent/ba-p/4507866</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/an-update-to-the-active-flow-billing-model-for-azure-sre-agent/ba-p/4507866</guid>
+      <description><![CDATA[Earlier today, we announced that Azure SRE Agent now supports multiple AI model providers, starting with Anthropic. To support multi-model choice, and make active usage costs easier to understand, we’re updating how active flow usage is measured, effective April 15, 2026. At a glance What’s...]]></description>
+      <dc:creator><![CDATA[Mayunk_Jain]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 20:55:35 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[A third-party connector integrating Claude with Microsoft Sentinel is now available]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/a-third-party-connector-integrating-claude-with-microsoft/ba-p/4507013</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/a-third-party-connector-integrating-claude-with-microsoft/ba-p/4507013</guid>
+      <description><![CDATA[Security teams are increasingly exploring how AI assistants support them in investigating incidents, asking questions, and exploring their data. At the same time, controlling how data is accessed remains critical. Today, we’re sharing how Sentinel can support a third-party AI assistant like Claude...]]></description>
+      <dc:creator><![CDATA[mcasgrain]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 19:46:18 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
     <item>
       <title><![CDATA[Securing multicloud (Azure, AWS & GCP) with Microsoft Defender for Cloud: Connector best practices]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/securing-multicloud-azure-aws-gcp-with-microsoft-defender-for/ba-p/4508563</link>
       <guid>https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/securing-multicloud-azure-aws-gcp-with-microsoft-defender-for/ba-p/4508563</guid>
       <description><![CDATA[Many organizations run workloads across multiple cloud providers and need to maintain a strong security posture while ensuring interoperability. Microsoft Defender for Cloud is a cloud-native application protection platform (CNAPP) solution that helps secure these environments by providing unified...]]></description>
       <dc:creator><![CDATA[ckyalo]]></dc:creator>
-      <pubDate>Fri, 10 Apr 2026 11:43:36 GMT</pubDate>
+      <pubDate>Fri, 10 Apr 2026 18:03:39 GMT</pubDate>
       <category><![CDATA[Microsoft Defender for Cloud]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Announcing Azure MCP Server 2.0 Stable Release for Self-Hosted Agentic Cloud Automation]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-2-0-stable-release/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-2-0-stable-release/</guid>
+      <description><![CDATA[Azure MCP Server 2.0 is now generally available, delivering first-class self-hosting, stronger security hardening, and a faster foundation for agentic workflows across Azure. The post Announcing Azure MCP Server 2.0 Stable Release for Self-Hosted Agentic Cloud Automation appeared first on Azure SDK...]]></description>
+      <dc:creator><![CDATA[Sandeep Sen]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 17:16:10 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Event Grid as a destination for Stripe events now in Public Preview]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559836/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559836/</guid>
+      <description><![CDATA[Developers can now route Stripe events directly into Azure Event Grid and build scalable, event-driven architectures without managing webhook infrastructure or custom brokers.This means that Event Grid acts as a fully managed event broker between Stripe and other Azure services.Now Event Grid can...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 17:00:41 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Event Grid as a destination for Stripe events now in Public Preview]]></title>
+      <link>https://azure.microsoft.com/updates?id=559836</link>
+      <guid>https://azure.microsoft.com/updates?id=559836</guid>
+      <description><![CDATA[Developers can now route Stripe events directly into Azure Event Grid and build scalable, event-driven architectures without managing webhook infrastructure or custom brokers.This means that Event Grid acts as a fully managed event broker between Stripe aUpdate Type: Preview, Services: Event Grid,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 17:00:41 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Service Mesh-Aware Request Tracing in AKS with Istio and Application Insights]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/service-mesh-aware-request-tracing-in-aks-with-istio-and/ba-p/4509928</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/service-mesh-aware-request-tracing-in-aks-with-istio-and/ba-p/4509928</guid>
+      <description><![CDATA[Introduction As platforms evolve toward microservice‑based architectures, observability becomes more complex than ever. In Azure Kubernetes Service (AKS), teams often rely on Istio to manage service‑to‑service communication and Azure Application Insights for application‑level telemetry. While both...]]></description>
+      <dc:creator><![CDATA[Siddhi_Singh]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 16:37:58 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[How to Ingest Microsoft Intune Logs into Microsoft Sentinel]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-to-ingest-microsoft-intune-logs-into-microsoft-sentinel/ba-p/4508562</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-to-ingest-microsoft-intune-logs-into-microsoft-sentinel/ba-p/4508562</guid>
+      <description><![CDATA[For many organizations using Microsoft Intune to manage devices, integrating Intune logs into Microsoft Sentinel is an essential for security operations (Incorporate the device into the SEIM). By routing Intune’s device management and compliance data into your central SIEM, you gain a unified view...]]></description>
+      <dc:creator><![CDATA[PaulineMbabu]]></dc:creator>
+      <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
     </item>
     <item>
       <title><![CDATA[PHP 8.5 is now available on Azure App Service for Linux]]></title>
@@ -384,78 +456,6 @@
       <dc:creator><![CDATA[alinetran]]></dc:creator>
       <pubDate>Wed, 08 Apr 2026 06:40:42 GMT</pubDate>
       <category><![CDATA[Azure Arc]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Container Storage v2.1.0: Now GA with Elastic SAN]]></title>
-      <link>https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga</link>
-      <guid>https://blog.aks.azure.com/2026/04/08/acstor-v2.1-ga</guid>
-      <description><![CDATA[Explore what’s new in Azure Container Storage v2.1.0 with Elastic SAN integration, modular on-demand installation, and enhanced node selector support.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
-      <category><![CDATA[AKS Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Turn your agents into AKS experts: Agent Skills for AKS]]></title>
-      <link>https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks</link>
-      <guid>https://blog.aks.azure.com/2026/04/08/agent-skills-for-aks</guid>
-      <description><![CDATA[Announcing agent skills for AKS, easily pluggable into any agent to enhance them with built-in AKS expertise, safer workflows, and reduced developer overhead.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
-      <category><![CDATA[AKS Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Simplify Azure Arc Server Onboarding with Ansible and the New Onboarding Role]]></title>
-      <link>https://techcommunity.microsoft.com/blog/azurearcblog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new-onboarding-role/4509481</link>
-      <guid>https://techcommunity.microsoft.com/blog/azurearcblog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new-onboarding-role/4509481</guid>
-      <description><![CDATA[If you’re already using Ansible to manage your infrastructure, there’s now a simpler—and more secure—way to bring machines under Azure Arc management. We’ve introduced a new Azure Arc onboarding role...Update Type: Announcement, Services: Azure Arc, Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 23:40:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[3 Ways to Get More from Azure SRE Agent]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/3-ways-to-get-more-from-azure-sre-agent/ba-p/4508993</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/3-ways-to-get-more-from-azure-sre-agent/ba-p/4508993</guid>
-      <description><![CDATA[When you first set up Azure SRE Agent, it’s tempting to give it everything. Connect all your alert sources, route every severity, set up scheduled tasks to poll your channels every 30 seconds. The agent can handle all of it. But a few simple configuration choices can help you get more value from...]]></description>
-      <dc:creator><![CDATA[dchelupati]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 23:33:10 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Monitor in Azure SRE Agent: Autonomous Alert Investigation and Intelligent Merging]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-monitor-in-azure-sre-agent-autonomous-alert-investigation/ba-p/4509069</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-monitor-in-azure-sre-agent-autonomous-alert-investigation/ba-p/4509069</guid>
-      <description><![CDATA[Azure Monitor is great at telling you something is wrong. But once the alert fires, the real work begins — someone has to open the portal, triage it, dig into logs, and figure out what happened. That takes time. And while they're investigating, the same alert keeps firing every few minutes,...]]></description>
-      <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 22:20:53 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[MCP as Easy as 1-2-3: Introducing the Fluent API for MCP Apps]]></title>
-      <link>https://devblogs.microsoft.com/azure-sdk/mcp-as-easy-as-1-2-3-introducing-the-fluent-api-for-mcp-apps/</link>
-      <guid>https://devblogs.microsoft.com/azure-sdk/mcp-as-easy-as-1-2-3-introducing-the-fluent-api-for-mcp-apps/</guid>
-      <description><![CDATA[Build MCP tools with rich UI experiences using the new Fluent API for MCP Apps in the .NET isolated worker. Configure views, permissions, and security policies with just a few lines of code. The post MCP as Easy as 1-2-3: Introducing the Fluent API for MCP Apps appeared first on Azure SDK Blog.]]></description>
-      <dc:creator><![CDATA[Lilian Kasem (she/her)]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 21:16:11 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559547/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559547/</guid>
-      <description><![CDATA[Azure Red Hat OpenShift (ARO) now supports NVIDIA H100 and H200 GPU-based Azure Virtual Machine SKUs, enabling customers to run large-scale AI, machine learning, and high-performance computing (HPC) workloads on a fully managed OpenShift service. This update allows organizations to deploy...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 19:30:53 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support]]></title>
-      <link>https://azure.microsoft.com/updates?id=559547</link>
-      <guid>https://azure.microsoft.com/updates?id=559547</guid>
-      <description><![CDATA[Azure Red Hat OpenShift (ARO) now supports NVIDIA H100 and H200 GPU-based Azure Virtual Machine SKUs, enabling customers to run large-scale AI, machine learning, and high-performance computing (HPC) workloads on a fully managed OpenShift service. This updUpdate Type: GA, Services: Machine Learning,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 07 Apr 2026 19:30:53 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
