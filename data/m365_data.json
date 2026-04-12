@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T11:38:53.541322+00:00",
+  "generatedAt": "2026-04-12T15:28:07.655270+00:00",
   "totalArticles": 59,
   "articles": [
     {
@@ -1219,28 +1219,6 @@
       "_normalized_url": "message_center:MC1253746"
     },
     {
-      "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
-      "link": "https://deltapulse.app/item/553213",
-      "published": "2026-03-30T16:15:57.000Z",
-      "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "553213",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "July 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:553213"
-    },
-    {
       "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
       "link": "https://deltapulse.app/item/558538",
       "published": "2026-03-30T16:15:57.000Z",
@@ -1261,6 +1239,28 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "in_preview",
       "_normalized_url": "roadmap:558538"
+    },
+    {
+      "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
+      "link": "https://deltapulse.app/item/553213",
+      "published": "2026-03-30T16:15:57.000Z",
+      "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "553213",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "July 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:553213"
     },
     {
       "title": "Microsoft Teams: Attendee capacity packs for Teams events",
@@ -2686,28 +2686,6 @@
         "_normalized_url": "message_center:MC1249427"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
-        "link": "https://deltapulse.app/item/553213",
-        "published": "2026-03-30T16:15:57.000Z",
-        "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "553213",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:553213"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
         "link": "https://deltapulse.app/item/558538",
         "published": "2026-03-30T16:15:57.000Z",
@@ -2728,6 +2706,28 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558538"
+      },
+      {
+        "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
+        "link": "https://deltapulse.app/item/553213",
+        "published": "2026-03-30T16:15:57.000Z",
+        "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "553213",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:553213"
       },
       {
         "title": "Microsoft Teams: Attendee capacity packs for Teams events",
@@ -2866,28 +2866,6 @@
         "_normalized_url": "roadmap:557590"
       },
       {
-        "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
-        "link": "https://deltapulse.app/item/553213",
-        "published": "2026-03-30T16:15:57.000Z",
-        "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "553213",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "July 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:553213"
-      },
-      {
         "title": "Microsoft Copilot (Microsoft 365): Critique in Researcher",
         "link": "https://deltapulse.app/item/558538",
         "published": "2026-03-30T16:15:57.000Z",
@@ -2908,6 +2886,28 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:558538"
+      },
+      {
+        "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
+        "link": "https://deltapulse.app/item/553213",
+        "published": "2026-03-30T16:15:57.000Z",
+        "summary": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "553213",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:553213"
       }
     ],
     "launched_ga": [
@@ -4164,7 +4164,7 @@
   },
   "m365RetirementCalendar": [],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-12T11:38:53.541129+00:00",
+    "generatedAt": "2026-04-12T15:28:07.655059+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -4198,10 +4198,10 @@
     }
   },
   "m365Video": {
-    "title": "What's new in Microsoft 365",
-    "url": "https://www.youtube.com/watch?v=HdO9NV8a9yE&t=83s",
-    "published": "",
-    "thumbnail": "https://i.ytimg.com/vi/HdO9NV8a9yE/hqdefault.jpg"
+    "title": "What’s New in Microsoft 365 | Latest Updates",
+    "url": "https://www.youtube.com/watch?v=H9zJ5x99q98",
+    "published": "2026-03-29T13:01:14+00:00",
+    "thumbnail": "https://i1.ytimg.com/vi/H9zJ5x99q98/hqdefault.jpg"
   },
   "summaryPublishingDays": [
     "2026-04-10",
