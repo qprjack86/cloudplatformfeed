@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T08:02:00.789664+00:00",
+  "generatedAt": "2026-04-12T11:38:53.541322+00:00",
   "totalArticles": 59,
   "articles": [
     {
@@ -494,26 +494,26 @@
       "_normalized_url": "message_center:MC1275311"
     },
     {
-      "title": "Outlook: Upgraded Video and Audio Player for iOS",
-      "link": "https://deltapulse.app/item/560056",
+      "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
+      "link": "https://deltapulse.app/item/558853",
       "published": "2026-04-08T23:00:03.000Z",
-      "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
+      "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "560056",
+      "m365Id": "558853",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
-      "m365TargetDate": "May 2026",
+      "m365TargetDate": "June 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
       "m365RetirementDate": null,
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:560056"
+      "_normalized_url": "roadmap:558853"
     },
     {
       "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
@@ -538,26 +538,26 @@
       "_normalized_url": "roadmap:558933"
     },
     {
-      "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
-      "link": "https://deltapulse.app/item/558853",
+      "title": "Outlook: Upgraded Video and Audio Player for iOS",
+      "link": "https://deltapulse.app/item/560056",
       "published": "2026-04-08T23:00:03.000Z",
-      "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
+      "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558853",
+      "m365Id": "560056",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
       "m365Status": null,
-      "m365TargetDate": "June 2026",
+      "m365TargetDate": "May 2026",
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365IsMajorChange": false,
       "m365RetirementDate": null,
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:558853"
+      "_normalized_url": "roadmap:560056"
     },
     {
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
@@ -824,14 +824,14 @@
       "_normalized_url": "roadmap:559990"
     },
     {
-      "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
-      "link": "https://deltapulse.app/item/558689",
+      "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
+      "link": "https://deltapulse.app/item/559995",
       "published": "2026-04-07T23:00:18.000Z",
-      "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
+      "summary": "Enable Global and Insights admins to turn on additional attributes as filters in Power BI reports, including reserved attributes and your organization’s custom attributes. Users who have access to Power BI reports can then use these newly enabled filters to tailor reports to their business needs.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "558689",
+      "m365Id": "559995",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -842,8 +842,8 @@
       "m365IsMajorChange": false,
       "m365RetirementDate": null,
       "m365RetirementDatePrecision": null,
-      "lifecycle": "in_preview",
-      "_normalized_url": "roadmap:558689"
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:559995"
     },
     {
       "title": "Microsoft Viva: New Overview experience and agent categories in Agent Dashboard",
@@ -868,14 +868,14 @@
       "_normalized_url": "roadmap:559996"
     },
     {
-      "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
-      "link": "https://deltapulse.app/item/559995",
+      "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
+      "link": "https://deltapulse.app/item/558689",
       "published": "2026-04-07T23:00:18.000Z",
-      "summary": "Enable Global and Insights admins to turn on additional attributes as filters in Power BI reports, including reserved attributes and your organization’s custom attributes. Users who have access to Power BI reports can then use these newly enabled filters to tailor reports to their business needs.",
+      "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
       "source": "m365",
       "m365Service": "Microsoft 365",
       "m365AllServices": [],
-      "m365Id": "559995",
+      "m365Id": "558689",
       "m365Source": "roadmap",
       "m365Category": "",
       "m365Severity": null,
@@ -886,8 +886,8 @@
       "m365IsMajorChange": false,
       "m365RetirementDate": null,
       "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:559995"
+      "lifecycle": "in_preview",
+      "_normalized_url": "roadmap:558689"
     },
     {
       "title": "Power Apps - Microsoft 365 Copilot will be available in model-driven apps",
@@ -2347,26 +2347,26 @@
         "_normalized_url": "message_center:MC1275564"
       },
       {
-        "title": "Outlook: Upgraded Video and Audio Player for iOS",
-        "link": "https://deltapulse.app/item/560056",
+        "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
+        "link": "https://deltapulse.app/item/558853",
         "published": "2026-04-08T23:00:03.000Z",
-        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
+        "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "560056",
+        "m365Id": "558853",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "May 2026",
+        "m365TargetDate": "June 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560056"
+        "_normalized_url": "roadmap:558853"
       },
       {
         "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
@@ -2391,26 +2391,26 @@
         "_normalized_url": "roadmap:558933"
       },
       {
-        "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
-        "link": "https://deltapulse.app/item/558853",
+        "title": "Outlook: Upgraded Video and Audio Player for iOS",
+        "link": "https://deltapulse.app/item/560056",
         "published": "2026-04-08T23:00:03.000Z",
-        "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
+        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558853",
+        "m365Id": "560056",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "June 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558853"
+        "_normalized_url": "roadmap:560056"
       },
       {
         "title": "Upcoming change: Microsoft 365 Apps SAEC and MEC will unify",
@@ -2484,14 +2484,14 @@
         "_normalized_url": "roadmap:559990"
       },
       {
-        "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
-        "link": "https://deltapulse.app/item/558689",
+        "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
+        "link": "https://deltapulse.app/item/559995",
         "published": "2026-04-07T23:00:18.000Z",
-        "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
+        "summary": "Enable Global and Insights admins to turn on additional attributes as filters in Power BI reports, including reserved attributes and your organization’s custom attributes. Users who have access to Power BI reports can then use these newly enabled filters to tailor reports to their business needs.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558689",
+        "m365Id": "559995",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -2502,8 +2502,8 @@
         "m365IsMajorChange": false,
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558689"
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:559995"
       },
       {
         "title": "Microsoft Viva: New Overview experience and agent categories in Agent Dashboard",
@@ -2528,14 +2528,14 @@
         "_normalized_url": "roadmap:559996"
       },
       {
-        "title": "Microsoft Viva: Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering",
-        "link": "https://deltapulse.app/item/559995",
+        "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
+        "link": "https://deltapulse.app/item/558689",
         "published": "2026-04-07T23:00:18.000Z",
-        "summary": "Enable Global and Insights admins to turn on additional attributes as filters in Power BI reports, including reserved attributes and your organization’s custom attributes. Users who have access to Power BI reports can then use these newly enabled filters to tailor reports to their business needs.",
+        "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "559995",
+        "m365Id": "558689",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
@@ -2546,8 +2546,8 @@
         "m365IsMajorChange": false,
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559995"
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558689"
       },
       {
         "title": "(Updated) Viva Engage: Feature conversations to all network members",
@@ -2778,28 +2778,6 @@
   "byLifecycle": {
     "in_preview": [
       {
-        "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
-        "link": "https://deltapulse.app/item/558689",
-        "published": "2026-04-07T23:00:18.000Z",
-        "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "558689",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "in_preview",
-        "_normalized_url": "roadmap:558689"
-      },
-      {
         "title": "Microsoft Viva: New Overview experience and agent categories in Agent Dashboard",
         "link": "https://deltapulse.app/item/559996",
         "published": "2026-04-07T23:00:18.000Z",
@@ -2820,6 +2798,28 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "in_preview",
         "_normalized_url": "roadmap:559996"
+      },
+      {
+        "title": "Outlook: Data Loss Prevention (DLP) Policy Tips & Override in Outlook for Mac",
+        "link": "https://deltapulse.app/item/558689",
+        "published": "2026-04-07T23:00:18.000Z",
+        "summary": "Outlook for Mac now supports Data Loss Prevention (DLP) policy tips, helping users avoid accidental data leaks. When sensitive content is detected, users are alerted with inline tips or pop-ups, based on admin-configured rules.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "558689",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "in_preview",
+        "_normalized_url": "roadmap:558689"
       },
       {
         "title": "Microsoft Purview: Information Protection - Exclude modern groups / include dynamic security groups support for sensitivity label policies",
@@ -3355,26 +3355,26 @@
         "_normalized_url": "message_center:MC1275311"
       },
       {
-        "title": "Outlook: Upgraded Video and Audio Player for iOS",
-        "link": "https://deltapulse.app/item/560056",
+        "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
+        "link": "https://deltapulse.app/item/558853",
         "published": "2026-04-08T23:00:03.000Z",
-        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
+        "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "560056",
+        "m365Id": "558853",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "May 2026",
+        "m365TargetDate": "June 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560056"
+        "_normalized_url": "roadmap:558853"
       },
       {
         "title": "Microsoft Teams: AI-generated meeting archive for knowledge retention",
@@ -3399,26 +3399,26 @@
         "_normalized_url": "roadmap:558933"
       },
       {
-        "title": "Microsoft Teams: Entra passwordless resource account support for Teams Rooms on Windows devices",
-        "link": "https://deltapulse.app/item/558853",
+        "title": "Outlook: Upgraded Video and Audio Player for iOS",
+        "link": "https://deltapulse.app/item/560056",
         "published": "2026-04-08T23:00:03.000Z",
-        "summary": "Teams rooms on Windows supports Entra Resource Accounts for secure, passwordless sign-in that separates device and user identities. IT admins can migrate to Entra accounts easily with the migration wizard, and track progress using a dashboard in the Pro Management portal.",
+        "summary": "Preview videos and audio files with an improved player directly in the Outlook iOS mobile app. The enhanced player provides updated controls and a smoother playback experience.",
         "source": "m365",
         "m365Service": "Microsoft 365",
         "m365AllServices": [],
-        "m365Id": "558853",
+        "m365Id": "560056",
         "m365Source": "roadmap",
         "m365Category": "",
         "m365Severity": null,
         "m365Status": null,
-        "m365TargetDate": "June 2026",
+        "m365TargetDate": "May 2026",
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365IsMajorChange": false,
         "m365RetirementDate": null,
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:558853"
+        "_normalized_url": "roadmap:560056"
       },
       {
         "title": "Microsoft Teams: Book future meetings from Microsoft Teams panels (Android)",
@@ -4164,7 +4164,7 @@
   },
   "m365RetirementCalendar": [],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-12T08:02:00.789495+00:00",
+    "generatedAt": "2026-04-12T11:38:53.541129+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -4198,10 +4198,10 @@
     }
   },
   "m365Video": {
-    "title": "What’s New in Microsoft 365 | Latest Updates",
-    "url": "https://www.youtube.com/watch?v=H9zJ5x99q98",
-    "published": "2026-03-29T13:01:14+00:00",
-    "thumbnail": "https://i1.ytimg.com/vi/H9zJ5x99q98/hqdefault.jpg"
+    "title": "What's new in Microsoft 365",
+    "url": "https://www.youtube.com/watch?v=HdO9NV8a9yE&t=83s",
+    "published": "",
+    "thumbnail": "https://i.ytimg.com/vi/HdO9NV8a9yE/hqdefault.jpg"
   },
   "summaryPublishingDays": [
     "2026-04-10",
