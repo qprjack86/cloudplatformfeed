@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sat, 11 Apr 2026 15:24:32 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 08:01:52 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Azure Red Hat OpenShift: Managed Identity and Workload Identity now generally available]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-managed-identity-and-workload-identity/ba-p/4504940</guid>
+      <description><![CDATA[Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, so you can run OpenShift clusters and applications on Azure without long-lived service principal credentials.​ ARO, identity, and Azure governance With GA support for managed...]]></description>
+      <dc:creator><![CDATA[MelanieKraintz007]]></dc:creator>
+      <pubDate>Sat, 11 Apr 2026 23:03:17 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[From Toil to Trust: How Azure SRE Agent Is Redefining Cloud Operations]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-toil-to-trust-how-azure-sre-agent-is-redefining-cloud/ba-p/4505875</link>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Lee_Stott]]></dc:creator>
       <pubDate>Wed, 08 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Simplify Azure Arc Server Onboarding with Ansible and the New Onboarding Role]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new/ba-p/4509481</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/simplify-azure-arc-server-onboarding-with-ansible-and-the-new/ba-p/4509481</guid>
-      <description><![CDATA[If you’re already using Ansible to manage your infrastructure, there’s now a simpler—and more secure—way to bring machines under Azure Arc management. We’ve introduced a new Azure Arc onboarding role designed specifically for automated scenarios like Ansible playbooks. This role follows the...]]></description>
-      <dc:creator><![CDATA[alinetran]]></dc:creator>
-      <pubDate>Wed, 08 Apr 2026 06:40:42 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
     </item>
   </channel>
 </rss>
