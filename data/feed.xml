@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 13 Apr 2026 09:05:57 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 09:33:11 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Connecting an ExpressRoute circuit to Megaport Virtual Edge]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/connecting-an-expressroute-circuit-to-megaport-virtual-edge/ba-p/4510770</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/connecting-an-expressroute-circuit-to-megaport-virtual-edge/ba-p/4510770</guid>
+      <description><![CDATA[Megaport is an ExpressRoute partner in many locations. The Megaport Cloud Router (MCR) allows ExpressRoute customers to connect leased lines to their on-premise locations, and to connect other Cloud Providers. MCR is easy to set up and operate, it even automatically configures the ExpressRoute...]]></description>
+      <dc:creator><![CDATA[Marc de Droog]]></dc:creator>
+      <pubDate>Mon, 13 Apr 2026 09:31:17 GMT</pubDate>
+      <category><![CDATA[Azure Networking]]></category>
+    </item>
     <item>
       <title><![CDATA[Migrate Data Ingestion from Data Collector to Log Ingestion]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/migrate-data-ingestion-from-data-collector-to-log-ingestion/ba-p/4510493</link>
@@ -444,15 +453,6 @@
       <link>https://azure.microsoft.com/updates?id=560039</link>
       <guid>https://azure.microsoft.com/updates?id=560039</guid>
       <description><![CDATA[AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilizatioUpdate Type: GA, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Files assessments are now available using Azure Migrate]]></title>
-      <link>https://azure.microsoft.com/updates?id=560025</link>
-      <guid>https://azure.microsoft.com/updates?id=560025</guid>
-      <description><![CDATA[Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility intUpdate Type: Preview, Services: Azure...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
