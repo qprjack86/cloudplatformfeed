@@ -650,17 +650,7 @@ def _is_retirement_date_future(value: str, today=None) -> bool:
         return (int(year), int(month)) >= (reference.year, reference.month)
 
     sort_dt = _parse_retirement_calendar_sort_date(raw)
-    if not sort_dt:
-        return False
-
-    candidate = sort_dt.date()
-    if candidate >= reference:
-        return True
-
-    # Keep exact day precision for dates earlier in the current month so the
-    # calendar does not degrade precise known dates (e.g., "April 1, 2026")
-    # to month-only values while the month is still active.
-    return (candidate.year, candidate.month) == (reference.year, reference.month)
+    return bool(sort_dt and sort_dt.date() >= reference)
 
 
 def _normalize_retirement_date_candidate(match: re.Match[str], precision: str):
