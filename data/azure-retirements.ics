@@ -9,7 +9,7 @@ X-WR-CALDESC:Upcoming Azure and curated Microsoft lifecycle retirements fro
 BEGIN:VEVENT
 UID:azure-retirement-20260428-application-gateway-v1-will-be-retired-on-28-
  april-2026-transition-to-application-gateway-v2@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260428
 DTEND;VALUE=DATE:20260429
 SUMMARY:Application gateway - V1
@@ -20,7 +20,7 @@ URL:https://azure.microsoft.com/updates?id=application-gateway-v1-will-be-r
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260430-485072@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
 SUMMARY:App service - Support for Node 20 LTS
@@ -30,7 +30,7 @@ URL:https://azure.microsoft.com/updates/?id=485072
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260430-558102@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
 SUMMARY:Azure Policy faster enforcement and retirement of login/logout work
@@ -42,7 +42,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260430-retirement-notice-custom-commands-will-retire
  -on-30-april-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
 SUMMARY:Cognitive Service - Azure AI Speech - Custom Commands
@@ -53,7 +53,7 @@ URL:https://azure.microsoft.com/updates?id=retirement-notice-custom-command
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260515-557224@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
 SUMMARY:Windows Server Annual Channel (preview)
@@ -64,7 +64,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260531-volume-create-basic-networking-volumes@cpfeed
  .cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260531
 DTEND;VALUE=DATE:20260601
 SUMMARY:Volume - Create basic networking volumes
@@ -76,7 +76,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260601-cost-management-download-by-billing-account-a
  pi-version-retirement@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:Microsoft Entra Domain Service - Azure Price Sheet - Download by Bi
@@ -88,7 +88,7 @@ URL:https://azure.microsoft.com/updates?id=Cost-Management-Download-by-Bill
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260608-557929@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260608
 DTEND;VALUE=DATE:20260609
 SUMMARY:Flatcar Container Linux for AKS (preview)
@@ -98,7 +98,7 @@ URL:https://azure.microsoft.com/en-us/updates/557929/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260630-501668@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Remove dependency on these Azure ML SDKs before June 30\, 2026
@@ -109,7 +109,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260630-sql-server-microsoft-sql-2014-04-01-stab@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:SQL server - Microsoft.SQL 2014-04-01 stable APIs
@@ -119,7 +119,7 @@ URL:https://learn.microsoft.com/rest/api/sql/retirement
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260630-496104@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Virtual machine - DCsv2-series
@@ -130,7 +130,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260714-microsoft-sharepoint-2016-security-suppo@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
 SUMMARY:Microsoft SharePoint 2016 - Security support ends
@@ -141,7 +141,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260714-microsoft-sharepoint-2019-security-suppo@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
 SUMMARY:Microsoft SharePoint 2019 - Security support ends
@@ -152,7 +152,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260714-microsoft-sql-server-2016-sp3-active-sup@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
 SUMMARY:Microsoft SQL Server 2016 SP3 - Active support ends
@@ -163,7 +163,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260714-microsoft-sql-server-2016-sp3-security-s@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
 SUMMARY:Microsoft SQL Server 2016 SP3 - Security support ends
@@ -174,7 +174,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260714-microsoft-visual-studio-2022-17-12-ltsc-@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
 SUMMARY:Microsoft Visual Studio 2022 - 17.12 (LTSC) - Security support ends
@@ -185,7 +185,7 @@ URL:https://learn.microsoft.com/visualstudio/releases/2022/release-notes-v1
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260731-551523@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260731
 DTEND;VALUE=DATE:20260801
 SUMMARY:"Send data to Event Hubs & Storage (Preview)" retiring July 31\, 20
@@ -196,7 +196,7 @@ URL:https://azure.microsoft.com/en-us/updates/551523/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260801-498749@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
 SUMMARY:Microsoft Defender for Cloud Deprecation in Microsoft Azure Operate
@@ -207,7 +207,7 @@ URL:https://azure.microsoft.com/updates?id=498749
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260801-498754@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
 SUMMARY:Microsoft Sentinel Deprecation in Microsoft Azure operated by 21Via
@@ -219,7 +219,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260831-retirement-azure-ai-document-intelligence-v20
  -api-will-be-retired-on-31-august-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
 SUMMARY:Cognitive Service - v2.0 API
@@ -231,7 +231,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260831-migrate-to-azure-ai-document-intelligence-v31
  -ga-version@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
 SUMMARY:Migrate to Azure AI Document Intelligence v3.1 GA version
@@ -243,7 +243,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260913-computer-vision-api-retirements-13-9-2026@cpf
  eed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260913
 DTEND;VALUE=DATE:20260914
 SUMMARY:Cognitive Service - Computer Vision API v1.0\, v2.0\, v2.1\, v3.0. 
@@ -256,7 +256,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260914-support-for-the-1x-version-of-azure-functions
  -ends-14-september-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260915
 SUMMARY:App service - Version 1.x runtime
@@ -268,7 +268,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260914-azure-monitor-for-aksengine-will-not-be-suppo
  rted-on-14-september-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260915
 SUMMARY:Application Insights - Monitoring Support
@@ -280,7 +280,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260914-log-analytics-workspace-http-data-collec@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260915
 SUMMARY:Log Analytics workspace - HTTP Data Collector API
@@ -292,7 +292,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260915-azure-maps-gen1-price-tier-retirement@cpfeed.
  cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260915
 DTEND;VALUE=DATE:20260916
 SUMMARY:Azure Maps Account - Gen1 price tier
@@ -304,7 +304,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260915-azure-activity-logs-legacy-solution-is-replac
  ed-by-diagnostic-settings@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260915
 DTEND;VALUE=DATE:20260916
 SUMMARY:Azure Monitor workspace - Azure Monitor - Legacy Azure Activity log
@@ -317,7 +317,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260917-azure-maps-render-v1-apis-will-be-retired-on-
  17-september-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260917
 DTEND;VALUE=DATE:20260918
 SUMMARY:Azure Maps Account - Render V1 APIs
@@ -329,7 +329,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260918-azure-monitor-data-collection-api-retirement@
  cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260918
 DTEND;VALUE=DATE:20260919
 SUMMARY:Azure Monitor Data Collection API Retirement
@@ -341,7 +341,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260919-azure-maps-web-sdk-map-controls-version-1xx-w
  ill-be-retired-on-19-september-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20260920
 SUMMARY:Azure Maps Account - Web SDK Map Controls v1.xx
@@ -354,7 +354,7 @@ BEGIN:VEVENT
 UID:azure-retirement-20260921-smart-on-fhir-proxy-feature-in-azure-health-d
  ata-services-will-be-retired-on-21st-september-2026-transition-to-smart-on
  -fhir@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260921
 DTEND;VALUE=DATE:20260922
 SUMMARY:FHIR service - SMART on FHIR proxy
@@ -367,7 +367,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-action-required-migrate-to-using-arg-query-fo
  r-get-alert-summary-in-azure-monitor@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Activity log alert rule - Alerts - GetAlertSummary API
@@ -380,7 +380,7 @@ BEGIN:VEVENT
 UID:azure-retirement-20260930-transition-to-using-standard-tests-for-single
  step-availability-testing-in-azure-monitor-application-insights-by-30-sept
  ember@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Availability test - Single URL Ping Test
@@ -392,7 +392,7 @@ URL:https://azure.microsoft.com/updates?id=transition-to-using-standard-tes
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-azure-api-for-fhir-retirement@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Azure API for FHIR - Entire service
@@ -404,7 +404,7 @@ BEGIN:VEVENT
 UID:azure-retirement-20260930-azure-maps-web-sdk-map-control-version-20x-an
  d-azure-maps-service-module-will-be-retired-on-30-september-2026@cpfeed.cl
  oud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Azure Maps Web SDK Map Control version 2.0.x and Azure Maps Service
@@ -418,7 +418,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-azure-monitor-workspace-azure-monitor-co@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Azure Monitor workspace - Azure Monitor - ContainerLog table
@@ -430,7 +430,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-we-re-ending-support-for-the-20170301ga-api@c
  pfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Container registry - 2017-01-01-(GA) API
@@ -441,7 +441,7 @@ URL:https://azure.microsoft.com/updates/we-re-ending-support-for-the-201703
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-516070@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:End of life reminder of NVv3 and NVv4-series Azure virtual machine 
@@ -452,7 +452,7 @@ URL:https://azure.microsoft.com/en-us/updates/516070/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-557406@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:External Data Import & Data Connections in Azure Machine Learning w
@@ -463,7 +463,7 @@ URL:https://azure.microsoft.com/en-us/updates/557406/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-500273@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Kubernetes service - Azure Network Policy Manager (NPM) For Windows
@@ -473,7 +473,7 @@ URL:https://azure.microsoft.com/updates/?id=500273
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-500853@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Kubernetes service - Legacy authentication for Container Insights -
@@ -485,7 +485,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-migrate-to-azure-resource-manager-control-pla
  ne-api-version-20211101-by-30-september-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Migrate to Azure Resource Manager control plane API version 2021-11
@@ -498,7 +498,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-retirement-notice-update-your-azure-service-b
  us-sdk-libraries-by-30-september-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Service bus namespace - WindowsAzure.ServiceBus\, Microsoft.Azure.S
@@ -510,7 +510,7 @@ URL:https://azure.microsoft.com/updates/retirement-notice-update-your-azure
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-501673@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:SQL managed instance - Azure Monitor SCOM Managed Instance
@@ -520,7 +520,7 @@ URL:https://azure.microsoft.com/updates/?id=501673
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-498563@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Storage Account - Azure Blob Storage - BlobFuse v1
@@ -531,7 +531,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-subscription-azure-virtual-desktop-class@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Subscription - Azure Virtual Desktop Classic
@@ -542,7 +542,7 @@ URL:https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-500578@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Virtual machine - NVv4-series Azure Virtual Machines
@@ -553,7 +553,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20260930-vpngw1-5-non-az-skus-will-be-retired-on-30-se
  ptember-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Virtual network gateway - Non-AZ VPNs
@@ -565,7 +565,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-ai-services-anomaly-detector-will-be-retired-
  on-1-october-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Cognitive Service - Azure Anomaly Detector
@@ -577,7 +577,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-ai-services-metrics-advisor-will-be-retired-o
  n-1-october-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Cognitive Service - Azure Metrics Advisor
@@ -589,7 +589,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-ai-services-personalizer-will-be-retired-on-1
  -october-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Cognitive Service - Azure Personalizer
@@ -602,7 +602,7 @@ BEGIN:VEVENT
 UID:azure-retirement-20261001-azure-ai-translator-s2s4-billing-instances-wi
  ll-be-retired-on-1-october-2026-transition-to-commitment-tiers-for-discoun
  ted-pr@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Cognitive Service - S2\, S3\, and S4 price instances
@@ -614,7 +614,7 @@ URL:https://azure.microsoft.com/updates/azure-ai-translator-s2s4-billing-in
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-202610-502623@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Databricks Workspace - Azure Databricks - Standard Tier
@@ -625,7 +625,7 @@ URL:https://azure.microsoft.com/updates/?id=502623
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-485030@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:SQL database - FSV2 Database
@@ -635,7 +635,7 @@ URL:https://azure.microsoft.com/updates/?id=485030
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261001-545771@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Support for Python 3.10 ends on October 1\, 2026 – upgrade your Azu
@@ -647,7 +647,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261013-microsoft-windows-server-windows-server-@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Microsoft Windows Server Windows Server 2022 (LTSC) - Active suppor
@@ -659,7 +659,7 @@ URL:https://learn.microsoft.com/windows/release-health/windows-server-relea
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261013-496964@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Storage Account - Legacy Blob and General-Purpose v1 storage accoun
@@ -670,7 +670,7 @@ URL:https://azure.microsoft.com/updates/?id=496964
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261031-513892@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:Deprecation of Custom Resource Providers
@@ -680,7 +680,7 @@ URL:https://azure.microsoft.com/en-us/updates/513892/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261031-499906@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
 SUMMARY:Kubernetes - Azure Arc - Windows Server 2022 SKU on AKS Arc
@@ -690,7 +690,7 @@ URL:https://azure.microsoft.com/updates/?id=499906
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261110-485077@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:App service - .NET 9 (STS)
@@ -701,7 +701,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261110-retirement-support-for-the-inprocess-model-fo
  r-net-apps-in-azure-functions-ends-10-november-2026@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:App service - In-process model
@@ -713,7 +713,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261110-microsoft-net-8-lts-security-support-end@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Microsoft .NET 8 (LTS) - Security support ends
@@ -725,7 +725,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261110-microsoft-net-9-security-support-ends@cpfeed.
  cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Microsoft .NET 9 - Security support ends
@@ -737,7 +737,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261110-microsoft-powershell-7-4-lts-security-su@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Microsoft PowerShell 7.4 (LTS) - Security support ends
@@ -748,7 +748,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261110-microsoft-powershell-7-5-security-suppor@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261111
 SUMMARY:Microsoft PowerShell 7.5 - Security support ends
@@ -758,7 +758,7 @@ URL:https://github.com/PowerShell/PowerShell/releases/tag/v7.5.5
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261130-555839@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:Kubernetes service - Nginx ingress in application routing add-on
@@ -768,7 +768,7 @@ URL:https://azure.microsoft.com/en-us/updates/555839/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261231-php-82-app-svc@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:App service - PHP 8.2
@@ -778,7 +778,7 @@ URL:https://azure.microsoft.com/updates?id=php-82-app-svc
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20261231-fxtretirement@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:Microsoft Entra Domain Service - Azure FXT Edge Filer - Entire serv
@@ -790,7 +790,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270112-microsoft-net-framework-4-6-2-security-s@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:Microsoft .NET Framework 4.6.2 - Security support ends
@@ -801,7 +801,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270112-hpc-pack-2016-will-be-retired-on-12-january-2
  027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:Subscription - HPC Pack 2016
@@ -812,7 +812,7 @@ URL:https://azure.microsoft.com/updates/hpc-pack-2016-will-be-retired-on-12
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270112-549077@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:Support for Windows Server 2016 Marketplace images on Azure Batch p
@@ -824,7 +824,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270227-key-vault-api-versions-prior-to-2026-02-@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
 SUMMARY:Key vault - API versions prior to 2026-02-01
@@ -835,7 +835,7 @@ URL:https://learn.microsoft.com/azure/key-vault/general/access-control-defa
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-202703-558276@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270301
 DTEND;VALUE=DATE:20270302
 SUMMARY:AzureDnsEndpoints for Azure storage accounts will be retired March 
@@ -849,7 +849,7 @@ BEGIN:VEVENT
 UID:azure-retirement-20270315-begin-using-azure-monitor-based-dashboards-in
  -azure-api-management-before-the-builtin-analytics-dashboards-are-retired-
  on-15@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Api Management - Built-in Analytics
@@ -862,7 +862,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270315-azure-content-moderator-retirement@cpfeed.clo
  ud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Cognitive Service - Azure Content Moderator
@@ -874,7 +874,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270315-kubernetes-service-windows-server-2022@cpfeed
  .cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Kubernetes service - Windows Server 2022
@@ -885,7 +885,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270315-retirement-support-for-application-gateway-we
  b-application-firewall-v2-configuration-is-ending@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
 SUMMARY:Support for Application Gateway Web Application Firewall v2 Configu
@@ -898,7 +898,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-application-gateway-waf-v2-config@cpfeed.clou
  d
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Application gateway - WAF v2 Config
@@ -910,7 +910,7 @@ URL:https://learn.microsoft.com/azure/web-application-firewall/ag/upgrade-a
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-499606@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Azure Managed Redis - Redis Enterprise
@@ -920,7 +920,7 @@ URL:https://azure.microsoft.com/updates/?id=499606
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-558086@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Azure SQL Elastic query - Shard_Map_Manager mode
@@ -930,7 +930,7 @@ URL:https://azure.microsoft.com/en-us/updates/558086/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-499923@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Azure VPN Gateway support for SSTP Protocol will be retired on Marc
@@ -942,7 +942,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-long-audio-api-will-be-retired-on-31-march-20
  27-migrate-to-the-new-batch-synthesis-api@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Cognitive Service - Long audio API
@@ -953,7 +953,7 @@ URL:https://azure.microsoft.com/updates/long-audio-api-will-be-retired-on-3
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-550519@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Deprecation of sidecar for remote-write for Azure Monitor managed s
@@ -964,7 +964,7 @@ URL:https://azure.microsoft.com/en-us/updates/550519/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-558278@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Emissions Impact Dashboard for Azure
@@ -975,7 +975,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-azure-front-door-classic-will-be-retired-on-3
  1-march-2027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Front Door Web Application Firewall policy - Classic
@@ -986,7 +986,7 @@ URL:https://azure.microsoft.com/updates/azure-front-door-classic-will-be-re
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-558027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Python support for Azure App Service and Azure Functions on Windows
@@ -997,7 +997,7 @@ URL:https://azure.microsoft.com/en-us/updates/558027/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-558247@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Service Fabric support for Windows Server 2022 ends on March 31\, 2
@@ -1009,7 +1009,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-support-for-standardm192idmsv2-will-be-retire
  d-on-31-march-2027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Virtual machine - Standard_M192idms_v2
@@ -1021,7 +1021,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-community-support-for-standardm192idsv2-is-en
  ding-on-31-march-2027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Virtual machine - Standard_M192ids_v2
@@ -1033,7 +1033,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-community-support-for-standardm192imsv2-is-en
  ding-on-31-march-2027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Virtual machine - Standard_M192ims_v2
@@ -1045,7 +1045,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270331-community-support-for-standardm192isv2-is-end
  ing-on-31-march-2027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Virtual machine - Standard_M192is_v2
@@ -1058,7 +1058,7 @@ BEGIN:VEVENT
 UID:azure-retirement-20270401-were-retiring-memory-optimized-data-flows-in-
  azure-data-factory-use-general-purpose-for-better-performance-at-a-lower-p
  rice@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Data factory - Memory Optimized Data Flows
@@ -1071,7 +1071,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270413-microsoft-visual-studio-2017-15-9-securi@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270413
 DTEND;VALUE=DATE:20270414
 SUMMARY:Microsoft Visual Studio 2017 - 15.9 - Security support ends
@@ -1082,7 +1082,7 @@ URL:https://learn.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#1
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270531-548525@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:HBv2-series Azure Virtual Machines will be retired on May 31\, 2027
@@ -1092,7 +1092,7 @@ URL:https://azure.microsoft.com/en-us/updates/548525/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270531-548543@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:HC-series Azure Virtual Machines will be retired on May 31\, 2027
@@ -1102,7 +1102,7 @@ URL:https://azure.microsoft.com/en-us/updates/548543/
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270531-548497@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:NP-series Azure Virtual Machines will be retired on May 31\, 2027
@@ -1113,7 +1113,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270628-azure-lab-services-is-being-retired@cpfeed.cl
  oud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270628
 DTEND;VALUE=DATE:20270629
 SUMMARY:Lab plan - V1 and V2
@@ -1125,7 +1125,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270701-fluidrelay-server-outdated-client-librar@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270701
 DTEND;VALUE=DATE:20270702
 SUMMARY:FluidRelay Server - Outdated client library
@@ -1137,7 +1137,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270901-end-of-support-announcement-for-azure-load-ba
  lancer-numberofprobes-property-on-1-september-2027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270901
 DTEND;VALUE=DATE:20270902
 SUMMARY:End of Support Announcement for Azure Load Balancer numberOfProbes 
@@ -1150,7 +1150,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270915-azure-docuement-intelligence-v2-retirement@cp
  feed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
 SUMMARY:Cognitive Service - Studio v2.1
@@ -1162,7 +1162,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270915-automated-patching-deprecation-and-replacemen
  t-with-azure-update-manager@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270915
 DTEND;VALUE=DATE:20270916
 SUMMARY:SQL virtual machine - Azure SQL - Automated patching for SQL VMs
@@ -1174,7 +1174,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270923-azure-site-recovery-classic-alerts-retirement
  @cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270923
 DTEND;VALUE=DATE:20270924
 SUMMARY:Recovery Services vault - Classic Alerts
@@ -1186,7 +1186,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270927-azure-sphere-legacy-interface-retirement@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270927
 DTEND;VALUE=DATE:20270928
 SUMMARY:Azure Sphere Catalog - Public API
@@ -1198,7 +1198,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-azure-automanage-best-practices-retirement-mi
  grate-to-azure-policy@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
 SUMMARY:Automation account - Best Practices
@@ -1210,7 +1210,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-planned-service-retirement-azure-automation-s
  tate-configuration-16-september-2027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
 SUMMARY:Automation account - State Configuration (DSC)
@@ -1221,7 +1221,7 @@ URL:https://azure.microsoft.com/updates/v2/Planned-Service-Retirement-Azure
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-azure-nsg-flow-logs-retirement@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
 SUMMARY:Flow Log - NSG Flow Logs
@@ -1232,7 +1232,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-azure-cdn-standard-from-microsoft-classic-wil
  l-be-retired-on-30-september-2027@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
 SUMMARY:Front Door Profile - Standard from Microsoft (classic)
@@ -1244,7 +1244,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-open-service-mesh-extension-for-aks-retiremen
  t@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
 SUMMARY:Kubernetes - Azure Arc - Open Service Mesh add-on
@@ -1256,7 +1256,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-retirement-notice-azure-load-balancer-inbound
  -nat-rule-v1-for-azure-vms-and-azure-vmss-will-be-retired@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
 SUMMARY:Load balancer - Inbound NAT rule V1
@@ -1267,7 +1267,7 @@ URL:https://azure.microsoft.com/updates?id=Retirement-notice-Azure-Load-Bal
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20270930-sql-data-sync-retirement@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
 SUMMARY:SQL database - Data Sync
@@ -1278,7 +1278,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20271012-microsoft-sql-server-2017-helsinki-secur@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20271012
 DTEND;VALUE=DATE:20271013
 SUMMARY:Microsoft SQL Server 2017 'Helsinki' - Security support ends
@@ -1288,7 +1288,7 @@ URL:https://support.microsoft.com/help/5077471
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20271031-467330@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20271031
 DTEND;VALUE=DATE:20271101
 SUMMARY:Azure Stream Analytics PowerBI output connector
@@ -1299,7 +1299,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280111-microsoft-sql-server-2022-dallas-active-@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20280111
 DTEND;VALUE=DATE:20280112
 SUMMARY:Microsoft SQL Server 2022 'Dallas' - Active support ends
@@ -1311,7 +1311,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280317-kubernetes-azure-arc-deployments-on-wind@cpfe
  ed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20280317
 DTEND;VALUE=DATE:20280318
 SUMMARY:Kubernetes - Azure Arc - Deployments on Windows Server 2019 and Win
@@ -1322,7 +1322,7 @@ URL:https://azure.microsoft.com/updates?filters=%5B%22Retirements%22%5D
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280327-485893@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20280327
 DTEND;VALUE=DATE:20280328
 SUMMARY:Kubernetes - Azure Arc - Windows Server 2019 and Windows Server 202
@@ -1333,7 +1333,7 @@ URL:https://azure.microsoft.com/updates/?id=485893
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280331-485047@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:App service - Customer Backup - Linked Database Backup
@@ -1343,7 +1343,7 @@ URL:https://azure.microsoft.com/updates/?id=485047
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280331-489009@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:App service - Durable Functions support for Netherite
@@ -1353,7 +1353,7 @@ URL:https://azure.microsoft.com/updates/?id=489009
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280331-485819@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:Azure Maps Account - Route v1 APIs
@@ -1363,7 +1363,7 @@ URL:https://azure.microsoft.com/updates/?id=485819
 END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280331-485810@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:Azure Maps Account - Traffic v1 APIs
@@ -1374,7 +1374,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:azure-retirement-20280331-azure-spring-apps-will-be-retired-on-march-31
  -2028@cpfeed.cloud
-DTSTAMP:20260413T164637Z
+DTSTAMP:20260413T170330Z
 DTSTART;VALUE=DATE:20280331
 DTEND;VALUE=DATE:20280401
 SUMMARY:Azure Spring Apps will be retired on March 31\, 2028
