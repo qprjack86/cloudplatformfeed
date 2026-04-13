@@ -502,10 +502,6 @@
     }
 
     if (azureFeedData.summaryStatus === "unavailable") {
-      if (azureFeedData.summaryReason === "missing_azure_openai_config") {
-        hideElement(aiSummaryEl);
-        return;
-      }
       var unavailMsg = "Azure OpenAI did not return a summary for this update.";
       if (azureFeedData.summaryReason && SUMMARY_REASON_MESSAGES[azureFeedData.summaryReason]) {
         unavailMsg += "<br><small class=\"ai-summary-note\">" +
