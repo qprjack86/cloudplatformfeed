@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:27:46.090806+00:00",
+  "generatedAt": "2026-04-13T16:06:00.545207+00:00",
   "totalArticles": 60,
   "articles": [
     {
@@ -695,8 +695,8 @@
       ],
       "m365RetirementSignal": false,
       "m365ActByDate": null,
-      "m365RetirementDate": "2026-04-01",
-      "m365RetirementDatePrecision": "day",
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
       "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1274562"
     },
@@ -2077,8 +2077,8 @@
         ],
         "m365RetirementSignal": false,
         "m365ActByDate": null,
-        "m365RetirementDate": "2026-04-01",
-        "m365RetirementDatePrecision": "day",
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1274562"
       },
@@ -4950,8 +4950,8 @@
         ],
         "m365RetirementSignal": false,
         "m365ActByDate": null,
-        "m365RetirementDate": "2026-04-01",
-        "m365RetirementDatePrecision": "day",
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1274562"
       },
@@ -5158,8 +5158,8 @@
     {
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
       "link": "https://deltapulse.app/item/MC1274562",
-      "retirementDate": "2026-04-01",
-      "datePrecision": "day",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
       "published": "2026-04-08T22:42:45.000Z",
       "blog": "Microsoft Copilot (Power Platform)",
       "blogId": "m365",
@@ -5717,7 +5717,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-13T13:27:46.090613+00:00",
+    "generatedAt": "2026-04-13T16:06:00.545027+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -5735,8 +5735,8 @@
           {
             "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
             "link": "https://deltapulse.app/item/MC1274562",
-            "retirementDate": "2026-04-01",
-            "datePrecision": "day"
+            "retirementDate": "2026-04",
+            "datePrecision": "month"
           },
           {
             "title": "Microsoft Purview DLM: Retirement of SharePoint online information management and in-place records management features",
