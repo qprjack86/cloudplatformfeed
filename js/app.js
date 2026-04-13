@@ -159,11 +159,10 @@
 
   function formatUkNumericDate(date) {
     if (!date) return "";
-    return date.toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric"
-    });
+    var day = String(date.getDate()).padStart(2, "0");
+    var month = String(date.getMonth() + 1).padStart(2, "0");
+    var year = String(date.getFullYear());
+    return day + "-" + month + "-" + year;
   }
 
   function formatM365TargetDate(value) {
@@ -308,10 +307,12 @@
 
     var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
     if (dayMatch) {
-      var year = dayMatch[1];
-      var month = dayMatch[2];
-      var day = dayMatch[3];
-      return day + "/" + month + "/" + year;
+      var dayDate = new Date(
+        Number(dayMatch[1]),
+        Number(dayMatch[2]) - 1,
+        Number(dayMatch[3])
+      );
+      return formatUkNumericDate(dayDate);
     }
 
     var monthMatch = /^(\d{4})-(\d{2})$/.exec(raw);

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T09:33:19.332347+00:00",
+  "generatedAt": "2026-04-13T09:38:16.148760+00:00",
   "totalArticles": 59,
   "articles": [
     {
@@ -58,9 +58,9 @@
         "Retirement"
       ],
       "m365RetirementSignal": true,
-      "m365ActByDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
+      "m365ActByDate": "2026-05-09T07:00:00.000Z",
+      "m365RetirementDate": "2026-05-09",
+      "m365RetirementDatePrecision": "day",
       "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1276511"
     },
@@ -1217,9 +1217,9 @@
         "Retirement"
       ],
       "m365RetirementSignal": true,
-      "m365ActByDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
+      "m365ActByDate": "2026-07-05T07:00:00.000Z",
+      "m365RetirementDate": "2026-07-05",
+      "m365RetirementDatePrecision": "day",
       "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1272554"
     },
@@ -1857,9 +1857,9 @@
           "Retirement"
         ],
         "m365RetirementSignal": true,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
+        "m365ActByDate": "2026-07-05T07:00:00.000Z",
+        "m365RetirementDate": "2026-07-05",
+        "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1272554"
       },
@@ -2140,9 +2140,9 @@
           "Retirement"
         ],
         "m365RetirementSignal": true,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
+        "m365ActByDate": "2026-05-09T07:00:00.000Z",
+        "m365RetirementDate": "2026-05-09",
+        "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1276511"
       },
@@ -4856,9 +4856,9 @@
           "Retirement"
         ],
         "m365RetirementSignal": true,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
+        "m365ActByDate": "2026-05-09T07:00:00.000Z",
+        "m365RetirementDate": "2026-05-09",
+        "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1276511"
       },
@@ -4976,9 +4976,9 @@
           "Retirement"
         ],
         "m365RetirementSignal": true,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
+        "m365ActByDate": "2026-07-05T07:00:00.000Z",
+        "m365RetirementDate": "2026-07-05",
+        "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1272554"
       },
@@ -5093,8 +5093,8 @@
     {
       "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
       "link": "https://deltapulse.app/item/MC1276511",
-      "retirementDate": "2026-05",
-      "datePrecision": "month",
+      "retirementDate": "2026-05-09",
+      "datePrecision": "day",
       "published": "2026-04-10T22:24:55.000Z",
       "blog": "Microsoft Defender XDR",
       "blogId": "m365",
@@ -5107,8 +5107,8 @@
     {
       "title": "Top domain mail flow report in Exchange Online is retiring",
       "link": "https://deltapulse.app/item/MC1272554",
-      "retirementDate": "2026-07",
-      "datePrecision": "month",
+      "retirementDate": "2026-07-05",
+      "datePrecision": "day",
       "published": "2026-04-06T22:06:03.000Z",
       "blog": "Exchange Online",
       "blogId": "m365",
@@ -5134,7 +5134,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-13T09:33:19.332162+00:00",
+    "generatedAt": "2026-04-13T09:38:16.148586+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -5164,8 +5164,8 @@
           {
             "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
             "link": "https://deltapulse.app/item/MC1276511",
-            "retirementDate": "2026-05",
-            "datePrecision": "month"
+            "retirementDate": "2026-05-09",
+            "datePrecision": "day"
           }
         ]
       },
@@ -5178,8 +5178,8 @@
           {
             "title": "Top domain mail flow report in Exchange Online is retiring",
             "link": "https://deltapulse.app/item/MC1272554",
-            "retirementDate": "2026-07",
-            "datePrecision": "month"
+            "retirementDate": "2026-07-05",
+            "datePrecision": "day"
           },
           {
             "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",

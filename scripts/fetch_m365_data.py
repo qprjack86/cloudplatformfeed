@@ -174,6 +174,7 @@ ACT_BY_FIELD_KEYS = (
     "actBy",
     "actionByDate",
     "actionBy",
+    "actionRequiredByDateTime",
 )
 
 
@@ -650,6 +651,14 @@ def _extract_retirement_date_without_context(raw_text: str):
     if not cleaned:
         return None
 
+    # Support direct ISO date/datetime values commonly returned by MCP metadata,
+    # e.g. 2026-05-09 or 2026-05-09T07:00:00.000Z.
+    iso_match = re.search(r"\b(\d{4}-\d{2}-\d{2})(?:[T\s]\S+)?\b", cleaned)
+    if iso_match:
+        iso_day = iso_match.group(1)
+        if _is_retirement_date_future(iso_day):
+            return iso_day
+
     direct_precision = _m365_retirement_date_precision(cleaned)
     if direct_precision and _is_retirement_date_future(cleaned):
         return cleaned
@@ -1102,6 +1111,7 @@ MCP_METADATA_FIELDS = (
     "actByDate",
     "actionBy",
     "actionByDate",
+    "actionRequiredByDateTime",
 )
 
 
