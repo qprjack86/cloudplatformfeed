@@ -4,16 +4,25 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 13 Apr 2026 12:07:37 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 16:06:44 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[GA: DCasv6 and ECasv6 confidential VMs based on 4th Generation AMD EPYC™ processors]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460</guid>
+      <description><![CDATA[Today, Azure has expanded its confidential computing offerings with the general availability of the DCasv6 and ECasv6 confidential VMs. Regional availability April 13 2026: West Europe Jan 30 2026: Canada Central, Canada East, Norway East, Norway West, Italy North, Germany North, France South,...]]></description>
+      <dc:creator><![CDATA[Rakeshginjupalli]]></dc:creator>
+      <pubDate>Mon, 13 Apr 2026 15:29:32 GMT</pubDate>
+      <category><![CDATA[Confidential Computing]]></category>
+    </item>
     <item>
       <title><![CDATA[Connecting an ExpressRoute circuit to Megaport Virtual Edge]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/connecting-an-expressroute-circuit-to-megaport-virtual-edge/ba-p/4510770</link>
       <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/connecting-an-expressroute-circuit-to-megaport-virtual-edge/ba-p/4510770</guid>
       <description><![CDATA[Megaport is an ExpressRoute partner in many locations. The Megaport Cloud Router (MCR) allows ExpressRoute customers to connect leased lines to their on-premise locations, and to connect other Cloud Providers. MCR is easy to set up and operate, it even automatically configures the ExpressRoute...]]></description>
       <dc:creator><![CDATA[Marc de Droog]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 09:31:17 GMT</pubDate>
+      <pubDate>Mon, 13 Apr 2026 13:18:18 GMT</pubDate>
       <category><![CDATA[Azure Networking]]></category>
     </item>
     <item>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Observability in AKS Namespace and Workload Views]]></title>
-      <link>https://azure.microsoft.com/updates?id=560039</link>
-      <guid>https://azure.microsoft.com/updates?id=560039</guid>
-      <description><![CDATA[AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilizatioUpdate Type: GA, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
