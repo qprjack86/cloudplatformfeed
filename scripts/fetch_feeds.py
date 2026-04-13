@@ -474,6 +474,97 @@ def write_azure_retirements_ics(events, output_path=AZURE_RETIREMENTS_ICS_PATH, 
     path = Path(output_path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(payload, encoding="utf-8")
+    print(f"Azure ICS calendar written to {output_path}")
+    return True
+
+
+def _ics_uid_for_unified_event(event):
+    """Build a deterministic UID for a unified retirement calendar event."""
+    source = event.get("source", "unknown")
+    title_token = re.sub(r"\s+", "-", _normalize_for_match(event.get("title", "untitled"))) or "untitled"
+    date_token = re.sub(r"[^0-9]", "", str(event.get("retirementDate", ""))) or "nodate"
+    link = event.get("link", "")
+    update_id = _extract_azure_update_id_from_url(link) if link else None
+    
+    # Different UID prefixes based on source
+    if source == "azure":
+        suffix = update_id or title_token[:40]
+        return f"retirement-azure-{date_token}-{suffix}@{CANONICAL_SITE_HOST}"
+    elif source == "microsoft":
+        suffix = title_token[:40]
+        return f"retirement-microsoft-{date_token}-{suffix}@{CANONICAL_SITE_HOST}"
+    else:  # m365
+        suffix = title_token[:40]
+        return f"retirement-m365-{date_token}-{suffix}@{CANONICAL_SITE_HOST}"
+
+
+def generate_unified_retirements_ics(events, generated_at=None):
+    """Generate an ICS calendar payload for all unified retirement events."""
+    stamp = generated_at or datetime.now(timezone.utc)
+    dtstamp = stamp.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Cloud Platform Feed//Unified Retirement Calendar//EN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        f"X-WR-CALNAME:{_ics_escape_text('Unified Retirement Calendar')}",
+        f"X-WR-CALDESC:{_ics_escape_text('All Azure, Microsoft, and Microsoft 365 retirement events from Cloud Platform Feed')}",
+    ]
+
+    for event in events:
+        retirement_date = str(event.get("retirementDate", "")).strip()
+        precision = event.get("datePrecision") or _retirement_date_precision(retirement_date)
+        date_fields = _ics_date_fields(retirement_date, precision)
+        if not date_fields:
+            continue
+
+        sources = event.get("sources", [])
+        source_label = ", ".join(str(src) for src in sources if src)
+        source = event.get("source", "unknown")
+        description_lines = [
+            f"Source: {source}",
+            f"Retirement date: {retirement_date}",
+            f"Date precision: {precision}",
+        ]
+        if source_label:
+            description_lines.append(f"Sources: {source_label}")
+        if precision != "day":
+            description_lines.append("This event uses month-level precision in source data.")
+
+        summary = event.get("title", "Untitled retirement notice")
+        link = event.get("link", "")
+
+        lines.extend(
+            [
+                "BEGIN:VEVENT",
+                f"UID:{_ics_escape_text(_ics_uid_for_unified_event(event))}",
+                f"DTSTAMP:{dtstamp}",
+                f"DTSTART;VALUE=DATE:{date_fields['dtstart']}",
+                f"DTEND;VALUE=DATE:{date_fields['dtend']}",
+                f"SUMMARY:{_ics_escape_text(summary)}",
+                f"DESCRIPTION:{_ics_escape_text('\\n'.join(description_lines))}",
+                f"URL:{_ics_escape_text(link)}" if link else "",
+                "END:VEVENT",
+            ]
+        )
+
+    lines.append("END:VCALENDAR")
+    folded = [_ics_fold_line(line) for line in lines if line]
+    return "\r\n".join(folded) + "\r\n"
+
+
+def write_unified_retirements_ics(events, output_path="data/retirements.ics", generated_at=None):
+    """Write unified retirement events as an ICS artifact."""
+    payload = generate_unified_retirements_ics(events, generated_at=generated_at)
+    path = Path(output_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(payload, encoding="utf-8")
+    print(f"Unified ICS calendar written to {output_path}")
+    return True
+
+    path.write_text(payload, encoding="utf-8")
     print(f"ICS calendar saved to {path.as_posix()}")
 
 def get_articles_for_publishing_days(articles, publishing_days):
@@ -2278,6 +2369,224 @@ def build_azure_retirement_calendar(articles, max_items=120):
     return events[:max_items]
 
 
+def build_unified_retirement_calendar(
+    azure_events=None,
+    microsoft_events=None,
+    m365_events=None,
+    max_items=120,
+):
+    """Build a deduplicated, source-tagged calendar from Azure, Microsoft, and M365 events.
+    
+    Priority order for deduplication: azure > microsoft > m365
+    Each event is tagged with a 'source' field indicating which source won.
+    """
+    today = datetime.now(timezone.utc).date()
+    events_by_key = {}
+    
+    # Index: retirement_date -> list of (token_frozenset, dedupe_key, source) for token-overlap dedupe
+    date_event_tokens = {}
+    
+    # Priority order: azure (0) > microsoft (1) > m365 (2)
+    source_priority_map = {
+        "azure": 0,
+        "azureretirements": 0,
+        "microsoftlifecycle": 1,
+        "m365": 2,
+    }
+    
+    def _get_source_from_article(article):
+        """Determine source classification from article blogId."""
+        blog_id = article.get("blogId", "").lower()
+        if blog_id in ("azure", "azureretirements", "azuredeprecations", "azureupdates"):
+            return "azure"
+        elif blog_id in ("microsoftlifecycle",):
+            return "microsoft"
+        elif blog_id in ("m365",):
+            return "m365"
+        return "unknown"
+    
+    def _article_priority(article):
+        """Return priority value for article (lower = higher priority)."""
+        blog_id = article.get("blogId", "").lower()
+        priority = source_priority_map.get(blog_id, 99)
+        # Within same source, prioritize azureretirements workbook
+        if blog_id == "azureretirements":
+            return priority - 1
+        return priority
+    
+    # Combine all events with source tagging
+    all_articles = []
+    for art in (azure_events or []):
+        art_copy = dict(art)
+        art_copy["_source"] = _get_source_from_article(art)
+        all_articles.append(art_copy)
+    
+    for art in (microsoft_events or []):
+        art_copy = dict(art)
+        art_copy["_source"] = "microsoft"
+        all_articles.append(art_copy)
+    
+    for art in (m365_events or []):
+        art_copy = dict(art)
+        art_copy["_source"] = "m365"
+        all_articles.append(art_copy)
+    
+    # Sort by source priority so higher-priority sources are seen first
+    all_articles.sort(key=_article_priority)
+    
+    # Process all articles using unified deduplication
+    for article in all_articles:
+        retirement_date = article.get("azureRetirementDate") or article.get("m365RetirementDate")
+        if not retirement_date:
+            continue
+        
+        sort_dt = _parse_retirement_calendar_sort_date(retirement_date)
+        if not sort_dt:
+            continue
+        
+        if not _is_retirement_date_future(retirement_date, today=today):
+            continue
+        
+        title = article.get("title", "Untitled")
+        link = article.get("link", "")
+        source = article.get("_source", "unknown")
+        
+        # Try multiple deduplication keys
+        dedupe_key = _azure_retirement_identity_key(title, link)
+        update_id = _extract_azure_update_id_from_url(link)
+        update_id_key = f"update-id:{update_id}" if update_id else ""
+        runtime_alias_key = _azure_runtime_retirement_alias_key(title, retirement_date)
+        if dedupe_key.endswith(":"):
+            dedupe_key = f"fallback:{_normalize_for_match(title)}"
+        
+        precision = "day" if re.match(r"^\d{4}-\d{2}-\d{2}$", retirement_date) else "month"
+        source_label = article.get("blog", "") or article.get("blogId", "") or "Source"
+        source_report = {
+            "blog": article.get("blog", ""),
+            "blogId": article.get("blogId", ""),
+            "announcementType": article.get("announcementType", ""),
+            "link": link,
+            "source": source,
+        }
+        
+        # Look for existing event
+        existing = events_by_key.get(dedupe_key)
+        if not existing and update_id_key:
+            existing = events_by_key.get(update_id_key)
+        if not existing and runtime_alias_key:
+            existing = events_by_key.get(runtime_alias_key)
+        
+        # Cross-source fuzzy token-overlap lookup
+        if not existing:
+            article_blog_id = article.get("blogId", "")
+            article_tokens = _calendar_identity_tokens(title)
+            for reg_tokens, reg_key, reg_runtime_key, reg_blog_id, _ in date_event_tokens.get(retirement_date, []):
+                if article_blog_id == reg_blog_id:
+                    continue
+                if runtime_alias_key and reg_runtime_key and runtime_alias_key != reg_runtime_key:
+                    continue
+                if _tokens_are_same_event(article_tokens, reg_tokens):
+                    existing = events_by_key.get(reg_key)
+                    if existing is not None:
+                        break
+        
+        if existing:
+            existing["sourceReports"].append(source_report)
+            if article.get("published", "") > existing.get("published", ""):
+                existing["published"] = article.get("published", "")
+            
+            # Higher priority source takes over the event metadata
+            existing_priority = source_priority_map.get(existing.get("blogId", ""), 99)
+            incoming_priority = source_priority_map.get(article.get("blogId", ""), 99)
+            
+            if incoming_priority < existing_priority:
+                # Incoming source has higher priority - update metadata
+                replacement = {
+                    "title": _display_calendar_title(title),
+                    "link": link,
+                    "retirementDate": retirement_date,
+                    "datePrecision": precision,
+                    "published": article.get("published", ""),
+                    "blog": article.get("blog", ""),
+                    "blogId": article.get("blogId", ""),
+                    "announcementType": article.get("announcementType", ""),
+                }
+                if _retirement_event_rank_key(replacement) > _retirement_event_rank_key(existing):
+                    existing["title"] = replacement["title"]
+                    existing["link"] = replacement["link"] or existing.get("link", "")
+                    existing["retirementDate"] = replacement["retirementDate"]
+                    existing["datePrecision"] = replacement["datePrecision"]
+                    existing["published"] = replacement["published"]
+                    existing["blog"] = replacement["blog"]
+                    existing["blogId"] = replacement["blogId"]
+                    existing["announcementType"] = replacement["announcementType"]
+                    existing["source"] = source
+            
+            if not existing.get("link") and link:
+                existing["link"] = link
+            
+            existing["sources"] = sorted({
+                src for src in existing.get("sources", []) + [source_label]
+                if src
+            })
+            events_by_key[dedupe_key] = existing
+            if update_id_key:
+                events_by_key[update_id_key] = existing
+            if runtime_alias_key:
+                events_by_key[runtime_alias_key] = existing
+            continue
+        
+        # New event
+        event = {
+            "title": _display_calendar_title(title),
+            "link": link,
+            "retirementDate": retirement_date,
+            "datePrecision": precision,
+            "published": article.get("published", ""),
+            "blog": article.get("blog", ""),
+            "blogId": article.get("blogId", ""),
+            "announcementType": article.get("announcementType", ""),
+            "sources": [source_label] if source_label else [],
+            "sourceReports": [source_report],
+            "source": source,  # Primary source for this event
+        }
+        events_by_key[dedupe_key] = event
+        if update_id_key:
+            events_by_key[update_id_key] = event
+        if runtime_alias_key:
+            events_by_key[runtime_alias_key] = event
+        
+        # Register for fuzzy matching
+        event_tokens = _calendar_identity_tokens(title)
+        if event_tokens:
+            date_event_tokens.setdefault(retirement_date, []).append(
+                (event_tokens, dedupe_key, runtime_alias_key, article.get("blogId", ""), source)
+            )
+    
+    # Consolidate and sort
+    events = []
+    seen_ids = set()
+    for event in events_by_key.values():
+        event_identity = id(event)
+        if event_identity in seen_ids:
+            continue
+        seen_ids.add(event_identity)
+        events.append(event)
+    
+    for event in events:
+        event["sourceCount"] = len(event.get("sourceReports", []))
+        event["link"] = _preferred_retirement_event_link(event)
+    
+    events.sort(
+        key=lambda event: (
+            _parse_retirement_calendar_sort_date(event.get("retirementDate"))
+            or datetime.max.replace(tzinfo=timezone.utc),
+            event.get("title", "").lower(),
+        )
+    )
+    return events[:max_items]
+
+
 def build_retirement_window_buckets(events, today=None, preview_limit=8):
     """Build rolling retirement windows, including long-range future buckets."""
     reference = today or datetime.now(timezone.utc).date()
@@ -2695,8 +3004,21 @@ def main():
 
     # Remove duplicates and discard articles older than 30 days
     unique_articles = dedupe_articles(all_articles)
-    retirement_calendar_input = list(unique_articles) + list(lifecycle_calendar_articles)
-    retirement_calendar = build_azure_retirement_calendar(retirement_calendar_input)
+    lifecycle_and_azure = list(unique_articles) + list(lifecycle_calendar_articles)
+    
+    # Separate events by source for unified calendar
+    azure_events = [a for a in lifecycle_and_azure if a.get("blogId") not in ("m365",)]
+    microsoft_events = [a for a in lifecycle_calendar_articles]  # Only microsoft lifecycle
+    
+    # Build unified calendar (Azure + Microsoft; M365 will be added by fetch_m365_data.py)
+    unified_retirement_calendar = build_unified_retirement_calendar(
+        azure_events=azure_events,
+        microsoft_events=microsoft_events,
+        m365_events=None,  # M365 will be added by fetch_m365_data.py
+    )
+    
+    # For backward compatibility, also build the Azure-only view
+    retirement_calendar = build_azure_retirement_calendar(lifecycle_and_azure)
     retirement_buckets = build_retirement_window_buckets(retirement_calendar)
     main_feed_articles = filter_main_feed_articles(unique_articles)
 
@@ -2789,6 +3111,17 @@ def main():
     os.makedirs("data", exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+    # Write unified retirement calendar (for use by fetch_m365_data.py)
+    unified_calendar_path = os.path.join("data", "retirements.json")
+    unified_calendar_data = {
+        "lastUpdated": datetime.now(timezone.utc).isoformat(),
+        "unifiedRetirementCalendar": unified_retirement_calendar,
+        "unifiedRetirementBuckets": build_retirement_window_buckets(unified_retirement_calendar),
+    }
+    with open(unified_calendar_path, "w", encoding="utf-8") as f:
+        json.dump(unified_calendar_data, f, indent=2, ensure_ascii=False)
+    print(f"Unified retirement calendar saved to {unified_calendar_path}")
 
     # Generate RSS feed
     generate_rss_feed(main_feed_articles)

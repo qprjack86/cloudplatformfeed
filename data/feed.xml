@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 13 Apr 2026 16:05:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2026 16:33:40 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Public Preview: StandardV2 NAT Gateway as an outbound type for AKS]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560207/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560207/</guid>
+      <description><![CDATA[AKS now supports managed and user-assigned StandardV2 NAT Gateway as an outbound type for your AKS managed or BYO VNets. This unlocks zone-redundant outbound connectivity, up to 100 Gbps outbound throughput, and IPv6 outbound support for AKS clusters.Learn more.]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 13 Apr 2026 16:00:36 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
     <item>
       <title><![CDATA[GA: DCasv6 and ECasv6 confidential VMs based on 4th Generation AMD EPYC™ processors]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460</link>
@@ -444,15 +453,6 @@
       <link>https://azure.microsoft.com/en-us/updates/560025/</link>
       <guid>https://azure.microsoft.com/en-us/updates/560025/</guid>
       <description><![CDATA[Azure Migrate now supports assessments for Azure Files, allowing customers and partners to efficiently plan migrations of on-premises SMB and NFS file shares (Windows and Linux) to Azure Files. This feature enables discovery of file shares, visibility into capacity and sources, and provides Azure...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Observability in AKS Namespace and Workload Views]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560039/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560039/</guid>
-      <description><![CDATA[AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTroubleshoot pending or failed podsAnalyze resource utilization across Nodes, Namespaces, Workloads, and...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 08 Apr 2026 17:30:02 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>

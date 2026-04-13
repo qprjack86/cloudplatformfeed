@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-13T13:27:46.114473+00:00",
+  "updatedAt": "2026-04-13T16:34:13.264680+00:00",
   "count": 41,
   "events": [
     {
@@ -14,13 +14,14 @@
       "sources": [
         "['SharePoint Online']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
       "link": "https://deltapulse.app/item/MC1274562",
-      "retirementDate": "2026-04-01",
-      "datePrecision": "day",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
       "published": "2026-04-08T22:42:45.000Z",
       "blog": "Microsoft Copilot (Power Platform)",
       "blogId": "m365",
@@ -28,7 +29,8 @@
       "sources": [
         "Microsoft Copilot (Power Platform)"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft Purview DLM: Retirement of SharePoint online information management and in-place records management features",
@@ -42,7 +44,8 @@
       "sources": [
         "['SharePoint Online']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Retirement of the Semi-Annual Enterprise Channel installation option for unmanaged devices",
@@ -56,7 +59,8 @@
       "sources": [
         "['Microsoft 365 suite']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "SharePoint Pages: Retirement of Web Search (Bing) image pivot",
@@ -70,7 +74,8 @@
       "sources": [
         "['SharePoint Online']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Power BI: End of support for on-prem SharePoint web part",
@@ -84,7 +89,8 @@
       "sources": [
         "['Power BI']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Outlook for Windows report retirement in the Exchange admin center",
@@ -98,7 +104,8 @@
       "sources": [
         "['Microsoft 365 apps']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Retiring the Impala connector",
@@ -112,7 +119,8 @@
       "sources": [
         "['Microsoft Power Automate in Microsoft 365']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Engage is retiring live events powered by Teams Live Events effective April 15th, 2026",
@@ -126,7 +134,8 @@
       "sources": [
         "['Microsoft Viva']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
@@ -140,7 +149,8 @@
       "sources": [
         "Microsoft 365 apps"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft Defender for iOS: End of support for iOS 16 devices",
@@ -154,7 +164,8 @@
       "sources": [
         "['Microsoft Defender XDR']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "(Updated) Simplifying agent management with Agent 365",
@@ -168,7 +179,8 @@
       "sources": [
         "Microsoft Entra"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft Loop: Retirement of Copilot‑generated Recaps",
@@ -182,7 +194,8 @@
       "sources": [
         "['Microsoft 365 apps']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft SharePoint: Retirement of IDCRL authentication protocol and enforcement of OpenID Connect and OAuth protocols",
@@ -196,7 +209,8 @@
       "sources": [
         "['SharePoint Online', 'Microsoft OneDrive']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
@@ -210,7 +224,8 @@
       "sources": [
         "Power Apps"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
@@ -224,7 +239,8 @@
       "sources": [
         "['Microsoft Defender XDR']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
@@ -238,7 +254,8 @@
       "sources": [
         "Microsoft Defender XDR"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of external access token for actionable messages – moving to Microsoft Entra authentication",
@@ -252,7 +269,8 @@
       "sources": [
         "['Microsoft 365 apps']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Complete retirement of the Outlook Lite app",
@@ -266,7 +284,8 @@
       "sources": [
         "Microsoft 365 apps"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of featured links on SharePoint Start Page",
@@ -280,7 +299,8 @@
       "sources": [
         "['SharePoint Online']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Classic Outlook: Retirement of people card expanded view",
@@ -294,7 +314,8 @@
       "sources": [
         "['Microsoft 365 apps']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025",
@@ -308,7 +329,8 @@
       "sources": [
         "Microsoft 365 suite"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Reminder: \"Require approved client app\" control in Microsoft Entra Conditional Access will be retired in June 2026",
@@ -322,7 +344,8 @@
       "sources": [
         "['Microsoft Intune']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Retirement of the Sway Windows Desktop App on June 1, 2026",
@@ -336,7 +359,8 @@
       "sources": [
         "['Sway']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
@@ -350,7 +374,8 @@
       "sources": [
         "['Power Platform']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft Teams: Retirement of legacy third‑party meeting and call control APIs",
@@ -364,7 +389,8 @@
       "sources": [
         "['Microsoft Teams']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft Teams: Teams Live Events is retiring",
@@ -378,7 +404,8 @@
       "sources": [
         "['Microsoft Teams']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of Assignments and Courses adaptive card extensions (ACE) in Viva Connections and SharePoint",
@@ -392,7 +419,8 @@
       "sources": [
         "['Microsoft 365 suite', 'Microsoft Viva']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Retirement of the isBroadcast property for Teams Live Events in Microsoft Graph",
@@ -406,7 +434,8 @@
       "sources": [
         "['Microsoft Teams', 'Microsoft 365 apps']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",
@@ -420,7 +449,8 @@
       "sources": [
         "['Exchange Online']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Top domain mail flow report in Exchange Online is retiring",
@@ -434,7 +464,8 @@
       "sources": [
         "Exchange Online"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "SharePoint Designer 2013 reaches end of support on July 14, 2026",
@@ -448,7 +479,8 @@
       "sources": [
         "['SharePoint Online']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft Teams: Retirement of CAPTCHA for meeting join",
@@ -462,7 +494,8 @@
       "sources": [
         "['Microsoft Teams']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
@@ -476,7 +509,8 @@
       "sources": [
         "SharePoint Online"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of SharePoint One-Time Passcode (SPO OTP) and transition to Microsoft Entra B2B",
@@ -490,7 +524,8 @@
       "sources": [
         "['SharePoint Online', 'Microsoft OneDrive']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Project Online retirement: Project Web App site creation and unused PWA site changes effective April 1, 2026",
@@ -504,7 +539,8 @@
       "sources": [
         "['Project Online']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Extended Security Updates (ESU) available for Windows 10 Enterprise LTSB 2016",
@@ -518,7 +554,8 @@
       "sources": [
         "Windows"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Retirement of Power BI Q&A",
@@ -532,7 +569,8 @@
       "sources": [
         "['Power BI']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement notice: MDE and XDR Advanced Hunting APIs retiring; migrate to Microsoft Graph Security API",
@@ -546,7 +584,8 @@
       "sources": [
         "['Microsoft Defender XDR']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Exchange Web Services (EWS) retirement update",
@@ -560,7 +599,8 @@
       "sources": [
         "['Exchange Online']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     },
     {
       "title": "Microsoft Entra ID: Retirement of duplicative properties in passkey (FIDO2) authentication methods policy",
@@ -574,7 +614,8 @@
       "sources": [
         "['Microsoft Entra']"
       ],
-      "sourceCount": 1
+      "sourceCount": 1,
+      "source": "m365"
     }
   ]
 }

@@ -1783,6 +1783,90 @@ def save_m365_retirement_cache(events: list, path: Path = M365_RETIREMENT_CACHE_
         print(f"Warning: Could not save retirement cache: {exc}")
 
 
+def load_unified_retirement_calendar(path: Path = Path("data/retirements.json")) -> dict:
+    """Load the unified retirement calendar built by fetch_feeds.py."""
+    try:
+        if path.exists():
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            calendar = data.get("unifiedRetirementCalendar", [])
+            print(f"Unified retirement calendar loaded: {len(calendar)} events from {path}")
+            return calendar
+    except (OSError, json.JSONDecodeError, TypeError) as exc:
+        print(f"Warning: Could not load unified retirement calendar ({exc}); starting with empty")
+    return []
+
+
+def save_unified_retirement_calendar(
+    calendar: list,
+    buckets: dict = None,
+    path: Path = Path("data/retirements.json")
+) -> bool:
+    """Save the unified retirement calendar (for use by UI and fetch cycles)."""
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "lastUpdated": datetime.now(timezone.utc).isoformat(),
+            "unifiedRetirementCalendar": calendar,
+        }
+        if buckets:
+            payload["unifiedRetirementBuckets"] = buckets
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+        print(f"Unified retirement calendar saved: {len(calendar)} events to {path}")
+        return True
+    except (OSError, TypeError, ValueError) as exc:
+        print(f"Error saving unified retirement calendar: {exc}")
+        return False
+
+
+def merge_m365_into_unified_calendar(
+    unified_calendar: list,
+    m365_calendar: list
+) -> list:
+    """Merge M365 retirement events into the unified calendar.
+    
+    Uses simple deduplication by normalized title to avoid adding exact duplicates.
+    M365 events have lower priority, so azure/microsoft events are preserved if they exist.
+    """
+    if not m365_calendar:
+        return unified_calendar
+    
+    # Index existing events by normalized title for quick dedup lookup
+    def normalize_title(title):
+        return re.sub(r"\s+", " ", (title or "").strip().lower())
+    
+    existing_titles = {normalize_title(e.get("title", "")): e for e in unified_calendar}
+    
+    merged = list(unified_calendar or [])
+    
+    for m365_event in m365_calendar:
+        m365_title = normalize_title(m365_event.get("title", ""))
+        
+        # Skip if exact title match found (likely a duplicate)
+        if m365_title in existing_titles:
+            continue
+        
+        # Ensure M365 event has source field
+        if "source" not in m365_event:
+            m365_event["source"] = "m365"
+        
+        merged.append(m365_event)
+    
+    # Re-sort by retirement date
+    merged.sort(
+        key=lambda event: (
+            _parse_retirement_calendar_sort_date(event.get("retirementDate", ""))
+            or datetime.max.replace(tzinfo=timezone.utc),
+            (event.get("title", "") or "").lower(),
+        )
+    )
+    
+    return merged
+
+
+
+
 def load_previous_article_count(path: Path = M365_DATA_OUTPUT) -> int:
     """Load previous article count for failsafe comparison."""
     return shared_load_previous_article_count(path)
@@ -1807,6 +1891,9 @@ def main():
     session = create_http_session()
     
     try:
+        # Load the unified retirement calendar from fetch_feeds.py
+        unified_calendar = load_unified_retirement_calendar()
+
         # Load persistent retirement cache (keeps retirements from previous runs)
         cached_retirements = load_m365_retirement_cache()
 
@@ -1828,6 +1915,23 @@ def main():
         # Build feed structure (merges cached retirements into the calendar)
         feed_data = build_m365_feed(raw_items, m365_video, cached_retirements=all_cached)
         
+        # Tag M365 retirement events with source field
+        m365_retirement_calendar = feed_data.get("m365RetirementCalendar", [])
+        for event in m365_retirement_calendar:
+            if "source" not in event:
+                event["source"] = "m365"
+        
+        # Merge M365 events into unified calendar
+        print(f"Merging {len(m365_retirement_calendar)} M365 events into unified calendar...")
+        merged_unified_calendar = merge_m365_into_unified_calendar(
+            unified_calendar,
+            m365_retirement_calendar
+        )
+        print(f"Unified calendar now contains {len(merged_unified_calendar)} total events")
+        
+        # Build unified buckets
+        unified_buckets = build_retirement_window_buckets(merged_unified_calendar)
+        
         # Evaluate failsafe
         previous_count = load_previous_article_count()
         failsafe_triggered, failsafe_details = evaluate_m365_failsafe(
@@ -1840,7 +1944,19 @@ def main():
             print(f"   Previous: {previous_count}, Current: {feed_data['totalArticles']}")
             # In production workflow, this would prevent publishing
         
-        # Write data and checksums
+        # Write unified calendar
+        success = save_unified_retirement_calendar(merged_unified_calendar, unified_buckets)
+        if not success:
+            print("Warning: Failed to save unified retirement calendar")
+        
+        # Generate unified ICS export (need to import from fetch_feeds)
+        try:
+            from fetch_feeds import write_unified_retirements_ics
+            write_unified_retirements_ics(merged_unified_calendar)
+        except Exception as e:
+            print(f"Warning: Failed to generate unified ICS: {e}")
+        
+        # Write M365 data and checksums (for backward compat)
         success = write_m365_data(feed_data)
         if success:
             write_m365_retirements_ics(feed_data.get("m365RetirementCalendar", []))
@@ -1856,6 +1972,7 @@ def main():
     
     finally:
         session.close()
+
 
 
 if __name__ == "__main__":

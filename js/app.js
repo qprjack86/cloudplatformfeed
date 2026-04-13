@@ -89,6 +89,7 @@
 
   var azureFeedData = null;
   var m365FeedData = null;
+  var unifiedRetirementCalendar = null;
   var checksumWatcher = null;
   var retirementCalendarViewState = { azure: null, m365: null };
   var retirementCalendarCollapsedState = { azure: null, m365: null };
@@ -653,18 +654,37 @@
   }
 
   function getRetirementCalendarPayload() {
-    if (currentSource === "m365") {
+    // Try to use unified calendar first (new unified data structure)
+    var allEvents = [];
+    var label = "Retirement Calendar";
+    
+    if (unifiedRetirementCalendar && Array.isArray(unifiedRetirementCalendar)) {
+      allEvents = unifiedRetirementCalendar;
+    } else if (currentSource === "m365") {
+      // Fallback: use old m365 calendar if unified not available
       if (!m365FeedData) return { events: [], label: "Microsoft 365" };
-      return {
-        events: Array.isArray(m365FeedData.m365RetirementCalendar) ? m365FeedData.m365RetirementCalendar : [],
-        label: "Microsoft 365"
-      };
+      allEvents = Array.isArray(m365FeedData.m365RetirementCalendar) ? m365FeedData.m365RetirementCalendar : [];
+      label = "Microsoft 365";
+    } else {
+      // Fallback: use old azure calendar if unified not available
+      if (!azureFeedData) return { events: [], label: "Azure" };
+      allEvents = Array.isArray(azureFeedData.azureRetirementCalendar) ? azureFeedData.azureRetirementCalendar : [];
+      label = "Azure";
     }
-
-    if (!azureFeedData) return { events: [], label: "Azure" };
+    
+    // Filter events by source for the current tab
+    var filteredEvents = allEvents.filter(function (event) {
+      var source = event.source || "azure"; // default to azure for backward compat
+      if (currentSource === "m365") {
+        return source === "m365";
+      }
+      // Azure tab shows both azure and microsoft events
+      return source === "azure" || source === "microsoft";
+    });
+    
     return {
-      events: Array.isArray(azureFeedData.azureRetirementCalendar) ? azureFeedData.azureRetirementCalendar : [],
-      label: "Azure"
+      events: filteredEvents,
+      label: label
     };
   }
 
@@ -1130,6 +1150,18 @@
   async function loadData() {
     showLoading(true);
     try {
+      // Load unified retirement calendar (new unified data structure)
+      try {
+        var unifiedResponse = await fetch("data/retirements.json", { cache: "no-store" });
+        if (unifiedResponse.ok) {
+          var unifiedData = await unifiedResponse.json();
+          unifiedRetirementCalendar = unifiedData.unifiedRetirementCalendar || [];
+          console.log("Loaded unified retirement calendar with " + unifiedRetirementCalendar.length + " events");
+        }
+      } catch (e) {
+        console.log("Unified retirement calendar not available, using fallback calendars");
+      }
+      
       // Load Azure feeds
       var azureResponse = await fetch("data/feeds.json", { cache: "no-store" });
       if (!azureResponse.ok) throw new Error("Failed to load Azure feeds");

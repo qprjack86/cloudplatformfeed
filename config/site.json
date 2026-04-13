@@ -40,6 +40,18 @@
     ],
     "maxEvents": 120
   },
+  "unifiedCalendar": {
+    "enabled": true,
+    "retirementCalendarPath": "data/retirements.json",
+    "deduplicationPriority": [
+      "azure",
+      "microsoft",
+      "m365"
+    ],
+    "generateUnifiedIcs": true,
+    "unifiedIcsPath": "data/retirements.ics",
+    "maintainBackwardCompatViews": true
+  },
   "categoryMappings": {
     "azure": {
       "Compute": [
