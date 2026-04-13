@@ -22,6 +22,36 @@
     "titleNormalizationThreshold": 85,
     "urlNormalizationStrict": true
   },
+  "microsoftLifecycle": {
+    "enabled": true,
+    "products": [
+      "windows-server",
+      "mssqlserver",
+      "msexchange",
+      "sharepoint",
+      "dotnet",
+      "dotnetfx",
+      "powershell",
+      "visual-studio"
+    ],
+    "milestones": [
+      "eoas",
+      "eol"
+    ],
+    "maxEvents": 120
+  },
+  "unifiedCalendar": {
+    "enabled": true,
+    "retirementCalendarPath": "data/retirements.json",
+    "deduplicationPriority": [
+      "azure",
+      "microsoft",
+      "m365"
+    ],
+    "generateUnifiedIcs": true,
+    "unifiedIcsPath": "data/retirements.ics",
+    "maintainBackwardCompatViews": true
+  },
   "categoryMappings": {
     "azure": {
       "Compute": [

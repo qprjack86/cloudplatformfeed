@@ -1,0 +1,621 @@
+{
+  "updatedAt": "2026-04-13T16:47:00.730950+00:00",
+  "count": 41,
+  "events": [
+    {
+      "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
+      "link": "https://deltapulse.app/item/MC1184996",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2025-11-12T00:10:11.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
+      "link": "https://deltapulse.app/item/MC1274562",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-04-08T22:42:45.000Z",
+      "blog": "Microsoft Copilot (Power Platform)",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft Copilot (Power Platform)"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Purview DLM: Retirement of SharePoint online information management and in-place records management features",
+      "link": "https://deltapulse.app/item/MC1211579",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-01-03T02:57:54.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Retirement of the Semi-Annual Enterprise Channel installation option for unmanaged devices",
+      "link": "https://deltapulse.app/item/MC1249428",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-03-12T00:05:50.000Z",
+      "blog": "['Microsoft 365 suite']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 suite']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "SharePoint Pages: Retirement of Web Search (Bing) image pivot",
+      "link": "https://deltapulse.app/item/MC1230452",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-02-10T23:03:39.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Power BI: End of support for on-prem SharePoint web part",
+      "link": "https://deltapulse.app/item/MC1217651",
+      "retirementDate": "2026-04-13",
+      "datePrecision": "day",
+      "published": "2026-01-14T02:14:26.000Z",
+      "blog": "['Power BI']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Power BI']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Outlook for Windows report retirement in the Exchange admin center",
+      "link": "https://deltapulse.app/item/MC1230889",
+      "retirementDate": "2026-04-14",
+      "datePrecision": "day",
+      "published": "2026-02-11T23:14:50.000Z",
+      "blog": "['Microsoft 365 apps']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 apps']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Retiring the Impala connector",
+      "link": "https://deltapulse.app/item/MC1240748",
+      "retirementDate": "2026-04-14",
+      "datePrecision": "day",
+      "published": "2026-02-28T00:08:31.000Z",
+      "blog": "['Microsoft Power Automate in Microsoft 365']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Power Automate in Microsoft 365']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Engage is retiring live events powered by Teams Live Events effective April 15th, 2026",
+      "link": "https://deltapulse.app/item/MC1227085",
+      "retirementDate": "2026-04-15",
+      "datePrecision": "day",
+      "published": "2026-02-05T00:07:04.000Z",
+      "blog": "['Microsoft Viva']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Viva']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
+      "link": "https://deltapulse.app/item/MC1249427",
+      "retirementDate": "2026-04-20",
+      "datePrecision": "day",
+      "published": "2026-03-12T00:04:42.000Z",
+      "blog": "Microsoft 365 apps",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 apps"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Defender for iOS: End of support for iOS 16 devices",
+      "link": "https://deltapulse.app/item/MC1245219",
+      "retirementDate": "2026-04-30",
+      "datePrecision": "day",
+      "published": "2026-03-05T23:34:45.000Z",
+      "blog": "['Microsoft Defender XDR']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Defender XDR']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "(Updated) Simplifying agent management with Agent 365",
+      "link": "https://deltapulse.app/item/MC1275311",
+      "retirementDate": "2026-05-01",
+      "datePrecision": "day",
+      "published": "2026-04-09T16:06:04.000Z",
+      "blog": "Microsoft Entra",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft Entra"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Loop: Retirement of Copilot‑generated Recaps",
+      "link": "https://deltapulse.app/item/MC1267976",
+      "retirementDate": "2026-05",
+      "datePrecision": "month",
+      "published": "2026-04-02T02:28:10.000Z",
+      "blog": "['Microsoft 365 apps']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 apps']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft SharePoint: Retirement of IDCRL authentication protocol and enforcement of OpenID Connect and OAuth protocols",
+      "link": "https://deltapulse.app/item/MC1184649",
+      "retirementDate": "2026-05-01",
+      "datePrecision": "day",
+      "published": "2025-11-11T00:37:53.000Z",
+      "blog": "['SharePoint Online', 'Microsoft OneDrive']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online', 'Microsoft OneDrive']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
+      "link": "https://deltapulse.app/item/MC1273328",
+      "retirementDate": "2026-05-01",
+      "datePrecision": "day",
+      "published": "2026-04-07T19:29:05.000Z",
+      "blog": "Power Apps",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Power Apps"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
+      "link": "https://deltapulse.app/item/MC1254554",
+      "retirementDate": "2026-05",
+      "datePrecision": "month",
+      "published": "2026-03-17T22:47:38.000Z",
+      "blog": "['Microsoft Defender XDR']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Defender XDR']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
+      "link": "https://deltapulse.app/item/MC1276511",
+      "retirementDate": "2026-05-09",
+      "datePrecision": "day",
+      "published": "2026-04-10T22:24:55.000Z",
+      "blog": "Microsoft Defender XDR",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft Defender XDR"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "(Updated) Retirement of external access token for actionable messages – moving to Microsoft Entra authentication",
+      "link": "https://deltapulse.app/item/MC1189663",
+      "retirementDate": "2026-05-15",
+      "datePrecision": "day",
+      "published": "2025-11-25T00:05:43.000Z",
+      "blog": "['Microsoft 365 apps']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 apps']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Complete retirement of the Outlook Lite app",
+      "link": "https://deltapulse.app/item/MC1276508",
+      "retirementDate": "2026-05-25",
+      "datePrecision": "day",
+      "published": "2026-04-10T22:23:16.000Z",
+      "blog": "Microsoft 365 apps",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 apps"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "(Updated) Retirement of featured links on SharePoint Start Page",
+      "link": "https://deltapulse.app/item/MC1197131",
+      "retirementDate": "2026-06",
+      "datePrecision": "month",
+      "published": "2025-12-15T20:10:45.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Classic Outlook: Retirement of people card expanded view",
+      "link": "https://deltapulse.app/item/MC1269210",
+      "retirementDate": "2026-06-01",
+      "datePrecision": "day",
+      "published": "2026-04-03T05:12:41.000Z",
+      "blog": "['Microsoft 365 apps']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 apps']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025",
+      "link": "https://deltapulse.app/item/MC1154300",
+      "retirementDate": "2026-06",
+      "datePrecision": "month",
+      "published": "2025-09-16T22:23:46.000Z",
+      "blog": "Microsoft 365 suite",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 suite"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Reminder: \"Require approved client app\" control in Microsoft Entra Conditional Access will be retired in June 2026",
+      "link": "https://deltapulse.app/item/MC1220751",
+      "retirementDate": "2026-06",
+      "datePrecision": "month",
+      "published": "2026-01-22T00:38:12.000Z",
+      "blog": "['Microsoft Intune']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Intune']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Retirement of the Sway Windows Desktop App on June 1, 2026",
+      "link": "https://deltapulse.app/item/MC1213784",
+      "retirementDate": "2026-06-01",
+      "datePrecision": "day",
+      "published": "2026-01-06T06:00:25.000Z",
+      "blog": "['Sway']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Sway']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Power Platform - Information regarding the end of support for Global Discovery Service (GDS) API",
+      "link": "https://deltapulse.app/item/MC1253577",
+      "retirementDate": "2026-06-19",
+      "datePrecision": "day",
+      "published": "2026-03-16T19:07:15.000Z",
+      "blog": "['Power Platform']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Power Platform']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Teams: Retirement of legacy third‑party meeting and call control APIs",
+      "link": "https://deltapulse.app/item/MC1266901",
+      "retirementDate": "2026-06-29",
+      "datePrecision": "day",
+      "published": "2026-03-31T22:54:57.000Z",
+      "blog": "['Microsoft Teams']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Teams']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Teams: Teams Live Events is retiring",
+      "link": "https://deltapulse.app/item/MC1226495",
+      "retirementDate": "2026-06-29",
+      "datePrecision": "day",
+      "published": "2026-02-03T18:07:37.000Z",
+      "blog": "['Microsoft Teams']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Teams']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "(Updated) Retirement of Assignments and Courses adaptive card extensions (ACE) in Viva Connections and SharePoint",
+      "link": "https://deltapulse.app/item/MC1184647",
+      "retirementDate": "2026-06-30",
+      "datePrecision": "day",
+      "published": "2025-11-11T00:36:32.000Z",
+      "blog": "['Microsoft 365 suite', 'Microsoft Viva']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 suite', 'Microsoft Viva']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Retirement of the isBroadcast property for Teams Live Events in Microsoft Graph",
+      "link": "https://deltapulse.app/item/MC1226498",
+      "retirementDate": "2026-06-30",
+      "datePrecision": "day",
+      "published": "2026-02-03T18:08:55.000Z",
+      "blog": "['Microsoft Teams', 'Microsoft 365 apps']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Teams', 'Microsoft 365 apps']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",
+      "link": "https://deltapulse.app/item/MC1248389",
+      "retirementDate": "2026-07",
+      "datePrecision": "month",
+      "published": "2026-03-10T22:46:28.000Z",
+      "blog": "['Exchange Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Exchange Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Top domain mail flow report in Exchange Online is retiring",
+      "link": "https://deltapulse.app/item/MC1272554",
+      "retirementDate": "2026-07-05",
+      "datePrecision": "day",
+      "published": "2026-04-06T22:06:03.000Z",
+      "blog": "Exchange Online",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Exchange Online"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "SharePoint Designer 2013 reaches end of support on July 14, 2026",
+      "link": "https://deltapulse.app/item/MC1230891",
+      "retirementDate": "2026-07-13",
+      "datePrecision": "day",
+      "published": "2026-02-11T23:18:38.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Teams: Retirement of CAPTCHA for meeting join",
+      "link": "https://deltapulse.app/item/MC1262588",
+      "retirementDate": "2026-08",
+      "datePrecision": "month",
+      "published": "2026-03-26T23:44:28.000Z",
+      "blog": "['Microsoft Teams']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Teams']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
+      "link": "https://deltapulse.app/item/MC1272549",
+      "retirementDate": "2026-08",
+      "datePrecision": "month",
+      "published": "2026-04-06T21:59:59.000Z",
+      "blog": "SharePoint Online",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "SharePoint Online"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "(Updated) Retirement of SharePoint One-Time Passcode (SPO OTP) and transition to Microsoft Entra B2B",
+      "link": "https://deltapulse.app/item/MC1243549",
+      "retirementDate": "2026-08-31",
+      "datePrecision": "day",
+      "published": "2026-03-04T01:21:32.000Z",
+      "blog": "['SharePoint Online', 'Microsoft OneDrive']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online', 'Microsoft OneDrive']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Project Online retirement: Project Web App site creation and unused PWA site changes effective April 1, 2026",
+      "link": "https://deltapulse.app/item/MC1227080",
+      "retirementDate": "2026-09-30",
+      "datePrecision": "day",
+      "published": "2026-02-05T00:03:13.000Z",
+      "blog": "['Project Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Project Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Extended Security Updates (ESU) available for Windows 10 Enterprise LTSB 2016",
+      "link": "https://deltapulse.app/item/MC1274396",
+      "retirementDate": "2026-10-13",
+      "datePrecision": "day",
+      "published": "2026-04-08T19:58:31.567Z",
+      "blog": "Windows",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Windows"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Retirement of Power BI Q&A",
+      "link": "https://deltapulse.app/item/MC1218421",
+      "retirementDate": "2026-12",
+      "datePrecision": "month",
+      "published": "2026-01-16T00:15:07.000Z",
+      "blog": "['Power BI']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Power BI']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "(Updated) Retirement notice: MDE and XDR Advanced Hunting APIs retiring; migrate to Microsoft Graph Security API",
+      "link": "https://deltapulse.app/item/MC1220762",
+      "retirementDate": "2027-01-31",
+      "datePrecision": "day",
+      "published": "2026-01-22T00:46:54.000Z",
+      "blog": "['Microsoft Defender XDR']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Defender XDR']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Exchange Web Services (EWS) retirement update",
+      "link": "https://deltapulse.app/item/MC1227454",
+      "retirementDate": "2027-04-01",
+      "datePrecision": "day",
+      "published": "2026-02-05T16:57:52.000Z",
+      "blog": "['Exchange Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Exchange Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Entra ID: Retirement of duplicative properties in passkey (FIDO2) authentication methods policy",
+      "link": "https://deltapulse.app/item/MC1188230",
+      "retirementDate": "2027-10-14",
+      "datePrecision": "day",
+      "published": "2025-11-19T23:33:48.000Z",
+      "blog": "['Microsoft Entra']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Entra']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    }
+  ]
+}

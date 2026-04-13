@@ -89,6 +89,7 @@
 
   var azureFeedData = null;
   var m365FeedData = null;
+  var unifiedRetirementCalendar = null;
   var checksumWatcher = null;
   var retirementCalendarViewState = { azure: null, m365: null };
   var retirementCalendarCollapsedState = { azure: null, m365: null };
@@ -159,11 +160,10 @@
 
   function formatUkNumericDate(date) {
     if (!date) return "";
-    return date.toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric"
-    });
+    var day = String(date.getDate()).padStart(2, "0");
+    var month = String(date.getMonth() + 1).padStart(2, "0");
+    var year = String(date.getFullYear());
+    return day + "-" + month + "-" + year;
   }
 
   function formatM365TargetDate(value) {
@@ -308,10 +308,12 @@
 
     var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
     if (dayMatch) {
-      var year = dayMatch[1];
-      var month = dayMatch[2];
-      var day = dayMatch[3];
-      return day + "/" + month + "/" + year;
+      var dayDate = new Date(
+        Number(dayMatch[1]),
+        Number(dayMatch[2]) - 1,
+        Number(dayMatch[3])
+      );
+      return formatUkNumericDate(dayDate);
     }
 
     var monthMatch = /^(\d{4})-(\d{2})$/.exec(raw);
@@ -620,8 +622,9 @@
     return new Date(date.getFullYear(), date.getMonth(), 1);
   }
 
-  function getAzureRetirementsIcsAbsoluteUrl() {
-    return new URL("data/azure-retirements.ics", window.location.href).href;
+  function getRetirementsIcsAbsoluteUrl(sourceKey) {
+    var artifactName = sourceKey === "m365" ? "m365-retirements.ics" : "azure-retirements.ics";
+    return new URL("data/" + artifactName, window.location.href).href;
   }
 
   function toWebcalUrl(httpsUrl) {
@@ -651,18 +654,37 @@
   }
 
   function getRetirementCalendarPayload() {
-    if (currentSource === "m365") {
+    // Try to use unified calendar first (new unified data structure)
+    var allEvents = [];
+    var label = "Retirement Calendar";
+    
+    if (unifiedRetirementCalendar && Array.isArray(unifiedRetirementCalendar)) {
+      allEvents = unifiedRetirementCalendar;
+    } else if (currentSource === "m365") {
+      // Fallback: use old m365 calendar if unified not available
       if (!m365FeedData) return { events: [], label: "Microsoft 365" };
-      return {
-        events: Array.isArray(m365FeedData.m365RetirementCalendar) ? m365FeedData.m365RetirementCalendar : [],
-        label: "Microsoft 365"
-      };
+      allEvents = Array.isArray(m365FeedData.m365RetirementCalendar) ? m365FeedData.m365RetirementCalendar : [];
+      label = "Microsoft 365";
+    } else {
+      // Fallback: use old azure calendar if unified not available
+      if (!azureFeedData) return { events: [], label: "Azure" };
+      allEvents = Array.isArray(azureFeedData.azureRetirementCalendar) ? azureFeedData.azureRetirementCalendar : [];
+      label = "Azure";
     }
-
-    if (!azureFeedData) return { events: [], label: "Azure" };
+    
+    // Filter events by source for the current tab
+    var filteredEvents = allEvents.filter(function (event) {
+      var source = event.source || "azure"; // default to azure for backward compat
+      if (currentSource === "m365") {
+        return source === "m365";
+      }
+      // Azure tab shows both azure and microsoft events
+      return source === "azure" || source === "microsoft";
+    });
+    
     return {
-      events: Array.isArray(azureFeedData.azureRetirementCalendar) ? azureFeedData.azureRetirementCalendar : [],
-      label: "Azure"
+      events: filteredEvents,
+      label: label
     };
   }
 
@@ -808,8 +830,8 @@
     var nextMonth = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1);
     var disablePrev = prevMonth < earliestMonth ? ' disabled="disabled"' : "";
     var disableNext = nextMonth > latestMonth ? ' disabled="disabled"' : "";
-    var showAzureExport = currentSource === "azure";
-    var exportControlsHtml = showAzureExport
+    var showExport = sourceKey === "azure" || sourceKey === "m365";
+    var exportControlsHtml = showExport
       ? '<div class="retirement-mini-export">' +
           '<button type="button" class="retirement-mini-export-btn" data-retirement-export-toggle aria-haspopup="true" aria-expanded="false">Export ▾</button>' +
           '<div class="retirement-mini-export-menu" data-retirement-export-menu hidden="hidden">' +
@@ -819,7 +841,7 @@
           "</div>" +
         "</div>"
       : "";
-    var exportStatusHtml = showAzureExport
+    var exportStatusHtml = showExport
       ? '<p class="retirement-mini-export-status" data-retirement-export-status aria-live="polite"></p>'
       : "";
     var collapseLabel = isCollapsed ? "Show calendar" : "Hide calendar";
@@ -957,14 +979,18 @@
       exportMenu.querySelectorAll("[data-retirement-export-action]").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var action = btn.getAttribute("data-retirement-export-action");
-          var icsUrl = getAzureRetirementsIcsAbsoluteUrl();
+          var icsUrl = getRetirementsIcsAbsoluteUrl(sourceKey);
+          var icsFileName = sourceKey === "m365" ? "m365-retirements.ics" : "azure-retirements.ics";
+          var calendarLabel = sourceKey === "m365"
+            ? "Microsoft 365 Retirement Calendar"
+            : "Azure Impact Lifecycle Calendar";
           var subscribeUrl = toWebcalUrl(icsUrl);
           setRetirementExportStatus(exportStatus, "", false);
 
           if (action === "download-ics") {
             var link = document.createElement("a");
             link.href = icsUrl;
-            link.download = "azure-retirements.ics";
+            link.download = icsFileName;
             document.body.appendChild(link);
             link.click();
             link.remove();
@@ -982,7 +1008,7 @@
               "https://outlook.office.com/calendar/0/addfromweb?url=" +
               encodeURIComponent(icsUrl) +
               "&name=" +
-              encodeURIComponent("Azure Retirement Calendar");
+              encodeURIComponent(calendarLabel);
             window.open(outlookUrl, "_blank", "noopener,noreferrer");
             setRetirementExportStatus(exportStatus, "Opened Outlook / Microsoft 365 calendar flow.", false);
           }
@@ -1124,6 +1150,18 @@
   async function loadData() {
     showLoading(true);
     try {
+      // Load unified retirement calendar (new unified data structure)
+      try {
+        var unifiedResponse = await fetch("data/retirements.json", { cache: "no-store" });
+        if (unifiedResponse.ok) {
+          var unifiedData = await unifiedResponse.json();
+          unifiedRetirementCalendar = unifiedData.unifiedRetirementCalendar || [];
+          console.log("Loaded unified retirement calendar with " + unifiedRetirementCalendar.length + " events");
+        }
+      } catch (e) {
+        console.log("Unified retirement calendar not available, using fallback calendars");
+      }
+      
       // Load Azure feeds
       var azureResponse = await fetch("data/feeds.json", { cache: "no-store" });
       if (!azureResponse.ok) throw new Error("Failed to load Azure feeds");
