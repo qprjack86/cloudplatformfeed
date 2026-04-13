@@ -313,9 +313,14 @@ def call_mcp_tool(session: requests.Session, tool_name: str, arguments: dict = N
 
 
 def call_mcp_fetch_metadata(session: requests.Session, item_id: str) -> dict:
-    """Fetch detailed metadata for an item via DeltaPulse fetch tool."""
+    """Fetch detailed metadata and message body for an item via DeltaPulse fetch tool.
+
+    Returns a dict with two keys:
+      "metadata" – the metadata sub-dict (date/status fields)
+      "body"     – the raw message/description text (may be empty string)
+    """
     if not item_id:
-        return {}
+        return {"metadata": {}, "body": ""}
 
     payload = {
         "jsonrpc": "2.0",
@@ -340,12 +345,21 @@ def call_mcp_fetch_metadata(session: requests.Session, item_id: str) -> dict:
 
         content = result.get("result", {}).get("content", [])
         if not content:
-            return {}
+            return {"metadata": {}, "body": ""}
 
         text = content[0].get("text", "{}")
         parsed = json.loads(text)
         metadata = parsed.get("metadata")
-        return metadata if isinstance(metadata, dict) else {}
+        body = ""
+        for body_key in ("description", "message", "body", "details", "summary"):
+            raw = parsed.get(body_key)
+            if raw and isinstance(raw, str) and raw.strip():
+                body = _normalise_whitespace(raw)
+                break
+        return {
+            "metadata": metadata if isinstance(metadata, dict) else {},
+            "body": body,
+        }
     except (
         requests.exceptions.RequestException,
         json.JSONDecodeError,
@@ -354,7 +368,7 @@ def call_mcp_fetch_metadata(session: requests.Session, item_id: str) -> dict:
         KeyError,
         IndexError,
     ):
-        return {}
+        return {"metadata": {}, "body": ""}
 
 
 def call_roadmap_item_details(session: requests.Session, item_id: str) -> dict:
@@ -727,13 +741,27 @@ def build_m365_retirement_calendar(articles: list, max_items: int = 120):
             ) or ""
         # Fallback: for lifecycle=retiring articles, use m365TargetDate when no
         # explicit retirement date could be extracted from text (e.g. empty summary).
+        # Try act-by first, then scan all comma-separated target date segments picking
+        # the latest future date (the retirement *completion* date).
         if not retirement_date and article.get("lifecycle") == "retiring":
-            target_raw = str(article.get("m365TargetDate") or "")
-            for part in target_raw.split(","):
-                candidate = _extract_retirement_date_without_context(part.strip())
+            act_by_raw = str(article.get("m365ActByDate") or "")
+            if act_by_raw:
+                candidate = _extract_retirement_date_without_context(act_by_raw)
                 if candidate and _is_retirement_date_future(candidate, today=today):
                     retirement_date = candidate
-                    break
+            if not retirement_date:
+                target_raw = str(article.get("m365TargetDate") or "")
+                future_parts = []
+                for part in target_raw.split(","):
+                    candidate = _extract_retirement_date_without_context(part.strip())
+                    if candidate and _is_retirement_date_future(candidate, today=today):
+                        sort_dt = _parse_retirement_calendar_sort_date(candidate)
+                        if sort_dt:
+                            future_parts.append((sort_dt, candidate))
+                if future_parts:
+                    # Use the latest future date as the retirement completion date
+                    future_parts.sort(key=lambda x: x[0])
+                    retirement_date = future_parts[-1][1]
         if not retirement_date:
             continue
 
@@ -1101,7 +1129,9 @@ def _enrich_m365_item(session: requests.Session, item: dict) -> dict:
             if value:
                 patch[key] = value
 
-    metadata = call_mcp_fetch_metadata(session, item_id)
+    fetch_result = call_mcp_fetch_metadata(session, item_id)
+    metadata = fetch_result.get("metadata", {})
+    fetch_body = fetch_result.get("body", "")
     if metadata:
         for field in MCP_METADATA_FIELDS:
             if field in metadata:
@@ -1112,6 +1142,12 @@ def _enrich_m365_item(session: requests.Session, item: dict) -> dict:
             for key, value in metadata_dates.items():
                 if value:
                     patch[key] = value
+
+    # For message centre items, patch the body text as "description" so that
+    # build_article_from_m365_item can use it as the summary and
+    # _extract_m365_retirement_date can scan it for specific day-level dates.
+    if source == "message_center" and fetch_body:
+        patch.setdefault("description", fetch_body)
 
     return patch
 

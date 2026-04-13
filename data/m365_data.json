@@ -5121,7 +5121,7 @@
     {
       "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
       "link": "https://deltapulse.app/item/MC1272549",
-      "retirementDate": "2026-07",
+      "retirementDate": "2026-08",
       "datePrecision": "month",
       "published": "2026-04-06T21:59:59.000Z",
       "blog": "SharePoint Online",
@@ -5134,7 +5134,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-13T09:16:55.206571+00:00",
+    "generatedAt": "2026-04-13T09:26:51.680287+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -5184,7 +5184,7 @@
           {
             "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
             "link": "https://deltapulse.app/item/MC1272549",
-            "retirementDate": "2026-07",
+            "retirementDate": "2026-08",
             "datePrecision": "month"
           }
         ]
