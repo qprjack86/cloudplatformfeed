@@ -620,8 +620,9 @@
     return new Date(date.getFullYear(), date.getMonth(), 1);
   }
 
-  function getAzureRetirementsIcsAbsoluteUrl() {
-    return new URL("data/azure-retirements.ics", window.location.href).href;
+  function getRetirementsIcsAbsoluteUrl(sourceKey) {
+    var artifactName = sourceKey === "m365" ? "m365-retirements.ics" : "azure-retirements.ics";
+    return new URL("data/" + artifactName, window.location.href).href;
   }
 
   function toWebcalUrl(httpsUrl) {
@@ -808,8 +809,8 @@
     var nextMonth = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1);
     var disablePrev = prevMonth < earliestMonth ? ' disabled="disabled"' : "";
     var disableNext = nextMonth > latestMonth ? ' disabled="disabled"' : "";
-    var showAzureExport = currentSource === "azure";
-    var exportControlsHtml = showAzureExport
+    var showExport = sourceKey === "azure" || sourceKey === "m365";
+    var exportControlsHtml = showExport
       ? '<div class="retirement-mini-export">' +
           '<button type="button" class="retirement-mini-export-btn" data-retirement-export-toggle aria-haspopup="true" aria-expanded="false">Export ▾</button>' +
           '<div class="retirement-mini-export-menu" data-retirement-export-menu hidden="hidden">' +
@@ -819,7 +820,7 @@
           "</div>" +
         "</div>"
       : "";
-    var exportStatusHtml = showAzureExport
+    var exportStatusHtml = showExport
       ? '<p class="retirement-mini-export-status" data-retirement-export-status aria-live="polite"></p>'
       : "";
     var collapseLabel = isCollapsed ? "Show calendar" : "Hide calendar";
@@ -957,14 +958,18 @@
       exportMenu.querySelectorAll("[data-retirement-export-action]").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var action = btn.getAttribute("data-retirement-export-action");
-          var icsUrl = getAzureRetirementsIcsAbsoluteUrl();
+          var icsUrl = getRetirementsIcsAbsoluteUrl(sourceKey);
+          var icsFileName = sourceKey === "m365" ? "m365-retirements.ics" : "azure-retirements.ics";
+          var calendarLabel = sourceKey === "m365"
+            ? "Microsoft 365 Retirement Calendar"
+            : "Azure Retirement Calendar";
           var subscribeUrl = toWebcalUrl(icsUrl);
           setRetirementExportStatus(exportStatus, "", false);
 
           if (action === "download-ics") {
             var link = document.createElement("a");
             link.href = icsUrl;
-            link.download = "azure-retirements.ics";
+            link.download = icsFileName;
             document.body.appendChild(link);
             link.click();
             link.remove();
@@ -982,7 +987,7 @@
               "https://outlook.office.com/calendar/0/addfromweb?url=" +
               encodeURIComponent(icsUrl) +
               "&name=" +
-              encodeURIComponent("Azure Retirement Calendar");
+              encodeURIComponent(calendarLabel);
             window.open(outlookUrl, "_blank", "noopener,noreferrer");
             setRetirementExportStatus(exportStatus, "Opened Outlook / Microsoft 365 calendar flow.", false);
           }

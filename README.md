@@ -10,6 +10,7 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 - 📰 **50+ sources** — Azure blogs, Microsoft 365 blogs, Azure Updates, DevOps, Security, Developer Tools, Data & AI, and more
 - 🔄 **Microsoft 365 integration** — Fetches and displays Microsoft 365 Roadmap and Message Center updates alongside Azure news, with product categorisation and lifecycle status
 - 🗓️ **Azure retirement calendar** — Highlights upcoming Azure retirements/deprecations from Azure Updates plus aztty RSS enrichment with duplicate filtering
+- 🗓️ **M365 retirement calendar** — Highlights retirement-tagged Microsoft 365 roadmap/message-center notices with act-by and text date extraction fallback
 - 🎬 **Latest update videos** — Shows the latest Azure and Microsoft 365 update videos in the UI
 - 🤖 **AI-generated summaries** — Summaries for both Azure and M365 feeds (if configured)
 - 🔍 **Search & filter** — Find articles by keyword, blog category, product area, or date range
@@ -37,7 +38,7 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 
 ## Scripts
 
-- `scripts/fetch_m365_data.py` — Fetches Microsoft 365 Roadmap and Message Center items from DeltaPulse MCP, writes to `data/m365_data.json` and `data/m365_checksums.json`.
+- `scripts/fetch_m365_data.py` — Fetches Microsoft 365 Roadmap and Message Center items from DeltaPulse MCP, writes to `data/m365_data.json`, `data/m365-retirements.ics`, and `data/m365_checksums.json`.
 - `scripts/debug_mcp.py` — Debugs DeltaPulse MCP tool calls, prints payloads and responses.
 - `scripts/discover_deltapulse_schema.py` — Discovers available MCP tools and schemas.
 - `scripts/debug_dedup.py` — Tests and debugs M365 deduplication logic.
@@ -47,6 +48,7 @@ A daily-updated Microsoft cloud news aggregator hosted on GitHub Pages. It colle
 ## Data Files
 
 - `data/m365_data.json` — Microsoft 365 articles, categories, and video metadata
+- `data/m365-retirements.ics` — Microsoft 365 retirement calendar ICS artifact
 - `data/m365_checksums.json` — Checksum and generation metadata for M365 data
 - `data/feeds.json`, `data/feed.xml`, `data/checksums.json` — Azure and combined feed data and checksums
 
@@ -120,26 +122,26 @@ To test the feed fetchers locally:
   export AZURE_OPENAI_DEPLOYMENT="gpt-4o-mini"
   ```
 
-2. **Install dependencies:**
+1. **Install dependencies:**
 
   ```bash
   pip install -r scripts/requirements.txt
   ```
 
-3. **Fetch Azure and M365 feeds:**
+1. **Fetch Azure and M365 feeds:**
 
   ```bash
   python scripts/fetch_feeds.py
   python scripts/fetch_m365_data.py
   ```
 
-4. **Validate generated artifacts (recommended):**
+1. **Validate generated artifacts (recommended):**
 
   ```bash
   python scripts/validate_feeds.py
   ```
 
-5. **Run tests:**
+1. **Run tests:**
 
   ```bash
   python -m unittest discover -s tests -p "test_*.py"

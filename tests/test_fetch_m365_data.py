@@ -363,6 +363,55 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["m365RetirementDatePrecision"], "day")
         self.assertEqual(article["lifecycle"], "retiring")
 
+    def test_retirement_tags_override_text_when_present(self):
+        item = {
+            "id": "MC200003",
+            "title": "Retirement of feature Y on July 31, 2099",
+            "source": "message_center",
+            "publishedDate": "2099-03-19T04:39:14.000Z",
+            "service": ["Microsoft Teams"],
+            "description": "We are retiring feature Y on July 31, 2099.",
+            "tags": ["Major change", "Admin impact"],
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertFalse(article["m365RetirementSignal"])
+        self.assertIsNone(article["m365RetirementDate"])
+
+    def test_retirement_text_fallback_when_tags_missing(self):
+        item = {
+            "id": "MC200004",
+            "title": "Retirement of feature Z in October 2099",
+            "source": "message_center",
+            "publishedDate": "2099-03-19T04:39:14.000Z",
+            "service": ["Microsoft Teams"],
+            "description": "Feature Z retirement is planned for October 2099.",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertTrue(article["m365RetirementSignal"])
+        self.assertEqual(article["m365RetirementDate"], "2099-10")
+
+    def test_act_by_date_has_priority_over_summary_text_date(self):
+        item = {
+            "id": "MC200005",
+            "title": "Retirement: capability A",
+            "source": "message_center",
+            "publishedDate": "2099-03-19T04:39:14.000Z",
+            "service": ["Microsoft Teams"],
+            "description": "Capability A will retire on July 31, 2099.",
+            "tags": ["Retirement"],
+            "actByDate": "July 5, 2099",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertTrue(article["m365RetirementSignal"])
+        self.assertEqual(article["m365RetirementDate"], "2099-07-05")
+        self.assertEqual(article["m365ActByDate"], "July 5, 2099")
+
     def test_does_not_infer_retirement_date_from_target_date_only(self):
         item = {
             "id": "MC200002",
@@ -620,6 +669,44 @@ class YouTubeVideoHelperTests(unittest.TestCase):
             result = fetch_m365_data.fetch_m365_video(session)
 
         self.assertEqual(result["url"], fetch_m365_data.M365_VIDEO_SEED_URL)
+
+
+class M365RetirementIcsTests(unittest.TestCase):
+    """Test M365 retirement ICS generation/output."""
+
+    def test_generate_m365_retirements_ics_includes_event(self):
+        events = [
+            {
+                "title": "Feature retirement",
+                "link": "https://deltapulse.app/item/MC700001",
+                "retirementDate": "2099-07-31",
+                "datePrecision": "day",
+                "blog": "Microsoft Teams",
+                "sources": ["Microsoft Teams"],
+            }
+        ]
+
+        payload = fetch_m365_data.generate_m365_retirements_ics(events)
+
+        self.assertIn("BEGIN:VCALENDAR", payload)
+        self.assertIn("X-WR-CALNAME:Microsoft 365 Retirement Calendar", payload)
+        self.assertIn("SUMMARY:Feature retirement", payload)
+        self.assertIn("DTSTART;VALUE=DATE:20990731", payload)
+
+    def test_write_m365_checksums_supports_multiple_artifacts(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            data_path = pathlib.Path(tmpdir) / "m365_data.json"
+            ics_path = pathlib.Path(tmpdir) / "m365-retirements.ics"
+            checksums_path = pathlib.Path(tmpdir) / "m365_checksums.json"
+
+            data_path.write_text('{"totalArticles": 1}\n', encoding="utf-8")
+            ics_path.write_text("BEGIN:VCALENDAR\nEND:VCALENDAR\n", encoding="utf-8")
+
+            success = fetch_m365_data.write_m365_checksums([data_path, ics_path], output_path=checksums_path)
+
+            self.assertTrue(success)
+            payload = json.loads(checksums_path.read_text(encoding="utf-8"))
+            self.assertEqual(len(payload.get("artifacts", [])), 2)
 
 
 if __name__ == "__main__":

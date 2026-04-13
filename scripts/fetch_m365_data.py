@@ -37,6 +37,7 @@ DELTAPULSE_ROADMAP_ITEM_API = "https://deltapulse.app/api/roadmap/items"
 # Data configuration
 M365_DATA_OUTPUT = REPO_ROOT / "data" / "m365_data.json"
 M365_CHECKSUMS_OUTPUT = REPO_ROOT / "data" / "m365_checksums.json"
+M365_RETIREMENTS_ICS_OUTPUT = REPO_ROOT / "data" / "m365-retirements.ics"
 M365_PREVIOUS_COUNT_FILE = M365_DATA_OUTPUT  # Read totalArticles from previous m365_data.json
 
 # Failsafe configuration (same as Azure)
@@ -125,6 +126,10 @@ RETIREMENT_CONTEXT_PATTERN = re.compile(
     r"retir|will end|end of support|end-of-support|end of life|eol|deprecated|deprecat|sunset|stop supporting",
     re.IGNORECASE,
 )
+RETIREMENT_TAG_PATTERN = re.compile(
+    r"retir|deprecat|sunset|end of support|end-of-support|end of life|eol",
+    re.IGNORECASE,
+)
 RETIREMENT_DATE_PATTERNS = (
     (
         re.compile(
@@ -164,6 +169,12 @@ RETIREMENT_MONTH_TO_INT = {
     "nov": 11,
     "dec": 12,
 }
+ACT_BY_FIELD_KEYS = (
+    "actByDate",
+    "actBy",
+    "actionByDate",
+    "actionBy",
+)
 
 
 def load_site_config(path=SITE_CONFIG_PATH):
@@ -386,6 +397,55 @@ def _first_non_empty(item: dict, keys: tuple[str, ...]):
     return None
 
 
+def _flatten_to_strings(value) -> list[str]:
+    """Flatten nested scalar/list values into normalized strings."""
+    if value is None:
+        return []
+    if isinstance(value, str):
+        return [_normalise_whitespace(part) for part in value.split(",") if _normalise_whitespace(part)]
+    if isinstance(value, dict):
+        flattened = []
+        for nested in value.values():
+            flattened.extend(_flatten_to_strings(nested))
+        return flattened
+    if isinstance(value, (list, tuple, set)):
+        flattened = []
+        for nested in value:
+            flattened.extend(_flatten_to_strings(nested))
+        return flattened
+    normalized = _normalise_whitespace(str(value))
+    return [normalized] if normalized else []
+
+
+def _extract_m365_tags(item: dict) -> list[str]:
+    """Extract normalized tags from known DeltaPulse tag fields."""
+    tags = []
+    for key in ("tags", "tag", "labels", "label"):
+        tags.extend(_flatten_to_strings(item.get(key)))
+
+    seen = set()
+    result = []
+    for tag in tags:
+        lowered = tag.lower()
+        if lowered in seen:
+            continue
+        seen.add(lowered)
+        result.append(tag)
+    return result
+
+
+def _has_retirement_tag(tags: list[str]) -> bool:
+    return any(RETIREMENT_TAG_PATTERN.search(tag or "") for tag in tags)
+
+
+def _has_retirement_signal(title_raw: str, summary_raw: str, tags: list[str]) -> bool:
+    """Prefer explicit retirement tags, with text-context fallback when tags are absent."""
+    if tags:
+        return _has_retirement_tag(tags)
+    combined = _normalise_whitespace(f"{title_raw} {summary_raw}")
+    return bool(RETIREMENT_CONTEXT_PATTERN.search(combined))
+
+
 def resolve_m365_target_date(item: dict):
     """Resolve expected release date/month from known DeltaPulse fields."""
     direct = _first_non_empty(item, (
@@ -570,8 +630,44 @@ def _normalize_retirement_date_candidate(match: re.Match[str], precision: str):
     }
 
 
-def _extract_m365_retirement_date(title_raw: str, summary_raw: str):
+def _extract_retirement_date_without_context(raw_text: str):
+    """Extract a future date from act-by style text without requiring retirement keywords."""
+    cleaned = _normalise_whitespace(raw_text)
+    if not cleaned:
+        return None
+
+    direct_precision = _m365_retirement_date_precision(cleaned)
+    if direct_precision and _is_retirement_date_future(cleaned):
+        return cleaned
+
+    candidates = []
+    for pattern, precision in RETIREMENT_DATE_PATTERNS:
+        for match in pattern.finditer(cleaned):
+            candidate = _normalize_retirement_date_candidate(match, precision)
+            if not candidate:
+                continue
+            if not _is_retirement_date_future(candidate["value"]):
+                continue
+            candidates.append(
+                (
+                    1 if candidate["precision"] == "day" else 0,
+                    candidate["sortDate"] or datetime.min.replace(tzinfo=timezone.utc),
+                    candidate["value"],
+                )
+            )
+
+    if not candidates:
+        return None
+    candidates.sort(reverse=True)
+    return candidates[0][2]
+
+
+def _extract_m365_retirement_date(title_raw: str, summary_raw: str, act_by_raw: str = ""):
     """Extract explicit retirement/deprecation date from title or summary text."""
+    act_by_date = _extract_retirement_date_without_context(act_by_raw)
+    if act_by_date:
+        return act_by_date
+
     now_date = datetime.now(timezone.utc).date()
     sources = (("title", title_raw), ("summary", summary_raw))
     candidates = []
@@ -619,11 +715,15 @@ def build_m365_retirement_calendar(articles: list, max_items: int = 120):
     events_by_key = {}
 
     for article in articles:
+        if article.get("m365RetirementSignal") is False:
+            continue
+
         retirement_date = str(article.get("m365RetirementDate") or "").strip()
         if not retirement_date:
             retirement_date = _extract_m365_retirement_date(
                 article.get("title", ""),
                 article.get("summary", ""),
+                article.get("m365ActByDate", ""),
             ) or ""
         if not retirement_date:
             continue
@@ -866,7 +966,14 @@ def build_article_from_m365_item(item: dict) -> dict:
     
     summary_raw = _first_non_empty(item, ("summary", "description", "message", "details"))
     summary = _normalise_whitespace(summary_raw) if isinstance(summary_raw, str) else ""
-    retirement_date = _extract_m365_retirement_date(item.get("title", ""), summary)
+    tags = _extract_m365_tags(item)
+    retirement_signal = _has_retirement_signal(item.get("title", ""), summary, tags)
+    act_by = _first_non_empty(item, ACT_BY_FIELD_KEYS)
+    retirement_date = (
+        _extract_m365_retirement_date(item.get("title", ""), summary, str(act_by or ""))
+        if retirement_signal
+        else None
+    )
 
     return {
         "title": item.get("title", ""),
@@ -885,6 +992,9 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365PreviewDate": item.get("m365PreviewDate"),
         "m365GeneralAvailabilityDate": item.get("m365GeneralAvailabilityDate"),
         "m365IsMajorChange": item.get("isMajorChange", False),
+        "m365Tags": tags,
+        "m365RetirementSignal": retirement_signal,
+        "m365ActByDate": str(act_by).strip() if act_by is not None else None,
         "m365RetirementDate": retirement_date,
         "m365RetirementDatePrecision": _m365_retirement_date_precision(retirement_date) if retirement_date else None,
         "lifecycle": classify_m365_lifecycle(item),
@@ -926,6 +1036,11 @@ ROADMAP_DETAIL_FIELDS = (
     "platforms",
     "thirdPartyLinks",
     "isMajorChange",
+    "tags",
+    "actBy",
+    "actByDate",
+    "actionBy",
+    "actionByDate",
 )
 
 MCP_METADATA_FIELDS = (
@@ -944,6 +1059,12 @@ MCP_METADATA_FIELDS = (
     "createdDate",
     "modifiedDate",
     "isMajorChange",
+    "tags",
+    "labels",
+    "actBy",
+    "actByDate",
+    "actionBy",
+    "actionByDate",
 )
 
 
@@ -1246,6 +1367,116 @@ def build_m365_feed(raw_items: list, m365_video: dict = None) -> dict:
     }
 
 
+def _ics_escape_text(value: str) -> str:
+    """Escape text for ICS fields."""
+    text = str(value or "")
+    text = text.replace("\\", "\\\\")
+    text = text.replace(";", "\\;")
+    text = text.replace(",", "\\,")
+    text = text.replace("\r\n", "\\n").replace("\n", "\\n").replace("\r", "")
+    return text
+
+
+def _ics_fold_line(line: str, limit: int = 75) -> str:
+    """Fold long ICS lines for client compatibility."""
+    if len(line) <= limit:
+        return line
+
+    parts = [line[:limit]]
+    remainder = line[limit:]
+    while remainder:
+        parts.append(" " + remainder[: limit - 1])
+        remainder = remainder[limit - 1 :]
+    return "\r\n".join(parts)
+
+
+def _ics_uid_for_m365_event(event):
+    """Build deterministic UID for an M365 retirement event."""
+    title_token = re.sub(r"\s+", "-", _normalize_retirement_title(event.get("title", "untitled"))) or "untitled"
+    date_token = re.sub(r"[^0-9]", "", str(event.get("retirementDate", ""))) or "nodate"
+    source_token = re.sub(r"[^a-z0-9]", "", str(event.get("blog", "m365")).lower()) or "m365"
+    return f"m365-retirement-{date_token}-{title_token[:32]}-{source_token[:12]}@{CANONICAL_SITE_HOST}"
+
+
+def _ics_date_fields(retirement_date, precision):
+    """Return DTSTART/DTEND fields for retirement events."""
+    parsed = _parse_retirement_calendar_sort_date(retirement_date)
+    if not parsed:
+        return None
+
+    start = parsed.date()
+    end = start + timedelta(days=1)
+    return {
+        "dtstart": start.strftime("%Y%m%d"),
+        "dtend": end.strftime("%Y%m%d"),
+        "precision": precision,
+    }
+
+
+def generate_m365_retirements_ics(events, generated_at=None):
+    """Generate ICS payload for Microsoft 365 retirement events."""
+    stamp = generated_at or datetime.now(timezone.utc)
+    dtstamp = stamp.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Cloud Platform Feed//M365 Retirement Calendar//EN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        f"X-WR-CALNAME:{_ics_escape_text('Microsoft 365 Retirement Calendar')}",
+        f"X-WR-CALDESC:{_ics_escape_text('Upcoming Microsoft 365 retirement announcements from Cloud Platform Feed')}",
+    ]
+
+    for event in events:
+        retirement_date = str(event.get("retirementDate", "")).strip()
+        precision = event.get("datePrecision") or _m365_retirement_date_precision(retirement_date)
+        date_fields = _ics_date_fields(retirement_date, precision)
+        if not date_fields:
+            continue
+
+        sources = event.get("sources", [])
+        source_label = ", ".join(str(src) for src in sources if src)
+        description_lines = [
+            f"Retirement date: {retirement_date}",
+            f"Date precision: {precision}",
+        ]
+        if source_label:
+            description_lines.append(f"Sources: {source_label}")
+        if precision != "day":
+            description_lines.append("This event uses month-level precision in source data.")
+
+        summary = event.get("title", "Untitled retirement notice")
+        link = event.get("link", "")
+
+        lines.extend(
+            [
+                "BEGIN:VEVENT",
+                f"UID:{_ics_escape_text(_ics_uid_for_m365_event(event))}",
+                f"DTSTAMP:{dtstamp}",
+                f"DTSTART;VALUE=DATE:{date_fields['dtstart']}",
+                f"DTEND;VALUE=DATE:{date_fields['dtend']}",
+                f"SUMMARY:{_ics_escape_text(summary)}",
+                f"DESCRIPTION:{_ics_escape_text('\\n'.join(description_lines))}",
+                f"URL:{_ics_escape_text(link)}" if link else "",
+                "END:VEVENT",
+            ]
+        )
+
+    lines.append("END:VCALENDAR")
+    folded = [_ics_fold_line(line) for line in lines if line]
+    return "\r\n".join(folded) + "\r\n"
+
+
+def write_m365_retirements_ics(events, output_path: Path = M365_RETIREMENTS_ICS_OUTPUT, generated_at=None):
+    """Write M365 retirement events as an ICS artifact."""
+    payload = generate_m365_retirements_ics(events, generated_at=generated_at)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(payload, encoding="utf-8")
+    print(f"M365 ICS calendar written to {output_path}")
+    return True
+
+
 def write_m365_data(feed_data: dict, output_path: Path = M365_DATA_OUTPUT) -> bool:
     """Write M365 feed data to JSON file."""
     try:
@@ -1264,11 +1495,11 @@ def build_checksums_payload(paths: list, generated_at: str = None) -> dict:
     return shared_build_checksums_payload(paths, generated_at=generated_at)
 
 
-def write_m365_checksums(m365_data_path: Path, output_path: Path = M365_CHECKSUMS_OUTPUT) -> bool:
-    """Write checksums for M365 data file."""
+def write_m365_checksums(paths: list[Path], output_path: Path = M365_CHECKSUMS_OUTPUT) -> bool:
+    """Write checksums for M365 data artifacts."""
     try:
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        payload = build_checksums_payload([m365_data_path])
+        payload = build_checksums_payload(paths)
         
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(payload, f, indent=2, ensure_ascii=False)
@@ -1330,7 +1561,8 @@ def main():
         # Write data and checksums
         success = write_m365_data(feed_data)
         if success:
-            write_m365_checksums(M365_DATA_OUTPUT)
+            write_m365_retirements_ics(feed_data.get("m365RetirementCalendar", []))
+            write_m365_checksums([M365_DATA_OUTPUT, M365_RETIREMENTS_ICS_OUTPUT])
             print("\n✓ M365 feed data fetch completed successfully")
         else:
             print("\n✗ Failed to write M365 data")
