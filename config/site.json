@@ -22,6 +22,24 @@
     "titleNormalizationThreshold": 85,
     "urlNormalizationStrict": true
   },
+  "microsoftLifecycle": {
+    "enabled": true,
+    "products": [
+      "windows-server",
+      "mssqlserver",
+      "msexchange",
+      "sharepoint",
+      "dotnet",
+      "dotnetfx",
+      "powershell",
+      "visual-studio"
+    ],
+    "milestones": [
+      "eoas",
+      "eol"
+    ],
+    "maxEvents": 120
+  },
   "categoryMappings": {
     "azure": {
       "Compute": [

@@ -143,6 +143,20 @@ FAILSAFE_MIN_ARTICLES = 80
 FAILSAFE_MIN_RATIO = 0.60
 RUN_METRICS_ENV_VAR = "AZUREFEED_RUN_METRICS_PATH"
 WORKBOOK_BLOG_ID = "azureretirements"
+MICROSOFT_LIFECYCLE_BLOG_ID = "microsoftlifecycle"
+MICROSOFT_LIFECYCLE_TAG_API = "https://endoflife.date/api/v1/tags/microsoft"
+DEFAULT_MICROSOFT_LIFECYCLE_PRODUCTS = [
+    "windows-server",
+    "mssqlserver",
+    "msexchange",
+    "sharepoint",
+    "dotnet",
+    "dotnetfx",
+    "powershell",
+    "visual-studio",
+]
+DEFAULT_MICROSOFT_LIFECYCLE_MILESTONES = ["eoas", "eol"]
+DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP = 120
 
 
 CHECKSUM_ARTIFACTS = [
@@ -207,6 +221,7 @@ def build_allowed_feed_hosts():
         AZURE_UPDATES_API,
         AZTTY_DEPRECATIONS_FEED,
         AZTTY_UPDATES_FEED,
+        MICROSOFT_LIFECYCLE_TAG_API,
         YOUTUBE_RSS_BASE,
         SAVILL_VIDEO_SEED_URL,
     ]
@@ -256,6 +271,53 @@ def fetch_feed(url):
     response = HTTP_SESSION.get(url, timeout=FEED_REQUEST_TIMEOUT)
     response.raise_for_status()
     return feedparser.parse(response.content)
+
+
+def _load_microsoft_lifecycle_config(config_path=SITE_CONFIG_PATH):
+    """Load curated Microsoft lifecycle settings from config/site.json."""
+    config = {
+        "enabled": True,
+        "products": list(DEFAULT_MICROSOFT_LIFECYCLE_PRODUCTS),
+        "milestones": list(DEFAULT_MICROSOFT_LIFECYCLE_MILESTONES),
+        "maxEvents": DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP,
+    }
+
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+        lifecycle = raw.get("microsoftLifecycle", {})
+        if isinstance(lifecycle, dict):
+            if "enabled" in lifecycle:
+                config["enabled"] = bool(lifecycle.get("enabled"))
+
+            products = lifecycle.get("products")
+            if isinstance(products, list):
+                config["products"] = [
+                    str(item).strip().lower()
+                    for item in products
+                    if str(item).strip()
+                ]
+
+            milestones = lifecycle.get("milestones")
+            if isinstance(milestones, list):
+                normalized = []
+                for milestone in milestones:
+                    key = str(milestone or "").strip().lower()
+                    if key in {"eoas", "eol", "eoes"} and key not in normalized:
+                        normalized.append(key)
+                if normalized:
+                    config["milestones"] = normalized
+
+            max_events = lifecycle.get("maxEvents")
+            if isinstance(max_events, int) and max_events > 0:
+                config["maxEvents"] = min(max_events, 500)
+    except (OSError, ValueError, TypeError) as exc:
+        print(f"Warning: could not load microsoftLifecycle config: {exc}")
+
+    return config
+
+
+MICROSOFT_LIFECYCLE_CONFIG = _load_microsoft_lifecycle_config()
 
 
 def clean_html(text):
@@ -359,11 +421,11 @@ def generate_azure_retirements_ics(events, generated_at=None):
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Cloud Platform Feed//Azure Retirement Calendar//EN",
+        "PRODID:-//Cloud Platform Feed//Azure Impact Lifecycle Calendar//EN",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        f"X-WR-CALNAME:{_ics_escape_text('Azure Retirement Calendar')}",
-        f"X-WR-CALDESC:{_ics_escape_text('Upcoming Azure retirement announcements from Cloud Platform Feed')}",
+        f"X-WR-CALNAME:{_ics_escape_text('Azure Impact Lifecycle Calendar')}",
+        f"X-WR-CALDESC:{_ics_escape_text('Upcoming Azure and curated Microsoft lifecycle retirements from Cloud Platform Feed')}",
     ]
 
     for event in events:
@@ -1877,6 +1939,135 @@ def fetch_azure_retirements_from_csv(csv_path=AZURE_RETIREMENTS_EXPORT_PATH):
     return articles
 
 
+def _fetch_json_payload(url):
+    """Fetch and decode JSON from an allowlisted URL."""
+    validate_feed_url(url)
+    response = HTTP_SESSION.get(url, timeout=FEED_REQUEST_TIMEOUT)
+    response.raise_for_status()
+    return response.json()
+
+
+def _microsoft_lifecycle_milestone_label(key):
+    """Return readable text for endoflife.date milestone keys."""
+    return {
+        "eoas": "Active support ends",
+        "eol": "Security support ends",
+        "eoes": "Extended security updates end",
+    }.get(key, "Support milestone")
+
+
+def fetch_microsoft_lifecycle_retirements(config=None):
+    """Load curated Microsoft lifecycle milestones from endoflife.date."""
+    settings = dict(MICROSOFT_LIFECYCLE_CONFIG)
+    if config:
+        settings.update(config)
+
+    if not settings.get("enabled", True):
+        print("Skipping Microsoft lifecycle source (disabled in config)")
+        return []
+
+    products = [str(p or "").strip().lower() for p in settings.get("products", []) if str(p or "").strip()]
+    milestones = [m for m in settings.get("milestones", []) if m in {"eoas", "eol", "eoes"}]
+    max_events = int(settings.get("maxEvents", DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP) or DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP)
+
+    if not products or not milestones:
+        return []
+
+    now_iso = datetime.now(timezone.utc).isoformat()
+
+    valid_products = set()
+    try:
+        tag_payload = _fetch_json_payload(MICROSOFT_LIFECYCLE_TAG_API)
+        for row in tag_payload.get("result", []) if isinstance(tag_payload, dict) else []:
+            name = str((row or {}).get("name", "")).strip().lower()
+            if name:
+                valid_products.add(name)
+    except (requests.exceptions.RequestException, ValueError, TypeError, AttributeError) as exc:
+        print(f"Warning: failed to fetch Microsoft lifecycle tag index: {exc}")
+
+    articles = []
+    seen = set()
+
+    for product in products:
+        if valid_products and product not in valid_products:
+            print(f"  Skipping lifecycle product not in microsoft tag list: {product}")
+            continue
+
+        product_url = f"https://endoflife.date/api/v1/products/{product}/"
+        try:
+            payload = _fetch_json_payload(product_url)
+        except (requests.exceptions.RequestException, ValueError, TypeError, AttributeError) as exc:
+            print(f"  Warning: failed lifecycle fetch for {product}: {exc}")
+            continue
+
+        result = payload.get("result") if isinstance(payload, dict) else {}
+        if not isinstance(result, dict):
+            continue
+
+        product_label = clean_html(result.get("label") or result.get("name") or product)
+        html_link = ((result.get("links") or {}).get("html") or "").strip()
+        releases = result.get("releases") if isinstance(result.get("releases"), list) else []
+
+        for release in releases:
+            if not isinstance(release, dict):
+                continue
+
+            release_label = clean_html(release.get("label") or release.get("name") or "")
+            if not release_label:
+                continue
+
+            for milestone in milestones:
+                raw_date = release.get(f"{milestone}From")
+                retirement_date = _normalize_structured_retirement_date(raw_date)
+                if not retirement_date or not _is_retirement_date_future(retirement_date):
+                    continue
+
+                lifecycle_label = _microsoft_lifecycle_milestone_label(milestone)
+                title = f"Retirement: {product_label} {release_label} - {lifecycle_label}"
+                key = (product, release_label.lower(), milestone, retirement_date)
+                if key in seen:
+                    continue
+                seen.add(key)
+
+                latest_link = ((release.get("latest") or {}).get("link") or "").strip()
+                link = latest_link or html_link
+
+                articles.append(
+                    {
+                        "title": title,
+                        "link": link,
+                        "published": now_iso,
+                        "summary": truncate(
+                            f"{product_label} {release_label}: {lifecycle_label} on {retirement_date}."
+                        ),
+                        "blog": "Microsoft Lifecycle",
+                        "blogId": MICROSOFT_LIFECYCLE_BLOG_ID,
+                        "author": "endoflife.date",
+                        "announcementType": "retirement",
+                        "lifecycle": "retiring",
+                        "azureRetirementDate": retirement_date,
+                        "azureRetirementDateSource": "endoflife",
+                        "lifecycleProduct": product,
+                        "lifecycleRelease": release_label,
+                        "lifecycleMilestone": milestone,
+                    }
+                )
+
+    articles.sort(
+        key=lambda a: (
+            _parse_retirement_calendar_sort_date(a.get("azureRetirementDate"))
+            or datetime.max.replace(tzinfo=timezone.utc),
+            a.get("title", "").lower(),
+        )
+    )
+    if max_events > 0:
+        articles = articles[:max_events]
+
+    if articles:
+        print(f"  Loaded {len(articles)} curated Microsoft lifecycle milestones")
+    return articles
+
+
 def _parse_retirement_calendar_sort_date(value):
     """Parse YYYY-MM or YYYY-MM-DD values into a datetime for sorting/calendar use."""
     raw = str(value or "").strip()
@@ -2356,10 +2547,11 @@ def load_previous_article_count(path):
 
 def filter_main_feed_articles(articles):
     """Exclude calendar-only sources from the main feed article list."""
+    excluded_blog_ids = {WORKBOOK_BLOG_ID, MICROSOFT_LIFECYCLE_BLOG_ID}
     return [
         article
         for article in (articles or [])
-        if article.get("blogId") != WORKBOOK_BLOG_ID
+        if article.get("blogId") not in excluded_blog_ids
     ]
 
 
@@ -2492,6 +2684,7 @@ def main():
     all_articles.extend(fetch_azure_updates_feed())
     all_articles.extend(fetch_aztty_announcements())
     all_articles.extend(fetch_azure_retirements_from_csv())
+    lifecycle_calendar_articles = fetch_microsoft_lifecycle_retirements()
     raw_article_count = len(all_articles)
 
     # Fetch Savill video (independent of article feeds)
@@ -2502,7 +2695,8 @@ def main():
 
     # Remove duplicates and discard articles older than 30 days
     unique_articles = dedupe_articles(all_articles)
-    retirement_calendar = build_azure_retirement_calendar(unique_articles)
+    retirement_calendar_input = list(unique_articles) + list(lifecycle_calendar_articles)
+    retirement_calendar = build_azure_retirement_calendar(retirement_calendar_input)
     retirement_buckets = build_retirement_window_buckets(retirement_calendar)
     main_feed_articles = filter_main_feed_articles(unique_articles)
 

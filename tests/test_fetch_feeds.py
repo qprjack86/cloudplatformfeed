@@ -463,6 +463,7 @@ class MainFeedFilteringTests(unittest.TestCase):
     def test_filter_main_feed_articles_excludes_workbook_entries(self):
         articles = [
             {"title": "Workbook retirement", "blogId": "azureretirements"},
+            {"title": "Lifecycle", "blogId": "microsoftlifecycle"},
             {"title": "Azure Update", "blogId": "azureupdates"},
         ]
 
@@ -1075,6 +1076,90 @@ class WorkbookCsvRetirementTests(unittest.TestCase):
         self.assertEqual(articles, [])
 
 
+class MicrosoftLifecycleRetirementTests(unittest.TestCase):
+    def test_fetch_microsoft_lifecycle_retirements_maps_future_milestones(self):
+        payloads = {
+            fetch_feeds.MICROSOFT_LIFECYCLE_TAG_API: {
+                "result": [{"name": "windows-server"}],
+            },
+            "https://endoflife.date/api/v1/products/windows-server/": {
+                "result": {
+                    "label": "Microsoft Windows Server",
+                    "links": {"html": "https://endoflife.date/windows-server"},
+                    "releases": [
+                        {
+                            "label": "Windows Server 2022 (LTSC)",
+                            "eoasFrom": "2030-10-13",
+                            "eolFrom": "2035-10-14",
+                            "latest": {"link": "https://learn.microsoft.com/windows/release-health/windows-server-release-info"},
+                        },
+                        {
+                            "label": "Windows Server 2012",
+                            "eoasFrom": "2018-10-09",
+                            "eolFrom": "2023-10-10",
+                        },
+                    ],
+                }
+            },
+        }
+
+        def fake_fetch(url):
+            return payloads[url]
+
+        with mock.patch.object(fetch_feeds, "_fetch_json_payload", side_effect=fake_fetch):
+            events = fetch_feeds.fetch_microsoft_lifecycle_retirements(
+                {
+                    "enabled": True,
+                    "products": ["windows-server"],
+                    "milestones": ["eoas", "eol"],
+                    "maxEvents": 20,
+                }
+            )
+
+        self.assertEqual(len(events), 2)
+        self.assertEqual(events[0]["blogId"], fetch_feeds.MICROSOFT_LIFECYCLE_BLOG_ID)
+        self.assertEqual(events[0]["azureRetirementDateSource"], "endoflife")
+        self.assertIn("Active support ends", events[0]["title"])
+        self.assertIn("Security support ends", events[1]["title"])
+
+    def test_fetch_microsoft_lifecycle_retirements_respects_max_events(self):
+        payloads = {
+            fetch_feeds.MICROSOFT_LIFECYCLE_TAG_API: {
+                "result": [{"name": "windows-server"}],
+            },
+            "https://endoflife.date/api/v1/products/windows-server/": {
+                "result": {
+                    "label": "Microsoft Windows Server",
+                    "links": {"html": "https://endoflife.date/windows-server"},
+                    "releases": [
+                        {
+                            "label": "Windows Server A",
+                            "eoasFrom": "2031-01-01",
+                            "eolFrom": "2032-01-01",
+                        },
+                        {
+                            "label": "Windows Server B",
+                            "eoasFrom": "2033-01-01",
+                            "eolFrom": "2034-01-01",
+                        },
+                    ],
+                }
+            },
+        }
+
+        with mock.patch.object(fetch_feeds, "_fetch_json_payload", side_effect=lambda url: payloads[url]):
+            events = fetch_feeds.fetch_microsoft_lifecycle_retirements(
+                {
+                    "enabled": True,
+                    "products": ["windows-server"],
+                    "milestones": ["eoas", "eol"],
+                    "maxEvents": 1,
+                }
+            )
+
+        self.assertEqual(len(events), 1)
+
+
 class RetirementCalendarTests(unittest.TestCase):
     def test_build_azure_retirement_calendar_dedupes_and_aggregates_sources(self):
         articles = [
@@ -1537,6 +1622,20 @@ class MainOutputSchemaTests(unittest.TestCase):
                 "azureRetirementDate": "2031-08-31",
             }
         ]
+        lifecycle_articles = [
+            {
+                "title": "Retirement: Microsoft Windows Server 2022 (LTSC) - Active support ends",
+                "link": "https://endoflife.date/windows-server",
+                "published": "2031-01-12T12:00:00+00:00",
+                "summary": "Lifecycle milestone",
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "author": "endoflife.date",
+                "announcementType": "retirement",
+                "lifecycle": "retiring",
+                "azureRetirementDate": "2031-10-13",
+            }
+        ]
 
         with tempfile.TemporaryDirectory() as tmpdir:
             old_cwd = os.getcwd()
@@ -1548,6 +1647,7 @@ class MainOutputSchemaTests(unittest.TestCase):
                     mock.patch.object(fetch_feeds, "fetch_azure_updates_feed", return_value=[]), \
                     mock.patch.object(fetch_feeds, "fetch_aztty_announcements", return_value=aztty_articles), \
                     mock.patch.object(fetch_feeds, "fetch_azure_retirements_from_csv", return_value=workbook_articles), \
+                    mock.patch.object(fetch_feeds, "fetch_microsoft_lifecycle_retirements", return_value=lifecycle_articles), \
                     mock.patch.object(fetch_feeds, "fetch_savill_video", return_value=None), \
                     mock.patch.object(
                         fetch_feeds,
@@ -1571,9 +1671,10 @@ class MainOutputSchemaTests(unittest.TestCase):
         self.assertEqual(payload["totalArticles"], 1)
         self.assertEqual(len(payload["articles"]), 1)
         self.assertEqual(payload["articles"][0]["blogId"], "azuredeprecations")
+        self.assertNotIn("microsoftlifecycle", {a.get("blogId") for a in payload["articles"]})
         self.assertIn("azureRetirementCalendar", payload)
         self.assertIn("azureRetirementBuckets", payload)
-        self.assertEqual(len(payload["azureRetirementCalendar"]), 2)
+        self.assertEqual(len(payload["azureRetirementCalendar"]), 3)
         self.assertEqual(
             payload["azureRetirementCalendar"][0]["retirementDate"],
             "2031-07-31",
@@ -1585,6 +1686,10 @@ class MainOutputSchemaTests(unittest.TestCase):
         self.assertEqual(
             payload["azureRetirementCalendar"][1]["retirementDate"],
             "2031-08-31",
+        )
+        self.assertEqual(
+            payload["azureRetirementCalendar"][2]["retirementDate"],
+            "2031-10-13",
         )
         self.assertIn("windows", payload["azureRetirementBuckets"])
 

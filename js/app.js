@@ -963,7 +963,7 @@
           var icsFileName = sourceKey === "m365" ? "m365-retirements.ics" : "azure-retirements.ics";
           var calendarLabel = sourceKey === "m365"
             ? "Microsoft 365 Retirement Calendar"
-            : "Azure Retirement Calendar";
+            : "Azure Impact Lifecycle Calendar";
           var subscribeUrl = toWebcalUrl(icsUrl);
           setRetirementExportStatus(exportStatus, "", false);
 
