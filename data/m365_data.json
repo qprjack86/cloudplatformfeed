@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-13T12:59:14.076996+00:00",
-  "totalArticles": 59,
+  "generatedAt": "2026-04-13T13:27:46.090806+00:00",
+  "totalArticles": 60,
   "articles": [
     {
       "title": "Engage events: Broadcast, meetings, and custom events with moderated feed and anonymous posting on web and mobile",
@@ -695,8 +695,8 @@
       ],
       "m365RetirementSignal": false,
       "m365ActByDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
+      "m365RetirementDate": "2026-04-01",
+      "m365RetirementDatePrecision": "day",
       "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1274562"
     },
@@ -786,8 +786,8 @@
       ],
       "m365RetirementSignal": false,
       "m365ActByDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
+      "m365RetirementDate": "2026-10-13",
+      "m365RetirementDatePrecision": "day",
       "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1274396"
     },
@@ -1481,6 +1481,37 @@
       "_normalized_url": "message_center:MC1253746"
     },
     {
+      "title": "New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025",
+      "link": "https://deltapulse.app/item/MC1154300",
+      "published": "2025-09-16T22:23:46.000Z",
+      "summary": "Starting October 2025, Microsoft Edge on Windows will default to an Adobe-powered PDF viewer for enterprise users, improving performance, accessibility, and features. Rollout completes by March 2026. Admins can manage this via policies, with opt-out available until June 2026. No action needed if ready. <b>[Introduction]</b> <p>Starting in October 2025, Microsoft Edge version 141 will introduce the Adobe-powered PDF viewer as the default experience for enterprise users on Windows. This change enhances performance, accessibility, and compatibility, and introduces exclusive enterprise features. It follows our earlier <a href=\"https://blogs.windows.com/msedgedev/2023/02/08/adobe-acrobat-microsoft-edge-pdf/\">public announcement</a> and aligns with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=489231\">489231</a> and MC post MC1072406.<!-- happen:]</b--> </p><p><b>General Availability:</b>&nbsp;Migration will occur on a phased rollout. Rollout will begin October 2025 and will complete March 2026.&nbsp;</p> <b>[How this affects your organization:]</b> <p><b>Who is affected:</b></p> <ul> <li>All enterprise users on Windows using Microsoft Edge.</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The Adobe-powered PDF viewer will replace the legacy viewer as the default experience.</li> <li>User interface and controls will remain unchanged.</li> <li>The new viewer offers improved performance, accessibility, compatibility, and exclusive enterprise features.</li> </ul><p>Admins can manage the experience using two policies:</p><p><a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/newpdfreaderenabled\" target=\"_blank\">NewPDFReaderEnabled</a>: Controls the default viewer in Edge for Windows.&nbsp;</p><p><a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list\" target=\"_blank\">NewPDFReaderWebView2List</a>: Controls viewer behavior in WebView2 apps.&nbsp;</p><p> </p><ul> </ul> <p><b>Policy behavior:</b></p> <table border=\"1\"> <tbody><tr><th>Policy State</th><th>Before Enablement by Default</th><th>After Enablement by Default</th></tr> <tr><td>Default</td><td>Old PDF Viewer</td><td>New PDF Viewer</td></tr> <tr><td>Enabled</td><td>New PDF Viewer</td><td>New PDF Viewer</td></tr> <tr><td>Disabled</td><td>Old PDF Viewer</td><td>Old PDF Viewer</td></tr> </tbody></table> <b>[What you can do to prepare:]</b> <ul> </ul><p></p><p>No action is required if your organization is ready to adopt the new viewer. </p><p>If you wish to manage the experience:</p><ul><li>Enable the new viewer early using the <a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/newpdfreaderenabled\" target=\"_blank\">NewPDFReaderEnabled</a> policy.</li><li>Opt-out by disabling the same policy. Opt-out will be supported until June 2026, at which time the policy will be deprecated and any remaining organizations will be moved to the new viewer.&nbsp;</li><li>Review and update internal documentation if needed.</li><li>Communicate this change to helpdesk or support teams.</li></ul><p></p><ul></ul><p></p><p></p><p>Learn more:&nbsp;<a href=\"https://techcommunity.microsoft.com/blog/microsoftedgeinsider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/3733481\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Microsoft Edge and Adobe partner to improve the PDF experience</a>.</p><p>For support, contact your Microsoft CSAM or CSS representative.</p><div><b>[Compliance considerations:]</b></div><div>No compliance considerations identified, review as appropriate for your organization.</div> changed 2026-04-09T02:31:16.582Z lastUpdatedDate New feature User impact Admin impact New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025 Microsoft 365 suite Web 2025-09-16T22:23:57.510Z 2026-04-08T22:56:43.643Z",
+      "source": "m365",
+      "m365Service": "Microsoft 365 suite",
+      "m365AllServices": [
+        "Microsoft 365 suite"
+      ],
+      "m365Id": "MC1154300",
+      "m365Source": "message_center",
+      "m365Category": "planForChange",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "October 2025, November 2025, December 2025, January 2026, February 2026, March 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": "2026-06",
+      "m365RetirementDatePrecision": "month",
+      "lifecycle": "retiring",
+      "_normalized_url": "message_center:MC1154300"
+    },
+    {
       "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
       "link": "https://deltapulse.app/item/553213",
       "published": "2026-03-30T16:15:57.000Z",
@@ -2046,8 +2077,8 @@
         ],
         "m365RetirementSignal": false,
         "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
+        "m365RetirementDate": "2026-04-01",
+        "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1274562"
       },
@@ -2321,8 +2352,8 @@
         ],
         "m365RetirementSignal": false,
         "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
+        "m365RetirementDate": "2026-10-13",
+        "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1274396"
       },
@@ -3262,6 +3293,37 @@
         "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1249427"
+      },
+      {
+        "title": "New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025",
+        "link": "https://deltapulse.app/item/MC1154300",
+        "published": "2025-09-16T22:23:46.000Z",
+        "summary": "Starting October 2025, Microsoft Edge on Windows will default to an Adobe-powered PDF viewer for enterprise users, improving performance, accessibility, and features. Rollout completes by March 2026. Admins can manage this via policies, with opt-out available until June 2026. No action needed if ready. <b>[Introduction]</b> <p>Starting in October 2025, Microsoft Edge version 141 will introduce the Adobe-powered PDF viewer as the default experience for enterprise users on Windows. This change enhances performance, accessibility, and compatibility, and introduces exclusive enterprise features. It follows our earlier <a href=\"https://blogs.windows.com/msedgedev/2023/02/08/adobe-acrobat-microsoft-edge-pdf/\">public announcement</a> and aligns with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=489231\">489231</a> and MC post MC1072406.<!-- happen:]</b--> </p><p><b>General Availability:</b>&nbsp;Migration will occur on a phased rollout. Rollout will begin October 2025 and will complete March 2026.&nbsp;</p> <b>[How this affects your organization:]</b> <p><b>Who is affected:</b></p> <ul> <li>All enterprise users on Windows using Microsoft Edge.</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The Adobe-powered PDF viewer will replace the legacy viewer as the default experience.</li> <li>User interface and controls will remain unchanged.</li> <li>The new viewer offers improved performance, accessibility, compatibility, and exclusive enterprise features.</li> </ul><p>Admins can manage the experience using two policies:</p><p><a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/newpdfreaderenabled\" target=\"_blank\">NewPDFReaderEnabled</a>: Controls the default viewer in Edge for Windows.&nbsp;</p><p><a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list\" target=\"_blank\">NewPDFReaderWebView2List</a>: Controls viewer behavior in WebView2 apps.&nbsp;</p><p> </p><ul> </ul> <p><b>Policy behavior:</b></p> <table border=\"1\"> <tbody><tr><th>Policy State</th><th>Before Enablement by Default</th><th>After Enablement by Default</th></tr> <tr><td>Default</td><td>Old PDF Viewer</td><td>New PDF Viewer</td></tr> <tr><td>Enabled</td><td>New PDF Viewer</td><td>New PDF Viewer</td></tr> <tr><td>Disabled</td><td>Old PDF Viewer</td><td>Old PDF Viewer</td></tr> </tbody></table> <b>[What you can do to prepare:]</b> <ul> </ul><p></p><p>No action is required if your organization is ready to adopt the new viewer. </p><p>If you wish to manage the experience:</p><ul><li>Enable the new viewer early using the <a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/newpdfreaderenabled\" target=\"_blank\">NewPDFReaderEnabled</a> policy.</li><li>Opt-out by disabling the same policy. Opt-out will be supported until June 2026, at which time the policy will be deprecated and any remaining organizations will be moved to the new viewer.&nbsp;</li><li>Review and update internal documentation if needed.</li><li>Communicate this change to helpdesk or support teams.</li></ul><p></p><ul></ul><p></p><p></p><p>Learn more:&nbsp;<a href=\"https://techcommunity.microsoft.com/blog/microsoftedgeinsider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/3733481\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Microsoft Edge and Adobe partner to improve the PDF experience</a>.</p><p>For support, contact your Microsoft CSAM or CSS representative.</p><div><b>[Compliance considerations:]</b></div><div>No compliance considerations identified, review as appropriate for your organization.</div> changed 2026-04-09T02:31:16.582Z lastUpdatedDate New feature User impact Admin impact New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025 Microsoft 365 suite Web 2025-09-16T22:23:57.510Z 2026-04-08T22:56:43.643Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365 suite",
+        "m365AllServices": [
+          "Microsoft 365 suite"
+        ],
+        "m365Id": "MC1154300",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "October 2025, November 2025, December 2025, January 2026, February 2026, March 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": "2026-06",
+        "m365RetirementDatePrecision": "month",
+        "lifecycle": "retiring",
+        "_normalized_url": "message_center:MC1154300"
       },
       {
         "title": "Microsoft Copilot (Microsoft 365): Researcher Council",
@@ -4888,8 +4950,8 @@
         ],
         "m365RetirementSignal": false,
         "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
+        "m365RetirementDate": "2026-04-01",
+        "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1274562"
       },
@@ -4917,8 +4979,8 @@
         ],
         "m365RetirementSignal": false,
         "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
+        "m365RetirementDate": "2026-10-13",
+        "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1274396"
       },
@@ -5044,6 +5106,37 @@
         "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1249427"
+      },
+      {
+        "title": "New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025",
+        "link": "https://deltapulse.app/item/MC1154300",
+        "published": "2025-09-16T22:23:46.000Z",
+        "summary": "Starting October 2025, Microsoft Edge on Windows will default to an Adobe-powered PDF viewer for enterprise users, improving performance, accessibility, and features. Rollout completes by March 2026. Admins can manage this via policies, with opt-out available until June 2026. No action needed if ready. <b>[Introduction]</b> <p>Starting in October 2025, Microsoft Edge version 141 will introduce the Adobe-powered PDF viewer as the default experience for enterprise users on Windows. This change enhances performance, accessibility, and compatibility, and introduces exclusive enterprise features. It follows our earlier <a href=\"https://blogs.windows.com/msedgedev/2023/02/08/adobe-acrobat-microsoft-edge-pdf/\">public announcement</a> and aligns with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=489231\">489231</a> and MC post MC1072406.<!-- happen:]</b--> </p><p><b>General Availability:</b>&nbsp;Migration will occur on a phased rollout. Rollout will begin October 2025 and will complete March 2026.&nbsp;</p> <b>[How this affects your organization:]</b> <p><b>Who is affected:</b></p> <ul> <li>All enterprise users on Windows using Microsoft Edge.</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The Adobe-powered PDF viewer will replace the legacy viewer as the default experience.</li> <li>User interface and controls will remain unchanged.</li> <li>The new viewer offers improved performance, accessibility, compatibility, and exclusive enterprise features.</li> </ul><p>Admins can manage the experience using two policies:</p><p><a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/newpdfreaderenabled\" target=\"_blank\">NewPDFReaderEnabled</a>: Controls the default viewer in Edge for Windows.&nbsp;</p><p><a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-webview-policies#newpdfreaderwebview2list\" target=\"_blank\">NewPDFReaderWebView2List</a>: Controls viewer behavior in WebView2 apps.&nbsp;</p><p> </p><ul> </ul> <p><b>Policy behavior:</b></p> <table border=\"1\"> <tbody><tr><th>Policy State</th><th>Before Enablement by Default</th><th>After Enablement by Default</th></tr> <tr><td>Default</td><td>Old PDF Viewer</td><td>New PDF Viewer</td></tr> <tr><td>Enabled</td><td>New PDF Viewer</td><td>New PDF Viewer</td></tr> <tr><td>Disabled</td><td>Old PDF Viewer</td><td>Old PDF Viewer</td></tr> </tbody></table> <b>[What you can do to prepare:]</b> <ul> </ul><p></p><p>No action is required if your organization is ready to adopt the new viewer. </p><p>If you wish to manage the experience:</p><ul><li>Enable the new viewer early using the <a href=\"https://learn.microsoft.com/deployedge/microsoft-edge-browser-policies/newpdfreaderenabled\" target=\"_blank\">NewPDFReaderEnabled</a> policy.</li><li>Opt-out by disabling the same policy. Opt-out will be supported until June 2026, at which time the policy will be deprecated and any remaining organizations will be moved to the new viewer.&nbsp;</li><li>Review and update internal documentation if needed.</li><li>Communicate this change to helpdesk or support teams.</li></ul><p></p><ul></ul><p></p><p></p><p>Learn more:&nbsp;<a href=\"https://techcommunity.microsoft.com/blog/microsoftedgeinsider/microsoft-edge-and-adobe-partner-to-improve-the-pdf-experience/3733481\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Microsoft Edge and Adobe partner to improve the PDF experience</a>.</p><p>For support, contact your Microsoft CSAM or CSS representative.</p><div><b>[Compliance considerations:]</b></div><div>No compliance considerations identified, review as appropriate for your organization.</div> changed 2026-04-09T02:31:16.582Z lastUpdatedDate New feature User impact Admin impact New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025 Microsoft 365 suite Web 2025-09-16T22:23:57.510Z 2026-04-08T22:56:43.643Z",
+        "source": "m365",
+        "m365Service": "Microsoft 365 suite",
+        "m365AllServices": [
+          "Microsoft 365 suite"
+        ],
+        "m365Id": "MC1154300",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "October 2025, November 2025, December 2025, January 2026, February 2026, March 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": "2026-06",
+        "m365RetirementDatePrecision": "month",
+        "lifecycle": "retiring",
+        "_normalized_url": "message_center:MC1154300"
       }
     ]
   },
@@ -5065,8 +5158,8 @@
     {
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
       "link": "https://deltapulse.app/item/MC1274562",
-      "retirementDate": "2026-04",
-      "datePrecision": "month",
+      "retirementDate": "2026-04-01",
+      "datePrecision": "day",
       "published": "2026-04-08T22:42:45.000Z",
       "blog": "Microsoft Copilot (Power Platform)",
       "blogId": "m365",
@@ -5343,6 +5436,20 @@
       "sourceCount": 1
     },
     {
+      "title": "New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025",
+      "link": "https://deltapulse.app/item/MC1154300",
+      "retirementDate": "2026-06",
+      "datePrecision": "month",
+      "published": "2025-09-16T22:23:46.000Z",
+      "blog": "Microsoft 365 suite",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 suite"
+      ],
+      "sourceCount": 1
+    },
+    {
       "title": "Reminder: \"Require approved client app\" control in Microsoft Entra Conditional Access will be retired in June 2026",
       "link": "https://deltapulse.app/item/MC1220751",
       "retirementDate": "2026-06",
@@ -5610,14 +5717,14 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-13T12:59:14.076759+00:00",
+    "generatedAt": "2026-04-13T13:27:46.090613+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
         "label": "0-3-months",
         "startMonthOffset": 0,
         "endMonthOffset": 3,
-        "count": 28,
+        "count": 29,
         "items": [
           {
             "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
@@ -5628,8 +5735,8 @@
           {
             "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
             "link": "https://deltapulse.app/item/MC1274562",
-            "retirementDate": "2026-04",
-            "datePrecision": "month"
+            "retirementDate": "2026-04-01",
+            "datePrecision": "day"
           },
           {
             "title": "Microsoft Purview DLM: Retirement of SharePoint online information management and in-place records management features",

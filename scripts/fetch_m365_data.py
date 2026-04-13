@@ -650,7 +650,17 @@ def _is_retirement_date_future(value: str, today=None) -> bool:
         return (int(year), int(month)) >= (reference.year, reference.month)
 
     sort_dt = _parse_retirement_calendar_sort_date(raw)
-    return bool(sort_dt and sort_dt.date() >= reference)
+    if not sort_dt:
+        return False
+
+    candidate = sort_dt.date()
+    if candidate >= reference:
+        return True
+
+    # Keep exact day precision for dates earlier in the current month so the
+    # calendar does not degrade precise known dates (e.g., "April 1, 2026")
+    # to month-only values while the month is still active.
+    return (candidate.year, candidate.month) == (reference.year, reference.month)
 
 
 def _normalize_retirement_date_candidate(match: re.Match[str], precision: str):
@@ -1092,17 +1102,21 @@ def build_article_from_m365_item(item: dict) -> dict:
     
     summary_raw = _first_non_empty(item, ("summary", "description", "message", "details"))
     summary = _normalise_whitespace(summary_raw) if isinstance(summary_raw, str) else ""
+    title = item.get("title", "")
     tags = _extract_m365_tags(item)
-    retirement_signal = _has_retirement_signal(item.get("title", ""), summary, tags)
+    retirement_signal = _has_retirement_signal(title, summary, tags)
+    has_retirement_text = bool(
+        RETIREMENT_CONTEXT_PATTERN.search(_normalise_whitespace(f"{title} {summary}"))
+    )
     act_by = _first_non_empty(item, ACT_BY_FIELD_KEYS)
     retirement_date = (
-        _extract_m365_retirement_date(item.get("title", ""), summary, str(act_by or ""))
-        if retirement_signal
+        _extract_m365_retirement_date(title, summary, str(act_by or ""))
+        if (retirement_signal or has_retirement_text)
         else None
     )
 
     return {
-        "title": item.get("title", ""),
+        "title": title,
         "link": resolve_m365_item_link(item),
         "published": _resolve_published_date(item),
         "summary": summary,
@@ -1233,10 +1247,11 @@ def _enrich_m365_item(session: requests.Session, item: dict) -> dict:
                 if value:
                     patch[key] = value
 
-    # For message centre items, patch the body text as "description" so that
+    # For message center items, patch the body text as "description" so that
     # build_article_from_m365_item can use it as the summary and
     # _extract_m365_retirement_date can scan it for specific day-level dates.
-    if source == "message_center" and fetch_body:
+    # DeltaPulse source values vary between "message_center" and "messages".
+    if source in {"message_center", "messages"} and fetch_body:
         patch.setdefault("description", fetch_body)
 
     return patch

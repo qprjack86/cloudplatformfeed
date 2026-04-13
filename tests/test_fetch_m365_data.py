@@ -363,7 +363,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["m365RetirementDatePrecision"], "day")
         self.assertEqual(article["lifecycle"], "retiring")
 
-    def test_retirement_tags_override_text_when_present(self):
+    def test_non_retirement_tags_do_not_block_date_extraction(self):
         item = {
             "id": "MC200003",
             "title": "Retirement of feature Y on July 31, 2099",
@@ -376,8 +376,11 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         article = fetch_m365_data.build_article_from_m365_item(item)
 
+        # Signal remains tag-driven for compatibility, but date extraction should
+        # still use explicit retirement text in title/body.
         self.assertFalse(article["m365RetirementSignal"])
-        self.assertIsNone(article["m365RetirementDate"])
+        self.assertEqual(article["m365RetirementDate"], "2099-07-31")
+        self.assertEqual(article["m365RetirementDatePrecision"], "day")
 
     def test_retirement_text_fallback_when_tags_missing(self):
         item = {

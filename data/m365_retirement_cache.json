@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-13T12:55:31.807559+00:00",
-  "count": 40,
+  "updatedAt": "2026-04-13T13:27:46.114473+00:00",
+  "count": 41,
   "events": [
     {
       "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
@@ -19,8 +19,8 @@
     {
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
       "link": "https://deltapulse.app/item/MC1274562",
-      "retirementDate": "2026-04",
-      "datePrecision": "month",
+      "retirementDate": "2026-04-01",
+      "datePrecision": "day",
       "published": "2026-04-08T22:42:45.000Z",
       "blog": "Microsoft Copilot (Power Platform)",
       "blogId": "m365",
@@ -293,6 +293,20 @@
       "announcementType": "retirement",
       "sources": [
         "['Microsoft 365 apps']"
+      ],
+      "sourceCount": 1
+    },
+    {
+      "title": "New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025",
+      "link": "https://deltapulse.app/item/MC1154300",
+      "retirementDate": "2026-06",
+      "datePrecision": "month",
+      "published": "2025-09-16T22:23:46.000Z",
+      "blog": "Microsoft 365 suite",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 suite"
       ],
       "sourceCount": 1
     },
