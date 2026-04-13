@@ -725,6 +725,15 @@ def build_m365_retirement_calendar(articles: list, max_items: int = 120):
                 article.get("summary", ""),
                 article.get("m365ActByDate", ""),
             ) or ""
+        # Fallback: for lifecycle=retiring articles, use m365TargetDate when no
+        # explicit retirement date could be extracted from text (e.g. empty summary).
+        if not retirement_date and article.get("lifecycle") == "retiring":
+            target_raw = str(article.get("m365TargetDate") or "")
+            for part in target_raw.split(","):
+                candidate = _extract_retirement_date_without_context(part.strip())
+                if candidate and _is_retirement_date_future(candidate, today=today):
+                    retirement_date = candidate
+                    break
         if not retirement_date:
             continue
 

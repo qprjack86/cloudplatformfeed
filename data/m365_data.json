@@ -5047,24 +5047,147 @@
       }
     ]
   },
-  "m365RetirementCalendar": [],
+  "m365RetirementCalendar": [
+    {
+      "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
+      "link": "https://deltapulse.app/item/MC1249427",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-03-12T00:04:42.000Z",
+      "blog": "Microsoft 365 apps",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 apps"
+      ],
+      "sourceCount": 1
+    },
+    {
+      "title": "Complete retirement of the Outlook Lite app",
+      "link": "https://deltapulse.app/item/MC1276508",
+      "retirementDate": "2026-05",
+      "datePrecision": "month",
+      "published": "2026-04-10T22:23:16.000Z",
+      "blog": "Microsoft 365 apps",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 apps"
+      ],
+      "sourceCount": 1
+    },
+    {
+      "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
+      "link": "https://deltapulse.app/item/MC1273328",
+      "retirementDate": "2026-05",
+      "datePrecision": "month",
+      "published": "2026-04-07T19:29:05.000Z",
+      "blog": "Power Apps",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Power Apps"
+      ],
+      "sourceCount": 1
+    },
+    {
+      "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
+      "link": "https://deltapulse.app/item/MC1276511",
+      "retirementDate": "2026-05",
+      "datePrecision": "month",
+      "published": "2026-04-10T22:24:55.000Z",
+      "blog": "Microsoft Defender XDR",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft Defender XDR"
+      ],
+      "sourceCount": 1
+    },
+    {
+      "title": "Top domain mail flow report in Exchange Online is retiring",
+      "link": "https://deltapulse.app/item/MC1272554",
+      "retirementDate": "2026-07",
+      "datePrecision": "month",
+      "published": "2026-04-06T22:06:03.000Z",
+      "blog": "Exchange Online",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Exchange Online"
+      ],
+      "sourceCount": 1
+    },
+    {
+      "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
+      "link": "https://deltapulse.app/item/MC1272549",
+      "retirementDate": "2026-07",
+      "datePrecision": "month",
+      "published": "2026-04-06T21:59:59.000Z",
+      "blog": "SharePoint Online",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "SharePoint Online"
+      ],
+      "sourceCount": 1
+    }
+  ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-13T09:06:06.088500+00:00",
+    "generatedAt": "2026-04-13T09:16:55.206571+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
         "label": "0-3-months",
         "startMonthOffset": 0,
         "endMonthOffset": 3,
-        "count": 0,
-        "items": []
+        "count": 4,
+        "items": [
+          {
+            "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
+            "link": "https://deltapulse.app/item/MC1249427",
+            "retirementDate": "2026-04",
+            "datePrecision": "month"
+          },
+          {
+            "title": "Complete retirement of the Outlook Lite app",
+            "link": "https://deltapulse.app/item/MC1276508",
+            "retirementDate": "2026-05",
+            "datePrecision": "month"
+          },
+          {
+            "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
+            "link": "https://deltapulse.app/item/MC1273328",
+            "retirementDate": "2026-05",
+            "datePrecision": "month"
+          },
+          {
+            "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
+            "link": "https://deltapulse.app/item/MC1276511",
+            "retirementDate": "2026-05",
+            "datePrecision": "month"
+          }
+        ]
       },
       "3_6_months": {
         "label": "3-6-months",
         "startMonthOffset": 3,
         "endMonthOffset": 6,
-        "count": 0,
-        "items": []
+        "count": 2,
+        "items": [
+          {
+            "title": "Top domain mail flow report in Exchange Online is retiring",
+            "link": "https://deltapulse.app/item/MC1272554",
+            "retirementDate": "2026-07",
+            "datePrecision": "month"
+          },
+          {
+            "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
+            "link": "https://deltapulse.app/item/MC1272549",
+            "retirementDate": "2026-07",
+            "datePrecision": "month"
+          }
+        ]
       },
       "6_9_months": {
         "label": "6-9-months",
