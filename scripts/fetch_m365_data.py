@@ -39,6 +39,7 @@ M365_DATA_OUTPUT = REPO_ROOT / "data" / "m365_data.json"
 M365_CHECKSUMS_OUTPUT = REPO_ROOT / "data" / "m365_checksums.json"
 M365_RETIREMENTS_ICS_OUTPUT = REPO_ROOT / "data" / "m365-retirements.ics"
 M365_PREVIOUS_COUNT_FILE = M365_DATA_OUTPUT  # Read totalArticles from previous m365_data.json
+M365_RETIREMENT_CACHE_PATH = REPO_ROOT / "data" / "m365_retirement_cache.json"
 
 # Failsafe configuration (same as Azure)
 FAILSAFE_MIN_ARTICLES = 80
@@ -767,13 +768,25 @@ def _extract_m365_retirement_date(title_raw: str, summary_raw: str, act_by_raw: 
     return candidates[0][3]
 
 
-def build_m365_retirement_calendar(articles: list, max_items: int = 120):
-    """Build a deduplicated, date-sorted M365 retirement calendar from explicit dates."""
+def build_m365_retirement_calendar(
+    articles: list, max_items: int = 120, cached_events: list = None
+):
+    """Build a deduplicated, date-sorted M365 retirement calendar from explicit dates.
+
+    Cached events (from previous runs) are merged in so that retirements announced
+    outside the current 7-day DeltaPulse window are not lost — mirroring the
+    keep_for_future_retirement behaviour of the Azure feed.
+    """
     today = datetime.now(timezone.utc).date()
     events_by_key = {}
+    link_to_dedup_key: dict[str, str] = {}  # DeltaPulse URL → dedup key for cache merging
 
     for article in articles:
-        if article.get("m365RetirementSignal") is False:
+        # Skip only if explicitly not retirement AND not classified as retiring.
+        # Articles whose tags don't include a retirement tag (signal=False) but
+        # whose body text describes end-of-support/retirement (lifecycle=retiring)
+        # must still appear in the calendar.
+        if article.get("m365RetirementSignal") is False and article.get("lifecycle") != "retiring":
             continue
 
         retirement_date = str(article.get("m365RetirementDate") or "").strip()
@@ -862,6 +875,38 @@ def build_m365_retirement_calendar(articles: list, max_items: int = 120):
         existing["sourceCount"] = len(combined_sources)
         if not existing.get("link") and article.get("link"):
             existing["link"] = article.get("link")
+
+        # Track link → key so cache merge can skip already-covered items
+        if event.get("link"):
+            link_to_dedup_key[event["link"]] = dedupe_key
+
+    # --- Merge cached events ---
+    # Add retirement events from previous runs that are still in the future and are
+    # not already represented by a fresher version from the current 7-day fetch.
+    for cached_event in (cached_events or []):
+        retirement_date = str(cached_event.get("retirementDate") or "").strip()
+        if not retirement_date:
+            continue
+        if not _is_retirement_date_future(retirement_date, today=today):
+            continue
+        sort_dt = _parse_retirement_calendar_sort_date(retirement_date)
+        if not sort_dt:
+            continue
+
+        # Primary dedup: link URL contains the stable DeltaPulse item ID
+        cached_link = cached_event.get("link", "")
+        if cached_link and cached_link in link_to_dedup_key:
+            continue  # Current fetch already covered this item
+
+        # Secondary dedup: normalised title
+        cached_title = cached_event.get("title", "")
+        cached_key = _normalize_retirement_title(cached_title) or f"link:{cached_link}"
+        if cached_key in events_by_key:
+            continue  # Already present by title match
+
+        events_by_key[cached_key] = cached_event
+        if cached_link:
+            link_to_dedup_key[cached_link] = cached_key
 
     events = list(events_by_key.values())
     events.sort(
@@ -1281,6 +1326,108 @@ def fetch_m365_items(session: requests.Session) -> list:
         return []
 
 
+RETIREMENT_KEYWORD_RE = re.compile(
+    r"\b(retir(?:ing|ement|ed)?|end[\s\-]of[\s\-]support|end[\s\-]of[\s\-]life|deprecat|sunset)\b",
+    re.IGNORECASE,
+)
+
+
+def fetch_m365_extended_retirement_events(
+    session: requests.Session, lookback_days: int = 365
+) -> list:
+    """Discover M365 retirement events from a longer historical window.
+
+    Uses the DeltaPulse startDate parameter to scan for retirements announced
+    more than 7 days ago - mirroring the keep_for_future_retirement mechanism
+    used by the Azure feed.  Returns calendar event dicts ready for merging.
+    Only items with future retirement dates are included.
+    """
+    today = datetime.now(timezone.utc).date()
+    start_date = (datetime.now(timezone.utc) - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
+    end_date = (datetime.now(timezone.utc) - timedelta(days=8)).strftime("%Y-%m-%d")
+
+    print(f"  - Extended retirement scan: {start_date} → {end_date}...")
+
+    try:
+        summaries = call_mcp_tool(
+            session,
+            "list_new_items",
+            {"source": "messages", "startDate": start_date, "endDate": end_date, "limit": 500},
+        )
+    except Exception as exc:
+        print(f"  Extended retirement scan failed: {exc}")
+        return []
+
+    candidates = [s for s in summaries if RETIREMENT_KEYWORD_RE.search(s.get("title", ""))]
+    print(
+        f"  Extended scan: {len(summaries)} summaries, {len(candidates)} retirement candidates"
+    )
+
+    events = []
+    for item in candidates:
+        item_id = str(item.get("id", "")).strip()
+        if not item_id:
+            continue
+        try:
+            fetch_result = call_mcp_fetch_metadata(session, item_id)
+            metadata = fetch_result.get("metadata", {}) or {}
+            body = fetch_result.get("body", "")
+
+            tags = metadata.get("tags", []) or []
+            lifecycle = metadata.get("lifecycle", "")
+
+            has_retirement_tag = "Retirement" in tags
+            is_retiring = lifecycle == "retiring"
+            if not has_retirement_tag and not is_retiring:
+                continue
+
+            title = str(item.get("title", "") or "").strip()
+            service = str(item.get("service", "") or "").strip()
+
+            # Extract retirement date: actionRequiredByDateTime → body text → months
+            retirement_date = ""
+            act_by_raw = str(metadata.get("actionRequiredByDateTime") or "")
+            if act_by_raw:
+                retirement_date = _extract_retirement_date_without_context(act_by_raw) or ""
+            if not retirement_date:
+                retirement_date = _extract_m365_retirement_date(title, body) or ""
+            if not retirement_date:
+                months = metadata.get("months", []) or []
+                if months:
+                    retirement_date = _extract_retirement_date_without_context(months[-1]) or ""
+
+            if not retirement_date:
+                continue
+            if not _is_retirement_date_future(retirement_date, today=today):
+                continue
+
+            published = str(
+                metadata.get("publishedDate") or item.get("publishedDate", "")
+            )
+            link = f"https://deltapulse.app/item/{item_id}"
+            precision = _m365_retirement_date_precision(retirement_date) or "month"
+
+            events.append(
+                {
+                    "title": title,
+                    "link": link,
+                    "retirementDate": retirement_date,
+                    "datePrecision": precision,
+                    "published": published,
+                    "blog": service,
+                    "blogId": "m365",
+                    "announcementType": "retirement",
+                    "sources": [service] if service else [],
+                    "sourceCount": 1 if service else 0,
+                }
+            )
+        except Exception as exc:
+            print(f"  Warning: extended fetch failed for {item_id}: {exc}")
+
+    print(f"  Extended scan found {len(events)} future retirement events")
+    return events
+
+
 def _extract_youtube_video_id(url: str) -> str:
     """Extract YouTube video ID from watch or youtu.be URL."""
     if not isinstance(url, str) or not url:
@@ -1403,7 +1550,7 @@ def fetch_m365_video(session: requests.Session) -> dict:
         return fallback
 
 
-def build_m365_feed(raw_items: list, m365_video: dict = None) -> dict:
+def build_m365_feed(raw_items: list, m365_video: dict = None, cached_retirements: list = None) -> dict:
     """Build the complete M365 feed data structure."""
     # Convert items to article schema
     articles = [build_article_from_m365_item(item) for item in raw_items]
@@ -1420,7 +1567,7 @@ def build_m365_feed(raw_items: list, m365_video: dict = None) -> dict:
     for lifecycle in ["in_preview", "launched_ga", "in_development", "retiring"]:
         by_lifecycle[lifecycle] = [a for a in deduped if a.get("lifecycle") == lifecycle]
 
-    retirement_calendar = build_m365_retirement_calendar(deduped)
+    retirement_calendar = build_m365_retirement_calendar(deduped, cached_events=cached_retirements)
     retirement_buckets = build_retirement_window_buckets(retirement_calendar)
     
     # Compute distinct publishing days for the summary date range.
@@ -1601,6 +1748,36 @@ def write_m365_checksums(paths: list[Path], output_path: Path = M365_CHECKSUMS_O
         return False
 
 
+def load_m365_retirement_cache(path: Path = M365_RETIREMENT_CACHE_PATH) -> list:
+    """Load the persistent retirement event cache.  Returns a list of event dicts."""
+    try:
+        if path.exists():
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            events = data.get("events", [])
+            print(f"Retirement cache loaded: {len(events)} cached events from {path}")
+            return events
+    except (OSError, json.JSONDecodeError, TypeError) as exc:
+        print(f"Warning: Could not load retirement cache ({exc}); starting fresh")
+    return []
+
+
+def save_m365_retirement_cache(events: list, path: Path = M365_RETIREMENT_CACHE_PATH) -> None:
+    """Persist retirement events so future runs keep retirements announced before the 7-day window."""
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "updatedAt": datetime.now(timezone.utc).isoformat(),
+            "count": len(events),
+            "events": events,
+        }
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
+        print(f"Retirement cache saved: {len(events)} events to {path}")
+    except (OSError, TypeError, ValueError) as exc:
+        print(f"Warning: Could not save retirement cache: {exc}")
+
+
 def load_previous_article_count(path: Path = M365_DATA_OUTPUT) -> int:
     """Load previous article count for failsafe comparison."""
     return shared_load_previous_article_count(path)
@@ -1625,16 +1802,26 @@ def main():
     session = create_http_session()
     
     try:
+        # Load persistent retirement cache (keeps retirements from previous runs)
+        cached_retirements = load_m365_retirement_cache()
+
         # Fetch items from DeltaPulse
         raw_items = fetch_m365_items(session)
         
         if not raw_items:
             print("Warning: No items fetched from DeltaPulse MCP")
+
+        # Extend the retirement calendar beyond the 7-day window by scanning for
+        # retirement-tagged items announced up to a year ago.
+        extended_retirements = fetch_m365_extended_retirement_events(session)
+
+        # Merge persistent cache + extended historical scan for full coverage
+        all_cached = (cached_retirements or []) + (extended_retirements or [])
         
         m365_video = fetch_m365_video(session)
 
-        # Build feed structure
-        feed_data = build_m365_feed(raw_items, m365_video)
+        # Build feed structure (merges cached retirements into the calendar)
+        feed_data = build_m365_feed(raw_items, m365_video, cached_retirements=all_cached)
         
         # Evaluate failsafe
         previous_count = load_previous_article_count()
@@ -1653,6 +1840,8 @@ def main():
         if success:
             write_m365_retirements_ics(feed_data.get("m365RetirementCalendar", []))
             write_m365_checksums([M365_DATA_OUTPUT, M365_RETIREMENTS_ICS_OUTPUT])
+            # Persist the full merged retirement calendar for future runs
+            save_m365_retirement_cache(feed_data.get("m365RetirementCalendar", []))
             print("\n✓ M365 feed data fetch completed successfully")
         else:
             print("\n✗ Failed to write M365 data")
