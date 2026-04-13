@@ -7,44 +7,44 @@ X-WR-CALNAME:Microsoft 365 Retirement Calendar
 X-WR-CALDESC:Upcoming Microsoft 365 retirement announcements from Cloud Pla
  tform Feed
 BEGIN:VEVENT
-UID:m365-retirement-202604-updated-retirement-of-the-semi-a-microsoft365@cp
- feed.cloud
-DTSTAMP:20260413T093816Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260402
+UID:m365-retirement-20260420-updated-retirement-of-the-semi-a-microsoft365@
+ cpfeed.cloud
+DTSTAMP:20260413T105748Z
+DTSTART;VALUE=DATE:20260420
+DTEND;VALUE=DATE:20260421
 SUMMARY:(Updated) Retirement of the Semi-Annual Enterprise Channel option i
  n the Office Customization Tool
-DESCRIPTION:Retirement date: 2026-04\\nDate precision: month\\nSources: Mic
- rosoft 365 apps\\nThis event uses month-level precision in source data.
+DESCRIPTION:Retirement date: 2026-04-20\\nDate precision: day\\nSources: Mi
+ crosoft 365 apps
 URL:https://deltapulse.app/item/MC1249427
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202605-complete-retirement-of-the-outlo-microsoft365@cp
- feed.cloud
-DTSTAMP:20260413T093816Z
+UID:m365-retirement-20260501-updated-simplifying-agent-manage-microsoftent@
+ cpfeed.cloud
+DTSTAMP:20260413T105748Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
-SUMMARY:Complete retirement of the Outlook Lite app
-DESCRIPTION:Retirement date: 2026-05\\nDate precision: month\\nSources: Mic
- rosoft 365 apps\\nThis event uses month-level precision in source data.
-URL:https://deltapulse.app/item/MC1276508
+SUMMARY:(Updated) Simplifying agent management with Agent 365
+DESCRIPTION:Retirement date: 2026-05-01\\nDate precision: day\\nSources: Mi
+ crosoft Entra
+URL:https://deltapulse.app/item/MC1275311
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202605-power-apps-information-regarding-powerapps@cpfee
- d.cloud
-DTSTAMP:20260413T093816Z
+UID:m365-retirement-20260501-power-apps-information-regarding-powerapps@cpf
+ eed.cloud
+DTSTAMP:20260413T105748Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
 SUMMARY:Power Apps - Information regarding the end of support for embedding
   model-driven apps (preview) in Microsoft Teams
-DESCRIPTION:Retirement date: 2026-05\\nDate precision: month\\nSources: Pow
- er Apps\\nThis event uses month-level precision in source data.
+DESCRIPTION:Retirement date: 2026-05-01\\nDate precision: day\\nSources: Po
+ wer Apps
 URL:https://deltapulse.app/item/MC1273328
 END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260509-upcoming-retirement-of-older-mic-microsoftdef@
  cpfeed.cloud
-DTSTAMP:20260413T093816Z
+DTSTAMP:20260413T105748Z
 DTSTART;VALUE=DATE:20260509
 DTEND;VALUE=DATE:20260510
 SUMMARY:Upcoming retirement of older Microsoft Defender for Endpoint mobile
@@ -54,9 +54,20 @@ DESCRIPTION:Retirement date: 2026-05-09\\nDate precision: day\\nSources: Mi
 URL:https://deltapulse.app/item/MC1276511
 END:VEVENT
 BEGIN:VEVENT
+UID:m365-retirement-20260525-complete-retirement-of-the-outlo-microsoft365@
+ cpfeed.cloud
+DTSTAMP:20260413T105748Z
+DTSTART;VALUE=DATE:20260525
+DTEND;VALUE=DATE:20260526
+SUMMARY:Complete retirement of the Outlook Lite app
+DESCRIPTION:Retirement date: 2026-05-25\\nDate precision: day\\nSources: Mi
+ crosoft 365 apps
+URL:https://deltapulse.app/item/MC1276508
+END:VEVENT
+BEGIN:VEVENT
 UID:m365-retirement-20260705-top-domain-mail-flow-report-in-e-exchangeonli@
  cpfeed.cloud
-DTSTAMP:20260413T093816Z
+DTSTAMP:20260413T105748Z
 DTSTART;VALUE=DATE:20260705
 DTEND;VALUE=DATE:20260706
 SUMMARY:Top domain mail flow report in Exchange Online is retiring
@@ -67,7 +78,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202608-upcoming-change-retirement-of-no-sharepointon@cp
  feed.cloud
-DTSTAMP:20260413T093816Z
+DTSTAMP:20260413T105748Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
 SUMMARY:Upcoming change: Retirement of noise suppression capability for One

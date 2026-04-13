@@ -351,12 +351,47 @@ def call_mcp_fetch_metadata(session: requests.Session, item_id: str) -> dict:
         text = content[0].get("text", "{}")
         parsed = json.loads(text)
         metadata = parsed.get("metadata")
+        body_fragments = []
+
+        def collect_text(value):
+            if value is None:
+                return
+            if isinstance(value, str):
+                text = _normalise_whitespace(value)
+                if text:
+                    body_fragments.append(text)
+                return
+            if isinstance(value, dict):
+                for nested in value.values():
+                    collect_text(nested)
+                return
+            if isinstance(value, (list, tuple, set)):
+                for nested in value:
+                    collect_text(nested)
+
+        for body_key in (
+            "description",
+            "message",
+            "body",
+            "details",
+            "summary",
+            "content",
+            "fullContent",
+            "changeHistory",
+        ):
+            collect_text(parsed.get(body_key))
+
         body = ""
-        for body_key in ("description", "message", "body", "details", "summary"):
-            raw = parsed.get(body_key)
-            if raw and isinstance(raw, str) and raw.strip():
-                body = _normalise_whitespace(raw)
-                break
+        if body_fragments:
+            seen = set()
+            deduped = []
+            for fragment in body_fragments:
+                lowered = fragment.lower()
+                if lowered in seen:
+                    continue
+                seen.add(lowered)
+                deduped.append(fragment)
+            body = _normalise_whitespace(" ".join(deduped))
         return {
             "metadata": metadata if isinstance(metadata, dict) else {},
             "body": body,
