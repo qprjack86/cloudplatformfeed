@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-13T16:47:00.730950+00:00",
-  "count": 41,
+  "updatedAt": "2026-04-14T13:43:18.638106+00:00",
+  "count": 42,
   "events": [
     {
       "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
@@ -30,6 +30,13 @@
         "Microsoft Copilot (Power Platform)"
       ],
       "sourceCount": 1,
+      "primaryCategory": "stayInformed",
+      "categories": [
+        "stayInformed"
+      ],
+      "categorySourceMap": {
+        "m365": "stayInformed"
+      },
       "source": "m365"
     },
     {
@@ -43,6 +50,21 @@
       "announcementType": "retirement",
       "sources": [
         "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Power BI: End of support for on-prem SharePoint web part",
+      "link": "https://deltapulse.app/item/MC1217651",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-01-14T02:14:26.000Z",
+      "blog": "['Power BI']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Power BI']"
       ],
       "sourceCount": 1,
       "source": "m365"
@@ -73,21 +95,6 @@
       "announcementType": "retirement",
       "sources": [
         "['SharePoint Online']"
-      ],
-      "sourceCount": 1,
-      "source": "m365"
-    },
-    {
-      "title": "Power BI: End of support for on-prem SharePoint web part",
-      "link": "https://deltapulse.app/item/MC1217651",
-      "retirementDate": "2026-04-13",
-      "datePrecision": "day",
-      "published": "2026-01-14T02:14:26.000Z",
-      "blog": "['Power BI']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Power BI']"
       ],
       "sourceCount": 1,
       "source": "m365"
@@ -150,6 +157,13 @@
         "Microsoft 365 apps"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -180,6 +194,13 @@
         "Microsoft Entra"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -225,6 +246,13 @@
         "Power Apps"
       ],
       "sourceCount": 1,
+      "primaryCategory": "stayInformed",
+      "categories": [
+        "stayInformed"
+      ],
+      "categorySourceMap": {
+        "m365": "stayInformed"
+      },
       "source": "m365"
     },
     {
@@ -255,6 +283,13 @@
         "Microsoft Defender XDR"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -285,6 +320,13 @@
         "Microsoft 365 apps"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -330,6 +372,13 @@
         "Microsoft 365 suite"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -555,6 +604,35 @@
         "Windows"
       ],
       "sourceCount": 1,
+      "primaryCategory": "stayInformed",
+      "categories": [
+        "stayInformed"
+      ],
+      "categorySourceMap": {
+        "m365": "stayInformed"
+      },
+      "source": "m365"
+    },
+    {
+      "title": "Support for Office LTSC 2021, and additional apps will end on October 13, 2026",
+      "link": "https://deltapulse.app/item/MC1278920",
+      "retirementDate": "2026-10-13",
+      "datePrecision": "day",
+      "published": "2026-04-13T16:19:39.000Z",
+      "blog": "Microsoft 365 suite",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 suite"
+      ],
+      "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {

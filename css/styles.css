@@ -1354,6 +1354,12 @@ footer a:hover {
   color: var(--text-secondary);
 }
 
+.retirement-mini-today {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
 .retirement-mini-export-status.is-success {
   color: var(--text-secondary);
 }
@@ -1375,6 +1381,12 @@ footer a:hover {
 .retirement-mini-nav-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.retirement-mini-today-btn {
+  min-width: 3.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
 }
 
 .retirement-mini-select-wrap {
@@ -1431,6 +1443,16 @@ footer a:hover {
 .retirement-mini-day.has-events {
   border-color: color-mix(in srgb, var(--primary) 50%, var(--border-color));
   background: color-mix(in srgb, var(--primary) 12%, var(--bg-primary));
+}
+
+.retirement-mini-day.is-today {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 50%, transparent);
+}
+
+.retirement-mini-day.is-today .retirement-mini-day-num {
+  color: var(--primary-dark);
+  font-weight: 700;
 }
 
 .retirement-mini-day-num {
