@@ -157,6 +157,7 @@ DEFAULT_MICROSOFT_LIFECYCLE_PRODUCTS = [
 ]
 DEFAULT_MICROSOFT_LIFECYCLE_MILESTONES = ["eoas", "eol"]
 DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP = 120
+DEFAULT_RETIREMENT_CALENDAR_EVENT_CAP = 500
 
 
 CHECKSUM_ARTIFACTS = [
@@ -828,21 +829,6 @@ def dedupe_articles(articles):
             )
             continue
 
-        # Check if article has a future retirement date
-        # Check if article has a future retirement date - retirement articles should never be filtered out
-        retirement_date = article.get("azureRetirementDate")
-        has_future_retirement = _is_retirement_date_future(retirement_date)
-
-        # Articles with future retirement dates are always kept, even if they look like duplicates,
-        # to ensure they appear in the retirement calendar
-        if duplicate_reason and not has_future_retirement:
-            print(
-                f"Deduplicated article via {duplicate_reason}: "
-                f"{article.get('title', 'Untitled')}"
-            )
-            continue
-
-        # Track all articles for dedup to avoid adding the exact same article twice
         if canonical_link:
             seen_links.add(canonical_link)
         if title_key:
@@ -2373,7 +2359,7 @@ def _display_calendar_title(title):
     return value.strip() or "Untitled"
 
 
-def build_azure_retirement_calendar(articles, max_items=120):
+def build_azure_retirement_calendar(articles, max_items=DEFAULT_RETIREMENT_CALENDAR_EVENT_CAP):
     """Build a deduplicated, date-sorted list of upcoming retirement announcements."""
     today = datetime.now(timezone.utc).date()
     events_by_key = {}
@@ -2569,7 +2555,7 @@ def build_unified_retirement_calendar(
     azure_events=None,
     microsoft_events=None,
     m365_events=None,
-    max_items=120,
+    max_items=DEFAULT_RETIREMENT_CALENDAR_EVENT_CAP,
 ):
     """Build a deduplicated, source-tagged calendar from Azure, Microsoft, and M365 events.
     

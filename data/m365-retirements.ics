@@ -9,7 +9,7 @@ X-WR-CALDESC:Upcoming Microsoft 365 retirement announcements from Cloud Pla
 BEGIN:VEVENT
 UID:m365-retirement-202604-updated-legacy-sharepoint-online-sharepointon@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY:(Updated) Legacy SharePoint Online Content Delivery Network (CDN) d
@@ -21,7 +21,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202604-microsoft-copilot-studio-informa-microsoftcop@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY:Microsoft Copilot Studio - Information regarding the end of support
@@ -34,7 +34,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202604-microsoft-purview-dlm-retirement-sharepointon@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY:Microsoft Purview DLM: Retirement of SharePoint online information 
@@ -46,7 +46,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202604-power-bi-end-of-support-for-on-p-powerbi@cpfeed.
  cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY:Power BI: End of support for on-prem SharePoint web part
@@ -57,7 +57,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202604-retirement-of-the-semi-annual-en-microsoft365@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY:Retirement of the Semi-Annual Enterprise Channel installation optio
@@ -70,7 +70,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202604-sharepoint-pages-retirement-of-w-sharepointon@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY:SharePoint Pages: Retirement of Web Search (Bing) image pivot
@@ -81,7 +81,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260414-outlook-for-windows-report-retir-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260414
 DTEND;VALUE=DATE:20260415
 SUMMARY:Outlook for Windows report retirement in the Exchange admin center
@@ -92,7 +92,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260414-retiring-the-impala-connector-microsoftpow@cpf
  eed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260414
 DTEND;VALUE=DATE:20260415
 SUMMARY:Retiring the Impala connector
@@ -103,7 +103,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260415-engage-is-retiring-live-events-p-microsoftviv@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260415
 DTEND;VALUE=DATE:20260416
 SUMMARY:Engage is retiring live events powered by Teams Live Events effecti
@@ -115,7 +115,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260420-updated-retirement-of-the-semi-a-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260421
 SUMMARY:(Updated) Retirement of the Semi-Annual Enterprise Channel option i
@@ -127,7 +127,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260430-microsoft-defender-for-ios-end-o-microsoftdef@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
 SUMMARY:Microsoft Defender for iOS: End of support for iOS 16 devices
@@ -138,7 +138,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260501-updated-simplifying-agent-manage-microsoftent@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
 SUMMARY:(Updated) Simplifying agent management with Agent 365
@@ -149,7 +149,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202605-microsoft-loop-retirement-of-cop-microsoft365@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
 SUMMARY:Microsoft Loop: Retirement of Copilot‑generated Recaps
@@ -161,7 +161,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260501-microsoft-sharepoint-retirement--sharepointon@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
 SUMMARY:Microsoft SharePoint: Retirement of IDCRL authentication protocol a
@@ -173,7 +173,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260501-power-apps-information-regarding-powerapps@cpf
  eed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
 SUMMARY:Power Apps - Information regarding the end of support for embedding
@@ -185,7 +185,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202605-upcoming-retirement-of-select-th-microsoftdef@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
 SUMMARY:Upcoming retirement of select threat detections in Microsoft Defend
@@ -198,7 +198,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260509-upcoming-retirement-of-older-mic-microsoftdef@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260509
 DTEND;VALUE=DATE:20260510
 SUMMARY:Upcoming retirement of older Microsoft Defender for Endpoint mobile
@@ -210,7 +210,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260515-updated-retirement-of-external-a-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
 SUMMARY:(Updated) Retirement of external access token for actionable messag
@@ -222,7 +222,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260525-complete-retirement-of-the-outlo-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260525
 DTEND;VALUE=DATE:20260526
 SUMMARY:Complete retirement of the Outlook Lite app
@@ -233,7 +233,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202606-updated-retirement-of-featured-l-sharepointon@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:(Updated) Retirement of featured links on SharePoint Start Page
@@ -244,7 +244,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260601-classic-outlook-retirement-of-pe-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:Classic Outlook: Retirement of people card expanded view
@@ -255,7 +255,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202606-new-pdf-viewer-enabled-by-defaul-microsoft365@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:New PDF Viewer Enabled by Default in Microsoft Edge Starting Octobe
@@ -267,7 +267,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202606-reminder-require-approved-client-microsoftint@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:Reminder: "Require approved client app" control in Microsoft Entra 
@@ -279,7 +279,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260601-retirement-of-the-sway-windows-d-sway@cpfeed.c
  loud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:Retirement of the Sway Windows Desktop App on June 1\, 2026
@@ -290,7 +290,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260619-power-platform-information-regar-powerplatfor@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260619
 DTEND;VALUE=DATE:20260620
 SUMMARY:Power Platform - Information regarding the end of support for Globa
@@ -302,7 +302,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260629-microsoft-teams-retirement-of-le-microsofttea@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260629
 DTEND;VALUE=DATE:20260630
 SUMMARY:Microsoft Teams: Retirement of legacy third‑party meeting and call 
@@ -314,7 +314,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260629-microsoft-teams-teams-live-event-microsofttea@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260629
 DTEND;VALUE=DATE:20260630
 SUMMARY:Microsoft Teams: Teams Live Events is retiring
@@ -325,7 +325,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260630-updated-retirement-of-assignment-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:(Updated) Retirement of Assignments and Courses adaptive card exten
@@ -337,7 +337,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260630-retirement-of-the-isbroadcast-pr-microsofttea@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Retirement of the isBroadcast property for Teams Live Events in Mic
@@ -349,7 +349,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202607-updated-retirement-of-credential-exchangeonli@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260701
 DTEND;VALUE=DATE:20260702
 SUMMARY:(Updated) Retirement of -Credential parameter when connecting to Ex
@@ -361,7 +361,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260705-top-domain-mail-flow-report-in-e-exchangeonli@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260705
 DTEND;VALUE=DATE:20260706
 SUMMARY:Top domain mail flow report in Exchange Online is retiring
@@ -372,7 +372,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260713-sharepoint-designer-2013-reaches-sharepointon@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260713
 DTEND;VALUE=DATE:20260714
 SUMMARY:SharePoint Designer 2013 reaches end of support on July 14\, 2026
@@ -383,7 +383,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202608-microsoft-teams-retirement-of-ca-microsofttea@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
 SUMMARY:Microsoft Teams: Retirement of CAPTCHA for meeting join
@@ -394,7 +394,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202608-upcoming-change-retirement-of-no-sharepointon@cp
  feed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
 SUMMARY:Upcoming change: Retirement of noise suppression capability for One
@@ -406,7 +406,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260831-updated-retirement-of-sharepoint-sharepointon@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260901
 SUMMARY:(Updated) Retirement of SharePoint One-Time Passcode (SPO OTP) and 
@@ -418,7 +418,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260930-project-online-retirement-projec-projectonlin@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Project Online retirement: Project Web App site creation and unused
@@ -430,7 +430,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20261013-extended-security-updates-esu-av-windows@cpfee
  d.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Extended Security Updates (ESU) available for Windows 10 Enterprise
@@ -442,7 +442,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20261013-support-for-office-ltsc-2021-and-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Support for Office LTSC 2021\, and additional apps will end on Octo
@@ -453,7 +453,7 @@ URL:https://deltapulse.app/item/MC1278920
 END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202612-retirement-of-power-bi-q-a-powerbi@cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Retirement of Power BI Q&A
@@ -464,7 +464,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20270131-updated-retirement-notice-mde-an-microsoftdef@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:(Updated) Retirement notice: MDE and XDR Advanced Hunting APIs reti
@@ -476,7 +476,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20270401-exchange-web-services-ews-retire-exchangeonli@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Exchange Web Services (EWS) retirement update
@@ -487,7 +487,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20271014-microsoft-entra-id-retirement-of-microsoftent@
  cpfeed.cloud
-DTSTAMP:20260414T131437Z
+DTSTAMP:20260414T134318Z
 DTSTART;VALUE=DATE:20271014
 DTEND;VALUE=DATE:20271015
 SUMMARY:Microsoft Entra ID: Retirement of duplicative properties in passkey
