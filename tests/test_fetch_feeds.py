@@ -160,6 +160,37 @@ class RenderSummaryMarkdownTests(unittest.TestCase):
         )
 
 
+class ClassifyWithAiTests(unittest.TestCase):
+    def _build_client(self, content):
+        response = mock.Mock()
+        response.choices = [mock.Mock(message=mock.Mock(content=content))]
+        client = mock.Mock()
+        client.chat.completions.create.return_value = response
+        return client
+
+    def test_accepts_fenced_json_response(self):
+        client = self._build_client(
+            "```json\n{\"items\":[{\"id\":\"0\",\"bucket\":\"retiring\",\"label\":\"Example item\"}]}\n```"
+        )
+
+        result = fetch_feeds.classify_with_ai([
+            {"title": "Example item", "summary": "", "blogId": "azureupdates"}
+        ], client, "test-deployment")
+
+        self.assertEqual(result, [{"id": "0", "bucket": "retiring", "label": "Example item"}])
+
+    def test_accepts_content_parts_response(self):
+        client = self._build_client([
+            {"type": "output_text", "text": '{"items":[{"id":"0","bucket":"in_preview","label":"Preview item"}]}'},
+        ])
+
+        result = fetch_feeds.classify_with_ai([
+            {"title": "Preview item", "summary": "", "blogId": "azureupdates"}
+        ], client, "test-deployment")
+
+        self.assertEqual(result, [{"id": "0", "bucket": "in_preview", "label": "Preview item"}])
+
+
 class AttachLinksToSummaryTests(unittest.TestCase):
     def test_adds_markdown_links_for_matching_bullets(self):
         summary = (
