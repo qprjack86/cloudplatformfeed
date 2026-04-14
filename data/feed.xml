@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Tue, 14 Apr 2026 13:42:52 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 16:02:32 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -15,6 +15,15 @@
       <dc:creator><![CDATA[Ravindra_Kumar_Vishwakarma]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Optimize object storage costs automatically with smart tier—now generally available]]></title>
+      <link>https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available</link>
+      <guid>https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available</guid>
+      <description><![CDATA[Optimize object storage costs automatically with smart tier—now generally available By continuously optimizing data placement, smart tier ensures your storage costs are aligned with actual usage.Update Type: Announcement, Services: Data Lake Storage, Azure Storage, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Generally Available: Azure File Sync in Belgium Central, Malaysia West, and Indonesia Central]]></title>
@@ -186,6 +195,15 @@
       <dc:creator><![CDATA[Marc de Droog]]></dc:creator>
       <pubDate>Mon, 13 Apr 2026 13:18:18 GMT</pubDate>
       <category><![CDATA[Azure Networking]]></category>
+    </item>
+    <item>
+      <title><![CDATA[One platform, many insights: How Eventhouse brings analytics together]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/one-data-many-insights-how-eventhouse-brings-analytics-together-preview/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/one-data-many-insights-how-eventhouse-brings-analytics-together-preview/</guid>
+      <description><![CDATA[Modern analytics isn’t just about storing data. It’s about detecting issues early, understanding them fast, and acting with confidence. Eventhouse in Microsoft Fabric brings advanced analytics capabilities together so teams can move from raw events to insight and action without stitching tools or...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 13 Apr 2026 13:02:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Bring your local files to OneLake with OneLake file explorer]]></title>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[James Newton-King]]></dc:creator>
       <pubDate>Thu, 09 Apr 2026 17:00:00 GMT</pubDate>
       <category><![CDATA[Aspire Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Monitor AI Agents on App Service with OpenTelemetry and the New Application Insights Agents View]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/monitor-ai-agents-on-app-service-with-opentelemetry-and-the-new/ba-p/4510023</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/monitor-ai-agents-on-app-service-with-opentelemetry-and-the-new/ba-p/4510023</guid>
-      <description><![CDATA[Part 2 of 2: In Blog 1, we deployed a multi-agent travel planner on Azure App Service using the Microsoft Agent Framework (MAF) 1.0 GA. This post dives deep into how we instrumented those agents with OpenTelemetry and lit up the brand-new Agents (Preview) view in Application Insights. 📋...]]></description>
-      <dc:creator><![CDATA[jordanselig]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 16:43:43 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing Private Preview: Deploy Ansible Playbooks using Azure Policy via Machine Configuration]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-private-preview-deploy-ansible-playbooks-using-azure/ba-p/4507848</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-private-preview-deploy-ansible-playbooks-using-azure/ba-p/4507848</guid>
-      <description><![CDATA[Azure Arc is on a mission to unify security, compliance, and management for Windows and Linux machines—anywhere. By extending Azure’s control plane beyond the cloud, Azure Arc enables organizations to unify governance, compliance, security and management of servers across on‑premises, edge, and...]]></description>
-      <dc:creator><![CDATA[alinetran]]></dc:creator>
-      <pubDate>Thu, 09 Apr 2026 16:25:52 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
     </item>
   </channel>
 </rss>
