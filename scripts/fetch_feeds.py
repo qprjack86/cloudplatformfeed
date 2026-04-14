@@ -157,6 +157,7 @@ DEFAULT_MICROSOFT_LIFECYCLE_PRODUCTS = [
 ]
 DEFAULT_MICROSOFT_LIFECYCLE_MILESTONES = ["eoas", "eol"]
 DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP = 120
+DEFAULT_RETIREMENT_CALENDAR_EVENT_CAP = 500
 
 
 CHECKSUM_ARTIFACTS = [
@@ -2373,7 +2374,7 @@ def _display_calendar_title(title):
     return value.strip() or "Untitled"
 
 
-def build_azure_retirement_calendar(articles, max_items=120):
+def build_azure_retirement_calendar(articles, max_items=DEFAULT_RETIREMENT_CALENDAR_EVENT_CAP):
     """Build a deduplicated, date-sorted list of upcoming retirement announcements."""
     today = datetime.now(timezone.utc).date()
     events_by_key = {}
@@ -2569,7 +2570,7 @@ def build_unified_retirement_calendar(
     azure_events=None,
     microsoft_events=None,
     m365_events=None,
-    max_items=120,
+    max_items=DEFAULT_RETIREMENT_CALENDAR_EVENT_CAP,
 ):
     """Build a deduplicated, source-tagged calendar from Azure, Microsoft, and M365 events.
     
