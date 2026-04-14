@@ -2321,6 +2321,8 @@ def build_azure_retirement_calendar(articles, max_items=120):
 
         title = article.get("title", "Untitled")
         link = article.get("link", "")
+        category = _categorize_retirement_article(article)
+        source_key = str(article.get("blogId", "") or "").strip().lower()
         dedupe_key = _azure_retirement_identity_key(title, link)
         update_id = _extract_azure_update_id_from_url(link)
         update_id_key = f"update-id:{update_id}" if update_id else ""
@@ -2335,6 +2337,7 @@ def build_azure_retirement_calendar(articles, max_items=120):
             "blogId": article.get("blogId", ""),
             "announcementType": article.get("announcementType", ""),
             "link": link,
+            "category": category,
         }
 
         # --- Exact / structured key lookups ---
@@ -2371,6 +2374,20 @@ def build_azure_retirement_calendar(articles, max_items=120):
             if article.get("published", "") > existing.get("published", ""):
                 existing["published"] = article.get("published", "")
 
+            existing_categories = [
+                c for c in existing.get("categories", []) if str(c or "").strip()
+            ]
+            if category and category not in existing_categories:
+                existing_categories.append(category)
+            existing["categories"] = sorted(set(existing_categories))
+
+            source_category_map = existing.get("categorySourceMap")
+            if not isinstance(source_category_map, dict):
+                source_category_map = {}
+            if source_key and category:
+                source_category_map[source_key] = category
+            existing["categorySourceMap"] = source_category_map
+
             replacement = {
                 "title": _display_calendar_title(title),
                 "link": link,
@@ -2390,14 +2407,18 @@ def build_azure_retirement_calendar(articles, max_items=120):
                 existing["blog"] = replacement["blog"]
                 existing["blogId"] = replacement["blogId"]
                 existing["announcementType"] = replacement["announcementType"]
+                existing["primaryCategory"] = category or existing.get("primaryCategory", "Other")
 
             if existing.get("blogId") != "azureupdates" and article.get("blogId") == "azureupdates":
                 existing["blog"] = article.get("blog", "")
                 existing["blogId"] = article.get("blogId", "")
                 existing["announcementType"] = article.get("announcementType", "")
                 existing["link"] = link or existing.get("link", "")
+                existing["primaryCategory"] = category or existing.get("primaryCategory", "Other")
             elif not existing.get("link") and link:
                 existing["link"] = link
+            if not existing.get("primaryCategory"):
+                existing["primaryCategory"] = category or "Other"
             existing["sources"] = sorted(
                 {
                     src for src in existing.get("sources", []) + [source_label]
@@ -2422,6 +2443,9 @@ def build_azure_retirement_calendar(articles, max_items=120):
             "announcementType": article.get("announcementType", ""),
             "sources": [source_label] if source_label else [],
             "sourceReports": [source_report],
+            "primaryCategory": category or "Other",
+            "categories": [category or "Other"],
+            "categorySourceMap": {source_key: category or "Other"} if source_key else {},
         }
         events_by_key[dedupe_key] = event
         if update_id_key:

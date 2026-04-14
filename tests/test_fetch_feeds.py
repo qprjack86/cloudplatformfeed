@@ -1194,6 +1194,42 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(event["sourceCount"], 2)
         self.assertIn("Azure Deprecations (aztty)", event["sources"])
         self.assertIn("Azure Updates", event["sources"])
+        self.assertIn("primaryCategory", event)
+        self.assertIn("categories", event)
+        self.assertIn("categorySourceMap", event)
+        self.assertTrue(event["primaryCategory"])
+
+    def test_build_azure_retirement_calendar_adds_category_metadata_for_workbook_items(self):
+        articles = [
+            {
+                "title": "Flatcar Container Linux for AKS (preview)",
+                "link": "https://azure.microsoft.com/en-us/updates/557929/",
+                "published": "2026-03-16T18:15:54.374686+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "summary": "Azure Kubernetes Service support for Flatcar Container Linux for AKS (preview) will be retired on June 8, 2026.",
+                "azureRetirementDate": "2026-06-08",
+            },
+            {
+                "title": "Volume - Create basic networking volumes",
+                "link": "https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-network-topologies#considerations",
+                "published": "2026-04-14T07:46:35.957136+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "summary": "Azure NetApp Files basic networking volumes retire on May 31, 2026.",
+                "azureRetirementDate": "2026-05-31",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        by_title = {event["title"]: event for event in events}
+        self.assertEqual(by_title["Flatcar Container Linux for AKS (preview)"]["primaryCategory"], "Compute")
+        self.assertIn("Compute", by_title["Flatcar Container Linux for AKS (preview)"]["categories"])
+        self.assertEqual(by_title["Volume - Create basic networking volumes"]["primaryCategory"], "Infrastructure")
+        self.assertIn("Infrastructure", by_title["Volume - Create basic networking volumes"]["categories"])
 
     def test_build_azure_retirement_calendar_filters_past_and_invalid_dates(self):
         articles = [
