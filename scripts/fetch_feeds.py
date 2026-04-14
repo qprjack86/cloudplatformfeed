@@ -923,6 +923,49 @@ def classify_lifecycle(article):
     return None
 
 
+def _extract_openai_message_text(message):
+    """Return a plain-text payload from chat completion message content."""
+    content = getattr(message, "content", "")
+    if isinstance(content, str):
+        return content
+    if not isinstance(content, list):
+        return ""
+
+    fragments = []
+    for part in content:
+        if isinstance(part, str):
+            text = part
+        elif isinstance(part, dict):
+            text = part.get("text", "")
+            if isinstance(text, dict):
+                text = text.get("value", "")
+        else:
+            text = getattr(part, "text", "")
+            if not isinstance(text, str):
+                text = getattr(text, "value", "")
+        if isinstance(text, str) and text.strip():
+            fragments.append(text.strip())
+    return "\n".join(fragments)
+
+
+def _parse_openai_json_payload(raw_text):
+    """Parse a JSON object from a chat completion text payload."""
+    raw = (raw_text or "").strip()
+    if not raw:
+        raise ValueError("empty response content")
+
+    raw = re.sub(r"^```(?:json)?\s*", "", raw)
+    raw = re.sub(r"\s*```$", "", raw)
+
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        match = re.search(r"\{.*\}", raw, re.DOTALL)
+        if not match:
+            raise
+        return json.loads(match.group(0))
+
+
 def classify_with_ai(candidates, client, deployment):
     """Ask AI to classify and label articles lacking deterministic lifecycle signals.
 
@@ -960,10 +1003,8 @@ def classify_with_ai(candidates, client, deployment):
             ],
             max_completion_tokens=300,
         )
-        raw = response.choices[0].message.content.strip()
-        raw = re.sub(r"^```[a-z]*\n?", "", raw)
-        raw = re.sub(r"\n?```$", "", raw)
-        parsed = json.loads(raw)
+        raw = _extract_openai_message_text(response.choices[0].message)
+        parsed = _parse_openai_json_payload(raw)
         valid_buckets = {"in_preview", "launched_ga", "retiring", "in_development", "other"}
         results = []
         for item in parsed.get("items", []):
@@ -2943,6 +2984,9 @@ def generate_ai_summary(articles):
         )
         ai_results = classify_with_ai(unclassified_pool, client, deployment)
         ai_result_by_id = {r["id"]: r for r in ai_results}
+        ai_used = bool(ai_results)
+        if unclassified_pool and not ai_used:
+            print("  AI classification unavailable; continuing with rule-based summary only")
 
         # Phase 3: merge results and render markdown entirely in code
         final_buckets = {"in_preview": [], "launched_ga": [], "retiring": [], "in_development": []}
@@ -2963,11 +3007,12 @@ def generate_ai_summary(articles):
 
         summary_article_count = sum(len(v) for v in final_buckets.values())
         summary = render_summary_markdown(final_buckets)
-        print(f"AI summary generated: {summary[:100]}...")
+        summary_source = "azure-openai" if ai_used else "rule-based"
+        print(f"Summary generated ({summary_source}): {summary[:100]}...")
         return {
             "status": "available",
             "summary": summary,
-            "source": "azure-openai",
+            "source": summary_source,
             "windowDays": len(summary_days),
             "publishingDays": summary_days,
             "articleCount": summary_article_count,
