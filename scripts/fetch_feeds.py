@@ -945,23 +945,44 @@ def _extract_openai_message_text(message):
                 text = getattr(text, "value", "")
         if isinstance(text, str) and text.strip():
             fragments.append(text.strip())
-    return "\n".join(fragments)
+    
+    result = "\n".join(fragments)
+    if not result:
+        try:
+            import sys
+            print(f"  [DEBUG] Empty response extraction; content type={type(content).__name__}, length={len(content) if isinstance(content, list) else 'N/A'}", file=sys.stderr)
+            if isinstance(content, list) and content:
+                print(f"  [DEBUG] First part: type={type(content[0]).__name__}, value={str(content[0])[:100]}", file=sys.stderr)
+        except Exception:
+            pass
+    return result
 
 
 def _parse_openai_json_payload(raw_text):
     """Parse a JSON object from a chat completion text payload."""
     raw = (raw_text or "").strip()
     if not raw:
+        try:
+            import sys
+            print(f"  [DEBUG] Empty raw_text passed to JSON parser; input was: {repr(raw_text)[:200]}", file=sys.stderr)
+        except Exception:
+            pass
         raise ValueError("empty response content")
 
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
+    raw = raw.strip()
 
     try:
         return json.loads(raw)
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as e:
         match = re.search(r"\{.*\}", raw, re.DOTALL)
         if not match:
+            try:
+                import sys
+                print(f"  [DEBUG] JSON parse failed and no JSON object found; raw={repr(raw)[:200]}, error={e}", file=sys.stderr)
+            except Exception:
+                pass
             raise
         return json.loads(match.group(0))
 
@@ -1004,6 +1025,9 @@ def classify_with_ai(candidates, client, deployment):
             max_completion_tokens=300,
         )
         raw = _extract_openai_message_text(response.choices[0].message)
+        if not raw:
+            print(f"  AI classifier received empty message content; falling back to rule-based")
+            return []
         parsed = _parse_openai_json_payload(raw)
         valid_buckets = {"in_preview", "launched_ga", "retiring", "in_development", "other"}
         results = []
