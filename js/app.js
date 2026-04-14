@@ -765,7 +765,14 @@
       retirementCalendarCollapsedState[sourceKey] = isPhoneViewport();
     }
     var isCollapsed = Boolean(retirementCalendarCollapsedState[sourceKey]);
-    var currentMonthStart = startOfMonth(new Date());
+    var todayDate = new Date();
+    var currentMonthStart = startOfMonth(todayDate);
+    var todayLabel = formatLocalDate(todayDate, {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
     var earliestMonth = startOfMonth(normalizedEvents[0].parsedDate);
     var latestMonth = startOfMonth(normalizedEvents[normalizedEvents.length - 1].parsedDate);
 
@@ -800,8 +807,12 @@
     }
     for (var dayNum = 1; dayNum <= monthEndDay; dayNum++) {
       var count = dayCounts[dayNum] || 0;
+      var isToday =
+        anchorMonth.getFullYear() === todayDate.getFullYear() &&
+        anchorMonth.getMonth() === todayDate.getMonth() &&
+        dayNum === todayDate.getDate();
       dayCells.push(
-        '<div class="retirement-mini-day' + (count ? " has-events" : "") + '">' +
+        '<div class="retirement-mini-day' + (count ? " has-events" : "") + (isToday ? " is-today" : "") + '">' +
           '<span class="retirement-mini-day-num">' + dayNum + "</span>" +
           (count ? '<span class="retirement-mini-dot" title="' + count + ' retirement notice(s)"></span>' : "") +
         "</div>"
@@ -872,6 +883,7 @@
       '<div class="retirement-mini-header">' +
         '<div class="retirement-mini-title-row"><h2>🗓️ Retirement Calendar</h2>' + collapseButtonHtml + "</div>" +
         "<p>" + escapeHtml(payload.label) + " · " + escapeHtml(formatLocalDate(anchorMonth, { month: "long", year: "numeric" })) + "</p>" +
+        '<p class="retirement-mini-today">Today: ' + escapeHtml(todayLabel) + "</p>" +
       "</div>" +
       '<div class="retirement-mini-body' + (isCollapsed ? " is-collapsed" : "") + '">' +
       '<div class="retirement-mini-controls">' +
@@ -879,6 +891,7 @@
         '<label class="retirement-mini-select-wrap"><span class="sr-only">Month</span><select data-retirement-select="month">' + monthOptions + "</select></label>" +
         '<label class="retirement-mini-select-wrap"><span class="sr-only">Year</span><select data-retirement-select="year">' + yearOptions.join("") + "</select></label>" +
         '<button type="button" class="retirement-mini-nav-btn" data-retirement-nav="next" aria-label="Next month"' + disableNext + '>▶</button>' +
+        '<button type="button" class="retirement-mini-nav-btn retirement-mini-today-btn" data-retirement-nav="today" aria-label="Jump to current month">Today</button>' +
         exportControlsHtml +
       "</div>" +
       exportStatusHtml +
@@ -893,6 +906,7 @@
     var yearSelect = retirementCalendarEl.querySelector('[data-retirement-select="year"]');
     var prevBtn = retirementCalendarEl.querySelector('[data-retirement-nav="prev"]');
     var nextBtn = retirementCalendarEl.querySelector('[data-retirement-nav="next"]');
+    var todayBtn = retirementCalendarEl.querySelector('[data-retirement-nav="today"]');
     var exportToggleBtn = retirementCalendarEl.querySelector('[data-retirement-export-toggle]');
     var exportMenu = retirementCalendarEl.querySelector('[data-retirement-export-menu]');
     var exportStatus = retirementCalendarEl.querySelector('[data-retirement-export-status]');
@@ -928,6 +942,12 @@
     if (nextBtn) {
       nextBtn.addEventListener("click", function () {
         updateAnchor(new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 1));
+      });
+    }
+
+    if (todayBtn) {
+      todayBtn.addEventListener("click", function () {
+        updateAnchor(currentMonthStart);
       });
     }
 
@@ -1127,6 +1147,30 @@
     return weekStart;
   }
 
+  function getLocalDateKey() {
+    var today = startOfLocalDay(new Date());
+    return (
+      today.getFullYear() + "-" +
+      String(today.getMonth() + 1).padStart(2, "0") + "-" +
+      String(today.getDate()).padStart(2, "0")
+    );
+  }
+
+  function setupDailyUiRefresh() {
+    var lastDateKey = getLocalDateKey();
+    window.setInterval(function () {
+      var nextDateKey = getLocalDateKey();
+      if (nextDateKey === lastDateKey) {
+        return;
+      }
+
+      lastDateKey = nextDateKey;
+      applyFilters();
+      renderRetirementCalendarPanel();
+      updateTopPanelsLayout();
+    }, 60000);
+  }
+
   // ===== Initialize =====
   async function init() {
     loadTheme();
@@ -1138,6 +1182,7 @@
     await loadData();
     updateHeaderOffset();
     setupEventListeners();
+    setupDailyUiRefresh();
   }
 
   // ===== Infinite Scroll =====
