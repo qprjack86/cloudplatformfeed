@@ -1194,6 +1194,42 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(event["sourceCount"], 2)
         self.assertIn("Azure Deprecations (aztty)", event["sources"])
         self.assertIn("Azure Updates", event["sources"])
+        self.assertIn("primaryCategory", event)
+        self.assertIn("categories", event)
+        self.assertIn("categorySourceMap", event)
+        self.assertTrue(event["primaryCategory"])
+
+    def test_build_azure_retirement_calendar_adds_category_metadata_for_workbook_items(self):
+        articles = [
+            {
+                "title": "Flatcar Container Linux for AKS (preview)",
+                "link": "https://azure.microsoft.com/en-us/updates/557929/",
+                "published": "2026-03-16T18:15:54.374686+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "summary": "Azure Kubernetes Service support for Flatcar Container Linux for AKS (preview) will be retired on June 8, 2026.",
+                "azureRetirementDate": "2026-06-08",
+            },
+            {
+                "title": "Volume - Create basic networking volumes",
+                "link": "https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-network-topologies#considerations",
+                "published": "2026-04-14T07:46:35.957136+00:00",
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "summary": "Azure NetApp Files basic networking volumes retire on May 31, 2026.",
+                "azureRetirementDate": "2026-05-31",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        by_title = {event["title"]: event for event in events}
+        self.assertEqual(by_title["Flatcar Container Linux for AKS (preview)"]["primaryCategory"], "Compute")
+        self.assertIn("Compute", by_title["Flatcar Container Linux for AKS (preview)"]["categories"])
+        self.assertEqual(by_title["Volume - Create basic networking volumes"]["primaryCategory"], "Infrastructure")
+        self.assertIn("Infrastructure", by_title["Volume - Create basic networking volumes"]["categories"])
 
     def test_build_azure_retirement_calendar_filters_past_and_invalid_dates(self):
         articles = [
@@ -1745,6 +1781,50 @@ class UnifiedRetirementCalendarTests(unittest.TestCase):
         self.assertEqual(len(calendar), 3)
         sources = {event.get("source") for event in calendar}
         self.assertEqual(sources, {"azure", "microsoft", "m365"})
+        for event in calendar:
+            self.assertIn("primaryCategory", event)
+            self.assertIn("categories", event)
+            self.assertIn("categorySourceMap", event)
+            self.assertTrue(event.get("categories"))
+
+    def test_build_unified_retirement_calendar_maps_endoflife_to_existing_categories(self):
+        """Microsoft lifecycle events should map to existing categories with fallback."""
+        now = datetime.now(timezone.utc)
+        future_month = (now + timedelta(days=60)).strftime("%Y-%m")
+
+        microsoft_events = [
+            {
+                "title": "SQL Server 2022 end of support",
+                "link": "https://example.com/sql",
+                "azureRetirementDate": future_month,
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "announcementType": "retirement",
+                "published": now.isoformat(),
+                "lifecycleProduct": "mssqlserver",
+                "lifecycleRelease": "2022",
+            },
+            {
+                "title": "Unmapped legacy product retirement",
+                "link": "https://example.com/unknown",
+                "azureRetirementDate": future_month,
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "announcementType": "retirement",
+                "published": now.isoformat(),
+                "lifecycleProduct": "unknown-product",
+                "lifecycleRelease": "v1",
+            },
+        ]
+
+        calendar = fetch_feeds.build_unified_retirement_calendar(
+            microsoft_events=microsoft_events,
+        )
+
+        self.assertEqual(len(calendar), 2)
+        by_link = {event.get("link"): event for event in calendar}
+        self.assertEqual(by_link["https://example.com/sql"].get("primaryCategory"), "Data & AI")
+        self.assertEqual(by_link["https://example.com/unknown"].get("primaryCategory"), "Other")
 
     def test_build_unified_retirement_calendar_deduplicates_cross_source(self):
         """Unified calendar should deduplicate same event across sources."""

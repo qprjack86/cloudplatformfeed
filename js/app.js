@@ -709,6 +709,13 @@
       .map(function (event) {
         var retirementDate = String(event.retirementDate || "").trim();
         var parsedDate = parseRetirementEventDate(retirementDate);
+        var categories = Array.isArray(event.categories)
+          ? event.categories.filter(Boolean)
+          : [];
+        var primaryCategory = String(event.primaryCategory || "").trim();
+        if (!primaryCategory && categories.length) {
+          primaryCategory = categories[0];
+        }
         return {
           title: event.title || "Untitled retirement notice",
           link: event.link || "",
@@ -716,6 +723,8 @@
           datePrecision: event.datePrecision || (/^\d{4}-\d{2}-\d{2}$/.test(retirementDate) ? "day" : "month"),
           sources: Array.isArray(event.sources) ? event.sources : [],
           sourceCount: Number(event.sourceCount || 0),
+          primaryCategory: primaryCategory,
+          categories: categories,
           parsedDate: parsedDate
         };
       })
@@ -804,11 +813,18 @@
       var sourceHint = entry.sourceCount > 1
         ? " · " + entry.sourceCount + " sources"
         : "";
+      var categoryBadge = entry.primaryCategory
+        ? '<span class="retirement-mini-category-badge">' + escapeHtml(entry.primaryCategory) + "</span>"
+        : "";
+      var extraCategories = entry.categories.slice(1);
+      var extraCategoryHint = extraCategories.length
+        ? '<span class="retirement-mini-category-more" title="Also: ' + escapeHtml(extraCategories.join(", ")) + '">+' + extraCategories.length + "</span>"
+        : "";
       var content = escapeHtml(dateLabel + " — " + (entry.title || "Untitled retirement notice") + sourceHint);
       if (entry.link) {
-        return '<li><a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' + content + "</a></li>";
+        return '<li>' + categoryBadge + extraCategoryHint + '<a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' + content + "</a></li>";
       }
-      return "<li>" + content + "</li>";
+      return "<li>" + categoryBadge + extraCategoryHint + content + "</li>";
     }).join("");
 
     var monthNames = [

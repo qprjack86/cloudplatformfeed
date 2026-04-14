@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T08:25:31.138673+00:00",
+  "generatedAt": "2026-04-14T08:42:00.871737+00:00",
   "totalArticles": 67,
   "articles": [
     {
@@ -5748,6 +5748,13 @@
         "Microsoft Copilot (Power Platform)"
       ],
       "sourceCount": 1,
+      "primaryCategory": "stayInformed",
+      "categories": [
+        "stayInformed"
+      ],
+      "categorySourceMap": {
+        "m365": "stayInformed"
+      },
       "source": "m365"
     },
     {
@@ -5868,6 +5875,13 @@
         "Microsoft 365 apps"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -5898,6 +5912,13 @@
         "Microsoft Entra"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -5943,6 +5964,13 @@
         "Power Apps"
       ],
       "sourceCount": 1,
+      "primaryCategory": "stayInformed",
+      "categories": [
+        "stayInformed"
+      ],
+      "categorySourceMap": {
+        "m365": "stayInformed"
+      },
       "source": "m365"
     },
     {
@@ -5973,6 +6001,13 @@
         "Microsoft Defender XDR"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -6003,6 +6038,13 @@
         "Microsoft 365 apps"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -6048,6 +6090,13 @@
         "Microsoft 365 suite"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -6273,6 +6322,13 @@
         "Windows"
       ],
       "sourceCount": 1,
+      "primaryCategory": "stayInformed",
+      "categories": [
+        "stayInformed"
+      ],
+      "categorySourceMap": {
+        "m365": "stayInformed"
+      },
       "source": "m365"
     },
     {
@@ -6288,6 +6344,13 @@
         "Microsoft 365 suite"
       ],
       "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
       "source": "m365"
     },
     {
@@ -6352,7 +6415,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-14T08:25:31.138454+00:00",
+    "generatedAt": "2026-04-14T08:42:00.871525+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {

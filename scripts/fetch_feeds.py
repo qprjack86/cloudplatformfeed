@@ -320,6 +320,97 @@ def _load_microsoft_lifecycle_config(config_path=SITE_CONFIG_PATH):
 MICROSOFT_LIFECYCLE_CONFIG = _load_microsoft_lifecycle_config()
 
 
+def _load_retirement_category_mappings(config_path=SITE_CONFIG_PATH):
+    """Load source category mappings from config/site.json."""
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+        mappings = raw.get("categoryMappings", {})
+        if not isinstance(mappings, dict):
+            return {}, {}
+        azure = mappings.get("azure", {})
+        m365 = mappings.get("m365", {})
+        return (
+            azure if isinstance(azure, dict) else {},
+            m365 if isinstance(m365, dict) else {},
+        )
+    except (OSError, ValueError, TypeError) as exc:
+        print(f"Warning: could not load categoryMappings config: {exc}")
+        return {}, {}
+
+
+AZURE_RETIREMENT_CATEGORY_MAPPINGS, M365_RETIREMENT_CATEGORY_MAPPINGS = _load_retirement_category_mappings()
+MICROSOFT_LIFECYCLE_CATEGORY_OVERRIDES = {
+    "mssqlserver": "Data & AI",
+    "dotnet": "Apps & Platform",
+    "dotnetfx": "Apps & Platform",
+    "powershell": "Operations",
+    "windows-server": "Infrastructure",
+    "sharepoint": "Apps & Platform",
+    "msexchange": "Apps & Platform",
+    "visual-studio": "Operations",
+}
+
+
+def _normalize_category_match_text(text):
+    """Normalize text used by category keyword matching."""
+    value = clean_html(str(text or "")).lower()
+    value = _split_camel_case(value)
+    value = re.sub(r"[^a-z0-9\s]", " ", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def _category_from_mapping(search_text, mapping, fallback="Other"):
+    """Resolve a category from mapping keywords using case-insensitive contains matching."""
+    haystack = _normalize_category_match_text(search_text)
+    if not isinstance(mapping, dict):
+        return fallback
+
+    for category, keywords in mapping.items():
+        if not isinstance(keywords, list):
+            continue
+        for keyword in keywords:
+            needle = _normalize_category_match_text(keyword)
+            if not needle:
+                continue
+            if needle in haystack:
+                return str(category)
+    return fallback
+
+
+def _categorize_retirement_article(article):
+    """Return a best-effort category for a retirement source article."""
+    article = article or {}
+    source = str(article.get("_source", "")).strip().lower()
+    blog_id = str(article.get("blogId", "")).strip().lower()
+
+    if source == "m365" or blog_id == "m365":
+        m365_category = str(article.get("m365Category") or "").strip()
+        if m365_category:
+            return m365_category
+        service = article.get("m365Service", "")
+        title = article.get("title", "")
+        summary = article.get("summary", "")
+        return _category_from_mapping(f"{service} {title} {summary}", M365_RETIREMENT_CATEGORY_MAPPINGS)
+
+    if source == "microsoft" or blog_id == MICROSOFT_LIFECYCLE_BLOG_ID:
+        product = article.get("lifecycleProduct", "")
+        release = article.get("lifecycleRelease", "")
+        title = article.get("title", "")
+        override = MICROSOFT_LIFECYCLE_CATEGORY_OVERRIDES.get(str(product or "").strip().lower())
+        if override:
+            return override
+        return _category_from_mapping(f"{product} {release} {title}", AZURE_RETIREMENT_CATEGORY_MAPPINGS)
+
+    title = article.get("title", "")
+    summary = article.get("summary", "")
+    blog = article.get("blog", "")
+    return _category_from_mapping(
+        f"{blog_id} {blog} {title} {summary}",
+        AZURE_RETIREMENT_CATEGORY_MAPPINGS,
+    )
+
+
 def clean_html(text):
     """Remove HTML tags and clean up text."""
     if not text:
@@ -2230,6 +2321,8 @@ def build_azure_retirement_calendar(articles, max_items=120):
 
         title = article.get("title", "Untitled")
         link = article.get("link", "")
+        category = _categorize_retirement_article(article)
+        source_key = str(article.get("blogId", "") or "").strip().lower()
         dedupe_key = _azure_retirement_identity_key(title, link)
         update_id = _extract_azure_update_id_from_url(link)
         update_id_key = f"update-id:{update_id}" if update_id else ""
@@ -2244,6 +2337,7 @@ def build_azure_retirement_calendar(articles, max_items=120):
             "blogId": article.get("blogId", ""),
             "announcementType": article.get("announcementType", ""),
             "link": link,
+            "category": category,
         }
 
         # --- Exact / structured key lookups ---
@@ -2280,6 +2374,20 @@ def build_azure_retirement_calendar(articles, max_items=120):
             if article.get("published", "") > existing.get("published", ""):
                 existing["published"] = article.get("published", "")
 
+            existing_categories = [
+                c for c in existing.get("categories", []) if str(c or "").strip()
+            ]
+            if category and category not in existing_categories:
+                existing_categories.append(category)
+            existing["categories"] = sorted(set(existing_categories))
+
+            source_category_map = existing.get("categorySourceMap")
+            if not isinstance(source_category_map, dict):
+                source_category_map = {}
+            if source_key and category:
+                source_category_map[source_key] = category
+            existing["categorySourceMap"] = source_category_map
+
             replacement = {
                 "title": _display_calendar_title(title),
                 "link": link,
@@ -2299,14 +2407,18 @@ def build_azure_retirement_calendar(articles, max_items=120):
                 existing["blog"] = replacement["blog"]
                 existing["blogId"] = replacement["blogId"]
                 existing["announcementType"] = replacement["announcementType"]
+                existing["primaryCategory"] = category or existing.get("primaryCategory", "Other")
 
             if existing.get("blogId") != "azureupdates" and article.get("blogId") == "azureupdates":
                 existing["blog"] = article.get("blog", "")
                 existing["blogId"] = article.get("blogId", "")
                 existing["announcementType"] = article.get("announcementType", "")
                 existing["link"] = link or existing.get("link", "")
+                existing["primaryCategory"] = category or existing.get("primaryCategory", "Other")
             elif not existing.get("link") and link:
                 existing["link"] = link
+            if not existing.get("primaryCategory"):
+                existing["primaryCategory"] = category or "Other"
             existing["sources"] = sorted(
                 {
                     src for src in existing.get("sources", []) + [source_label]
@@ -2331,6 +2443,9 @@ def build_azure_retirement_calendar(articles, max_items=120):
             "announcementType": article.get("announcementType", ""),
             "sources": [source_label] if source_label else [],
             "sourceReports": [source_report],
+            "primaryCategory": category or "Other",
+            "categories": [category or "Other"],
+            "categorySourceMap": {source_key: category or "Other"} if source_key else {},
         }
         events_by_key[dedupe_key] = event
         if update_id_key:
@@ -2450,6 +2565,7 @@ def build_unified_retirement_calendar(
         title = article.get("title", "Untitled")
         link = article.get("link", "")
         source = article.get("_source", "unknown")
+        category = _categorize_retirement_article(article)
         
         # Try multiple deduplication keys
         dedupe_key = _azure_retirement_identity_key(title, link)
@@ -2467,6 +2583,7 @@ def build_unified_retirement_calendar(
             "announcementType": article.get("announcementType", ""),
             "link": link,
             "source": source,
+            "category": category,
         }
         
         # Look for existing event
@@ -2494,6 +2611,20 @@ def build_unified_retirement_calendar(
             existing["sourceReports"].append(source_report)
             if article.get("published", "") > existing.get("published", ""):
                 existing["published"] = article.get("published", "")
+
+            existing_categories = [
+                c for c in existing.get("categories", []) if str(c or "").strip()
+            ]
+            if category and category not in existing_categories:
+                existing_categories.append(category)
+            existing["categories"] = sorted(set(existing_categories))
+
+            source_category_map = existing.get("categorySourceMap")
+            if not isinstance(source_category_map, dict):
+                source_category_map = {}
+            if source and category:
+                source_category_map[source] = category
+            existing["categorySourceMap"] = source_category_map
             
             # Higher priority source takes over the event metadata
             existing_priority = source_priority_map.get(existing.get("blogId", ""), 99)
@@ -2521,6 +2652,10 @@ def build_unified_retirement_calendar(
                     existing["blogId"] = replacement["blogId"]
                     existing["announcementType"] = replacement["announcementType"]
                     existing["source"] = source
+                    existing["primaryCategory"] = category or existing.get("primaryCategory", "Other")
+
+            if not existing.get("primaryCategory"):
+                existing["primaryCategory"] = category or "Other"
             
             if not existing.get("link") and link:
                 existing["link"] = link
@@ -2549,6 +2684,9 @@ def build_unified_retirement_calendar(
             "sources": [source_label] if source_label else [],
             "sourceReports": [source_report],
             "source": source,  # Primary source for this event
+            "primaryCategory": category or "Other",
+            "categories": [category or "Other"],
+            "categorySourceMap": {source: category or "Other"} if source else {},
         }
         events_by_key[dedupe_key] = event
         if update_id_key:
