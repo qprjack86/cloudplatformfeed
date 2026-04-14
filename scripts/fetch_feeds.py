@@ -2211,13 +2211,14 @@ def fetch_microsoft_lifecycle_retirements(config=None):
                     continue
                 seen.add(key)
 
-                latest_link = ((release.get("latest") or {}).get("link") or "").strip()
-                link = latest_link or html_link
+                # Keep lifecycle links on endoflife.date so users land on the
+                # product lifecycle page instead of unrelated external docs.
+                product_lifecycle_link = html_link or f"https://endoflife.date/{product}"
 
                 articles.append(
                     {
                         "title": title,
-                        "link": link,
+                        "link": product_lifecycle_link,
                         "published": now_iso,
                         "summary": truncate(
                             f"{product_label} {release_label}: {lifecycle_label} on {retirement_date}."

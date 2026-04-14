@@ -1119,6 +1119,8 @@ class MicrosoftLifecycleRetirementTests(unittest.TestCase):
         self.assertEqual(len(events), 2)
         self.assertEqual(events[0]["blogId"], fetch_feeds.MICROSOFT_LIFECYCLE_BLOG_ID)
         self.assertEqual(events[0]["azureRetirementDateSource"], "endoflife")
+        self.assertEqual(events[0]["link"], "https://endoflife.date/windows-server")
+        self.assertEqual(events[1]["link"], "https://endoflife.date/windows-server")
         self.assertIn("Active support ends", events[0]["title"])
         self.assertIn("Security support ends", events[1]["title"])
 
