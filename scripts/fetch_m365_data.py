@@ -768,6 +768,28 @@ def _extract_m365_retirement_date(title_raw: str, summary_raw: str, act_by_raw: 
     return candidates[0][3]
 
 
+def _resolve_m365_retirement_category(article: dict) -> str:
+    """Resolve M365 retirement category from service/category/title hints."""
+    explicit = _normalise_whitespace(str(article.get("m365Category") or ""))
+    if explicit:
+        return explicit
+
+    service = _normalise_whitespace(str(article.get("m365Service") or ""))
+    title = _normalise_whitespace(str(article.get("title") or ""))
+    summary = _normalise_whitespace(str(article.get("summary") or ""))
+    blob = f"{service} {title} {summary}".lower()
+
+    for category_name, products in M365_PRODUCT_CATEGORIES.items():
+        if not isinstance(products, list):
+            continue
+        for product in products:
+            token = _normalise_whitespace(str(product or "")).lower()
+            if token and token in blob:
+                return category_name
+
+    return "Other"
+
+
 def build_m365_retirement_calendar(
     articles: list, max_items: int = 120, cached_events: list = None
 ):
@@ -831,6 +853,7 @@ def build_m365_retirement_calendar(
         title = _normalise_whitespace(article.get("title") or "") or "Untitled retirement notice"
         dedupe_key = _normalize_retirement_title(title) or f"id:{article.get('m365Id', '')}"
         source_label = article.get("m365Service") or "Microsoft 365"
+        category = _resolve_m365_retirement_category(article)
         precision = _m365_retirement_date_precision(retirement_date) or "month"
 
         event = {
@@ -844,6 +867,9 @@ def build_m365_retirement_calendar(
             "announcementType": "retirement",
             "sources": [source_label] if source_label else [],
             "sourceCount": 1,
+            "primaryCategory": category,
+            "categories": [category],
+            "categorySourceMap": {"m365": category},
         }
 
         existing = events_by_key.get(dedupe_key)

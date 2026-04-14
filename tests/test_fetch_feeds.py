@@ -1745,6 +1745,50 @@ class UnifiedRetirementCalendarTests(unittest.TestCase):
         self.assertEqual(len(calendar), 3)
         sources = {event.get("source") for event in calendar}
         self.assertEqual(sources, {"azure", "microsoft", "m365"})
+        for event in calendar:
+            self.assertIn("primaryCategory", event)
+            self.assertIn("categories", event)
+            self.assertIn("categorySourceMap", event)
+            self.assertTrue(event.get("categories"))
+
+    def test_build_unified_retirement_calendar_maps_endoflife_to_existing_categories(self):
+        """Microsoft lifecycle events should map to existing categories with fallback."""
+        now = datetime.now(timezone.utc)
+        future_month = (now + timedelta(days=60)).strftime("%Y-%m")
+
+        microsoft_events = [
+            {
+                "title": "SQL Server 2022 end of support",
+                "link": "https://example.com/sql",
+                "azureRetirementDate": future_month,
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "announcementType": "retirement",
+                "published": now.isoformat(),
+                "lifecycleProduct": "mssqlserver",
+                "lifecycleRelease": "2022",
+            },
+            {
+                "title": "Unmapped legacy product retirement",
+                "link": "https://example.com/unknown",
+                "azureRetirementDate": future_month,
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "announcementType": "retirement",
+                "published": now.isoformat(),
+                "lifecycleProduct": "unknown-product",
+                "lifecycleRelease": "v1",
+            },
+        ]
+
+        calendar = fetch_feeds.build_unified_retirement_calendar(
+            microsoft_events=microsoft_events,
+        )
+
+        self.assertEqual(len(calendar), 2)
+        by_link = {event.get("link"): event for event in calendar}
+        self.assertEqual(by_link["https://example.com/sql"].get("primaryCategory"), "Data & AI")
+        self.assertEqual(by_link["https://example.com/unknown"].get("primaryCategory"), "Other")
 
     def test_build_unified_retirement_calendar_deduplicates_cross_source(self):
         """Unified calendar should deduplicate same event across sources."""
