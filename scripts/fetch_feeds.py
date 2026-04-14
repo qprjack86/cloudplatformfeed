@@ -828,6 +828,21 @@ def dedupe_articles(articles):
             )
             continue
 
+        # Check if article has a future retirement date
+        # Check if article has a future retirement date - retirement articles should never be filtered out
+        retirement_date = article.get("azureRetirementDate")
+        has_future_retirement = _is_retirement_date_future(retirement_date)
+
+        # Articles with future retirement dates are always kept, even if they look like duplicates,
+        # to ensure they appear in the retirement calendar
+        if duplicate_reason and not has_future_retirement:
+            print(
+                f"Deduplicated article via {duplicate_reason}: "
+                f"{article.get('title', 'Untitled')}"
+            )
+            continue
+
+        # Track all articles for dedup to avoid adding the exact same article twice
         if canonical_link:
             seen_links.add(canonical_link)
         if title_key:
