@@ -988,6 +988,24 @@ def _resolve_m365_retirement_category(article: dict) -> str:
     return "Other"
 
 
+def _has_day_retirement_window(start_date: str, end_date: str) -> bool:
+    """Return True when start/end represent a valid multi-day day-precision window."""
+    start_raw = str(start_date or "").strip()
+    end_raw = str(end_date or "").strip()
+    if not start_raw or not end_raw or start_raw == end_raw:
+        return False
+
+    start_sort_dt = _parse_retirement_calendar_sort_date(start_raw)
+    end_sort_dt = _parse_retirement_calendar_sort_date(end_raw)
+    if not start_sort_dt or not end_sort_dt:
+        return False
+    if _m365_retirement_date_precision(start_raw) != "day":
+        return False
+    if _m365_retirement_date_precision(end_raw) != "day":
+        return False
+    return start_sort_dt <= end_sort_dt
+
+
 def build_m365_retirement_calendar(
     articles: list, max_items: int = 120, cached_events: list = None
 ):
@@ -1101,6 +1119,20 @@ def build_m365_retirement_calendar(
         if incoming_rank > existing_rank:
             events_by_key[dedupe_key] = event
             existing = events_by_key[dedupe_key]
+
+        existing_has_window = _has_day_retirement_window(
+            existing.get("retirementStartDate", ""),
+            existing.get("retirementEndDate", ""),
+        )
+        incoming_has_window = _has_day_retirement_window(
+            event.get("retirementStartDate", ""),
+            event.get("retirementEndDate", ""),
+        )
+        if not existing_has_window and incoming_has_window:
+            existing["retirementStartDate"] = event.get("retirementStartDate", "")
+            existing["retirementEndDate"] = event.get("retirementEndDate", "")
+            if event.get("datePrecision") == "day":
+                existing["datePrecision"] = "day"
 
         combined_sources = sorted(
             {

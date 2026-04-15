@@ -625,6 +625,14 @@
     return /^\d{4}-\d{2}-\d{2}$/.test(String(retirementDate || "").trim()) ? 2 : 0;
   }
 
+  function hasRetirementDayRange(event) {
+    if (!event) return false;
+    var startRaw = String(event.retirementStartDate || "").trim();
+    var endRaw = String(event.retirementEndDate || "").trim();
+    if (!startRaw || !endRaw || startRaw === endRaw) return false;
+    return Boolean(parseRetirementEventDate(startRaw) && parseRetirementEventDate(endRaw));
+  }
+
   function startOfMonth(date) {
     return new Date(date.getFullYear(), date.getMonth(), 1);
   }
@@ -757,6 +765,20 @@
         if (incomingRank > existingRank) {
           dedupedByClient[familyKey] = event;
           return;
+        }
+
+        var existingHasRange = hasRetirementDayRange(existing);
+        var incomingHasRange = hasRetirementDayRange(event);
+        if (!existingHasRange && incomingHasRange) {
+          dedupedByClient[familyKey] = event;
+          return;
+        }
+
+        if (!existing.retirementStartDate && event.retirementStartDate) {
+          existing.retirementStartDate = event.retirementStartDate;
+        }
+        if (!existing.retirementEndDate && event.retirementEndDate) {
+          existing.retirementEndDate = event.retirementEndDate;
         }
 
         if (!existing.link && event.link) {
