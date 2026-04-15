@@ -650,7 +650,16 @@ def _is_retirement_date_future(value: str, today=None) -> bool:
         return (int(year), int(month)) >= (reference.year, reference.month)
 
     sort_dt = _parse_retirement_calendar_sort_date(raw)
-    return bool(sort_dt and sort_dt.date() >= reference)
+    if not sort_dt:
+        return False
+
+    day_value = sort_dt.date()
+    if day_value >= reference:
+        return True
+
+    # Keep day-specific retirements visible for the remainder of the month so
+    # in-month rollout windows don't disappear immediately after completion.
+    return (sort_dt.year, sort_dt.month) == (reference.year, reference.month)
 
 
 def _normalize_retirement_date_candidate(match: re.Match[str], precision: str):
@@ -679,6 +688,195 @@ def _normalize_retirement_date_candidate(match: re.Match[str], precision: str):
         "precision": precision,
         "sortDate": _parse_retirement_calendar_sort_date(value),
     }
+
+
+def _extract_retirement_window_from_text(raw_text: str, fallback_year: int | None = None):
+    """Extract day-level retirement windows like "6-11 April" or "begins April 1 ... ends April 14"."""
+    cleaned = _normalise_whitespace(raw_text)
+    cleaned = re.sub(r"<[^>]+>", " ", cleaned)
+    cleaned = cleaned.replace("&nbsp;", " ").replace("\xa0", " ")
+    cleaned = _normalise_whitespace(cleaned)
+    if not cleaned:
+        return None
+
+    year_fallback = fallback_year or datetime.now(timezone.utc).year
+
+    def _month_to_int(value: str):
+        return RETIREMENT_MONTH_TO_INT.get((value or "")[:3].lower())
+
+    def _infer_year(month_value: int, explicit_year: str | None):
+        if explicit_year:
+            try:
+                return int(explicit_year)
+            except ValueError:
+                return None
+
+        month_year_pattern = re.compile(
+            rf"\b(?P<month>{RETIREMENT_MONTH_PATTERN})\s+(?P<year>\d{{4}})\b",
+            re.IGNORECASE,
+        )
+        for month_match in month_year_pattern.finditer(cleaned):
+            candidate_month = _month_to_int(month_match.group("month"))
+            if candidate_month == month_value:
+                try:
+                    return int(month_match.group("year"))
+                except ValueError:
+                    continue
+        return year_fallback
+
+    def _build_range(start_month: int, start_day: int, start_year: int, end_month: int, end_day: int, end_year: int):
+        if not all((start_month, end_month, start_year, end_year)):
+            return None
+        try:
+            start_dt = datetime(start_year, start_month, start_day, tzinfo=timezone.utc)
+            end_dt = datetime(end_year, end_month, end_day, tzinfo=timezone.utc)
+        except ValueError:
+            return None
+
+        if end_dt < start_dt and end_year == start_year:
+            try:
+                end_dt = datetime(end_year + 1, end_month, end_day, tzinfo=timezone.utc)
+            except ValueError:
+                return None
+
+        if end_dt < start_dt:
+            return None
+
+        return {
+            "start": start_dt.strftime("%Y-%m-%d"),
+            "end": end_dt.strftime("%Y-%m-%d"),
+            "precision": "day",
+        }
+
+    range_sep = r"(?:-|–|—|‑|to|through|thru|and)"
+
+    between_day_month_pattern = re.compile(
+        rf"\b(?:between|from)\s+"
+        r"(?P<start_day>\d{1,2})(?:st|nd|rd|th)?\s*"
+        rf"{range_sep}\s*"
+        r"(?P<end_day>\d{1,2})(?:st|nd|rd|th)?\s+"
+        rf"(?P<month>{RETIREMENT_MONTH_PATTERN})"
+        r"(?:\s*,?\s*(?P<year>\d{4}))?\b",
+        re.IGNORECASE,
+    )
+    match = between_day_month_pattern.search(cleaned)
+    if match:
+        month_value = _month_to_int(match.group("month"))
+        year_value = _infer_year(month_value, match.group("year"))
+        result = _build_range(
+            month_value,
+            int(match.group("start_day")),
+            year_value,
+            month_value,
+            int(match.group("end_day")),
+            year_value,
+        )
+        if result:
+            return result
+
+    between_month_day_pattern = re.compile(
+        rf"\b(?:between|from)\s+"
+        rf"(?P<month>{RETIREMENT_MONTH_PATTERN})\s+"
+        r"(?P<start_day>\d{1,2})(?:st|nd|rd|th)?\s*"
+        rf"{range_sep}\s*"
+        r"(?P<end_day>\d{1,2})(?:st|nd|rd|th)?"
+        r"(?:\s*,?\s*(?P<year>\d{4}))?\b",
+        re.IGNORECASE,
+    )
+    match = between_month_day_pattern.search(cleaned)
+    if match:
+        month_value = _month_to_int(match.group("month"))
+        year_value = _infer_year(month_value, match.group("year"))
+        result = _build_range(
+            month_value,
+            int(match.group("start_day")),
+            year_value,
+            month_value,
+            int(match.group("end_day")),
+            year_value,
+        )
+        if result:
+            return result
+
+    begin_end_pattern = re.compile(
+        rf"\b(?:begin|begins|beginning|start|starts|starting)(?:\s+on)?\s+"
+        rf"(?P<start_month>{RETIREMENT_MONTH_PATTERN})\s+"
+        r"(?P<start_day>\d{1,2})(?:st|nd|rd|th)?(?:\s*,?\s*(?P<start_year>\d{4}))?"
+        r".*?\b(?:end|ends|ending|complete|completed|completion)(?:\s+on)?(?:\s*:\s*|\s+)"
+        rf"(?P<end_month>{RETIREMENT_MONTH_PATTERN})\s+"
+        r"(?P<end_day>\d{1,2})(?:st|nd|rd|th)?(?:\s*,?\s*(?P<end_year>\d{4}))?",
+        re.IGNORECASE,
+    )
+    match = begin_end_pattern.search(cleaned)
+    if match:
+        start_month = _month_to_int(match.group("start_month"))
+        end_month = _month_to_int(match.group("end_month"))
+        start_year = _infer_year(start_month, match.group("start_year"))
+        end_year = _infer_year(end_month, match.group("end_year"))
+        result = _build_range(
+            start_month,
+            int(match.group("start_day")),
+            start_year,
+            end_month,
+            int(match.group("end_day")),
+            end_year,
+        )
+        if result:
+            return result
+
+    begin_complete_flexible_pattern = re.compile(
+        rf"\b(?:begin|begins|beginning|start|starts|starting).*?"
+        rf"(?P<start_month>{RETIREMENT_MONTH_PATTERN})\s+"
+        r"(?P<start_day>\d{1,2})(?:st|nd|rd|th)?(?:\s*,?\s*(?P<start_year>\d{4}))?"
+        r".*?(?:complete|completed|completion|end|ends|ending).*?"
+        rf"(?P<end_month>{RETIREMENT_MONTH_PATTERN})\s+"
+        r"(?P<end_day>\d{1,2})(?:st|nd|rd|th)?(?:\s*,?\s*(?P<end_year>\d{4}))?",
+        re.IGNORECASE,
+    )
+    match = begin_complete_flexible_pattern.search(cleaned)
+    if match:
+        start_month = _month_to_int(match.group("start_month"))
+        end_month = _month_to_int(match.group("end_month"))
+        start_year = _infer_year(start_month, match.group("start_year"))
+        end_year = _infer_year(end_month, match.group("end_year"))
+        result = _build_range(
+            start_month,
+            int(match.group("start_day")),
+            start_year,
+            end_month,
+            int(match.group("end_day")),
+            end_year,
+        )
+        if result:
+            return result
+
+    return None
+
+
+def _extract_m365_retirement_window(title_raw: str, summary_raw: str, act_by_raw: str = ""):
+    """Extract explicit start/end dates for retirement windows when provided in text."""
+    combined = _normalise_whitespace(f"{title_raw} {summary_raw}")
+    if not combined or not RETIREMENT_CONTEXT_PATTERN.search(combined):
+        return None
+
+    for text in (title_raw, summary_raw):
+        cleaned = _normalise_whitespace(text)
+        if not cleaned:
+            continue
+        window = _extract_retirement_window_from_text(cleaned)
+        if not window:
+            continue
+        return window
+
+    act_by_date = _extract_retirement_date_without_context(act_by_raw)
+    if act_by_date:
+        return {
+            "start": act_by_date,
+            "end": act_by_date,
+            "precision": "day",
+        }
+
+    return None
 
 
 def _extract_retirement_date_without_context(raw_text: str):
@@ -812,6 +1010,8 @@ def build_m365_retirement_calendar(
             continue
 
         retirement_date = str(article.get("m365RetirementDate") or "").strip()
+        retirement_start_date = str(article.get("m365RetirementStartDate") or "").strip()
+        retirement_end_date = str(article.get("m365RetirementEndDate") or "").strip()
         if not retirement_date:
             retirement_date = _extract_m365_retirement_date(
                 article.get("title", ""),
@@ -850,6 +1050,16 @@ def build_m365_retirement_calendar(
         if not _is_retirement_date_future(retirement_date, today=today):
             continue
 
+        start_sort_dt = _parse_retirement_calendar_sort_date(retirement_start_date)
+        end_sort_dt = _parse_retirement_calendar_sort_date(retirement_end_date)
+        has_day_window = bool(
+            start_sort_dt
+            and end_sort_dt
+            and _m365_retirement_date_precision(retirement_start_date) == "day"
+            and _m365_retirement_date_precision(retirement_end_date) == "day"
+            and start_sort_dt <= end_sort_dt
+        )
+
         title = _normalise_whitespace(article.get("title") or "") or "Untitled retirement notice"
         dedupe_key = _normalize_retirement_title(title) or f"id:{article.get('m365Id', '')}"
         source_label = article.get("m365Service") or "Microsoft 365"
@@ -861,6 +1071,8 @@ def build_m365_retirement_calendar(
             "link": article.get("link", ""),
             "retirementDate": retirement_date,
             "datePrecision": precision,
+            "retirementStartDate": retirement_start_date if has_day_window else "",
+            "retirementEndDate": retirement_end_date if has_day_window else "",
             "published": article.get("published", ""),
             "blog": source_label,
             "blogId": "m365",
@@ -1125,11 +1337,18 @@ def build_article_from_m365_item(item: dict) -> dict:
         RETIREMENT_CONTEXT_PATTERN.search(_normalise_whitespace(f"{title} {summary}"))
     )
     act_by = _first_non_empty(item, ACT_BY_FIELD_KEYS)
+    retirement_window = (
+        _extract_m365_retirement_window(title, summary, str(act_by or ""))
+        if (retirement_signal or has_retirement_text)
+        else None
+    )
     retirement_date = (
         _extract_m365_retirement_date(title, summary, str(act_by or ""))
         if (retirement_signal or has_retirement_text)
         else None
     )
+    if retirement_window:
+        retirement_date = retirement_window["end"]
 
     return {
         "title": title,
@@ -1151,6 +1370,8 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365Tags": tags,
         "m365RetirementSignal": retirement_signal,
         "m365ActByDate": str(act_by).strip() if act_by is not None else None,
+        "m365RetirementStartDate": retirement_window["start"] if retirement_window else None,
+        "m365RetirementEndDate": retirement_window["end"] if retirement_window else None,
         "m365RetirementDate": retirement_date,
         "m365RetirementDatePrecision": _m365_retirement_date_precision(retirement_date) if retirement_date else None,
         "lifecycle": classify_m365_lifecycle(item),
@@ -1418,8 +1639,11 @@ def fetch_m365_extended_retirement_events(
             # Extract retirement date: actionRequiredByDateTime → body text → months
             retirement_date = ""
             act_by_raw = str(metadata.get("actionRequiredByDateTime") or "")
+            retirement_window = _extract_m365_retirement_window(title, body, act_by_raw)
             if act_by_raw:
                 retirement_date = _extract_retirement_date_without_context(act_by_raw) or ""
+            if not retirement_date and retirement_window:
+                retirement_date = retirement_window["end"]
             if not retirement_date:
                 retirement_date = _extract_m365_retirement_date(title, body) or ""
             if not retirement_date:
@@ -1443,6 +1667,8 @@ def fetch_m365_extended_retirement_events(
                     "title": title,
                     "link": link,
                     "retirementDate": retirement_date,
+                    "retirementStartDate": retirement_window["start"] if retirement_window else "",
+                    "retirementEndDate": retirement_window["end"] if retirement_window else "",
                     "datePrecision": precision,
                     "published": published,
                     "blog": service,
@@ -1666,8 +1892,25 @@ def _ics_uid_for_m365_event(event):
     return f"m365-retirement-{date_token}-{title_token[:32]}-{source_token[:12]}@{CANONICAL_SITE_HOST}"
 
 
-def _ics_date_fields(retirement_date, precision):
+def _ics_date_fields(retirement_date, precision, retirement_start_date="", retirement_end_date=""):
     """Return DTSTART/DTEND fields for retirement events."""
+    start_window = _parse_retirement_calendar_sort_date(retirement_start_date)
+    end_window = _parse_retirement_calendar_sort_date(retirement_end_date)
+    if (
+        start_window
+        and end_window
+        and _m365_retirement_date_precision(retirement_start_date) == "day"
+        and _m365_retirement_date_precision(retirement_end_date) == "day"
+        and end_window >= start_window
+    ):
+        start = start_window.date()
+        end = end_window.date() + timedelta(days=1)
+        return {
+            "dtstart": start.strftime("%Y%m%d"),
+            "dtend": end.strftime("%Y%m%d"),
+            "precision": "day",
+        }
+
     parsed = _parse_retirement_calendar_sort_date(retirement_date)
     if not parsed:
         return None
@@ -1698,8 +1941,15 @@ def generate_m365_retirements_ics(events, generated_at=None):
 
     for event in events:
         retirement_date = str(event.get("retirementDate", "")).strip()
+        retirement_start_date = str(event.get("retirementStartDate", "") or "").strip()
+        retirement_end_date = str(event.get("retirementEndDate", "") or "").strip()
         precision = event.get("datePrecision") or _m365_retirement_date_precision(retirement_date)
-        date_fields = _ics_date_fields(retirement_date, precision)
+        date_fields = _ics_date_fields(
+            retirement_date,
+            precision,
+            retirement_start_date=retirement_start_date,
+            retirement_end_date=retirement_end_date,
+        )
         if not date_fields:
             continue
 
@@ -1709,6 +1959,8 @@ def generate_m365_retirements_ics(events, generated_at=None):
             f"Retirement date: {retirement_date}",
             f"Date precision: {precision}",
         ]
+        if retirement_start_date and retirement_end_date and retirement_start_date != retirement_end_date:
+            description_lines.insert(0, f"Retirement window: {retirement_start_date} to {retirement_end_date}")
         if source_label:
             description_lines.append(f"Sources: {source_label}")
         if precision != "day":
@@ -1807,6 +2059,61 @@ def save_m365_retirement_cache(events: list, path: Path = M365_RETIREMENT_CACHE_
         print(f"Retirement cache saved: {len(events)} events to {path}")
     except (OSError, TypeError, ValueError) as exc:
         print(f"Warning: Could not save retirement cache: {exc}")
+
+
+def _extract_m365_id_from_link(link: str) -> str:
+    """Extract DeltaPulse item id from a public item URL."""
+    match = re.search(r"/item/([^/?#]+)", str(link or ""))
+    return match.group(1).strip() if match else ""
+
+
+def enrich_cached_m365_retirements(session: requests.Session, cached_events: list) -> list:
+    """Upgrade cached month-level retirements with day-level windows when metadata provides them."""
+    if not cached_events:
+        return []
+
+    enriched = []
+    upgraded = 0
+    for event in cached_events:
+        updated = dict(event)
+        event_id = _extract_m365_id_from_link(updated.get("link", ""))
+        if not event_id:
+            enriched.append(updated)
+            continue
+
+        current_precision = str(updated.get("datePrecision") or "")
+        has_window = bool(updated.get("retirementStartDate") and updated.get("retirementEndDate"))
+        if current_precision == "day" and has_window:
+            enriched.append(updated)
+            continue
+
+        fetch_result = call_mcp_fetch_metadata(session, event_id)
+        metadata = fetch_result.get("metadata", {}) or {}
+        body = str(fetch_result.get("body", "") or "")
+        if not body and not metadata:
+            enriched.append(updated)
+            continue
+
+        title = str(updated.get("title", "") or "")
+        act_by_raw = str(
+            metadata.get("actionRequiredByDateTime")
+            or metadata.get("actByDate")
+            or metadata.get("actionByDate")
+            or ""
+        )
+        window = _extract_m365_retirement_window(title, body, act_by_raw)
+        if window:
+            updated["retirementStartDate"] = window["start"]
+            updated["retirementEndDate"] = window["end"]
+            updated["retirementDate"] = window["end"]
+            updated["datePrecision"] = "day"
+            upgraded += 1
+
+        enriched.append(updated)
+
+    if upgraded:
+        print(f"Retirement cache enriched: upgraded {upgraded} cached events to day-level windows")
+    return enriched
 
 
 def load_unified_retirement_calendar(path: Path = Path("data/retirements.json")) -> dict:
@@ -1922,6 +2229,7 @@ def main():
 
         # Load persistent retirement cache (keeps retirements from previous runs)
         cached_retirements = load_m365_retirement_cache()
+        cached_retirements = enrich_cached_m365_retirements(session, cached_retirements)
 
         # Fetch items from DeltaPulse
         raw_items = fetch_m365_items(session)

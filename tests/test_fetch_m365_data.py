@@ -429,6 +429,86 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
         self.assertIsNone(article["m365RetirementDate"])
 
+    def test_extracts_when_happen_window_between_days_same_month(self):
+        item = {
+            "id": "MC1249428",
+            "title": "Retirement of channel option",
+            "source": "message_center",
+            "publishedDate": "2099-03-19T04:39:14.000Z",
+            "service": ["Microsoft 365 apps"],
+            "description": "When will this happen: rollout will occur between 6-11 April 2099.",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertEqual(article["m365RetirementStartDate"], "2099-04-06")
+        self.assertEqual(article["m365RetirementEndDate"], "2099-04-11")
+        self.assertEqual(article["m365RetirementDate"], "2099-04-11")
+
+    def test_extracts_when_happen_window_begin_end_dates(self):
+        item = {
+            "id": "MC1240748",
+            "title": "Retiring a connector",
+            "source": "message_center",
+            "publishedDate": "2099-02-28T00:08:31.000Z",
+            "service": ["Power Automate"],
+            "description": "This begins April 1, 2099 and ends April 14th, 2099.",
+        }
+
+        article = fetch_m365_data.build_article_from_m365_item(item)
+
+        self.assertEqual(article["m365RetirementStartDate"], "2099-04-01")
+        self.assertEqual(article["m365RetirementEndDate"], "2099-04-14")
+        self.assertEqual(article["m365RetirementDate"], "2099-04-14")
+
+    def test_retirement_date_precedence_range_then_day_then_month(self):
+        # Range present: use range end date over other date hints.
+        range_item = {
+            "id": "MC200101",
+            "title": "Retirement: feature with staged rollout",
+            "source": "message_center",
+            "publishedDate": "2099-03-19T04:39:14.000Z",
+            "service": ["Microsoft Teams"],
+            "description": (
+                "Retirement begins April 1, 2099 and retirement completed April 14, 2099. "
+                "General retirement notice mentions April 2099."
+            ),
+            "targetDate": "April 2099",
+        }
+        range_article = fetch_m365_data.build_article_from_m365_item(range_item)
+        self.assertEqual(range_article["m365RetirementStartDate"], "2099-04-01")
+        self.assertEqual(range_article["m365RetirementEndDate"], "2099-04-14")
+        self.assertEqual(range_article["m365RetirementDate"], "2099-04-14")
+
+        # Single specific day without a range: use the day.
+        day_item = {
+            "id": "MC200102",
+            "title": "Retirement: feature cutoff",
+            "source": "message_center",
+            "publishedDate": "2099-03-19T04:39:14.000Z",
+            "service": ["Microsoft Teams"],
+            "description": "We will retire this feature on July 31, 2099.",
+            "targetDate": "July 2099",
+        }
+        day_article = fetch_m365_data.build_article_from_m365_item(day_item)
+        self.assertIsNone(day_article["m365RetirementStartDate"])
+        self.assertIsNone(day_article["m365RetirementEndDate"])
+        self.assertEqual(day_article["m365RetirementDate"], "2099-07-31")
+
+        # Month-only mention with no specific day: fall back to month precision.
+        month_item = {
+            "id": "MC200103",
+            "title": "Retirement of feature in October 2099",
+            "source": "message_center",
+            "publishedDate": "2099-03-19T04:39:14.000Z",
+            "service": ["Microsoft Teams"],
+            "description": "This feature retirement is planned for October 2099.",
+        }
+        month_article = fetch_m365_data.build_article_from_m365_item(month_item)
+        self.assertIsNone(month_article["m365RetirementStartDate"])
+        self.assertIsNone(month_article["m365RetirementEndDate"])
+        self.assertEqual(month_article["m365RetirementDate"], "2099-10")
+
 
 class CategorizeByProductTests(unittest.TestCase):
     """Test M365 product categorization."""
@@ -695,6 +775,26 @@ class M365RetirementIcsTests(unittest.TestCase):
         self.assertIn("X-WR-CALNAME:Microsoft 365 Retirement Calendar", payload)
         self.assertIn("SUMMARY:Feature retirement", payload)
         self.assertIn("DTSTART;VALUE=DATE:20990731", payload)
+
+    def test_generate_m365_retirements_ics_spans_window_event(self):
+        events = [
+            {
+                "title": "Retiring the Impala connector",
+                "link": "https://deltapulse.app/item/MC1240748",
+                "retirementDate": "2099-04-14",
+                "retirementStartDate": "2099-04-01",
+                "retirementEndDate": "2099-04-14",
+                "datePrecision": "day",
+                "blog": "Power Automate",
+                "sources": ["Power Automate"],
+            }
+        ]
+
+        payload = fetch_m365_data.generate_m365_retirements_ics(events)
+
+        self.assertIn("DTSTART;VALUE=DATE:20990401", payload)
+        self.assertIn("DTEND;VALUE=DATE:20990415", payload)
+        self.assertIn("Retirement window: 2099-04-01 to 2099-04-14", payload)
 
     def test_write_m365_checksums_supports_multiple_artifacts(self):
         with tempfile.TemporaryDirectory() as tmpdir:

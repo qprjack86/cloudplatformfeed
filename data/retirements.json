@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T10:10:31.117519+00:00",
+  "lastUpdated": "2026-04-15T11:58:08.153121+00:00",
   "unifiedRetirementCalendar": [
     {
       "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
@@ -6729,7 +6729,7 @@
     }
   ],
   "unifiedRetirementBuckets": {
-    "generatedAt": "2026-04-15T10:10:31.113580+00:00",
+    "generatedAt": "2026-04-15T11:58:08.146594+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {

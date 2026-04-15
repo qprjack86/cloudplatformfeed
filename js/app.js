@@ -585,6 +585,19 @@
     return raw;
   }
 
+  function formatRetirementCalendarRange(startValue, endValue, fallbackValue, precision) {
+    var startRaw = String(startValue || "").trim();
+    var endRaw = String(endValue || "").trim();
+    if (!startRaw || !endRaw || startRaw === endRaw) {
+      return formatRetirementCalendarDate(fallbackValue || endRaw || startRaw, precision);
+    }
+    return (
+      formatRetirementCalendarDate(startRaw, "day") +
+      " to " +
+      formatRetirementCalendarDate(endRaw, "day")
+    );
+  }
+
   function parseRetirementEventDate(value) {
     if (!value) return null;
     var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value).trim());
@@ -720,6 +733,8 @@
           title: event.title || "Untitled retirement notice",
           link: event.link || "",
           retirementDate: retirementDate,
+          retirementStartDate: String(event.retirementStartDate || "").trim(),
+          retirementEndDate: String(event.retirementEndDate || "").trim(),
           datePrecision: event.datePrecision || (/^\d{4}-\d{2}-\d{2}$/.test(retirementDate) ? "day" : "month"),
           sources: Array.isArray(event.sources) ? event.sources : [],
           sourceCount: Number(event.sourceCount || 0),
@@ -792,6 +807,23 @@
     });
     var dayCounts = {};
     monthEvents.forEach(function (event) {
+      var rangeStart = parseRetirementEventDate(event.retirementStartDate);
+      var rangeEnd = parseRetirementEventDate(event.retirementEndDate);
+      if (rangeStart && rangeEnd && rangeEnd >= rangeStart) {
+        var cursor = new Date(rangeStart.getFullYear(), rangeStart.getMonth(), rangeStart.getDate());
+        while (cursor <= rangeEnd) {
+          if (
+            cursor.getFullYear() === anchorMonth.getFullYear() &&
+            cursor.getMonth() === anchorMonth.getMonth()
+          ) {
+            var dayInRange = cursor.getDate();
+            dayCounts[dayInRange] = (dayCounts[dayInRange] || 0) + 1;
+          }
+          cursor.setDate(cursor.getDate() + 1);
+        }
+        return;
+      }
+
       if (event.datePrecision === "month") {
         return; // month-only precision: no specific day to mark on the grid
       }
@@ -820,7 +852,12 @@
     }
 
     var monthItemsHtml = monthEvents.map(function (entry) {
-      var dateLabel = formatRetirementCalendarDate(entry.retirementDate, entry.datePrecision);
+      var dateLabel = formatRetirementCalendarRange(
+        entry.retirementStartDate,
+        entry.retirementEndDate,
+        entry.retirementDate,
+        entry.datePrecision
+      );
       var sourceHint = entry.sourceCount > 1
         ? " · " + entry.sourceCount + " sources"
         : "";
