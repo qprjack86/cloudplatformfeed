@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 15 Apr 2026 08:27:10 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 11:59:18 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[A demonstration of Virtual Network TAP]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/a-demonstration-of-virtual-network-tap/ba-p/4479136</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/a-demonstration-of-virtual-network-tap/ba-p/4479136</guid>
+      <description><![CDATA[Azure Virtual Network Terminal Access Point (VTAP), at the time of writing in April 2026 in public preview in select regions, copies network traffic from source Virtual Machines to a collector or traffic analytics tool, running as a Network Virtual Appliance (NVA). VTAP creates a full copy of all...]]></description>
+      <dc:creator><![CDATA[Marc de Droog]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 10:30:01 GMT</pubDate>
+      <category><![CDATA[Azure Networking]]></category>
+    </item>
     <item>
       <title><![CDATA[Choosing the Right Azure Hosting Option for Your AI Agents]]></title>
       <link>https://devblogs.microsoft.com/all-things-azure/hostedagent/</link>
@@ -446,15 +455,6 @@
       <description><![CDATA[Schema evolution is a fact of life for modern analytics platforms. As data models grow, teams need to add columns, drop unused fields, and evolve constraints—often as part of tightly controlled deployment pipelines. Fabric DW supported transactional execution for key table‑focused DDLs like CREATE...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Mon, 13 Apr 2026 11:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing Full Collation Support for SQL Databases in Microsoft Fabric]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/announcing-full-collation-support-for-sql-databases-in-microsoft-fabric-preview/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/announcing-full-collation-support-for-sql-databases-in-microsoft-fabric-preview/</guid>
-      <description><![CDATA[We heard from you and are introducing a major update for SQL database in Microsoft Fabric. Now, you can use all Azure SQL database collations when creating databases. This enhancement gives SQL database in Fabric users greater flexibility and compatibility for global data scenarios, reporting, and...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 10:51:08 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>

@@ -1,7 +1,282 @@
 {
-  "generatedAt": "2026-04-15T08:27:24.700208+00:00",
-  "totalArticles": 77,
+  "generatedAt": "2026-04-15T11:59:31.762329+00:00",
+  "totalArticles": 86,
   "articles": [
+    {
+      "title": "Microsoft Purview: Migration tool in Unified Catalog to migrate classic glossary terms",
+      "link": "https://deltapulse.app/item/MC1280564",
+      "published": "2026-04-15T06:02:52.000Z",
+      "summary": "Microsoft Purview introduces a built-in migration tool in Unified Catalog for Data Governance Admins and Stewards to migrate classic glossary terms, templates, and relationships. Migration begins public preview in April 2026 and general availability in July 2026. Classic terms become read-only post-migration or switch. <p><b>[Introduction]</b></p><p>Data Governance Admins and Data Stewards can use a <b>built‑in migration tool</b> in <i>Microsoft Purview Unified Catalog</i> to migrate classic glossary terms, associated term templates, and asset and column relationships into Unified Catalog. After migration, glossary terms can be managed in <i>Unified Catalog</i> and associated with business concepts and data assets.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558683\" target=\"_blank\">558683</a></b>.</p><p><b>[When this will happen]</b></p><ul><li><b>Public Preview: </b>We will begin rolling out in <b>late April 2026</b> and expect to complete by <b>late April 2026</b>.</li><li><b>General Availability (Worldwide): </b>We will begin rolling out in <b>early July 2026</b> and expect to complete by <b>early July 2026</b>.</li></ul><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Data Governance Admins</li><li>Data Stewards</li><li>Organizations using classic glossary terms in <i>Microsoft Purview, </i>along with Unified Catalog</li></ul><p><i>What will happen</i></p><ul><li>Admins can choose to use the built‑in migration tool to migrate classic glossary terms to Unified Catalog.</li><li>Migration includes:<ul><li>Classic glossary terms</li><li>Associated term templates</li><li>Asset and column relationships</li></ul></li><li>Admins who do not need migration can skip the process and use glossary terms only in <i>Unified Catalog</i>.</li><li>In both cases, classic glossary terms will become <b>read‑only</b>.</li><li>After migration or switching, Unified Catalog glossary terms can be used to curate assets and columns.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/0add68ed-0a35-4417-8d01-53919b3f82dc/6850ce419d4deabd90873da84cd0b47cbe087a7b.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p></p><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/b94a12df-79d3-49e1-b9b6-30c8866eeceb/9563b5f2109a788aeb0d822ef31e8b0c6bd13ca8.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Determine whether your organization uses classic glossary terms.</li><li>Decide whether to:<ul><li>Migrate classic glossary terms to Unified Catalog, or</li><li>Abandon classic glossary terms and use Unified Catalog glossary terms only.</li></ul></li><li>If you choose migration:<ul><li>Review the detailed migration documentation.</li><li>Plan and execute the migration when your organization is ready for all required steps.</li></ul></li></ul><p>Links to detailed migration documentation will be added to the <a href=\"https://learn.microsoft.com/purview/unified-catalog-glossary-terms\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Unified Catalog glossary terms overview documentation</a> when the feature enters public preview.</p><p><b>[Compliance considerations]</b></p><table class=\"table table-bordered\"><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change alter how existing customer data is processed, stored, or accessed?</td><td>Yes. Classic glossary terms, associated term templates, and asset and column relationships may be migrated and stored in <i>Microsoft Purview Unified Catalog </i>instead of the classic glossary location.</td></tr><tr><td>Does the change include an admin control?</td><td>Yes. Data Governance Admins choose whether to migrate classic glossary terms using the built‑in migration tool or skip migration and switch to Unified Catalog glossary terms.</td></tr></tbody></table><p><b></b></p>",
+      "source": "m365",
+      "m365Service": "Microsoft Purview",
+      "m365AllServices": [
+        "Microsoft Purview"
+      ],
+      "m365Id": "MC1280564",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "April 2026, July 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280564"
+    },
+    {
+      "title": "Assign participants to breakout rooms using CSV import in Microsoft Teams meetings",
+      "link": "https://deltapulse.app/item/MC1280561",
+      "published": "2026-04-15T05:59:56.000Z",
+      "summary": "Microsoft Teams will support CSV import for breakout room assignments starting May 2026, enabling organizers to bulk create rooms and pre-assign participants. The feature is enabled by default, requires no admin action, and allows modifications during meetings, improving setup efficiency for structured sessions. <p><b>[Introduction]</b></p> <p>We’re improving breakout room setup in Microsoft Teams by adding support for CSV import of breakout room assignments. This update helps organizers reduce manual setup time and prepare structured meetings—such as trainings, workshops, and large collaboration sessions—more efficiently.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559387\" target=\"_blank\">559387</a>.</p> <p><b>[When this will happen:]</b></p> <ul><li>Targeted Release: We will begin rolling out in&nbsp;<b>early May 2026</b> and expect to complete by <b>mid-May 2026</b>.</li><li> General Availability (Worldwide): Rollout begins in<b> mid-May 2026</b> and completes by<b> late May 2026</b>.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Meeting organizers who use Breakout rooms in Microsoft Teams meetings</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Organizers can import a CSV file to:<ul><li>Create breakout rooms in bulk</li><li>Assign participants to specific rooms before the meeting starts</li></ul></li><li>Imported assignments can still be modified using existing breakout room controls during or before the meeting</li><li>The feature is <b style=\"\">enabled by default</b> and does not require admin configuration</li><li>Existing breakout room policies and controls are respected</li></ul> <p><b>[What you can do to prepare:]</b></p> <p>No action is required from administrators.</p> <ul> <li>Inform meeting organizers about this new capability</li> <li>Update internal documentation or training materials as needed</li> </ul> <p>Before rollout, we will update this post with new documentation.</p><p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "source": "m365",
+      "m365Service": "Microsoft Teams",
+      "m365AllServices": [
+        "Microsoft Teams"
+      ],
+      "m365Id": "MC1280561",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "New feature",
+        "User impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280561"
+    },
+    {
+      "title": "Use Copilot to explain selected slide content in PowerPoint Live",
+      "link": "https://deltapulse.app/item/MC1280558",
+      "published": "2026-04-15T05:57:53.000Z",
+      "summary": "Starting mid-May 2026, Microsoft Teams meetings with PowerPoint Live will let attendees select slide text and get private, on-demand Copilot explanations for terms or acronyms without disrupting the presenter. This feature is on by default for tenants with Microsoft 365 Copilot (Premium) enabled. <p><b>[Introduction]</b></p> <p>We’re enhancing the PowerPoint Live experience in Microsoft Teams by introducing slide text selection with Copilot explanations for meeting attendees. This update helps users quickly understand unfamiliar terms, acronyms, or complex concepts directly within a live presentation—without interrupting the presenter or asking questions in chat.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557256\" target=\"_blank\">557256</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li>General Availability (Worldwide): Rollout begins in <b>mid-May 2026</b> and is expected to complete by<b> late May 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>All Microsoft Teams users attending meetings with <b>PowerPoint Live</b></li> <li>Tenants with <b>Microsoft 365 Copilot (Premium)</b> enabled</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Attendees can<b> select text on a PowerPoint Live slide</b> during a meeting.</li><li>Copilot will provide <b>on-demand explanations</b> for selected text, including:<ul><li>Acronyms and abbreviations.</li><li>Technical or domain-specific terms.</li></ul></li><li>Explanations are shown privately to the attendee and do not disrupt the presenter or other participants.</li><li>The feature is <b>on by default</b> for eligible tenants where Copilot is available.</li></ul><p>Screenshot 1: <i>Select the Copilot feature from the Presenter View toolbar at the bottom of the screen:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bea1beef-a7b9-45a8-bee6-2d06c29baf66\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 2: <i>Select any text from the slide:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/c58d6e3e-24f2-4adf-ac1f-039866c1051b\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 3: <i>After selecting a word or phrase on the slide (for example, “<b>protocol</b>”), select <b>Explain </b>this from the available Copilot options:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/e09134ff-2327-40ec-b48b-3ffbb2948462\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 4: <i>Copilot opens the chat pane and provides an explanation for the selected content:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/ea1ca5fe-f900-474f-8dd9-393153564e5b\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare:]</b></p> <ul> <li><b>No admin action is required</b> to enable this feature.</li><li>Review your organization’s <b>Copilot for Microsoft 365 policies</b> to ensure they align with your internal AI usage guidelines.</li><li>Inform helpdesk and support teams about this new attendee capability.</li> </ul> <p><b>[Compliance considerations:]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>AI/ML or agent capabilities interacting with customer data</td> <td>Copilot analyzes user-selected slide text in real time during PowerPoint Live meetings to generate explanations. This uses existing Copilot for Microsoft 365 AI processing and security boundaries.</td> </tr> <tr> <td>New way for users to interact with generative AI</td> <td>Meeting attendees can select slide text during a live presentation and invoke Copilot to receive private, contextual explanations without interrupting the presenter.</td> </tr> <tr> <td>Alteration of how existing customer data is processed</td> <td>Slide content already shared in the meeting is processed by Copilot when users request explanations. No new data sources are introduced, and processing follows existing Copilot policies.</td> </tr> <tr> <td>Admin controls</td> <td>The feature is governed by existing Copilot for Microsoft 365 enablement and policy controls. No new dedicated admin toggle is introduced.</td> </tr> <tr> <td>User ability to enable or disable the feature</td> <td>Users can choose whether to use Copilot explanations during meetings. Availability depends on whether Copilot for Microsoft 365 is enabled for the user.</td> </tr> </tbody></table>",
+      "source": "m365",
+      "m365Service": "Microsoft 365 apps",
+      "m365AllServices": [
+        "Microsoft 365 apps",
+        "Microsoft Copilot (Microsoft 365)"
+      ],
+      "m365Id": "MC1280558",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "New feature",
+        "User impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280558"
+    },
+    {
+      "title": "Submit agent to the Agent Store from Agent Builder",
+      "link": "https://deltapulse.app/item/MC1280557",
+      "published": "2026-04-15T05:56:45.000Z",
+      "summary": "Starting mid-May 2026, Agent Builder users can submit agents for admin review before publishing to the organization's Agent Store catalog. Admins control approval, access, and deployment. Approved agents appear in the store for users to discover and install, with updates requiring reapproval. No pre-rollout action needed. <p><b>[Introduction]</b></p> <p>We're introducing the ability to submit agents built with Agent Builder for administrator review and approval before publishing to the organization's catalog in the Agent Store—making it easier to scale distribution of high-quality internal agents while maintaining IT admin control. Once approved, agents appear in the <b>Built by your org</b> section of the Agent Store, where users across the org can discover and install them.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557173\" target=\"_blank\" style=\"font-family: sans-serif; font-weight: 400; background-color: rgb(255, 255, 255);\">557173</a>.</p> <p><b>[When this will happen:]</b></p> <p>General Availability (Worldwide): Rollout will begin in <b>mid‑May 2026</b> and is expected to complete by <b>late May 2026</b>.</p> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li><b>Users of&nbsp;Agent Builder</b>.</li> <li><b>Microsoft 365 administrators</b> responsible for reviewing and publishing agents.</li> <li><b>Users</b> who discover and install organization‑approved agents from the <b>Agent Store</b>.</li> </ul> <p><b>What will happen:</b></p><p>There is no impact to users unless an agent is submitted, approved, and published by an administrator. Here is how it works:</p><ul><li><b>Submission</b>: Agent Builder users can request org publishing of their agents by selecting <b>Submit to your org catalog</b>, including in tenants with sharing controls.</li><p>Screenshot 1: <i>Agent Builder menu showing the <b>Submit to your org catalog</b>&nbsp;option for requesting administrator review and approval:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/d4b54d0b-efa5-42ec-8114-a0b834bba2e7\" style=\"width: 250px;\" alt=\"user settings\">&gt;</p><li><b>Review</b>:&nbsp;Submitted agents create a review request in the Microsoft 365 admin center. Using the existing publishing and approval workflow, admins have full control over which agents are published, who can access them, and how they are deployed (for example, scoping access to specific users or security groups, preinstalling, or pinning agents).</li><p>Screenshot 2: <i>Microsoft 365 admin center showing the agent publishing workflow, where administrators can review submissions and control deployment settings such as user access and installation options.</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/4ab43835-40b9-43eb-94c7-ead512e0392f\" style=\"width: 400px;\" alt=\"user settings\"></p><li><b>Distribution</b>: Users can discover and install approved agents directly from the Agent Store.</li></ul><p><b>Management and Updates:</b></p><p>Once published, the agent appears as a separate entry in the Agent Registry under<b> Agents &gt; All agents.</b> Agent updates require a new admin submission, and each one triggers a new review cycle before the updated version becomes available in the Agent Store.</p><ul> </ul><p><b>[What you can do to prepare:]</b></p> <ul> <li>No action is required before rollout.</li> <li>Admins can familiarize themselves with the agent review experience in the<b> Microsoft 365 admin center</b> under <b style=\"\">Agents </b>&gt; <b>All&nbsp;</b><b style=\"\">agents </b>&gt; <b>Requests</b>.</li> <li>Consider communicating this capability to internal agent makers so they understand the submission and approval process.</li> <li>Review internal guidance or documentation related to agent governance, if applicable.</li></ul><p>Learn more: <a href=\"https://learn.microsoft.com/microsoft-365/admin/manage/agent-registry?view=o365-worldwide#publish-agents\" target=\"_blank\">Publish agents | Microsoft Learn</a></p><ul> </ul> <p><b>[Compliance considerations:]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>Admin controls and access management</td> <td>Admins can approve or reject agent submissions and control availability, scope, and deployment through existing Microsoft 365 admin center workflows. Access can be limited to specific users or security groups.</td> </tr> </tbody></table>",
+      "source": "m365",
+      "m365Service": "Microsoft 365 suite",
+      "m365AllServices": [
+        "Microsoft 365 suite",
+        "Microsoft Copilot (Microsoft 365)"
+      ],
+      "m365Id": "MC1280557",
+      "m365Source": "message_center",
+      "m365Category": "planForChange",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": true,
+      "m365Tags": [
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280557"
+    },
+    {
+      "title": "Microsoft Purview for agents: AI observability and insider risk management now generally available",
+      "link": "https://deltapulse.app/item/MC1280556",
+      "published": "2026-04-15T05:56:15.000Z",
+      "summary": "Microsoft Purview for agents, including DSPM – AI Observability and Insider Risk Management, will be generally available by late May 2026. It enables Microsoft 365 E7 or Agent 365 admins to monitor AI agent activity, assess risks, enforce governance, and manage insider risks with privacy controls, supporting compliance and security. <p><b>[Introduction]</b></p><p>As organizations deploy AI agents that can access enterprise data and take action on behalf of users, governing and securing agent activity becomes critical. Microsoft Purview will extend its data security and compliance capabilities to include AI agents, helping organizations gain visibility into agent behavior, assess risk, and apply consistent governance controls.</p><p>Microsoft Purview for agents will introduce <b>Data Security Posture Management (DSPM) – AI Observability and Insider Risk Management for agents</b>. DSPM helps organizations understand where sensitive data is, assess data-related risk, and continuously improve their security and compliance posture.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=516032#Roadmap\" target=\"_blank\">516032</a></b>.</p><p><b>[When this will happen]</b></p><ul><li><b>Public preview:</b> Rollout started in <b>December 2025</b> and is expected to complete in<b> late April 2026</b>.</li><li><b>General availability (Worldwide): </b>Rollout will begin in <b>early May 2026 </b>and is expected to complete by<b> late May 2026</b>.</li></ul><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators responsible for security, compliance, and governance</li><li>Organizations using or planning to deploy AI agents</li><li>Tenants with <b>Microsoft 365 E7 </b>or <b>Agent 365 </b>subscriptions</li></ul><p><i>What will happen</i></p><ul><li><b>DSPM – AI Observability and Insider Risk Management for agents</b> will move from preview to general availability. Learn more about <a href=\"https://learn.microsoft.com/microsoft-agent-365/overview\" target=\"_blank\">activation</a>.</li><li>With <b>Microsoft 365 E7 or Agent 365 subscriptions</b>, admins will be able to:<ul><li>Monitor and analyze AI agent activity across enterprise environments</li><li>Identify potentially risky or non-compliant agent behavior</li><li>Apply governance policies aligned with organizational requirements</li></ul></li></ul><p><b>Insider Risk Management for agents</b></p><ul><li>Microsoft Purview Insider Risk Management correlates various signals to identify potential malicious or inadvertent insider risks, such as IP theft, data leakage, and security violations.</li><li>Admins will be able to create policies based on their own internal policies, governance, and organizational requirements.</li><li>The solution is built with privacy by design:<ul><li>Users are pseudonymized by default.</li><li>Role-based access controls and audit logs help ensure user-level privacy.</li></ul></li><li>These capabilities will not be available without Microsoft 365 E7 or Agent 365 subscriptions.</li><li>There will be no user impact unless AI agents are deployed and governed by admins.</li></ul><p><b>[What you can do to prepare]</b></p><ul><li>Review whether your organization currently uses or plans to deploy AI agents that access enterprise data.</li><li>Activate your <b>Microsoft 365 E7 or Agent 365 subscription</b> if you plan to use DSPM – AI Observability and Insider Risk Management for agents.</li><li>Review and update internal security, compliance, and AI governance policies.</li><li>Inform security and compliance stakeholders about this upcoming capability.</li></ul><p><b>Learn more:&nbsp;</b><a href=\"https://learn.microsoft.com/microsoft-agent-365/overview\" target=\"_blank\">Overview of Microsoft Agent 365 | Microsoft Agent 365 | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><table class=\"table table-bordered\"><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change introduce or significantly modify AI, ML, or agent capabilities that interact with or provide access to customer data?</td><td>Yes. This change will move DSPM – AI Observability and Insider Risk Management for agents to general availability, enabling monitoring and risk analysis of AI agent activity that can access and act on enterprise data.</td></tr><tr><td>Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td>Yes. Admins will be able to use Microsoft Purview to monitor AI agent behavior, correlate risk signals, and apply governance and Insider Risk Management policies for agents.</td></tr><tr><td>Does the change modify, interrupt, or disable audit logging capabilities?</td><td>Yes. Audit logs will be used as part of Insider Risk Management signal correlation for AI agent activity, supporting investigation and compliance workflows.</td></tr><tr><td>Does the change include an admin control?</td><td>Yes. Access to DSPM – AI Observability and Insider Risk Management for agents will be controlled through Microsoft 365 E7 or Agent 365 subscriptions and managed in Microsoft Purview.</td></tr><tr><td>Does the change alter how existing customer data is processed, stored, or accessed?</td><td>Yes. The change will introduce new observability and analysis of how AI agents access and act on existing customer data, without changing where the data is stored.</td></tr></tbody></table><p><b></b></p>",
+      "source": "m365",
+      "m365Service": "Microsoft Purview",
+      "m365AllServices": [
+        "Microsoft Purview"
+      ],
+      "m365Id": "MC1280556",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "December 2025, April 2026, May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280556"
+    },
+    {
+      "title": "Expanded visibility for the Teams Reader role in the Teams admin center",
+      "link": "https://deltapulse.app/item/MC1280552",
+      "published": "2026-04-15T05:55:47.000Z",
+      "summary": "The Teams Reader role in the Teams admin center will gain expanded read-only visibility of Teams and channel management details via the admin center, PowerShell, and Microsoft Graph APIs starting late April 2026. No new edit permissions are granted, and no admin action is required before rollout. <p><b>[Introduction]</b></p> <p>We’re announcing expanded visibility for the <b>Teams Reader</b> role in the Microsoft Teams admin center. With this update, Teams Readers can view Teams and channel management information across the Teams admin center, as well as through PowerShell and Microsoft Graph APIs. This update expands read-only visibility without granting edit permissions.</p><p><b>[When this will happen:]</b></p> <ul> <li>General Availability (Worldwide, GCC): Rollout begins in <b>late April 2026</b> and is expected to complete by <b>early May 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Organizations that assign the<b> Teams Reader role</b></li> <li>Global admins managing <b>role-based access control (RBAC)</b></li> <li>Tenants using the Teams admin center, PowerShell, or Microsoft Graph APIs</li> </ul> <p><b>What will happen:</b></p> <ul> </ul><p>Teams users assigned the <b>Teams Reader</b> role will be able to:</p><ul> <li>View <b>Teams management pages</b>, including individual Team and channel details.</li><li>View the <b>Teams tab on the User details page</b> in the Teams admin center.</li></ul> <p><b>Role limitations (not included in this release):</b></p> <ul> <li>No access to <b>Meetings &amp; Calls</b> user details (planned for a future update)</li><li>No access to <b>Notifications &amp; Rules</b> management (planned for a future update)</li><li>No access to <b>Frontline worker deployment management</b></li><li>No access to the <b>Collaboration activity dashboard</b></li></ul><p><b>Note</b>: This update does not grant any new edit or management permissions.</p> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required before rollout.</li> <li>Review <b>Teams Reader</b> role assignments for alignment with your access strategy.</li> <li>Notify <b>Global admins</b> of the expanded visibility.</li> <li>Update internal documentation or training materials that describe Teams admin roles.</li></ul><p><b>Learn more</b>: <a href=\"https://learn.microsoft.com/microsoftteams/using-admin-roles\" target=\"_blank\">Use Microsoft Teams administrator roles to manage Teams - Microsoft Teams | Microsoft Learn</a> (will be updated before rollout)</p><p><b>[Compliance considerations:]</b></p><p>No compliance considerations identified; review as appropriate for your organization.</p>",
+      "source": "m365",
+      "m365Service": "Microsoft Teams",
+      "m365AllServices": [
+        "Microsoft Teams"
+      ],
+      "m365Id": "MC1280552",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "April 2026, May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "Feature update",
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280552"
+    },
+    {
+      "title": "Organizational Data Export Capability for Tenant Admins",
+      "link": "https://deltapulse.app/item/MC1280545",
+      "published": "2026-04-15T05:53:38.000Z",
+      "summary": "Starting late April 2026, Microsoft 365 tenant admins with Global or Organizational Data Source Administrator roles can export raw organizational data uploaded to MODIS within a 30-day retention window in CSV format. This default-enabled feature supports compliance and audit needs without impacting users. <p><b>[Introduction]</b></p><p> Microsoft 365 is introducing a new organizational data export capability for tenant administrators to improve data portability and transparency. This enhancement allows authorized admins to securely export raw organizational data uploaded into <b>Microsoft Organizational Data Ingestion Service (MODIS)</b> in a documented and auditable manner.</p> <p><b>[When this will happen:]</b></p><p> General Availability (Worldwide): Rollout will begin in <b>late April 2026</b> and is expected to complete by <b>late April 2026</b>.</p> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Tenant administrators with <b>Global Administrator </b>or<b> Organizational Data Source Administrator</b> roles</li> </ul><p><b>What will happen:</b></p> <ul> <li>Authorized Admins can export <b>raw organizational data</b> that has been uploaded to MODIS using <b>manual uploads or automated connectors.</b></li><li>Only data that is <b>retained within the 30‑day retention window</b> is eligible for export.</li> <li>Export is initiated directly within the <b>MODIS user experience.</b></li> <li>Exported data is downloaded in <b>CSV format.</b></li> <li>The capability applies only to data your organization has directly uploaded and that remains within the <b>30‑day retention window</b>.</li><li>The capability is<b> enabled by default</b> and requires no admin configuration.</li><li>There is&nbsp;<b>no impact to users.</b></li> </ul> <p><b>Learn more</b>: <a href=\"https://learn.microsoft.com/viva/orgdata-data-usage#access-and-export-audit-logs\" target=\"_blank\">Understand how organizational data is used and retained in Microsoft 365 | Microsoft Learn</a>&nbsp;(will be updated soon)</p><p><b>[What you can do to prepare:]</b></p><p> No action is required at this time.</p> <p>After rollout, consider reviewing your data ingestion and retention practices to determine whether exporting ingested data supports compliance, migration, or archival needs.</p><p><b>[Compliance considerations]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>Access to existing customer data</td> <td>The change introduces a new admin-initiated method to export raw organizational data that has already been uploaded to MODIS and retained within the 30-day window.</td> </tr> <tr> <td>Admin compliance monitoring and reporting</td> <td>Tenant administrators can export ingested organizational data, which may be used for audit, compliance review, or record-keeping purposes.</td> </tr> <tr> <td>Admin controls and role-based access</td> <td>The export capability is restricted to users assigned the Global Administrator or Organizational Data Source Administrator role, relying on existing Entra ID role assignments.</td> </tr> </tbody></table>",
+      "source": "m365",
+      "m365Service": "Microsoft 365 suite",
+      "m365AllServices": [
+        "Microsoft 365 suite"
+      ],
+      "m365Id": "MC1280545",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "New feature",
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280545"
+    },
+    {
+      "title": "Accept Apple’s new terms and conditions to ensure Intune can communicate with Apple as expected",
+      "link": "https://deltapulse.app/item/MC1280538",
+      "published": "2026-04-15T05:46:40.000Z",
+      "summary": "IT admins must accept Apple's new terms and conditions for Apple Business, School Manager, Volume Purchasing, or Automated Device Enrollment to maintain Microsoft Intune communication. Failure to accept causes errors. Log in at Apple's support site to accept and avoid service interruption. <p>Apple has released new Terms and Conditions for Apple Business. An IT admin will need to accept these terms when using Apple School Manager, Apple Business, Apple Volume Purchasing Program, or Automated Device Enrollment to ensure that the managed devices can continue communicating with Microsoft Intune.&nbsp;</p><p>[How this will affect your organization:]</p><p>This will only affect you if you use Apple Automated Device Enrollment, Apple School Manager, Apple Business, or Apple Volume Purchase Program. You will need to accept the new terms and conditions to ensure your Intune service is not interrupted. If you do not accept the new terms and conditions the Intune service will receive the error – “T_C_NOT_Signed” from Apple.</p><p>[What you need to do to prepare:]</p><p>Simply login to the appropriate URL listed in the support article from Apple here: <a href=\"https://support.apple.com/102069\" target=\"_blank\">https://support.apple.com/102069</a>. Once you have logged in and accepted the new terms and conditions, managed Apple devices will once again be able to communicate with Apple’s device management servers.</p><p>Note, Apple Business Manager is now Apple Business, learn more from Apple here: <a href=\"https://support.apple.com/guide/business/intro-to-apple-business-axm7909096bf/web\" target=\"_blank\">https://support.apple.com/guide/business/intro-to-apple-business-axm7909096bf/web</a>&nbsp;</p>",
+      "source": "m365",
+      "m365Service": "Microsoft Intune",
+      "m365AllServices": [
+        "Microsoft Intune"
+      ],
+      "m365Id": "MC1280538",
+      "m365Source": "message_center",
+      "m365Category": "planForChange",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": null,
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280538"
+    },
+    {
+      "title": "Microsoft Intune In Development for April 2026 is now available",
+      "link": "https://deltapulse.app/item/MC1280536",
+      "published": "2026-04-15T05:46:03.000Z",
+      "summary": "Microsoft Intune In Development for April 2026 is available with an updated features list to help organizations prepare. IT staff should review upcoming changes, inform helpdesk teams, and update user guidance as needed for releases starting next month or later. <p>The <a href=\"https://aka.ms/Intune_InDevelopment\" target=\"_blank\">In development for Microsoft Intune</a> page in our documentation has been updated.</p><p>[How this will affect your organization:] </p><p>The <a href=\"https://aka.ms/Intune_InDevelopment\" target=\"_blank\">In development page</a> provides a list of features in upcoming releases of Microsoft Intune to assist in your readiness and planning. The list has now been updated. You will start seeing these changes in the next month or in a subsequent release.</p><p>[What you need to do to prepare:] </p><p>You can inform your IT staff and helpdesk of the upcoming changes listed on this page. Plan to update your user guidance, if you feel any of these features would be important to your users.</p>",
+      "source": "m365",
+      "m365Service": "Microsoft Intune",
+      "m365AllServices": [
+        "Microsoft Intune"
+      ],
+      "m365Id": "MC1280536",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "Feature update",
+        "User impact",
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1280536"
+    },
     {
       "title": "Updates available for Microsoft 365 Apps for all channels",
       "link": "https://deltapulse.app/item/MC1280185",
@@ -61,31 +336,6 @@
       "_normalized_url": "message_center:MC1280144"
     },
     {
-      "title": "Microsoft Edge: Shadow AI",
-      "link": "https://deltapulse.app/item/560341",
-      "published": "2026-04-14T23:00:25.000Z",
-      "summary": "Currently admins can set Purview DLP policies to protect sensitive data from being sent to any Generative AI apps, users get blocked from sending their prompts to LLM when this is triggered and stops their workflow. This new add-on to the feature shows a new UI that will give users the option to be redirected to M365 Copilot which will open and navigate to this M365 Copilot tab and allow them to send the same prompt there.",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "560341",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365Tags": [],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:560341"
-    },
-    {
       "title": "Outlook: Copilot in File Previewer for iOS",
       "link": "https://deltapulse.app/item/560340",
       "published": "2026-04-14T23:00:25.000Z",
@@ -136,31 +386,6 @@
       "_normalized_url": "roadmap:559602"
     },
     {
-      "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
-      "link": "https://deltapulse.app/item/560398",
-      "published": "2026-04-14T23:00:25.000Z",
-      "summary": "With this feature, data officers can now complete their coverage story by now embedding hyperlinks within toast messages for the Edge browser. When this rule is triggered, the end user will see a toast with a customized title and message with a hyperlink. This feature is useful when organizations need to direct users to a specific resource or a repository for more specific instruction (e.g. internal policy SharePoint site).",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "560398",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": false,
-      "m365Tags": [],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:560398"
-    },
-    {
       "title": "Microsoft Purview: Endpoint Data Loss Prevention - Enforce DLP protection upon new content before its saved",
       "link": "https://deltapulse.app/item/560397",
       "published": "2026-04-14T23:00:25.000Z",
@@ -184,6 +409,56 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "roadmap:560397"
+    },
+    {
+      "title": "Microsoft Edge: Shadow AI",
+      "link": "https://deltapulse.app/item/560341",
+      "published": "2026-04-14T23:00:25.000Z",
+      "summary": "Currently admins can set Purview DLP policies to protect sensitive data from being sent to any Generative AI apps, users get blocked from sending their prompts to LLM when this is triggered and stops their workflow. This new add-on to the feature shows a new UI that will give users the option to be redirected to M365 Copilot which will open and navigate to this M365 Copilot tab and allow them to send the same prompt there.",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "560341",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:560341"
+    },
+    {
+      "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
+      "link": "https://deltapulse.app/item/560398",
+      "published": "2026-04-14T23:00:25.000Z",
+      "summary": "With this feature, data officers can now complete their coverage story by now embedding hyperlinks within toast messages for the Edge browser. When this rule is triggered, the end user will see a toast with a customized title and message with a hyperlink. This feature is useful when organizations need to direct users to a specific resource or a repository for more specific instruction (e.g. internal policy SharePoint site).",
+      "source": "m365",
+      "m365Service": "Microsoft 365",
+      "m365AllServices": [],
+      "m365Id": "560398",
+      "m365Source": "roadmap",
+      "m365Category": "",
+      "m365Severity": null,
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": false,
+      "m365Tags": [],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "roadmap:560398"
     },
     {
       "title": "Microsoft Purview: Endpoint Data Loss Prevention - Expand protection to Copilot + PC devices for Recall snapshots through custom policies",
@@ -419,35 +694,6 @@
       "_normalized_url": "message_center:MC1279832"
     },
     {
-      "title": "The April 2026 Windows security update is now available",
-      "link": "https://deltapulse.app/item/MC1279829",
-      "published": "2026-04-14T17:03:33.137Z",
-      "summary": "<div>The April 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. For more information about the contents of this update, see the release notes, which are easily accessible from the&nbsp;<a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11</a> update history page. To learn more about the different types of monthly quality updates, see <a href=\"https://aka.ms/Windows/MonthlyUpdates\" rel=\"noopener noreferrer\" target=\"_blank\">Windows monthly updates explained</a>.</div><div>&nbsp;&nbsp;</div><div><b>Highlights for the Windows 11, version 25H2 update:&nbsp;</b></div><ul><li>This security update includes fixes and quality improvements from <a href=\"https://support.microsoft.com/help/5079391\" rel=\"noopener noreferrer\" target=\"_blank\">KB5079391</a> (released March 26, 2026 - no longer offered) and <a href=\"https://support.microsoft.com/help/5086672\" rel=\"noopener noreferrer\" target=\"_blank\">KB5086672</a> (released March 31, 2026).</li><li>This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.</li><li>This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.</li><li>This update improves reliability for SMB compression over QUIC, reducing timeouts and enabling more consistent and dependable performance.</li><li>This update enhances protection against phishing attacks that use Remote Desktop (.rdp) files by showing all requested connection settings before connecting, with settings turned off by default and a <a href=\"https://go.microsoft.com/fwlink/?linkid=2347342\" rel=\"noopener noreferrer\" target=\"_blank\">one‑time security warning</a> on first use.</li></ul><div><br></div><div>Short on time? Watch our <a href=\"https://aka.ms/Windows11/ReleaseNotes/Video/2604\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11 release notes video</a> for this month's tips.</div><div><br></div><div>For instructions on how to install this update, see the KB for your operating system listed below:&nbsp;</div><ul><li>Windows 11, version 26H1: <a href=\"https://support.microsoft.com/help/5083768\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083768</a></li><li>Windows 11, versions 25H2 and 24H2: <a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 11, version 23H2: <a href=\"https://support.microsoft.com/help/5082052\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082052</a></li><li>Windows 11 Enterprise LTSC 2024: Baseline <a href=\"https://support.microsoft.com/topic/9df553dc-e869-4240-af42-c7bc7e81bc32\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 10, versions 22H2 and 21H2: <a href=\"https://support.microsoft.com/help/5082200\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082200</a></li><li>Windows 10 Enterprise LTSC 2019 and Windows Server 2019: <a href=\"https://support.microsoft.com/help/5082123\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082123</a></li><li>Windows 10 LTSB 2016 and Windows Server 2016: <a href=\"https://support.microsoft.com/help/5082198\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082198</a></li><li>Windows Server 2025: <a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2025 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/3ed94012-763a-4ebe-86f4-32b01390a11a\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/help/5082142\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2022 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/5d0db586-d5a5-4ba2-b3c8-a4536db17225\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2012 R2: <a href=\"https://support.microsoft.com/help/5082126\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082126</a></li><li>Windows Server 2012: <a href=\"https://support.microsoft.com/help/5082127\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082127</a></li></ul><div><br></div><div><b>Note: </b>With the April 2026 Windows security update and upcoming Windows updates over the next few months, a limited number of consumer and business devices may experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the <a href=\"https://support.microsoft.com/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e\" rel=\"noopener noreferrer\" target=\"_blank\">Secure Boot update process</a>.</div>",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1279829",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365IsMajorChange": true,
-      "m365Tags": [
-        "Admin impact"
-      ],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1279829"
-    },
-    {
       "title": "Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
       "link": "https://deltapulse.app/item/MC1279830",
       "published": "2026-04-14T17:03:33.137Z",
@@ -475,6 +721,35 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1279830"
+    },
+    {
+      "title": "The April 2026 Windows security update is now available",
+      "link": "https://deltapulse.app/item/MC1279829",
+      "published": "2026-04-14T17:03:33.137Z",
+      "summary": "<div>The April 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. For more information about the contents of this update, see the release notes, which are easily accessible from the&nbsp;<a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11</a> update history page. To learn more about the different types of monthly quality updates, see <a href=\"https://aka.ms/Windows/MonthlyUpdates\" rel=\"noopener noreferrer\" target=\"_blank\">Windows monthly updates explained</a>.</div><div>&nbsp;&nbsp;</div><div><b>Highlights for the Windows 11, version 25H2 update:&nbsp;</b></div><ul><li>This security update includes fixes and quality improvements from <a href=\"https://support.microsoft.com/help/5079391\" rel=\"noopener noreferrer\" target=\"_blank\">KB5079391</a> (released March 26, 2026 - no longer offered) and <a href=\"https://support.microsoft.com/help/5086672\" rel=\"noopener noreferrer\" target=\"_blank\">KB5086672</a> (released March 31, 2026).</li><li>This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.</li><li>This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.</li><li>This update improves reliability for SMB compression over QUIC, reducing timeouts and enabling more consistent and dependable performance.</li><li>This update enhances protection against phishing attacks that use Remote Desktop (.rdp) files by showing all requested connection settings before connecting, with settings turned off by default and a <a href=\"https://go.microsoft.com/fwlink/?linkid=2347342\" rel=\"noopener noreferrer\" target=\"_blank\">one‑time security warning</a> on first use.</li></ul><div><br></div><div>Short on time? Watch our <a href=\"https://aka.ms/Windows11/ReleaseNotes/Video/2604\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11 release notes video</a> for this month's tips.</div><div><br></div><div>For instructions on how to install this update, see the KB for your operating system listed below:&nbsp;</div><ul><li>Windows 11, version 26H1: <a href=\"https://support.microsoft.com/help/5083768\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083768</a></li><li>Windows 11, versions 25H2 and 24H2: <a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 11, version 23H2: <a href=\"https://support.microsoft.com/help/5082052\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082052</a></li><li>Windows 11 Enterprise LTSC 2024: Baseline <a href=\"https://support.microsoft.com/topic/9df553dc-e869-4240-af42-c7bc7e81bc32\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 10, versions 22H2 and 21H2: <a href=\"https://support.microsoft.com/help/5082200\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082200</a></li><li>Windows 10 Enterprise LTSC 2019 and Windows Server 2019: <a href=\"https://support.microsoft.com/help/5082123\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082123</a></li><li>Windows 10 LTSB 2016 and Windows Server 2016: <a href=\"https://support.microsoft.com/help/5082198\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082198</a></li><li>Windows Server 2025: <a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2025 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/3ed94012-763a-4ebe-86f4-32b01390a11a\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/help/5082142\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2022 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/5d0db586-d5a5-4ba2-b3c8-a4536db17225\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2012 R2: <a href=\"https://support.microsoft.com/help/5082126\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082126</a></li><li>Windows Server 2012: <a href=\"https://support.microsoft.com/help/5082127\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082127</a></li></ul><div><br></div><div><b>Note: </b>With the April 2026 Windows security update and upcoming Windows updates over the next few months, a limited number of consumer and business devices may experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the <a href=\"https://support.microsoft.com/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e\" rel=\"noopener noreferrer\" target=\"_blank\">Secure Boot update process</a>.</div>",
+      "source": "m365",
+      "m365Service": "Windows",
+      "m365AllServices": [
+        "Windows"
+      ],
+      "m365Id": "MC1279829",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365IsMajorChange": true,
+      "m365Tags": [
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1279829"
     },
     {
       "title": "Microsoft Copilot (Microsoft 365): Copilot Chat can now better match search results from Scanned PDFs and from text inside images embedded in Word, Excel, and PowerPoint",
@@ -2171,6 +2446,66 @@
   "byCategory": {
     "Collaboration": [
       {
+        "title": "Assign participants to breakout rooms using CSV import in Microsoft Teams meetings",
+        "link": "https://deltapulse.app/item/MC1280561",
+        "published": "2026-04-15T05:59:56.000Z",
+        "summary": "Microsoft Teams will support CSV import for breakout room assignments starting May 2026, enabling organizers to bulk create rooms and pre-assign participants. The feature is enabled by default, requires no admin action, and allows modifications during meetings, improving setup efficiency for structured sessions. <p><b>[Introduction]</b></p> <p>We’re improving breakout room setup in Microsoft Teams by adding support for CSV import of breakout room assignments. This update helps organizers reduce manual setup time and prepare structured meetings—such as trainings, workshops, and large collaboration sessions—more efficiently.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559387\" target=\"_blank\">559387</a>.</p> <p><b>[When this will happen:]</b></p> <ul><li>Targeted Release: We will begin rolling out in&nbsp;<b>early May 2026</b> and expect to complete by <b>mid-May 2026</b>.</li><li> General Availability (Worldwide): Rollout begins in<b> mid-May 2026</b> and completes by<b> late May 2026</b>.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Meeting organizers who use Breakout rooms in Microsoft Teams meetings</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Organizers can import a CSV file to:<ul><li>Create breakout rooms in bulk</li><li>Assign participants to specific rooms before the meeting starts</li></ul></li><li>Imported assignments can still be modified using existing breakout room controls during or before the meeting</li><li>The feature is <b style=\"\">enabled by default</b> and does not require admin configuration</li><li>Existing breakout room policies and controls are respected</li></ul> <p><b>[What you can do to prepare:]</b></p> <p>No action is required from administrators.</p> <ul> <li>Inform meeting organizers about this new capability</li> <li>Update internal documentation or training materials as needed</li> </ul> <p>Before rollout, we will update this post with new documentation.</p><p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p>",
+        "source": "m365",
+        "m365Service": "Microsoft Teams",
+        "m365AllServices": [
+          "Microsoft Teams"
+        ],
+        "m365Id": "MC1280561",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280561"
+      },
+      {
+        "title": "Expanded visibility for the Teams Reader role in the Teams admin center",
+        "link": "https://deltapulse.app/item/MC1280552",
+        "published": "2026-04-15T05:55:47.000Z",
+        "summary": "The Teams Reader role in the Teams admin center will gain expanded read-only visibility of Teams and channel management details via the admin center, PowerShell, and Microsoft Graph APIs starting late April 2026. No new edit permissions are granted, and no admin action is required before rollout. <p><b>[Introduction]</b></p> <p>We’re announcing expanded visibility for the <b>Teams Reader</b> role in the Microsoft Teams admin center. With this update, Teams Readers can view Teams and channel management information across the Teams admin center, as well as through PowerShell and Microsoft Graph APIs. This update expands read-only visibility without granting edit permissions.</p><p><b>[When this will happen:]</b></p> <ul> <li>General Availability (Worldwide, GCC): Rollout begins in <b>late April 2026</b> and is expected to complete by <b>early May 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Organizations that assign the<b> Teams Reader role</b></li> <li>Global admins managing <b>role-based access control (RBAC)</b></li> <li>Tenants using the Teams admin center, PowerShell, or Microsoft Graph APIs</li> </ul> <p><b>What will happen:</b></p> <ul> </ul><p>Teams users assigned the <b>Teams Reader</b> role will be able to:</p><ul> <li>View <b>Teams management pages</b>, including individual Team and channel details.</li><li>View the <b>Teams tab on the User details page</b> in the Teams admin center.</li></ul> <p><b>Role limitations (not included in this release):</b></p> <ul> <li>No access to <b>Meetings &amp; Calls</b> user details (planned for a future update)</li><li>No access to <b>Notifications &amp; Rules</b> management (planned for a future update)</li><li>No access to <b>Frontline worker deployment management</b></li><li>No access to the <b>Collaboration activity dashboard</b></li></ul><p><b>Note</b>: This update does not grant any new edit or management permissions.</p> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required before rollout.</li> <li>Review <b>Teams Reader</b> role assignments for alignment with your access strategy.</li> <li>Notify <b>Global admins</b> of the expanded visibility.</li> <li>Update internal documentation or training materials that describe Teams admin roles.</li></ul><p><b>Learn more</b>: <a href=\"https://learn.microsoft.com/microsoftteams/using-admin-roles\" target=\"_blank\">Use Microsoft Teams administrator roles to manage Teams - Microsoft Teams | Microsoft Learn</a> (will be updated before rollout)</p><p><b>[Compliance considerations:]</b></p><p>No compliance considerations identified; review as appropriate for your organization.</p>",
+        "source": "m365",
+        "m365Service": "Microsoft Teams",
+        "m365AllServices": [
+          "Microsoft Teams"
+        ],
+        "m365Id": "MC1280552",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Feature update",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280552"
+      },
+      {
         "title": "Queues app on Microsoft Teams mobile",
         "link": "https://deltapulse.app/item/MC1279071",
         "published": "2026-04-13T21:33:36.000Z",
@@ -2544,6 +2879,68 @@
     ],
     "Security & Compliance": [
       {
+        "title": "Microsoft Purview: Migration tool in Unified Catalog to migrate classic glossary terms",
+        "link": "https://deltapulse.app/item/MC1280564",
+        "published": "2026-04-15T06:02:52.000Z",
+        "summary": "Microsoft Purview introduces a built-in migration tool in Unified Catalog for Data Governance Admins and Stewards to migrate classic glossary terms, templates, and relationships. Migration begins public preview in April 2026 and general availability in July 2026. Classic terms become read-only post-migration or switch. <p><b>[Introduction]</b></p><p>Data Governance Admins and Data Stewards can use a <b>built‑in migration tool</b> in <i>Microsoft Purview Unified Catalog</i> to migrate classic glossary terms, associated term templates, and asset and column relationships into Unified Catalog. After migration, glossary terms can be managed in <i>Unified Catalog</i> and associated with business concepts and data assets.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558683\" target=\"_blank\">558683</a></b>.</p><p><b>[When this will happen]</b></p><ul><li><b>Public Preview: </b>We will begin rolling out in <b>late April 2026</b> and expect to complete by <b>late April 2026</b>.</li><li><b>General Availability (Worldwide): </b>We will begin rolling out in <b>early July 2026</b> and expect to complete by <b>early July 2026</b>.</li></ul><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Data Governance Admins</li><li>Data Stewards</li><li>Organizations using classic glossary terms in <i>Microsoft Purview, </i>along with Unified Catalog</li></ul><p><i>What will happen</i></p><ul><li>Admins can choose to use the built‑in migration tool to migrate classic glossary terms to Unified Catalog.</li><li>Migration includes:<ul><li>Classic glossary terms</li><li>Associated term templates</li><li>Asset and column relationships</li></ul></li><li>Admins who do not need migration can skip the process and use glossary terms only in <i>Unified Catalog</i>.</li><li>In both cases, classic glossary terms will become <b>read‑only</b>.</li><li>After migration or switching, Unified Catalog glossary terms can be used to curate assets and columns.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/0add68ed-0a35-4417-8d01-53919b3f82dc/6850ce419d4deabd90873da84cd0b47cbe087a7b.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p></p><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/b94a12df-79d3-49e1-b9b6-30c8866eeceb/9563b5f2109a788aeb0d822ef31e8b0c6bd13ca8.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Determine whether your organization uses classic glossary terms.</li><li>Decide whether to:<ul><li>Migrate classic glossary terms to Unified Catalog, or</li><li>Abandon classic glossary terms and use Unified Catalog glossary terms only.</li></ul></li><li>If you choose migration:<ul><li>Review the detailed migration documentation.</li><li>Plan and execute the migration when your organization is ready for all required steps.</li></ul></li></ul><p>Links to detailed migration documentation will be added to the <a href=\"https://learn.microsoft.com/purview/unified-catalog-glossary-terms\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Unified Catalog glossary terms overview documentation</a> when the feature enters public preview.</p><p><b>[Compliance considerations]</b></p><table class=\"table table-bordered\"><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change alter how existing customer data is processed, stored, or accessed?</td><td>Yes. Classic glossary terms, associated term templates, and asset and column relationships may be migrated and stored in <i>Microsoft Purview Unified Catalog </i>instead of the classic glossary location.</td></tr><tr><td>Does the change include an admin control?</td><td>Yes. Data Governance Admins choose whether to migrate classic glossary terms using the built‑in migration tool or skip migration and switch to Unified Catalog glossary terms.</td></tr></tbody></table><p><b></b></p>",
+        "source": "m365",
+        "m365Service": "Microsoft Purview",
+        "m365AllServices": [
+          "Microsoft Purview"
+        ],
+        "m365Id": "MC1280564",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280564"
+      },
+      {
+        "title": "Microsoft Purview for agents: AI observability and insider risk management now generally available",
+        "link": "https://deltapulse.app/item/MC1280556",
+        "published": "2026-04-15T05:56:15.000Z",
+        "summary": "Microsoft Purview for agents, including DSPM – AI Observability and Insider Risk Management, will be generally available by late May 2026. It enables Microsoft 365 E7 or Agent 365 admins to monitor AI agent activity, assess risks, enforce governance, and manage insider risks with privacy controls, supporting compliance and security. <p><b>[Introduction]</b></p><p>As organizations deploy AI agents that can access enterprise data and take action on behalf of users, governing and securing agent activity becomes critical. Microsoft Purview will extend its data security and compliance capabilities to include AI agents, helping organizations gain visibility into agent behavior, assess risk, and apply consistent governance controls.</p><p>Microsoft Purview for agents will introduce <b>Data Security Posture Management (DSPM) – AI Observability and Insider Risk Management for agents</b>. DSPM helps organizations understand where sensitive data is, assess data-related risk, and continuously improve their security and compliance posture.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=516032#Roadmap\" target=\"_blank\">516032</a></b>.</p><p><b>[When this will happen]</b></p><ul><li><b>Public preview:</b> Rollout started in <b>December 2025</b> and is expected to complete in<b> late April 2026</b>.</li><li><b>General availability (Worldwide): </b>Rollout will begin in <b>early May 2026 </b>and is expected to complete by<b> late May 2026</b>.</li></ul><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators responsible for security, compliance, and governance</li><li>Organizations using or planning to deploy AI agents</li><li>Tenants with <b>Microsoft 365 E7 </b>or <b>Agent 365 </b>subscriptions</li></ul><p><i>What will happen</i></p><ul><li><b>DSPM – AI Observability and Insider Risk Management for agents</b> will move from preview to general availability. Learn more about <a href=\"https://learn.microsoft.com/microsoft-agent-365/overview\" target=\"_blank\">activation</a>.</li><li>With <b>Microsoft 365 E7 or Agent 365 subscriptions</b>, admins will be able to:<ul><li>Monitor and analyze AI agent activity across enterprise environments</li><li>Identify potentially risky or non-compliant agent behavior</li><li>Apply governance policies aligned with organizational requirements</li></ul></li></ul><p><b>Insider Risk Management for agents</b></p><ul><li>Microsoft Purview Insider Risk Management correlates various signals to identify potential malicious or inadvertent insider risks, such as IP theft, data leakage, and security violations.</li><li>Admins will be able to create policies based on their own internal policies, governance, and organizational requirements.</li><li>The solution is built with privacy by design:<ul><li>Users are pseudonymized by default.</li><li>Role-based access controls and audit logs help ensure user-level privacy.</li></ul></li><li>These capabilities will not be available without Microsoft 365 E7 or Agent 365 subscriptions.</li><li>There will be no user impact unless AI agents are deployed and governed by admins.</li></ul><p><b>[What you can do to prepare]</b></p><ul><li>Review whether your organization currently uses or plans to deploy AI agents that access enterprise data.</li><li>Activate your <b>Microsoft 365 E7 or Agent 365 subscription</b> if you plan to use DSPM – AI Observability and Insider Risk Management for agents.</li><li>Review and update internal security, compliance, and AI governance policies.</li><li>Inform security and compliance stakeholders about this upcoming capability.</li></ul><p><b>Learn more:&nbsp;</b><a href=\"https://learn.microsoft.com/microsoft-agent-365/overview\" target=\"_blank\">Overview of Microsoft Agent 365 | Microsoft Agent 365 | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><table class=\"table table-bordered\"><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change introduce or significantly modify AI, ML, or agent capabilities that interact with or provide access to customer data?</td><td>Yes. This change will move DSPM – AI Observability and Insider Risk Management for agents to general availability, enabling monitoring and risk analysis of AI agent activity that can access and act on enterprise data.</td></tr><tr><td>Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td>Yes. Admins will be able to use Microsoft Purview to monitor AI agent behavior, correlate risk signals, and apply governance and Insider Risk Management policies for agents.</td></tr><tr><td>Does the change modify, interrupt, or disable audit logging capabilities?</td><td>Yes. Audit logs will be used as part of Insider Risk Management signal correlation for AI agent activity, supporting investigation and compliance workflows.</td></tr><tr><td>Does the change include an admin control?</td><td>Yes. Access to DSPM – AI Observability and Insider Risk Management for agents will be controlled through Microsoft 365 E7 or Agent 365 subscriptions and managed in Microsoft Purview.</td></tr><tr><td>Does the change alter how existing customer data is processed, stored, or accessed?</td><td>Yes. The change will introduce new observability and analysis of how AI agents access and act on existing customer data, without changing where the data is stored.</td></tr></tbody></table><p><b></b></p>",
+        "source": "m365",
+        "m365Service": "Microsoft Purview",
+        "m365AllServices": [
+          "Microsoft Purview"
+        ],
+        "m365Id": "MC1280556",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "December 2025, April 2026, May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280556"
+      },
+      {
         "title": "Microsoft Defender for Office 365: Enhancing how we handle promotional mail",
         "link": "https://deltapulse.app/item/MC1279093",
         "published": "2026-04-13T22:54:05.000Z",
@@ -2639,6 +3036,66 @@
     ],
     "Administration": [
       {
+        "title": "Accept Apple’s new terms and conditions to ensure Intune can communicate with Apple as expected",
+        "link": "https://deltapulse.app/item/MC1280538",
+        "published": "2026-04-15T05:46:40.000Z",
+        "summary": "IT admins must accept Apple's new terms and conditions for Apple Business, School Manager, Volume Purchasing, or Automated Device Enrollment to maintain Microsoft Intune communication. Failure to accept causes errors. Log in at Apple's support site to accept and avoid service interruption. <p>Apple has released new Terms and Conditions for Apple Business. An IT admin will need to accept these terms when using Apple School Manager, Apple Business, Apple Volume Purchasing Program, or Automated Device Enrollment to ensure that the managed devices can continue communicating with Microsoft Intune.&nbsp;</p><p>[How this will affect your organization:]</p><p>This will only affect you if you use Apple Automated Device Enrollment, Apple School Manager, Apple Business, or Apple Volume Purchase Program. You will need to accept the new terms and conditions to ensure your Intune service is not interrupted. If you do not accept the new terms and conditions the Intune service will receive the error – “T_C_NOT_Signed” from Apple.</p><p>[What you need to do to prepare:]</p><p>Simply login to the appropriate URL listed in the support article from Apple here: <a href=\"https://support.apple.com/102069\" target=\"_blank\">https://support.apple.com/102069</a>. Once you have logged in and accepted the new terms and conditions, managed Apple devices will once again be able to communicate with Apple’s device management servers.</p><p>Note, Apple Business Manager is now Apple Business, learn more from Apple here: <a href=\"https://support.apple.com/guide/business/intro-to-apple-business-axm7909096bf/web\" target=\"_blank\">https://support.apple.com/guide/business/intro-to-apple-business-axm7909096bf/web</a>&nbsp;</p>",
+        "source": "m365",
+        "m365Service": "Microsoft Intune",
+        "m365AllServices": [
+          "Microsoft Intune"
+        ],
+        "m365Id": "MC1280538",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": null,
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280538"
+      },
+      {
+        "title": "Microsoft Intune In Development for April 2026 is now available",
+        "link": "https://deltapulse.app/item/MC1280536",
+        "published": "2026-04-15T05:46:03.000Z",
+        "summary": "Microsoft Intune In Development for April 2026 is available with an updated features list to help organizations prepare. IT staff should review upcoming changes, inform helpdesk teams, and update user guidance as needed for releases starting next month or later. <p>The <a href=\"https://aka.ms/Intune_InDevelopment\" target=\"_blank\">In development for Microsoft Intune</a> page in our documentation has been updated.</p><p>[How this will affect your organization:] </p><p>The <a href=\"https://aka.ms/Intune_InDevelopment\" target=\"_blank\">In development page</a> provides a list of features in upcoming releases of Microsoft Intune to assist in your readiness and planning. The list has now been updated. You will start seeing these changes in the next month or in a subsequent release.</p><p>[What you need to do to prepare:] </p><p>You can inform your IT staff and helpdesk of the upcoming changes listed on this page. Plan to update your user guidance, if you feel any of these features would be important to your users.</p>",
+        "source": "m365",
+        "m365Service": "Microsoft Intune",
+        "m365AllServices": [
+          "Microsoft Intune"
+        ],
+        "m365Id": "MC1280536",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Feature update",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280536"
+      },
+      {
         "title": "The April 2026 Scan Cab is available",
         "link": "https://deltapulse.app/item/MC1280144",
         "published": "2026-04-14T23:41:17.973Z",
@@ -2726,35 +3183,6 @@
         "_normalized_url": "message_center:MC1279832"
       },
       {
-        "title": "The April 2026 Windows security update is now available",
-        "link": "https://deltapulse.app/item/MC1279829",
-        "published": "2026-04-14T17:03:33.137Z",
-        "summary": "<div>The April 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. For more information about the contents of this update, see the release notes, which are easily accessible from the&nbsp;<a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11</a> update history page. To learn more about the different types of monthly quality updates, see <a href=\"https://aka.ms/Windows/MonthlyUpdates\" rel=\"noopener noreferrer\" target=\"_blank\">Windows monthly updates explained</a>.</div><div>&nbsp;&nbsp;</div><div><b>Highlights for the Windows 11, version 25H2 update:&nbsp;</b></div><ul><li>This security update includes fixes and quality improvements from <a href=\"https://support.microsoft.com/help/5079391\" rel=\"noopener noreferrer\" target=\"_blank\">KB5079391</a> (released March 26, 2026 - no longer offered) and <a href=\"https://support.microsoft.com/help/5086672\" rel=\"noopener noreferrer\" target=\"_blank\">KB5086672</a> (released March 31, 2026).</li><li>This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.</li><li>This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.</li><li>This update improves reliability for SMB compression over QUIC, reducing timeouts and enabling more consistent and dependable performance.</li><li>This update enhances protection against phishing attacks that use Remote Desktop (.rdp) files by showing all requested connection settings before connecting, with settings turned off by default and a <a href=\"https://go.microsoft.com/fwlink/?linkid=2347342\" rel=\"noopener noreferrer\" target=\"_blank\">one‑time security warning</a> on first use.</li></ul><div><br></div><div>Short on time? Watch our <a href=\"https://aka.ms/Windows11/ReleaseNotes/Video/2604\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11 release notes video</a> for this month's tips.</div><div><br></div><div>For instructions on how to install this update, see the KB for your operating system listed below:&nbsp;</div><ul><li>Windows 11, version 26H1: <a href=\"https://support.microsoft.com/help/5083768\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083768</a></li><li>Windows 11, versions 25H2 and 24H2: <a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 11, version 23H2: <a href=\"https://support.microsoft.com/help/5082052\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082052</a></li><li>Windows 11 Enterprise LTSC 2024: Baseline <a href=\"https://support.microsoft.com/topic/9df553dc-e869-4240-af42-c7bc7e81bc32\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 10, versions 22H2 and 21H2: <a href=\"https://support.microsoft.com/help/5082200\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082200</a></li><li>Windows 10 Enterprise LTSC 2019 and Windows Server 2019: <a href=\"https://support.microsoft.com/help/5082123\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082123</a></li><li>Windows 10 LTSB 2016 and Windows Server 2016: <a href=\"https://support.microsoft.com/help/5082198\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082198</a></li><li>Windows Server 2025: <a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2025 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/3ed94012-763a-4ebe-86f4-32b01390a11a\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/help/5082142\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2022 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/5d0db586-d5a5-4ba2-b3c8-a4536db17225\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2012 R2: <a href=\"https://support.microsoft.com/help/5082126\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082126</a></li><li>Windows Server 2012: <a href=\"https://support.microsoft.com/help/5082127\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082127</a></li></ul><div><br></div><div><b>Note: </b>With the April 2026 Windows security update and upcoming Windows updates over the next few months, a limited number of consumer and business devices may experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the <a href=\"https://support.microsoft.com/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e\" rel=\"noopener noreferrer\" target=\"_blank\">Secure Boot update process</a>.</div>",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1279829",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": true,
-        "m365Tags": [
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1279829"
-      },
-      {
         "title": "Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
         "link": "https://deltapulse.app/item/MC1279830",
         "published": "2026-04-14T17:03:33.137Z",
@@ -2782,6 +3210,35 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1279830"
+      },
+      {
+        "title": "The April 2026 Windows security update is now available",
+        "link": "https://deltapulse.app/item/MC1279829",
+        "published": "2026-04-14T17:03:33.137Z",
+        "summary": "<div>The April 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. For more information about the contents of this update, see the release notes, which are easily accessible from the&nbsp;<a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11</a> update history page. To learn more about the different types of monthly quality updates, see <a href=\"https://aka.ms/Windows/MonthlyUpdates\" rel=\"noopener noreferrer\" target=\"_blank\">Windows monthly updates explained</a>.</div><div>&nbsp;&nbsp;</div><div><b>Highlights for the Windows 11, version 25H2 update:&nbsp;</b></div><ul><li>This security update includes fixes and quality improvements from <a href=\"https://support.microsoft.com/help/5079391\" rel=\"noopener noreferrer\" target=\"_blank\">KB5079391</a> (released March 26, 2026 - no longer offered) and <a href=\"https://support.microsoft.com/help/5086672\" rel=\"noopener noreferrer\" target=\"_blank\">KB5086672</a> (released March 31, 2026).</li><li>This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.</li><li>This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.</li><li>This update improves reliability for SMB compression over QUIC, reducing timeouts and enabling more consistent and dependable performance.</li><li>This update enhances protection against phishing attacks that use Remote Desktop (.rdp) files by showing all requested connection settings before connecting, with settings turned off by default and a <a href=\"https://go.microsoft.com/fwlink/?linkid=2347342\" rel=\"noopener noreferrer\" target=\"_blank\">one‑time security warning</a> on first use.</li></ul><div><br></div><div>Short on time? Watch our <a href=\"https://aka.ms/Windows11/ReleaseNotes/Video/2604\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11 release notes video</a> for this month's tips.</div><div><br></div><div>For instructions on how to install this update, see the KB for your operating system listed below:&nbsp;</div><ul><li>Windows 11, version 26H1: <a href=\"https://support.microsoft.com/help/5083768\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083768</a></li><li>Windows 11, versions 25H2 and 24H2: <a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 11, version 23H2: <a href=\"https://support.microsoft.com/help/5082052\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082052</a></li><li>Windows 11 Enterprise LTSC 2024: Baseline <a href=\"https://support.microsoft.com/topic/9df553dc-e869-4240-af42-c7bc7e81bc32\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 10, versions 22H2 and 21H2: <a href=\"https://support.microsoft.com/help/5082200\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082200</a></li><li>Windows 10 Enterprise LTSC 2019 and Windows Server 2019: <a href=\"https://support.microsoft.com/help/5082123\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082123</a></li><li>Windows 10 LTSB 2016 and Windows Server 2016: <a href=\"https://support.microsoft.com/help/5082198\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082198</a></li><li>Windows Server 2025: <a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2025 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/3ed94012-763a-4ebe-86f4-32b01390a11a\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/help/5082142\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2022 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/5d0db586-d5a5-4ba2-b3c8-a4536db17225\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2012 R2: <a href=\"https://support.microsoft.com/help/5082126\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082126</a></li><li>Windows Server 2012: <a href=\"https://support.microsoft.com/help/5082127\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082127</a></li></ul><div><br></div><div><b>Note: </b>With the April 2026 Windows security update and upcoming Windows updates over the next few months, a limited number of consumer and business devices may experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the <a href=\"https://support.microsoft.com/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e\" rel=\"noopener noreferrer\" target=\"_blank\">Secure Boot update process</a>.</div>",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1279829",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": true,
+        "m365Tags": [
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1279829"
       },
       {
         "title": "Microsoft Entra: Passkeys in registration campaigns update",
@@ -3144,6 +3601,99 @@
     ],
     "Uncategorised": [
       {
+        "title": "Use Copilot to explain selected slide content in PowerPoint Live",
+        "link": "https://deltapulse.app/item/MC1280558",
+        "published": "2026-04-15T05:57:53.000Z",
+        "summary": "Starting mid-May 2026, Microsoft Teams meetings with PowerPoint Live will let attendees select slide text and get private, on-demand Copilot explanations for terms or acronyms without disrupting the presenter. This feature is on by default for tenants with Microsoft 365 Copilot (Premium) enabled. <p><b>[Introduction]</b></p> <p>We’re enhancing the PowerPoint Live experience in Microsoft Teams by introducing slide text selection with Copilot explanations for meeting attendees. This update helps users quickly understand unfamiliar terms, acronyms, or complex concepts directly within a live presentation—without interrupting the presenter or asking questions in chat.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557256\" target=\"_blank\">557256</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li>General Availability (Worldwide): Rollout begins in <b>mid-May 2026</b> and is expected to complete by<b> late May 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>All Microsoft Teams users attending meetings with <b>PowerPoint Live</b></li> <li>Tenants with <b>Microsoft 365 Copilot (Premium)</b> enabled</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Attendees can<b> select text on a PowerPoint Live slide</b> during a meeting.</li><li>Copilot will provide <b>on-demand explanations</b> for selected text, including:<ul><li>Acronyms and abbreviations.</li><li>Technical or domain-specific terms.</li></ul></li><li>Explanations are shown privately to the attendee and do not disrupt the presenter or other participants.</li><li>The feature is <b>on by default</b> for eligible tenants where Copilot is available.</li></ul><p>Screenshot 1: <i>Select the Copilot feature from the Presenter View toolbar at the bottom of the screen:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bea1beef-a7b9-45a8-bee6-2d06c29baf66\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 2: <i>Select any text from the slide:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/c58d6e3e-24f2-4adf-ac1f-039866c1051b\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 3: <i>After selecting a word or phrase on the slide (for example, “<b>protocol</b>”), select <b>Explain </b>this from the available Copilot options:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/e09134ff-2327-40ec-b48b-3ffbb2948462\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 4: <i>Copilot opens the chat pane and provides an explanation for the selected content:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/ea1ca5fe-f900-474f-8dd9-393153564e5b\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare:]</b></p> <ul> <li><b>No admin action is required</b> to enable this feature.</li><li>Review your organization’s <b>Copilot for Microsoft 365 policies</b> to ensure they align with your internal AI usage guidelines.</li><li>Inform helpdesk and support teams about this new attendee capability.</li> </ul> <p><b>[Compliance considerations:]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>AI/ML or agent capabilities interacting with customer data</td> <td>Copilot analyzes user-selected slide text in real time during PowerPoint Live meetings to generate explanations. This uses existing Copilot for Microsoft 365 AI processing and security boundaries.</td> </tr> <tr> <td>New way for users to interact with generative AI</td> <td>Meeting attendees can select slide text during a live presentation and invoke Copilot to receive private, contextual explanations without interrupting the presenter.</td> </tr> <tr> <td>Alteration of how existing customer data is processed</td> <td>Slide content already shared in the meeting is processed by Copilot when users request explanations. No new data sources are introduced, and processing follows existing Copilot policies.</td> </tr> <tr> <td>Admin controls</td> <td>The feature is governed by existing Copilot for Microsoft 365 enablement and policy controls. No new dedicated admin toggle is introduced.</td> </tr> <tr> <td>User ability to enable or disable the feature</td> <td>Users can choose whether to use Copilot explanations during meetings. Availability depends on whether Copilot for Microsoft 365 is enabled for the user.</td> </tr> </tbody></table>",
+        "source": "m365",
+        "m365Service": "Microsoft 365 apps",
+        "m365AllServices": [
+          "Microsoft 365 apps",
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1280558",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280558"
+      },
+      {
+        "title": "Submit agent to the Agent Store from Agent Builder",
+        "link": "https://deltapulse.app/item/MC1280557",
+        "published": "2026-04-15T05:56:45.000Z",
+        "summary": "Starting mid-May 2026, Agent Builder users can submit agents for admin review before publishing to the organization's Agent Store catalog. Admins control approval, access, and deployment. Approved agents appear in the store for users to discover and install, with updates requiring reapproval. No pre-rollout action needed. <p><b>[Introduction]</b></p> <p>We're introducing the ability to submit agents built with Agent Builder for administrator review and approval before publishing to the organization's catalog in the Agent Store—making it easier to scale distribution of high-quality internal agents while maintaining IT admin control. Once approved, agents appear in the <b>Built by your org</b> section of the Agent Store, where users across the org can discover and install them.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557173\" target=\"_blank\" style=\"font-family: sans-serif; font-weight: 400; background-color: rgb(255, 255, 255);\">557173</a>.</p> <p><b>[When this will happen:]</b></p> <p>General Availability (Worldwide): Rollout will begin in <b>mid‑May 2026</b> and is expected to complete by <b>late May 2026</b>.</p> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li><b>Users of&nbsp;Agent Builder</b>.</li> <li><b>Microsoft 365 administrators</b> responsible for reviewing and publishing agents.</li> <li><b>Users</b> who discover and install organization‑approved agents from the <b>Agent Store</b>.</li> </ul> <p><b>What will happen:</b></p><p>There is no impact to users unless an agent is submitted, approved, and published by an administrator. Here is how it works:</p><ul><li><b>Submission</b>: Agent Builder users can request org publishing of their agents by selecting <b>Submit to your org catalog</b>, including in tenants with sharing controls.</li><p>Screenshot 1: <i>Agent Builder menu showing the <b>Submit to your org catalog</b>&nbsp;option for requesting administrator review and approval:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/d4b54d0b-efa5-42ec-8114-a0b834bba2e7\" style=\"width: 250px;\" alt=\"user settings\">&gt;</p><li><b>Review</b>:&nbsp;Submitted agents create a review request in the Microsoft 365 admin center. Using the existing publishing and approval workflow, admins have full control over which agents are published, who can access them, and how they are deployed (for example, scoping access to specific users or security groups, preinstalling, or pinning agents).</li><p>Screenshot 2: <i>Microsoft 365 admin center showing the agent publishing workflow, where administrators can review submissions and control deployment settings such as user access and installation options.</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/4ab43835-40b9-43eb-94c7-ead512e0392f\" style=\"width: 400px;\" alt=\"user settings\"></p><li><b>Distribution</b>: Users can discover and install approved agents directly from the Agent Store.</li></ul><p><b>Management and Updates:</b></p><p>Once published, the agent appears as a separate entry in the Agent Registry under<b> Agents &gt; All agents.</b> Agent updates require a new admin submission, and each one triggers a new review cycle before the updated version becomes available in the Agent Store.</p><ul> </ul><p><b>[What you can do to prepare:]</b></p> <ul> <li>No action is required before rollout.</li> <li>Admins can familiarize themselves with the agent review experience in the<b> Microsoft 365 admin center</b> under <b style=\"\">Agents </b>&gt; <b>All&nbsp;</b><b style=\"\">agents </b>&gt; <b>Requests</b>.</li> <li>Consider communicating this capability to internal agent makers so they understand the submission and approval process.</li> <li>Review internal guidance or documentation related to agent governance, if applicable.</li></ul><p>Learn more: <a href=\"https://learn.microsoft.com/microsoft-365/admin/manage/agent-registry?view=o365-worldwide#publish-agents\" target=\"_blank\">Publish agents | Microsoft Learn</a></p><ul> </ul> <p><b>[Compliance considerations:]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>Admin controls and access management</td> <td>Admins can approve or reject agent submissions and control availability, scope, and deployment through existing Microsoft 365 admin center workflows. Access can be limited to specific users or security groups.</td> </tr> </tbody></table>",
+        "source": "m365",
+        "m365Service": "Microsoft 365 suite",
+        "m365AllServices": [
+          "Microsoft 365 suite",
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1280557",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": true,
+        "m365Tags": [
+          "New feature",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280557"
+      },
+      {
+        "title": "Organizational Data Export Capability for Tenant Admins",
+        "link": "https://deltapulse.app/item/MC1280545",
+        "published": "2026-04-15T05:53:38.000Z",
+        "summary": "Starting late April 2026, Microsoft 365 tenant admins with Global or Organizational Data Source Administrator roles can export raw organizational data uploaded to MODIS within a 30-day retention window in CSV format. This default-enabled feature supports compliance and audit needs without impacting users. <p><b>[Introduction]</b></p><p> Microsoft 365 is introducing a new organizational data export capability for tenant administrators to improve data portability and transparency. This enhancement allows authorized admins to securely export raw organizational data uploaded into <b>Microsoft Organizational Data Ingestion Service (MODIS)</b> in a documented and auditable manner.</p> <p><b>[When this will happen:]</b></p><p> General Availability (Worldwide): Rollout will begin in <b>late April 2026</b> and is expected to complete by <b>late April 2026</b>.</p> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Tenant administrators with <b>Global Administrator </b>or<b> Organizational Data Source Administrator</b> roles</li> </ul><p><b>What will happen:</b></p> <ul> <li>Authorized Admins can export <b>raw organizational data</b> that has been uploaded to MODIS using <b>manual uploads or automated connectors.</b></li><li>Only data that is <b>retained within the 30‑day retention window</b> is eligible for export.</li> <li>Export is initiated directly within the <b>MODIS user experience.</b></li> <li>Exported data is downloaded in <b>CSV format.</b></li> <li>The capability applies only to data your organization has directly uploaded and that remains within the <b>30‑day retention window</b>.</li><li>The capability is<b> enabled by default</b> and requires no admin configuration.</li><li>There is&nbsp;<b>no impact to users.</b></li> </ul> <p><b>Learn more</b>: <a href=\"https://learn.microsoft.com/viva/orgdata-data-usage#access-and-export-audit-logs\" target=\"_blank\">Understand how organizational data is used and retained in Microsoft 365 | Microsoft Learn</a>&nbsp;(will be updated soon)</p><p><b>[What you can do to prepare:]</b></p><p> No action is required at this time.</p> <p>After rollout, consider reviewing your data ingestion and retention practices to determine whether exporting ingested data supports compliance, migration, or archival needs.</p><p><b>[Compliance considerations]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>Access to existing customer data</td> <td>The change introduces a new admin-initiated method to export raw organizational data that has already been uploaded to MODIS and retained within the 30-day window.</td> </tr> <tr> <td>Admin compliance monitoring and reporting</td> <td>Tenant administrators can export ingested organizational data, which may be used for audit, compliance review, or record-keeping purposes.</td> </tr> <tr> <td>Admin controls and role-based access</td> <td>The export capability is restricted to users assigned the Global Administrator or Organizational Data Source Administrator role, relying on existing Entra ID role assignments.</td> </tr> </tbody></table>",
+        "source": "m365",
+        "m365Service": "Microsoft 365 suite",
+        "m365AllServices": [
+          "Microsoft 365 suite"
+        ],
+        "m365Id": "MC1280545",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280545"
+      },
+      {
         "title": "Updates available for Microsoft 365 Apps for all channels",
         "link": "https://deltapulse.app/item/MC1280185",
         "published": "2026-04-15T00:00:41.100Z",
@@ -3171,31 +3721,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1280185"
-      },
-      {
-        "title": "Microsoft Edge: Shadow AI",
-        "link": "https://deltapulse.app/item/560341",
-        "published": "2026-04-14T23:00:25.000Z",
-        "summary": "Currently admins can set Purview DLP policies to protect sensitive data from being sent to any Generative AI apps, users get blocked from sending their prompts to LLM when this is triggered and stops their workflow. This new add-on to the feature shows a new UI that will give users the option to be redirected to M365 Copilot which will open and navigate to this M365 Copilot tab and allow them to send the same prompt there.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "560341",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365Tags": [],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560341"
       },
       {
         "title": "Outlook: Copilot in File Previewer for iOS",
@@ -3248,31 +3773,6 @@
         "_normalized_url": "roadmap:559602"
       },
       {
-        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
-        "link": "https://deltapulse.app/item/560398",
-        "published": "2026-04-14T23:00:25.000Z",
-        "summary": "With this feature, data officers can now complete their coverage story by now embedding hyperlinks within toast messages for the Edge browser. When this rule is triggered, the end user will see a toast with a customized title and message with a hyperlink. This feature is useful when organizations need to direct users to a specific resource or a repository for more specific instruction (e.g. internal policy SharePoint site).",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "560398",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365Tags": [],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560398"
-      },
-      {
         "title": "Microsoft Purview: Endpoint Data Loss Prevention - Enforce DLP protection upon new content before its saved",
         "link": "https://deltapulse.app/item/560397",
         "published": "2026-04-14T23:00:25.000Z",
@@ -3296,6 +3796,56 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:560397"
+      },
+      {
+        "title": "Microsoft Edge: Shadow AI",
+        "link": "https://deltapulse.app/item/560341",
+        "published": "2026-04-14T23:00:25.000Z",
+        "summary": "Currently admins can set Purview DLP policies to protect sensitive data from being sent to any Generative AI apps, users get blocked from sending their prompts to LLM when this is triggered and stops their workflow. This new add-on to the feature shows a new UI that will give users the option to be redirected to M365 Copilot which will open and navigate to this M365 Copilot tab and allow them to send the same prompt there.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "560341",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:560341"
+      },
+      {
+        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
+        "link": "https://deltapulse.app/item/560398",
+        "published": "2026-04-14T23:00:25.000Z",
+        "summary": "With this feature, data officers can now complete their coverage story by now embedding hyperlinks within toast messages for the Edge browser. When this rule is triggered, the end user will see a toast with a customized title and message with a hyperlink. This feature is useful when organizations need to direct users to a specific resource or a repository for more specific instruction (e.g. internal policy SharePoint site).",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "560398",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:560398"
       },
       {
         "title": "Microsoft Purview: Endpoint Data Loss Prevention - Expand protection to Copilot + PC devices for Recall snapshots through custom policies",
@@ -4429,6 +4979,281 @@
     ],
     "launched_ga": [
       {
+        "title": "Microsoft Purview: Migration tool in Unified Catalog to migrate classic glossary terms",
+        "link": "https://deltapulse.app/item/MC1280564",
+        "published": "2026-04-15T06:02:52.000Z",
+        "summary": "Microsoft Purview introduces a built-in migration tool in Unified Catalog for Data Governance Admins and Stewards to migrate classic glossary terms, templates, and relationships. Migration begins public preview in April 2026 and general availability in July 2026. Classic terms become read-only post-migration or switch. <p><b>[Introduction]</b></p><p>Data Governance Admins and Data Stewards can use a <b>built‑in migration tool</b> in <i>Microsoft Purview Unified Catalog</i> to migrate classic glossary terms, associated term templates, and asset and column relationships into Unified Catalog. After migration, glossary terms can be managed in <i>Unified Catalog</i> and associated with business concepts and data assets.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=558683\" target=\"_blank\">558683</a></b>.</p><p><b>[When this will happen]</b></p><ul><li><b>Public Preview: </b>We will begin rolling out in <b>late April 2026</b> and expect to complete by <b>late April 2026</b>.</li><li><b>General Availability (Worldwide): </b>We will begin rolling out in <b>early July 2026</b> and expect to complete by <b>early July 2026</b>.</li></ul><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Data Governance Admins</li><li>Data Stewards</li><li>Organizations using classic glossary terms in <i>Microsoft Purview, </i>along with Unified Catalog</li></ul><p><i>What will happen</i></p><ul><li>Admins can choose to use the built‑in migration tool to migrate classic glossary terms to Unified Catalog.</li><li>Migration includes:<ul><li>Classic glossary terms</li><li>Associated term templates</li><li>Asset and column relationships</li></ul></li><li>Admins who do not need migration can skip the process and use glossary terms only in <i>Unified Catalog</i>.</li><li>In both cases, classic glossary terms will become <b>read‑only</b>.</li><li>After migration or switching, Unified Catalog glossary terms can be used to curate assets and columns.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/0add68ed-0a35-4417-8d01-53919b3f82dc/6850ce419d4deabd90873da84cd0b47cbe087a7b.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p></p><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/b94a12df-79d3-49e1-b9b6-30c8866eeceb/9563b5f2109a788aeb0d822ef31e8b0c6bd13ca8.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Determine whether your organization uses classic glossary terms.</li><li>Decide whether to:<ul><li>Migrate classic glossary terms to Unified Catalog, or</li><li>Abandon classic glossary terms and use Unified Catalog glossary terms only.</li></ul></li><li>If you choose migration:<ul><li>Review the detailed migration documentation.</li><li>Plan and execute the migration when your organization is ready for all required steps.</li></ul></li></ul><p>Links to detailed migration documentation will be added to the <a href=\"https://learn.microsoft.com/purview/unified-catalog-glossary-terms\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Unified Catalog glossary terms overview documentation</a> when the feature enters public preview.</p><p><b>[Compliance considerations]</b></p><table class=\"table table-bordered\"><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change alter how existing customer data is processed, stored, or accessed?</td><td>Yes. Classic glossary terms, associated term templates, and asset and column relationships may be migrated and stored in <i>Microsoft Purview Unified Catalog </i>instead of the classic glossary location.</td></tr><tr><td>Does the change include an admin control?</td><td>Yes. Data Governance Admins choose whether to migrate classic glossary terms using the built‑in migration tool or skip migration and switch to Unified Catalog glossary terms.</td></tr></tbody></table><p><b></b></p>",
+        "source": "m365",
+        "m365Service": "Microsoft Purview",
+        "m365AllServices": [
+          "Microsoft Purview"
+        ],
+        "m365Id": "MC1280564",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, July 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280564"
+      },
+      {
+        "title": "Assign participants to breakout rooms using CSV import in Microsoft Teams meetings",
+        "link": "https://deltapulse.app/item/MC1280561",
+        "published": "2026-04-15T05:59:56.000Z",
+        "summary": "Microsoft Teams will support CSV import for breakout room assignments starting May 2026, enabling organizers to bulk create rooms and pre-assign participants. The feature is enabled by default, requires no admin action, and allows modifications during meetings, improving setup efficiency for structured sessions. <p><b>[Introduction]</b></p> <p>We’re improving breakout room setup in Microsoft Teams by adding support for CSV import of breakout room assignments. This update helps organizers reduce manual setup time and prepare structured meetings—such as trainings, workshops, and large collaboration sessions—more efficiently.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559387\" target=\"_blank\">559387</a>.</p> <p><b>[When this will happen:]</b></p> <ul><li>Targeted Release: We will begin rolling out in&nbsp;<b>early May 2026</b> and expect to complete by <b>mid-May 2026</b>.</li><li> General Availability (Worldwide): Rollout begins in<b> mid-May 2026</b> and completes by<b> late May 2026</b>.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Meeting organizers who use Breakout rooms in Microsoft Teams meetings</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Organizers can import a CSV file to:<ul><li>Create breakout rooms in bulk</li><li>Assign participants to specific rooms before the meeting starts</li></ul></li><li>Imported assignments can still be modified using existing breakout room controls during or before the meeting</li><li>The feature is <b style=\"\">enabled by default</b> and does not require admin configuration</li><li>Existing breakout room policies and controls are respected</li></ul> <p><b>[What you can do to prepare:]</b></p> <p>No action is required from administrators.</p> <ul> <li>Inform meeting organizers about this new capability</li> <li>Update internal documentation or training materials as needed</li> </ul> <p>Before rollout, we will update this post with new documentation.</p><p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p>",
+        "source": "m365",
+        "m365Service": "Microsoft Teams",
+        "m365AllServices": [
+          "Microsoft Teams"
+        ],
+        "m365Id": "MC1280561",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280561"
+      },
+      {
+        "title": "Use Copilot to explain selected slide content in PowerPoint Live",
+        "link": "https://deltapulse.app/item/MC1280558",
+        "published": "2026-04-15T05:57:53.000Z",
+        "summary": "Starting mid-May 2026, Microsoft Teams meetings with PowerPoint Live will let attendees select slide text and get private, on-demand Copilot explanations for terms or acronyms without disrupting the presenter. This feature is on by default for tenants with Microsoft 365 Copilot (Premium) enabled. <p><b>[Introduction]</b></p> <p>We’re enhancing the PowerPoint Live experience in Microsoft Teams by introducing slide text selection with Copilot explanations for meeting attendees. This update helps users quickly understand unfamiliar terms, acronyms, or complex concepts directly within a live presentation—without interrupting the presenter or asking questions in chat.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557256\" target=\"_blank\">557256</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li>General Availability (Worldwide): Rollout begins in <b>mid-May 2026</b> and is expected to complete by<b> late May 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>All Microsoft Teams users attending meetings with <b>PowerPoint Live</b></li> <li>Tenants with <b>Microsoft 365 Copilot (Premium)</b> enabled</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Attendees can<b> select text on a PowerPoint Live slide</b> during a meeting.</li><li>Copilot will provide <b>on-demand explanations</b> for selected text, including:<ul><li>Acronyms and abbreviations.</li><li>Technical or domain-specific terms.</li></ul></li><li>Explanations are shown privately to the attendee and do not disrupt the presenter or other participants.</li><li>The feature is <b>on by default</b> for eligible tenants where Copilot is available.</li></ul><p>Screenshot 1: <i>Select the Copilot feature from the Presenter View toolbar at the bottom of the screen:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bea1beef-a7b9-45a8-bee6-2d06c29baf66\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 2: <i>Select any text from the slide:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/c58d6e3e-24f2-4adf-ac1f-039866c1051b\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 3: <i>After selecting a word or phrase on the slide (for example, “<b>protocol</b>”), select <b>Explain </b>this from the available Copilot options:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/e09134ff-2327-40ec-b48b-3ffbb2948462\" style=\"width: 400px;\" alt=\"user settings\"></p><p>Screenshot 4: <i>Copilot opens the chat pane and provides an explanation for the selected content:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/ea1ca5fe-f900-474f-8dd9-393153564e5b\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare:]</b></p> <ul> <li><b>No admin action is required</b> to enable this feature.</li><li>Review your organization’s <b>Copilot for Microsoft 365 policies</b> to ensure they align with your internal AI usage guidelines.</li><li>Inform helpdesk and support teams about this new attendee capability.</li> </ul> <p><b>[Compliance considerations:]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>AI/ML or agent capabilities interacting with customer data</td> <td>Copilot analyzes user-selected slide text in real time during PowerPoint Live meetings to generate explanations. This uses existing Copilot for Microsoft 365 AI processing and security boundaries.</td> </tr> <tr> <td>New way for users to interact with generative AI</td> <td>Meeting attendees can select slide text during a live presentation and invoke Copilot to receive private, contextual explanations without interrupting the presenter.</td> </tr> <tr> <td>Alteration of how existing customer data is processed</td> <td>Slide content already shared in the meeting is processed by Copilot when users request explanations. No new data sources are introduced, and processing follows existing Copilot policies.</td> </tr> <tr> <td>Admin controls</td> <td>The feature is governed by existing Copilot for Microsoft 365 enablement and policy controls. No new dedicated admin toggle is introduced.</td> </tr> <tr> <td>User ability to enable or disable the feature</td> <td>Users can choose whether to use Copilot explanations during meetings. Availability depends on whether Copilot for Microsoft 365 is enabled for the user.</td> </tr> </tbody></table>",
+        "source": "m365",
+        "m365Service": "Microsoft 365 apps",
+        "m365AllServices": [
+          "Microsoft 365 apps",
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1280558",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280558"
+      },
+      {
+        "title": "Submit agent to the Agent Store from Agent Builder",
+        "link": "https://deltapulse.app/item/MC1280557",
+        "published": "2026-04-15T05:56:45.000Z",
+        "summary": "Starting mid-May 2026, Agent Builder users can submit agents for admin review before publishing to the organization's Agent Store catalog. Admins control approval, access, and deployment. Approved agents appear in the store for users to discover and install, with updates requiring reapproval. No pre-rollout action needed. <p><b>[Introduction]</b></p> <p>We're introducing the ability to submit agents built with Agent Builder for administrator review and approval before publishing to the organization's catalog in the Agent Store—making it easier to scale distribution of high-quality internal agents while maintaining IT admin control. Once approved, agents appear in the <b>Built by your org</b> section of the Agent Store, where users across the org can discover and install them.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557173\" target=\"_blank\" style=\"font-family: sans-serif; font-weight: 400; background-color: rgb(255, 255, 255);\">557173</a>.</p> <p><b>[When this will happen:]</b></p> <p>General Availability (Worldwide): Rollout will begin in <b>mid‑May 2026</b> and is expected to complete by <b>late May 2026</b>.</p> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li><b>Users of&nbsp;Agent Builder</b>.</li> <li><b>Microsoft 365 administrators</b> responsible for reviewing and publishing agents.</li> <li><b>Users</b> who discover and install organization‑approved agents from the <b>Agent Store</b>.</li> </ul> <p><b>What will happen:</b></p><p>There is no impact to users unless an agent is submitted, approved, and published by an administrator. Here is how it works:</p><ul><li><b>Submission</b>: Agent Builder users can request org publishing of their agents by selecting <b>Submit to your org catalog</b>, including in tenants with sharing controls.</li><p>Screenshot 1: <i>Agent Builder menu showing the <b>Submit to your org catalog</b>&nbsp;option for requesting administrator review and approval:</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/d4b54d0b-efa5-42ec-8114-a0b834bba2e7\" style=\"width: 250px;\" alt=\"user settings\">&gt;</p><li><b>Review</b>:&nbsp;Submitted agents create a review request in the Microsoft 365 admin center. Using the existing publishing and approval workflow, admins have full control over which agents are published, who can access them, and how they are deployed (for example, scoping access to specific users or security groups, preinstalling, or pinning agents).</li><p>Screenshot 2: <i>Microsoft 365 admin center showing the agent publishing workflow, where administrators can review submissions and control deployment settings such as user access and installation options.</i></p><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/4ab43835-40b9-43eb-94c7-ead512e0392f\" style=\"width: 400px;\" alt=\"user settings\"></p><li><b>Distribution</b>: Users can discover and install approved agents directly from the Agent Store.</li></ul><p><b>Management and Updates:</b></p><p>Once published, the agent appears as a separate entry in the Agent Registry under<b> Agents &gt; All agents.</b> Agent updates require a new admin submission, and each one triggers a new review cycle before the updated version becomes available in the Agent Store.</p><ul> </ul><p><b>[What you can do to prepare:]</b></p> <ul> <li>No action is required before rollout.</li> <li>Admins can familiarize themselves with the agent review experience in the<b> Microsoft 365 admin center</b> under <b style=\"\">Agents </b>&gt; <b>All&nbsp;</b><b style=\"\">agents </b>&gt; <b>Requests</b>.</li> <li>Consider communicating this capability to internal agent makers so they understand the submission and approval process.</li> <li>Review internal guidance or documentation related to agent governance, if applicable.</li></ul><p>Learn more: <a href=\"https://learn.microsoft.com/microsoft-365/admin/manage/agent-registry?view=o365-worldwide#publish-agents\" target=\"_blank\">Publish agents | Microsoft Learn</a></p><ul> </ul> <p><b>[Compliance considerations:]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>Admin controls and access management</td> <td>Admins can approve or reject agent submissions and control availability, scope, and deployment through existing Microsoft 365 admin center workflows. Access can be limited to specific users or security groups.</td> </tr> </tbody></table>",
+        "source": "m365",
+        "m365Service": "Microsoft 365 suite",
+        "m365AllServices": [
+          "Microsoft 365 suite",
+          "Microsoft Copilot (Microsoft 365)"
+        ],
+        "m365Id": "MC1280557",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": true,
+        "m365Tags": [
+          "New feature",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280557"
+      },
+      {
+        "title": "Microsoft Purview for agents: AI observability and insider risk management now generally available",
+        "link": "https://deltapulse.app/item/MC1280556",
+        "published": "2026-04-15T05:56:15.000Z",
+        "summary": "Microsoft Purview for agents, including DSPM – AI Observability and Insider Risk Management, will be generally available by late May 2026. It enables Microsoft 365 E7 or Agent 365 admins to monitor AI agent activity, assess risks, enforce governance, and manage insider risks with privacy controls, supporting compliance and security. <p><b>[Introduction]</b></p><p>As organizations deploy AI agents that can access enterprise data and take action on behalf of users, governing and securing agent activity becomes critical. Microsoft Purview will extend its data security and compliance capabilities to include AI agents, helping organizations gain visibility into agent behavior, assess risk, and apply consistent governance controls.</p><p>Microsoft Purview for agents will introduce <b>Data Security Posture Management (DSPM) – AI Observability and Insider Risk Management for agents</b>. DSPM helps organizations understand where sensitive data is, assess data-related risk, and continuously improve their security and compliance posture.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=516032#Roadmap\" target=\"_blank\">516032</a></b>.</p><p><b>[When this will happen]</b></p><ul><li><b>Public preview:</b> Rollout started in <b>December 2025</b> and is expected to complete in<b> late April 2026</b>.</li><li><b>General availability (Worldwide): </b>Rollout will begin in <b>early May 2026 </b>and is expected to complete by<b> late May 2026</b>.</li></ul><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Microsoft 365 administrators responsible for security, compliance, and governance</li><li>Organizations using or planning to deploy AI agents</li><li>Tenants with <b>Microsoft 365 E7 </b>or <b>Agent 365 </b>subscriptions</li></ul><p><i>What will happen</i></p><ul><li><b>DSPM – AI Observability and Insider Risk Management for agents</b> will move from preview to general availability. Learn more about <a href=\"https://learn.microsoft.com/microsoft-agent-365/overview\" target=\"_blank\">activation</a>.</li><li>With <b>Microsoft 365 E7 or Agent 365 subscriptions</b>, admins will be able to:<ul><li>Monitor and analyze AI agent activity across enterprise environments</li><li>Identify potentially risky or non-compliant agent behavior</li><li>Apply governance policies aligned with organizational requirements</li></ul></li></ul><p><b>Insider Risk Management for agents</b></p><ul><li>Microsoft Purview Insider Risk Management correlates various signals to identify potential malicious or inadvertent insider risks, such as IP theft, data leakage, and security violations.</li><li>Admins will be able to create policies based on their own internal policies, governance, and organizational requirements.</li><li>The solution is built with privacy by design:<ul><li>Users are pseudonymized by default.</li><li>Role-based access controls and audit logs help ensure user-level privacy.</li></ul></li><li>These capabilities will not be available without Microsoft 365 E7 or Agent 365 subscriptions.</li><li>There will be no user impact unless AI agents are deployed and governed by admins.</li></ul><p><b>[What you can do to prepare]</b></p><ul><li>Review whether your organization currently uses or plans to deploy AI agents that access enterprise data.</li><li>Activate your <b>Microsoft 365 E7 or Agent 365 subscription</b> if you plan to use DSPM – AI Observability and Insider Risk Management for agents.</li><li>Review and update internal security, compliance, and AI governance policies.</li><li>Inform security and compliance stakeholders about this upcoming capability.</li></ul><p><b>Learn more:&nbsp;</b><a href=\"https://learn.microsoft.com/microsoft-agent-365/overview\" target=\"_blank\">Overview of Microsoft Agent 365 | Microsoft Agent 365 | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><table class=\"table table-bordered\"><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change introduce or significantly modify AI, ML, or agent capabilities that interact with or provide access to customer data?</td><td>Yes. This change will move DSPM – AI Observability and Insider Risk Management for agents to general availability, enabling monitoring and risk analysis of AI agent activity that can access and act on enterprise data.</td></tr><tr><td>Does the change alter how admins can monitor, report on, or demonstrate compliance activities?</td><td>Yes. Admins will be able to use Microsoft Purview to monitor AI agent behavior, correlate risk signals, and apply governance and Insider Risk Management policies for agents.</td></tr><tr><td>Does the change modify, interrupt, or disable audit logging capabilities?</td><td>Yes. Audit logs will be used as part of Insider Risk Management signal correlation for AI agent activity, supporting investigation and compliance workflows.</td></tr><tr><td>Does the change include an admin control?</td><td>Yes. Access to DSPM – AI Observability and Insider Risk Management for agents will be controlled through Microsoft 365 E7 or Agent 365 subscriptions and managed in Microsoft Purview.</td></tr><tr><td>Does the change alter how existing customer data is processed, stored, or accessed?</td><td>Yes. The change will introduce new observability and analysis of how AI agents access and act on existing customer data, without changing where the data is stored.</td></tr></tbody></table><p><b></b></p>",
+        "source": "m365",
+        "m365Service": "Microsoft Purview",
+        "m365AllServices": [
+          "Microsoft Purview"
+        ],
+        "m365Id": "MC1280556",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "December 2025, April 2026, May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280556"
+      },
+      {
+        "title": "Expanded visibility for the Teams Reader role in the Teams admin center",
+        "link": "https://deltapulse.app/item/MC1280552",
+        "published": "2026-04-15T05:55:47.000Z",
+        "summary": "The Teams Reader role in the Teams admin center will gain expanded read-only visibility of Teams and channel management details via the admin center, PowerShell, and Microsoft Graph APIs starting late April 2026. No new edit permissions are granted, and no admin action is required before rollout. <p><b>[Introduction]</b></p> <p>We’re announcing expanded visibility for the <b>Teams Reader</b> role in the Microsoft Teams admin center. With this update, Teams Readers can view Teams and channel management information across the Teams admin center, as well as through PowerShell and Microsoft Graph APIs. This update expands read-only visibility without granting edit permissions.</p><p><b>[When this will happen:]</b></p> <ul> <li>General Availability (Worldwide, GCC): Rollout begins in <b>late April 2026</b> and is expected to complete by <b>early May 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Organizations that assign the<b> Teams Reader role</b></li> <li>Global admins managing <b>role-based access control (RBAC)</b></li> <li>Tenants using the Teams admin center, PowerShell, or Microsoft Graph APIs</li> </ul> <p><b>What will happen:</b></p> <ul> </ul><p>Teams users assigned the <b>Teams Reader</b> role will be able to:</p><ul> <li>View <b>Teams management pages</b>, including individual Team and channel details.</li><li>View the <b>Teams tab on the User details page</b> in the Teams admin center.</li></ul> <p><b>Role limitations (not included in this release):</b></p> <ul> <li>No access to <b>Meetings &amp; Calls</b> user details (planned for a future update)</li><li>No access to <b>Notifications &amp; Rules</b> management (planned for a future update)</li><li>No access to <b>Frontline worker deployment management</b></li><li>No access to the <b>Collaboration activity dashboard</b></li></ul><p><b>Note</b>: This update does not grant any new edit or management permissions.</p> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required before rollout.</li> <li>Review <b>Teams Reader</b> role assignments for alignment with your access strategy.</li> <li>Notify <b>Global admins</b> of the expanded visibility.</li> <li>Update internal documentation or training materials that describe Teams admin roles.</li></ul><p><b>Learn more</b>: <a href=\"https://learn.microsoft.com/microsoftteams/using-admin-roles\" target=\"_blank\">Use Microsoft Teams administrator roles to manage Teams - Microsoft Teams | Microsoft Learn</a> (will be updated before rollout)</p><p><b>[Compliance considerations:]</b></p><p>No compliance considerations identified; review as appropriate for your organization.</p>",
+        "source": "m365",
+        "m365Service": "Microsoft Teams",
+        "m365AllServices": [
+          "Microsoft Teams"
+        ],
+        "m365Id": "MC1280552",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026, May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Feature update",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280552"
+      },
+      {
+        "title": "Organizational Data Export Capability for Tenant Admins",
+        "link": "https://deltapulse.app/item/MC1280545",
+        "published": "2026-04-15T05:53:38.000Z",
+        "summary": "Starting late April 2026, Microsoft 365 tenant admins with Global or Organizational Data Source Administrator roles can export raw organizational data uploaded to MODIS within a 30-day retention window in CSV format. This default-enabled feature supports compliance and audit needs without impacting users. <p><b>[Introduction]</b></p><p> Microsoft 365 is introducing a new organizational data export capability for tenant administrators to improve data portability and transparency. This enhancement allows authorized admins to securely export raw organizational data uploaded into <b>Microsoft Organizational Data Ingestion Service (MODIS)</b> in a documented and auditable manner.</p> <p><b>[When this will happen:]</b></p><p> General Availability (Worldwide): Rollout will begin in <b>late April 2026</b> and is expected to complete by <b>late April 2026</b>.</p> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Tenant administrators with <b>Global Administrator </b>or<b> Organizational Data Source Administrator</b> roles</li> </ul><p><b>What will happen:</b></p> <ul> <li>Authorized Admins can export <b>raw organizational data</b> that has been uploaded to MODIS using <b>manual uploads or automated connectors.</b></li><li>Only data that is <b>retained within the 30‑day retention window</b> is eligible for export.</li> <li>Export is initiated directly within the <b>MODIS user experience.</b></li> <li>Exported data is downloaded in <b>CSV format.</b></li> <li>The capability applies only to data your organization has directly uploaded and that remains within the <b>30‑day retention window</b>.</li><li>The capability is<b> enabled by default</b> and requires no admin configuration.</li><li>There is&nbsp;<b>no impact to users.</b></li> </ul> <p><b>Learn more</b>: <a href=\"https://learn.microsoft.com/viva/orgdata-data-usage#access-and-export-audit-logs\" target=\"_blank\">Understand how organizational data is used and retained in Microsoft 365 | Microsoft Learn</a>&nbsp;(will be updated soon)</p><p><b>[What you can do to prepare:]</b></p><p> No action is required at this time.</p> <p>After rollout, consider reviewing your data ingestion and retention practices to determine whether exporting ingested data supports compliance, migration, or archival needs.</p><p><b>[Compliance considerations]</b></p> <table border=\"1\" cellpadding=\"6\" cellspacing=\"0\"> <tbody><tr> <th>Area</th> <th>Explanation</th> </tr> <tr> <td>Access to existing customer data</td> <td>The change introduces a new admin-initiated method to export raw organizational data that has already been uploaded to MODIS and retained within the 30-day window.</td> </tr> <tr> <td>Admin compliance monitoring and reporting</td> <td>Tenant administrators can export ingested organizational data, which may be used for audit, compliance review, or record-keeping purposes.</td> </tr> <tr> <td>Admin controls and role-based access</td> <td>The export capability is restricted to users assigned the Global Administrator or Organizational Data Source Administrator role, relying on existing Entra ID role assignments.</td> </tr> </tbody></table>",
+        "source": "m365",
+        "m365Service": "Microsoft 365 suite",
+        "m365AllServices": [
+          "Microsoft 365 suite"
+        ],
+        "m365Id": "MC1280545",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "New feature",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280545"
+      },
+      {
+        "title": "Accept Apple’s new terms and conditions to ensure Intune can communicate with Apple as expected",
+        "link": "https://deltapulse.app/item/MC1280538",
+        "published": "2026-04-15T05:46:40.000Z",
+        "summary": "IT admins must accept Apple's new terms and conditions for Apple Business, School Manager, Volume Purchasing, or Automated Device Enrollment to maintain Microsoft Intune communication. Failure to accept causes errors. Log in at Apple's support site to accept and avoid service interruption. <p>Apple has released new Terms and Conditions for Apple Business. An IT admin will need to accept these terms when using Apple School Manager, Apple Business, Apple Volume Purchasing Program, or Automated Device Enrollment to ensure that the managed devices can continue communicating with Microsoft Intune.&nbsp;</p><p>[How this will affect your organization:]</p><p>This will only affect you if you use Apple Automated Device Enrollment, Apple School Manager, Apple Business, or Apple Volume Purchase Program. You will need to accept the new terms and conditions to ensure your Intune service is not interrupted. If you do not accept the new terms and conditions the Intune service will receive the error – “T_C_NOT_Signed” from Apple.</p><p>[What you need to do to prepare:]</p><p>Simply login to the appropriate URL listed in the support article from Apple here: <a href=\"https://support.apple.com/102069\" target=\"_blank\">https://support.apple.com/102069</a>. Once you have logged in and accepted the new terms and conditions, managed Apple devices will once again be able to communicate with Apple’s device management servers.</p><p>Note, Apple Business Manager is now Apple Business, learn more from Apple here: <a href=\"https://support.apple.com/guide/business/intro-to-apple-business-axm7909096bf/web\" target=\"_blank\">https://support.apple.com/guide/business/intro-to-apple-business-axm7909096bf/web</a>&nbsp;</p>",
+        "source": "m365",
+        "m365Service": "Microsoft Intune",
+        "m365AllServices": [
+          "Microsoft Intune"
+        ],
+        "m365Id": "MC1280538",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": null,
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280538"
+      },
+      {
+        "title": "Microsoft Intune In Development for April 2026 is now available",
+        "link": "https://deltapulse.app/item/MC1280536",
+        "published": "2026-04-15T05:46:03.000Z",
+        "summary": "Microsoft Intune In Development for April 2026 is available with an updated features list to help organizations prepare. IT staff should review upcoming changes, inform helpdesk teams, and update user guidance as needed for releases starting next month or later. <p>The <a href=\"https://aka.ms/Intune_InDevelopment\" target=\"_blank\">In development for Microsoft Intune</a> page in our documentation has been updated.</p><p>[How this will affect your organization:] </p><p>The <a href=\"https://aka.ms/Intune_InDevelopment\" target=\"_blank\">In development page</a> provides a list of features in upcoming releases of Microsoft Intune to assist in your readiness and planning. The list has now been updated. You will start seeing these changes in the next month or in a subsequent release.</p><p>[What you need to do to prepare:] </p><p>You can inform your IT staff and helpdesk of the upcoming changes listed on this page. Plan to update your user guidance, if you feel any of these features would be important to your users.</p>",
+        "source": "m365",
+        "m365Service": "Microsoft Intune",
+        "m365AllServices": [
+          "Microsoft Intune"
+        ],
+        "m365Id": "MC1280536",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Feature update",
+          "User impact",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1280536"
+      },
+      {
         "title": "Updates available for Microsoft 365 Apps for all channels",
         "link": "https://deltapulse.app/item/MC1280185",
         "published": "2026-04-15T00:00:41.100Z",
@@ -4487,31 +5312,6 @@
         "_normalized_url": "message_center:MC1280144"
       },
       {
-        "title": "Microsoft Edge: Shadow AI",
-        "link": "https://deltapulse.app/item/560341",
-        "published": "2026-04-14T23:00:25.000Z",
-        "summary": "Currently admins can set Purview DLP policies to protect sensitive data from being sent to any Generative AI apps, users get blocked from sending their prompts to LLM when this is triggered and stops their workflow. This new add-on to the feature shows a new UI that will give users the option to be redirected to M365 Copilot which will open and navigate to this M365 Copilot tab and allow them to send the same prompt there.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "560341",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365Tags": [],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560341"
-      },
-      {
         "title": "Outlook: Copilot in File Previewer for iOS",
         "link": "https://deltapulse.app/item/560340",
         "published": "2026-04-14T23:00:25.000Z",
@@ -4562,31 +5362,6 @@
         "_normalized_url": "roadmap:559602"
       },
       {
-        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
-        "link": "https://deltapulse.app/item/560398",
-        "published": "2026-04-14T23:00:25.000Z",
-        "summary": "With this feature, data officers can now complete their coverage story by now embedding hyperlinks within toast messages for the Edge browser. When this rule is triggered, the end user will see a toast with a customized title and message with a hyperlink. This feature is useful when organizations need to direct users to a specific resource or a repository for more specific instruction (e.g. internal policy SharePoint site).",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "560398",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": false,
-        "m365Tags": [],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:560398"
-      },
-      {
         "title": "Microsoft Purview: Endpoint Data Loss Prevention - Enforce DLP protection upon new content before its saved",
         "link": "https://deltapulse.app/item/560397",
         "published": "2026-04-14T23:00:25.000Z",
@@ -4610,6 +5385,56 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "roadmap:560397"
+      },
+      {
+        "title": "Microsoft Edge: Shadow AI",
+        "link": "https://deltapulse.app/item/560341",
+        "published": "2026-04-14T23:00:25.000Z",
+        "summary": "Currently admins can set Purview DLP policies to protect sensitive data from being sent to any Generative AI apps, users get blocked from sending their prompts to LLM when this is triggered and stops their workflow. This new add-on to the feature shows a new UI that will give users the option to be redirected to M365 Copilot which will open and navigate to this M365 Copilot tab and allow them to send the same prompt there.",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "560341",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:560341"
+      },
+      {
+        "title": "Microsoft Purview: Endpoint Data Loss Prevention - Add support of hyperlinks in warn & block toast messages for Edge browser",
+        "link": "https://deltapulse.app/item/560398",
+        "published": "2026-04-14T23:00:25.000Z",
+        "summary": "With this feature, data officers can now complete their coverage story by now embedding hyperlinks within toast messages for the Edge browser. When this rule is triggered, the end user will see a toast with a customized title and message with a hyperlink. This feature is useful when organizations need to direct users to a specific resource or a repository for more specific instruction (e.g. internal policy SharePoint site).",
+        "source": "m365",
+        "m365Service": "Microsoft 365",
+        "m365AllServices": [],
+        "m365Id": "560398",
+        "m365Source": "roadmap",
+        "m365Category": "",
+        "m365Severity": null,
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": false,
+        "m365Tags": [],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "roadmap:560398"
       },
       {
         "title": "Microsoft Purview: Endpoint Data Loss Prevention - Expand protection to Copilot + PC devices for Recall snapshots through custom policies",
@@ -4845,35 +5670,6 @@
         "_normalized_url": "message_center:MC1279832"
       },
       {
-        "title": "The April 2026 Windows security update is now available",
-        "link": "https://deltapulse.app/item/MC1279829",
-        "published": "2026-04-14T17:03:33.137Z",
-        "summary": "<div>The April 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. For more information about the contents of this update, see the release notes, which are easily accessible from the&nbsp;<a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11</a> update history page. To learn more about the different types of monthly quality updates, see <a href=\"https://aka.ms/Windows/MonthlyUpdates\" rel=\"noopener noreferrer\" target=\"_blank\">Windows monthly updates explained</a>.</div><div>&nbsp;&nbsp;</div><div><b>Highlights for the Windows 11, version 25H2 update:&nbsp;</b></div><ul><li>This security update includes fixes and quality improvements from <a href=\"https://support.microsoft.com/help/5079391\" rel=\"noopener noreferrer\" target=\"_blank\">KB5079391</a> (released March 26, 2026 - no longer offered) and <a href=\"https://support.microsoft.com/help/5086672\" rel=\"noopener noreferrer\" target=\"_blank\">KB5086672</a> (released March 31, 2026).</li><li>This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.</li><li>This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.</li><li>This update improves reliability for SMB compression over QUIC, reducing timeouts and enabling more consistent and dependable performance.</li><li>This update enhances protection against phishing attacks that use Remote Desktop (.rdp) files by showing all requested connection settings before connecting, with settings turned off by default and a <a href=\"https://go.microsoft.com/fwlink/?linkid=2347342\" rel=\"noopener noreferrer\" target=\"_blank\">one‑time security warning</a> on first use.</li></ul><div><br></div><div>Short on time? Watch our <a href=\"https://aka.ms/Windows11/ReleaseNotes/Video/2604\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11 release notes video</a> for this month's tips.</div><div><br></div><div>For instructions on how to install this update, see the KB for your operating system listed below:&nbsp;</div><ul><li>Windows 11, version 26H1: <a href=\"https://support.microsoft.com/help/5083768\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083768</a></li><li>Windows 11, versions 25H2 and 24H2: <a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 11, version 23H2: <a href=\"https://support.microsoft.com/help/5082052\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082052</a></li><li>Windows 11 Enterprise LTSC 2024: Baseline <a href=\"https://support.microsoft.com/topic/9df553dc-e869-4240-af42-c7bc7e81bc32\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 10, versions 22H2 and 21H2: <a href=\"https://support.microsoft.com/help/5082200\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082200</a></li><li>Windows 10 Enterprise LTSC 2019 and Windows Server 2019: <a href=\"https://support.microsoft.com/help/5082123\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082123</a></li><li>Windows 10 LTSB 2016 and Windows Server 2016: <a href=\"https://support.microsoft.com/help/5082198\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082198</a></li><li>Windows Server 2025: <a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2025 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/3ed94012-763a-4ebe-86f4-32b01390a11a\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/help/5082142\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2022 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/5d0db586-d5a5-4ba2-b3c8-a4536db17225\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2012 R2: <a href=\"https://support.microsoft.com/help/5082126\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082126</a></li><li>Windows Server 2012: <a href=\"https://support.microsoft.com/help/5082127\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082127</a></li></ul><div><br></div><div><b>Note: </b>With the April 2026 Windows security update and upcoming Windows updates over the next few months, a limited number of consumer and business devices may experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the <a href=\"https://support.microsoft.com/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e\" rel=\"noopener noreferrer\" target=\"_blank\">Secure Boot update process</a>.</div>",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1279829",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365IsMajorChange": true,
-        "m365Tags": [
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1279829"
-      },
-      {
         "title": "Second deployment phase for Kerberos RC4 hardening begins with the April 2026 Windows security update",
         "link": "https://deltapulse.app/item/MC1279830",
         "published": "2026-04-14T17:03:33.137Z",
@@ -4901,6 +5697,35 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1279830"
+      },
+      {
+        "title": "The April 2026 Windows security update is now available",
+        "link": "https://deltapulse.app/item/MC1279829",
+        "published": "2026-04-14T17:03:33.137Z",
+        "summary": "<div>The April 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. For more information about the contents of this update, see the release notes, which are easily accessible from the&nbsp;<a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11</a> update history page. To learn more about the different types of monthly quality updates, see <a href=\"https://aka.ms/Windows/MonthlyUpdates\" rel=\"noopener noreferrer\" target=\"_blank\">Windows monthly updates explained</a>.</div><div>&nbsp;&nbsp;</div><div><b>Highlights for the Windows 11, version 25H2 update:&nbsp;</b></div><ul><li>This security update includes fixes and quality improvements from <a href=\"https://support.microsoft.com/help/5079391\" rel=\"noopener noreferrer\" target=\"_blank\">KB5079391</a> (released March 26, 2026 - no longer offered) and <a href=\"https://support.microsoft.com/help/5086672\" rel=\"noopener noreferrer\" target=\"_blank\">KB5086672</a> (released March 31, 2026).</li><li>This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.</li><li>This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.</li><li>This update improves reliability for SMB compression over QUIC, reducing timeouts and enabling more consistent and dependable performance.</li><li>This update enhances protection against phishing attacks that use Remote Desktop (.rdp) files by showing all requested connection settings before connecting, with settings turned off by default and a <a href=\"https://go.microsoft.com/fwlink/?linkid=2347342\" rel=\"noopener noreferrer\" target=\"_blank\">one‑time security warning</a> on first use.</li></ul><div><br></div><div>Short on time? Watch our <a href=\"https://aka.ms/Windows11/ReleaseNotes/Video/2604\" rel=\"noopener noreferrer\" target=\"_blank\">Windows 11 release notes video</a> for this month's tips.</div><div><br></div><div>For instructions on how to install this update, see the KB for your operating system listed below:&nbsp;</div><ul><li>Windows 11, version 26H1: <a href=\"https://support.microsoft.com/help/5083768\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083768</a></li><li>Windows 11, versions 25H2 and 24H2: <a href=\"https://support.microsoft.com/help/5083769\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 11, version 23H2: <a href=\"https://support.microsoft.com/help/5082052\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082052</a></li><li>Windows 11 Enterprise LTSC 2024: Baseline <a href=\"https://support.microsoft.com/topic/9df553dc-e869-4240-af42-c7bc7e81bc32\" rel=\"noopener noreferrer\" target=\"_blank\">KB5083769</a></li><li>Windows 10, versions 22H2 and 21H2: <a href=\"https://support.microsoft.com/help/5082200\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082200</a></li><li>Windows 10 Enterprise LTSC 2019 and Windows Server 2019: <a href=\"https://support.microsoft.com/help/5082123\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082123</a></li><li>Windows 10 LTSB 2016 and Windows Server 2016: <a href=\"https://support.microsoft.com/help/5082198\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082198</a></li><li>Windows Server 2025: <a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2025 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/3ed94012-763a-4ebe-86f4-32b01390a11a\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/help/5082142\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2022 Datacenter: Azure Edition: Baseline <a href=\"https://support.microsoft.com/topic/5d0db586-d5a5-4ba2-b3c8-a4536db17225\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082142</a></li><li>Windows Server 2012 R2: <a href=\"https://support.microsoft.com/help/5082126\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082126</a></li><li>Windows Server 2012: <a href=\"https://support.microsoft.com/help/5082127\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082127</a></li></ul><div><br></div><div><b>Note: </b>With the April 2026 Windows security update and upcoming Windows updates over the next few months, a limited number of consumer and business devices may experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the <a href=\"https://support.microsoft.com/topic/windows-secure-boot-certificate-expiration-and-ca-updates-7ff40d33-95dc-4c3c-8725-a9b95457578e\" rel=\"noopener noreferrer\" target=\"_blank\">Secure Boot update process</a>.</div>",
+        "source": "m365",
+        "m365Service": "Windows",
+        "m365AllServices": [
+          "Windows"
+        ],
+        "m365Id": "MC1279829",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365IsMajorChange": true,
+        "m365Tags": [
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1279829"
       },
       {
         "title": "Microsoft Copilot (Microsoft 365): Copilot Chat can now better match search results from Scanned PDFs and from text inside images embedded in Word, Excel, and PowerPoint",
@@ -7219,7 +8044,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-15T08:27:24.699967+00:00",
+    "generatedAt": "2026-04-15T11:59:31.762093+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
