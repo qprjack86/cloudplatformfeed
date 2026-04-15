@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 15 Apr 2026 12:22:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 12:39:26 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -183,7 +183,7 @@
       <link>https://devblogs.microsoft.com/blog/take-your-postgresql-backed-apps-to-the-next-level</link>
       <guid>https://devblogs.microsoft.com/blog/take-your-postgresql-backed-apps-to-the-next-level</guid>
       <description><![CDATA[PostgreSQL is a powerful and hugely popular database engine, and it really comes alive across Microsoft developer platforms. You can build with PostgreSQL across Azure offerings, develop productively in Visual Studio Code with strong extensions and tooling, and connect your data to agentic...]]></description>
-      <dc:creator><![CDATA[Ismael Mejía Useche]]></dc:creator>
+      <dc:creator><![CDATA[Ismael Mejía]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 17:00:37 GMT</pubDate>
       <category><![CDATA[Microsoft Developers Blog]]></category>
     </item>
