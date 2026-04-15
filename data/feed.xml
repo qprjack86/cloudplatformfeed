@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 15 Apr 2026 11:59:18 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 15:59:30 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Enabling fallback to internet for Azure Private DNS Zones in hybrid architectures]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131</guid>
+      <description><![CDATA[Introduction Azure Private Endpoint enables secure connectivity to Azure PaaS services such as: Azure SQL Managed Instance Azure Container Registry Azure Key Vault Azure Storage Account through private IP addresses within a virtual network. When Private Endpoint is enabled for a service, Azure DNS...]]></description>
+      <dc:creator><![CDATA[kirankumar_manchiwar04]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 15:57:15 GMT</pubDate>
+      <category><![CDATA[Azure Networking]]></category>
+    </item>
+    <item>
+      <title><![CDATA[One-click security scanning and org-wide alert triage come to Advanced Security]]></title>
+      <link>https://devblogs.microsoft.com/devops/one-click-security-scanning-and-org-wide-alert-triage-come-to-advanced-security/</link>
+      <guid>https://devblogs.microsoft.com/devops/one-click-security-scanning-and-org-wide-alert-triage-come-to-advanced-security/</guid>
+      <description><![CDATA[We’re shipping two major capabilities that change how security teams enable and act on application security in Azure DevOps: CodeQL default setup makes it possible to enable code scanning across your organization without configuring a single pipeline, and a new combined alerts experience in...]]></description>
+      <dc:creator><![CDATA[Laura Jiang]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 15:06:53 GMT</pubDate>
+      <category><![CDATA[Azure DevOps Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Your Oracle Data Is Sitting Next to Microsoft AI. Are You Using It?]]></title>
+      <link>https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/your-oracle-data-is-sitting-next-to-microsoft-ai-are-you-using/ba-p/4509438</link>
+      <guid>https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/your-oracle-data-is-sitting-next-to-microsoft-ai-are-you-using/ba-p/4509438</guid>
+      <description><![CDATA["Your organization runs Oracle on Azure. You've purchased Microsoft Foundry & OpenAI licenses. Why are your AI projects still stuck in proof-of-concept? "Your employees spend hours every week entering or reconciling data from documents, copying information into ERP systems. What would it mean if...]]></description>
+      <dc:creator><![CDATA[ManishChopra]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 13:27:01 GMT</pubDate>
+      <category><![CDATA[Oracle on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[A demonstration of Virtual Network TAP]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/a-demonstration-of-virtual-network-tap/ba-p/4479136</link>
@@ -17,10 +44,10 @@
       <category><![CDATA[Azure Networking]]></category>
     </item>
     <item>
-      <title><![CDATA[Choosing the Right Azure Hosting Option for Your AI Agents]]></title>
+      <title><![CDATA[Choosing the Right Azure Hosting Model for AI Agents: A Deep Dive into Foundry Hosted Agents]]></title>
       <link>https://devblogs.microsoft.com/all-things-azure/hostedagent/</link>
       <guid>https://devblogs.microsoft.com/all-things-azure/hostedagent/</guid>
-      <description><![CDATA[A comprehensive guide to hosting AI agents on Azure, with a deep dive into Microsoft Foundry Hosted Agents As AI agents become the backbone of intelligent applications, developers face a critical decision: where and how to host these agents at scale. Azure provides multiple hosting options, each...]]></description>
+      <description><![CDATA[AI agents are quickly moving from experiments to production‑critical components of modern applications. But while many teams know how to build agents, far fewer are confident they’re hosting them on the right foundation. Most organizations start by deploying agents the same way they deploy...]]></description>
       <dc:creator><![CDATA[Reenu Saluja]]></dc:creator>
       <pubDate>Wed, 15 Apr 2026 05:00:56 GMT</pubDate>
       <category><![CDATA[All Things Azure]]></category>
@@ -168,15 +195,6 @@
       <dc:creator><![CDATA[JohnGruszczyk]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 17:14:06 GMT</pubDate>
       <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Your Oracle Data Is Sitting Next to Microsoft AI. Are You Using It?]]></title>
-      <link>https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/your-oracle-data-is-sitting-next-to-microsoft-ai-are-you-using/ba-p/4509438</link>
-      <guid>https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/your-oracle-data-is-sitting-next-to-microsoft-ai-are-you-using/ba-p/4509438</guid>
-      <description><![CDATA["Your organization runs Oracle on Azure. You've purchased Microsoft Foundry & OpenAI licenses. Why are your AI projects still stuck in proof-of-concept? "Your employees spend hours every week entering or reconciling data from documents, copying information into ERP systems. What would it mean if...]]></description>
-      <dc:creator><![CDATA[ManishChopra]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 17:12:16 GMT</pubDate>
-      <category><![CDATA[Oracle on Azure]]></category>
     </item>
     <item>
       <title><![CDATA[Take your PostgreSQL-backed apps to the next level]]></title>
@@ -437,24 +455,6 @@
       <description><![CDATA[Modern analytics isn’t just about storing data. It’s about detecting issues early, understanding them fast, and acting with confidence. Eventhouse in Microsoft Fabric brings advanced analytics capabilities together so teams can move from raw events to insight and action without stitching tools or...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Mon, 13 Apr 2026 13:02:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Bring your local files to OneLake with OneLake file explorer]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/bring-your-local-files-to-onelake-with-onelake-file-explorer-generally-available/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/bring-your-local-files-to-onelake-with-onelake-file-explorer-generally-available/</guid>
-      <description><![CDATA[Adopted by thousands of active users, OneLake File Explorer enables developers, data scientists, and business users to move data from local files into OneLake quickly—without changing how they work. From local files to cloud analytics—without breaking your flow Imagine this scenario: You’re a data...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 11:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[ALTER TABLE inside explicit transactions in Fabric Data Warehouse]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/alter-table-inside-explicit-transactions-in-fabric-data-warehouse-generally-available/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/alter-table-inside-explicit-transactions-in-fabric-data-warehouse-generally-available/</guid>
-      <description><![CDATA[Schema evolution is a fact of life for modern analytics platforms. As data models grow, teams need to add columns, drop unused fields, and evolve constraints—often as part of tightly controlled deployment pipelines. Fabric DW supported transactional execution for key table‑focused DDLs like CREATE...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 11:00:00 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
