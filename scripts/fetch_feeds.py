@@ -1483,11 +1483,25 @@ def _retirement_event_rank_key(event):
 def _preferred_retirement_event_link(event):
     """Pick the canonical link for a merged retirement event.
 
-    For single-source events, keep the original URL. For merged events, prefer an
-    Azure Updates URL when present because it is the most stable public landing page
-    for the announcement. Otherwise keep the current event URL.
+    If any source report comes from Microsoft Lifecycle, keep the endoflife.date
+    URL as canonical. For non-lifecycle merges, prefer an Azure Updates URL when
+    present because it is the most stable public landing page for the announcement.
+    Otherwise keep the current event URL.
     """
+
+    def _is_endoflife_date_link(value):
+        if not value:
+            return False
+        normalized = str(value).strip().lower()
+        return normalized.startswith("https://endoflife.date/") or normalized.startswith("http://endoflife.date/")
+
     source_reports = event.get("sourceReports", [])
+
+    for source_report in source_reports:
+        lifecycle_link = source_report.get("link", "")
+        if source_report.get("blogId") == MICROSOFT_LIFECYCLE_BLOG_ID and _is_endoflife_date_link(lifecycle_link):
+            return lifecycle_link
+
     if len(source_reports) <= 1:
         return event.get("link", "")
 
@@ -2279,7 +2293,7 @@ def fetch_microsoft_lifecycle_retirements(config=None):
 
                 # Keep lifecycle links on endoflife.date so users land on the
                 # product lifecycle page instead of unrelated external docs.
-                product_lifecycle_link = html_link or f"https://endoflife.date/{product}"
+                product_lifecycle_link = f"https://endoflife.date/{product}"
 
                 articles.append(
                     {

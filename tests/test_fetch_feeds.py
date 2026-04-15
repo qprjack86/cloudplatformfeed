@@ -1488,6 +1488,34 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(events[0]["sourceCount"], 2)
         self.assertEqual(events[0]["link"], "https://azure.microsoft.com/en-us/updates/558999/")
 
+    def test_build_azure_retirement_calendar_prefers_endoflife_link_when_lifecycle_source_present(self):
+        articles = [
+            {
+                "title": "Retirement: Microsoft .NET 8 (LTS) - Security support ends",
+                "link": "https://azure.microsoft.com/en-us/updates/123456/",
+                "published": "2026-04-09T09:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2030-11-10",
+            },
+            {
+                "title": "Retirement: Microsoft .NET 8 (LTS) - Security support ends",
+                "link": "https://endoflife.date/dotnet",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-11-10",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["sourceCount"], 2)
+        self.assertEqual(events[0]["link"], "https://endoflife.date/dotnet")
+
     def test_build_azure_retirement_calendar_keeps_single_source_link(self):
         articles = [
             {
@@ -1940,6 +1968,42 @@ class UnifiedRetirementCalendarTests(unittest.TestCase):
             # Check that azure event is in the results
             event_blogs = {e.get("blogId") for e in calendar}
             self.assertIn("azureretirements", event_blogs)
+
+    def test_build_unified_retirement_calendar_prefers_endoflife_link_when_lifecycle_source_present(self):
+        now = datetime.now(timezone.utc)
+        future_date = (now + timedelta(days=60)).strftime("%Y-%m-%d")
+
+        azure_events = [
+            {
+                "title": "Retirement: Microsoft .NET 8 (LTS) - Security support ends",
+                "link": "https://azure.microsoft.com/en-us/updates/123456/",
+                "azureRetirementDate": future_date,
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "published": now.isoformat(),
+            }
+        ]
+        microsoft_events = [
+            {
+                "title": "Retirement: Microsoft .NET 8 (LTS) - Security support ends",
+                "link": "https://endoflife.date/dotnet",
+                "azureRetirementDate": future_date,
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "announcementType": "retirement",
+                "published": now.isoformat(),
+            }
+        ]
+
+        calendar = fetch_feeds.build_unified_retirement_calendar(
+            azure_events=azure_events,
+            microsoft_events=microsoft_events,
+        )
+
+        self.assertEqual(len(calendar), 1)
+        self.assertEqual(calendar[0]["sourceCount"], 2)
+        self.assertEqual(calendar[0]["link"], "https://endoflife.date/dotnet")
 
     def test_build_unified_retirement_calendar_filters_past_dates(self):
         """Unified calendar should exclude events with past retirement dates."""
