@@ -93,6 +93,7 @@
   var checksumWatcher = null;
   var retirementCalendarViewState = { azure: null, m365: null };
   var retirementCalendarCollapsedState = { azure: null, m365: null };
+  var retirementCalendarListExpandedState = { azure: false, m365: false };
   
   // Tab buttons (M365 feature)
   var tabButtons = document.querySelectorAll(".tab-button");
@@ -827,21 +828,38 @@
         event.parsedDate.getMonth() === anchorMonth.getMonth()
       );
     });
-    var dayCounts = {};
+    var dayStats = {};
+    function markDay(day, kind) {
+      if (!day || day < 1 || day > monthEndDay) return;
+      if (!dayStats[day]) {
+        dayStats[day] = { count: 0, hasRangeBoundary: false };
+      }
+      dayStats[day].count += 1;
+      if (kind === "range-boundary") {
+        dayStats[day].hasRangeBoundary = true;
+      }
+    }
+
+    var monthEndDay = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 0).getDate();
     monthEvents.forEach(function (event) {
       var rangeStart = parseRetirementEventDate(event.retirementStartDate);
       var rangeEnd = parseRetirementEventDate(event.retirementEndDate);
       if (rangeStart && rangeEnd && rangeEnd >= rangeStart) {
-        var cursor = new Date(rangeStart.getFullYear(), rangeStart.getMonth(), rangeStart.getDate());
-        while (cursor <= rangeEnd) {
-          if (
-            cursor.getFullYear() === anchorMonth.getFullYear() &&
-            cursor.getMonth() === anchorMonth.getMonth()
-          ) {
-            var dayInRange = cursor.getDate();
-            dayCounts[dayInRange] = (dayCounts[dayInRange] || 0) + 1;
-          }
-          cursor.setDate(cursor.getDate() + 1);
+        // Mark only start/end boundaries for ranged events to avoid flooding the month grid.
+        if (
+          rangeStart.getFullYear() === anchorMonth.getFullYear() &&
+          rangeStart.getMonth() === anchorMonth.getMonth()
+        ) {
+          markDay(rangeStart.getDate(), "range-boundary");
+        }
+        if (
+          rangeEnd.getFullYear() === anchorMonth.getFullYear() &&
+          rangeEnd.getMonth() === anchorMonth.getMonth() &&
+          (rangeEnd.getDate() !== rangeStart.getDate() ||
+            rangeEnd.getMonth() !== rangeStart.getMonth() ||
+            rangeEnd.getFullYear() !== rangeStart.getFullYear())
+        ) {
+          markDay(rangeEnd.getDate(), "range-boundary");
         }
         return;
       }
@@ -849,31 +867,40 @@
       if (event.datePrecision === "month") {
         return; // month-only precision: no specific day to mark on the grid
       }
-      var day = event.parsedDate.getDate();
-      dayCounts[day] = (dayCounts[day] || 0) + 1;
+      markDay(event.parsedDate.getDate(), "single");
     });
 
-    var monthEndDay = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 0).getDate();
     var firstWeekday = (anchorMonth.getDay() + 6) % 7; // Monday first
     var dayCells = [];
     for (var i = 0; i < firstWeekday; i++) {
       dayCells.push('<div class="retirement-mini-day is-empty"></div>');
     }
     for (var dayNum = 1; dayNum <= monthEndDay; dayNum++) {
-      var count = dayCounts[dayNum] || 0;
+      var dayStat = dayStats[dayNum] || null;
+      var count = dayStat ? dayStat.count : 0;
+      var hasRangeBoundary = dayStat ? dayStat.hasRangeBoundary : false;
       var isToday =
         anchorMonth.getFullYear() === todayDate.getFullYear() &&
         anchorMonth.getMonth() === todayDate.getMonth() &&
         dayNum === todayDate.getDate();
       dayCells.push(
-        '<div class="retirement-mini-day' + (count ? " has-events" : "") + (isToday ? " is-today" : "") + '">' +
+        '<div class="retirement-mini-day' +
+          (count ? " has-events" : "") +
+          (hasRangeBoundary ? " has-range-boundary" : "") +
+          (isToday ? " is-today" : "") +
+          '">' +
           '<span class="retirement-mini-day-num">' + dayNum + "</span>" +
-          (count ? '<span class="retirement-mini-dot" title="' + count + ' retirement notice(s)"></span>' : "") +
+          (count
+            ? '<span class="retirement-mini-dot" title="' + count + ' retirement notice(s)">' + count + "</span>"
+            : "") +
         "</div>"
       );
     }
 
-    var monthItemsHtml = monthEvents.map(function (entry) {
+    var defaultMonthListLimit = 8;
+    var isMonthListExpanded = Boolean(retirementCalendarListExpandedState[sourceKey]);
+    var hasOverflowItems = monthEvents.length > defaultMonthListLimit;
+    var monthItemsHtml = monthEvents.map(function (entry, idx) {
       var dateLabel = formatRetirementCalendarRange(
         entry.retirementStartDate,
         entry.retirementEndDate,
@@ -891,11 +918,19 @@
         ? '<span class="retirement-mini-category-more" title="Also: ' + escapeHtml(extraCategories.join(", ")) + '">+' + extraCategories.length + "</span>"
         : "";
       var content = escapeHtml(dateLabel + " — " + (entry.title || "Untitled retirement notice") + sourceHint);
+      var itemClass = idx >= defaultMonthListLimit ? ' class="retirement-mini-list-item is-overflow"' : ' class="retirement-mini-list-item"';
       if (entry.link) {
-        return '<li>' + categoryBadge + extraCategoryHint + '<a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' + content + "</a></li>";
+        return '<li' + itemClass + '>' + categoryBadge + extraCategoryHint + '<a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' + content + "</a></li>";
       }
-      return "<li>" + categoryBadge + extraCategoryHint + content + "</li>";
+      return "<li" + itemClass + ">" + categoryBadge + extraCategoryHint + content + "</li>";
     }).join("");
+    var monthListToggleHtml = hasOverflowItems
+      ? '<button type="button" class="retirement-mini-list-toggle" data-retirement-list-toggle aria-expanded="' +
+          (isMonthListExpanded ? "true" : "false") +
+          '">' +
+          (isMonthListExpanded ? "Show fewer" : "Show all " + monthEvents.length + " events") +
+        "</button>"
+      : "";
 
     var monthNames = [
       "January", "February", "March", "April", "May", "June",
@@ -957,7 +992,7 @@
       '<div class="retirement-mini-weekdays"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>' +
       '<div class="retirement-mini-grid">' + dayCells.join("") + "</div>" +
       (monthItemsHtml
-        ? '<div class="retirement-mini-list"><h3>Retiring this month</h3><ul>' + monthItemsHtml + "</ul></div>"
+        ? '<div class="retirement-mini-list' + (isMonthListExpanded ? ' is-expanded' : '') + '"><h3>Retiring this month · ' + monthEvents.length + ' event(s)</h3><ul>' + monthItemsHtml + '</ul>' + monthListToggleHtml + "</div>"
         : "") +
       "</div>";
 
@@ -970,6 +1005,7 @@
     var exportMenu = retirementCalendarEl.querySelector('[data-retirement-export-menu]');
     var exportStatus = retirementCalendarEl.querySelector('[data-retirement-export-status]');
     var collapseToggleBtn = retirementCalendarEl.querySelector('[data-retirement-collapse-toggle]');
+    var listToggleBtn = retirementCalendarEl.querySelector('[data-retirement-list-toggle]');
     var calendarBodyEl = retirementCalendarEl.querySelector(".retirement-mini-body");
     var removeExportDropdownListeners = null;
 
@@ -1017,6 +1053,13 @@
         calendarBodyEl.classList.toggle("is-collapsed", isCollapsed);
         collapseToggleBtn.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
         collapseToggleBtn.textContent = isCollapsed ? "Show calendar" : "Hide calendar";
+      });
+    }
+
+    if (listToggleBtn) {
+      listToggleBtn.addEventListener("click", function () {
+        retirementCalendarListExpandedState[sourceKey] = !retirementCalendarListExpandedState[sourceKey];
+        renderRetirementCalendarPanel();
       });
     }
 
