@@ -4,9 +4,54 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 16 Apr 2026 12:01:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 16:16:38 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Bringing AI to the Factory Floor with Foundry Local - Now in Public Preview on Azure Local]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</guid>
+      <description><![CDATA[Key capabilities in this preview Foundry Local exposes standard REST and OpenAI‑compatible APIs, enabling IT and AI teams to deploy and operate local AI workloads using familiar, cloud‑aligned patterns across edge and on‑prem environments. In this public preview, we deliver the following...]]></description>
+      <dc:creator><![CDATA[liranlyabock_microsoft]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 16:08:12 GMT</pubDate>
+      <category><![CDATA[Azure Arc]]></category>
+    </item>
+    <item>
+      <title><![CDATA[App attach in Azure Virtual Desktop now supports Windows Server 2025 and Windows Server 2022]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/app-attach-in-azure-virtual-desktop-now-supports-windows-server/ba-p/4511729</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/app-attach-in-azure-virtual-desktop-now-supports-windows-server/ba-p/4511729</guid>
+      <description><![CDATA[Managing applications in virtualized desktop and server environments has traditionally required IT teams to bake apps directly into base images, driving image sprawl, slower updates, and higher operational overhead. App attach in Azure Virtual Desktop changes that model by enabling applications to...]]></description>
+      <dc:creator><![CDATA[Michelle_Moya]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 16:00:12 GMT</pubDate>
+      <category><![CDATA[Azure Virtual Desktop]]></category>
+    </item>
+    <item>
+      <title><![CDATA[From AI to .NET: 20 VS Live! Las Vegas Sessions You Can Watch Now]]></title>
+      <link>https://devblogs.microsoft.com/visualstudio/from-ai-to-net-20-vs-live-las-vegas-sessions-you-can-watch-now/</link>
+      <guid>https://devblogs.microsoft.com/visualstudio/from-ai-to-net-20-vs-live-las-vegas-sessions-you-can-watch-now/</guid>
+      <description><![CDATA[In March 2026, developers came together at VS Live! Las Vegas for a full week of technical learning, hands-on exploration, and a lot of great conversations about where software development is headed next. From AI-assisted development to modern .NET, cloud-native apps, and developer productivity,...]]></description>
+      <dc:creator><![CDATA[Jim Harrer]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 15:00:04 GMT</pubDate>
+      <category><![CDATA[Visual Studio Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[SQL Server enabled by Azure Arc Overview]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/sql-server-enabled-by-azure-arc-overview/ba-p/4496399</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/sql-server-enabled-by-azure-arc-overview/ba-p/4496399</guid>
+      <description><![CDATA[Table of Contents What is Azure Arc-enabled SQL Server? Connecting SQL Server to Azure Arc (4-step onboarding) Your SQL Server is Now in Azure (unified management) SQL Best Practices Assessment Monitoring and Governance Troubleshooting Guide Azure Arc Demo What You Can Learn from This Article This...]]></description>
+      <dc:creator><![CDATA[NaufalPrawironegoro]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 15:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Arc]]></category>
+    </item>
+    <item>
+      <title><![CDATA[How Granular Delegated Admin Privileges (GDAP) allows Sentinel customers to delegate access]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-granular-delegated-admin-privileges-gdap-allows-sentinel/ba-p/4503123</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-granular-delegated-admin-privileges-gdap-allows-sentinel/ba-p/4503123</guid>
+      <description><![CDATA[Simplifying Defender SIEM and XDR delegated access As Microsoft Sentinel and Defender converge into a unified experience, organizations face a fundamental challenge: the lack of a scalable, comprehensive, delegated access model that works seamlessly across Entra ID and Sentinel’s Azure Resource...]]></description>
+      <dc:creator><![CDATA[Yossi Basha]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 14:40:52 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
     <item>
       <title><![CDATA[Architecting Secure and Trustworthy AI Agents with Microsoft Foundry]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</link>
@@ -15,6 +60,15 @@
       <dc:creator><![CDATA[PrabhKaur]]></dc:creator>
       <pubDate>Thu, 16 Apr 2026 09:30:30 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Answers to common questions about Fabric Data Factory]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/answers-to-common-questions-about-fabric-data-factory/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/answers-to-common-questions-about-fabric-data-factory/</guid>
+      <description><![CDATA[As the Data Integration Customer Advisory Team (CAT) lead, I spent a lot of time talking to customers at the recent FabCon/SQLCon about Fabric Data Factory, and I came away with a clear picture of what’s on customers’ minds when it comes to the future of data integration. Many of the same questions...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 09:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Announcing One‑Command Backup Configuration for AKS with Azure Backup]]></title>
@@ -345,7 +399,7 @@
       <link>https://devblogs.microsoft.com/blog/take-your-postgresql-backed-apps-to-the-next-level</link>
       <guid>https://devblogs.microsoft.com/blog/take-your-postgresql-backed-apps-to-the-next-level</guid>
       <description><![CDATA[PostgreSQL is a powerful and hugely popular database engine, and it really comes alive across Microsoft developer platforms. You can build with PostgreSQL across Azure offerings, develop productively in Visual Studio Code with strong extensions and tooling, and connect your data to agentic...]]></description>
-      <dc:creator><![CDATA[Ismael Mejía Useche]]></dc:creator>
+      <dc:creator><![CDATA[Ismael Mejía]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 17:00:37 GMT</pubDate>
       <category><![CDATA[Microsoft Developers Blog]]></category>
     </item>
@@ -402,60 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 09:00:00 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[From CI/CD to Continuous AI: The Future of GitHub Automation]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-ci-cd-to-continuous-ai-the-future-of-github-automation/ba-p/4507378</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-ci-cd-to-continuous-ai-the-future-of-github-automation/ba-p/4507378</guid>
-      <description><![CDATA[Introduction For over a decade, CI/CD (Continuous Integration and Continuous Deployment) has been the backbone of modern software engineering. It helped teams move from manual, error-prone deployments to automated, reliable pipelines. But today, we are standing at the edge of another...]]></description>
-      <dc:creator><![CDATA[Ravindra_Kumar_Vishwakarma]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Optimize object storage costs automatically with smart tier—now generally available]]></title>
-      <link>https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available</link>
-      <guid>https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available</guid>
-      <description><![CDATA[Optimize object storage costs automatically with smart tier—now generally available By continuously optimizing data placement, smart tier ensures your storage costs are aligned with actual usage.Update Type: Announcement, Services: Data Lake Storage, Azure Storage, Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure File Sync in Belgium Central, Malaysia West, and Indonesia Central]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/557828/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/557828/</guid>
-      <description><![CDATA[Azure File Sync enables seamless tiering of data from on-premises Windows Servers to Azure Files for hybrid use cases and simplified migration. It also enables you to leverage the performance, flexibility and compatibility of your on-premises File Server while leveraging the scale and cost...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 23:45:31 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure File Sync in Belgium Central, Malaysia West, and Indonesia Central]]></title>
-      <link>https://azure.microsoft.com/updates?id=557828</link>
-      <guid>https://azure.microsoft.com/updates?id=557828</guid>
-      <description><![CDATA[Azure File Sync enables seamless tiering of data from on-premises Windows Servers to Azure Files for hybrid use cases and simplified migration. It also enables you to leverage the performance, flexibility and compatibility of your on-premises File ServerUpdate Type: GA, Services: Azure Storage,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 23:45:31 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft Purview Referential Architecture Diagrams]]></title>
-      <link>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/microsoft-purview-referential-architecture-diagrams/4510925</link>
-      <guid>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/microsoft-purview-referential-architecture-diagrams/4510925</guid>
-      <description><![CDATA[Microsoft Purview architecture diagrams provide a reference view of how classification, sensitivity labelling, Data Loss Prevention (DLP), Insider Risk Management, and Microsoft 365 Copilot protectio...Update Type: Announcement, Services: Azure Purview, Categories: Management]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 22:45:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Govern AI Agents on App Service with the Microsoft Agent Governance Toolkit]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/govern-ai-agents-on-app-service-with-the-microsoft-agent/ba-p/4510962</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/govern-ai-agents-on-app-service-with-the-microsoft-agent/ba-p/4510962</guid>
-      <description><![CDATA[Part 3 of 3 — Multi-Agent AI on Azure App Service In Blog 1, we built a multi-agent travel planner with Microsoft Agent Framework 1.0 on App Service. In Blog 2, we added observability with OpenTelemetry and the new Application Insights Agents view. Now in Part 3, we secure those agents for...]]></description>
-      <dc:creator><![CDATA[jordanselig]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 21:15:44 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
     </item>
   </channel>
 </rss>
