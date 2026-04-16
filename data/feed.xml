@@ -4,9 +4,153 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 15 Apr 2026 15:59:30 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 08:28:34 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Announcing One‑Command Backup Configuration for AKS with Azure Backup]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-one-command-backup-configuration-for-aks-with-azure/ba-p/4511852</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-one-command-backup-configuration-for-aks-with-azure/ba-p/4511852</guid>
+      <description><![CDATA[Running production workloads on Azure Kubernetes Service (AKS) is becoming the norm for platform teams building cloud‑native applications at scale. As these environments increasingly host stateful workloads using persistent volumes, ensuring data protection and rapid recovery becomes...]]></description>
+      <dc:creator><![CDATA[shobhitgarg]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 07:50:59 GMT</pubDate>
+      <category><![CDATA[Governance & Management]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Architecting Secure and Trustworthy AI Agents with Microsoft Foundry]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</guid>
+      <description><![CDATA[Co-Authored by Avneesh Kaushik Why Trust Matters for AI Agents Unlike static ML models, AI agents call tools and APIs, retrieve enterprise data, generate dynamic outputs, and can act autonomously based on their planning. This introduces expanded risk surfaces: prompt injection, data exfiltration,...]]></description>
+      <dc:creator><![CDATA[PrabhKaur]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Managing Multi‑Tenant Azure Resource with SRE Agent and Lighthouse]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/managing-multi-tenant-azure-resource-with-sre-agent-and/ba-p/4511789</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/managing-multi-tenant-azure-resource-with-sre-agent-and/ba-p/4511789</guid>
+      <description><![CDATA[Azure SRE Agent is an AI‑powered reliability assistant that helps teams diagnose and resolve production issues faster while reducing operational toil. It analyzes logs, metrics, alerts, and deployment data to perform root cause analysis and recommend or execute mitigations with human approval. It’s...]]></description>
+      <dc:creator><![CDATA[Pranab_Mandal]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 04:58:53 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Using an AI Agent to Troubleshoot and Fix Azure Function App Issues]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/using-an-ai-agent-to-troubleshoot-and-fix-azure-function-app/ba-p/4511781</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/using-an-ai-agent-to-troubleshoot-and-fix-azure-function-app/ba-p/4511781</guid>
+      <description><![CDATA[TOC Preparation Troubleshooting Workflow Conclusion Preparation Topic: Required tools AI agent: for example, Copilot CLI / OpenCode / Hermes / OpenClaw, etc. In this example, we use Copilot CLI. Model access: for example, Anthropic Claude Opus. Relevant skills: this example does not use skills, but...]]></description>
+      <dc:creator><![CDATA[theringe]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 03:11:32 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Production Cutover in Cloud-Native Migrations]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-migration-and/production-cutover-in-cloud-native-migrations/ba-p/4509924</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-migration-and/production-cutover-in-cloud-native-migrations/ba-p/4509924</guid>
+      <description><![CDATA[Migration Planning vs Runtime Reality Migration to container orchestration platforms such as Azure Kubernetes Service (AKS) typically involves: Containerizing application workloads Configuring cluster networking Migrating data to managed storage services Updating application integrations Validating...]]></description>
+      <dc:creator><![CDATA[dhruti]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 00:05:46 GMT</pubDate>
+      <category><![CDATA[Azure Migration]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Databricks Delta Sharing: Enabling Cost Efficient Cross Cloud Data Access]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/databricks-delta-sharing-enabling-cost-efficient-cross-cloud/ba-p/4511400</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/databricks-delta-sharing-enabling-cost-efficient-cross-cloud/ba-p/4511400</guid>
+      <description><![CDATA[What Is Delta Sharing? Delta sharing is an open protocol for secure data sharing that allows organizations to share live data stored in Delta Lake with external consumers—across cloud providers such as Azure, AWS, and Google Cloud—while keeping the data in its original location. Consumers access...]]></description>
+      <dc:creator><![CDATA[kirankumar_manchiwar04]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 00:00:42 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Dissecting LLM Container Cold-Start: Where the Time Actually Goes]]></title>
+      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</link>
+      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</guid>
+      <description><![CDATA[Cold-start latency determines whether GPU clusters can scale to zero, how fast they can autoscale, and whether bursty or low-QPS workloads are economically viable. Most optimization effort targets the container pull path – faster registries, lazy-pull snapshotters, different compression formats....]]></description>
+      <dc:creator><![CDATA[robcronin]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 22:38:11 GMT</pubDate>
+      <category><![CDATA[Linux & Open Source]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Enforce Cost Limits on KQL Queries and Notebooks in the Microsoft Sentinel Data Lake]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/enforce-cost-limits-on-kql-queries-and-notebooks-in-the/ba-p/4511329</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/enforce-cost-limits-on-kql-queries-and-notebooks-in-the/ba-p/4511329</guid>
+      <description><![CDATA[Security teams face a constant tension: run the advanced analytics you need to stay ahead of threats, or hold back to keep costs predictable. Until now, Microsoft Sentinel let you set alerts to get notified when data lake usage approached a threshold — useful for awareness, but not enough to...]]></description>
+      <dc:creator><![CDATA[shubh_khandhadia]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 20:26:56 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Retirement: End of lift reminder of HBv2/HC-Series/NP-Series Azure Virtual Machine in Azure Batch Pool]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559751/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559751/</guid>
+      <description><![CDATA[Microsoft Azure will retire support for HBv2-series, HC-series, and NP-series VMs in Azure Batch pools on May 31, 2027, including: HBv2-series: 120 AMD EPYC 7V12 vCPUs, 480 GB RAM, 200 Gb/s HDR InfiniBand HC-series: 44 Intel Xeon Platinum 8168 vCPUs, 352 GB RAM, 100 Gb/s EDR InfiniBand NP-series:...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 17:30:33 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[End of lift reminder of HBv2/HC-Series/NP-Series Azure Virtual Machine in Azure Batch Pool]]></title>
+      <link>https://azure.microsoft.com/updates?id=559751</link>
+      <guid>https://azure.microsoft.com/updates?id=559751</guid>
+      <description><![CDATA[Microsoft Azure will retire support for HBv2-series, HC-series, and NP-series VMs in Azure Batch pools on May 31, 2027, including: HBv2-series: 120 AMD EPYC 7V12 vCPUs, 480 GB RAM, 200 Gb/s HDR InfiniBand HC-series: 44 Intel Xeon Platinum 8168 [Sevice: Virtual Machines, Target Date: 01 May 2027,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 17:30:33 GMT</pubDate>
+      <category><![CDATA[Azure Deprecations (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure MCP tools now ship built into Visual Studio 2022 — no extension required]]></title>
+      <link>https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/</link>
+      <guid>https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/</guid>
+      <description><![CDATA[Azure MCP tools now ship built into Visual Studio 2022 — no extension required Azure MCP tools are now built into Visual Studio 2022 as part of the Azure development workload — no separate extension to find, install, or update. You can enable over 230 tools across 45 Azure services directly in...]]></description>
+      <dc:creator><![CDATA[Yun Jung Choi]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 17:30:28 GMT</pubDate>
+      <category><![CDATA[Visual Studio Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Encrypt Premium SSD v2 and Ultra Disks with Cross Tenant Customer Managed Keys]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559761/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559761/</guid>
+      <description><![CDATA[Cross-tenant customer-managed keys (CMK) for Premium SSD v2 and Ultra Disks are now generally available. This capability allows managed disks to be encrypted using a customer-managed key stored in an Azure Key Vault located in a different Microsoft Entra tenant than the disk resource. This enables...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 17:15:38 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Encrypt Premium SSD v2 and Ultra Disks with Cross Tenant Customer Managed Keys]]></title>
+      <link>https://azure.microsoft.com/updates?id=559761</link>
+      <guid>https://azure.microsoft.com/updates?id=559761</guid>
+      <description><![CDATA[Cross-tenant customer-managed keys (CMK) for Premium SSD v2 and Ultra Disks are now generally available. This capability allows managed disks to be encrypted using a customer-managed key stored in an Azure Key Vault located in a different Microsoft EntraUpdate Type: GA, Services: Azure Key Vault,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 17:15:38 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[From fragmented sites to consistent governance: Azure Arc patterns for adaptive cloud strategy.]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/from-fragmented-sites-to-consistent-governance-azure-arc/ba-p/4510110</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/from-fragmented-sites-to-consistent-governance-azure-arc/ba-p/4510110</guid>
+      <description><![CDATA[In Manufacturing companies, hybrid architectures aren’t transitional—they’re persistent. Most large manufacturers operate across remote plants, branch sites, private datacenters, and Azure. The main challenge manufacturers face isn’t adopting cloud services, it is preventing long‑term operational...]]></description>
+      <dc:creator><![CDATA[sakshimalhotra]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 17:11:28 GMT</pubDate>
+      <category><![CDATA[Azure Arc]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Gemma 4 on Azure Container Apps Serverless GPU]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/gemma-4-on-azure-container-apps-serverless-gpu/ba-p/4511671</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/gemma-4-on-azure-container-apps-serverless-gpu/ba-p/4511671</guid>
+      <description><![CDATA[Every prompt you send to a hosted AI service leaves your tenant. Your code, your architecture decisions, your proprietary logic — all of it crosses a network boundary you don't control. For teams building in regulated industries or handling sensitive IP, that's not a philosophical concern. It's a...]]></description>
+      <dc:creator><![CDATA[simonjj]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 16:20:22 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Stop Hunting Bugs: Meet the New Visual Studio Debugger Agent Workflow]]></title>
+      <link>https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/</link>
+      <guid>https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/</guid>
+      <description><![CDATA[We’ve all been there: a bug report lands in your inbox with a title like “App crashes sometimes” and zero reproduction steps. Your morning, which was supposed to be spent building new features, is now a forensic investigation. You’re setting scattershot breakpoints, staring at the call stack, and...]]></description>
+      <dc:creator><![CDATA[Harshada Hole]]></dc:creator>
+      <pubDate>Wed, 15 Apr 2026 16:00:15 GMT</pubDate>
+      <category><![CDATA[Visual Studio Blog]]></category>
+    </item>
     <item>
       <title><![CDATA[Enabling fallback to internet for Azure Private DNS Zones in hybrid architectures]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131</link>
@@ -201,7 +345,7 @@
       <link>https://devblogs.microsoft.com/blog/take-your-postgresql-backed-apps-to-the-next-level</link>
       <guid>https://devblogs.microsoft.com/blog/take-your-postgresql-backed-apps-to-the-next-level</guid>
       <description><![CDATA[PostgreSQL is a powerful and hugely popular database engine, and it really comes alive across Microsoft developer platforms. You can build with PostgreSQL across Azure offerings, develop productively in Visual Studio Code with strong extensions and tooling, and connect your data to agentic...]]></description>
-      <dc:creator><![CDATA[Ismael Mejía Useche]]></dc:creator>
+      <dc:creator><![CDATA[Ismael Mejía]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 17:00:37 GMT</pubDate>
       <category><![CDATA[Microsoft Developers Blog]]></category>
     </item>
@@ -312,150 +456,6 @@
       <dc:creator><![CDATA[jordanselig]]></dc:creator>
       <pubDate>Mon, 13 Apr 2026 21:15:44 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Managed identity support for graphical session recording]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560162/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560162/</guid>
-      <description><![CDATA[Today, we are announcing Azure Bastion now supports managed identities for graphical session recording. Azure Bastion graphical session recording now supports write access to storage accounts using managed identities. With this update, users have the option to configure managed identities during...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 18:45:30 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Managed identity support for graphical session recording]]></title>
-      <link>https://azure.microsoft.com/updates?id=560162</link>
-      <guid>https://azure.microsoft.com/updates?id=560162</guid>
-      <description><![CDATA[Today, we are announcing Azure Bastion now supports managed identities for graphical session recording. Azure Bastion graphical session recording now supports write access to storage accounts using managed identities. With this update, users have the optiUpdate Type: Preview, Services: Virtual...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 18:45:30 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure Storage Mover now available in Azure Government (US)]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560198/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560198/</guid>
-      <description><![CDATA[Azure Storage Mover is now available in Azure Government (US), enabling U.S. government customers and partners to securely migrate large‑scale file data to Azure Government cloud environments using a fully managed migration service. What is Azure Storage Mover? Azure Storage Mover is a fully...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 18:00:56 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Storage Mover now available in Azure Government (US)]]></title>
-      <link>https://azure.microsoft.com/updates?id=560198</link>
-      <guid>https://azure.microsoft.com/updates?id=560198</guid>
-      <description><![CDATA[Azure Storage Mover is now available in Azure Government (US), enabling U.S. government customers and partners to securely migrate large‑scale file data to Azure Government cloud environments using a fully managed migration service. What is Azure StorageUpdate Type: GA, Services: Azure Storage,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 18:00:56 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Granular Encryption-in-Transit Controls for SMB and NFS on Azure Files]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560001/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560001/</guid>
-      <description><![CDATA[Azure Files now supports independent configuration of encryption-in-transit settings for SMB and NFS protocols at the storage account level. Customers can now define protocol-specific security policies, enabling precise control over encryption requirements for each protocol without compromise. This...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 17:45:02 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Monitor AKS applications with OpenTelemetry and Azure Monitor]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560119/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560119/</guid>
-      <description><![CDATA[Azure Monitor now supports monitoring applications that run on Azure Kubernetes Service (AKS) by using OpenTelemetry for instrumentation and data collection.Leverage autoinstrumentation to deploy the Azure Monitor OpenTelemetry distro to workloads or use autoconfiguration to route OTLP signals from...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 17:45:02 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Monitor AKS applications with OpenTelemetry and Azure Monitor]]></title>
-      <link>https://azure.microsoft.com/updates?id=560119</link>
-      <guid>https://azure.microsoft.com/updates?id=560119</guid>
-      <description><![CDATA[Azure Monitor now supports monitoring applications that run on Azure Kubernetes Service (AKS) by using OpenTelemetry for instrumentation and data collection.Leverage autoinstrumentation to deploy the Azure Monitor OpenTelemetry distro to workloads or useUpdate Type: Preview, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 17:45:02 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Granular Encryption-in-Transit Controls for SMB and NFS on Azure Files]]></title>
-      <link>https://azure.microsoft.com/updates?id=560001</link>
-      <guid>https://azure.microsoft.com/updates?id=560001</guid>
-      <description><![CDATA[Azure Files now supports independent configuration of encryption-in-transit settings for SMB and NFS protocols at the storage account level. Customers can now define protocol-specific security policies, enabling precise control over encryption requirementUpdate Type: GA, Services: Azure Storage,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 17:45:02 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Cascading Read Replicas Now Generally Available!]]></title>
-      <link>https://techcommunity.microsoft.com/blog/adforpostgresql/cascading-read-replicas-now-generally-available/4510610</link>
-      <guid>https://techcommunity.microsoft.com/blog/adforpostgresql/cascading-read-replicas-now-generally-available/4510610</guid>
-      <description><![CDATA[We’re excited to announce the General Availability of cascading read replicas in Azure Database for PostgreSQL. This capability allows you to create read replicas for your Azure Database for PostgreS...Update Type: GA, Services: Database for PostgreSQL, Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 17:17:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: Azure Managed Grafana Essential SKU will retire on March 30, 2027]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559395/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559395/</guid>
-      <description><![CDATA[Azure Managed Grafana Essential SKU will be retired on March 30, 2027.Customers using the Essential SKU are encouraged to transition to Azure Managed Grafana Standard SKU or Azure Monitor Dashboards with Grafana before the retirement date to avoid service disruption, including loss of access to...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 17:15:23 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Managed Grafana Essential SKU will retire on March 30, 2027]]></title>
-      <link>https://azure.microsoft.com/updates?id=559395</link>
-      <guid>https://azure.microsoft.com/updates?id=559395</guid>
-      <description><![CDATA[Azure Managed Grafana Essential SKU will be retired on March 30, 2027.Customers using the Essential SKU are encouraged to transition to Azure Managed Grafana Standard SKU or Azure Monitor Dashboards with Grafana before the retirement date to avoid service [Sevice: Managed Grafana, Target Date: 01...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 17:15:23 GMT</pubDate>
-      <category><![CDATA[Azure Deprecations (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: StandardV2 NAT Gateway as an outbound type for AKS]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560207/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560207/</guid>
-      <description><![CDATA[AKS now supports managed and user-assigned StandardV2 NAT Gateway as an outbound type for your AKS managed or BYO VNets. This unlocks zone-redundant outbound connectivity, up to 100 Gbps outbound throughput, and IPv6 outbound support for AKS clusters.Learn more.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 16:00:36 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[StandardV2 NAT Gateway as an outbound type for AKS]]></title>
-      <link>https://azure.microsoft.com/updates?id=560207</link>
-      <guid>https://azure.microsoft.com/updates?id=560207</guid>
-      <description><![CDATA[AKS now supports managed and user-assigned StandardV2 NAT Gateway as an outbound type for your AKS managed or BYO VNets. This unlocks zone-redundant outbound connectivity, up to 100 Gbps outbound throughput, and IPv6 outbound support for AKS clusters.LearUpdate Type: Preview, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 16:00:36 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[GA: DCasv6 and ECasv6 confidential VMs based on 4th Generation AMD EPYC™ processors]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460</guid>
-      <description><![CDATA[Today, Azure has expanded its confidential computing offerings with the general availability of the DCasv6 and ECasv6 confidential VMs. Regional availability April 13 2026: West Europe Jan 30 2026: Canada Central, Canada East, Norway East, Norway West, Italy North, Germany North, France South,...]]></description>
-      <dc:creator><![CDATA[Rakeshginjupalli]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 15:29:32 GMT</pubDate>
-      <category><![CDATA[Confidential Computing]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Connecting an ExpressRoute circuit to Megaport Virtual Edge]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/connecting-an-expressroute-circuit-to-megaport-virtual-edge/ba-p/4510770</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/connecting-an-expressroute-circuit-to-megaport-virtual-edge/ba-p/4510770</guid>
-      <description><![CDATA[Megaport is an ExpressRoute partner in many locations. The Megaport Cloud Router (MCR) allows ExpressRoute customers to connect leased lines to their on-premise locations, and to connect other Cloud Providers. MCR is easy to set up and operate, it even automatically configures the ExpressRoute...]]></description>
-      <dc:creator><![CDATA[Marc de Droog]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 13:18:18 GMT</pubDate>
-      <category><![CDATA[Azure Networking]]></category>
-    </item>
-    <item>
-      <title><![CDATA[One platform, many insights: How Eventhouse brings analytics together]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/one-data-many-insights-how-eventhouse-brings-analytics-together-preview/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/one-data-many-insights-how-eventhouse-brings-analytics-together-preview/</guid>
-      <description><![CDATA[Modern analytics isn’t just about storing data. It’s about detecting issues early, understanding them fast, and acting with confidence. Eventhouse in Microsoft Fabric brings advanced analytics capabilities together so teams can move from raw events to insight and action without stitching tools or...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 13 Apr 2026 13:02:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
