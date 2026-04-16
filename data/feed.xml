@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 16 Apr 2026 08:28:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2026 12:01:57 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Architecting Secure and Trustworthy AI Agents with Microsoft Foundry]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</guid>
+      <description><![CDATA[Co-Authored by Avneesh Kaushik Why Trust Matters for AI Agents Unlike static ML models, AI agents call tools and APIs, retrieve enterprise data, generate dynamic outputs, and can act autonomously based on their planning. This introduces expanded risk surfaces: prompt injection, data exfiltration,...]]></description>
+      <dc:creator><![CDATA[PrabhKaur]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 09:30:30 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
     <item>
       <title><![CDATA[Announcing One‑Command Backup Configuration for AKS with Azure Backup]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-one-command-backup-configuration-for-aks-with-azure/ba-p/4511852</link>
@@ -15,15 +24,6 @@
       <dc:creator><![CDATA[shobhitgarg]]></dc:creator>
       <pubDate>Thu, 16 Apr 2026 07:50:59 GMT</pubDate>
       <category><![CDATA[Governance & Management]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Architecting Secure and Trustworthy AI Agents with Microsoft Foundry]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</guid>
-      <description><![CDATA[Co-Authored by Avneesh Kaushik Why Trust Matters for AI Agents Unlike static ML models, AI agents call tools and APIs, retrieve enterprise data, generate dynamic outputs, and can act autonomously based on their planning. This introduces expanded risk surfaces: prompt injection, data exfiltration,...]]></description>
-      <dc:creator><![CDATA[PrabhKaur]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
     </item>
     <item>
       <title><![CDATA[Managing Multi‑Tenant Azure Resource with SRE Agent and Lighthouse]]></title>
@@ -345,7 +345,7 @@
       <link>https://devblogs.microsoft.com/blog/take-your-postgresql-backed-apps-to-the-next-level</link>
       <guid>https://devblogs.microsoft.com/blog/take-your-postgresql-backed-apps-to-the-next-level</guid>
       <description><![CDATA[PostgreSQL is a powerful and hugely popular database engine, and it really comes alive across Microsoft developer platforms. You can build with PostgreSQL across Azure offerings, develop productively in Visual Studio Code with strong extensions and tooling, and connect your data to agentic...]]></description>
-      <dc:creator><![CDATA[Ismael Mejía]]></dc:creator>
+      <dc:creator><![CDATA[Ismael Mejía Useche]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 17:00:37 GMT</pubDate>
       <category><![CDATA[Microsoft Developers Blog]]></category>
     </item>
