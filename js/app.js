@@ -1265,7 +1265,40 @@
   // ===== Service Worker =====
   function registerServiceWorker() {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js").catch(function () {});
+      var hasReloadedForSwUpdate = false;
+
+      navigator.serviceWorker
+        .register("sw.js", { updateViaCache: "none" })
+        .then(function (registration) {
+          if (registration.waiting) {
+            registration.waiting.postMessage({ type: "SKIP_WAITING" });
+          }
+
+          registration.addEventListener("updatefound", function () {
+            var installingWorker = registration.installing;
+            if (!installingWorker) return;
+
+            installingWorker.addEventListener("statechange", function () {
+              if (
+                installingWorker.state === "installed" &&
+                navigator.serviceWorker.controller
+              ) {
+                installingWorker.postMessage({ type: "SKIP_WAITING" });
+              }
+            });
+          });
+
+          navigator.serviceWorker.addEventListener("controllerchange", function () {
+            if (hasReloadedForSwUpdate) return;
+            hasReloadedForSwUpdate = true;
+            window.location.reload();
+          });
+
+          setInterval(function () {
+            registration.update().catch(function () {});
+          }, 60000);
+        })
+        .catch(function () {});
     }
   }
 
