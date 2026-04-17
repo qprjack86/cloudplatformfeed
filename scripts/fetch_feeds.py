@@ -1040,23 +1040,55 @@ def parse_date(entry):
     return datetime.now(timezone.utc).isoformat()
 
 
+def _build_article_record(
+    *,
+    title,
+    link,
+    published,
+    summary,
+    blog,
+    blog_id,
+    author="Microsoft",
+    lifecycle_state=None,
+    date_precision=None,
+    extra_fields=None,
+):
+    """Build a normalized article payload with optional lifecycle fields."""
+    article = {
+        "title": title,
+        "link": link,
+        "published": published,
+        "summary": summary,
+        "blog": blog,
+        "blogId": blog_id,
+        "author": author,
+    }
+    if lifecycle_state is not None:
+        article["lifecycleState"] = lifecycle_state
+    if date_precision is not None:
+        article["datePrecision"] = date_precision
+    if extra_fields:
+        article.update(extra_fields)
+    return article
+
+
 def _entries_to_articles(entries, blog_name, blog_id):
     """Convert feed entries into article payloads with lifecycle and precision fields."""
     articles = []
     for entry in entries:
         summary = clean_html(entry.get("summary", ""))
         articles.append(
-            {
-                "title": clean_html(entry.get("title", "Untitled")),
-                "link": entry.get("link", ""),
-                "published": parse_date(entry),
-                "summary": truncate(summary),
-                "blog": blog_name,
-                "blogId": blog_id,
-                "author": entry.get("author", "Microsoft"),
-                "lifecycleState": "ga",
-                "datePrecision": "day",
-            }
+            _build_article_record(
+                title=clean_html(entry.get("title", "Untitled")),
+                link=entry.get("link", ""),
+                published=parse_date(entry),
+                summary=truncate(summary),
+                blog=blog_name,
+                blog_id=blog_id,
+                author=entry.get("author", "Microsoft"),
+                lifecycle_state="ga",
+                date_precision="day",
+            )
         )
     return articles
 
@@ -1074,25 +1106,44 @@ def _fetch_named_feed(blog_name, blog_id, feed_url):
     return articles
 
 
-def fetch_tech_community_feeds():
-    """Fetch articles from Tech Community blogs."""
+def _fetch_named_feeds_in_parallel(feed_specs):
+    """Fetch multiple named feeds in parallel and merge article results."""
     articles = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=FETCH_MAX_WORKERS) as executor:
-        future_to_blog = {}
-        for board_id, blog_name in BLOGS.items():
-            print(f"Fetching: {blog_name} ({board_id})...")
-            feed_url = TC_RSS_URL.format(board=board_id)
-            future = executor.submit(_fetch_named_feed, blog_name, board_id, feed_url)
-            future_to_blog[future] = blog_name
+        future_to_spec = {}
+        for spec in feed_specs:
+            print(f"Fetching: {spec['fetch_label']}...")
+            future = executor.submit(
+                _fetch_named_feed,
+                spec["blog_name"],
+                spec["blog_id"],
+                spec["feed_url"],
+            )
+            future_to_spec[future] = spec
 
-        for future in concurrent.futures.as_completed(future_to_blog):
-            blog_name = future_to_blog[future]
+        for future in concurrent.futures.as_completed(future_to_spec):
+            spec = future_to_spec[future]
             try:
                 articles.extend(future.result())
             except (requests.exceptions.RequestException, ValueError, TypeError) as exc:
-                print(f"  Error fetching {blog_name}: {exc}")
+                print(f"  Error fetching {spec['error_label']}: {exc}")
 
     return articles
+
+
+def fetch_tech_community_feeds():
+    """Fetch articles from Tech Community blogs."""
+    feed_specs = [
+        {
+            "blog_name": blog_name,
+            "blog_id": board_id,
+            "feed_url": TC_RSS_URL.format(board=board_id),
+            "fetch_label": f"{blog_name} ({board_id})",
+            "error_label": blog_name,
+        }
+        for board_id, blog_name in BLOGS.items()
+    ]
+    return _fetch_named_feeds_in_parallel(feed_specs)
 
 
 def fetch_aks_blog():
@@ -1107,22 +1158,17 @@ def fetch_aks_blog():
 
 def fetch_devblogs_feeds():
     """Fetch articles from Microsoft DevBlogs."""
-    articles = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=FETCH_MAX_WORKERS) as executor:
-        future_to_blog = {}
-        for blog_id, (blog_name, feed_url) in DEVBLOGS.items():
-            print(f"Fetching: {blog_name}...")
-            future = executor.submit(_fetch_named_feed, blog_name, blog_id, feed_url)
-            future_to_blog[future] = blog_name
-
-        for future in concurrent.futures.as_completed(future_to_blog):
-            blog_name = future_to_blog[future]
-            try:
-                articles.extend(future.result())
-            except (requests.exceptions.RequestException, ValueError, TypeError) as exc:
-                print(f"  Error fetching {blog_name}: {exc}")
-
-    return articles
+    feed_specs = [
+        {
+            "blog_name": blog_name,
+            "blog_id": blog_id,
+            "feed_url": feed_url,
+            "fetch_label": blog_name,
+            "error_label": blog_name,
+        }
+        for blog_id, (blog_name, feed_url) in DEVBLOGS.items()
+    ]
+    return _fetch_named_feeds_in_parallel(feed_specs)
 
 
 def fetch_savill_video():
@@ -1346,6 +1392,24 @@ def _extract_azure_update_retirement_date_by_id(update_id):
     return None
 
 
+def _resolve_linked_retirement_date(link, update_id=None):
+    """Resolve retirement date via Azure Updates id API first, then page scrape."""
+    token = str(update_id or _extract_azure_update_id_from_url(link) or "").strip()
+    try:
+        if token:
+            retirement_date = _extract_azure_update_retirement_date_by_id(token)
+            if retirement_date:
+                return retirement_date
+        return _extract_azure_update_retirement_date_from_page(link)
+    except (
+        requests.exceptions.RequestException,
+        ValueError,
+        TypeError,
+        RuntimeError,
+    ):
+        return None
+
+
 def _retirement_date_rank_key(value):
     """Rank retirement dates so day precision is preferred over month precision."""
     precision = _retirement_date_precision(value)
@@ -1409,6 +1473,28 @@ def _preferred_retirement_event_link(event):
             return source_report["link"]
 
     return event.get("link", "")
+
+
+def _index_retirement_event(events_by_key, event, dedupe_key, update_id_key, runtime_alias_key):
+    """Index one retirement event under all relevant dedupe keys."""
+    events_by_key[dedupe_key] = event
+    if update_id_key:
+        events_by_key[update_id_key] = event
+    if runtime_alias_key:
+        events_by_key[runtime_alias_key] = event
+
+
+def _collect_unique_retirement_events(events_by_key):
+    """Return unique event objects from a key-indexed event map."""
+    events = []
+    seen_ids = set()
+    for event in events_by_key.values():
+        event_identity = id(event)
+        if event_identity in seen_ids:
+            continue
+        seen_ids.add(event_identity)
+        events.append(event)
+    return events
 
 
 def _azure_retirement_identity_key(title, link):
@@ -1720,17 +1806,9 @@ def fetch_azure_updates_via_api():
                 current_retirement_date = article.get("azureRetirementDate", "")
                 current_precision = _retirement_date_precision(current_retirement_date)
                 if current_precision in (None, "month"):
-                    try:
-                        enriched_retirement_date = _extract_azure_update_retirement_date_from_page(
-                            article.get("link", "")
-                        )
-                    except (
-                        requests.exceptions.RequestException,
-                        ValueError,
-                        TypeError,
-                        RuntimeError,
-                    ):
-                        enriched_retirement_date = None
+                    enriched_retirement_date = _resolve_linked_retirement_date(
+                        article.get("link", "")
+                    )
                     if _prefer_retirement_date(enriched_retirement_date, current_retirement_date):
                         article["azureRetirementDate"] = enriched_retirement_date
                     enrich_budget -= 1
@@ -1764,23 +1842,21 @@ def fetch_azure_updates_via_rss():
         print("  Warning: Could not parse Azure Updates RSS feed")
         return articles
 
-    count = 0
     for entry in feed.entries:
         summary = clean_html(entry.get("summary", ""))
         articles.append(
-            {
-                "title": clean_html(entry.get("title", "Untitled")),
-                "link": entry.get("link", ""),
-                "published": parse_date(entry),
-                "summary": truncate(summary),
-                "blog": "Azure Updates",
-                "blogId": "azureupdates",
-                "author": entry.get("author", "Microsoft"),
-            }
+            _build_article_record(
+                title=clean_html(entry.get("title", "Untitled")),
+                link=entry.get("link", ""),
+                published=parse_date(entry),
+                summary=truncate(summary),
+                blog="Azure Updates",
+                blog_id="azureupdates",
+                author=entry.get("author", "Microsoft"),
+            )
         )
-        count += 1
 
-    print(f"  Found {count} RSS articles")
+    print(f"  Found {len(articles)} RSS articles")
     return articles
 
 
@@ -1828,22 +1904,23 @@ def fetch_aztty_feed(feed_url, blog_name, blog_id, announcement_type):
         title = clean_html(entry.get("title", "Untitled"))
         summary_full = clean_html(entry.get("summary", ""))
         lifecycle = _classify_azure_update_lifecycle(f"{title} {summary_full}", "")
-        article = {
-            "title": title,
-            "link": entry.get("link", ""),
-            "published": parse_date(entry),
-            "summary": truncate(summary_full),
-            "blog": blog_name,
-            "blogId": blog_id,
-            "author": entry.get("author", "Microsoft"),
-            "announcementType": announcement_type,
-        }
+        extra_fields = {"announcementType": announcement_type}
         if lifecycle:
-            article["lifecycle"] = lifecycle
+            extra_fields["lifecycle"] = lifecycle
         if lifecycle == "retiring":
             retirement_date = _extract_azure_retirement_date(title, summary_full)
             if retirement_date:
-                article["azureRetirementDate"] = retirement_date
+                extra_fields["azureRetirementDate"] = retirement_date
+        article = _build_article_record(
+            title=title,
+            link=entry.get("link", ""),
+            published=parse_date(entry),
+            summary=truncate(summary_full),
+            blog=blog_name,
+            blog_id=blog_id,
+            author=entry.get("author", "Microsoft"),
+            extra_fields=extra_fields,
+        )
         articles.append(article)
 
     print(f"  Found {len(articles)} RSS articles")
@@ -1932,18 +2009,7 @@ def _resolve_workbook_retirement_date(csv_retirement_date, link, cache, enrich_b
     if not has_cached_value:
         if enrich_budget <= 0:
             return csv_retirement_date, False, enrich_budget
-        try:
-            if update_id:
-                linked_retirement_date = _extract_azure_update_retirement_date_by_id(update_id)
-            if not linked_retirement_date:
-                linked_retirement_date = _extract_azure_update_retirement_date_from_page(link)
-        except (
-            requests.exceptions.RequestException,
-            ValueError,
-            TypeError,
-            RuntimeError,
-        ):
-            linked_retirement_date = None
+        linked_retirement_date = _resolve_linked_retirement_date(link, update_id=update_id)
         enrich_budget -= 1
         if cache_key:
             cache[cache_key] = linked_retirement_date
@@ -2391,11 +2457,13 @@ def build_azure_retirement_calendar(articles, max_items=DEFAULT_RETIREMENT_CALEN
                     if src
                 }
             )
-            events_by_key[dedupe_key] = existing
-            if update_id_key:
-                events_by_key[update_id_key] = existing
-            if runtime_alias_key:
-                events_by_key[runtime_alias_key] = existing
+            _index_retirement_event(
+                events_by_key,
+                existing,
+                dedupe_key,
+                update_id_key,
+                runtime_alias_key,
+            )
             continue
 
         event = {
@@ -2413,11 +2481,13 @@ def build_azure_retirement_calendar(articles, max_items=DEFAULT_RETIREMENT_CALEN
             "categories": [category or "Other"],
             "categorySourceMap": {source_key: category or "Other"} if source_key else {},
         }
-        events_by_key[dedupe_key] = event
-        if update_id_key:
-            events_by_key[update_id_key] = event
-        if runtime_alias_key:
-            events_by_key[runtime_alias_key] = event
+        _index_retirement_event(
+            events_by_key,
+            event,
+            dedupe_key,
+            update_id_key,
+            runtime_alias_key,
+        )
 
         # Register this event's identity tokens for same-date fuzzy matching of later articles.
         # Store runtime_alias_key and blogId alongside so version-distinct and same-feed
@@ -2429,13 +2499,7 @@ def build_azure_retirement_calendar(articles, max_items=DEFAULT_RETIREMENT_CALEN
             )
 
     events = []
-    seen_ids = set()
-    for event in events_by_key.values():
-        event_identity = id(event)
-        if event_identity in seen_ids:
-            continue
-        seen_ids.add(event_identity)
-        events.append(event)
+    events = _collect_unique_retirement_events(events_by_key)
     for event in events:
         event["sourceCount"] = len(event.get("sourceReports", []))
         event["link"] = _preferred_retirement_event_link(event)
@@ -2471,25 +2535,17 @@ def build_unified_retirement_calendar(
             return "azure"
         return "unknown"
 
+    def _append_source_articles(combined, source_articles):
+        for article in source_articles or []:
+            article_copy = dict(article)
+            if not article_copy.get("azureRetirementDate"):
+                article_copy["azureRetirementDate"] = article_copy.get("m365RetirementDate", "")
+            combined.append(article_copy)
+
     combined_articles = []
-
-    for article in azure_events or []:
-        article_copy = dict(article)
-        if not article_copy.get("azureRetirementDate"):
-            article_copy["azureRetirementDate"] = article_copy.get("m365RetirementDate", "")
-        combined_articles.append(article_copy)
-
-    for article in microsoft_events or []:
-        article_copy = dict(article)
-        if not article_copy.get("azureRetirementDate"):
-            article_copy["azureRetirementDate"] = article_copy.get("m365RetirementDate", "")
-        combined_articles.append(article_copy)
-
-    for article in m365_events or []:
-        article_copy = dict(article)
-        if not article_copy.get("azureRetirementDate"):
-            article_copy["azureRetirementDate"] = article_copy.get("m365RetirementDate", "")
-        combined_articles.append(article_copy)
+    _append_source_articles(combined_articles, azure_events)
+    _append_source_articles(combined_articles, microsoft_events)
+    _append_source_articles(combined_articles, m365_events)
 
     calendar = build_azure_retirement_calendar(combined_articles, max_items=max_items)
 
@@ -2796,6 +2852,8 @@ def load_previous_main_feed_article_count(path):
     if isinstance(data.get("totalArticles"), int):
         return data.get("totalArticles")
     return None
+
+
 def _build_retirement_run_metrics(retirement_calendar, retirement_buckets):
     """Return retirement coverage metrics for CI observability."""
     events = retirement_calendar or []
@@ -2876,6 +2934,32 @@ def write_run_metrics(metrics, output_path=None):
         return False
 
 
+def _record_failed_run(
+    *,
+    raw_article_count,
+    unique_article_count,
+    previous_article_count,
+    failsafe_details,
+    savill_video,
+    retirement_calendar,
+    retirement_buckets,
+):
+    """Write failure run metrics for early-return paths."""
+    run_metrics = build_run_metrics(
+        raw_article_count=raw_article_count,
+        unique_article_count=unique_article_count,
+        previous_article_count=previous_article_count,
+        failsafe_triggered=True,
+        failsafe_details=failsafe_details,
+        published=False,
+        summary_payload=None,
+        savill_video=savill_video,
+        retirement_calendar=retirement_calendar,
+        retirement_buckets=retirement_buckets,
+    )
+    write_run_metrics(run_metrics)
+
+
 def main():
     print("=" * 60)
     print("Microsoft Cloud Platform Feed - Fetching RSS Feeds")
@@ -2928,23 +3012,17 @@ def main():
     if not is_valid:
         print(f"❌ Feed validation failed: {validation_msg}")
         print("Aborting publish to preserve data integrity")
-        # Skip publish but log metrics as failed
         previous_count = load_previous_main_feed_article_count(output_path)
-        failsafe_triggered = True
         failsafe_details = f"Feed validation failed: {validation_msg}"
-        run_metrics = build_run_metrics(
+        _record_failed_run(
             raw_article_count=raw_article_count,
             unique_article_count=len(main_feed_articles),
             previous_article_count=previous_count,
-            failsafe_triggered=True,
             failsafe_details=failsafe_details,
-            published=False,
-            summary_payload=None,
             savill_video=savill_video,
             retirement_calendar=retirement_calendar,
             retirement_buckets=retirement_buckets,
         )
-        write_run_metrics(run_metrics)
         return
     
     print(f"✅ {validation_msg}")
@@ -2958,19 +3036,15 @@ def main():
     elif failsafe_triggered:
         print("Publish fail-safe triggered; skipping output write to preserve last good data")
         print(f"  {failsafe_details}")
-        run_metrics = build_run_metrics(
+        _record_failed_run(
             raw_article_count=raw_article_count,
             unique_article_count=len(main_feed_articles),
             previous_article_count=previous_count,
-            failsafe_triggered=True,
             failsafe_details=failsafe_details,
-            published=False,
-            summary_payload=None,
             savill_video=savill_video,
             retirement_calendar=retirement_calendar,
             retirement_buckets=retirement_buckets,
         )
-        write_run_metrics(run_metrics)
         return
     else:
         print("Publish fail-safe check passed")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Manage category mappings for M365 and Azure products interactively.
+Manage category mappings for M365 and Azure products via CLI.
 
 (Improvement #4: Configurable Category Mappings)
 """
@@ -26,19 +26,81 @@ def save_config(config):
     print(f"✅ Config saved to {CONFIG_PATH}")
 
 
+def _resolve_platform_mappings(mappings, platform):
+    """Return mappings for a platform or print a consistent error."""
+    platform_mappings = mappings.get(platform)
+    if platform_mappings is None:
+        print(f"❌ Platform '{platform}' not found in config")
+        return None
+    return platform_mappings
+
+
+def _resolve_category_keywords(platform_mappings, platform, category, show_available=False):
+    """Return keyword list for a category or print a consistent error."""
+    keywords = platform_mappings.get(category)
+    if keywords is None:
+        print(f"❌ Category '{category}' not found in {platform}")
+        if show_available:
+            print(f"   Available categories: {', '.join(platform_mappings.keys())}")
+        return None
+    return keywords
+
+
+def _mutate_keyword(platform, category, keyword, operation):
+    """Apply add/remove keyword operation and persist when changed."""
+    config = load_config()
+    mappings = config.get("categoryMappings", {})
+
+    platform_mappings = _resolve_platform_mappings(mappings, platform)
+    if platform_mappings is None:
+        return
+
+    category_keywords = _resolve_category_keywords(
+        platform_mappings,
+        platform,
+        category,
+        show_available=(operation == "add"),
+    )
+    if category_keywords is None:
+        return
+
+    if operation == "add":
+        if keyword in category_keywords:
+            print(f"⚠️  '{keyword}' already exists in {platform}/{category}")
+            return
+        category_keywords.append(keyword)
+        action = "Added"
+    elif operation == "remove":
+        if keyword not in category_keywords:
+            print(f"⚠️  '{keyword}' not found in {platform}/{category}")
+            return
+        category_keywords.remove(keyword)
+        action = "Removed"
+    else:
+        print(f"❌ Unsupported operation: {operation}")
+        return
+
+    config["categoryMappings"] = mappings
+    save_config(config)
+    print(f"✅ {action} '{keyword}' {'to' if operation == 'add' else 'from'} {platform}/{category}")
+
+
 def list_categories(platform="m365"):
     """List all categories and their keywords."""
     config = load_config()
-    mappings = config.get("categoryMappings", {}).get(platform, {})
+    mappings = config.get("categoryMappings", {})
+    platform_mappings = _resolve_platform_mappings(mappings, platform)
+    if platform_mappings is None:
+        return
     
     print(f"\n{'='*60}")
     print(f"  {platform.upper()} Category Mappings")
     print(f"{'='*60}\n")
     
-    for category, keywords in sorted(mappings.items()):
+    for category, keywords in sorted(platform_mappings.items()):
         keyword_count = len(keywords)
         print(f"  {category}: ({keyword_count} keywords)")
-        for i, kw in enumerate(keywords[:3]):
+        for kw in keywords[:3]:
             print(f"    • {kw}")
         if len(keywords) > 3:
             print(f"    ... and {len(keywords) - 3} more")
@@ -47,47 +109,12 @@ def list_categories(platform="m365"):
 
 def add_keyword(platform, category, keyword):
     """Add a keyword to a category."""
-    config = load_config()
-    mappings = config.get("categoryMappings", {})
-    
-    if platform not in mappings:
-        print(f"❌ Platform '{platform}' not found in config")
-        return
-    
-    if category not in mappings[platform]:
-        print(f"❌ Category '{category}' not found in {platform}")
-        print(f"   Available categories: {', '.join(mappings[platform].keys())}")
-        return
-    
-    if keyword not in mappings[platform][category]:
-        mappings[platform][category].append(keyword)
-        config["categoryMappings"] = mappings
-        save_config(config)
-        print(f"✅ Added '{keyword}' to {platform}/{category}")
-    else:
-        print(f"⚠️  '{keyword}' already exists in {platform}/{category}")
+    _mutate_keyword(platform, category, keyword, operation="add")
 
 
 def remove_keyword(platform, category, keyword):
     """Remove a keyword from a category."""
-    config = load_config()
-    mappings = config.get("categoryMappings", {})
-    
-    if platform not in mappings:
-        print(f"❌ Platform '{platform}' not found in config")
-        return
-    
-    if category not in mappings[platform]:
-        print(f"❌ Category '{category}' not found in {platform}")
-        return
-    
-    if keyword in mappings[platform][category]:
-        mappings[platform][category].remove(keyword)
-        config["categoryMappings"] = mappings
-        save_config(config)
-        print(f"✅ Removed '{keyword}' from {platform}/{category}")
-    else:
-        print(f"⚠️  '{keyword}' not found in {platform}/{category}")
+    _mutate_keyword(platform, category, keyword, operation="remove")
 
 
 def show_help():
@@ -124,30 +151,29 @@ def main():
         return 0
     
     cmd = sys.argv[1].lower()
+    help_aliases = {"help", "--help", "-h"}
+    keyword_commands = {
+        "add": add_keyword,
+        "remove": remove_keyword,
+    }
     
-    if cmd == "help" or cmd == "--help" or cmd == "-h":
+    if cmd in help_aliases:
         show_help()
         return 0
-    elif cmd == "list":
+    if cmd == "list":
         platform = sys.argv[2] if len(sys.argv) > 2 else "m365"
         list_categories(platform)
         return 0
-    elif cmd == "add":
+    if cmd in keyword_commands:
         if len(sys.argv) < 5:
-            print("❌ Usage: add <platform> <category> <keyword>")
+            print(f"❌ Usage: {cmd} <platform> <category> <keyword>")
             return 1
-        add_keyword(sys.argv[2], sys.argv[3], sys.argv[4])
+        keyword_commands[cmd](sys.argv[2], sys.argv[3], sys.argv[4])
         return 0
-    elif cmd == "remove":
-        if len(sys.argv) < 5:
-            print("❌ Usage: remove <platform> <category> <keyword>")
-            return 1
-        remove_keyword(sys.argv[2], sys.argv[3], sys.argv[4])
-        return 0
-    else:
-        print(f"❌ Unknown command: {cmd}")
-        show_help()
-        return 1
+
+    print(f"❌ Unknown command: {cmd}")
+    show_help()
+    return 1
 
 
 if __name__ == "__main__":

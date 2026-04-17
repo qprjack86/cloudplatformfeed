@@ -46,28 +46,35 @@ class NormalizeUrlTests(unittest.TestCase):
 
 class DedupeM365ArticlesTests(unittest.TestCase):
     """Test M365 article deduplication."""
+
+    def _iso_days_ago(self, days):
+        return (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+
+    def _article(self, title, link, published, **overrides):
+        article = {
+            "title": title,
+            "link": link,
+            "published": published,
+        }
+        article.update(overrides)
+        return article
     
     def test_dedupes_same_normalized_url(self):
         """Articles with same normalized URL should be deduplicated."""
-        now = datetime.now(timezone.utc)
-        published = (now - timedelta(days=1)).isoformat()
+        published = self._iso_days_ago(1)
         
         articles = [
-            {
-                "title": "First version",
-                "link": "https://deltapulse.app/item/MC123?utm_source=rss",
-                "published": published,
-            },
-            {
-                "title": "Different title same URL",
-                "link": "https://deltapulse.app/item/MC123?gclid=abc",
-                "published": published,
-            },
-            {
-                "title": "Unique article",
-                "link": "https://deltapulse.app/item/MC456",
-                "published": published,
-            },
+            self._article(
+                "First version",
+                "https://deltapulse.app/item/MC123?utm_source=rss",
+                published,
+            ),
+            self._article(
+                "Different title same URL",
+                "https://deltapulse.app/item/MC123?gclid=abc",
+                published,
+            ),
+            self._article("Unique article", "https://deltapulse.app/item/MC456", published),
         ]
         
         deduped = fetch_m365_data.dedupe_m365_articles(articles)
@@ -78,22 +85,22 @@ class DedupeM365ArticlesTests(unittest.TestCase):
 
     def test_keeps_distinct_message_center_ids(self):
         """Different message IDs should not be deduped together."""
-        fresh = datetime.now(timezone.utc).isoformat()
+        fresh = self._iso_days_ago(0)
         articles = [
-            {
-                "title": "Msg A",
-                "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC100",
-                "published": fresh,
-                "m365Source": "message_center",
-                "m365Id": "MC100",
-            },
-            {
-                "title": "Msg B",
-                "link": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC200",
-                "published": fresh,
-                "m365Source": "message_center",
-                "m365Id": "MC200",
-            },
+            self._article(
+                "Msg A",
+                "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC100",
+                fresh,
+                m365Source="message_center",
+                m365Id="MC100",
+            ),
+            self._article(
+                "Msg B",
+                "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC200",
+                fresh,
+                m365Source="message_center",
+                m365Id="MC200",
+            ),
         ]
 
         deduped = fetch_m365_data.dedupe_m365_articles(articles)
@@ -101,13 +108,12 @@ class DedupeM365ArticlesTests(unittest.TestCase):
     
     def test_discards_stale_articles(self):
         """Articles older than 30 days should be discarded."""
-        now = datetime.now(timezone.utc)
-        fresh = (now - timedelta(days=1)).isoformat()
-        stale = (now - timedelta(days=31)).isoformat()
+        fresh = self._iso_days_ago(1)
+        stale = self._iso_days_ago(31)
 
         articles = [
-            {"title": "Recent", "link": "https://deltapulse.app/d1", "published": fresh},
-            {"title": "Old", "link": "https://deltapulse.app/d2", "published": stale},
+            self._article("Recent", "https://deltapulse.app/d1", fresh),
+            self._article("Old", "https://deltapulse.app/d2", stale),
         ]
 
         deduped = fetch_m365_data.dedupe_m365_articles(articles)
@@ -116,22 +122,21 @@ class DedupeM365ArticlesTests(unittest.TestCase):
 
     def test_major_change_kept_past_30_days(self):
         """Major change articles should survive past the 30-day cutoff (up to 90 days)."""
-        now = datetime.now(timezone.utc)
-        stale_for_normal = (now - timedelta(days=45)).isoformat()
+        stale_for_normal = self._iso_days_ago(45)
 
         articles = [
-            {
-                "title": "Major Change",
-                "link": "https://deltapulse.app/d3",
-                "published": stale_for_normal,
-                "m365IsMajorChange": True,
-            },
-            {
-                "title": "Normal Old",
-                "link": "https://deltapulse.app/d4",
-                "published": stale_for_normal,
-                "m365IsMajorChange": False,
-            },
+            self._article(
+                "Major Change",
+                "https://deltapulse.app/d3",
+                stale_for_normal,
+                m365IsMajorChange=True,
+            ),
+            self._article(
+                "Normal Old",
+                "https://deltapulse.app/d4",
+                stale_for_normal,
+                m365IsMajorChange=False,
+            ),
         ]
 
         deduped = fetch_m365_data.dedupe_m365_articles(articles)
@@ -140,16 +145,15 @@ class DedupeM365ArticlesTests(unittest.TestCase):
 
     def test_major_change_discarded_after_90_days(self):
         """Major change articles older than 90 days should still be discarded."""
-        now = datetime.now(timezone.utc)
-        very_old = (now - timedelta(days=91)).isoformat()
+        very_old = self._iso_days_ago(91)
 
         articles = [
-            {
-                "title": "Ancient Major Change",
-                "link": "https://deltapulse.app/d5",
-                "published": very_old,
-                "m365IsMajorChange": True,
-            },
+            self._article(
+                "Ancient Major Change",
+                "https://deltapulse.app/d5",
+                very_old,
+                m365IsMajorChange=True,
+            ),
         ]
 
         deduped = fetch_m365_data.dedupe_m365_articles(articles)
@@ -208,18 +212,36 @@ class ClassifyM365LifecycleTests(unittest.TestCase):
 
 class BuildArticleFromM365ItemTests(unittest.TestCase):
     """Test conversion from M365 item to article schema."""
-    
-    def test_converts_message_center_item(self):
-        """Message Center items should convert properly."""
+
+    def _message_center_item(self, **overrides):
         item = {
             "id": "MC1255714",
             "title": "New feature announcement",
             "source": "message_center",
             "publishedDate": "2026-03-19T04:39:14.000Z",
-            "service": ["Teams", "SharePoint"],
-            "category": "stayInformed",
+            "service": ["Teams"],
             "url": "https://deltapulse.app/item/MC1255714",
         }
+        item.update(overrides)
+        return item
+
+    def _roadmap_item(self, **overrides):
+        item = {
+            "id": "558435",
+            "title": "Roadmap feature",
+            "source": "roadmap",
+            "status": "In development",
+            "service": ["Microsoft 365"],
+        }
+        item.update(overrides)
+        return item
+    
+    def test_converts_message_center_item(self):
+        """Message Center items should convert properly."""
+        item = self._message_center_item(
+            service=["Teams", "SharePoint"],
+            category="stayInformed",
+        )
         
         article = fetch_m365_data.build_article_from_m365_item(item)
         
@@ -236,15 +258,12 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
     def test_overrides_deltapulse_message_center_link(self):
         """Message Center items should resolve to DeltaPulse URL when available."""
-        item = {
-            "id": "MC999999",
-            "title": "Admin portal update",
-            "source": "message_center",
-            "publishedDate": "2026-03-19T04:39:14.000Z",
-            "service": ["Teams"],
-            "url": "https://deltapulse.app/item/MC999999",
-            "detailsUrl": "https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC999999",
-        }
+        item = self._message_center_item(
+            id="MC999999",
+            title="Admin portal update",
+            url="https://deltapulse.app/item/MC999999",
+            detailsUrl="https://admin.microsoft.com/Adminportal/Home?#/MessageCenter/:/messages/MC999999",
+        )
 
         article = fetch_m365_data.build_article_from_m365_item(item)
 
@@ -255,13 +274,11 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
     def test_message_center_falls_back_to_item_page(self):
         """Message Center items without URL should fall back to DeltaPulse dashboard search."""
-        item = {
-            "id": "MC888888",
-            "title": "Missing URL update",
-            "source": "message_center",
-            "publishedDate": "2026-03-19T04:39:14.000Z",
-            "service": ["Teams"],
-        }
+        item = self._message_center_item(
+            id="MC888888",
+            title="Missing URL update",
+        )
+        item.pop("url")
 
         article = fetch_m365_data.build_article_from_m365_item(item)
         self.assertEqual(
@@ -271,14 +288,10 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
     def test_roadmap_item_gets_deltapulse_url(self):
         """Roadmap items should link to the DeltaPulse card, not the M365 roadmap page."""
-        item = {
-            "id": "558435",
-            "title": "Security Update Alerts",
-            "source": "roadmap",
-            "status": "In development",
-            "service": ["Microsoft 365"],
-            "url": "https://deltapulse.app/item/558435",
-        }
+        item = self._roadmap_item(
+            title="Security Update Alerts",
+            url="https://deltapulse.app/item/558435",
+        )
 
         article = fetch_m365_data.build_article_from_m365_item(item)
 
@@ -289,13 +302,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
     def test_roadmap_item_falls_back_to_deltapulse_search(self):
         """Roadmap items without a URL should fall back to DeltaPulse dashboard search."""
-        item = {
-            "id": "558435",
-            "title": "Security Update Alerts",
-            "source": "roadmap",
-            "status": "In development",
-            "service": ["Microsoft 365"],
-        }
+        item = self._roadmap_item(title="Security Update Alerts")
 
         article = fetch_m365_data.build_article_from_m365_item(item)
 
@@ -306,14 +313,12 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
     def test_roadmap_item_uses_release_date_for_target_date(self):
         """Roadmap items should preserve DeltaPulse releaseDate for expected release display."""
-        item = {
-            "id": "558679",
-            "title": "Teams preview improvements",
-            "source": "roadmap",
-            "status": "In development",
-            "service": ["Microsoft Teams"],
-            "releaseDate": "June CY2026",
-        }
+        item = self._roadmap_item(
+            id="558679",
+            title="Teams preview improvements",
+            service=["Microsoft Teams"],
+            releaseDate="June CY2026",
+        )
 
         article = fetch_m365_data.build_article_from_m365_item(item)
 
@@ -321,28 +326,22 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
 
     def test_published_date_falls_back_through_fields(self):
         """Items without publishedDate should try other date fields."""
-        item = {
-            "id": "558435",
-            "title": "Roadmap item",
-            "source": "roadmap",
-            "status": "In development",
-            "service": [],
-            "lastModifiedDateTime": "2026-03-18T10:00:00.000Z",
-        }
+        item = self._roadmap_item(
+            title="Roadmap item",
+            service=[],
+            lastModifiedDateTime="2026-03-18T10:00:00.000Z",
+        )
 
         article = fetch_m365_data.build_article_from_m365_item(item)
         self.assertEqual(article["published"], "2026-03-18T10:00:00.000Z")
 
     def test_published_date_uses_created_date(self):
         """Roadmap items should use createdDate when datetime fields are absent."""
-        item = {
-            "id": "558435",
-            "title": "Roadmap item",
-            "source": "roadmap",
-            "status": "In development",
-            "service": [],
-            "createdDate": "2026-03-18T00:00:00.000Z",
-        }
+        item = self._roadmap_item(
+            title="Roadmap item",
+            service=[],
+            createdDate="2026-03-18T00:00:00.000Z",
+        )
 
         article = fetch_m365_data.build_article_from_m365_item(item)
         self.assertEqual(article["published"], "2026-03-18T00:00:00.000Z")
@@ -461,8 +460,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(article["m365RetirementEndDate"], "2099-04-14")
         self.assertEqual(article["m365RetirementDate"], "2099-04-14")
 
-    def test_retirement_date_precedence_range_then_day_then_month(self):
-        # Range present: use range end date over other date hints.
+    def test_retirement_date_precedence_prefers_range_end(self):
         range_item = {
             "id": "MC200101",
             "title": "Retirement: feature with staged rollout",
@@ -480,7 +478,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertEqual(range_article["m365RetirementEndDate"], "2099-04-14")
         self.assertEqual(range_article["m365RetirementDate"], "2099-04-14")
 
-        # Single specific day without a range: use the day.
+    def test_retirement_date_precedence_prefers_specific_day(self):
         day_item = {
             "id": "MC200102",
             "title": "Retirement: feature cutoff",
@@ -495,7 +493,7 @@ class BuildArticleFromM365ItemTests(unittest.TestCase):
         self.assertIsNone(day_article["m365RetirementEndDate"])
         self.assertEqual(day_article["m365RetirementDate"], "2099-07-31")
 
-        # Month-only mention with no specific day: fall back to month precision.
+    def test_retirement_date_precedence_falls_back_to_month(self):
         month_item = {
             "id": "MC200103",
             "title": "Retirement of feature in October 2099",

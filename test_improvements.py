@@ -9,15 +9,34 @@ from pathlib import Path
 
 # Add scripts directory to path
 REPO_ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(REPO_ROOT / "scripts"))
+SCRIPTS_PATH = str(REPO_ROOT / "scripts")
+if SCRIPTS_PATH not in sys.path:
+    sys.path.insert(0, SCRIPTS_PATH)
 
-from feed_common import validate_feed_data, validate_article_schema
+from feed_common import validate_feed_data
+
+
+def print_test_header(title):
+    print("\n" + "=" * 70)
+    print(f"TEST: {title}")
+    print("=" * 70)
+
+
+def check_script_exists(script_name, test_title, success_message):
+    print_test_header(test_title)
+
+    script_path = REPO_ROOT / "scripts" / script_name
+    if script_path.exists():
+        print(f"✓ {script_name} exists at {script_path}")
+        print(f"\n✅ PASS: {success_message}")
+        return True
+
+    print(f"\n❌ FAIL: {script_name} not found")
+    return False
 
 def test_improvement_1():
     """Test Improvement #1: Retirement Calendar & Lifecycle Data Robustness"""
-    print("\n" + "="*70)
-    print("TEST: Improvement #1 - Lifecycle Data & Schema Validation")
-    print("="*70)
+    print_test_header("Improvement #1 - Lifecycle Data & Schema Validation")
     
     # Load feeds.json
     feeds_path = REPO_ROOT / "data" / "feeds.json"
@@ -48,9 +67,7 @@ def test_improvement_1():
 
 def test_improvement_3():
     """Test Improvement #3: MCP Cache Functions"""
-    print("\n" + "="*70)
-    print("TEST: Improvement #3 - MCP Resilience & Cache Functions")
-    print("="*70)
+    print_test_header("Improvement #3 - MCP Resilience & Cache Functions")
     
     # Check that cache functions exist in fetch_m365_data
     try:
@@ -66,9 +83,7 @@ def test_improvement_3():
 
 def test_improvement_4():
     """Test Improvement #4: Configurable Category Mappings"""
-    print("\n" + "="*70)
-    print("TEST: Improvement #4 - Configurable Category Mappings")
-    print("="*70)
+    print_test_header("Improvement #4 - Configurable Category Mappings")
     
     config_path = REPO_ROOT / "config" / "site.json"
     with open(config_path) as f:
@@ -92,13 +107,12 @@ def test_improvement_4():
     try:
         from fetch_m365_data import M365_PRODUCT_CATEGORIES
         print(f"✓ M365_PRODUCT_CATEGORIES loaded: {len(M365_PRODUCT_CATEGORIES)} categories")
-        
-        if M365_PRODUCT_CATEGORIES == m365_cats:
-            print("\n✅ PASS: Improvement #4 - Categories loaded from config")
-            return True
-        else:
+
+        if M365_PRODUCT_CATEGORIES != m365_cats:
             print("\n⚠️  PARTIAL: Categories may have defaults merged")
-            return True
+
+        print("\n✅ PASS: Improvement #4 - Categories loaded from config")
+        return True
             
     except ImportError as e:
         print(f"\n❌ FAIL: Could not import M365_PRODUCT_CATEGORIES: {e}")
@@ -107,49 +121,36 @@ def test_improvement_4():
 
 def test_validation_script():
     """Test that validate_feeds.py script exists and runs"""
-    print("\n" + "="*70)
-    print("TEST: New Validation Script")
-    print("="*70)
-    
-    validate_script = REPO_ROOT / "scripts" / "validate_feeds.py"
-    if validate_script.exists():
-        print(f"✓ validate_feeds.py exists at {validate_script}")
-        print("\n✅ PASS: Validation script created")
-        return True
-    else:
-        print(f"\n❌ FAIL: validate_feeds.py not found")
-        return False
+    return check_script_exists(
+        "validate_feeds.py",
+        "New Validation Script",
+        "Validation script created",
+    )
 
 
 def test_manage_categories_script():
     """Test that manage_categories.py script exists"""
-    print("\n" + "="*70)
-    print("TEST: Category Management Script")
-    print("="*70)
-    
-    manage_script = REPO_ROOT / "scripts" / "manage_categories.py"
-    if manage_script.exists():
-        print(f"✓ manage_categories.py exists at {manage_script}")
-        print("\n✅ PASS: Category management script created")
-        return True
-    else:
-        print(f"\n❌ FAIL: manage_categories.py not found")
-        return False
+    return check_script_exists(
+        "manage_categories.py",
+        "Category Management Script",
+        "Category management script created",
+    )
 
 
 def main():
     """Run all tests"""
     print("\n" + "🔍 "*20)
-    print("   TESTING IMPROVEMENTS 1-4 IMPLEMENTATION")
+    print("   TESTING IMPROVEMENTS IMPLEMENTATION")
     print("🔍 "*20)
-    
-    results = {
-        "Improvement 1 (Schema Validation)": test_improvement_1(),
-        "Improvement 3 (MCP Resilience)": test_improvement_3(),
-        "Improvement 4 (Config Categories)": test_improvement_4(),
-        "Validation Script": test_validation_script(),
-        "Category Management Script": test_manage_categories_script(),
-    }
+
+    checks = [
+        ("Improvement 1 (Schema Validation)", test_improvement_1),
+        ("Improvement 3 (MCP Resilience)", test_improvement_3),
+        ("Improvement 4 (Config Categories)", test_improvement_4),
+        ("Validation Script", test_validation_script),
+        ("Category Management Script", test_manage_categories_script),
+    ]
+    results = {name: fn() for name, fn in checks}
     
     print("\n" + "="*70)
     print("TEST SUMMARY")

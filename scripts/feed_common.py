@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
@@ -15,6 +16,18 @@ from urllib3.util.retry import Retry
 
 DEFAULT_STATUS_FORCELIST = (429, 500, 502, 503, 504)
 DEFAULT_PORTS = {"http": 80, "https": 443}
+CHECKSUM_READ_CHUNK_SIZE = 8192
+ARTICLE_VALIDATION_ISSUE_LIMIT = 5
+DEFAULT_REQUIRED_ARTICLE_FIELDS = (
+    "title",
+    "link",
+    "published",
+    "summary",
+    "blog",
+    "blogId",
+    "author",
+)
+YOUTUBE_CHANNEL_ID_PATTERN = re.compile(r'"channelId"\s*:\s*"([A-Za-z0-9_-]+)"')
 
 
 def normalize_host(value):
@@ -154,9 +167,7 @@ def resolve_youtube_channel_id_from_seed(session, seed_url, timeout):
     response = session.get(seed_url, timeout=timeout)
     response.raise_for_status()
 
-    import re
-
-    channel_match = re.search(r'"channelId"\s*:\s*"([A-Za-z0-9_-]+)"', response.text)
+    channel_match = YOUTUBE_CHANNEL_ID_PATTERN.search(response.text)
     if not channel_match:
         return ""
     return channel_match.group(1)
@@ -176,15 +187,17 @@ def select_best_youtube_video_entry(entries, match_score_fn):
 
 def _artifact_checksum_record(path, generated_at):
     """Return checksum metadata for an existing artifact file."""
-    if ".." in str(path):
-        raise Exception("Invalid file path")
+    path_obj = Path(path)
+    if ".." in path_obj.parts:
+        raise ValueError("Invalid file path")
+
     sha256 = hashlib.sha256()
-    with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(8192), b""):
+    with open(path_obj, "rb") as f:
+        for chunk in iter(lambda: f.read(CHECKSUM_READ_CHUNK_SIZE), b""):
             sha256.update(chunk)
 
     return {
-        "path": Path(path).as_posix(),
+        "path": path_obj.as_posix(),
         "algorithm": "sha256",
         "value": sha256.hexdigest(),
         "generatedAt": generated_at,
@@ -266,6 +279,18 @@ def evaluate_publish_failsafe(new_count, previous_count, min_articles=80, min_ra
     return triggered, details
 
 
+def _is_missing_required_field(article, field):
+    return field not in article or not str(article.get(field, "")).strip()
+
+
+def _apply_article_defaults(article):
+    if "lifecycleState" not in article or not article.get("lifecycleState"):
+        article["lifecycleState"] = "ga"
+
+    if "datePrecision" not in article or not article.get("datePrecision"):
+        article["datePrecision"] = "day"
+
+
 def validate_article_schema(article, required_fields=None):
     """Validate article against required schema with sensible defaults.
     
@@ -273,58 +298,51 @@ def validate_article_schema(article, required_fields=None):
     Sets default values for lifecycleState and datePrecision if missing.
     """
     if required_fields is None:
-        required_fields = ["title", "link", "published", "summary", "blog", "blogId", "author"]
-    
-    # Check required fields
+        required_fields = DEFAULT_REQUIRED_ARTICLE_FIELDS
+
     errors = []
     for field in required_fields:
-        if field not in article or not str(article.get(field, "")).strip():
+        if _is_missing_required_field(article, field):
             errors.append(f"Missing or empty required field: {field}")
-    
-    # Set defaults for optional fields
-    if "lifecycleState" not in article or not article.get("lifecycleState"):
-        article["lifecycleState"] = "ga"
-    
-    if "datePrecision" not in article or not article.get("datePrecision"):
-        article["datePrecision"] = "day"
-    
+
+    _apply_article_defaults(article)
+
     if errors:
         return False, "; ".join(errors)
-    
+
     return True, ""
 
 
-def validate_feed_data(articles, min_coverage_percent=85):
+def validate_feed_data(articles, min_coverage_percent=85, logger=None):
     """Validate entire feed for schema compliance and data quality.
     
     Returns (is_valid, summary_message).
     """
     if not articles:
         return False, "No articles to validate"
-    
+
     total = len(articles)
     valid_count = 0
     validation_issues = []
-    
+
     for idx, article in enumerate(articles):
         is_valid, msg = validate_article_schema(article)
         if is_valid:
             valid_count += 1
         else:
-            # Only record first 5 issues to avoid excessive logging
-            if len(validation_issues) < 5:
+            if len(validation_issues) < ARTICLE_VALIDATION_ISSUE_LIMIT:
                 validation_issues.append(f"Article {idx}: {msg}")
-    
+
     coverage = (valid_count / total) * 100
-    
+
     if coverage < min_coverage_percent:
         return False, f"Coverage {coverage:.1f}% below threshold {min_coverage_percent}%"
-    
+
     summary = f"Validation passed: {valid_count}/{total} articles valid ({coverage:.1f}%)"
-    
-    # Log issues if any (but validation still passes if coverage is sufficient)
+
+    emit = logger if logger else print
     if validation_issues:
         for issue in validation_issues:
-            print(f"  ⚠️  {issue}")
-    
+            emit(f"  ⚠️  {issue}")
+
     return True, summary
