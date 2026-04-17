@@ -939,13 +939,28 @@
         event.parsedDate.getMonth() === anchorMonth.getMonth()
       );
     });
+
+    // If a specific date is selected, filter to just that date's events
+    var displayEvents = monthEvents;
+    var listHeaderPrefix = "Retiring this month";
+    if (selectedRetirementDate) {
+      displayEvents = monthEvents.filter(function (event) {
+        return formatLocalDateISO(event.parsedDate) === selectedRetirementDate;
+      });
+      var selectedDateObj = new Date(selectedRetirementDate + "T00:00:00Z");
+      listHeaderPrefix = "Retiring on " + formatLocalDate(selectedDateObj, {
+        month: "short",
+        day: "numeric"
+      });
+    }
+
     var monthEndDay = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 0).getDate();
     var dayStats = buildRetirementDayStats(monthEvents, anchorMonth, monthEndDay);
     var dayCells = buildRetirementDayCells(anchorMonth, todayDate, monthEndDay, dayStats);
 
     var defaultMonthListLimit = 8;
     var isMonthListExpanded = Boolean(retirementCalendarListExpandedState[sourceKey]);
-    var monthList = buildRetirementMonthList(monthEvents, isMonthListExpanded, defaultMonthListLimit);
+    var monthList = buildRetirementMonthList(displayEvents, isMonthListExpanded, defaultMonthListLimit);
     var monthItemsHtml = monthList.monthItemsHtml;
     var monthListToggleHtml = monthList.monthListToggleHtml;
 
@@ -1009,7 +1024,7 @@
       '<div class="retirement-mini-weekdays"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>' +
       '<div class="retirement-mini-grid">' + dayCells.join("") + "</div>" +
       (monthItemsHtml
-        ? '<div class="retirement-mini-list' + (isMonthListExpanded ? ' is-expanded' : '') + '"><h3>Retiring this month · ' + monthEvents.length + ' event(s)</h3><ul>' + monthItemsHtml + '</ul>' + monthListToggleHtml + "</div>"
+        ? '<div class="retirement-mini-list' + (isMonthListExpanded ? ' is-expanded' : '') + '"><h3>' + escapeHtml(listHeaderPrefix) + ' · ' + displayEvents.length + ' event(s)</h3><ul>' + monthItemsHtml + '</ul>' + monthListToggleHtml + "</div>"
         : "") +
       "</div>";
 
