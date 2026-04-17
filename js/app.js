@@ -1457,7 +1457,8 @@
   }
 
   function getPrimaryCategory() {
-    return filterHelpers.firstSelectedOrAll(selectedCategories);
+    var activeCategories = getActiveCategories();
+    return activeCategories.length ? activeCategories[0] : "all";
   }
 
   function saveCategorySelection() {

@@ -1,24 +1,35 @@
 (function () {
   "use strict";
 
+  var DEFAULT_URL = "data/checksums.json";
+  var DEFAULT_POLL_INTERVAL_MS = 5 * 60 * 1000;
+
+  function noop() {}
+
   function defaultToken(payload) {
     if (!payload) return "";
     return String(payload.generatedAt || "");
   }
 
+  function normalizeOptions(options) {
+    var config = options || {};
+    return {
+      url: config.url ? config.url : DEFAULT_URL,
+      pollIntervalMs: config.pollIntervalMs ? config.pollIntervalMs : DEFAULT_POLL_INTERVAL_MS,
+      onChange: config.onChange ? config.onChange : noop
+    };
+  }
+
   function create(options) {
-    var url = options && options.url ? options.url : "data/checksums.json";
-    var pollIntervalMs = options && options.pollIntervalMs ? options.pollIntervalMs : 5 * 60 * 1000;
-    var onChange = options && options.onChange ? options.onChange : function () {};
-    var extractToken = options && options.extractToken ? options.extractToken : defaultToken;
+    var config = normalizeOptions(options);
     var timerId = null;
     var baseline = "";
 
     async function fetchToken() {
-      var response = await fetch(url, { cache: "no-store" });
+      var response = await fetch(config.url, { cache: "no-store" });
       if (!response.ok) throw new Error("Checksum request failed");
       var payload = await response.json();
-      return extractToken(payload);
+      return defaultToken(payload);
     }
 
     async function check() {
@@ -29,27 +40,29 @@
           baseline = token;
           return;
         }
-        if (token !== baseline) {
-          baseline = token;
-          onChange(token);
-        }
+        if (token === baseline) return;
+        baseline = token;
+        config.onChange(token);
       } catch (e) {
         // Silent network failure; next cycle retries.
       }
     }
 
+    function start() {
+      if (timerId) return;
+      check();
+      timerId = window.setInterval(check, config.pollIntervalMs);
+    }
+
+    function stop() {
+      if (!timerId) return;
+      window.clearInterval(timerId);
+      timerId = null;
+    }
+
     return {
-      start: function () {
-        if (timerId) return;
-        check();
-        timerId = window.setInterval(check, pollIntervalMs);
-      },
-      stop: function () {
-        if (!timerId) return;
-        window.clearInterval(timerId);
-        timerId = null;
-      },
-      checkNow: check
+      start: start,
+      stop: stop
     };
   }
 
