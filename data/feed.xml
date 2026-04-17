@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 17 Apr 2026 15:33:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 15:50:00 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -33,6 +33,15 @@
       <dc:creator><![CDATA[carlottacaste]]></dc:creator>
       <pubDate>Fri, 17 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Discoverable – Observable MCP Server]]></title>
+      <link>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</link>
+      <guid>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</guid>
+      <description><![CDATA[How to build an observable MCP Server with discoverable tools and agents. The post Discoverable – Observable MCP Server appeared first on ISE Developer Blog.]]></description>
+      <dc:creator><![CDATA[Colin Desmond]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[ISE Developer Blog]]></category>
     </item>
     <item>
       <title><![CDATA[New in Azure SRE Agent: Log Analytics and Application Insights Connectors]]></title>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 21:15:15 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Site Recovery support for Windows Azure VMs with NVMe disk controllers.]]></title>
-      <link>https://azure.microsoft.com/updates?id=560241</link>
-      <guid>https://azure.microsoft.com/updates?id=560241</guid>
-      <description><![CDATA[Azure Site Recovery now supports replication and disaster recovery for Windows Azure Virtual Machines running on NVMe-enabled Generation 2 VM families, such as the Da/Ea/Fa v6-series and Ebsv5/Ebdsv5 in the Azure-to-Azure scenario. This enhancement allowsUpdate Type: Preview, Services: Virtual...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 21:15:15 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
