@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 17 Apr 2026 08:25:42 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 11:56:16 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -24,6 +24,15 @@
       <dc:creator><![CDATA[carlottacaste]]></dc:creator>
       <pubDate>Fri, 17 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Discoverable – Observable MCP Server]]></title>
+      <link>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</link>
+      <guid>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</guid>
+      <description><![CDATA[How to build an observable MCP Server with discoverable tools and agents. The post Discoverable – Observable MCP Server appeared first on ISE Developer Blog.]]></description>
+      <dc:creator><![CDATA[Colin Desmond]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[ISE Developer Blog]]></category>
     </item>
     <item>
       <title><![CDATA[New in Azure SRE Agent: Log Analytics and Application Insights Connectors]]></title>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 14 Apr 2026 21:15:15 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Building a Scalable IoT Platform for Facility Management with Azure Serverless Services]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-scalable-iot-platform-for-facility-management-with/ba-p/4495263</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-scalable-iot-platform-for-facility-management-with/ba-p/4495263</guid>
-      <description><![CDATA[The platform follows a microservices architecture with six independently deployable services, all built on Azure Functions v4 with TypeScript. Each service is containerized and deployed to Azure Container Apps. ┌──────────────────────────────────────────────────────────────────────────────┐ │...]]></description>
-      <dc:creator><![CDATA[nishantmv]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 20:44:41 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
     </item>
   </channel>
 </rss>
