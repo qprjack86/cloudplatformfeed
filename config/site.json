@@ -36,7 +36,9 @@
     ],
     "milestones": [
       "eoas",
-      "eol"
+      "eol",
+      "eoes_start",
+      "eoes"
     ],
     "maxEvents": 120
   },

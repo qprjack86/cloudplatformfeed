@@ -1174,6 +1174,43 @@ class MicrosoftLifecycleRetirementTests(unittest.TestCase):
 
         self.assertEqual(len(events), 1)
 
+    def test_fetch_microsoft_lifecycle_retirements_includes_esu_begin_and_end(self):
+        payloads = {
+            fetch_feeds.MICROSOFT_LIFECYCLE_TAG_API: {
+                "result": [{"name": "windows-server"}],
+            },
+            "https://endoflife.date/api/v1/products/windows-server/": {
+                "result": {
+                    "label": "Microsoft Windows Server",
+                    "links": {"html": "https://endoflife.date/windows-server"},
+                    "releases": [
+                        {
+                            "label": "Windows Server 2016 (LTSC)",
+                            "eoasFrom": "2027-01-12",
+                            "eolFrom": "2027-01-12",
+                            "eoesFrom": "2032-01-13",
+                        }
+                    ],
+                }
+            },
+        }
+
+        with mock.patch.object(fetch_feeds, "_fetch_json_payload", side_effect=lambda url: payloads[url]):
+            events = fetch_feeds.fetch_microsoft_lifecycle_retirements(
+                {
+                    "enabled": True,
+                    "products": ["windows-server"],
+                    "milestones": ["eoes_start", "eoes"],
+                    "maxEvents": 20,
+                }
+            )
+
+        self.assertEqual(len(events), 2)
+        self.assertEqual(events[0]["azureRetirementDate"], "2027-01-12")
+        self.assertEqual(events[1]["azureRetirementDate"], "2032-01-13")
+        self.assertIn("Extended security updates begin", events[0]["title"])
+        self.assertIn("Extended security updates end", events[1]["title"])
+
 
 class RetirementCalendarTests(unittest.TestCase):
     def test_build_azure_retirement_calendar_dedupes_and_aggregates_sources(self):

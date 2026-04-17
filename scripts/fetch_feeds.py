@@ -144,7 +144,7 @@ DEFAULT_MICROSOFT_LIFECYCLE_PRODUCTS = [
     "powershell",
     "visual-studio",
 ]
-DEFAULT_MICROSOFT_LIFECYCLE_MILESTONES = ["eoas", "eol"]
+DEFAULT_MICROSOFT_LIFECYCLE_MILESTONES = ["eoas", "eol", "eoes_start", "eoes"]
 DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP = 120
 DEFAULT_RETIREMENT_CALENDAR_EVENT_CAP = 500
 
@@ -276,7 +276,7 @@ def _load_microsoft_lifecycle_config(config_path=SITE_CONFIG_PATH):
                 normalized = []
                 for milestone in milestones:
                     key = str(milestone or "").strip().lower()
-                    if key in {"eoas", "eol", "eoes"} and key not in normalized:
+                    if key in {"eoas", "eol", "eoes_start", "eoes"} and key not in normalized:
                         normalized.append(key)
                 if normalized:
                     config["milestones"] = normalized
@@ -2165,8 +2165,26 @@ def _microsoft_lifecycle_milestone_label(key):
     return {
         "eoas": "Active support ends",
         "eol": "Security support ends",
+        "eoes_start": "Extended security updates begin",
         "eoes": "Extended security updates end",
     }.get(key, "Support milestone")
+
+
+def _microsoft_lifecycle_milestone_date(release, milestone):
+    """Resolve the source date field for a microsoft lifecycle milestone."""
+    if not isinstance(release, dict):
+        return None
+
+    if milestone == "eoes_start":
+        # Only emit ESU start when an ESU end exists for the same release.
+        if not release.get("eoesFrom"):
+            return None
+        return release.get("eolFrom")
+
+    if milestone in {"eoas", "eol", "eoes"}:
+        return release.get(f"{milestone}From")
+
+    return None
 
 
 def fetch_microsoft_lifecycle_retirements(config=None):
@@ -2180,7 +2198,11 @@ def fetch_microsoft_lifecycle_retirements(config=None):
         return []
 
     products = [str(p or "").strip().lower() for p in settings.get("products", []) if str(p or "").strip()]
-    milestones = [m for m in settings.get("milestones", []) if m in {"eoas", "eol", "eoes"}]
+    milestones = [
+        m
+        for m in settings.get("milestones", [])
+        if m in {"eoas", "eol", "eoes_start", "eoes"}
+    ]
     max_events = int(settings.get("maxEvents", DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP) or DEFAULT_MICROSOFT_LIFECYCLE_EVENT_CAP)
 
     if not products or not milestones:
@@ -2230,7 +2252,7 @@ def fetch_microsoft_lifecycle_retirements(config=None):
                 continue
 
             for milestone in milestones:
-                raw_date = release.get(f"{milestone}From")
+                raw_date = _microsoft_lifecycle_milestone_date(release, milestone)
                 retirement_date = _normalize_structured_retirement_date(raw_date)
                 if not retirement_date or not _is_retirement_date_future(retirement_date):
                     continue
