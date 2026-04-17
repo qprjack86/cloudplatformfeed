@@ -9,7 +9,14 @@ const STATIC_ASSETS = [
   "/icons/atech-512.png",
 ];
 
-const FEED_PATH_TOKENS = ["feeds.json", "feed.xml", "m365_data.json"];
+const FEED_PATH_TOKENS = [
+  "feeds.json",
+  "feed.xml",
+  "m365_data.json",
+  "retirements.json",
+  "checksums.json",
+  "m365_checksums.json",
+];
 const ICON_EXTENSIONS = [".ico", ".png", ".svg"];
 
 function shouldCache(response) {
