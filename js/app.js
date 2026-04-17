@@ -2505,6 +2505,15 @@
       }
     });
 
+    // Deselect calendar date filter when clicking anywhere outside date cells.
+    document.addEventListener("click", function (e) {
+      if (!selectedRetirementDate) return;
+      if (e.target.closest(".retirement-mini-day[data-retirement-date]")) return;
+      selectedRetirementDate = null;
+      applyFilters();
+      renderRetirementCalendarPanel();
+    });
+
     window.addEventListener("resize", updateHeaderOffset);
   }
 
