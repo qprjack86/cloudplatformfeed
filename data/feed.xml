@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 17 Apr 2026 11:56:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 15:33:40 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Bringing AI to the Factory Floor with Foundry Local - Now in Public Preview on Azure Local]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</guid>
+      <description><![CDATA[Key capabilities in this preview Foundry Local exposes standard REST and OpenAI‑compatible APIs, enabling IT and AI teams to deploy and operate local AI workloads using familiar, cloud‑aligned patterns across edge and on‑prem environments. In this public preview, we deliver the following...]]></description>
+      <dc:creator><![CDATA[liranlyabock_microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 15:23:10 GMT</pubDate>
+      <category><![CDATA[Azure Arc]]></category>
+    </item>
     <item>
       <title><![CDATA[⚡Foundry Toolkit for VS Code: A Deep Dive on GA]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-toolkit-for-vs-code-a-deep-dive-on-ga/ba-p/4509510</link>
@@ -24,15 +33,6 @@
       <dc:creator><![CDATA[carlottacaste]]></dc:creator>
       <pubDate>Fri, 17 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Discoverable – Observable MCP Server]]></title>
-      <link>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</link>
-      <guid>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</guid>
-      <description><![CDATA[How to build an observable MCP Server with discoverable tools and agents. The post Discoverable – Observable MCP Server appeared first on ISE Developer Blog.]]></description>
-      <dc:creator><![CDATA[Colin Desmond]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[ISE Developer Blog]]></category>
     </item>
     <item>
       <title><![CDATA[New in Azure SRE Agent: Log Analytics and Application Insights Connectors]]></title>
@@ -153,12 +153,12 @@
     </item>
     <item>
       <title><![CDATA[Bringing AI to the Factory Floor with Foundry Local - Now in Public Preview on Azure Local]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</guid>
-      <description><![CDATA[Key capabilities in this preview Foundry Local exposes standard REST and OpenAI‑compatible APIs, enabling IT and AI teams to deploy and operate local AI workloads using familiar, cloud‑aligned patterns across edge and on‑prem environments. In this public preview, we deliver the following...]]></description>
-      <dc:creator><![CDATA[liranlyabock_microsoft]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 16:08:12 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
+      <link>https://techcommunity.microsoft.com/blog/azurearcblog/bringing-ai-to-the-factory-floor-with-foundry-local---now-in-public-preview-on-a/4509951</link>
+      <guid>https://techcommunity.microsoft.com/blog/azurearcblog/bringing-ai-to-the-factory-floor-with-foundry-local---now-in-public-preview-on-a/4509951</guid>
+      <description><![CDATA[Key capabilities in this preview Foundry Local exposes standard REST and OpenAI‑compatible APIs, enabling IT and AI teams to deploy and operate local AI workloads using familiar, cloud‑aligned ...Update Type: Preview, Services: Azure AI Services, Azure Arc, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 16 Apr 2026 16:08:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[App attach in Azure Virtual Desktop now supports Windows Server 2025 and Windows Server 2022]]></title>
