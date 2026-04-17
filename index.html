@@ -27,7 +27,7 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="Microsoft Cloud Platform Feed" href="data/feed.xml">
   <link rel="icon" type="image/png" href="icons/atech-192.png?v=20260320d">
-    <link rel="stylesheet" href="css/styles.css?v=20260414b">
+  <link rel="stylesheet" href="css/styles.css?v=20260414b">
 </head>
 <body>
   <header>
@@ -41,11 +41,11 @@
       </div>
       <div class="header-actions">
         <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="search-input" placeholder="Search articles..." autocomplete="off">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="text" id="search-input" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
         </div>
-        <button id="bookmarks-toggle" title="Show bookmarked articles">⭐ Bookmarks</button>
-        <button id="theme-toggle" title="Toggle dark mode">🌙</button>
+        <button id="bookmarks-toggle" type="button" title="Show bookmarked articles" aria-label="Show bookmarked articles">⭐ Bookmarks</button>
+        <button id="theme-toggle" type="button" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
       </div>
     </div>
     <div class="stats-bar">
@@ -55,8 +55,8 @@
   </header>
 
   <div class="tabs-container">
-    <button class="tab-button active" data-source="azure">Azure</button>
-    <button class="tab-button" data-source="m365">Microsoft 365</button>
+    <button class="tab-button active" data-source="azure" type="button">Azure</button>
+    <button class="tab-button" data-source="m365" type="button">Microsoft 365</button>
   </div>
 
   <div class="filters">
@@ -81,7 +81,7 @@
     <div class="controls">
       <span id="showing-count"></span>
       <div class="controls-right">
-        <button id="other-blogs-toggle" title="Show non-Updates blogs">📰 Other Blogs Off</button>
+        <button id="other-blogs-toggle" type="button" title="Show non-Updates blogs" aria-label="Toggle non-Updates blogs">📰 Other Blogs Off</button>
         <select id="date-filter">
           <option value="all">All Time</option>
           <option value="today">Today</option>
@@ -113,7 +113,7 @@
   <div class="toast" id="toast"></div>
 
   <footer>
-    <p>☁️ Microsoft Cloud Platform Feed &bull; Updated daily via <a href="https://github.com/qprjack86/cloudplatformfeed" target="_blank" rel="noopener">GitHub Actions</a> &bull; <a href="data/feed.xml" target="_blank" rel="noopener">📡 RSS Feed</a></p>
+    <p>☁️ Microsoft Cloud Platform Feed &bull; Updated daily via <a href="https://github.com/qprjack86/cloudplatformfeed" target="_blank" rel="noopener noreferrer">GitHub Actions</a> &bull; <a href="data/feed.xml" target="_blank" rel="noopener noreferrer">📡 RSS Feed</a></p>
   </footer>
 
   <script src="js/modules/state-store.js?v=20260410a" defer></script>

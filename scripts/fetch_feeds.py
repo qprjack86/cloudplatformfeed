@@ -8,6 +8,7 @@ import feedparser
 import csv
 import json
 import os
+import sys
 import re
 import concurrent.futures
 import requests
@@ -22,35 +23,23 @@ from xml.dom.minidom import Document
 from feed_common import (
     canonicalize_url,
     create_http_session as shared_create_http_session,
-    build_checksums_payload as shared_build_checksums_payload,
+    build_checksums_payload,
     write_checksums_file as shared_write_checksums_file,
-    evaluate_publish_failsafe as shared_evaluate_publish_failsafe,
-    extract_youtube_video_id as shared_extract_youtube_video_id,
-    build_youtube_thumbnail_from_video_url as shared_build_youtube_thumbnail_from_video_url,
-    load_previous_article_count as shared_load_previous_article_count,
-    load_site_config as shared_load_site_config,
-    normalize_host as shared_normalize_host,
-    resolve_youtube_channel_id_from_seed as shared_resolve_youtube_channel_id_from_seed,
-    select_best_youtube_video_entry as shared_select_best_youtube_video_entry,
+    evaluate_publish_failsafe,
+    extract_youtube_video_id as _extract_youtube_video_id,
+    build_youtube_thumbnail_from_video_url as _build_youtube_thumbnail_from_video_url,
+    load_previous_article_count,
+    load_site_config,
+    normalize_host,
+    resolve_youtube_channel_id_from_seed as _resolve_youtube_channel_id_from_seed,
+    select_best_youtube_video_entry as _select_best_youtube_video_entry,
     validate_feed_data,
-    validate_article_schema,
 )
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
 
-
-def _normalize_site_host(value):
-    """Normalize a configured host value for canonical URL checks."""
-    return shared_normalize_host(value)
-
-
-def load_site_config(path=SITE_CONFIG_PATH):
-    """Load and validate canonical site settings from config/site.json."""
-    return shared_load_site_config(path)
-
-
-SITE_CONFIG = load_site_config()
+SITE_CONFIG = load_site_config(SITE_CONFIG_PATH)
 CANONICAL_SITE_HOST = SITE_CONFIG["canonicalHost"]
 CANONICAL_SITE_URL = SITE_CONFIG["canonicalUrl"]
 
@@ -169,16 +158,6 @@ CHECKSUM_OUTPUT_PATH = Path("data") / "checksums.json"
 AZURE_RETIREMENTS_ICS_PATH = Path("data") / "azure-retirements.ics"
 
 
-def _artifact_checksum_record(path, generated_at):
-    """Return checksum metadata for an existing artifact file."""
-    return shared_build_checksums_payload([path], generated_at)["artifacts"][0]
-
-
-def build_checksums_payload(paths, generated_at=None):
-    """Build checksum metadata for published artifacts."""
-    return shared_build_checksums_payload(paths, generated_at=generated_at)
-
-
 def write_checksums_file(paths=None, output_path=CHECKSUM_OUTPUT_PATH, generated_at=None):
     """Write checksum metadata after published artifacts are finalized."""
     artifact_paths = paths or CHECKSUM_ARTIFACTS
@@ -206,13 +185,6 @@ DEVBLOGS = {
     "cosmosdbblog": ("Azure Cosmos DB Blog", "https://devblogs.microsoft.com/cosmosdb/feed/"),
     "azuresqlblog": ("Azure SQL Dev Corner", "https://devblogs.microsoft.com/azure-sql/feed/"),
 }
-
-
-def normalize_host(hostname):
-    """Normalize hostnames used for feed allowlisting and URL dedupe."""
-    return shared_normalize_host(hostname)
-
-
 def build_allowed_feed_hosts():
     """Return the set of remote hosts that are allowed for feed retrieval."""
     source_urls = [
@@ -493,11 +465,7 @@ def _ics_date_fields(retirement_date, precision):
         return None
 
     start = parsed.date()
-    if precision == "day":
-        end = start + timedelta(days=1)
-    else:
-        # Month precision uses a one-day placeholder at month start.
-        end = start + timedelta(days=1)
+    end = start + timedelta(days=1)
 
     return {
         "dtstart": start.strftime("%Y%m%d"),
@@ -505,19 +473,28 @@ def _ics_date_fields(retirement_date, precision):
     }
 
 
-def generate_azure_retirements_ics(events, generated_at=None):
-    """Generate an ICS calendar payload for Azure retirement events."""
+def _generate_retirements_ics(
+    events,
+    *,
+    prodid,
+    cal_name,
+    cal_desc,
+    uid_builder,
+    include_source=False,
+    generated_at=None,
+):
+    """Generate an ICS calendar payload for retirement events."""
     stamp = generated_at or datetime.now(timezone.utc)
     dtstamp = stamp.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Cloud Platform Feed//Azure Impact Lifecycle Calendar//EN",
+        f"PRODID:{prodid}",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        f"X-WR-CALNAME:{_ics_escape_text('Azure Impact Lifecycle Calendar')}",
-        f"X-WR-CALDESC:{_ics_escape_text('Upcoming Azure and curated Microsoft lifecycle retirements from Cloud Platform Feed')}",
+        f"X-WR-CALNAME:{_ics_escape_text(cal_name)}",
+        f"X-WR-CALDESC:{_ics_escape_text(cal_desc)}",
     ]
 
     for event in events:
@@ -529,10 +506,15 @@ def generate_azure_retirements_ics(events, generated_at=None):
 
         sources = event.get("sources", [])
         source_label = ", ".join(str(src) for src in sources if src)
-        description_lines = [
-            f"Retirement date: {retirement_date}",
-            f"Date precision: {precision}",
-        ]
+        description_lines = []
+        if include_source:
+            description_lines.append(f"Source: {event.get('source', 'unknown')}")
+        description_lines.extend(
+            [
+                f"Retirement date: {retirement_date}",
+                f"Date precision: {precision}",
+            ]
+        )
         if source_label:
             description_lines.append(f"Sources: {source_label}")
         if precision != "day":
@@ -544,7 +526,7 @@ def generate_azure_retirements_ics(events, generated_at=None):
         lines.extend(
             [
                 "BEGIN:VEVENT",
-                f"UID:{_ics_escape_text(_ics_uid_for_event(event))}",
+                f"UID:{_ics_escape_text(uid_builder(event))}",
                 f"DTSTAMP:{dtstamp}",
                 f"DTSTART;VALUE=DATE:{date_fields['dtstart']}",
                 f"DTEND;VALUE=DATE:{date_fields['dtend']}",
@@ -558,6 +540,19 @@ def generate_azure_retirements_ics(events, generated_at=None):
     lines.append("END:VCALENDAR")
     folded = [_ics_fold_line(line) for line in lines if line]
     return "\r\n".join(folded) + "\r\n"
+
+
+def generate_azure_retirements_ics(events, generated_at=None):
+    """Generate an ICS calendar payload for Azure retirement events."""
+    return _generate_retirements_ics(
+        events,
+        prodid="-//Cloud Platform Feed//Azure Impact Lifecycle Calendar//EN",
+        cal_name="Azure Impact Lifecycle Calendar",
+        cal_desc="Upcoming Azure and curated Microsoft lifecycle retirements from Cloud Platform Feed",
+        uid_builder=_ics_uid_for_event,
+        include_source=False,
+        generated_at=generated_at,
+    )
 
 
 def write_azure_retirements_ics(events, output_path=AZURE_RETIREMENTS_ICS_PATH, generated_at=None):
@@ -592,59 +587,15 @@ def _ics_uid_for_unified_event(event):
 
 def generate_unified_retirements_ics(events, generated_at=None):
     """Generate an ICS calendar payload for all unified retirement events."""
-    stamp = generated_at or datetime.now(timezone.utc)
-    dtstamp = stamp.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-
-    lines = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "PRODID:-//Cloud Platform Feed//Unified Retirement Calendar//EN",
-        "CALSCALE:GREGORIAN",
-        "METHOD:PUBLISH",
-        f"X-WR-CALNAME:{_ics_escape_text('Unified Retirement Calendar')}",
-        f"X-WR-CALDESC:{_ics_escape_text('All Azure, Microsoft, and Microsoft 365 retirement events from Cloud Platform Feed')}",
-    ]
-
-    for event in events:
-        retirement_date = str(event.get("retirementDate", "")).strip()
-        precision = event.get("datePrecision") or _retirement_date_precision(retirement_date)
-        date_fields = _ics_date_fields(retirement_date, precision)
-        if not date_fields:
-            continue
-
-        sources = event.get("sources", [])
-        source_label = ", ".join(str(src) for src in sources if src)
-        source = event.get("source", "unknown")
-        description_lines = [
-            f"Source: {source}",
-            f"Retirement date: {retirement_date}",
-            f"Date precision: {precision}",
-        ]
-        if source_label:
-            description_lines.append(f"Sources: {source_label}")
-        if precision != "day":
-            description_lines.append("This event uses month-level precision in source data.")
-
-        summary = event.get("title", "Untitled retirement notice")
-        link = event.get("link", "")
-
-        lines.extend(
-            [
-                "BEGIN:VEVENT",
-                f"UID:{_ics_escape_text(_ics_uid_for_unified_event(event))}",
-                f"DTSTAMP:{dtstamp}",
-                f"DTSTART;VALUE=DATE:{date_fields['dtstart']}",
-                f"DTEND;VALUE=DATE:{date_fields['dtend']}",
-                f"SUMMARY:{_ics_escape_text(summary)}",
-                f"DESCRIPTION:{_ics_escape_text('\\n'.join(description_lines))}",
-                f"URL:{_ics_escape_text(link)}" if link else "",
-                "END:VEVENT",
-            ]
-        )
-
-    lines.append("END:VCALENDAR")
-    folded = [_ics_fold_line(line) for line in lines if line]
-    return "\r\n".join(folded) + "\r\n"
+    return _generate_retirements_ics(
+        events,
+        prodid="-//Cloud Platform Feed//Unified Retirement Calendar//EN",
+        cal_name="Unified Retirement Calendar",
+        cal_desc="All Azure, Microsoft, and Microsoft 365 retirement events from Cloud Platform Feed",
+        uid_builder=_ics_uid_for_unified_event,
+        include_source=True,
+        generated_at=generated_at,
+    )
 
 
 def write_unified_retirements_ics(events, output_path="data/retirements.ics", generated_at=None):
@@ -655,9 +606,6 @@ def write_unified_retirements_ics(events, output_path="data/retirements.ics", ge
     path.write_text(payload, encoding="utf-8")
     print(f"Unified ICS calendar written to {output_path}")
     return True
-
-    path.write_text(payload, encoding="utf-8")
-    print(f"ICS calendar saved to {path.as_posix()}")
 
 def get_articles_for_publishing_days(articles, publishing_days):
     """Return articles whose published date falls within the selected publishing days."""
@@ -950,7 +898,6 @@ def _extract_openai_message_text(message):
     result = "\n".join(fragments)
     if not result:
         try:
-            import sys
             print(f"  [DEBUG] Empty response extraction; content type={type(content).__name__}, length={len(content) if isinstance(content, list) else 'N/A'}", file=sys.stderr)
             if isinstance(content, list) and content:
                 print(f"  [DEBUG] First part: type={type(content[0]).__name__}, value={str(content[0])[:100]}", file=sys.stderr)
@@ -964,7 +911,6 @@ def _parse_openai_json_payload(raw_text):
     raw = (raw_text or "").strip()
     if not raw:
         try:
-            import sys
             print(f"  [DEBUG] Empty raw_text passed to JSON parser; input was: {repr(raw_text)[:200]}", file=sys.stderr)
         except Exception:
             pass
@@ -980,7 +926,6 @@ def _parse_openai_json_payload(raw_text):
         match = re.search(r"\{.*\}", raw, re.DOTALL)
         if not match:
             try:
-                import sys
                 print(f"  [DEBUG] JSON parse failed and no JSON object found; raw={repr(raw)[:200]}, error={e}", file=sys.stderr)
             except Exception:
                 pass
@@ -1095,24 +1040,36 @@ def parse_date(entry):
     return datetime.now(timezone.utc).isoformat()
 
 
-def _extract_youtube_video_id(url):
-    """Extract a YouTube video id from watch or youtu.be links."""
-    return shared_extract_youtube_video_id(url)
-
-
-def _build_youtube_thumbnail_from_video_url(url):
-    """Build a deterministic thumbnail URL from a YouTube video link."""
-    return shared_build_youtube_thumbnail_from_video_url(url)
-
-
-def _resolve_youtube_channel_id_from_seed(session, seed_url, timeout):
-    """Resolve a YouTube channel id by reading the seed video page payload."""
-    return shared_resolve_youtube_channel_id_from_seed(session, seed_url, timeout)
-
-
-def _select_best_youtube_video_entry(entries, match_score_fn):
-    """Select highest scoring entry; fall back to latest upload when no match."""
-    return shared_select_best_youtube_video_entry(entries, match_score_fn)
+def _build_article_record(
+    *,
+    title,
+    link,
+    published,
+    summary,
+    blog,
+    blog_id,
+    author="Microsoft",
+    lifecycle_state=None,
+    date_precision=None,
+    extra_fields=None,
+):
+    """Build a normalized article payload with optional lifecycle fields."""
+    article = {
+        "title": title,
+        "link": link,
+        "published": published,
+        "summary": summary,
+        "blog": blog,
+        "blogId": blog_id,
+        "author": author,
+    }
+    if lifecycle_state is not None:
+        article["lifecycleState"] = lifecycle_state
+    if date_precision is not None:
+        article["datePrecision"] = date_precision
+    if extra_fields:
+        article.update(extra_fields)
+    return article
 
 
 def _entries_to_articles(entries, blog_name, blog_id):
@@ -1121,17 +1078,17 @@ def _entries_to_articles(entries, blog_name, blog_id):
     for entry in entries:
         summary = clean_html(entry.get("summary", ""))
         articles.append(
-            {
-                "title": clean_html(entry.get("title", "Untitled")),
-                "link": entry.get("link", ""),
-                "published": parse_date(entry),
-                "summary": truncate(summary),
-                "blog": blog_name,
-                "blogId": blog_id,
-                "author": entry.get("author", "Microsoft"),
-                "lifecycleState": "ga",
-                "datePrecision": "day",
-            }
+            _build_article_record(
+                title=clean_html(entry.get("title", "Untitled")),
+                link=entry.get("link", ""),
+                published=parse_date(entry),
+                summary=truncate(summary),
+                blog=blog_name,
+                blog_id=blog_id,
+                author=entry.get("author", "Microsoft"),
+                lifecycle_state="ga",
+                date_precision="day",
+            )
         )
     return articles
 
@@ -1149,81 +1106,69 @@ def _fetch_named_feed(blog_name, blog_id, feed_url):
     return articles
 
 
-def fetch_tech_community_feeds():
-    """Fetch articles from Tech Community blogs."""
+def _fetch_named_feeds_in_parallel(feed_specs):
+    """Fetch multiple named feeds in parallel and merge article results."""
     articles = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=FETCH_MAX_WORKERS) as executor:
-        future_to_blog = {}
-        for board_id, blog_name in BLOGS.items():
-            print(f"Fetching: {blog_name} ({board_id})...")
-            feed_url = TC_RSS_URL.format(board=board_id)
-            future = executor.submit(_fetch_named_feed, blog_name, board_id, feed_url)
-            future_to_blog[future] = blog_name
+        future_to_spec = {}
+        for spec in feed_specs:
+            print(f"Fetching: {spec['fetch_label']}...")
+            future = executor.submit(
+                _fetch_named_feed,
+                spec["blog_name"],
+                spec["blog_id"],
+                spec["feed_url"],
+            )
+            future_to_spec[future] = spec
 
-        for future in concurrent.futures.as_completed(future_to_blog):
-            blog_name = future_to_blog[future]
+        for future in concurrent.futures.as_completed(future_to_spec):
+            spec = future_to_spec[future]
             try:
                 articles.extend(future.result())
             except (requests.exceptions.RequestException, ValueError, TypeError) as exc:
-                print(f"  Error fetching {blog_name}: {exc}")
+                print(f"  Error fetching {spec['error_label']}: {exc}")
 
     return articles
+
+
+def fetch_tech_community_feeds():
+    """Fetch articles from Tech Community blogs."""
+    feed_specs = [
+        {
+            "blog_name": blog_name,
+            "blog_id": board_id,
+            "feed_url": TC_RSS_URL.format(board=board_id),
+            "fetch_label": f"{blog_name} ({board_id})",
+            "error_label": blog_name,
+        }
+        for board_id, blog_name in BLOGS.items()
+    ]
+    return _fetch_named_feeds_in_parallel(feed_specs)
 
 
 def fetch_aks_blog():
     """Fetch articles from the AKS blog."""
-    articles = []
     print("Fetching: AKS Blog...")
-
     try:
-        feed = fetch_feed(AKS_BLOG_FEED)
-
-        if feed.bozo and not feed.entries:
-            print("  Warning: Could not parse AKS blog feed")
-            return articles
-
-        count = 0
-        for entry in feed.entries:
-            summary = clean_html(entry.get("summary", ""))
-            articles.append(
-                {
-                    "title": clean_html(entry.get("title", "Untitled")),
-                    "link": entry.get("link", ""),
-                    "published": parse_date(entry),
-                    "summary": truncate(summary),
-                    "blog": "AKS Blog",
-                    "blogId": "aksblog",
-                    "author": entry.get("author", "Microsoft"),
-                }
-            )
-            count += 1
-
-        print(f"  Found {count} articles")
-
+        return _fetch_named_feed("AKS Blog", "aksblog", AKS_BLOG_FEED)
     except (requests.exceptions.RequestException, ValueError, TypeError) as exc:
         print(f"  Error fetching AKS blog: {exc}")
-
-    return articles
+        return []
 
 
 def fetch_devblogs_feeds():
     """Fetch articles from Microsoft DevBlogs."""
-    articles = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=FETCH_MAX_WORKERS) as executor:
-        future_to_blog = {}
-        for blog_id, (blog_name, feed_url) in DEVBLOGS.items():
-            print(f"Fetching: {blog_name}...")
-            future = executor.submit(_fetch_named_feed, blog_name, blog_id, feed_url)
-            future_to_blog[future] = blog_name
-
-        for future in concurrent.futures.as_completed(future_to_blog):
-            blog_name = future_to_blog[future]
-            try:
-                articles.extend(future.result())
-            except (requests.exceptions.RequestException, ValueError, TypeError) as exc:
-                print(f"  Error fetching {blog_name}: {exc}")
-
-    return articles
+    feed_specs = [
+        {
+            "blog_name": blog_name,
+            "blog_id": blog_id,
+            "feed_url": feed_url,
+            "fetch_label": blog_name,
+            "error_label": blog_name,
+        }
+        for blog_id, (blog_name, feed_url) in DEVBLOGS.items()
+    ]
+    return _fetch_named_feeds_in_parallel(feed_specs)
 
 
 def fetch_savill_video():
@@ -1447,6 +1392,24 @@ def _extract_azure_update_retirement_date_by_id(update_id):
     return None
 
 
+def _resolve_linked_retirement_date(link, update_id=None):
+    """Resolve retirement date via Azure Updates id API first, then page scrape."""
+    token = str(update_id or _extract_azure_update_id_from_url(link) or "").strip()
+    try:
+        if token:
+            retirement_date = _extract_azure_update_retirement_date_by_id(token)
+            if retirement_date:
+                return retirement_date
+        return _extract_azure_update_retirement_date_from_page(link)
+    except (
+        requests.exceptions.RequestException,
+        ValueError,
+        TypeError,
+        RuntimeError,
+    ):
+        return None
+
+
 def _retirement_date_rank_key(value):
     """Rank retirement dates so day precision is preferred over month precision."""
     precision = _retirement_date_precision(value)
@@ -1483,11 +1446,25 @@ def _retirement_event_rank_key(event):
 def _preferred_retirement_event_link(event):
     """Pick the canonical link for a merged retirement event.
 
-    For single-source events, keep the original URL. For merged events, prefer an
-    Azure Updates URL when present because it is the most stable public landing page
-    for the announcement. Otherwise keep the current event URL.
+    If any source report comes from Microsoft Lifecycle, keep the endoflife.date
+    URL as canonical. For non-lifecycle merges, prefer an Azure Updates URL when
+    present because it is the most stable public landing page for the announcement.
+    Otherwise keep the current event URL.
     """
+
+    def _is_endoflife_date_link(value):
+        if not value:
+            return False
+        normalized = str(value).strip().lower()
+        return normalized.startswith("https://endoflife.date/") or normalized.startswith("http://endoflife.date/")
+
     source_reports = event.get("sourceReports", [])
+
+    for source_report in source_reports:
+        lifecycle_link = source_report.get("link", "")
+        if source_report.get("blogId") == MICROSOFT_LIFECYCLE_BLOG_ID and _is_endoflife_date_link(lifecycle_link):
+            return lifecycle_link
+
     if len(source_reports) <= 1:
         return event.get("link", "")
 
@@ -1496,6 +1473,28 @@ def _preferred_retirement_event_link(event):
             return source_report["link"]
 
     return event.get("link", "")
+
+
+def _index_retirement_event(events_by_key, event, dedupe_key, update_id_key, runtime_alias_key):
+    """Index one retirement event under all relevant dedupe keys."""
+    events_by_key[dedupe_key] = event
+    if update_id_key:
+        events_by_key[update_id_key] = event
+    if runtime_alias_key:
+        events_by_key[runtime_alias_key] = event
+
+
+def _collect_unique_retirement_events(events_by_key):
+    """Return unique event objects from a key-indexed event map."""
+    events = []
+    seen_ids = set()
+    for event in events_by_key.values():
+        event_identity = id(event)
+        if event_identity in seen_ids:
+            continue
+        seen_ids.add(event_identity)
+        events.append(event)
+    return events
 
 
 def _azure_retirement_identity_key(title, link):
@@ -1807,17 +1806,9 @@ def fetch_azure_updates_via_api():
                 current_retirement_date = article.get("azureRetirementDate", "")
                 current_precision = _retirement_date_precision(current_retirement_date)
                 if current_precision in (None, "month"):
-                    try:
-                        enriched_retirement_date = _extract_azure_update_retirement_date_from_page(
-                            article.get("link", "")
-                        )
-                    except (
-                        requests.exceptions.RequestException,
-                        ValueError,
-                        TypeError,
-                        RuntimeError,
-                    ):
-                        enriched_retirement_date = None
+                    enriched_retirement_date = _resolve_linked_retirement_date(
+                        article.get("link", "")
+                    )
                     if _prefer_retirement_date(enriched_retirement_date, current_retirement_date):
                         article["azureRetirementDate"] = enriched_retirement_date
                     enrich_budget -= 1
@@ -1851,23 +1842,21 @@ def fetch_azure_updates_via_rss():
         print("  Warning: Could not parse Azure Updates RSS feed")
         return articles
 
-    count = 0
     for entry in feed.entries:
         summary = clean_html(entry.get("summary", ""))
         articles.append(
-            {
-                "title": clean_html(entry.get("title", "Untitled")),
-                "link": entry.get("link", ""),
-                "published": parse_date(entry),
-                "summary": truncate(summary),
-                "blog": "Azure Updates",
-                "blogId": "azureupdates",
-                "author": entry.get("author", "Microsoft"),
-            }
+            _build_article_record(
+                title=clean_html(entry.get("title", "Untitled")),
+                link=entry.get("link", ""),
+                published=parse_date(entry),
+                summary=truncate(summary),
+                blog="Azure Updates",
+                blog_id="azureupdates",
+                author=entry.get("author", "Microsoft"),
+            )
         )
-        count += 1
 
-    print(f"  Found {count} RSS articles")
+    print(f"  Found {len(articles)} RSS articles")
     return articles
 
 
@@ -1901,20 +1890,6 @@ def fetch_azure_updates_feed():
         return []
 
 
-def _classify_aztty_lifecycle(title_raw, summary_raw):
-    """Infer lifecycle from aztty deprecations/updates title and summary text."""
-    text = f"{title_raw or ''} {summary_raw or ''}".lower()
-    if re.search(r"retir|deprecat|sunset|end of support|end of life|eol", text):
-        return "retiring"
-    if re.search(r"in development|coming soon|develop", text):
-        return "in_development"
-    if re.search(r"preview", text):
-        return "in_preview"
-    if re.search(r"launch|generally available|\bga\b|now available|available", text):
-        return "launched_ga"
-    return None
-
-
 def fetch_aztty_feed(feed_url, blog_name, blog_id, announcement_type):
     """Fetch aztty RSS feed entries and normalize to common article schema."""
     articles = []
@@ -1928,23 +1903,24 @@ def fetch_aztty_feed(feed_url, blog_name, blog_id, announcement_type):
     for entry in feed.entries:
         title = clean_html(entry.get("title", "Untitled"))
         summary_full = clean_html(entry.get("summary", ""))
-        lifecycle = _classify_aztty_lifecycle(title, summary_full)
-        article = {
-            "title": title,
-            "link": entry.get("link", ""),
-            "published": parse_date(entry),
-            "summary": truncate(summary_full),
-            "blog": blog_name,
-            "blogId": blog_id,
-            "author": entry.get("author", "Microsoft"),
-            "announcementType": announcement_type,
-        }
+        lifecycle = _classify_azure_update_lifecycle(f"{title} {summary_full}", "")
+        extra_fields = {"announcementType": announcement_type}
         if lifecycle:
-            article["lifecycle"] = lifecycle
+            extra_fields["lifecycle"] = lifecycle
         if lifecycle == "retiring":
             retirement_date = _extract_azure_retirement_date(title, summary_full)
             if retirement_date:
-                article["azureRetirementDate"] = retirement_date
+                extra_fields["azureRetirementDate"] = retirement_date
+        article = _build_article_record(
+            title=title,
+            link=entry.get("link", ""),
+            published=parse_date(entry),
+            summary=truncate(summary_full),
+            blog=blog_name,
+            blog_id=blog_id,
+            author=entry.get("author", "Microsoft"),
+            extra_fields=extra_fields,
+        )
         articles.append(article)
 
     print(f"  Found {len(articles)} RSS articles")
@@ -2033,18 +2009,7 @@ def _resolve_workbook_retirement_date(csv_retirement_date, link, cache, enrich_b
     if not has_cached_value:
         if enrich_budget <= 0:
             return csv_retirement_date, False, enrich_budget
-        try:
-            if update_id:
-                linked_retirement_date = _extract_azure_update_retirement_date_by_id(update_id)
-            if not linked_retirement_date:
-                linked_retirement_date = _extract_azure_update_retirement_date_from_page(link)
-        except (
-            requests.exceptions.RequestException,
-            ValueError,
-            TypeError,
-            RuntimeError,
-        ):
-            linked_retirement_date = None
+        linked_retirement_date = _resolve_linked_retirement_date(link, update_id=update_id)
         enrich_budget -= 1
         if cache_key:
             cache[cache_key] = linked_retirement_date
@@ -2279,7 +2244,7 @@ def fetch_microsoft_lifecycle_retirements(config=None):
 
                 # Keep lifecycle links on endoflife.date so users land on the
                 # product lifecycle page instead of unrelated external docs.
-                product_lifecycle_link = html_link or f"https://endoflife.date/{product}"
+                product_lifecycle_link = f"https://endoflife.date/{product}"
 
                 articles.append(
                     {
@@ -2492,11 +2457,13 @@ def build_azure_retirement_calendar(articles, max_items=DEFAULT_RETIREMENT_CALEN
                     if src
                 }
             )
-            events_by_key[dedupe_key] = existing
-            if update_id_key:
-                events_by_key[update_id_key] = existing
-            if runtime_alias_key:
-                events_by_key[runtime_alias_key] = existing
+            _index_retirement_event(
+                events_by_key,
+                existing,
+                dedupe_key,
+                update_id_key,
+                runtime_alias_key,
+            )
             continue
 
         event = {
@@ -2514,11 +2481,13 @@ def build_azure_retirement_calendar(articles, max_items=DEFAULT_RETIREMENT_CALEN
             "categories": [category or "Other"],
             "categorySourceMap": {source_key: category or "Other"} if source_key else {},
         }
-        events_by_key[dedupe_key] = event
-        if update_id_key:
-            events_by_key[update_id_key] = event
-        if runtime_alias_key:
-            events_by_key[runtime_alias_key] = event
+        _index_retirement_event(
+            events_by_key,
+            event,
+            dedupe_key,
+            update_id_key,
+            runtime_alias_key,
+        )
 
         # Register this event's identity tokens for same-date fuzzy matching of later articles.
         # Store runtime_alias_key and blogId alongside so version-distinct and same-feed
@@ -2530,13 +2499,7 @@ def build_azure_retirement_calendar(articles, max_items=DEFAULT_RETIREMENT_CALEN
             )
 
     events = []
-    seen_ids = set()
-    for event in events_by_key.values():
-        event_identity = id(event)
-        if event_identity in seen_ids:
-            continue
-        seen_ids.add(event_identity)
-        events.append(event)
+    events = _collect_unique_retirement_events(events_by_key)
     for event in events:
         event["sourceCount"] = len(event.get("sourceReports", []))
         event["link"] = _preferred_retirement_event_link(event)
@@ -2558,238 +2521,41 @@ def build_unified_retirement_calendar(
     max_items=DEFAULT_RETIREMENT_CALENDAR_EVENT_CAP,
 ):
     """Build a deduplicated, source-tagged calendar from Azure, Microsoft, and M365 events.
-    
-    Priority order for deduplication: azure > microsoft > m365
-    Each event is tagged with a 'source' field indicating which source won.
+
+    This reuses the Azure calendar dedupe implementation as the shared core,
+    then annotates each merged event with unified source metadata.
     """
-    today = datetime.now(timezone.utc).date()
-    events_by_key = {}
-    
-    # Index: retirement_date -> list of (token_frozenset, dedupe_key, source) for token-overlap dedupe
-    date_event_tokens = {}
-    
-    # Priority order: azure (0) > microsoft (1) > m365 (2)
-    source_priority_map = {
-        "azure": 0,
-        "azureretirements": 0,
-        "microsoftlifecycle": 1,
-        "m365": 2,
-    }
-    
-    def _get_source_from_article(article):
-        """Determine source classification from article blogId."""
-        blog_id = article.get("blogId", "").lower()
-        if blog_id in ("azure", "azureretirements", "azuredeprecations", "azureupdates"):
-            return "azure"
-        elif blog_id in ("microsoftlifecycle",):
+    def _source_from_blog_id(blog_id):
+        raw = str(blog_id or "").strip().lower()
+        if raw == "microsoftlifecycle":
             return "microsoft"
-        elif blog_id in ("m365",):
+        if raw == "m365":
             return "m365"
+        if raw:
+            return "azure"
         return "unknown"
-    
-    def _article_priority(article):
-        """Return priority value for article (lower = higher priority)."""
-        blog_id = article.get("blogId", "").lower()
-        priority = source_priority_map.get(blog_id, 99)
-        # Within same source, prioritize azureretirements workbook
-        if blog_id == "azureretirements":
-            return priority - 1
-        return priority
-    
-    # Combine all events with source tagging
-    all_articles = []
-    for art in (azure_events or []):
-        art_copy = dict(art)
-        art_copy["_source"] = _get_source_from_article(art)
-        all_articles.append(art_copy)
-    
-    for art in (microsoft_events or []):
-        art_copy = dict(art)
-        art_copy["_source"] = "microsoft"
-        all_articles.append(art_copy)
-    
-    for art in (m365_events or []):
-        art_copy = dict(art)
-        art_copy["_source"] = "m365"
-        all_articles.append(art_copy)
-    
-    # Sort by source priority so higher-priority sources are seen first
-    all_articles.sort(key=_article_priority)
-    
-    # Process all articles using unified deduplication
-    for article in all_articles:
-        retirement_date = article.get("azureRetirementDate") or article.get("m365RetirementDate")
-        if not retirement_date:
-            continue
-        
-        sort_dt = _parse_retirement_calendar_sort_date(retirement_date)
-        if not sort_dt:
-            continue
-        
-        if not _is_retirement_date_future(retirement_date, today=today):
-            continue
-        
-        title = article.get("title", "Untitled")
-        link = article.get("link", "")
-        source = article.get("_source", "unknown")
-        category = _categorize_retirement_article(article)
-        
-        # Try multiple deduplication keys
-        dedupe_key = _azure_retirement_identity_key(title, link)
-        update_id = _extract_azure_update_id_from_url(link)
-        update_id_key = f"update-id:{update_id}" if update_id else ""
-        runtime_alias_key = _azure_runtime_retirement_alias_key(title, retirement_date)
-        if dedupe_key.endswith(":"):
-            dedupe_key = f"fallback:{_normalize_for_match(title)}"
-        
-        precision = "day" if re.match(r"^\d{4}-\d{2}-\d{2}$", retirement_date) else "month"
-        source_label = article.get("blog", "") or article.get("blogId", "") or "Source"
-        source_report = {
-            "blog": article.get("blog", ""),
-            "blogId": article.get("blogId", ""),
-            "announcementType": article.get("announcementType", ""),
-            "link": link,
-            "source": source,
-            "category": category,
-        }
-        
-        # Look for existing event
-        existing = events_by_key.get(dedupe_key)
-        if not existing and update_id_key:
-            existing = events_by_key.get(update_id_key)
-        if not existing and runtime_alias_key:
-            existing = events_by_key.get(runtime_alias_key)
-        
-        # Cross-source fuzzy token-overlap lookup
-        if not existing:
-            article_blog_id = article.get("blogId", "")
-            article_tokens = _calendar_identity_tokens(title)
-            for reg_tokens, reg_key, reg_runtime_key, reg_blog_id, _ in date_event_tokens.get(retirement_date, []):
-                if article_blog_id == reg_blog_id:
-                    continue
-                if runtime_alias_key and reg_runtime_key and runtime_alias_key != reg_runtime_key:
-                    continue
-                if _tokens_are_same_event(article_tokens, reg_tokens):
-                    existing = events_by_key.get(reg_key)
-                    if existing is not None:
-                        break
-        
-        if existing:
-            existing["sourceReports"].append(source_report)
-            if article.get("published", "") > existing.get("published", ""):
-                existing["published"] = article.get("published", "")
 
-            existing_categories = [
-                c for c in existing.get("categories", []) if str(c or "").strip()
-            ]
-            if category and category not in existing_categories:
-                existing_categories.append(category)
-            existing["categories"] = sorted(set(existing_categories))
+    def _append_source_articles(combined, source_articles):
+        for article in source_articles or []:
+            article_copy = dict(article)
+            if not article_copy.get("azureRetirementDate"):
+                article_copy["azureRetirementDate"] = article_copy.get("m365RetirementDate", "")
+            combined.append(article_copy)
 
-            source_category_map = existing.get("categorySourceMap")
-            if not isinstance(source_category_map, dict):
-                source_category_map = {}
-            if source and category:
-                source_category_map[source] = category
-            existing["categorySourceMap"] = source_category_map
-            
-            # Higher priority source takes over the event metadata
-            existing_priority = source_priority_map.get(existing.get("blogId", ""), 99)
-            incoming_priority = source_priority_map.get(article.get("blogId", ""), 99)
-            
-            if incoming_priority < existing_priority:
-                # Incoming source has higher priority - update metadata
-                replacement = {
-                    "title": _display_calendar_title(title),
-                    "link": link,
-                    "retirementDate": retirement_date,
-                    "datePrecision": precision,
-                    "published": article.get("published", ""),
-                    "blog": article.get("blog", ""),
-                    "blogId": article.get("blogId", ""),
-                    "announcementType": article.get("announcementType", ""),
-                }
-                if _retirement_event_rank_key(replacement) > _retirement_event_rank_key(existing):
-                    existing["title"] = replacement["title"]
-                    existing["link"] = replacement["link"] or existing.get("link", "")
-                    existing["retirementDate"] = replacement["retirementDate"]
-                    existing["datePrecision"] = replacement["datePrecision"]
-                    existing["published"] = replacement["published"]
-                    existing["blog"] = replacement["blog"]
-                    existing["blogId"] = replacement["blogId"]
-                    existing["announcementType"] = replacement["announcementType"]
-                    existing["source"] = source
-                    existing["primaryCategory"] = category or existing.get("primaryCategory", "Other")
+    combined_articles = []
+    _append_source_articles(combined_articles, azure_events)
+    _append_source_articles(combined_articles, microsoft_events)
+    _append_source_articles(combined_articles, m365_events)
 
-            if not existing.get("primaryCategory"):
-                existing["primaryCategory"] = category or "Other"
-            
-            if not existing.get("link") and link:
-                existing["link"] = link
-            
-            existing["sources"] = sorted({
-                src for src in existing.get("sources", []) + [source_label]
-                if src
-            })
-            events_by_key[dedupe_key] = existing
-            if update_id_key:
-                events_by_key[update_id_key] = existing
-            if runtime_alias_key:
-                events_by_key[runtime_alias_key] = existing
-            continue
-        
-        # New event
-        event = {
-            "title": _display_calendar_title(title),
-            "link": link,
-            "retirementDate": retirement_date,
-            "datePrecision": precision,
-            "published": article.get("published", ""),
-            "blog": article.get("blog", ""),
-            "blogId": article.get("blogId", ""),
-            "announcementType": article.get("announcementType", ""),
-            "sources": [source_label] if source_label else [],
-            "sourceReports": [source_report],
-            "source": source,  # Primary source for this event
-            "primaryCategory": category or "Other",
-            "categories": [category or "Other"],
-            "categorySourceMap": {source: category or "Other"} if source else {},
-        }
-        events_by_key[dedupe_key] = event
-        if update_id_key:
-            events_by_key[update_id_key] = event
-        if runtime_alias_key:
-            events_by_key[runtime_alias_key] = event
-        
-        # Register for fuzzy matching
-        event_tokens = _calendar_identity_tokens(title)
-        if event_tokens:
-            date_event_tokens.setdefault(retirement_date, []).append(
-                (event_tokens, dedupe_key, runtime_alias_key, article.get("blogId", ""), source)
-            )
-    
-    # Consolidate and sort
-    events = []
-    seen_ids = set()
-    for event in events_by_key.values():
-        event_identity = id(event)
-        if event_identity in seen_ids:
-            continue
-        seen_ids.add(event_identity)
-        events.append(event)
-    
-    for event in events:
-        event["sourceCount"] = len(event.get("sourceReports", []))
-        event["link"] = _preferred_retirement_event_link(event)
-    
-    events.sort(
-        key=lambda event: (
-            _parse_retirement_calendar_sort_date(event.get("retirementDate"))
-            or datetime.max.replace(tzinfo=timezone.utc),
-            event.get("title", "").lower(),
-        )
-    )
-    return events[:max_items]
+    calendar = build_azure_retirement_calendar(combined_articles, max_items=max_items)
+
+    for event in calendar:
+        event["source"] = _source_from_blog_id(event.get("blogId", ""))
+        source_reports = event.get("sourceReports", [])
+        for report in source_reports:
+            report["source"] = _source_from_blog_id(report.get("blogId", ""))
+
+    return calendar
 
 
 def build_retirement_window_buckets(events, today=None, preview_limit=8):
@@ -3056,13 +2822,6 @@ def generate_ai_summary(articles):
             "windowDays": SUMMARY_WINDOW_DAYS,
             "publishingDays": summary_days,
         }
-
-
-def load_previous_article_count(path):
-    """Return prior article count from feeds.json, or None when unavailable."""
-    return shared_load_previous_article_count(path, logger=print)
-
-
 def filter_main_feed_articles(articles):
     """Exclude calendar-only sources from the main feed article list."""
     excluded_blog_ids = {WORKBOOK_BLOG_ID, MICROSOFT_LIFECYCLE_BLOG_ID}
@@ -3093,21 +2852,6 @@ def load_previous_main_feed_article_count(path):
     if isinstance(data.get("totalArticles"), int):
         return data.get("totalArticles")
     return None
-
-
-def evaluate_publish_failsafe(
-    new_count,
-    previous_count,
-    min_articles=FAILSAFE_MIN_ARTICLES,
-    min_ratio=FAILSAFE_MIN_RATIO,
-):
-    """Return (triggered, details) for publish fail-safe guard logic."""
-    return shared_evaluate_publish_failsafe(
-        new_count,
-        previous_count,
-        min_articles=min_articles,
-        min_ratio=min_ratio,
-    )
 
 
 def _build_retirement_run_metrics(retirement_calendar, retirement_buckets):
@@ -3190,6 +2934,32 @@ def write_run_metrics(metrics, output_path=None):
         return False
 
 
+def _record_failed_run(
+    *,
+    raw_article_count,
+    unique_article_count,
+    previous_article_count,
+    failsafe_details,
+    savill_video,
+    retirement_calendar,
+    retirement_buckets,
+):
+    """Write failure run metrics for early-return paths."""
+    run_metrics = build_run_metrics(
+        raw_article_count=raw_article_count,
+        unique_article_count=unique_article_count,
+        previous_article_count=previous_article_count,
+        failsafe_triggered=True,
+        failsafe_details=failsafe_details,
+        published=False,
+        summary_payload=None,
+        savill_video=savill_video,
+        retirement_calendar=retirement_calendar,
+        retirement_buckets=retirement_buckets,
+    )
+    write_run_metrics(run_metrics)
+
+
 def main():
     print("=" * 60)
     print("Microsoft Cloud Platform Feed - Fetching RSS Feeds")
@@ -3235,33 +3005,28 @@ def main():
     if discarded:
         print(f"Filtered out {discarded} duplicate/older-than-30-days articles")
 
+    output_path = os.path.join("data", "feeds.json")
+
     # Validate feed data schema and quality (NEW: Improvement #1)
     is_valid, validation_msg = validate_feed_data(main_feed_articles, min_coverage_percent=85)
     if not is_valid:
         print(f"❌ Feed validation failed: {validation_msg}")
         print("Aborting publish to preserve data integrity")
-        # Skip publish but log metrics as failed
         previous_count = load_previous_main_feed_article_count(output_path)
-        failsafe_triggered = True
         failsafe_details = f"Feed validation failed: {validation_msg}"
-        run_metrics = build_run_metrics(
+        _record_failed_run(
             raw_article_count=raw_article_count,
             unique_article_count=len(main_feed_articles),
             previous_article_count=previous_count,
-            failsafe_triggered=True,
             failsafe_details=failsafe_details,
-            published=False,
-            summary_payload=None,
             savill_video=savill_video,
             retirement_calendar=retirement_calendar,
             retirement_buckets=retirement_buckets,
         )
-        write_run_metrics(run_metrics)
         return
     
     print(f"✅ {validation_msg}")
 
-    output_path = os.path.join("data", "feeds.json")
     previous_count = load_previous_main_feed_article_count(output_path)
     failsafe_triggered, failsafe_details = evaluate_publish_failsafe(
         len(main_feed_articles), previous_count
@@ -3271,19 +3036,15 @@ def main():
     elif failsafe_triggered:
         print("Publish fail-safe triggered; skipping output write to preserve last good data")
         print(f"  {failsafe_details}")
-        run_metrics = build_run_metrics(
+        _record_failed_run(
             raw_article_count=raw_article_count,
             unique_article_count=len(main_feed_articles),
             previous_article_count=previous_count,
-            failsafe_triggered=True,
             failsafe_details=failsafe_details,
-            published=False,
-            summary_payload=None,
             savill_video=savill_video,
             retirement_calendar=retirement_calendar,
             retirement_buckets=retirement_buckets,
         )
-        write_run_metrics(run_metrics)
         return
     else:
         print("Publish fail-safe check passed")

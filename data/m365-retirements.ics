@@ -7,46 +7,21 @@ X-WR-CALNAME:Microsoft 365 Retirement Calendar
 X-WR-CALDESC:Upcoming Microsoft 365 retirement announcements from Cloud Pla
  tform Feed
 BEGIN:VEVENT
-UID:m365-retirement-202604-updated-legacy-sharepoint-online-sharepointon@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260402
-SUMMARY:(Updated) Legacy SharePoint Online Content Delivery Network (CDN) d
- omain to be retired—review configurations
-DESCRIPTION:Retirement date: 2026-04\\nDate precision: month\\nSources: ['S
- harePoint Online']\\nThis event uses month-level precision in source data.
-URL:https://deltapulse.app/item/MC1184996
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-202604-microsoft-copilot-studio-informa-microsoftcop@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
+UID:m365-retirement-20260401-microsoft-copilot-studio-informa-microsoftcop@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY:Microsoft Copilot Studio - Information regarding the end of support
   for classic agent creation in Teams
-DESCRIPTION:Retirement date: 2026-04\\nDate precision: month\\nSources: Mic
- rosoft Copilot (Power Platform)\\nThis event uses month-level precision in
-  source data.
+DESCRIPTION:Retirement date: 2026-04-01\\nDate precision: day\\nSources: Mi
+ crosoft Copilot (Power Platform)
 URL:https://deltapulse.app/item/MC1274562
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-202604-microsoft-purview-dlm-retirement-sharepointon@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260402
-SUMMARY:Microsoft Purview DLM: Retirement of SharePoint online information 
- management and in-place records management features
-DESCRIPTION:Retirement date: 2026-04\\nDate precision: month\\nSources: ['S
- harePoint Online']\\nThis event uses month-level precision in source data.
-URL:https://deltapulse.app/item/MC1211579
 END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-202604-power-bi-end-of-support-for-on-p-powerbi@cpfeed.
  cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260401
 DTEND;VALUE=DATE:20260402
 SUMMARY:Power BI: End of support for on-prem SharePoint web part
@@ -55,69 +30,80 @@ DESCRIPTION:Retirement date: 2026-04\\nDate precision: month\\nSources: ['P
 URL:https://deltapulse.app/item/MC1217651
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202604-retirement-of-the-semi-annual-en-microsoft365@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260402
-SUMMARY:Retirement of the Semi-Annual Enterprise Channel installation optio
- n for unmanaged devices
-DESCRIPTION:Retirement date: 2026-04\\nDate precision: month\\nSources: ['M
- icrosoft 365 suite']\\nThis event uses month-level precision in source dat
- a.
-URL:https://deltapulse.app/item/MC1249428
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-202604-retiring-the-impala-connector-microsoftpow@cpfee
- d.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260402
-SUMMARY:Retiring the Impala connector
-DESCRIPTION:Retirement date: 2026-04\\nDate precision: month\\nSources: ['M
- icrosoft Power Automate in Microsoft 365']\\nThis event uses month-level p
- recision in source data.
-URL:https://deltapulse.app/item/MC1240748
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-202604-sharepoint-pages-retirement-of-w-sharepointon@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260401
-DTEND;VALUE=DATE:20260402
-SUMMARY:SharePoint Pages: Retirement of Web Search (Bing) image pivot
-DESCRIPTION:Retirement date: 2026-04\\nDate precision: month\\nSources: ['S
- harePoint Online']\\nThis event uses month-level precision in source data.
-URL:https://deltapulse.app/item/MC1230452
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-20260420-updated-retirement-of-the-semi-a-microsoft365@
+UID:m365-retirement-20260411-updated-retirement-of-the-semi-a-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260420
-DTEND;VALUE=DATE:20260421
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260412
 SUMMARY:(Updated) Retirement of the Semi-Annual Enterprise Channel option i
  n the Office Customization Tool
-DESCRIPTION:Retirement date: 2026-04-20\\nDate precision: day\\nSources: Mi
- crosoft 365 apps
+DESCRIPTION:Retirement window: 2026-04-06 to 2026-04-11\\nRetirement date: 
+ 2026-04-11\\nDate precision: day\\nSources: Microsoft 365 apps
 URL:https://deltapulse.app/item/MC1249427
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-20260430-updated-migration-update-for-off-microsofttea@
+UID:m365-retirement-20260411-retirement-of-the-semi-annual-en-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260430
-DTEND;VALUE=DATE:20260501
-SUMMARY:(Updated) Migration update for Office 365 connectors retirement in 
- Teams – webhook URL support
-DESCRIPTION:Retirement date: 2026-04-30\\nDate precision: day\\nSources: Mi
- crosoft Teams
-URL:https://deltapulse.app/item/MC1181996
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260412
+SUMMARY:Retirement of the Semi-Annual Enterprise Channel installation optio
+ n for unmanaged devices
+DESCRIPTION:Retirement window: 2026-04-06 to 2026-04-11\\nRetirement date: 
+ 2026-04-11\\nDate precision: day\\nSources: ['Microsoft 365 suite']
+URL:https://deltapulse.app/item/MC1249428
+END:VEVENT
+BEGIN:VEVENT
+UID:m365-retirement-20260414-retiring-the-impala-connector-microsoftpow@cpf
+ eed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260401
+DTEND;VALUE=DATE:20260415
+SUMMARY:Retiring the Impala connector
+DESCRIPTION:Retirement window: 2026-04-01 to 2026-04-14\\nRetirement date: 
+ 2026-04-14\\nDate precision: day\\nSources: ['Microsoft Power Automate in 
+ Microsoft 365']
+URL:https://deltapulse.app/item/MC1240748
+END:VEVENT
+BEGIN:VEVENT
+UID:m365-retirement-20260415-engage-is-retiring-live-events-p-microsoftviv@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260415
+DTEND;VALUE=DATE:20260416
+SUMMARY:Engage is retiring live events powered by Teams Live Events effecti
+ ve April 15th\, 2026
+DESCRIPTION:Retirement date: 2026-04-15\\nDate precision: day\\nSources: ['
+ Microsoft Viva']
+URL:https://deltapulse.app/item/MC1227085
+END:VEVENT
+BEGIN:VEVENT
+UID:m365-retirement-20260420-updated-legacy-sharepoint-online-sharepointon@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260331
+DTEND;VALUE=DATE:20260421
+SUMMARY:(Updated) Legacy SharePoint Online Content Delivery Network (CDN) d
+ omain to be retired—review configurations
+DESCRIPTION:Retirement window: 2026-03-31 to 2026-04-20\\nRetirement date: 
+ 2026-04-20\\nDate precision: day\\nSources: ['SharePoint Online']
+URL:https://deltapulse.app/item/MC1184996
+END:VEVENT
+BEGIN:VEVENT
+UID:m365-retirement-20260420-sharepoint-pages-retirement-of-w-sharepointon@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260421
+SUMMARY:SharePoint Pages: Retirement of Web Search (Bing) image pivot
+DESCRIPTION:Retirement window: 2026-03-20 to 2026-04-20\\nRetirement date: 
+ 2026-04-20\\nDate precision: day\\nSources: ['SharePoint Online']
+URL:https://deltapulse.app/item/MC1230452
 END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260430-microsoft-defender-for-ios-end-o-microsoftdef@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260501
 SUMMARY:Microsoft Defender for iOS: End of support for iOS 16 devices
@@ -126,9 +112,22 @@ DESCRIPTION:Retirement date: 2026-04-30\\nDate precision: day\\nSources: ['
 URL:https://deltapulse.app/item/MC1245219
 END:VEVENT
 BEGIN:VEVENT
+UID:m365-retirement-20260430-microsoft-sharepoint-retirement--sharepointon@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260216
+DTEND;VALUE=DATE:20260501
+SUMMARY:Microsoft SharePoint: Retirement of IDCRL authentication protocol a
+ nd enforcement of OpenID Connect and OAuth protocols
+DESCRIPTION:Retirement window: 2026-02-16 to 2026-04-30\\nRetirement date: 
+ 2026-04-30\\nDate precision: day\\nSources: ['SharePoint Online'\, 'Micros
+ oft OneDrive']
+URL:https://deltapulse.app/item/MC1184649
+END:VEVENT
+BEGIN:VEVENT
 UID:m365-retirement-20260501-updated-simplifying-agent-manage-microsoftent@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
 SUMMARY:(Updated) Simplifying agent management with Agent 365
@@ -137,45 +136,9 @@ DESCRIPTION:Retirement date: 2026-05-01\\nDate precision: day\\nSources: Mi
 URL:https://deltapulse.app/item/MC1275311
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202605-microsoft-loop-retirement-of-cop-microsoft365@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260502
-SUMMARY:Microsoft Loop: Retirement of Copilot‑generated Recaps
-DESCRIPTION:Retirement date: 2026-05\\nDate precision: month\\nSources: ['M
- icrosoft 365 apps']\\nThis event uses month-level precision in source data
- .
-URL:https://deltapulse.app/item/MC1267976
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-20260501-microsoft-sharepoint-retirement--sharepointon@
- cpfeed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260502
-SUMMARY:Microsoft SharePoint: Retirement of IDCRL authentication protocol a
- nd enforcement of OpenID Connect and OAuth protocols
-DESCRIPTION:Retirement date: 2026-05-01\\nDate precision: day\\nSources: ['
- SharePoint Online'\, 'Microsoft OneDrive']
-URL:https://deltapulse.app/item/MC1184649
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-202605-outlook-for-windows-report-retir-microsoft365@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260502
-SUMMARY:Outlook for Windows report retirement in the Exchange admin center
-DESCRIPTION:Retirement date: 2026-05\\nDate precision: month\\nSources: ['M
- icrosoft 365 apps']\\nThis event uses month-level precision in source data
- .
-URL:https://deltapulse.app/item/MC1230889
-END:VEVENT
-BEGIN:VEVENT
 UID:m365-retirement-20260501-power-apps-information-regarding-powerapps@cpf
  eed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260501
 DTEND;VALUE=DATE:20260502
 SUMMARY:Power Apps - Information regarding the end of support for embedding
@@ -185,34 +148,9 @@ DESCRIPTION:Retirement date: 2026-05-01\\nDate precision: day\\nSources: Po
 URL:https://deltapulse.app/item/MC1273328
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202605-upcoming-retirement-of-select-th-microsoftdef@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260501
-DTEND;VALUE=DATE:20260502
-SUMMARY:Upcoming retirement of select threat detections in Microsoft Defend
- er for Cloud Apps
-DESCRIPTION:Retirement date: 2026-05\\nDate precision: month\\nSources: ['M
- icrosoft Defender XDR']\\nThis event uses month-level precision in source 
- data.
-URL:https://deltapulse.app/item/MC1254554
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-20260509-upcoming-retirement-of-older-mic-microsoftdef@
- cpfeed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260509
-DTEND;VALUE=DATE:20260510
-SUMMARY:Upcoming retirement of older Microsoft Defender for Endpoint mobile
-  app versions (iOS and Android)
-DESCRIPTION:Retirement date: 2026-05-09\\nDate precision: day\\nSources: Mi
- crosoft Defender XDR
-URL:https://deltapulse.app/item/MC1276511
-END:VEVENT
-BEGIN:VEVENT
 UID:m365-retirement-20260515-updated-retirement-of-external-a-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
 SUMMARY:(Updated) Retirement of external access token for actionable messag
@@ -222,9 +160,43 @@ DESCRIPTION:Retirement date: 2026-05-15\\nDate precision: day\\nSources: ['
 URL:https://deltapulse.app/item/MC1189663
 END:VEVENT
 BEGIN:VEVENT
+UID:m365-retirement-20260520-microsoft-loop-retirement-of-cop-microsoft365@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+SUMMARY:Microsoft Loop: Retirement of Copilot‑generated Recaps
+DESCRIPTION:Retirement date: 2026-05-20\\nDate precision: day\\nSources: ['
+ Microsoft 365 apps']
+URL:https://deltapulse.app/item/MC1267976
+END:VEVENT
+BEGIN:VEVENT
+UID:m365-retirement-20260520-outlook-for-windows-report-retir-microsoft365@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260420
+DTEND;VALUE=DATE:20260521
+SUMMARY:Outlook for Windows report retirement in the Exchange admin center
+DESCRIPTION:Retirement window: 2026-04-20 to 2026-05-20\\nRetirement date: 
+ 2026-05-20\\nDate precision: day\\nSources: ['Microsoft 365 apps']
+URL:https://deltapulse.app/item/MC1230889
+END:VEVENT
+BEGIN:VEVENT
+UID:m365-retirement-20260520-upcoming-retirement-of-select-th-microsoftdef@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+SUMMARY:Upcoming retirement of select threat detections in Microsoft Defend
+ er for Cloud Apps
+DESCRIPTION:Retirement date: 2026-05-20\\nDate precision: day\\nSources: ['
+ Microsoft Defender XDR']
+URL:https://deltapulse.app/item/MC1254554
+END:VEVENT
+BEGIN:VEVENT
 UID:m365-retirement-20260525-complete-retirement-of-the-outlo-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260525
 DTEND;VALUE=DATE:20260526
 SUMMARY:Complete retirement of the Outlook Lite app
@@ -233,43 +205,9 @@ DESCRIPTION:Retirement date: 2026-05-25\\nDate precision: day\\nSources: Mi
 URL:https://deltapulse.app/item/MC1276508
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202606-updated-retirement-of-featured-l-sharepointon@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260601
-DTEND;VALUE=DATE:20260602
-SUMMARY:(Updated) Retirement of featured links on SharePoint Start Page
-DESCRIPTION:Retirement date: 2026-06\\nDate precision: month\\nSources: ['S
- harePoint Online']\\nThis event uses month-level precision in source data.
-URL:https://deltapulse.app/item/MC1197131
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-20260601-classic-outlook-retirement-of-pe-microsoft365@
- cpfeed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260601
-DTEND;VALUE=DATE:20260602
-SUMMARY:Classic Outlook: Retirement of people card expanded view
-DESCRIPTION:Retirement date: 2026-06-01\\nDate precision: day\\nSources: ['
- Microsoft 365 apps']
-URL:https://deltapulse.app/item/MC1269210
-END:VEVENT
-BEGIN:VEVENT
-UID:m365-retirement-202606-new-pdf-viewer-enabled-by-defaul-microsoft365@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260601
-DTEND;VALUE=DATE:20260602
-SUMMARY:New PDF Viewer Enabled by Default in Microsoft Edge Starting Octobe
- r 2025
-DESCRIPTION:Retirement date: 2026-06\\nDate precision: month\\nSources: Mic
- rosoft 365 suite\\nThis event uses month-level precision in source data.
-URL:https://deltapulse.app/item/MC1154300
-END:VEVENT
-BEGIN:VEVENT
 UID:m365-retirement-202606-reminder-require-approved-client-microsoftint@cp
  feed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:Reminder: "Require approved client app" control in Microsoft Entra 
@@ -281,7 +219,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260601-retirement-of-the-sway-windows-d-sway@cpfeed.c
  loud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260601
 DTEND;VALUE=DATE:20260602
 SUMMARY:Retirement of the Sway Windows Desktop App on June 1\, 2026
@@ -292,7 +230,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260619-power-platform-information-regar-powerplatfor@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260619
 DTEND;VALUE=DATE:20260620
 SUMMARY:Power Platform - Information regarding the end of support for Globa
@@ -304,7 +242,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260629-microsoft-teams-retirement-of-le-microsofttea@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260629
 DTEND;VALUE=DATE:20260630
 SUMMARY:Microsoft Teams: Retirement of legacy third‑party meeting and call 
@@ -316,7 +254,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260629-microsoft-teams-teams-live-event-microsofttea@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260629
 DTEND;VALUE=DATE:20260630
 SUMMARY:Microsoft Teams: Teams Live Events is retiring
@@ -327,7 +265,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260630-updated-retirement-of-assignment-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:(Updated) Retirement of Assignments and Courses adaptive card exten
@@ -337,9 +275,20 @@ DESCRIPTION:Retirement date: 2026-06-30\\nDate precision: day\\nSources: ['
 URL:https://deltapulse.app/item/MC1184647
 END:VEVENT
 BEGIN:VEVENT
+UID:m365-retirement-20260630-classic-outlook-retirement-of-pe-microsoft365@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260601
+DTEND;VALUE=DATE:20260701
+SUMMARY:Classic Outlook: Retirement of people card expanded view
+DESCRIPTION:Retirement window: 2026-06-01 to 2026-06-30\\nRetirement date: 
+ 2026-06-30\\nDate precision: day\\nSources: ['Microsoft 365 apps']
+URL:https://deltapulse.app/item/MC1269210
+END:VEVENT
+BEGIN:VEVENT
 UID:m365-retirement-20260630-retirement-of-the-isbroadcast-pr-microsofttea@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
 SUMMARY:Retirement of the isBroadcast property for Teams Live Events in Mic
@@ -349,21 +298,9 @@ DESCRIPTION:Retirement date: 2026-06-30\\nDate precision: day\\nSources: ['
 URL:https://deltapulse.app/item/MC1226498
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202607-updated-retirement-of-credential-exchangeonli@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260701
-DTEND;VALUE=DATE:20260702
-SUMMARY:(Updated) Retirement of -Credential parameter when connecting to Ex
- change Online PowerShell
-DESCRIPTION:Retirement date: 2026-07\\nDate precision: month\\nSources: ['E
- xchange Online']\\nThis event uses month-level precision in source data.
-URL:https://deltapulse.app/item/MC1248389
-END:VEVENT
-BEGIN:VEVENT
 UID:m365-retirement-20260705-top-domain-mail-flow-report-in-e-exchangeonli@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260705
 DTEND;VALUE=DATE:20260706
 SUMMARY:Top domain mail flow report in Exchange Online is retiring
@@ -374,7 +311,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260713-sharepoint-designer-2013-reaches-sharepointon@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260713
 DTEND;VALUE=DATE:20260714
 SUMMARY:SharePoint Designer 2013 reaches end of support on July 14\, 2026
@@ -383,9 +320,21 @@ DESCRIPTION:Retirement date: 2026-07-13\\nDate precision: day\\nSources: ['
 URL:https://deltapulse.app/item/MC1230891
 END:VEVENT
 BEGIN:VEVENT
+UID:m365-retirement-20260720-updated-retirement-of-credential-exchangeonli@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260720
+DTEND;VALUE=DATE:20260721
+SUMMARY:(Updated) Retirement of -Credential parameter when connecting to Ex
+ change Online PowerShell
+DESCRIPTION:Retirement date: 2026-07-20\\nDate precision: day\\nSources: ['
+ Exchange Online']
+URL:https://deltapulse.app/item/MC1248389
+END:VEVENT
+BEGIN:VEVENT
 UID:m365-retirement-202608-microsoft-teams-retirement-of-ca-microsofttea@cp
  feed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260801
 DTEND;VALUE=DATE:20260802
 SUMMARY:Microsoft Teams: Retirement of CAPTCHA for meeting join
@@ -394,33 +343,34 @@ DESCRIPTION:Retirement date: 2026-08\\nDate precision: month\\nSources: ['M
 URL:https://deltapulse.app/item/MC1262588
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202608-upcoming-change-retirement-of-no-sharepointon@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260801
-DTEND;VALUE=DATE:20260802
+UID:m365-retirement-20260820-upcoming-change-retirement-of-no-sharepointon@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260720
+DTEND;VALUE=DATE:20260821
 SUMMARY:Upcoming change: Retirement of noise suppression capability for One
  Drive and SharePoint video
-DESCRIPTION:Retirement date: 2026-08\\nDate precision: month\\nSources: Sha
- rePoint Online\\nThis event uses month-level precision in source data.
+DESCRIPTION:Retirement window: 2026-07-20 to 2026-08-20\\nRetirement date: 
+ 2026-08-20\\nDate precision: day\\nSources: SharePoint Online
 URL:https://deltapulse.app/item/MC1272549
 END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260831-updated-retirement-of-sharepoint-sharepointon@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20260831
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260520
 DTEND;VALUE=DATE:20260901
 SUMMARY:(Updated) Retirement of SharePoint One-Time Passcode (SPO OTP) and 
  transition to Microsoft Entra B2B
-DESCRIPTION:Retirement date: 2026-08-31\\nDate precision: day\\nSources: ['
- SharePoint Online'\, 'Microsoft OneDrive']
+DESCRIPTION:Retirement window: 2026-05-20 to 2026-08-31\\nRetirement date: 
+ 2026-08-31\\nDate precision: day\\nSources: ['SharePoint Online'\, 'Micros
+ oft OneDrive']
 URL:https://deltapulse.app/item/MC1243549
 END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20260930-project-online-retirement-projec-projectonlin@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20260930
 DTEND;VALUE=DATE:20261001
 SUMMARY:Project Online retirement: Project Web App site creation and unused
@@ -430,9 +380,20 @@ DESCRIPTION:Retirement date: 2026-09-30\\nDate precision: day\\nSources: ['
 URL:https://deltapulse.app/item/MC1227080
 END:VEVENT
 BEGIN:VEVENT
+UID:m365-retirement-20261001-exchange-web-services-ews-retire-exchangeonli@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Exchange Web Services (EWS) retirement update
+DESCRIPTION:Retirement date: 2026-10-01\\nDate precision: day\\nSources: ['
+ Exchange Online']
+URL:https://deltapulse.app/item/MC1227454
+END:VEVENT
+BEGIN:VEVENT
 UID:m365-retirement-20261013-extended-security-updates-esu-av-windows@cpfee
  d.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Extended Security Updates (ESU) available for Windows 10 Enterprise
@@ -444,7 +405,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20261013-support-for-office-ltsc-2021-and-microsoft365@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
 SUMMARY:Support for Office LTSC 2021\, and additional apps will end on Octo
@@ -454,19 +415,20 @@ DESCRIPTION:Retirement date: 2026-10-13\\nDate precision: day\\nSources: Mi
 URL:https://deltapulse.app/item/MC1278920
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202612-retirement-of-power-bi-q-a-powerbi@cpfeed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
+UID:m365-retirement-20261220-retirement-of-power-bi-q-a-powerbi@cpfeed.clou
+ d
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261221
 SUMMARY:Retirement of Power BI Q&A
-DESCRIPTION:Retirement date: 2026-12\\nDate precision: month\\nSources: ['P
- ower BI']\\nThis event uses month-level precision in source data.
+DESCRIPTION:Retirement date: 2026-12-20\\nDate precision: day\\nSources: ['
+ Power BI']
 URL:https://deltapulse.app/item/MC1218421
 END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20270131-updated-retirement-notice-mde-an-microsoftdef@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:(Updated) Retirement notice: MDE and XDR Advanced Hunting APIs reti
@@ -476,32 +438,44 @@ DESCRIPTION:Retirement date: 2027-01-31\\nDate precision: day\\nSources: ['
 URL:https://deltapulse.app/item/MC1220762
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-202702-engage-is-retiring-live-events-p-microsoftviv@cp
- feed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:Engage is retiring live events powered by Teams Live Events effecti
- ve April 15th\, 2026
-DESCRIPTION:Retirement date: 2027-02\\nDate precision: month\\nSources: ['M
- icrosoft Viva']\\nThis event uses month-level precision in source data.
-URL:https://deltapulse.app/item/MC1227085
+UID:m365-retirement-20270202-microsoft-purview-dlm-retirement-sharepointon@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260420
+DTEND;VALUE=DATE:20270203
+SUMMARY:Microsoft Purview DLM: Retirement of SharePoint online information 
+ management and in-place records management features
+DESCRIPTION:Retirement window: 2026-04-20 to 2027-02-02\\nRetirement date: 
+ 2027-02-02\\nDate precision: day\\nSources: ['SharePoint Online']
+URL:https://deltapulse.app/item/MC1211579
 END:VEVENT
 BEGIN:VEVENT
-UID:m365-retirement-20270401-exchange-web-services-ews-retire-exchangeonli@
+UID:m365-retirement-20270220-upcoming-retirement-of-older-mic-microsoftdef@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
-DTSTART;VALUE=DATE:20270401
-DTEND;VALUE=DATE:20270402
-SUMMARY:Exchange Web Services (EWS) retirement update
-DESCRIPTION:Retirement date: 2027-04-01\\nDate precision: day\\nSources: ['
- Exchange Online']
-URL:https://deltapulse.app/item/MC1227454
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260510
+DTEND;VALUE=DATE:20270221
+SUMMARY:Upcoming retirement of older Microsoft Defender for Endpoint mobile
+  app versions (iOS and Android)
+DESCRIPTION:Retirement window: 2026-05-10 to 2027-02-20\\nRetirement date: 
+ 2027-02-20\\nDate precision: day\\nSources: Microsoft Defender XDR
+URL:https://deltapulse.app/item/MC1276511
+END:VEVENT
+BEGIN:VEVENT
+UID:m365-retirement-20270320-updated-retirement-of-featured-l-sharepointon@
+ cpfeed.cloud
+DTSTAMP:20260415T125134Z
+DTSTART;VALUE=DATE:20260620
+DTEND;VALUE=DATE:20270321
+SUMMARY:(Updated) Retirement of featured links on SharePoint Start Page
+DESCRIPTION:Retirement window: 2026-06-20 to 2027-03-20\\nRetirement date: 
+ 2027-03-20\\nDate precision: day\\nSources: ['SharePoint Online']
+URL:https://deltapulse.app/item/MC1197131
 END:VEVENT
 BEGIN:VEVENT
 UID:m365-retirement-20271014-microsoft-entra-id-retirement-of-microsoftent@
  cpfeed.cloud
-DTSTAMP:20260417T115630Z
+DTSTAMP:20260415T125134Z
 DTSTART;VALUE=DATE:20271014
 DTEND;VALUE=DATE:20271015
 SUMMARY:Microsoft Entra ID: Retirement of duplicative properties in passkey

@@ -1,48 +1,65 @@
 #!/usr/bin/env python3
-"""Debug DeltaPulse MCP tool calls"""
+"""Debug DeltaPulse MCP tool calls."""
 
-import requests
 import json
 
-MCP_ENDPOINT = "https://deltapulse.app/mcp"
+MAX_PAYLOAD_PREVIEW_CHARS = 1000
+MAX_ITEM_PREVIEW_CHARS = 1200
 
-def debug_mcp_call(tool_name, arguments=None):
-    """Call MCP tool and show raw response."""
-    payload = {
-        "jsonrpc": "2.0",
-        "method": "tools/call",
-        "params": {
-            "name": tool_name,
-            "arguments": arguments or {}
-        },
-        "id": 1,
-    }
-    
+
+def preview_json(value, limit):
+    rendered = json.dumps(value, indent=2, ensure_ascii=False)
+    if len(rendered) <= limit:
+        return rendered
+    return rendered[:limit] + "... [truncated]"
+
+
+def load_mcp_helpers():
+    from fetch_m365_data import call_mcp_tool, create_http_session
+
+    return call_mcp_tool, create_http_session
+
+
+def debug_mcp_call(session, call_mcp_tool, tool_name, arguments=None):
+    """Call MCP tool and print a concise debug summary."""
+    args = arguments or {}
+
     print(f"\n=== Calling | {tool_name} ===")
-    print(f"Payload: {json.dumps(arguments or {}, indent=2)}")
-    
-    response = requests.post(MCP_ENDPOINT, json=payload, timeout=10)
-    result = response.json()
-    
-    print(f"Raw response: {json.dumps(result, indent=2)[:2000]}")
-    
-    if "result" in result:
-        content = result["result"].get("content", [])
-        if content:
-            text = content[0].get("text", "")
-            print(f"Content text (first 1000 chars): {text[:1000]}")
-            # Try to parse as JSON
-            try:
-                parsed = json.loads(text)
-                print(f"Parsed JSON keys: {list(parsed.keys())}")
-                if "items" in parsed:
-                    print(f"Items count: {len(parsed['items'])}")
-                    if parsed["items"]:
-                        print(f"First item: {json.dumps(parsed['items'][0], indent=2)[:500]}")
-            except json.JSONDecodeError as e:
-                print(f"Failed to parse as JSON: {e}")
+    print(f"Payload: {preview_json(args, MAX_PAYLOAD_PREVIEW_CHARS)}")
 
-# Test tool calls
-debug_mcp_call("list_new_items", {"limit": 5})
-debug_mcp_call("list_new_items", {"limit": 5, "dateRange": "last_7_days"})
-debug_mcp_call("list_products", {})
+    items = call_mcp_tool(session, tool_name, args)
+    if not isinstance(items, list):
+        print(f"Unexpected response type: {type(items).__name__}")
+        return
+
+    print(f"Items count: {len(items)}")
+    if not items:
+        print("No items returned (or call failed).")
+        return
+
+    first_item = items[0]
+    if isinstance(first_item, dict):
+        print(f"First item keys: {list(first_item.keys())}")
+    print(f"First item: {preview_json(first_item, MAX_ITEM_PREVIEW_CHARS)}")
+
+
+def main():
+    call_mcp_tool, create_http_session = load_mcp_helpers()
+    session = create_http_session()
+
+    try:
+        scenarios = [
+            ("list_new_items", {"limit": 5}),
+            ("list_new_items", {"limit": 5, "dateRange": "last_7_days"}),
+            ("list_products", {}),
+        ]
+        for tool_name, arguments in scenarios:
+            debug_mcp_call(session, call_mcp_tool, tool_name, arguments)
+    finally:
+        session.close()
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

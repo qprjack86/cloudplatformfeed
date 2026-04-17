@@ -4,6 +4,7 @@ import unittest
 import tempfile
 import json
 import os
+from contextlib import contextmanager
 from unittest import mock
 from datetime import datetime, timedelta, timezone
 
@@ -13,6 +14,24 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 import fetch_feeds
+
+
+@contextmanager
+def temporary_cwd(path):
+    old_cwd = os.getcwd()
+    os.chdir(path)
+    try:
+        yield
+    finally:
+        os.chdir(old_cwd)
+
+
+def assert_category_metadata(test_case, event):
+    test_case.assertIn("primaryCategory", event)
+    test_case.assertIn("categories", event)
+    test_case.assertIn("categorySourceMap", event)
+    test_case.assertTrue(event["primaryCategory"])
+    test_case.assertTrue(event["categories"])
 
 
 class NormalizeArticleUrlTests(unittest.TestCase):
@@ -275,14 +294,18 @@ class SiteConfigTests(unittest.TestCase):
 
 
 class ChecksumMetadataTests(unittest.TestCase):
+    def _create_artifacts(self, root):
+        feeds = root / "data" / "feeds.json"
+        feed_xml = root / "data" / "feed.xml"
+        feeds.parent.mkdir(parents=True, exist_ok=True)
+        feeds.write_text('{"ok":true}\n', encoding="utf-8")
+        feed_xml.write_text('<rss></rss>\n', encoding="utf-8")
+        return feeds, feed_xml
+
     def test_build_checksums_payload_includes_expected_shape(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = pathlib.Path(tmpdir)
-            feeds = root / "data" / "feeds.json"
-            feed_xml = root / "data" / "feed.xml"
-            feeds.parent.mkdir(parents=True, exist_ok=True)
-            feeds.write_text('{"ok":true}\n', encoding="utf-8")
-            feed_xml.write_text('<rss></rss>\n', encoding="utf-8")
+            feeds, feed_xml = self._create_artifacts(root)
 
             payload = fetch_feeds.build_checksums_payload(
                 [feeds, feed_xml],
@@ -311,12 +334,8 @@ class ChecksumMetadataTests(unittest.TestCase):
     def test_write_checksums_file_writes_json_file(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = pathlib.Path(tmpdir)
-            feeds = root / "data" / "feeds.json"
-            feed_xml = root / "data" / "feed.xml"
+            feeds, feed_xml = self._create_artifacts(root)
             checksums = root / "data" / "checksums.json"
-            feeds.parent.mkdir(parents=True, exist_ok=True)
-            feeds.write_text('{"ok":true}\n', encoding="utf-8")
-            feed_xml.write_text('<rss></rss>\n', encoding="utf-8")
 
             payload = fetch_feeds.write_checksums_file(
                 [feeds, feed_xml],
@@ -607,6 +626,13 @@ class FeedConcurrencyTests(unittest.TestCase):
 
 
 class RssGenerationTests(unittest.TestCase):
+    def _render_xml(self, article):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with temporary_cwd(tmpdir):
+                os.makedirs("data", exist_ok=True)
+                fetch_feeds.generate_rss_feed([article])
+                return pathlib.Path("data/feed.xml").read_text(encoding="utf-8")
+
     def test_generate_rss_feed_wraps_text_fields_in_cdata(self):
         article = {
             "title": "Launch & Learn <Now>",
@@ -618,15 +644,7 @@ class RssGenerationTests(unittest.TestCase):
             "author": "Microsoft",
         }
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            old_cwd = os.getcwd()
-            os.chdir(tmpdir)
-            try:
-                os.makedirs("data", exist_ok=True)
-                fetch_feeds.generate_rss_feed([article])
-                xml_text = pathlib.Path("data/feed.xml").read_text(encoding="utf-8")
-            finally:
-                os.chdir(old_cwd)
+        xml_text = self._render_xml(article)
 
         self.assertIn("<title><![CDATA[Launch & Learn <Now>]]></title>", xml_text)
         self.assertIn("<description><![CDATA[Summary with <b>html</b> & characters]]></description>", xml_text)
@@ -644,20 +662,30 @@ class RssGenerationTests(unittest.TestCase):
             "author": "Microsoft",
         }
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            old_cwd = os.getcwd()
-            os.chdir(tmpdir)
-            try:
-                os.makedirs("data", exist_ok=True)
-                fetch_feeds.generate_rss_feed([article])
-                xml_text = pathlib.Path("data/feed.xml").read_text(encoding="utf-8")
-            finally:
-                os.chdir(old_cwd)
+        xml_text = self._render_xml(article)
 
         self.assertIn("Contains ]]&gt; token", xml_text)
 
 
 class AzureUpdatesApiFallbackTests(unittest.TestCase):
+    def _assert_feed_fallback_behavior(self, *, api_result=None, api_side_effect=None):
+        rss_articles = [{"title": "RSS fallback article"}]
+        with mock.patch.object(
+            fetch_feeds,
+            "fetch_azure_updates_via_api",
+            return_value=api_result,
+            side_effect=api_side_effect,
+        ) as api_mock, mock.patch.object(
+            fetch_feeds,
+            "fetch_azure_updates_via_rss",
+            return_value=rss_articles,
+        ) as rss_mock:
+            result = fetch_feeds.fetch_azure_updates_feed()
+
+        self.assertEqual(result, rss_articles)
+        api_mock.assert_called_once()
+        rss_mock.assert_called_once()
+
     def test_extract_azure_update_retirement_date_from_page_prefers_body_day(self):
         html = (
             "<html><body>"
@@ -871,38 +899,10 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertEqual(article["azureRetirementDate"], "2027-05-31")
 
     def test_fetch_azure_updates_feed_falls_back_to_rss_on_api_exception(self):
-        rss_articles = [{"title": "RSS fallback article"}]
-        with mock.patch.object(
-            fetch_feeds,
-            "fetch_azure_updates_via_api",
-            side_effect=RuntimeError("api unavailable"),
-        ) as api_mock, mock.patch.object(
-            fetch_feeds,
-            "fetch_azure_updates_via_rss",
-            return_value=rss_articles,
-        ) as rss_mock:
-            result = fetch_feeds.fetch_azure_updates_feed()
-
-        self.assertEqual(result, rss_articles)
-        api_mock.assert_called_once()
-        rss_mock.assert_called_once()
+        self._assert_feed_fallback_behavior(api_side_effect=RuntimeError("api unavailable"))
 
     def test_fetch_azure_updates_feed_falls_back_to_rss_when_api_returns_no_valid_items(self):
-        rss_articles = [{"title": "RSS fallback article"}]
-        with mock.patch.object(
-            fetch_feeds,
-            "fetch_azure_updates_via_api",
-            return_value=[],
-        ) as api_mock, mock.patch.object(
-            fetch_feeds,
-            "fetch_azure_updates_via_rss",
-            return_value=rss_articles,
-        ) as rss_mock:
-            result = fetch_feeds.fetch_azure_updates_feed()
-
-        self.assertEqual(result, rss_articles)
-        api_mock.assert_called_once()
-        rss_mock.assert_called_once()
+        self._assert_feed_fallback_behavior(api_result=[])
 
     def test_fetch_azure_updates_feed_keeps_api_results_when_non_empty(self):
         api_articles = [{"title": "API article", "published": "2026-03-22T10:30:00+00:00"}]
@@ -1009,13 +1009,7 @@ class AzttyFeedTests(unittest.TestCase):
 
 
 class WorkbookCsvRetirementTests(unittest.TestCase):
-    def test_fetch_azure_retirements_from_csv_maps_rows(self):
-        csv_content = (
-            '"Service Name","Retiring Feature","Retirement Date","Actions","Is Available under the Impacted Services?"\n'
-            '"Application gateway","V1","2026-04-28","https://azure.microsoft.com/updates?id=example-1","Yes"\n'
-            '"Azure Maps Account","Render V1 APIs","2026-09-17","https://azure.microsoft.com/updates?id=example-2","No"\n'
-        )
-
+    def _fetch_articles_from_csv(self, csv_content, *, by_id_value=None, page_value=None):
         with tempfile.TemporaryDirectory() as tmpdir:
             csv_path = pathlib.Path(tmpdir) / "export_data.csv"
             csv_path.write_text(csv_content, encoding="utf-8")
@@ -1023,13 +1017,24 @@ class WorkbookCsvRetirementTests(unittest.TestCase):
             with mock.patch.object(
                 fetch_feeds,
                 "_extract_azure_update_retirement_date_by_id",
-                return_value=None,
-            ), mock.patch.object(
+                return_value=by_id_value,
+            ) as by_id_mock, mock.patch.object(
                 fetch_feeds,
                 "_extract_azure_update_retirement_date_from_page",
-                return_value=None,
-            ):
+                return_value=page_value,
+            ) as page_mock:
                 articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+
+        return articles, by_id_mock, page_mock
+
+    def test_fetch_azure_retirements_from_csv_maps_rows(self):
+        csv_content = (
+            '"Service Name","Retiring Feature","Retirement Date","Actions","Is Available under the Impacted Services?"\n'
+            '"Application gateway","V1","2026-04-28","https://azure.microsoft.com/updates?id=example-1","Yes"\n'
+            '"Azure Maps Account","Render V1 APIs","2026-09-17","https://azure.microsoft.com/updates?id=example-2","No"\n'
+        )
+
+        articles, _, _ = self._fetch_articles_from_csv(csv_content)
 
         self.assertEqual(len(articles), 2)
         self.assertEqual(
@@ -1053,20 +1058,7 @@ class WorkbookCsvRetirementTests(unittest.TestCase):
             '"Example Service","Feature B","2027-01-15","https://azure.microsoft.com/updates?id=good","Yes"\n'
         )
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            csv_path = pathlib.Path(tmpdir) / "export_data.csv"
-            csv_path.write_text(csv_content, encoding="utf-8")
-
-            with mock.patch.object(
-                fetch_feeds,
-                "_extract_azure_update_retirement_date_by_id",
-                return_value=None,
-            ), mock.patch.object(
-                fetch_feeds,
-                "_extract_azure_update_retirement_date_from_page",
-                return_value=None,
-            ):
-                articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+        articles, _, _ = self._fetch_articles_from_csv(csv_content)
 
         self.assertEqual(len(articles), 1)
         self.assertEqual(articles[0]["azureRetirementDate"], "2027-01-15")
@@ -1077,20 +1069,10 @@ class WorkbookCsvRetirementTests(unittest.TestCase):
             '"App service",".NET 9 (STS)","2026-05-12","https://azure.microsoft.com/updates/?id=485077","Yes"\n'
         )
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            csv_path = pathlib.Path(tmpdir) / "export_data.csv"
-            csv_path.write_text(csv_content, encoding="utf-8")
-
-            with mock.patch.object(
-                fetch_feeds,
-                "_extract_azure_update_retirement_date_by_id",
-                return_value="2026-11-10",
-            ) as by_id_mock, mock.patch.object(
-                fetch_feeds,
-                "_extract_azure_update_retirement_date_from_page",
-                return_value=None,
-            ) as enrich_mock:
-                articles = fetch_feeds.fetch_azure_retirements_from_csv(csv_path)
+        articles, by_id_mock, enrich_mock = self._fetch_articles_from_csv(
+            csv_content,
+            by_id_value="2026-11-10",
+        )
 
         self.assertEqual(by_id_mock.call_count, 1)
         self.assertEqual(enrich_mock.call_count, 0)
@@ -1227,10 +1209,7 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(event["sourceCount"], 2)
         self.assertIn("Azure Deprecations (aztty)", event["sources"])
         self.assertIn("Azure Updates", event["sources"])
-        self.assertIn("primaryCategory", event)
-        self.assertIn("categories", event)
-        self.assertIn("categorySourceMap", event)
-        self.assertTrue(event["primaryCategory"])
+        assert_category_metadata(self, event)
 
     def test_build_azure_retirement_calendar_adds_category_metadata_for_workbook_items(self):
         articles = [
@@ -1488,6 +1467,34 @@ class RetirementCalendarTests(unittest.TestCase):
         self.assertEqual(events[0]["sourceCount"], 2)
         self.assertEqual(events[0]["link"], "https://azure.microsoft.com/en-us/updates/558999/")
 
+    def test_build_azure_retirement_calendar_prefers_endoflife_link_when_lifecycle_source_present(self):
+        articles = [
+            {
+                "title": "Retirement: Microsoft .NET 8 (LTS) - Security support ends",
+                "link": "https://azure.microsoft.com/en-us/updates/123456/",
+                "published": "2026-04-09T09:00:00+00:00",
+                "blog": "Azure Updates",
+                "blogId": "azureupdates",
+                "announcementType": "update",
+                "azureRetirementDate": "2030-11-10",
+            },
+            {
+                "title": "Retirement: Microsoft .NET 8 (LTS) - Security support ends",
+                "link": "https://endoflife.date/dotnet",
+                "published": "2026-04-09T08:00:00+00:00",
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "announcementType": "retirement",
+                "azureRetirementDate": "2030-11-10",
+            },
+        ]
+
+        events = fetch_feeds.build_azure_retirement_calendar(articles)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["sourceCount"], 2)
+        self.assertEqual(events[0]["link"], "https://endoflife.date/dotnet")
+
     def test_build_azure_retirement_calendar_keeps_single_source_link(self):
         articles = [
             {
@@ -1707,9 +1714,7 @@ class MainOutputSchemaTests(unittest.TestCase):
         ]
 
         with tempfile.TemporaryDirectory() as tmpdir:
-            old_cwd = os.getcwd()
-            os.chdir(tmpdir)
-            try:
+            with temporary_cwd(tmpdir):
                 with mock.patch.object(fetch_feeds, "fetch_tech_community_feeds", return_value=[]), \
                     mock.patch.object(fetch_feeds, "fetch_aks_blog", return_value=[]), \
                     mock.patch.object(fetch_feeds, "fetch_devblogs_feeds", return_value=[]), \
@@ -1732,8 +1737,6 @@ class MainOutputSchemaTests(unittest.TestCase):
                     mock.patch.object(fetch_feeds, "write_checksums_file"), \
                     mock.patch.object(fetch_feeds, "write_run_metrics"):
                     fetch_feeds.main()
-            finally:
-                os.chdir(old_cwd)
 
             payload = json.loads((pathlib.Path(tmpdir) / "data" / "feeds.json").read_text(encoding="utf-8"))
 
@@ -1815,10 +1818,7 @@ class UnifiedRetirementCalendarTests(unittest.TestCase):
         sources = {event.get("source") for event in calendar}
         self.assertEqual(sources, {"azure", "microsoft", "m365"})
         for event in calendar:
-            self.assertIn("primaryCategory", event)
-            self.assertIn("categories", event)
-            self.assertIn("categorySourceMap", event)
-            self.assertTrue(event.get("categories"))
+            assert_category_metadata(self, event)
 
     def test_build_unified_retirement_calendar_maps_endoflife_to_existing_categories(self):
         """Microsoft lifecycle events should map to existing categories with fallback."""
@@ -1940,6 +1940,42 @@ class UnifiedRetirementCalendarTests(unittest.TestCase):
             # Check that azure event is in the results
             event_blogs = {e.get("blogId") for e in calendar}
             self.assertIn("azureretirements", event_blogs)
+
+    def test_build_unified_retirement_calendar_prefers_endoflife_link_when_lifecycle_source_present(self):
+        now = datetime.now(timezone.utc)
+        future_date = (now + timedelta(days=60)).strftime("%Y-%m-%d")
+
+        azure_events = [
+            {
+                "title": "Retirement: Microsoft .NET 8 (LTS) - Security support ends",
+                "link": "https://azure.microsoft.com/en-us/updates/123456/",
+                "azureRetirementDate": future_date,
+                "blog": "Azure Retirements Workbook",
+                "blogId": "azureretirements",
+                "announcementType": "retirement",
+                "published": now.isoformat(),
+            }
+        ]
+        microsoft_events = [
+            {
+                "title": "Retirement: Microsoft .NET 8 (LTS) - Security support ends",
+                "link": "https://endoflife.date/dotnet",
+                "azureRetirementDate": future_date,
+                "blog": "Microsoft Lifecycle",
+                "blogId": "microsoftlifecycle",
+                "announcementType": "retirement",
+                "published": now.isoformat(),
+            }
+        ]
+
+        calendar = fetch_feeds.build_unified_retirement_calendar(
+            azure_events=azure_events,
+            microsoft_events=microsoft_events,
+        )
+
+        self.assertEqual(len(calendar), 1)
+        self.assertEqual(calendar[0]["sourceCount"], 2)
+        self.assertEqual(calendar[0]["link"], "https://endoflife.date/dotnet")
 
     def test_build_unified_retirement_calendar_filters_past_dates(self):
         """Unified calendar should exclude events with past retirement dates."""

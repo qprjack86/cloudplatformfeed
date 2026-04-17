@@ -71,7 +71,10 @@ jobs:
             echo "No changes to commit"
           else
             branch_name="${GITHUB_REF_NAME:-main}"
-            git commit -m "📰 Update Azure blog feeds and M365 data - $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git commit -m "Update Azure blog feeds and M365 data - $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+            # Keep transient cache updates from breaking pull --rebase in CI.
+            git restore data/.m365_cache.json || true
             git pull --rebase --autostash origin "$branch_name"
 
             push_attempt=1

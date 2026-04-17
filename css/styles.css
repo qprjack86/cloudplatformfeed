@@ -1445,6 +1445,10 @@ footer a:hover {
   background: color-mix(in srgb, var(--primary) 12%, var(--bg-primary));
 }
 
+.retirement-mini-day.has-range-boundary {
+  border-style: dashed;
+}
+
 .retirement-mini-day.is-today {
   border-color: var(--primary);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 50%, transparent);
@@ -1455,6 +1459,21 @@ footer a:hover {
   font-weight: 700;
 }
 
+.retirement-mini-day.is-selected {
+  background: var(--primary);
+  border-color: var(--primary-dark);
+}
+
+.retirement-mini-day.is-selected .retirement-mini-day-num {
+  color: var(--brand-slate-strong);
+  font-weight: 700;
+}
+
+.retirement-mini-day.is-selected .retirement-mini-dot {
+  background: var(--brand-slate-strong);
+  color: var(--primary);
+}
+
 .retirement-mini-day-num {
   font-size: 0.68rem;
   color: var(--text-secondary);
@@ -1462,11 +1481,18 @@ footer a:hover {
 
 .retirement-mini-dot {
   position: absolute;
-  bottom: 4px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
+  right: 3px;
+  bottom: 3px;
+  min-width: 14px;
+  height: 14px;
+  border-radius: 999px;
   background: var(--primary);
+  color: var(--brand-slate-strong);
+  font-size: 0.56rem;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+  padding: 0 3px;
 }
 
 .retirement-mini-list {
@@ -1486,8 +1512,33 @@ footer a:hover {
   line-height: 1.4;
 }
 
+.retirement-mini-list .retirement-mini-list-item.is-overflow {
+  display: none;
+}
+
+.retirement-mini-list.is-expanded .retirement-mini-list-item.is-overflow {
+  display: list-item;
+}
+
 .retirement-mini-list li {
   margin-bottom: 0.2rem;
+}
+
+.retirement-mini-list-toggle {
+  margin-top: 0.25rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.66rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.retirement-mini-list-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .retirement-mini-category-badge {

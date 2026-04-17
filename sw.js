@@ -3,15 +3,35 @@ const STATIC_ASSETS = [
   "/",
   "/index.html",
   "/css/styles.css",
-  "/js/clarity.js",
   "/js/app.js",
   "/manifest.json",
   "/icons/atech-192.png",
   "/icons/atech-512.png",
 ];
 
+const FEED_PATH_TOKENS = ["feeds.json", "feed.xml", "m365_data.json"];
+const ICON_EXTENSIONS = [".ico", ".png", ".svg"];
+
 function shouldCache(response) {
   return response && response.ok;
+}
+
+function isFeedDataPath(pathname) {
+  return (
+    FEED_PATH_TOKENS.some((token) => pathname.includes(token)) ||
+    pathname.endsWith(".ics")
+  );
+}
+
+function isIconAssetPath(pathname) {
+  return (
+    pathname.startsWith("/icons/") ||
+    ICON_EXTENSIONS.some((extension) => pathname.endsWith(extension))
+  );
+}
+
+function isAppShellRequest(pathname, mode) {
+  return STATIC_ASSETS.includes(pathname) || mode === "navigate";
 }
 
 function putInCache(request, response) {
@@ -38,13 +58,7 @@ function cacheFirst(request) {
       return cached;
     }
 
-    return fetch(request).then((response) => {
-      if (response.type === "opaque") {
-        return response;
-      }
-
-      return putInCache(request, response);
-    });
+    return fetch(request).then((response) => putInCache(request, response));
   });
 }
 
@@ -68,39 +82,27 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") {
     return;
   }
 
-  var url = new URL(event.request.url);
-  var isSameOrigin = url.origin === self.location.origin;
-  var isFeedData =
-    url.pathname.includes("feeds.json") ||
-    url.pathname.includes("feed.xml") ||
-    url.pathname.includes("m365_data.json") ||
-    url.pathname.endsWith(".ics");
-  var isIconAsset =
-    url.pathname.startsWith("/icons/") ||
-    url.pathname.endsWith(".ico") ||
-    url.pathname.endsWith(".png") ||
-    url.pathname.endsWith(".svg");
-  var isAppShell = STATIC_ASSETS.includes(url.pathname) || event.request.mode === "navigate";
+  const url = new URL(event.request.url);
+  const isSameOrigin = url.origin === self.location.origin;
+  const useNetworkFirst =
+    isFeedDataPath(url.pathname) ||
+    (isSameOrigin &&
+      (isAppShellRequest(url.pathname, event.request.mode) ||
+        isIconAssetPath(url.pathname)));
 
-  // Network-first for feed data (always get fresh data)
-  if (isFeedData) {
-    event.respondWith(networkFirst(event.request));
-    return;
-  }
-
-  // Network-first for the app shell so new deploys are picked up quickly.
-  if (isSameOrigin && isAppShell) {
-    event.respondWith(networkFirst(event.request));
-    return;
-  }
-
-  // Network-first for icons so branding updates are visible without hard refresh.
-  if (isSameOrigin && isIconAsset) {
+  // Network-first for feed data, app shell, and icon assets.
+  if (useNetworkFirst) {
     event.respondWith(networkFirst(event.request));
     return;
   }

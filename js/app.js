@@ -93,6 +93,8 @@
   var checksumWatcher = null;
   var retirementCalendarViewState = { azure: null, m365: null };
   var retirementCalendarCollapsedState = { azure: null, m365: null };
+  var retirementCalendarListExpandedState = { azure: false, m365: false };
+  var selectedRetirementDate = null;  // Tracks clicked retirement date for filtering
   
   // Tab buttons (M365 feature)
   var tabButtons = document.querySelectorAll(".tab-button");
@@ -302,27 +304,7 @@
   }
 
   function formatUkRetirementDate(value) {
-    if (!value) return "";
-    var raw = String(value).trim();
-    if (!raw) return "";
-
-    var dayMatch = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
-    if (dayMatch) {
-      var dayDate = new Date(
-        Number(dayMatch[1]),
-        Number(dayMatch[2]) - 1,
-        Number(dayMatch[3])
-      );
-      return formatUkNumericDate(dayDate);
-    }
-
-    var monthMatch = /^(\d{4})-(\d{2})$/.exec(raw);
-    if (monthMatch) {
-      var monthDate = new Date(Number(monthMatch[1]), Number(monthMatch[2]) - 1, 1);
-      return formatLocalDate(monthDate, { month: "short", year: "numeric" });
-    }
-
-    return raw;
+    return formatRetirementCalendarDate(value);
   }
 
   function formatLocalDateTime(date) {
@@ -336,6 +318,14 @@
           minute: "2-digit"
         })
       : "";
+  }
+
+  function formatLocalDateISO(date) {
+    if (!date) return "";
+    var year = date.getFullYear();
+    var month = String(date.getMonth() + 1).padStart(2, "0");
+    var day = String(date.getDate()).padStart(2, "0");
+    return year + "-" + month + "-" + day;
   }
 
   function renderSummaryHtml(text) {
@@ -381,14 +371,6 @@
     return html || "<p>" + escapeHtml(text || "") + "</p>";
   }
 
-  function resolveArticleOutboundLink(article) {
-    if (!article) return "";
-    if ((article.source || "azure") === "m365") {
-      return article.link || "";
-    }
-    return article.link || "";
-  }
-
   function buildLifecycleSummaryMarkdown(byLifecycle) {
     var order = ["in_preview", "launched_ga", "retiring", "in_development"];
     var lines = [];
@@ -405,7 +387,7 @@
 
       bucket.slice(0, 6).forEach(function (article) {
         var articleTitle = article.title || "Untitled update";
-        var articleLink = resolveArticleOutboundLink(article);
+        var articleLink = article && article.link ? article.link : "";
         if (articleLink) {
           lines.push("  • [" + articleTitle + "](" + articleLink + ")");
         } else {
@@ -425,6 +407,39 @@
     );
   }
 
+  function formatSummaryDateLabel(days) {
+    var publishingDays = Array.isArray(days) ? days : [];
+
+    function toSummaryDate(day) {
+      return formatLocalDate(parsePublishingDay(day), {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      });
+    }
+
+    if (publishingDays.length >= 2) {
+      return (
+        toSummaryDate(publishingDays[publishingDays.length - 1]) +
+        " – " +
+        toSummaryDate(publishingDays[0])
+      );
+    }
+    if (publishingDays.length === 1) {
+      return toSummaryDate(publishingDays[0]);
+    }
+    return "";
+  }
+
+  function showSummaryPanelContent(label, summaryText) {
+    aiSummaryEl.innerHTML =
+      "<h2>🤖 " + escapeHtml(label) + "</h2>" +
+      renderAnnouncementWindowHint() +
+      renderSummaryHtml(summaryText);
+    aiSummaryEl.classList.remove("is-unavailable");
+    showElement(aiSummaryEl);
+  }
+
   function renderSummaryPanel() {
     if (!aiSummaryEl) return;
 
@@ -434,33 +449,11 @@
         return;
       }
 
-      var m365Days = Array.isArray(m365FeedData.summaryPublishingDays)
-        ? m365FeedData.summaryPublishingDays
-        : [];
-
-      function toM365Date(day) {
-        return formatLocalDate(parsePublishingDay(day), {
-          day: "numeric",
-          month: "short",
-          year: "numeric"
-        });
-      }
-
-      var m365DateLabel = "";
-      if (m365Days.length >= 2) {
-        m365DateLabel = toM365Date(m365Days[m365Days.length - 1]) + " – " + toM365Date(m365Days[0]);
-      } else if (m365Days.length === 1) {
-        m365DateLabel = toM365Date(m365Days[0]);
-      }
+      var m365DateLabel = formatSummaryDateLabel(m365FeedData.summaryPublishingDays);
       var m365Label = "Microsoft 365 Announcement Summary" + (m365DateLabel ? ": " + m365DateLabel : "");
       var m365SummaryText = m365FeedData.summary || buildLifecycleSummaryMarkdown(m365FeedData.byLifecycle || {});
 
-      aiSummaryEl.innerHTML =
-        "<h2>🤖 " + escapeHtml(m365Label) + "</h2>" +
-        renderAnnouncementWindowHint() +
-        renderSummaryHtml(m365SummaryText);
-      aiSummaryEl.classList.remove("is-unavailable");
-      showElement(aiSummaryEl);
+      showSummaryPanelContent(m365Label, m365SummaryText);
       return;
     }
 
@@ -470,34 +463,10 @@
     }
 
     if (azureFeedData.summary) {
-      var publishingDays = Array.isArray(azureFeedData.summaryPublishingDays)
-        ? azureFeedData.summaryPublishingDays
-        : [];
-
-      function toLocalPublishingDate(day) {
-        return formatLocalDate(parsePublishingDay(day), {
-          day: "numeric",
-          month: "short",
-          year: "numeric"
-        });
-      }
-
-      var azureDateLabel = "";
-      if (publishingDays.length >= 2) {
-        var oldest = publishingDays[publishingDays.length - 1];
-        var newest = publishingDays[0];
-        azureDateLabel = toLocalPublishingDate(oldest) + " – " + toLocalPublishingDate(newest);
-      } else if (publishingDays.length === 1) {
-        azureDateLabel = toLocalPublishingDate(publishingDays[0]);
-      }
+      var azureDateLabel = formatSummaryDateLabel(azureFeedData.summaryPublishingDays);
       var summaryLabel = "Microsoft Azure Announcement Summary" + (azureDateLabel ? ": " + azureDateLabel : "");
 
-      aiSummaryEl.innerHTML =
-        "<h2>🤖 " + escapeHtml(summaryLabel) + "</h2>" +
-        renderAnnouncementWindowHint() +
-        renderSummaryHtml(azureFeedData.summary);
-      aiSummaryEl.classList.remove("is-unavailable");
-      showElement(aiSummaryEl);
+      showSummaryPanelContent(summaryLabel, azureFeedData.summary);
       return;
     }
 
@@ -518,47 +487,50 @@
     hideElement(aiSummaryEl);
   }
 
-  function renderSavillVideoPanel() {
+  function renderSourceVideoPanel(sourceKey, feedData, videoKey, panelLabel) {
     if (!savillVideoEl) return;
 
-    if (currentSource !== "azure" || !azureFeedData || !azureFeedData.savillVideo) {
+    var video = feedData && feedData[videoKey] ? feedData[videoKey] : null;
+    if (currentSource !== sourceKey || !video) {
       hideElement(savillVideoEl);
       return;
     }
 
-    var sv = azureFeedData.savillVideo;
-    var svDate = "";
-    if (sv.published) {
-      var svd = parseDateValue(sv.published);
-      svDate = formatLocalDate(svd, {
+    var publishedDate = "";
+    if (video.published) {
+      var parsedDate = parseDateValue(video.published);
+      publishedDate = formatLocalDate(parsedDate, {
         day: "numeric",
         month: "short",
         year: "numeric"
       });
     }
+
     var thumbHtml = '<div class="savill-thumb-wrap' +
-      (sv.thumbnail ? '' : ' thumb-fallback') +
+      (video.thumbnail ? '' : ' thumb-fallback') +
       '">' +
-      (sv.thumbnail
-        ? '<img class="savill-thumb" src="' + escapeHtml(sv.thumbnail) +
+      (video.thumbnail
+        ? '<img class="savill-thumb" src="' + escapeHtml(video.thumbnail) +
           '" alt="Video thumbnail" loading="lazy" />'
         : '') +
       '<div class="savill-thumb-placeholder" aria-hidden="true">▶</div>' +
       '<span class="savill-play">▶</span></div>';
+
     savillVideoEl.innerHTML =
-      '<a class="savill-card" href="' + escapeHtml(sv.url) +
+      '<a class="savill-card" href="' + escapeHtml(video.url) +
       '" target="_blank" rel="noopener noreferrer">' +
-      '<div class="savill-label">🎬 Latest Azure Update Video</div>' +
+      '<div class="savill-label">🎬 ' + escapeHtml(panelLabel) + '</div>' +
       '<div class="savill-body">' +
       thumbHtml +
       '<div class="savill-info">' +
-      '<div class="savill-title">' + escapeHtml(sv.title) + '</div>' +
-      (svDate ? '<div class="savill-date">' + escapeHtml(svDate) + '</div>' : '') +
+      '<div class="savill-title">' + escapeHtml(video.title) + '</div>' +
+      (publishedDate ? '<div class="savill-date">' + escapeHtml(publishedDate) + '</div>' : '') +
       '</div></div></a>';
+
     showElement(savillVideoEl);
   }
 
-  function formatRetirementCalendarDate(value, precision) {
+  function formatRetirementCalendarDate(value) {
     if (!value) return "";
     var raw = String(value).trim();
     if (!raw) return "";
@@ -579,10 +551,20 @@
       return formatLocalDate(monthDate, { month: "short", year: "numeric" });
     }
 
-    if (precision === "month" || precision === "day") {
-      return raw;
-    }
     return raw;
+  }
+
+  function formatRetirementCalendarRange(startValue, endValue, fallbackValue) {
+    var startRaw = String(startValue || "").trim();
+    var endRaw = String(endValue || "").trim();
+    if (!startRaw || !endRaw || startRaw === endRaw) {
+      return formatRetirementCalendarDate(fallbackValue || endRaw || startRaw);
+    }
+    return (
+      formatRetirementCalendarDate(startRaw) +
+      " to " +
+      formatRetirementCalendarDate(endRaw)
+    );
   }
 
   function parseRetirementEventDate(value) {
@@ -610,6 +592,14 @@
     if (precision === "day") return 2;
     if (precision === "month") return 1;
     return /^\d{4}-\d{2}-\d{2}$/.test(String(retirementDate || "").trim()) ? 2 : 0;
+  }
+
+  function hasRetirementDayRange(event) {
+    if (!event) return false;
+    var startRaw = String(event.retirementStartDate || "").trim();
+    var endRaw = String(event.retirementEndDate || "").trim();
+    if (!startRaw || !endRaw || startRaw === endRaw) return false;
+    return Boolean(parseRetirementEventDate(startRaw) && parseRetirementEventDate(endRaw));
   }
 
   function startOfMonth(date) {
@@ -653,35 +643,46 @@
     return window.matchMedia && window.matchMedia("(max-width: 680px)").matches;
   }
 
-  function getRetirementCalendarPayload() {
-    // Try to use unified calendar first (new unified data structure)
-    var allEvents = [];
-    var label = "Retirement Calendar";
-    
-    if (unifiedRetirementCalendar && Array.isArray(unifiedRetirementCalendar)) {
-      allEvents = unifiedRetirementCalendar;
-    } else if (currentSource === "m365") {
-      // Fallback: use old m365 calendar if unified not available
-      if (!m365FeedData) return { events: [], label: "Microsoft 365" };
-      allEvents = Array.isArray(m365FeedData.m365RetirementCalendar) ? m365FeedData.m365RetirementCalendar : [];
-      label = "Microsoft 365";
-    } else {
-      // Fallback: use old azure calendar if unified not available
-      if (!azureFeedData) return { events: [], label: "Azure" };
-      allEvents = Array.isArray(azureFeedData.azureRetirementCalendar) ? azureFeedData.azureRetirementCalendar : [];
-      label = "Azure";
+  function getFallbackRetirementEventsForCurrentSource() {
+    if (currentSource === "m365") {
+      if (!m365FeedData) return [];
+      return Array.isArray(m365FeedData.m365RetirementCalendar)
+        ? m365FeedData.m365RetirementCalendar
+        : [];
     }
-    
-    // Filter events by source for the current tab
-    var filteredEvents = allEvents.filter(function (event) {
-      var source = event.source || "azure"; // default to azure for backward compat
+
+    if (!azureFeedData) return [];
+    return Array.isArray(azureFeedData.azureRetirementCalendar)
+      ? azureFeedData.azureRetirementCalendar
+      : [];
+  }
+
+  function filterRetirementEventsForCurrentSource(events) {
+    return events.filter(function (event) {
+      var source = event.source || "azure"; // default to azure for backward compatibility
       if (currentSource === "m365") {
         return source === "m365";
       }
       // Azure tab shows both azure and microsoft events
       return source === "azure" || source === "microsoft";
     });
-    
+  }
+
+  function getRetirementCalendarPayload() {
+    var allEvents = Array.isArray(unifiedRetirementCalendar)
+      ? unifiedRetirementCalendar
+      : getFallbackRetirementEventsForCurrentSource();
+    var label = "Retirement Calendar";
+
+    if (!Array.isArray(unifiedRetirementCalendar) && currentSource === "m365") {
+      label = "Microsoft 365";
+    }
+    if (!Array.isArray(unifiedRetirementCalendar) && currentSource === "azure") {
+      label = "Azure";
+    }
+
+    var filteredEvents = filterRetirementEventsForCurrentSource(allEvents);
+
     return {
       events: filteredEvents,
       label: label
@@ -695,39 +696,36 @@
     azureTopPanelsEl.classList.toggle("split-view", showRetirement);
   }
 
-  function renderRetirementCalendarPanel() {
-    if (!retirementCalendarEl) return;
-    var payload = getRetirementCalendarPayload();
-    var events = payload.events;
-    if (!events.length) {
-      hideElement(retirementCalendarEl);
-      return;
+  function normalizeRetirementCalendarEvent(event) {
+    var retirementDate = String(event.retirementDate || "").trim();
+    var parsedDate = parseRetirementEventDate(retirementDate);
+    var categories = Array.isArray(event.categories)
+      ? event.categories.filter(Boolean)
+      : [];
+    var primaryCategory = String(event.primaryCategory || "").trim();
+    if (!primaryCategory && categories.length) {
+      primaryCategory = categories[0];
     }
 
+    return {
+      title: event.title || "Untitled retirement notice",
+      link: event.link || "",
+      retirementDate: retirementDate,
+      retirementStartDate: String(event.retirementStartDate || "").trim(),
+      retirementEndDate: String(event.retirementEndDate || "").trim(),
+      datePrecision: event.datePrecision || (/^\d{4}-\d{2}-\d{2}$/.test(retirementDate) ? "day" : "month"),
+      sources: Array.isArray(event.sources) ? event.sources : [],
+      sourceCount: Number(event.sourceCount || 0),
+      primaryCategory: primaryCategory,
+      categories: categories,
+      parsedDate: parsedDate
+    };
+  }
+
+  function getNormalizedRetirementCalendarEvents(events) {
     var dedupedByClient = {};
     events
-      .map(function (event) {
-        var retirementDate = String(event.retirementDate || "").trim();
-        var parsedDate = parseRetirementEventDate(retirementDate);
-        var categories = Array.isArray(event.categories)
-          ? event.categories.filter(Boolean)
-          : [];
-        var primaryCategory = String(event.primaryCategory || "").trim();
-        if (!primaryCategory && categories.length) {
-          primaryCategory = categories[0];
-        }
-        return {
-          title: event.title || "Untitled retirement notice",
-          link: event.link || "",
-          retirementDate: retirementDate,
-          datePrecision: event.datePrecision || (/^\d{4}-\d{2}-\d{2}$/.test(retirementDate) ? "day" : "month"),
-          sources: Array.isArray(event.sources) ? event.sources : [],
-          sourceCount: Number(event.sourceCount || 0),
-          primaryCategory: primaryCategory,
-          categories: categories,
-          parsedDate: parsedDate
-        };
-      })
+      .map(normalizeRetirementCalendarEvent)
       .filter(function (event) { return Boolean(event.parsedDate); })
       .forEach(function (event) {
         var familyKey = toRetirementDedupeTitle(event.title);
@@ -744,16 +742,167 @@
           return;
         }
 
+        var existingHasRange = hasRetirementDayRange(existing);
+        var incomingHasRange = hasRetirementDayRange(event);
+        if (!existingHasRange && incomingHasRange) {
+          dedupedByClient[familyKey] = event;
+          return;
+        }
+
+        if (!existing.retirementStartDate && event.retirementStartDate) {
+          existing.retirementStartDate = event.retirementStartDate;
+        }
+        if (!existing.retirementEndDate && event.retirementEndDate) {
+          existing.retirementEndDate = event.retirementEndDate;
+        }
+
         if (!existing.link && event.link) {
           existing.link = event.link;
         }
       });
 
-    var normalizedEvents = Object.keys(dedupedByClient)
+    return Object.keys(dedupedByClient)
       .map(function (key) {
         return dedupedByClient[key];
       })
       .sort(function (a, b) { return a.parsedDate - b.parsedDate; });
+  }
+
+  function buildRetirementDayStats(monthEvents, anchorMonth, monthEndDay) {
+    var dayStats = {};
+
+    function markDay(day, kind) {
+      if (!day || day < 1 || day > monthEndDay) return;
+      if (!dayStats[day]) {
+        dayStats[day] = { count: 0, hasRangeBoundary: false };
+      }
+      dayStats[day].count += 1;
+      if (kind === "range-boundary") {
+        dayStats[day].hasRangeBoundary = true;
+      }
+    }
+
+    monthEvents.forEach(function (event) {
+      var rangeStart = parseRetirementEventDate(event.retirementStartDate);
+      var rangeEnd = parseRetirementEventDate(event.retirementEndDate);
+      if (rangeStart && rangeEnd && rangeEnd >= rangeStart) {
+        // Mark only start/end boundaries for ranged events to avoid flooding the month grid.
+        if (
+          rangeStart.getFullYear() === anchorMonth.getFullYear() &&
+          rangeStart.getMonth() === anchorMonth.getMonth()
+        ) {
+          markDay(rangeStart.getDate(), "range-boundary");
+        }
+        if (
+          rangeEnd.getFullYear() === anchorMonth.getFullYear() &&
+          rangeEnd.getMonth() === anchorMonth.getMonth() &&
+          (rangeEnd.getDate() !== rangeStart.getDate() ||
+            rangeEnd.getMonth() !== rangeStart.getMonth() ||
+            rangeEnd.getFullYear() !== rangeStart.getFullYear())
+        ) {
+          markDay(rangeEnd.getDate(), "range-boundary");
+        }
+        return;
+      }
+
+      if (event.datePrecision === "month") {
+        return; // month-only precision: no specific day to mark on the grid
+      }
+      markDay(event.parsedDate.getDate(), "single");
+    });
+
+    return dayStats;
+  }
+
+  function buildRetirementDayCells(anchorMonth, todayDate, monthEndDay, dayStats) {
+    var firstWeekday = (anchorMonth.getDay() + 6) % 7; // Monday first
+    var dayCells = [];
+
+    for (var i = 0; i < firstWeekday; i++) {
+      dayCells.push('<div class="retirement-mini-day is-empty"></div>');
+    }
+
+    for (var dayNum = 1; dayNum <= monthEndDay; dayNum++) {
+      var dayStat = dayStats[dayNum] || null;
+      var count = dayStat ? dayStat.count : 0;
+      var hasRangeBoundary = dayStat ? dayStat.hasRangeBoundary : false;
+      var isToday =
+        anchorMonth.getFullYear() === todayDate.getFullYear() &&
+        anchorMonth.getMonth() === todayDate.getMonth() &&
+        dayNum === todayDate.getDate();
+      var cellDate = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth(), dayNum);
+      var dateStr = formatLocalDateISO(cellDate);
+      var isSelected = selectedRetirementDate === dateStr;
+      dayCells.push(
+        '<div class="retirement-mini-day' +
+          (count ? " has-events" : "") +
+          (hasRangeBoundary ? " has-range-boundary" : "") +
+          (isToday ? " is-today" : "") +
+          (count && isSelected ? " is-selected" : "") +
+          '"' +
+          (count ? ' data-retirement-date="' + dateStr + '" role="button" tabindex="0" aria-label="' + dayNum + ' retirement notice(s), click to filter"' : "") +
+          '>' +
+          '<span class="retirement-mini-day-num">' + dayNum + "</span>" +
+          (count
+            ? '<span class="retirement-mini-dot" title="' + count + ' retirement notice(s)">' + count + "</span>"
+            : "") +
+        "</div>"
+      );
+    }
+
+    return dayCells;
+  }
+
+  function buildRetirementMonthList(monthEvents, isMonthListExpanded, defaultMonthListLimit) {
+    var hasOverflowItems = monthEvents.length > defaultMonthListLimit;
+    var monthItemsHtml = monthEvents.map(function (entry, idx) {
+      var dateLabel = formatRetirementCalendarRange(
+        entry.retirementStartDate,
+        entry.retirementEndDate,
+        entry.retirementDate
+      );
+      var sourceHint = entry.sourceCount > 1
+        ? " · " + entry.sourceCount + " sources"
+        : "";
+      var categoryBadge = entry.primaryCategory
+        ? '<span class="retirement-mini-category-badge">' + escapeHtml(entry.primaryCategory) + "</span>"
+        : "";
+      var extraCategories = entry.categories.slice(1);
+      var extraCategoryHint = extraCategories.length
+        ? '<span class="retirement-mini-category-more" title="Also: ' + escapeHtml(extraCategories.join(", ")) + '">+' + extraCategories.length + "</span>"
+        : "";
+      var content = escapeHtml(dateLabel + " — " + (entry.title || "Untitled retirement notice") + sourceHint);
+      var itemClass = idx >= defaultMonthListLimit ? ' class="retirement-mini-list-item is-overflow"' : ' class="retirement-mini-list-item"';
+      if (entry.link) {
+        return '<li' + itemClass + '>' + categoryBadge + extraCategoryHint + '<a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' + content + "</a></li>";
+      }
+      return "<li" + itemClass + ">" + categoryBadge + extraCategoryHint + content + "</li>";
+    }).join("");
+
+    var monthListToggleHtml = hasOverflowItems
+      ? '<button type="button" class="retirement-mini-list-toggle" data-retirement-list-toggle aria-expanded="' +
+          (isMonthListExpanded ? "true" : "false") +
+          '">' +
+          (isMonthListExpanded ? "Show fewer" : "Show all " + monthEvents.length + " events") +
+        "</button>"
+      : "";
+
+    return {
+      monthItemsHtml: monthItemsHtml,
+      monthListToggleHtml: monthListToggleHtml
+    };
+  }
+
+  function renderRetirementCalendarPanel() {
+    if (!retirementCalendarEl) return;
+    var payload = getRetirementCalendarPayload();
+    var events = payload.events;
+    if (!events.length) {
+      hideElement(retirementCalendarEl);
+      return;
+    }
+
+    var normalizedEvents = getNormalizedRetirementCalendarEvents(events);
 
     if (!normalizedEvents.length) {
       hideElement(retirementCalendarEl);
@@ -790,53 +939,30 @@
         event.parsedDate.getMonth() === anchorMonth.getMonth()
       );
     });
-    var dayCounts = {};
-    monthEvents.forEach(function (event) {
-      if (event.datePrecision === "month") {
-        return; // month-only precision: no specific day to mark on the grid
-      }
-      var day = event.parsedDate.getDate();
-      dayCounts[day] = (dayCounts[day] || 0) + 1;
-    });
+
+    // If a specific date is selected, filter to just that date's events
+    var displayEvents = monthEvents;
+    var listHeaderPrefix = "Retiring this month";
+    if (selectedRetirementDate) {
+      displayEvents = monthEvents.filter(function (event) {
+        return formatLocalDateISO(event.parsedDate) === selectedRetirementDate;
+      });
+      var selectedDateObj = new Date(selectedRetirementDate + "T00:00:00Z");
+      listHeaderPrefix = "Retiring on " + formatLocalDate(selectedDateObj, {
+        month: "short",
+        day: "numeric"
+      });
+    }
 
     var monthEndDay = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() + 1, 0).getDate();
-    var firstWeekday = (anchorMonth.getDay() + 6) % 7; // Monday first
-    var dayCells = [];
-    for (var i = 0; i < firstWeekday; i++) {
-      dayCells.push('<div class="retirement-mini-day is-empty"></div>');
-    }
-    for (var dayNum = 1; dayNum <= monthEndDay; dayNum++) {
-      var count = dayCounts[dayNum] || 0;
-      var isToday =
-        anchorMonth.getFullYear() === todayDate.getFullYear() &&
-        anchorMonth.getMonth() === todayDate.getMonth() &&
-        dayNum === todayDate.getDate();
-      dayCells.push(
-        '<div class="retirement-mini-day' + (count ? " has-events" : "") + (isToday ? " is-today" : "") + '">' +
-          '<span class="retirement-mini-day-num">' + dayNum + "</span>" +
-          (count ? '<span class="retirement-mini-dot" title="' + count + ' retirement notice(s)"></span>' : "") +
-        "</div>"
-      );
-    }
+    var dayStats = buildRetirementDayStats(monthEvents, anchorMonth, monthEndDay);
+    var dayCells = buildRetirementDayCells(anchorMonth, todayDate, monthEndDay, dayStats);
 
-    var monthItemsHtml = monthEvents.map(function (entry) {
-      var dateLabel = formatRetirementCalendarDate(entry.retirementDate, entry.datePrecision);
-      var sourceHint = entry.sourceCount > 1
-        ? " · " + entry.sourceCount + " sources"
-        : "";
-      var categoryBadge = entry.primaryCategory
-        ? '<span class="retirement-mini-category-badge">' + escapeHtml(entry.primaryCategory) + "</span>"
-        : "";
-      var extraCategories = entry.categories.slice(1);
-      var extraCategoryHint = extraCategories.length
-        ? '<span class="retirement-mini-category-more" title="Also: ' + escapeHtml(extraCategories.join(", ")) + '">+' + extraCategories.length + "</span>"
-        : "";
-      var content = escapeHtml(dateLabel + " — " + (entry.title || "Untitled retirement notice") + sourceHint);
-      if (entry.link) {
-        return '<li>' + categoryBadge + extraCategoryHint + '<a href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' + content + "</a></li>";
-      }
-      return "<li>" + categoryBadge + extraCategoryHint + content + "</li>";
-    }).join("");
+    var defaultMonthListLimit = 8;
+    var isMonthListExpanded = Boolean(retirementCalendarListExpandedState[sourceKey]);
+    var monthList = buildRetirementMonthList(displayEvents, isMonthListExpanded, defaultMonthListLimit);
+    var monthItemsHtml = monthList.monthItemsHtml;
+    var monthListToggleHtml = monthList.monthListToggleHtml;
 
     var monthNames = [
       "January", "February", "March", "April", "May", "June",
@@ -898,7 +1024,7 @@
       '<div class="retirement-mini-weekdays"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>' +
       '<div class="retirement-mini-grid">' + dayCells.join("") + "</div>" +
       (monthItemsHtml
-        ? '<div class="retirement-mini-list"><h3>Retiring this month</h3><ul>' + monthItemsHtml + "</ul></div>"
+        ? '<div class="retirement-mini-list' + (isMonthListExpanded ? ' is-expanded' : '') + '"><h3>' + escapeHtml(listHeaderPrefix) + ' · ' + displayEvents.length + ' event(s)</h3><ul>' + monthItemsHtml + '</ul>' + monthListToggleHtml + "</div>"
         : "") +
       "</div>";
 
@@ -911,6 +1037,7 @@
     var exportMenu = retirementCalendarEl.querySelector('[data-retirement-export-menu]');
     var exportStatus = retirementCalendarEl.querySelector('[data-retirement-export-status]');
     var collapseToggleBtn = retirementCalendarEl.querySelector('[data-retirement-collapse-toggle]');
+    var listToggleBtn = retirementCalendarEl.querySelector('[data-retirement-list-toggle]');
     var calendarBodyEl = retirementCalendarEl.querySelector(".retirement-mini-body");
     var removeExportDropdownListeners = null;
 
@@ -958,6 +1085,39 @@
         calendarBodyEl.classList.toggle("is-collapsed", isCollapsed);
         collapseToggleBtn.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
         collapseToggleBtn.textContent = isCollapsed ? "Show calendar" : "Hide calendar";
+      });
+    }
+
+    if (listToggleBtn) {
+      listToggleBtn.addEventListener("click", function () {
+        retirementCalendarListExpandedState[sourceKey] = !retirementCalendarListExpandedState[sourceKey];
+        renderRetirementCalendarPanel();
+      });
+    }
+
+    // Date cell click handling via delegation
+    var calendarGrid = retirementCalendarEl.querySelector(".retirement-mini-grid");
+    if (calendarGrid) {
+      calendarGrid.addEventListener("click", function (e) {
+        var cell = e.target.closest(".retirement-mini-day[data-retirement-date]");
+        if (!cell) return;
+        var dateAttr = cell.getAttribute("data-retirement-date");
+        if (!dateAttr) return;
+        // Toggle: click to select, click again to deselect
+        selectedRetirementDate = selectedRetirementDate === dateAttr ? null : dateAttr;
+        applyFilters();
+        renderRetirementCalendarPanel();
+      });
+      calendarGrid.addEventListener("keydown", function (e) {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        var cell = e.target.closest(".retirement-mini-day[data-retirement-date]");
+        if (!cell) return;
+        e.preventDefault();
+        var dateAttr = cell.getAttribute("data-retirement-date");
+        if (!dateAttr) return;
+        selectedRetirementDate = selectedRetirementDate === dateAttr ? null : dateAttr;
+        applyFilters();
+        renderRetirementCalendarPanel();
       });
     }
 
@@ -1064,48 +1224,6 @@
     }
   }
 
-  function renderM365VideoPanel() {
-    if (!savillVideoEl) return;
-
-    if (currentSource !== "m365" || !m365FeedData || !m365FeedData.m365Video) {
-      hideElement(savillVideoEl);
-      return;
-    }
-
-    var mv = m365FeedData.m365Video;
-    var mvDate = "";
-    if (mv.published) {
-      var mvd = parseDateValue(mv.published);
-      mvDate = formatLocalDate(mvd, {
-        day: "numeric",
-        month: "short",
-        year: "numeric"
-      });
-    }
-
-    var thumbHtml = '<div class="savill-thumb-wrap' +
-      (mv.thumbnail ? '' : ' thumb-fallback') +
-      '">' +
-      (mv.thumbnail
-        ? '<img class="savill-thumb" src="' + escapeHtml(mv.thumbnail) +
-          '" alt="Video thumbnail" loading="lazy" />'
-        : '') +
-      '<div class="savill-thumb-placeholder" aria-hidden="true">▶</div>' +
-      '<span class="savill-play">▶</span></div>';
-
-    savillVideoEl.innerHTML =
-      '<a class="savill-card" href="' + escapeHtml(mv.url) +
-      '" target="_blank" rel="noopener noreferrer">' +
-      '<div class="savill-label">🎬 Latest Microsoft 365 Update Video</div>' +
-      '<div class="savill-body">' +
-      thumbHtml +
-      '<div class="savill-info">' +
-      '<div class="savill-title">' + escapeHtml(mv.title) + '</div>' +
-      (mvDate ? '<div class="savill-date">' + escapeHtml(mvDate) + '</div>' : '') +
-      '</div></div></a>';
-    showElement(savillVideoEl);
-  }
-
   function updateOtherBlogsToggleVisibility() {
     if (!otherBlogsToggle) return;
     if (currentSource === "m365") {
@@ -1121,10 +1239,10 @@
     renderRetirementCalendarPanel();
     updateTopPanelsLayout();
     if (currentSource === "m365") {
-      renderM365VideoPanel();
+      renderSourceVideoPanel("m365", m365FeedData, "m365Video", "Latest Microsoft 365 Update Video");
       return;
     }
-    renderSavillVideoPanel();
+    renderSourceVideoPanel("azure", azureFeedData, "savillVideo", "Latest Azure Update Video");
   }
 
   function startOfLocalDay(date) {
@@ -1203,7 +1321,40 @@
   // ===== Service Worker =====
   function registerServiceWorker() {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js").catch(function () {});
+      var hasReloadedForSwUpdate = false;
+
+      navigator.serviceWorker
+        .register("sw.js", { updateViaCache: "none" })
+        .then(function (registration) {
+          if (registration.waiting) {
+            registration.waiting.postMessage({ type: "SKIP_WAITING" });
+          }
+
+          registration.addEventListener("updatefound", function () {
+            var installingWorker = registration.installing;
+            if (!installingWorker) return;
+
+            installingWorker.addEventListener("statechange", function () {
+              if (
+                installingWorker.state === "installed" &&
+                navigator.serviceWorker.controller
+              ) {
+                installingWorker.postMessage({ type: "SKIP_WAITING" });
+              }
+            });
+          });
+
+          navigator.serviceWorker.addEventListener("controllerchange", function () {
+            if (hasReloadedForSwUpdate) return;
+            hasReloadedForSwUpdate = true;
+            window.location.reload();
+          });
+
+          setInterval(function () {
+            registration.update().catch(function () {});
+          }, 60000);
+        })
+        .catch(function () {});
     }
   }
 
@@ -1391,33 +1542,19 @@
   }
 
   function getActiveCategories() {
-    if (filterHelpers && filterHelpers.activeCategoryList) {
-      return filterHelpers.activeCategoryList(selectedCategories);
-    }
-    if (!selectedCategories.size || selectedCategories.has("all")) return [];
-    return Array.from(selectedCategories);
+    return filterHelpers.activeCategoryList(selectedCategories);
   }
 
   function getPrimaryCategory() {
-    if (filterHelpers && filterHelpers.firstSelectedOrAll) {
-      return filterHelpers.firstSelectedOrAll(selectedCategories);
-    }
-    var active = getActiveCategories();
-    return active.length ? active[0] : "all";
+    var activeCategories = getActiveCategories();
+    return activeCategories.length ? activeCategories[0] : "all";
   }
 
   function saveCategorySelection() {
-    if (!stateStore || !stateStore.writeJson) return;
     stateStore.writeJson("selected-categories:" + currentSource, Array.from(selectedCategories));
   }
 
   function loadCategorySelectionForSource(source) {
-    if (!stateStore || !stateStore.readJson) {
-      selectedCategories = new Set(["all"]);
-      currentCategory = "all";
-      return;
-    }
-
     var raw = stateStore.readJson("selected-categories:" + source, ["all"]);
     var normalized = Array.isArray(raw) ? raw.filter(Boolean) : ["all"];
     if (!normalized.length) normalized = ["all"];
@@ -1492,6 +1629,23 @@
     updateCategorySelectionSummary();
   }
 
+  function createCategoryPill(categoryValue, label, count) {
+    var button = document.createElement("button");
+    button.className = "category-pill";
+    button.dataset.category = categoryValue;
+    if (categoryValue !== "all") {
+      button.title = "Ctrl/Cmd+click to multi-select categories";
+    }
+    button.appendChild(document.createTextNode(label + " "));
+
+    var countEl = document.createElement("span");
+    countEl.className = "count";
+    countEl.textContent = String(count);
+    button.appendChild(countEl);
+
+    return button;
+  }
+
   // ===== Render Filter Pills (with category grouping) =====
   function renderFilters() {
     var sourceArticles = getVisibleArticles();
@@ -1531,23 +1685,6 @@
     var categoryBar = document.createElement("div");
     categoryBar.className = "category-bar";
     categoryBar.id = "category-bar";
-
-    function createCategoryPill(categoryValue, label, count) {
-      var button = document.createElement("button");
-      button.className = "category-pill";
-      button.dataset.category = categoryValue;
-      if (categoryValue !== "all") {
-        button.title = "Ctrl/Cmd+click to multi-select categories";
-      }
-      button.appendChild(document.createTextNode(label + " "));
-
-      var countEl = document.createElement("span");
-      countEl.className = "count";
-      countEl.textContent = String(count);
-      button.appendChild(countEl);
-
-      return button;
-    }
 
     var allPill = createCategoryPill("all", "All", sourceArticles.length);
     allPill.classList.add("active");
@@ -1598,23 +1735,6 @@
     categoryBar.className = "category-bar";
     categoryBar.id = "category-bar";
 
-    function createCategoryPill(categoryValue, label, count) {
-      var button = document.createElement("button");
-      button.className = "category-pill";
-      button.dataset.category = categoryValue;
-      if (categoryValue !== "all") {
-        button.title = "Ctrl/Cmd+click to multi-select categories";
-      }
-      button.appendChild(document.createTextNode(label + " "));
-
-      var countEl = document.createElement("span");
-      countEl.className = "count";
-      countEl.textContent = String(count);
-      button.appendChild(countEl);
-
-      return button;
-    }
-
     var allPill = createCategoryPill("all", "All", sourceArticles.length);
     allPill.classList.add("active");
     categoryBar.appendChild(allPill);
@@ -1642,23 +1762,6 @@
     var categoryBar = document.createElement("div");
     categoryBar.className = "category-bar";
     categoryBar.id = "category-bar";
-
-    function createCategoryPill(categoryValue, label, count) {
-      var button = document.createElement("button");
-      button.className = "category-pill";
-      button.dataset.category = categoryValue;
-      if (categoryValue !== "all") {
-        button.title = "Ctrl/Cmd+click to multi-select categories";
-      }
-      button.appendChild(document.createTextNode(label + " "));
-
-      var countEl = document.createElement("span");
-      countEl.className = "count";
-      countEl.textContent = String(count);
-      button.appendChild(countEl);
-
-      return button;
-    }
 
     var allPill = createCategoryPill("all", "All", sourceArticles.length);
     allPill.classList.add("active");
@@ -1728,85 +1831,118 @@
     showElement(blogPillsRow);
   }
 
-  // ===== Apply Filters & Sort =====
-  function applyFilters() {
-    var visibleArticles = getVisibleArticles();
-    var result = visibleArticles.slice();
-
-    // Source filter (Azure vs M365)
-    result = result.filter(function (a) {
-      return (a.source || "azure") === currentSource;
+  function filterArticlesBySource(list) {
+    return list.filter(function (article) {
+      return (article.source || "azure") === currentSource;
     });
+  }
 
-    // Category filter (supports multi-select)
+  function filterArticlesByCategories(list) {
     var activeCategories = getActiveCategories();
-    if (activeCategories.length) {
-      result = result.filter(function (a) {
-        return activeCategories.some(function (categoryName) {
-          return articleMatchesCategory(a, categoryName);
-        });
+    if (!activeCategories.length) return list;
+
+    return list.filter(function (article) {
+      return activeCategories.some(function (categoryName) {
+        return articleMatchesCategory(article, categoryName);
+      });
+    });
+  }
+
+  function filterArticlesByBlog(list) {
+    if (currentFilter === "all" || currentSource !== "azure") return list;
+    return list.filter(function (article) {
+      return article.blogId === currentFilter;
+    });
+  }
+
+  function filterArticlesBySearch(list) {
+    if (!searchQuery) return list;
+    var query = searchQuery.toLowerCase();
+
+    return list.filter(function (article) {
+      return (
+        article.title.toLowerCase().includes(query) ||
+        (article.summary || "").toLowerCase().includes(query) ||
+        (article.blog || article.m365Service || "").toLowerCase().includes(query) ||
+        (article.author || "").toLowerCase().includes(query)
+      );
+    });
+  }
+
+  function filterArticlesByDate(list) {
+    // If a specific retirement date is selected, filter to articles on that date.
+    if (selectedRetirementDate) {
+      var selectedDateObj = new Date(selectedRetirementDate + "T00:00:00Z");
+      return list.filter(function (article) {
+        var pubDate = getArticleDate(article);
+        if (!pubDate) return false;
+        return formatLocalDateISO(pubDate) === selectedRetirementDate;
       });
     }
 
-    // Blog filter (within category) - only applies to Azure articles
-    if (currentFilter !== "all" && currentSource === "azure") {
-      result = result.filter(function (a) { return a.blogId === currentFilter; });
-    }
-
-    // Search filter
-    if (searchQuery) {
-      var q = searchQuery.toLowerCase();
-      result = result.filter(function (a) {
-        return (
-          a.title.toLowerCase().includes(q) ||
-          (a.summary || "").toLowerCase().includes(q) ||
-          (a.blog || a.m365Service || "").toLowerCase().includes(q) ||
-          (a.author || "").toLowerCase().includes(q)
-        );
-      });
-    }
-
-    // Date filter
     var dateVal = dateFilter ? dateFilter.value : "all";
-    if (dateVal !== "all") {
-      var now = new Date();
-      var cutoff = startOfLocalDay(now);
-      switch (dateVal) {
-        case "today": break;
-        case "week": cutoff = startOfCurrentLocalWeek(); break;
-        case "month": cutoff = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate()); break;
-      }
-      result = result.filter(function (a) {
-        var published = getArticleDate(a);
-        return published && published >= cutoff;
-      });
+    if (dateVal === "all") return list;
+
+    var now = new Date();
+    var cutoff = startOfLocalDay(now);
+    switch (dateVal) {
+      case "today":
+        break;
+      case "week":
+        cutoff = startOfCurrentLocalWeek();
+        break;
+      case "month":
+        cutoff = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
+        break;
     }
 
-    // Bookmarks filter
-    if (showBookmarksOnly) {
-      result = result.filter(function (a) { return bookmarks.has(a.link); });
-    }
+    return list.filter(function (article) {
+      var published = getArticleDate(article);
+      return published && published >= cutoff;
+    });
+  }
 
-    // Sort
+  function filterArticlesByBookmarks(list) {
+    if (!showBookmarksOnly) return list;
+    return list.filter(function (article) {
+      return bookmarks.has(article.link);
+    });
+  }
+
+  function sortFilteredArticles(list) {
+    var sorted = list.slice();
     switch (sortBy) {
       case "date-desc":
-        result.sort(function (a, b) {
+        sorted.sort(function (a, b) {
           return (getArticleDate(b) || 0) - (getArticleDate(a) || 0);
         });
         break;
       case "date-asc":
-        result.sort(function (a, b) {
+        sorted.sort(function (a, b) {
           return (getArticleDate(a) || 0) - (getArticleDate(b) || 0);
         });
         break;
       case "blog":
-        result.sort(function (a, b) {
+        sorted.sort(function (a, b) {
           var aBlog = a.blog || a.m365Service || "";
           var bBlog = b.blog || b.m365Service || "";
           return aBlog.localeCompare(bBlog) || ((getArticleDate(b) || 0) - (getArticleDate(a) || 0));
         });
         break;
     }
+    return sorted;
+  }
+
+  // ===== Apply Filters & Sort =====
+  function applyFilters() {
+    var result = getVisibleArticles().slice();
+    result = filterArticlesBySource(result);
+    result = filterArticlesByCategories(result);
+    result = filterArticlesByBlog(result);
+    result = filterArticlesBySearch(result);
+    result = filterArticlesByDate(result);
+    result = filterArticlesByBookmarks(result);
+    result = sortFilteredArticles(result);
 
     filteredArticles = result;
     renderedCount = Math.min(PAGE_SIZE, result.length);
@@ -1953,9 +2089,6 @@
     var encodedLink = encodeURIComponent(article.link);
     var newBadge = isNew(article) ? '<span class="new-badge">NEW</span>' : "";
 
-    var shareUrl = encodeURIComponent(article.link);
-    var shareTitle = encodeURIComponent(article.title);
-
     // For M365 articles, use service name as blog tag, lifecycle as meta, m365Source for source label
     var blogTagText = isM365 ? (article.m365Service || "Microsoft 365") : article.blog;
     var metaContent = isM365 
@@ -2079,7 +2212,7 @@
       : "";
 
     return (
-      '<article class="article-card clickable-card" data-href="' + escapeHtml(resolveArticleOutboundLink(article)) + '">' +
+      '<article class="article-card clickable-card" data-href="' + escapeHtml(article.link || "") + '">' +
       '<div class="card-header">' +
       '<span class="blog-tag ' + colorClass + '" title="' + escapeHtml(color) + '">' +
       escapeHtml(blogTagText) + "</span>" +
@@ -2089,7 +2222,7 @@
       (isBookmarked ? "⭐" : "☆") + "</button>" +
       "</div>" +
       '<h3 class="article-title">' +
-      '<a href="' + escapeHtml(resolveArticleOutboundLink(article)) + '" target="_blank" rel="noopener">' +
+      '<a href="' + escapeHtml(article.link || "") + '" target="_blank" rel="noopener">' +
       escapeHtml(article.title) + "</a>" + newBadge +
       "</h3>" +
       '<div class="article-meta">' +
@@ -2178,6 +2311,36 @@
     return escapeDiv.innerHTML;
   }
 
+  function updateSourceSubtitle() {
+    if (!subtitleEl) return;
+    subtitleEl.textContent = currentSource === "m365"
+      ? "Daily updates from Microsoft 365 · Last 30 days"
+      : "Daily updates from Azure · Last 30 days";
+  }
+
+  function setActiveSourceTab(source) {
+    tabButtons.forEach(function (button) {
+      button.classList.toggle("active", button.dataset.source === source);
+    });
+  }
+
+  function switchSource(source) {
+    currentSource = source;
+    loadCategorySelectionForSource(currentSource);
+    setActiveSourceTab(currentSource);
+    updateSourceSubtitle();
+
+    searchInput.value = "";
+    searchQuery = "";
+    currentFilter = "all";
+    selectedRetirementDate = null;  // Clear date filter when switching sources
+
+    renderFilters();
+    renderBlogPills(getPrimaryCategory());
+    refreshSourcePanels();
+    applyFilters();
+  }
+
   // ===== Event Listeners =====
   function setupEventListeners() {
     // Search with debounce
@@ -2207,34 +2370,7 @@
     // Tab buttons for source switching (Azure vs M365)
     tabButtons.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        currentSource = btn.dataset.source;
-        loadCategorySelectionForSource(currentSource);
-        
-        // Update active state on tab buttons
-        tabButtons.forEach(function (b) {
-          b.classList.remove("active");
-        });
-        btn.classList.add("active");
-        
-        // Update header subtitle
-        if (subtitleEl) {
-          if (currentSource === "m365") {
-            subtitleEl.textContent = "Daily updates from Microsoft 365 · Last 30 days";
-          } else {
-            subtitleEl.textContent = "Daily updates from Azure · Last 30 days";
-          }
-        }
-        
-        // Reset search and category filters when switching sources
-        searchInput.value = "";
-        searchQuery = "";
-        currentFilter = "all";
-        
-        // Re-render filters and articles for the new source
-        renderFilters();
-        renderBlogPills(getPrimaryCategory());
-        refreshSourcePanels();
-        applyFilters();
+        switchSource(btn.dataset.source);
       });
     });
 
@@ -2367,6 +2503,15 @@
         e.preventDefault();
         searchInput.focus();
       }
+    });
+
+    // Deselect calendar date filter when clicking anywhere outside date cells.
+    document.addEventListener("click", function (e) {
+      if (!selectedRetirementDate) return;
+      if (e.target.closest(".retirement-mini-day[data-retirement-date]")) return;
+      selectedRetirementDate = null;
+      applyFilters();
+      renderRetirementCalendarPanel();
     });
 
     window.addEventListener("resize", updateHeaderOffset);
