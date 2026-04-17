@@ -1,13 +1,26 @@
 {
-  "lastUpdated": "2026-04-15T12:51:34.172851+00:00",
+  "lastUpdated": "2026-04-17T11:56:30.938309+00:00",
   "unifiedRetirementCalendar": [
+    {
+      "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
+      "link": "https://deltapulse.app/item/MC1184996",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2025-11-12T00:10:11.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
     {
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
       "link": "https://deltapulse.app/item/MC1274562",
-      "retirementDate": "2026-04-01",
-      "datePrecision": "day",
-      "retirementStartDate": "2026-04-01",
-      "retirementEndDate": "2026-04-01",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
       "published": "2026-04-08T22:42:45.000Z",
       "blog": "Microsoft Copilot (Power Platform)",
       "blogId": "m365",
@@ -26,6 +39,21 @@
       "source": "m365"
     },
     {
+      "title": "Microsoft Purview DLM: Retirement of SharePoint online information management and in-place records management features",
+      "link": "https://deltapulse.app/item/MC1211579",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-01-03T02:57:54.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
       "title": "Power BI: End of support for on-prem SharePoint web part",
       "link": "https://deltapulse.app/item/MC1217651",
       "retirementDate": "2026-04",
@@ -41,12 +69,55 @@
       "source": "m365"
     },
     {
+      "title": "Retirement of the Semi-Annual Enterprise Channel installation option for unmanaged devices",
+      "link": "https://deltapulse.app/item/MC1249428",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-03-12T00:05:50.000Z",
+      "blog": "['Microsoft 365 suite']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 suite']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Retiring the Impala connector",
+      "link": "https://deltapulse.app/item/MC1240748",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-02-28T00:08:31.000Z",
+      "blog": "['Microsoft Power Automate in Microsoft 365']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Power Automate in Microsoft 365']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "SharePoint Pages: Retirement of Web Search (Bing) image pivot",
+      "link": "https://deltapulse.app/item/MC1230452",
+      "retirementDate": "2026-04",
+      "datePrecision": "month",
+      "published": "2026-02-10T23:03:39.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
       "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
       "link": "https://deltapulse.app/item/MC1249427",
-      "retirementDate": "2026-04-11",
+      "retirementDate": "2026-04-20",
       "datePrecision": "day",
-      "retirementStartDate": "2026-04-06",
-      "retirementEndDate": "2026-04-11",
       "published": "2026-03-12T00:04:42.000Z",
       "blog": "Microsoft 365 apps",
       "blogId": "m365",
@@ -65,94 +136,11 @@
       "source": "m365"
     },
     {
-      "title": "Retirement of the Semi-Annual Enterprise Channel installation option for unmanaged devices",
-      "link": "https://deltapulse.app/item/MC1249428",
-      "retirementDate": "2026-04-11",
-      "datePrecision": "day",
-      "published": "2026-03-12T00:05:50.000Z",
-      "blog": "['Microsoft 365 suite']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Microsoft 365 suite']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-04-06",
-      "retirementEndDate": "2026-04-11"
-    },
-    {
-      "title": "Retiring the Impala connector",
-      "link": "https://deltapulse.app/item/MC1240748",
-      "retirementDate": "2026-04-14",
-      "retirementStartDate": "2026-04-01",
-      "retirementEndDate": "2026-04-14",
-      "datePrecision": "day",
-      "published": "2026-02-28T00:08:31.000Z",
-      "blog": "['Microsoft Power Automate in Microsoft 365']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Microsoft Power Automate in Microsoft 365']"
-      ],
-      "sourceCount": 1,
-      "source": "m365"
-    },
-    {
-      "title": "Engage is retiring live events powered by Teams Live Events effective April 15th, 2026",
-      "link": "https://deltapulse.app/item/MC1227085",
-      "retirementDate": "2026-04-15",
-      "datePrecision": "day",
-      "published": "2026-02-05T00:07:04.000Z",
-      "blog": "['Microsoft Viva']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Microsoft Viva']"
-      ],
-      "sourceCount": 1,
-      "source": "m365"
-    },
-    {
-      "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
-      "link": "https://deltapulse.app/item/MC1184996",
-      "retirementDate": "2026-04-20",
-      "datePrecision": "day",
-      "published": "2025-11-12T00:10:11.000Z",
-      "blog": "['SharePoint Online']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['SharePoint Online']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-03-31",
-      "retirementEndDate": "2026-04-20"
-    },
-    {
-      "title": "SharePoint Pages: Retirement of Web Search (Bing) image pivot",
-      "link": "https://deltapulse.app/item/MC1230452",
-      "retirementDate": "2026-04-20",
-      "datePrecision": "day",
-      "published": "2026-02-10T23:03:39.000Z",
-      "blog": "['SharePoint Online']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['SharePoint Online']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-03-20",
-      "retirementEndDate": "2026-04-20"
-    },
-    {
       "title": "Application gateway - V1",
       "link": "https://azure.microsoft.com/updates?id=application-gateway-v1-will-be-retired-on-28-april-2026-transition-to-application-gateway-v2",
       "retirementDate": "2026-04-28",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -189,11 +177,33 @@
       "sourceCount": 2
     },
     {
+      "title": "(Updated) Migration update for Office 365 connectors retirement in Teams – webhook URL support",
+      "link": "https://deltapulse.app/item/MC1181996",
+      "retirementDate": "2026-04-30",
+      "datePrecision": "day",
+      "published": "2025-10-31T23:03:55.000Z",
+      "blog": "Microsoft Teams",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft Teams"
+      ],
+      "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
+      "source": "m365"
+    },
+    {
       "title": "App service - Support for Node 20 LTS",
       "link": "https://azure.microsoft.com/updates/?id=485072",
       "retirementDate": "2026-04-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -274,7 +284,7 @@
       "link": "https://azure.microsoft.com/updates?id=retirement-notice-custom-commands-will-retire-on-30-april-2026",
       "retirementDate": "2026-04-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -326,29 +336,10 @@
       "source": "m365"
     },
     {
-      "title": "Microsoft SharePoint: Retirement of IDCRL authentication protocol and enforcement of OpenID Connect and OAuth protocols",
-      "link": "https://deltapulse.app/item/MC1184649",
-      "retirementDate": "2026-04-30",
-      "datePrecision": "day",
-      "published": "2025-11-11T00:37:53.000Z",
-      "blog": "['SharePoint Online', 'Microsoft OneDrive']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['SharePoint Online', 'Microsoft OneDrive']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-02-16",
-      "retirementEndDate": "2026-04-30"
-    },
-    {
       "title": "(Updated) Simplifying agent management with Agent 365",
       "link": "https://deltapulse.app/item/MC1275311",
       "retirementDate": "2026-05-01",
       "datePrecision": "day",
-      "retirementStartDate": "",
-      "retirementEndDate": "",
       "published": "2026-04-09T16:06:04.000Z",
       "blog": "Microsoft Entra",
       "blogId": "m365",
@@ -364,6 +355,51 @@
       "categorySourceMap": {
         "m365": "planForChange"
       },
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Loop: Retirement of Copilot‑generated Recaps",
+      "link": "https://deltapulse.app/item/MC1267976",
+      "retirementDate": "2026-05",
+      "datePrecision": "month",
+      "published": "2026-04-02T02:28:10.000Z",
+      "blog": "['Microsoft 365 apps']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 apps']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft SharePoint: Retirement of IDCRL authentication protocol and enforcement of OpenID Connect and OAuth protocols",
+      "link": "https://deltapulse.app/item/MC1184649",
+      "retirementDate": "2026-05-01",
+      "datePrecision": "day",
+      "published": "2025-11-11T00:37:53.000Z",
+      "blog": "['SharePoint Online', 'Microsoft OneDrive']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online', 'Microsoft OneDrive']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Outlook for Windows report retirement in the Exchange admin center",
+      "link": "https://deltapulse.app/item/MC1230889",
+      "retirementDate": "2026-05",
+      "datePrecision": "month",
+      "published": "2026-02-11T23:14:50.000Z",
+      "blog": "['Microsoft 365 apps']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 apps']"
+      ],
+      "sourceCount": 1,
       "source": "m365"
     },
     {
@@ -386,9 +422,44 @@
       "categorySourceMap": {
         "m365": "stayInformed"
       },
-      "source": "m365",
-      "retirementStartDate": "2026-05-01",
-      "retirementEndDate": "2026-05-01"
+      "source": "m365"
+    },
+    {
+      "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
+      "link": "https://deltapulse.app/item/MC1254554",
+      "retirementDate": "2026-05",
+      "datePrecision": "month",
+      "published": "2026-03-17T22:47:38.000Z",
+      "blog": "['Microsoft Defender XDR']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft Defender XDR']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
+      "link": "https://deltapulse.app/item/MC1276511",
+      "retirementDate": "2026-05-09",
+      "datePrecision": "day",
+      "published": "2026-04-10T22:24:55.000Z",
+      "blog": "Microsoft Defender XDR",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft Defender XDR"
+      ],
+      "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of external access token for actionable messages – moving to Microsoft Entra authentication",
@@ -447,63 +518,10 @@
       "sourceCount": 2
     },
     {
-      "title": "Microsoft Loop: Retirement of Copilot‑generated Recaps",
-      "link": "https://deltapulse.app/item/MC1267976",
-      "retirementDate": "2026-05-20",
-      "datePrecision": "day",
-      "published": "2026-04-02T02:28:10.000Z",
-      "blog": "['Microsoft 365 apps']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Microsoft 365 apps']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-05-20",
-      "retirementEndDate": "2026-05-20"
-    },
-    {
-      "title": "Outlook for Windows report retirement in the Exchange admin center",
-      "link": "https://deltapulse.app/item/MC1230889",
-      "retirementDate": "2026-05-20",
-      "retirementStartDate": "2026-04-20",
-      "retirementEndDate": "2026-05-20",
-      "datePrecision": "day",
-      "published": "2026-02-11T23:14:50.000Z",
-      "blog": "['Microsoft 365 apps']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Microsoft 365 apps']"
-      ],
-      "sourceCount": 1,
-      "source": "m365"
-    },
-    {
-      "title": "Upcoming retirement of select threat detections in Microsoft Defender for Cloud Apps",
-      "link": "https://deltapulse.app/item/MC1254554",
-      "retirementDate": "2026-05-20",
-      "datePrecision": "day",
-      "published": "2026-03-17T22:47:38.000Z",
-      "blog": "['Microsoft Defender XDR']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Microsoft Defender XDR']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-05-20",
-      "retirementEndDate": "2026-05-20"
-    },
-    {
       "title": "Complete retirement of the Outlook Lite app",
       "link": "https://deltapulse.app/item/MC1276508",
       "retirementDate": "2026-05-25",
       "datePrecision": "day",
-      "retirementStartDate": "",
-      "retirementEndDate": "",
       "published": "2026-04-10T22:23:16.000Z",
       "blog": "Microsoft 365 apps",
       "blogId": "m365",
@@ -526,7 +544,7 @@
       "link": "https://learn.microsoft.com/azure/azure-netapp-files/azure-netapp-files-network-topologies#considerations",
       "retirementDate": "2026-05-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -554,11 +572,41 @@
       "sourceCount": 1
     },
     {
+      "title": "(Updated) Retirement of featured links on SharePoint Start Page",
+      "link": "https://deltapulse.app/item/MC1197131",
+      "retirementDate": "2026-06",
+      "datePrecision": "month",
+      "published": "2025-12-15T20:10:45.000Z",
+      "blog": "['SharePoint Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['SharePoint Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
+      "title": "Classic Outlook: Retirement of people card expanded view",
+      "link": "https://deltapulse.app/item/MC1269210",
+      "retirementDate": "2026-06-01",
+      "datePrecision": "day",
+      "published": "2026-04-03T05:12:41.000Z",
+      "blog": "['Microsoft 365 apps']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Microsoft 365 apps']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
       "title": "Microsoft Entra Domain Service - Azure Price Sheet - Download by Billing Account APIs prior to version 2023-09-01",
       "link": "https://azure.microsoft.com/updates?id=Cost-Management-Download-by-Billing-Account-API-version-retirement",
       "retirementDate": "2026-06-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -584,6 +632,28 @@
         "azure": "Identity & Access"
       },
       "sourceCount": 1
+    },
+    {
+      "title": "New PDF Viewer Enabled by Default in Microsoft Edge Starting October 2025",
+      "link": "https://deltapulse.app/item/MC1154300",
+      "retirementDate": "2026-06",
+      "datePrecision": "month",
+      "published": "2025-09-16T22:23:46.000Z",
+      "blog": "Microsoft 365 suite",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft 365 suite"
+      ],
+      "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
+      "source": "m365"
     },
     {
       "title": "Reminder: \"Require approved client app\" control in Microsoft Entra Conditional Access will be retired in June 2026",
@@ -684,9 +754,7 @@
         "['Microsoft Teams']"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-06-29",
-      "retirementEndDate": "2026-06-29"
+      "source": "m365"
     },
     {
       "title": "Microsoft Teams: Teams Live Events is retiring",
@@ -701,9 +769,7 @@
         "['Microsoft Teams']"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-06-29",
-      "retirementEndDate": "2026-06-29"
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of Assignments and Courses adaptive card extensions (ACE) in Viva Connections and SharePoint",
@@ -719,23 +785,6 @@
       ],
       "sourceCount": 1,
       "source": "m365"
-    },
-    {
-      "title": "Classic Outlook: Retirement of people card expanded view",
-      "link": "https://deltapulse.app/item/MC1269210",
-      "retirementDate": "2026-06-30",
-      "datePrecision": "day",
-      "published": "2026-04-03T05:12:41.000Z",
-      "blog": "['Microsoft 365 apps']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Microsoft 365 apps']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-06-01",
-      "retirementEndDate": "2026-06-30"
     },
     {
       "title": "Retirement of the isBroadcast property for Teams Live Events in Microsoft Graph",
@@ -757,7 +806,7 @@
       "link": "https://learn.microsoft.com/rest/api/sql/retirement",
       "retirementDate": "2026-06-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -789,7 +838,7 @@
       "link": "https://azure.microsoft.com/updates/?id=496104",
       "retirementDate": "2026-06-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -821,7 +870,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/501668/",
       "retirementDate": "2026-06-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -859,6 +908,21 @@
       "sourceCount": 2
     },
     {
+      "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",
+      "link": "https://deltapulse.app/item/MC1248389",
+      "retirementDate": "2026-07",
+      "datePrecision": "month",
+      "published": "2026-03-10T22:46:28.000Z",
+      "blog": "['Exchange Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Exchange Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
       "title": "Top domain mail flow report in Exchange Online is retiring",
       "link": "https://deltapulse.app/item/MC1272554",
       "retirementDate": "2026-07-05",
@@ -871,9 +935,7 @@
         "Exchange Online"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-07-05",
-      "retirementEndDate": "2026-07-05"
+      "source": "m365"
     },
     {
       "title": "SharePoint Designer 2013 reaches end of support on July 14, 2026",
@@ -888,16 +950,14 @@
         "['SharePoint Online']"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-07-13",
-      "retirementEndDate": "2026-07-13"
+      "source": "m365"
     },
     {
       "title": "Microsoft SharePoint 2016 - Security support ends",
       "link": "https://endoflife.date/sharepoint",
       "retirementDate": "2026-07-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -937,7 +997,7 @@
       "link": "https://endoflife.date/sharepoint",
       "retirementDate": "2026-07-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -977,7 +1037,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2026-07-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -1017,7 +1077,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2026-07-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -1057,7 +1117,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2026-07-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -1097,7 +1157,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2026-07-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -1137,7 +1197,7 @@
       "link": "https://endoflife.date/visual-studio",
       "retirementDate": "2026-07-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -1171,23 +1231,6 @@
         "microsoft": "Operations"
       },
       "sourceCount": 2
-    },
-    {
-      "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",
-      "link": "https://deltapulse.app/item/MC1248389",
-      "retirementDate": "2026-07-20",
-      "datePrecision": "day",
-      "published": "2026-03-10T22:46:28.000Z",
-      "blog": "['Exchange Online']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Exchange Online']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-07-20",
-      "retirementEndDate": "2026-07-20"
     },
     {
       "title": "\"Send data to Event Hubs & Storage (Preview)\" retiring July 31, 2026",
@@ -1312,8 +1355,8 @@
     {
       "title": "Upcoming change: Retirement of noise suppression capability for OneDrive and SharePoint video",
       "link": "https://deltapulse.app/item/MC1272549",
-      "retirementDate": "2026-08-20",
-      "datePrecision": "day",
+      "retirementDate": "2026-08",
+      "datePrecision": "month",
       "published": "2026-04-06T21:59:59.000Z",
       "blog": "SharePoint Online",
       "blogId": "m365",
@@ -1322,9 +1365,7 @@
         "SharePoint Online"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-07-20",
-      "retirementEndDate": "2026-08-20"
+      "source": "m365"
     },
     {
       "title": "(Updated) Retirement of SharePoint One-Time Passcode (SPO OTP) and transition to Microsoft Entra B2B",
@@ -1339,16 +1380,14 @@
         "['SharePoint Online', 'Microsoft OneDrive']"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-05-20",
-      "retirementEndDate": "2026-08-31"
+      "source": "m365"
     },
     {
       "title": "Cognitive Service - v2.0 API",
       "link": "https://azure.microsoft.com/updates/retirement-azure-ai-document-intelligence-v20-api-will-be-retired-on-31-august-2026/",
       "retirementDate": "2026-08-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1412,7 +1451,7 @@
       "link": "https://azure.microsoft.com/updates/computer-vision-api-retirements-13-9-2026/",
       "retirementDate": "2026-09-13",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1454,7 +1493,7 @@
       "link": "https://azure.microsoft.com/updates/support-for-the-1x-version-of-azure-functions-ends-14-september-2026/",
       "retirementDate": "2026-09-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1486,7 +1525,7 @@
       "link": "https://azure.microsoft.com/updates/azure-monitor-for-aksengine-will-not-be-supported-on-14-september-2026/",
       "retirementDate": "2026-09-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1518,7 +1557,7 @@
       "link": "https://learn.microsoft.com/azure/azure-monitor/logs/custom-logs-migrate",
       "retirementDate": "2026-09-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1550,7 +1589,7 @@
       "link": "https://azure.microsoft.com/updates?id=azure-maps-gen1-price-tier-retirement",
       "retirementDate": "2026-09-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1591,7 +1630,7 @@
       "link": "https://azure.microsoft.com/updates?id=azure-activity-logs-legacy-solution-is-replaced-by-diagnostic-settings",
       "retirementDate": "2026-09-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1632,7 +1671,7 @@
       "link": "https://azure.microsoft.com/updates/azure-maps-render-v1-apis-will-be-retired-on-17-september-2026/",
       "retirementDate": "2026-09-17",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1705,7 +1744,7 @@
       "link": "https://azure.microsoft.com/updates/azure-maps-web-sdk-map-controls-version-1xx-will-be-retired-on-19-september-2026/",
       "retirementDate": "2026-09-19",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1746,7 +1785,7 @@
       "link": "https://azure.microsoft.com/updates?id=smart-on-fhir-proxy-feature-in-azure-health-data-services-will-be-retired-on-21st-september-2026-transition-to-smart-on-fhir",
       "retirementDate": "2026-09-21",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1788,7 +1827,7 @@
       "link": "https://azure.microsoft.com/updates/action-required-migrate-to-using-arg-query-for-get-alert-summary-in-azure-monitor/",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1830,7 +1869,7 @@
       "link": "https://azure.microsoft.com/updates?id=transition-to-using-standard-tests-for-singlestep-availability-testing-in-azure-monitor-application-insights-by-30-september",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1872,7 +1911,7 @@
       "link": "https://azure.microsoft.com/updates?id=azure-api-for-fhir-retirement",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1946,7 +1985,7 @@
       "link": "https://learn.microsoft.com/azure/azure-monitor/containers/container-insights-logs-schema",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -1987,7 +2026,7 @@
       "link": "https://azure.microsoft.com/updates/we-re-ending-support-for-the-20170301ga-api/",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2019,7 +2058,7 @@
       "link": "https://azure.microsoft.com/updates/?id=500273",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2051,7 +2090,7 @@
       "link": "https://azure.microsoft.com/updates/?id=500853",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2130,7 +2169,7 @@
       "link": "https://azure.microsoft.com/updates/retirement-notice-update-your-azure-service-bus-sdk-libraries-by-30-september-2026/",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2180,7 +2219,7 @@
       "link": "https://azure.microsoft.com/updates/?id=501673",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2212,7 +2251,7 @@
       "link": "https://azure.microsoft.com/updates/?id=498563",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2244,7 +2283,7 @@
       "link": "https://learn.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/classic-retirement",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2285,7 +2324,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/516070/",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2335,7 +2374,7 @@
       "link": "https://azure.microsoft.com/updates/?id=500578",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2367,7 +2406,7 @@
       "link": "https://azure.microsoft.com/updates?id=vpngw1-5-non-az-skus-will-be-retired-on-30-september-2026",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2399,7 +2438,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/557406/",
       "retirementDate": "2026-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2449,7 +2488,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/545771/",
       "retirementDate": "2026-10-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2490,7 +2529,7 @@
       "link": "https://azure.microsoft.com/updates?id=ai-services-anomaly-detector-will-be-retired-on-1-october-2026",
       "retirementDate": "2026-10-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2532,7 +2571,7 @@
       "link": "https://azure.microsoft.com/updates?id=ai-services-metrics-advisor-will-be-retired-on-1-october-2026",
       "retirementDate": "2026-10-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2574,7 +2613,7 @@
       "link": "https://azure.microsoft.com/updates?id=ai-services-personalizer-will-be-retired-on-1-october-2026",
       "retirementDate": "2026-10-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2606,7 +2645,7 @@
       "link": "https://azure.microsoft.com/updates/azure-ai-translator-s2s4-billing-instances-will-be-retired-on-1-october-2026-transition-to-commitment-tiers-for-discounted-pr/",
       "retirementDate": "2026-10-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2648,7 +2687,7 @@
       "link": "https://azure.microsoft.com/updates/?id=502623",
       "retirementDate": "2026-10",
       "datePrecision": "month",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2676,28 +2715,11 @@
       "sourceCount": 1
     },
     {
-      "title": "Exchange Web Services (EWS) retirement update",
-      "link": "https://deltapulse.app/item/MC1227454",
-      "retirementDate": "2026-10-01",
-      "datePrecision": "day",
-      "published": "2026-02-05T16:57:52.000Z",
-      "blog": "['Exchange Online']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['Exchange Online']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-10-01",
-      "retirementEndDate": "2026-10-01"
-    },
-    {
       "title": "SQL database - FSV2 Database",
       "link": "https://azure.microsoft.com/updates/?id=485030",
       "retirementDate": "2026-10-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2729,8 +2751,6 @@
       "link": "https://deltapulse.app/item/MC1274396",
       "retirementDate": "2026-10-13",
       "datePrecision": "day",
-      "retirementStartDate": "",
-      "retirementEndDate": "",
       "published": "2026-04-08T19:58:31.567Z",
       "blog": "Windows",
       "blogId": "m365",
@@ -2753,7 +2773,7 @@
       "link": "https://endoflife.date/windows-server",
       "retirementDate": "2026-10-13",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -2793,7 +2813,7 @@
       "link": "https://azure.microsoft.com/updates/?id=496964",
       "retirementDate": "2026-10-13",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2825,8 +2845,6 @@
       "link": "https://deltapulse.app/item/MC1278920",
       "retirementDate": "2026-10-13",
       "datePrecision": "day",
-      "retirementStartDate": "",
-      "retirementEndDate": "",
       "published": "2026-04-13T16:19:39.000Z",
       "blog": "Microsoft 365 suite",
       "blogId": "m365",
@@ -2881,7 +2899,7 @@
       "link": "https://azure.microsoft.com/updates/?id=499906",
       "retirementDate": "2026-10-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2913,7 +2931,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485077",
       "retirementDate": "2026-11-10",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2945,7 +2963,7 @@
       "link": "https://azure.microsoft.com/updates/retirement-support-for-the-inprocess-model-for-net-apps-in-azure-functions-ends-10-november-2026/",
       "retirementDate": "2026-11-10",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -2986,7 +3004,7 @@
       "link": "https://endoflife.date/dotnet",
       "retirementDate": "2026-11-10",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -3026,7 +3044,7 @@
       "link": "https://endoflife.date/dotnet",
       "retirementDate": "2026-11-10",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -3066,7 +3084,7 @@
       "link": "https://endoflife.date/powershell",
       "retirementDate": "2026-11-10",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -3106,7 +3124,7 @@
       "link": "https://endoflife.date/powershell",
       "retirementDate": "2026-11-10",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -3146,7 +3164,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/555839/",
       "retirementDate": "2026-11-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3186,8 +3204,8 @@
     {
       "title": "Retirement of Power BI Q&A",
       "link": "https://deltapulse.app/item/MC1218421",
-      "retirementDate": "2026-12-20",
-      "datePrecision": "day",
+      "retirementDate": "2026-12",
+      "datePrecision": "month",
       "published": "2026-01-16T00:15:07.000Z",
       "blog": "['Power BI']",
       "blogId": "m365",
@@ -3196,16 +3214,14 @@
         "['Power BI']"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-12-20",
-      "retirementEndDate": "2026-12-20"
+      "source": "m365"
     },
     {
       "title": "App service - PHP 8.2",
       "link": "https://azure.microsoft.com/updates?id=php-82-app-svc",
       "retirementDate": "2026-12-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3246,7 +3262,7 @@
       "link": "https://azure.microsoft.com/updates?id=fxtretirement",
       "retirementDate": "2026-12-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3275,10 +3291,10 @@
     },
     {
       "title": "Batch account - Azure Batch - Windows Server 2016",
-      "link": "https://endoflife.date/windows-server",
+      "link": "https://azure.microsoft.com/en-us/updates/549077/",
       "retirementDate": "2027-01-12",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3338,7 +3354,7 @@
       "link": "https://endoflife.date/dotnetfx",
       "retirementDate": "2027-01-12",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -3378,7 +3394,7 @@
       "link": "https://azure.microsoft.com/updates/hpc-pack-2016-will-be-retired-on-12-january-2027/",
       "retirementDate": "2027-01-12",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3427,49 +3443,21 @@
         "['Microsoft Defender XDR']"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2027-01-31",
-      "retirementEndDate": "2027-01-31"
+      "source": "m365"
     },
     {
-      "title": "Microsoft Purview DLM: Retirement of SharePoint online information management and in-place records management features",
-      "link": "https://deltapulse.app/item/MC1211579",
-      "retirementDate": "2027-02-02",
-      "datePrecision": "day",
-      "published": "2026-01-03T02:57:54.000Z",
-      "blog": "['SharePoint Online']",
+      "title": "Engage is retiring live events powered by Teams Live Events effective April 15th, 2026",
+      "link": "https://deltapulse.app/item/MC1227085",
+      "retirementDate": "2027-02",
+      "datePrecision": "month",
+      "published": "2026-02-05T00:07:04.000Z",
+      "blog": "['Microsoft Viva']",
       "blogId": "m365",
       "announcementType": "retirement",
       "sources": [
-        "['SharePoint Online']"
+        "['Microsoft Viva']"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-04-20",
-      "retirementEndDate": "2027-02-02"
-    },
-    {
-      "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
-      "link": "https://deltapulse.app/item/MC1276511",
-      "retirementDate": "2027-02-20",
-      "datePrecision": "day",
-      "retirementStartDate": "2026-05-10",
-      "retirementEndDate": "2027-02-20",
-      "published": "2026-04-10T22:24:55.000Z",
-      "blog": "Microsoft Defender XDR",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "Microsoft Defender XDR"
-      ],
-      "sourceCount": 1,
-      "primaryCategory": "planForChange",
-      "categories": [
-        "planForChange"
-      ],
-      "categorySourceMap": {
-        "m365": "planForChange"
-      },
       "source": "m365"
     },
     {
@@ -3477,7 +3465,7 @@
       "link": "https://learn.microsoft.com/azure/key-vault/general/access-control-default?tabs=azure-cli",
       "retirementDate": "2027-02-27",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3550,7 +3538,7 @@
       "link": "https://azure.microsoft.com/updates/begin-using-azure-monitor-based-dashboards-in-azure-api-management-before-the-builtin-analytics-dashboards-are-retired-on-15/",
       "retirementDate": "2027-03-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3591,7 +3579,7 @@
       "link": "https://azure.microsoft.com/updates?id=azure-content-moderator-retirement",
       "retirementDate": "2027-03-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3633,7 +3621,7 @@
       "link": "https://learn.microsoft.com/azure/aks/upgrade-windows-os",
       "retirementDate": "2027-03-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3702,23 +3690,6 @@
       "sourceCount": 1
     },
     {
-      "title": "(Updated) Retirement of featured links on SharePoint Start Page",
-      "link": "https://deltapulse.app/item/MC1197131",
-      "retirementDate": "2027-03-20",
-      "datePrecision": "day",
-      "published": "2025-12-15T20:10:45.000Z",
-      "blog": "['SharePoint Online']",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "['SharePoint Online']"
-      ],
-      "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2026-06-20",
-      "retirementEndDate": "2027-03-20"
-    },
-    {
       "title": "Azure Managed Grafana Essential SKU will retire on March 30, 2027",
       "link": "https://azure.microsoft.com/en-us/updates/559395/",
       "retirementDate": "2027-03-30",
@@ -3764,7 +3735,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/558027/",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3814,7 +3785,7 @@
       "link": "https://learn.microsoft.com/azure/web-application-firewall/ag/upgrade-ag-waf-policy?tabs=portal#upgrade-waf-v2-with-legacy-waf-configuration-to-waf-policy",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3846,7 +3817,7 @@
       "link": "https://azure.microsoft.com/updates/?id=499606",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3910,7 +3881,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/558247/",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -3959,7 +3930,7 @@
       "link": "https://azure.microsoft.com/updates/long-audio-api-will-be-retired-on-31-march-2027-migrate-to-the-new-batch-synthesis-api/",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4064,7 +4035,7 @@
       "link": "https://azure.microsoft.com/updates/azure-front-door-classic-will-be-retired-on-31-march-2027/",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4105,7 +4076,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/558086/",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4147,7 +4118,7 @@
       "link": "https://azure.microsoft.com/updates?id=support-for-standardm192idmsv2-will-be-retired-on-31-march-2027",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4188,7 +4159,7 @@
       "link": "https://azure.microsoft.com/updates?id=community-support-for-standardm192idsv2-is-ending-on-31-march-2027",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4229,7 +4200,7 @@
       "link": "https://azure.microsoft.com/updates?id=community-support-for-standardm192imsv2-is-ending-on-31-march-2027",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4270,7 +4241,7 @@
       "link": "https://azure.microsoft.com/updates?id=community-support-for-standardm192isv2-is-ending-on-31-march-2027",
       "retirementDate": "2027-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4302,7 +4273,7 @@
       "link": "https://azure.microsoft.com/updates/were-retiring-memory-optimized-data-flows-in-azure-data-factory-use-general-purpose-for-better-performance-at-a-lower-price/",
       "retirementDate": "2027-04-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4339,11 +4310,26 @@
       "sourceCount": 2
     },
     {
+      "title": "Exchange Web Services (EWS) retirement update",
+      "link": "https://deltapulse.app/item/MC1227454",
+      "retirementDate": "2027-04-01",
+      "datePrecision": "day",
+      "published": "2026-02-05T16:57:52.000Z",
+      "blog": "['Exchange Online']",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "['Exchange Online']"
+      ],
+      "sourceCount": 1,
+      "source": "m365"
+    },
+    {
       "title": "Microsoft Visual Studio 2017 - 15.9 - Security support ends",
       "link": "https://endoflife.date/visual-studio",
       "retirementDate": "2027-04-13",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -4380,14 +4366,15 @@
     },
     {
       "title": "Batch account - HCv1 series",
-      "link": "https://azure.microsoft.com/en-us/updates/548543/",
+      "link": "https://azure.microsoft.com/en-us/updates/559751/",
       "retirementDate": "2027-05-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
       "sources": [
+        "Azure Deprecations (aztty)",
         "Azure Retirements Workbook",
         "Azure Updates"
       ],
@@ -4399,6 +4386,22 @@
           "link": "https://azure.microsoft.com/updates/?id=548543",
           "source": "azure",
           "category": "Other"
+        },
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/559751/",
+          "source": "azure",
+          "category": "Compute"
+        },
+        {
+          "blog": "Azure Deprecations (aztty)",
+          "blogId": "azuredeprecations",
+          "announcementType": "deprecation",
+          "link": "https://azure.microsoft.com/updates?id=559751",
+          "source": "azure",
+          "category": "Compute"
         },
         {
           "blog": "Azure Updates",
@@ -4418,14 +4421,14 @@
       "categorySourceMap": {
         "azure": "Compute"
       },
-      "sourceCount": 2
+      "sourceCount": 4
     },
     {
       "title": "Batch account - NP-series",
       "link": "https://azure.microsoft.com/en-us/updates/548497/",
       "retirementDate": "2027-05-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4467,7 +4470,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/548525/",
       "retirementDate": "2027-05-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4508,7 +4511,7 @@
       "link": "https://azure.microsoft.com/updates?id=Azure-Lab-Services-is-being-retired",
       "retirementDate": "2027-06-28",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4549,7 +4552,7 @@
       "link": "https://learn.microsoft.com/en-us/azure/azure-fluid-relay/concepts/version-compatibility",
       "retirementDate": "2027-07-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4613,7 +4616,7 @@
       "link": "https://azure.microsoft.com/updates/v2/Azure-Docuement-Intelligence-V2-retirement",
       "retirementDate": "2027-09-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4655,7 +4658,7 @@
       "link": "https://azure.microsoft.com/updates?id=Automated-Patching-deprecation-and-replacement-with-Azure-Update-Manager",
       "retirementDate": "2027-09-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4687,7 +4690,7 @@
       "link": "https://azure.microsoft.com/updates/v2/azure-site-recovery-classic-alerts-retirement",
       "retirementDate": "2027-09-23",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4729,7 +4732,7 @@
       "link": "https://azure.microsoft.com/updates/v2/Azure-Sphere-Legacy-Interface-Retirement",
       "retirementDate": "2027-09-27",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4770,7 +4773,7 @@
       "link": "https://azure.microsoft.com/updates/v2/Azure-Automanage-Best-Practices-Retirement-Migrate-to-Azure-Policy",
       "retirementDate": "2027-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4812,7 +4815,7 @@
       "link": "https://azure.microsoft.com/updates/v2/Planned-Service-Retirement-Azure-Automation-State-Configuration-16-September-2027",
       "retirementDate": "2027-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4853,7 +4856,7 @@
       "link": "https://azure.microsoft.com/updates/v2/Azure-NSG-flow-logs-Retirement",
       "retirementDate": "2027-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4895,7 +4898,7 @@
       "link": "https://azure.microsoft.com/updates?id=Azure-CDN-Standard-from-Microsoft-classic-will-be-retired-on-30-September-2027",
       "retirementDate": "2027-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4936,7 +4939,7 @@
       "link": "https://azure.microsoft.com/updates/v2/open-service-mesh-extension-for-aks-retirement",
       "retirementDate": "2027-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -4977,7 +4980,7 @@
       "link": "https://azure.microsoft.com/updates?id=Retirement-notice-Azure-Load-Balancer-Inbound-NAT-rule-V1-for-Azure-VMs-and-Azure-VMSS-will-be-retired",
       "retirementDate": "2027-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5019,7 +5022,7 @@
       "link": "https://azure.microsoft.com/updates/v2/SQL-Data-Sync-Retirement",
       "retirementDate": "2027-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5051,7 +5054,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2027-10-12",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -5099,9 +5102,7 @@
         "['Microsoft Entra']"
       ],
       "sourceCount": 1,
-      "source": "m365",
-      "retirementStartDate": "2027-10-14",
-      "retirementEndDate": "2027-10-14"
+      "source": "m365"
     },
     {
       "title": "Azure Stream Analytics PowerBI output connector",
@@ -5156,7 +5157,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2028-01-11",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -5196,7 +5197,7 @@
       "link": "https://azure.microsoft.com/updates?filters=%5B%22Retirements%22%5D",
       "retirementDate": "2028-03-17",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5228,7 +5229,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485893",
       "retirementDate": "2028-03-27",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5260,7 +5261,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485047",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5292,7 +5293,7 @@
       "link": "https://azure.microsoft.com/updates/?id=489009",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5324,7 +5325,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485819",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5356,7 +5357,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485810",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5420,7 +5421,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485241",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5452,7 +5453,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485172",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5484,7 +5485,7 @@
       "link": "https://learn.microsoft.com/azure/azure-monitor/logs/api/migrate-batch-and-beta",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5516,7 +5517,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485865",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5548,7 +5549,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485828",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5580,7 +5581,7 @@
       "link": "https://azure.microsoft.com/updates/?id=485535",
       "retirementDate": "2028-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5608,11 +5609,53 @@
       "sourceCount": 1
     },
     {
+      "title": "Azure Kubernetes Service support for Ubuntu 22.04",
+      "link": "https://azure.microsoft.com/en-us/updates/557928/",
+      "retirementDate": "2028-04-30",
+      "datePrecision": "day",
+      "published": "2026-04-16T20:30:13.244408+00:00",
+      "blog": "Azure Updates",
+      "blogId": "azureupdates",
+      "announcementType": "",
+      "sources": [
+        "Azure Deprecations (aztty)",
+        "Azure Updates"
+      ],
+      "sourceReports": [
+        {
+          "blog": "Azure Updates",
+          "blogId": "azureupdates",
+          "announcementType": "",
+          "link": "https://azure.microsoft.com/en-us/updates/557928/",
+          "source": "azure",
+          "category": "Compute"
+        },
+        {
+          "blog": "Azure Deprecations (aztty)",
+          "blogId": "azuredeprecations",
+          "announcementType": "deprecation",
+          "link": "https://azure.microsoft.com/updates?id=557928",
+          "source": "azure",
+          "category": "Security"
+        }
+      ],
+      "source": "azure",
+      "primaryCategory": "Compute",
+      "categories": [
+        "Compute",
+        "Security"
+      ],
+      "categorySourceMap": {
+        "azure": "Security"
+      },
+      "sourceCount": 2
+    },
+    {
       "title": "Virtual machine - D, Ds, Dv2, Dsv2 and Ls series",
       "link": "https://azure.microsoft.com/updates/?id=485569",
       "retirementDate": "2028-05-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5644,7 +5687,7 @@
       "link": "https://azure.microsoft.com/updates/?id=503883",
       "retirementDate": "2028-06-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5676,7 +5719,7 @@
       "link": "https://azure.microsoft.com/updates?id=491629",
       "retirementDate": "2028-06-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5740,7 +5783,7 @@
       "link": "https://azure.microsoft.com/updates?id=499851",
       "retirementDate": "2028-09-08",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5772,7 +5815,7 @@
       "link": "https://azure.microsoft.com/updates/?id=500157",
       "retirementDate": "2028-09-08",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5804,7 +5847,7 @@
       "link": "https://azure.microsoft.com/updates/?id=494676",
       "retirementDate": "2028-09-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5836,7 +5879,7 @@
       "link": "https://azure.microsoft.com/updates/?id=493779",
       "retirementDate": "2028-09-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5868,7 +5911,7 @@
       "link": "https://azure.microsoft.com/updates/?id=502914",
       "retirementDate": "2028-09-25",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5900,7 +5943,7 @@
       "link": "https://azure.microsoft.com/updates/?id=502909",
       "retirementDate": "2028-09-25",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5932,7 +5975,7 @@
       "link": "https://azure.microsoft.com/updates/?id=499451",
       "retirementDate": "2028-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5964,7 +6007,7 @@
       "link": "https://azure.microsoft.com/updates/?id=500268",
       "retirementDate": "2028-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -5996,7 +6039,7 @@
       "link": "https://azure.microsoft.com/updates/?id=499577",
       "retirementDate": "2028-09-30",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -6028,7 +6071,7 @@
       "link": "https://azure.microsoft.com/updates/?id=502602",
       "retirementDate": "2028-10-01",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -6060,7 +6103,7 @@
       "link": "https://endoflife.date/dotnet",
       "retirementDate": "2028-11-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6100,7 +6143,7 @@
       "link": "https://endoflife.date/powershell",
       "retirementDate": "2028-11-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6140,7 +6183,7 @@
       "link": "https://azure.microsoft.com/updates/?id=500682",
       "retirementDate": "2028-11-15",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -6172,7 +6215,7 @@
       "link": "https://endoflife.date/dotnetfx",
       "retirementDate": "2029-01-09",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6212,7 +6255,7 @@
       "link": "https://endoflife.date/windows-server",
       "retirementDate": "2029-01-09",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6293,7 +6336,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/557094/",
       "retirementDate": "2029-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -6334,7 +6377,7 @@
       "link": "https://azure.microsoft.com/en-us/updates/556085/",
       "retirementDate": "2029-03-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -6417,7 +6460,7 @@
       "link": "https://endoflife.date/visual-studio",
       "retirementDate": "2029-04-10",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6457,7 +6500,7 @@
       "link": "https://endoflife.date/windows-server",
       "retirementDate": "2029-10-09",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6497,7 +6540,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2030-01-08",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6537,7 +6580,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2031-01-06",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6577,7 +6620,7 @@
       "link": "https://aka.ms/AzureSphereRetirement",
       "retirementDate": "2031-07-31",
       "datePrecision": "day",
-      "published": "2026-04-15T12:50:57.080188+00:00",
+      "published": "2026-04-17T11:55:49.791568+00:00",
       "blog": "Azure Retirements Workbook",
       "blogId": "azureretirements",
       "announcementType": "retirement",
@@ -6650,7 +6693,7 @@
       "link": "https://endoflife.date/windows-server",
       "retirementDate": "2031-10-14",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6690,7 +6733,7 @@
       "link": "https://endoflife.date/visual-studio",
       "retirementDate": "2032-01-13",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6730,7 +6773,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2033-01-11",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6770,7 +6813,7 @@
       "link": "https://endoflife.date/windows-server",
       "retirementDate": "2034-10-10",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6810,7 +6853,7 @@
       "link": "https://endoflife.date/mssqlserver",
       "retirementDate": "2036-01-06",
       "datePrecision": "day",
-      "published": "2026-04-15T12:51:05.151997+00:00",
+      "published": "2026-04-17T11:56:04.420501+00:00",
       "blog": "Microsoft Lifecycle",
       "blogId": "microsoftlifecycle",
       "announcementType": "retirement",
@@ -6847,20 +6890,32 @@
     }
   ],
   "unifiedRetirementBuckets": {
-    "generatedAt": "2026-04-15T12:51:34.166917+00:00",
+    "generatedAt": "2026-04-17T11:56:30.931996+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
         "label": "0-3-months",
         "startMonthOffset": 0,
         "endMonthOffset": 3,
-        "count": 36,
+        "count": 40,
         "items": [
+          {
+            "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
+            "link": "https://deltapulse.app/item/MC1184996",
+            "retirementDate": "2026-04",
+            "datePrecision": "month"
+          },
           {
             "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
             "link": "https://deltapulse.app/item/MC1274562",
-            "retirementDate": "2026-04-01",
-            "datePrecision": "day"
+            "retirementDate": "2026-04",
+            "datePrecision": "month"
+          },
+          {
+            "title": "Microsoft Purview DLM: Retirement of SharePoint online information management and in-place records management features",
+            "link": "https://deltapulse.app/item/MC1211579",
+            "retirementDate": "2026-04",
+            "datePrecision": "month"
           },
           {
             "title": "Power BI: End of support for on-prem SharePoint web part",
@@ -6869,38 +6924,26 @@
             "datePrecision": "month"
           },
           {
-            "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
-            "link": "https://deltapulse.app/item/MC1249427",
-            "retirementDate": "2026-04-11",
-            "datePrecision": "day"
-          },
-          {
             "title": "Retirement of the Semi-Annual Enterprise Channel installation option for unmanaged devices",
             "link": "https://deltapulse.app/item/MC1249428",
-            "retirementDate": "2026-04-11",
-            "datePrecision": "day"
+            "retirementDate": "2026-04",
+            "datePrecision": "month"
           },
           {
             "title": "Retiring the Impala connector",
             "link": "https://deltapulse.app/item/MC1240748",
-            "retirementDate": "2026-04-14",
-            "datePrecision": "day"
-          },
-          {
-            "title": "Engage is retiring live events powered by Teams Live Events effective April 15th, 2026",
-            "link": "https://deltapulse.app/item/MC1227085",
-            "retirementDate": "2026-04-15",
-            "datePrecision": "day"
-          },
-          {
-            "title": "(Updated) Legacy SharePoint Online Content Delivery Network (CDN) domain to be retired—review configurations",
-            "link": "https://deltapulse.app/item/MC1184996",
-            "retirementDate": "2026-04-20",
-            "datePrecision": "day"
+            "retirementDate": "2026-04",
+            "datePrecision": "month"
           },
           {
             "title": "SharePoint Pages: Retirement of Web Search (Bing) image pivot",
             "link": "https://deltapulse.app/item/MC1230452",
+            "retirementDate": "2026-04",
+            "datePrecision": "month"
+          },
+          {
+            "title": "(Updated) Retirement of the Semi-Annual Enterprise Channel option in the Office Customization Tool",
+            "link": "https://deltapulse.app/item/MC1249427",
             "retirementDate": "2026-04-20",
             "datePrecision": "day"
           }
@@ -6912,6 +6955,12 @@
         "endMonthOffset": 6,
         "count": 46,
         "items": [
+          {
+            "title": "(Updated) Retirement of -Credential parameter when connecting to Exchange Online PowerShell",
+            "link": "https://deltapulse.app/item/MC1248389",
+            "retirementDate": "2026-07",
+            "datePrecision": "month"
+          },
           {
             "title": "Top domain mail flow report in Exchange Online is retiring",
             "link": "https://deltapulse.app/item/MC1272554",
@@ -6953,12 +7002,6 @@
             "link": "https://endoflife.date/mssqlserver",
             "retirementDate": "2026-07-14",
             "datePrecision": "day"
-          },
-          {
-            "title": "Microsoft SQL Server 2016 SP3 Azure Connect Pack - Security support ends",
-            "link": "https://endoflife.date/mssqlserver",
-            "retirementDate": "2026-07-14",
-            "datePrecision": "day"
           }
         ]
       },
@@ -6966,7 +7009,7 @@
         "label": "6-9-months",
         "startMonthOffset": 6,
         "endMonthOffset": 9,
-        "count": 24,
+        "count": 23,
         "items": [
           {
             "title": "App service - Support for Python 3.10",
@@ -7005,15 +7048,15 @@
             "datePrecision": "month"
           },
           {
-            "title": "Exchange Web Services (EWS) retirement update",
-            "link": "https://deltapulse.app/item/MC1227454",
+            "title": "SQL database - FSV2 Database",
+            "link": "https://azure.microsoft.com/updates/?id=485030",
             "retirementDate": "2026-10-01",
             "datePrecision": "day"
           },
           {
-            "title": "SQL database - FSV2 Database",
-            "link": "https://azure.microsoft.com/updates/?id=485030",
-            "retirementDate": "2026-10-01",
+            "title": "Extended Security Updates (ESU) available for Windows 10 Enterprise LTSB 2016",
+            "link": "https://deltapulse.app/item/MC1274396",
+            "retirementDate": "2026-10-13",
             "datePrecision": "day"
           }
         ]
@@ -7022,11 +7065,11 @@
         "label": "9-12-months",
         "startMonthOffset": 9,
         "endMonthOffset": 12,
-        "count": 28,
+        "count": 26,
         "items": [
           {
             "title": "Batch account - Azure Batch - Windows Server 2016",
-            "link": "https://endoflife.date/windows-server",
+            "link": "https://azure.microsoft.com/en-us/updates/549077/",
             "retirementDate": "2027-01-12",
             "datePrecision": "day"
           },
@@ -7049,16 +7092,10 @@
             "datePrecision": "day"
           },
           {
-            "title": "Microsoft Purview DLM: Retirement of SharePoint online information management and in-place records management features",
-            "link": "https://deltapulse.app/item/MC1211579",
-            "retirementDate": "2027-02-02",
-            "datePrecision": "day"
-          },
-          {
-            "title": "Upcoming retirement of older Microsoft Defender for Endpoint mobile app versions (iOS and Android)",
-            "link": "https://deltapulse.app/item/MC1276511",
-            "retirementDate": "2027-02-20",
-            "datePrecision": "day"
+            "title": "Engage is retiring live events powered by Teams Live Events effective April 15th, 2026",
+            "link": "https://deltapulse.app/item/MC1227085",
+            "retirementDate": "2027-02",
+            "datePrecision": "month"
           },
           {
             "title": "Key vault - API versions prior to 2026-02-01",
@@ -7071,6 +7108,12 @@
             "link": "https://azure.microsoft.com/en-us/updates/558276/",
             "retirementDate": "2027-03",
             "datePrecision": "month"
+          },
+          {
+            "title": "Api Management - Built-in Analytics",
+            "link": "https://azure.microsoft.com/updates/begin-using-azure-monitor-based-dashboards-in-azure-api-management-before-the-builtin-analytics-dashboards-are-retired-on-15/",
+            "retirementDate": "2027-03-15",
+            "datePrecision": "day"
           }
         ]
       }
