@@ -1459,6 +1459,21 @@ footer a:hover {
   font-weight: 700;
 }
 
+.retirement-mini-day.is-selected {
+  background: var(--primary);
+  border-color: var(--primary-dark);
+}
+
+.retirement-mini-day.is-selected .retirement-mini-day-num {
+  color: var(--brand-slate-strong);
+  font-weight: 700;
+}
+
+.retirement-mini-day.is-selected .retirement-mini-dot {
+  background: var(--brand-slate-strong);
+  color: var(--primary);
+}
+
 .retirement-mini-day-num {
   font-size: 0.68rem;
   color: var(--text-secondary);

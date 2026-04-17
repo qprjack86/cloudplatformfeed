@@ -94,6 +94,7 @@
   var retirementCalendarViewState = { azure: null, m365: null };
   var retirementCalendarCollapsedState = { azure: null, m365: null };
   var retirementCalendarListExpandedState = { azure: false, m365: false };
+  var selectedRetirementDate = null;  // Tracks clicked retirement date for filtering
   
   // Tab buttons (M365 feature)
   var tabButtons = document.querySelectorAll(".tab-button");
@@ -317,6 +318,14 @@
           minute: "2-digit"
         })
       : "";
+  }
+
+  function formatLocalDateISO(date) {
+    if (!date) return "";
+    var year = date.getFullYear();
+    var month = String(date.getMonth() + 1).padStart(2, "0");
+    var day = String(date.getDate()).padStart(2, "0");
+    return year + "-" + month + "-" + day;
   }
 
   function renderSummaryHtml(text) {
@@ -821,12 +830,18 @@
         anchorMonth.getFullYear() === todayDate.getFullYear() &&
         anchorMonth.getMonth() === todayDate.getMonth() &&
         dayNum === todayDate.getDate();
+      var cellDate = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth(), dayNum);
+      var dateStr = formatLocalDateISO(cellDate);
+      var isSelected = selectedRetirementDate === dateStr;
       dayCells.push(
         '<div class="retirement-mini-day' +
           (count ? " has-events" : "") +
           (hasRangeBoundary ? " has-range-boundary" : "") +
           (isToday ? " is-today" : "") +
-          '">' +
+          (count && isSelected ? " is-selected" : "") +
+          '"' +
+          (count ? ' data-retirement-date="' + dateStr + '" role="button" tabindex="0" aria-label="' + dayNum + ' retirement notice(s), click to filter"' : "") +
+          '>' +
           '<span class="retirement-mini-day-num">' + dayNum + "</span>" +
           (count
             ? '<span class="retirement-mini-dot" title="' + count + ' retirement notice(s)">' + count + "</span>"
@@ -1061,6 +1076,32 @@
     if (listToggleBtn) {
       listToggleBtn.addEventListener("click", function () {
         retirementCalendarListExpandedState[sourceKey] = !retirementCalendarListExpandedState[sourceKey];
+        renderRetirementCalendarPanel();
+      });
+    }
+
+    // Date cell click handling via delegation
+    var calendarGrid = retirementCalendarEl.querySelector(".retirement-mini-grid");
+    if (calendarGrid) {
+      calendarGrid.addEventListener("click", function (e) {
+        var cell = e.target.closest(".retirement-mini-day[data-retirement-date]");
+        if (!cell) return;
+        var dateAttr = cell.getAttribute("data-retirement-date");
+        if (!dateAttr) return;
+        // Toggle: click to select, click again to deselect
+        selectedRetirementDate = selectedRetirementDate === dateAttr ? null : dateAttr;
+        applyFilters();
+        renderRetirementCalendarPanel();
+      });
+      calendarGrid.addEventListener("keydown", function (e) {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        var cell = e.target.closest(".retirement-mini-day[data-retirement-date]");
+        if (!cell) return;
+        e.preventDefault();
+        var dateAttr = cell.getAttribute("data-retirement-date");
+        if (!dateAttr) return;
+        selectedRetirementDate = selectedRetirementDate === dateAttr ? null : dateAttr;
+        applyFilters();
         renderRetirementCalendarPanel();
       });
     }
@@ -1814,6 +1855,16 @@
   }
 
   function filterArticlesByDate(list) {
+    // If a specific retirement date is selected, filter to articles on that date.
+    if (selectedRetirementDate) {
+      var selectedDateObj = new Date(selectedRetirementDate + "T00:00:00Z");
+      return list.filter(function (article) {
+        var pubDate = getArticleDate(article);
+        if (!pubDate) return false;
+        return formatLocalDateISO(pubDate) === selectedRetirementDate;
+      });
+    }
+
     var dateVal = dateFilter ? dateFilter.value : "all";
     if (dateVal === "all") return list;
 
@@ -2267,6 +2318,7 @@
     searchInput.value = "";
     searchQuery = "";
     currentFilter = "all";
+    selectedRetirementDate = null;  // Clear date filter when switching sources
 
     renderFilters();
     renderBlogPills(getPrimaryCategory());
