@@ -4,9 +4,27 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sun, 19 Apr 2026 08:04:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 15:29:24 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Step by Step Guide to Ontology and Plan for Financial Service]]></title>
+      <link>https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/step-by-step-guide-to-ontology-and-plan-for-financial-service/ba-p/4512708</link>
+      <guid>https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/step-by-step-guide-to-ontology-and-plan-for-financial-service/ba-p/4512708</guid>
+      <description><![CDATA[What We Will Build In this guide, we will construct a complete Fabric IQ solution that accomplishes the following: First, a Lakehouse that ingests publicly available data including bank financials, P2P lending statistics, borrower demographics, and licensing information. Second, a Semantic Model...]]></description>
+      <dc:creator><![CDATA[NaufalPrawironegoro]]></dc:creator>
+      <pubDate>Sun, 19 Apr 2026 15:06:24 GMT</pubDate>
+      <category><![CDATA[Analytics on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Virtual Desktop in the Perth Azure Extended Zone: A Real‑World Production Deployment]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-virtual-desktop-in-the-perth-azure-extended-zone-a-real/ba-p/4508550</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-virtual-desktop-in-the-perth-azure-extended-zone-a-real/ba-p/4508550</guid>
+      <description><![CDATA[Introduction Perth is one of the most geographically isolated major cities globally. For performance‑sensitive, graphics‑heavy engineering workloads, user experience can degrade significantly when desktops are hosted far from the user. For workloads such as subsurface modelling and GPU‑intensive...]]></description>
+      <dc:creator><![CDATA[akashmishra]]></dc:creator>
+      <pubDate>Sun, 19 Apr 2026 10:03:32 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[Microsoft Fabric Operations Agent Step by Step Walkthrough]]></title>
       <link>https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/microsoft-fabric-operations-agent-step-by-step-walkthrough/ba-p/4512572</link>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[simonjj]]></dc:creator>
       <pubDate>Wed, 15 Apr 2026 16:20:22 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Stop Hunting Bugs: Meet the New Visual Studio Debugger Agent Workflow]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/</guid>
-      <description><![CDATA[We’ve all been there: a bug report lands in your inbox with a title like “App crashes sometimes” and zero reproduction steps. Your morning, which was supposed to be spent building new features, is now a forensic investigation. You’re setting scattershot breakpoints, staring at the call stack, and...]]></description>
-      <dc:creator><![CDATA[Harshada Hole]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 16:00:15 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Enabling fallback to internet for Azure Private DNS Zones in hybrid architectures]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131</guid>
-      <description><![CDATA[Introduction Azure Private Endpoint enables secure connectivity to Azure PaaS services such as: Azure SQL Managed Instance Azure Container Registry Azure Key Vault Azure Storage Account through private IP addresses within a virtual network. When Private Endpoint is enabled for a service, Azure DNS...]]></description>
-      <dc:creator><![CDATA[kirankumar_manchiwar04]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 15:57:15 GMT</pubDate>
-      <category><![CDATA[Azure Networking]]></category>
     </item>
   </channel>
 </rss>
