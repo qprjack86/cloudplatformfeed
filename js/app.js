@@ -672,6 +672,7 @@
     var allEvents = Array.isArray(unifiedRetirementCalendar)
       ? unifiedRetirementCalendar
       : getFallbackRetirementEventsForCurrentSource();
+    var fallbackEvents = getFallbackRetirementEventsForCurrentSource();
     var label = "Retirement Calendar";
 
     if (!Array.isArray(unifiedRetirementCalendar) && currentSource === "m365") {
@@ -682,6 +683,17 @@
     }
 
     var filteredEvents = filterRetirementEventsForCurrentSource(allEvents);
+
+    // Unified calendar can be temporarily source-incomplete (for example after
+    // running the Azure fetch pipeline before the M365 merge step). In that
+    // case, fall back to the source-specific calendar payload so the UI still
+    // renders events for the active tab.
+    if (Array.isArray(unifiedRetirementCalendar) && !filteredEvents.length) {
+      filteredEvents = filterRetirementEventsForCurrentSource(fallbackEvents);
+      if (filteredEvents.length) {
+        label = currentSource === "m365" ? "Microsoft 365" : "Azure";
+      }
+    }
 
     return {
       events: filteredEvents,
