@@ -27,6 +27,7 @@ from feed_common import (
 )
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = (REPO_ROOT / "data").resolve()
 SITE_CONFIG_PATH = REPO_ROOT / "config" / "site.json"
 
 # DeltaPulse MCP Endpoint Configuration
@@ -190,6 +191,23 @@ CANONICAL_SITE_URL = SITE_CONFIG["canonicalUrl"]
 
 # M365 cache for fallback (Improvement #3: Resilient MCP Layer)
 M365_CACHE_PATH = REPO_ROOT / "data" / ".m365_cache.json"
+
+
+def _resolve_repo_data_json_path(path: Path, allowed_names: set[str] | None = None) -> Path:
+    """Resolve and validate JSON paths to prevent path traversal/file inclusion."""
+    candidate = Path(path)
+    if not candidate.is_absolute():
+        candidate = REPO_ROOT / candidate
+
+    resolved = candidate.resolve(strict=False)
+    if resolved.parent != DATA_DIR:
+        raise ValueError(f"Disallowed file location: {resolved}")
+    if resolved.suffix.lower() != ".json":
+        raise ValueError(f"Disallowed file type: {resolved.suffix}")
+    if allowed_names and resolved.name not in allowed_names:
+        raise ValueError(f"Disallowed file name: {resolved.name}")
+
+    return resolved
 
 
 def load_m365_cache():
@@ -1463,10 +1481,11 @@ def _build_previous_m365_timeline_index(path: Path = M365_DATA_OUTPUT) -> dict[s
     """Load previous M365 article timelines keyed by source:id."""
     index: dict[str, tuple[str, str, str]] = {}
     try:
-        if not path.exists():
+        safe_path = _resolve_repo_data_json_path(path, {"m365_data.json"})
+        if not safe_path.exists():
             return index
-        payload = _read_json_file(path)
-    except (OSError, json.JSONDecodeError, TypeError):
+        payload = _read_json_file(safe_path)
+    except (OSError, json.JSONDecodeError, TypeError, ValueError):
         return index
 
     previous_articles = payload.get("articles", []) if isinstance(payload, dict) else []
@@ -2168,8 +2187,9 @@ def write_m365_retirements_ics(events, output_path: Path = M365_RETIREMENTS_ICS_
     return True
 
 
-def _read_json_file(path: Path):
-    with open(path, "r", encoding="utf-8") as f:
+def _read_json_file(path: Path, allowed_names: set[str] | None = None):
+    safe_path = _resolve_repo_data_json_path(path, allowed_names)
+    with safe_path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -2210,12 +2230,13 @@ def write_m365_checksums(paths: list[Path], output_path: Path = M365_CHECKSUMS_O
 def load_m365_retirement_cache(path: Path = M365_RETIREMENT_CACHE_PATH) -> list:
     """Load the persistent retirement event cache.  Returns a list of event dicts."""
     try:
-        if path.exists():
-            data = _read_json_file(path)
+        safe_path = _resolve_repo_data_json_path(path, {"m365_retirement_cache.json"})
+        if safe_path.exists():
+            data = _read_json_file(safe_path)
             events = data.get("events", [])
-            print(f"Retirement cache loaded: {len(events)} cached events from {path}")
+            print(f"Retirement cache loaded: {len(events)} cached events from {safe_path}")
             return events
-    except (OSError, json.JSONDecodeError, TypeError) as exc:
+    except (OSError, json.JSONDecodeError, TypeError, ValueError) as exc:
         print(f"Warning: Could not load retirement cache ({exc}); starting fresh")
     return []
 
@@ -2292,12 +2313,13 @@ def enrich_cached_m365_retirements(session: requests.Session, cached_events: lis
 def load_unified_retirement_calendar(path: Path = Path("data/retirements.json")) -> dict:
     """Load the unified retirement calendar built by fetch_feeds.py."""
     try:
-        if path.exists():
-            data = _read_json_file(path)
+        safe_path = _resolve_repo_data_json_path(path, {"retirements.json"})
+        if safe_path.exists():
+            data = _read_json_file(safe_path)
             calendar = data.get("unifiedRetirementCalendar", [])
-            print(f"Unified retirement calendar loaded: {len(calendar)} events from {path}")
+            print(f"Unified retirement calendar loaded: {len(calendar)} events from {safe_path}")
             return calendar
-    except (OSError, json.JSONDecodeError, TypeError) as exc:
+    except (OSError, json.JSONDecodeError, TypeError, ValueError) as exc:
         print(f"Warning: Could not load unified retirement calendar ({exc}); starting with empty")
     return []
 

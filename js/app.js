@@ -432,11 +432,21 @@
   }
 
   function showSummaryPanelContent(label, summaryText) {
-    aiSummaryEl.innerHTML =
-      "<h2>🤖 " + escapeHtml(label) + "</h2>" +
-      renderAnnouncementWindowHint() +
-      renderSummaryHtml(summaryText);
+    aiSummaryEl.innerHTML = "";
     aiSummaryEl.classList.remove("is-unavailable");
+    
+    var heading = document.createElement("h2");
+    heading.textContent = "🤖 " + label;
+    aiSummaryEl.appendChild(heading);
+    
+    var hintDiv = document.createElement("div");
+    hintDiv.innerHTML = renderAnnouncementWindowHint();
+    aiSummaryEl.appendChild(hintDiv);
+    
+    var contentDiv = document.createElement("div");
+    contentDiv.innerHTML = renderSummaryHtml(summaryText);
+    aiSummaryEl.appendChild(contentDiv);
+    
     showElement(aiSummaryEl);
   }
 
@@ -476,9 +486,13 @@
         unavailMsg += "<br><small class=\"ai-summary-note\">" +
           escapeHtml(SUMMARY_REASON_MESSAGES[azureFeedData.summaryReason]) + "</small>";
       }
-      aiSummaryEl.innerHTML =
-        "<h2>🤖 AI Summary Unavailable</h2>" +
-        "<p>" + unavailMsg + "</p>";
+      aiSummaryEl.innerHTML = "";
+      var heading2 = document.createElement("h2");
+      heading2.textContent = "🤖 AI Summary Unavailable";
+      aiSummaryEl.appendChild(heading2);
+      var msgDiv = document.createElement("div");
+      msgDiv.innerHTML = "<p>" + unavailMsg + "</p>";
+      aiSummaryEl.appendChild(msgDiv);
       aiSummaryEl.classList.add("is-unavailable");
       showElement(aiSummaryEl);
       return;
