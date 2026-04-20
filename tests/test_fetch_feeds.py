@@ -727,6 +727,20 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
         self.assertEqual(article["published"], "2026-03-22T10:30:00+00:00")
         self.assertEqual(article["link"], "https://azure.microsoft.com/en-us/updates/123456/")
 
+    def test_parse_azure_update_item_marks_updated_when_modified_is_later(self):
+        item = {
+            "id": "123457",
+            "title": "Generally Available: Sample Azure capability",
+            "status": "Launched",
+            "created": "2026-03-22T10:30:00Z",
+            "modified": "2026-03-24T10:30:00Z",
+        }
+
+        article = fetch_feeds._parse_azure_update_item(item)
+
+        self.assertIsNotNone(article)
+        self.assertTrue(article["azureWasUpdated"])
+
     def test_parse_azure_update_item_extracts_preview_date(self):
         item = {
             "id": "654321",
@@ -897,6 +911,23 @@ class AzureUpdatesApiFallbackTests(unittest.TestCase):
 
         self.assertIsNotNone(article)
         self.assertEqual(article["azureRetirementDate"], "2027-05-31")
+
+    def test_entries_to_articles_marks_updated_when_rss_updated_is_later(self):
+        entries = [
+            {
+                "title": "Azure Update",
+                "link": "https://example.com/update",
+                "summary": "Summary",
+                "author": "Microsoft",
+                "published": "Mon, 20 Apr 2026 10:00:00 +0000",
+                "updated": "Tue, 21 Apr 2026 10:00:00 +0000",
+            }
+        ]
+
+        articles = fetch_feeds._entries_to_articles(entries, "Azure Updates", "azureupdates")
+
+        self.assertEqual(len(articles), 1)
+        self.assertTrue(articles[0]["azureWasUpdated"])
 
     def test_fetch_azure_updates_feed_falls_back_to_rss_on_api_exception(self):
         self._assert_feed_fallback_behavior(api_side_effect=RuntimeError("api unavailable"))

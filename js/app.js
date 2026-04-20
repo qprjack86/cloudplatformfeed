@@ -432,11 +432,21 @@
   }
 
   function showSummaryPanelContent(label, summaryText) {
-    aiSummaryEl.innerHTML =
-      "<h2>🤖 " + escapeHtml(label) + "</h2>" +
-      renderAnnouncementWindowHint() +
-      renderSummaryHtml(summaryText);
+    aiSummaryEl.innerHTML = "";
     aiSummaryEl.classList.remove("is-unavailable");
+    
+    var heading = document.createElement("h2");
+    heading.textContent = "🤖 " + label;
+    aiSummaryEl.appendChild(heading);
+    
+    var hintDiv = document.createElement("div");
+    hintDiv.innerHTML = renderAnnouncementWindowHint();
+    aiSummaryEl.appendChild(hintDiv);
+    
+    var contentDiv = document.createElement("div");
+    contentDiv.innerHTML = renderSummaryHtml(summaryText);
+    aiSummaryEl.appendChild(contentDiv);
+    
     showElement(aiSummaryEl);
   }
 
@@ -476,9 +486,13 @@
         unavailMsg += "<br><small class=\"ai-summary-note\">" +
           escapeHtml(SUMMARY_REASON_MESSAGES[azureFeedData.summaryReason]) + "</small>";
       }
-      aiSummaryEl.innerHTML =
-        "<h2>🤖 AI Summary Unavailable</h2>" +
-        "<p>" + unavailMsg + "</p>";
+      aiSummaryEl.innerHTML = "";
+      var heading2 = document.createElement("h2");
+      heading2.textContent = "🤖 AI Summary Unavailable";
+      aiSummaryEl.appendChild(heading2);
+      var msgDiv = document.createElement("div");
+      msgDiv.innerHTML = "<p>" + unavailMsg + "</p>";
+      aiSummaryEl.appendChild(msgDiv);
       aiSummaryEl.classList.add("is-unavailable");
       showElement(aiSummaryEl);
       return;
@@ -672,6 +686,7 @@
     var allEvents = Array.isArray(unifiedRetirementCalendar)
       ? unifiedRetirementCalendar
       : getFallbackRetirementEventsForCurrentSource();
+    var fallbackEvents = getFallbackRetirementEventsForCurrentSource();
     var label = "Retirement Calendar";
 
     if (!Array.isArray(unifiedRetirementCalendar) && currentSource === "m365") {
@@ -682,6 +697,17 @@
     }
 
     var filteredEvents = filterRetirementEventsForCurrentSource(allEvents);
+
+    // Unified calendar can be temporarily source-incomplete (for example after
+    // running the Azure fetch pipeline before the M365 merge step). In that
+    // case, fall back to the source-specific calendar payload so the UI still
+    // renders events for the active tab.
+    if (Array.isArray(unifiedRetirementCalendar) && !filteredEvents.length) {
+      filteredEvents = filterRetirementEventsForCurrentSource(fallbackEvents);
+      if (filteredEvents.length) {
+        label = currentSource === "m365" ? "Microsoft 365" : "Azure";
+      }
+    }
 
     return {
       events: filteredEvents,
@@ -2074,6 +2100,16 @@
     return (now - published) < 24 * 60 * 60 * 1000;
   }
 
+  function isUpdatedItem(article) {
+    return Boolean(
+      article && (
+        article.m365ScheduleUpdated === true ||
+        article.m365WasUpdated === true ||
+        article.azureWasUpdated === true
+      )
+    );
+  }
+
   // ===== Render Single Card =====
   function renderCard(article) {
     var isM365 = (article.source || "azure") === "m365";
@@ -2088,6 +2124,9 @@
     });
     var encodedLink = encodeURIComponent(article.link);
     var newBadge = isNew(article) ? '<span class="new-badge">NEW</span>' : "";
+    var scheduleUpdatedBadge = isUpdatedItem(article)
+      ? '<span class="schedule-updated-badge" title="This announcement was updated after initial publication">Updated</span>'
+      : "";
 
     // For M365 articles, use service name as blog tag, lifecycle as meta, m365Source for source label
     var blogTagText = isM365 ? (article.m365Service || "Microsoft 365") : article.blog;
@@ -2223,7 +2262,7 @@
       "</div>" +
       '<h3 class="article-title">' +
       '<a href="' + escapeHtml(article.link || "") + '" target="_blank" rel="noopener">' +
-      escapeHtml(article.title) + "</a>" + newBadge +
+      escapeHtml(article.title) + "</a>" + newBadge + scheduleUpdatedBadge +
       "</h3>" +
       '<div class="article-meta">' +
       metaContent +

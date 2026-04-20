@@ -8,12 +8,32 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = (REPO_ROOT / "data").resolve()
+ALLOWED_JSON_FILES = {"feeds.json", "m365_data.json"}
+
+
+def _resolve_allowed_json_path(path):
+    candidate = Path(path)
+    resolved = candidate.resolve(strict=False)
+
+    # Restrict reads to known JSON artifacts in the repository data directory.
+    if resolved.parent != DATA_DIR:
+        raise ValueError(f"Disallowed file location: {resolved}")
+    if resolved.suffix.lower() != ".json":
+        raise ValueError(f"Disallowed file type: {resolved.suffix}")
+    if resolved.name not in ALLOWED_JSON_FILES:
+        raise ValueError(f"Disallowed file name: {resolved.name}")
+
+    return resolved
 
 
 def _load_json_file(path):
     try:
-        with open(path, 'r', encoding='utf-8') as f:
+        safe_path = _resolve_allowed_json_path(path)
+        with safe_path.open('r', encoding='utf-8') as f:
             return True, json.load(f)
+    except ValueError as e:
+        return False, f"Invalid file path: {e}"
     except FileNotFoundError:
         return False, f"File not found: {path}"
     except json.JSONDecodeError as e:

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-04-15T12:42:55.006226+00:00",
-  "count": 41,
+  "updatedAt": "2026-04-20T10:25:06.398145+00:00",
+  "count": 43,
   "events": [
     {
       "title": "Microsoft Copilot Studio - Information regarding the end of support for classic agent creation in Teams",
@@ -10,6 +10,30 @@
       "retirementStartDate": "2026-04-01",
       "retirementEndDate": "2026-04-01",
       "published": "2026-04-08T22:42:45.000Z",
+      "blog": "Microsoft Copilot (Power Platform)",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft Copilot (Power Platform)"
+      ],
+      "sourceCount": 1,
+      "primaryCategory": "stayInformed",
+      "categories": [
+        "stayInformed"
+      ],
+      "categorySourceMap": {
+        "m365": "stayInformed"
+      },
+      "source": "m365"
+    },
+    {
+      "title": "Microsoft Copilot Studio – UPDATE – Classic agent creation experience in Teams",
+      "link": "https://deltapulse.app/item/MC1282727",
+      "retirementDate": "2026-04-01",
+      "datePrecision": "day",
+      "retirementStartDate": "",
+      "retirementEndDate": "",
+      "published": "2026-04-17T01:11:49.000Z",
       "blog": "Microsoft Copilot (Power Platform)",
       "blogId": "m365",
       "announcementType": "retirement",
@@ -130,6 +154,30 @@
       "source": "m365",
       "retirementStartDate": "2026-03-31",
       "retirementEndDate": "2026-04-20"
+    },
+    {
+      "title": "(Updated) Migration update for Office 365 connectors retirement in Teams – webhook URL support",
+      "link": "https://deltapulse.app/item/MC1181996",
+      "retirementDate": "2026-04-20",
+      "datePrecision": "day",
+      "retirementStartDate": "2026-04-15",
+      "retirementEndDate": "2026-04-20",
+      "published": "2025-10-31T23:03:55.000Z",
+      "blog": "Microsoft Teams",
+      "blogId": "m365",
+      "announcementType": "retirement",
+      "sources": [
+        "Microsoft Teams"
+      ],
+      "sourceCount": 1,
+      "primaryCategory": "planForChange",
+      "categories": [
+        "planForChange"
+      ],
+      "categorySourceMap": {
+        "m365": "planForChange"
+      },
+      "source": "m365"
     },
     {
       "title": "SharePoint Pages: Retirement of Web Search (Bing) image pivot",

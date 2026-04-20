@@ -6,3 +6,5 @@ __pycache__/
 .DS_Store
 Thumbs.db
 .github/prompts/git-commit-message.prompt.md
+.github/copilot-instructions.md
+CMP_SUITABILITY_ASSESSMENT.md

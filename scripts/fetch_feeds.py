@@ -1040,6 +1040,38 @@ def parse_date(entry):
     return datetime.now(timezone.utc).isoformat()
 
 
+def parse_updated_date(entry):
+    """Parse explicit updated timestamp from feed entry, when present."""
+    parsed = entry.get("updated_parsed")
+    if parsed:
+        try:
+            dt = datetime(*parsed[:6], tzinfo=timezone.utc)
+            return dt.isoformat()
+        except (ValueError, TypeError):
+            pass
+
+    date_str = entry.get("updated", "")
+    if date_str:
+        try:
+            dt = parsedate_to_datetime(date_str)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc).isoformat()
+        except (TypeError, ValueError, IndexError, OverflowError):
+            pass
+
+    return ""
+
+
+def _is_later_timestamp(updated_iso, published_iso):
+    """Return True when updated timestamp is later than published timestamp."""
+    updated_dt = parse_iso_datetime(updated_iso)
+    published_dt = parse_iso_datetime(published_iso)
+    if not updated_dt or not published_dt:
+        return False
+    return updated_dt > published_dt
+
+
 def _build_article_record(
     *,
     title,
@@ -1077,17 +1109,23 @@ def _entries_to_articles(entries, blog_name, blog_id):
     articles = []
     for entry in entries:
         summary = clean_html(entry.get("summary", ""))
+        published = parse_date(entry)
+        updated = parse_updated_date(entry)
+        extra_fields = {}
+        if _is_later_timestamp(updated, published):
+            extra_fields["azureWasUpdated"] = True
         articles.append(
             _build_article_record(
                 title=clean_html(entry.get("title", "Untitled")),
                 link=entry.get("link", ""),
-                published=parse_date(entry),
+                published=published,
                 summary=truncate(summary),
                 blog=blog_name,
                 blog_id=blog_id,
                 author=entry.get("author", "Microsoft"),
                 lifecycle_state="ga",
                 date_precision="day",
+                extra_fields=extra_fields,
             )
         )
     return articles
@@ -1696,6 +1734,22 @@ def _parse_azure_update_published(item):
     return None
 
 
+def _parse_azure_update_modified(item):
+    """Extract best modified timestamp available in an Azure Updates API item."""
+    for key in (
+        "modified",
+        "lastModified",
+        "updated",
+        "updatedDate",
+        "lastUpdatedDate",
+    ):
+        value = str(item.get(key, "") or "").strip()
+        dt = parse_iso_datetime(value)
+        if dt:
+            return dt.isoformat()
+    return None
+
+
 def _parse_azure_update_item(item):
     """Parse and normalize one Azure Updates API item.
 
@@ -1748,6 +1802,9 @@ def _parse_azure_update_item(item):
         "blogId": "azureupdates",
         "author": clean_html(str(item.get("author", "") or "").strip()) or "Microsoft",
     }
+    modified = _parse_azure_update_modified(item)
+    if _is_later_timestamp(modified, published):
+        article["azureWasUpdated"] = True
     if lifecycle:
         article["lifecycle"] = lifecycle
     if preview_date:

@@ -23,6 +23,12 @@ function shouldCache(response) {
   return response && response.ok;
 }
 
+function isSafeRequestUrl(request) {
+  const url = new URL(request.url);
+  const isHttp = url.protocol === "http:" || url.protocol === "https:";
+  return isHttp && url.origin === self.location.origin;
+}
+
 function isFeedDataPath(pathname) {
   return (
     FEED_PATH_TOKENS.some((token) => pathname.includes(token)) ||
@@ -54,12 +60,20 @@ function putInCache(request, response) {
 }
 
 function networkFirst(request) {
+  if (!isSafeRequestUrl(request)) {
+    return Promise.resolve(new Response("Blocked", { status: 400 }));
+  }
+
   return fetch(request)
     .then((response) => putInCache(request, response))
     .catch(() => caches.match(request));
 }
 
 function cacheFirst(request) {
+  if (!isSafeRequestUrl(request)) {
+    return Promise.resolve(new Response("Blocked", { status: 400 }));
+  }
+
   return caches.match(request).then((cached) => {
     if (cached) {
       return cached;
@@ -103,7 +117,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   const isSameOrigin = url.origin === self.location.origin;
   const useNetworkFirst =
-    isFeedDataPath(url.pathname) ||
+    (isSameOrigin && isFeedDataPath(url.pathname)) ||
     (isSameOrigin &&
       (isAppShellRequest(url.pathname, event.request.mode) ||
         isIconAssetPath(url.pathname)));
