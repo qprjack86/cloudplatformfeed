@@ -4,9 +4,45 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sun, 19 Apr 2026 15:29:24 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 09:06:27 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Discoverable – Observable MCP Server]]></title>
+      <link>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</link>
+      <guid>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</guid>
+      <description><![CDATA[How to build an observable MCP Server with discoverable tools and agents. The post Discoverable – Observable MCP Server appeared first on ISE Developer Blog.]]></description>
+      <dc:creator><![CDATA[Colin Desmond]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[ISE Developer Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Building an Enterprise HR Chatbot with Multi-Strategy RAG and Live Agent Handoff on Azure]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-enterprise-hr-chatbot-with-multi-strategy-rag-and/ba-p/4506829</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-enterprise-hr-chatbot-with-multi-strategy-rag-and/ba-p/4506829</guid>
+      <description><![CDATA[HR teams deal with thousands of employee questions every day — policy lookups, leave balances, case escalations, and sensitive topics like harassment or misconduct. AI chatbots can handle the routine stuff and free up HR advisors for the hard cases. But most chatbot projects get stuck at basic Q&A....]]></description>
+      <dc:creator><![CDATA[risthakur1213]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 05:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Network Connectivity Check APIs for Logic App Standard]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/network-connectivity-check-apis-for-logic-app-standard/ba-p/4512516</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/network-connectivity-check-apis-for-logic-app-standard/ba-p/4512516</guid>
+      <description><![CDATA[Introduction When your Logic App Standard is integrated with a Virtual Network (VNET), you can use these APIs to troubleshoot connectivity issues to downstream resources like SQL databases, Storage Accounts, Service Bus, Key Vault, and more. The checks run directly from the worker hosting your...]]></description>
+      <dc:creator><![CDATA[Mohammed_Barqawi]]></dc:creator>
+      <pubDate>Sun, 19 Apr 2026 18:40:14 GMT</pubDate>
+      <category><![CDATA[Integrations on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[AKS App Routing's Next Chapter: Gateway API with Istio]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aks-app-routing-s-next-chapter-gateway-api-with-istio/ba-p/4512729</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aks-app-routing-s-next-chapter-gateway-api-with-istio/ba-p/4512729</guid>
+      <description><![CDATA[If you've been following my previous posts on the Ingress NGINX retirement, you'll know the story so far. The community Ingress NGINX project was retired in March 2026, and Microsoft's extended support for the NGINX-based App Routing add-on runs until November 2026. I've covered migrating from...]]></description>
+      <dc:creator><![CDATA[samcogan]]></dc:creator>
+      <pubDate>Sun, 19 Apr 2026 18:25:14 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[Step by Step Guide to Ontology and Plan for Financial Service]]></title>
       <link>https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/step-by-step-guide-to-ontology-and-plan-for-financial-service/ba-p/4512708</link>
@@ -420,42 +456,6 @@
       <dc:creator><![CDATA[Yun Jung Choi]]></dc:creator>
       <pubDate>Wed, 15 Apr 2026 17:30:28 GMT</pubDate>
       <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Encrypt Premium SSD v2 and Ultra Disks with Cross Tenant Customer Managed Keys]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559761/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559761/</guid>
-      <description><![CDATA[Cross-tenant customer-managed keys (CMK) for Premium SSD v2 and Ultra Disks are now generally available. This capability allows managed disks to be encrypted using a customer-managed key stored in an Azure Key Vault located in a different Microsoft Entra tenant than the disk resource. This enables...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:15:38 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Encrypt Premium SSD v2 and Ultra Disks with Cross Tenant Customer Managed Keys]]></title>
-      <link>https://azure.microsoft.com/updates?id=559761</link>
-      <guid>https://azure.microsoft.com/updates?id=559761</guid>
-      <description><![CDATA[Cross-tenant customer-managed keys (CMK) for Premium SSD v2 and Ultra Disks are now generally available. This capability allows managed disks to be encrypted using a customer-managed key stored in an Azure Key Vault located in a different Microsoft EntraUpdate Type: GA, Services: Azure Key Vault,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:15:38 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[From fragmented sites to consistent governance: Azure Arc patterns for adaptive cloud strategy.]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/from-fragmented-sites-to-consistent-governance-azure-arc/ba-p/4510110</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/from-fragmented-sites-to-consistent-governance-azure-arc/ba-p/4510110</guid>
-      <description><![CDATA[In Manufacturing companies, hybrid architectures aren’t transitional—they’re persistent. Most large manufacturers operate across remote plants, branch sites, private datacenters, and Azure. The main challenge manufacturers face isn’t adopting cloud services, it is preventing long‑term operational...]]></description>
-      <dc:creator><![CDATA[sakshimalhotra]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:11:28 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Gemma 4 on Azure Container Apps Serverless GPU]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/gemma-4-on-azure-container-apps-serverless-gpu/ba-p/4511671</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/gemma-4-on-azure-container-apps-serverless-gpu/ba-p/4511671</guid>
-      <description><![CDATA[Every prompt you send to a hosted AI service leaves your tenant. Your code, your architecture decisions, your proprietary logic — all of it crosses a network boundary you don't control. For teams building in regulated industries or handling sensitive IP, that's not a philosophical concern. It's a...]]></description>
-      <dc:creator><![CDATA[simonjj]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 16:20:22 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
     </item>
   </channel>
 </rss>
