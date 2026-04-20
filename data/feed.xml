@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 20 Apr 2026 12:09:09 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 16:02:21 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Announcing new hybrid deployment options for Azure Virtual Desktop]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-new-hybrid-deployment-options-for-azure-virtual/ba-p/4468781</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-new-hybrid-deployment-options-for-azure-virtual/ba-p/4468781</guid>
+      <description><![CDATA[Azure Virtual Desktop is a secured, cloud-based virtual desktop infrastructure (VDI) service that enables organizations to deliver Windows desktops and applications to users. Originally launched in 2019, Azure Virtual Desktop has evolved rapidly to meet the changing needs of modern workplaces,...]]></description>
+      <dc:creator><![CDATA[Steve_Downs]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 15:13:46 GMT</pubDate>
+      <category><![CDATA[Azure Virtual Desktop]]></category>
+    </item>
     <item>
       <title><![CDATA[Simplify On-prem File share Migration to Azure: Discover & assess suitability using Azure Migrate]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/simplify-on-prem-file-share-migration-to-azure-discover-assess/ba-p/4509195</link>
@@ -213,6 +222,15 @@
       <dc:creator><![CDATA[Sreekanth_Thirthala]]></dc:creator>
       <pubDate>Fri, 17 Apr 2026 00:50:01 GMT</pubDate>
       <category><![CDATA[Integrations on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Control AI spend with per-application token rate limiting using Application Network and agentgateway]]></title>
+      <link>https://blog.aks.azure.com/2026/04/17/appnet-agentgateway</link>
+      <guid>https://blog.aks.azure.com/2026/04/17/appnet-agentgateway</guid>
+      <description><![CDATA[Use Application Network identity and agentgateway to enforce per-application token rate limiting and control shared AI service spend on AKS.]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[AKS Blog]]></category>
     </item>
     <item>
       <title><![CDATA[Best of Both Worlds for Agentic Refactoring: GitHub Copilot + MicroVMs via Docker Sandbox]]></title>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[shubh_khandhadia]]></dc:creator>
       <pubDate>Wed, 15 Apr 2026 20:26:56 GMT</pubDate>
       <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: End of life reminder of HBv2/HC-Series/NP-Series Azure Virtual Machine in Azure Batch Pool]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559751/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559751/</guid>
-      <description><![CDATA[Microsoft Azure will retire support for HBv2-series, HC-series, and NP-series VMs in Azure Batch pools on May 31, 2027, including: HBv2-series: 120 AMD EPYC 7V12 vCPUs, 480 GB RAM, 200 Gb/s HDR InfiniBand HC-series: 44 Intel Xeon Platinum 8168 vCPUs, 352 GB RAM, 100 Gb/s EDR InfiniBand NP-series:...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:30:33 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[End of lift reminder of HBv2/HC-Series/NP-Series Azure Virtual Machine in Azure Batch Pool]]></title>
-      <link>https://azure.microsoft.com/updates?id=559751</link>
-      <guid>https://azure.microsoft.com/updates?id=559751</guid>
-      <description><![CDATA[Microsoft Azure will retire support for HBv2-series, HC-series, and NP-series VMs in Azure Batch pools on May 31, 2027, including: HBv2-series: 120 AMD EPYC 7V12 vCPUs, 480 GB RAM, 200 Gb/s HDR InfiniBand HC-series: 44 Intel Xeon Platinum 8168 [Sevice: Virtual Machines, Target Date: 01 May 2027,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:30:33 GMT</pubDate>
-      <category><![CDATA[Azure Deprecations (aztty)]]></category>
     </item>
   </channel>
 </rss>
