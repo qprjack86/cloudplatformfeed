@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 20 Apr 2026 09:06:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 12:09:09 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Simplify On-prem File share Migration to Azure: Discover & assess suitability using Azure Migrate]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/simplify-on-prem-file-share-migration-to-azure-discover-assess/ba-p/4509195</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/simplify-on-prem-file-share-migration-to-azure-discover-assess/ba-p/4509195</guid>
+      <description><![CDATA[Migrating on‑premises file servers to the cloud is a complex infrastructure transformation—not just a data move. Many organizations lack the visibility needed to decide whether to rehost or modernize file shares spread across Windows and Linux servers. Azure Migrate now extends its discovery and...]]></description>
+      <dc:creator><![CDATA[bapic]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 09:49:14 GMT</pubDate>
+      <category><![CDATA[Azure Storage]]></category>
+    </item>
     <item>
       <title><![CDATA[Discoverable – Observable MCP Server]]></title>
       <link>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</link>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 15 Apr 2026 17:30:33 GMT</pubDate>
       <category><![CDATA[Azure Deprecations (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure MCP tools now ship built into Visual Studio 2022 — no extension required]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/</guid>
-      <description><![CDATA[Azure MCP tools now ship built into Visual Studio 2022 — no extension required Azure MCP tools are now built into Visual Studio 2022 as part of the Azure development workload — no separate extension to find, install, or update. You can enable over 230 tools across 45 Azure services directly in...]]></description>
-      <dc:creator><![CDATA[Yun Jung Choi]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:30:28 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
     </item>
   </channel>
 </rss>
