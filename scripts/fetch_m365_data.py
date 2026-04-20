@@ -1436,6 +1436,8 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365TargetDate": resolve_m365_target_date(item),
         "m365PreviewDate": item.get("m365PreviewDate"),
         "m365GeneralAvailabilityDate": item.get("m365GeneralAvailabilityDate"),
+        "m365WasUpdated": bool(item.get("_m365FromUpdatedFeed")),
+        "m365ScheduleUpdated": False,
         "m365IsMajorChange": item.get("isMajorChange", False),
         "m365Tags": tags,
         "m365RetirementSignal": retirement_signal,
@@ -1446,6 +1448,65 @@ def build_article_from_m365_item(item: dict) -> dict:
         "m365RetirementDatePrecision": _m365_retirement_date_precision(retirement_date) if retirement_date else None,
         "lifecycle": classify_m365_lifecycle(item),
     }
+
+
+def _m365_timeline_tuple(article: dict) -> tuple[str, str, str]:
+    """Return normalized timeline fields used to detect schedule changes."""
+    return (
+        _normalise_whitespace(article.get("m365TargetDate") or ""),
+        _normalise_whitespace(article.get("m365PreviewDate") or ""),
+        _normalise_whitespace(article.get("m365GeneralAvailabilityDate") or ""),
+    )
+
+
+def _build_previous_m365_timeline_index(path: Path = M365_DATA_OUTPUT) -> dict[str, tuple[str, str, str]]:
+    """Load previous M365 article timelines keyed by source:id."""
+    index: dict[str, tuple[str, str, str]] = {}
+    try:
+        if not path.exists():
+            return index
+        payload = _read_json_file(path)
+    except (OSError, json.JSONDecodeError, TypeError):
+        return index
+
+    previous_articles = payload.get("articles", []) if isinstance(payload, dict) else []
+    if not isinstance(previous_articles, list):
+        return index
+
+    for article in previous_articles:
+        if not isinstance(article, dict):
+            continue
+        source = str(article.get("m365Source") or "").strip()
+        item_id = str(article.get("m365Id") or "").strip()
+        if not source or not item_id:
+            continue
+        index[f"{source}:{item_id}"] = _m365_timeline_tuple(article)
+
+    return index
+
+
+def _apply_m365_schedule_update_flags(
+    articles: list,
+    previous_timeline_index: dict[str, tuple[str, str, str]] | None,
+) -> None:
+    """Flag items whose timeline fields changed compared to the previous snapshot."""
+    previous_timeline_index = previous_timeline_index or {}
+
+    for article in articles:
+        article["m365ScheduleUpdated"] = False
+        source = str(article.get("m365Source") or "").strip()
+        item_id = str(article.get("m365Id") or "").strip()
+        if not source or not item_id:
+            continue
+
+        key = f"{source}:{item_id}"
+        previous_timeline = previous_timeline_index.get(key)
+        if not previous_timeline:
+            continue
+
+        current_timeline = _m365_timeline_tuple(article)
+        if current_timeline != previous_timeline:
+            article["m365ScheduleUpdated"] = True
 
 
 def categorize_by_product(articles: list) -> dict:
@@ -1517,10 +1578,20 @@ MCP_METADATA_FIELDS = (
 
 
 def _apply_patch_if_missing(item: dict, patch: dict):
-    """Apply patch fields only when item field is missing/empty."""
+    """Apply patch fields, preferring fresh non-empty enrichment values.
+
+    DeltaPulse list endpoints may return stale snapshots for items that later
+    appear in updated-item feeds. Enrichment metadata should replace stale
+    values so date/status changes are captured.
+    """
     for key, value in patch.items():
-        if key not in item or item.get(key) in (None, "", []):
-            item[key] = value
+        if value is None:
+            continue
+        if isinstance(value, str) and not value.strip():
+            continue
+        if isinstance(value, (list, tuple, set, dict)) and not value:
+            continue
+        item[key] = value
 
 
 def _enrich_m365_item(session: requests.Session, item: dict) -> dict:
@@ -1581,6 +1652,23 @@ def _index_unique_m365_items(items: list) -> dict[str, dict]:
     return indexed
 
 
+def _propagate_updated_feed_signal(items: list) -> None:
+    """Mark all duplicates as updated when any copy came from updated feed."""
+    updated_keys = set()
+    for item in items:
+        key = _build_m365_enrichment_key(item)
+        if key and item.get("_m365FromUpdatedFeed"):
+            updated_keys.add(key)
+
+    if not updated_keys:
+        return
+
+    for item in items:
+        key = _build_m365_enrichment_key(item)
+        if key in updated_keys:
+            item["_m365FromUpdatedFeed"] = True
+
+
 def _apply_parallel_m365_enrichment(session: requests.Session, indexed_items: dict[str, dict]) -> None:
     with concurrent.futures.ThreadPoolExecutor(max_workers=MCP_MAX_WORKERS) as executor:
         future_to_item = {
@@ -1619,6 +1707,8 @@ def fetch_m365_items(session: requests.Session) -> list:
             "limit": 100,
             "dateRange": "last_7_days",
         })
+        for item in new_items:
+            item["_m365FromUpdatedFeed"] = False
         all_items.extend(new_items)
         print(f"    Found {len(new_items)} new items")
         
@@ -1628,8 +1718,11 @@ def fetch_m365_items(session: requests.Session) -> list:
             "limit": 100,
             "dateRange": "last_7_days",
         })
+        for item in updated_items:
+            item["_m365FromUpdatedFeed"] = True
         all_items.extend(updated_items)
         print(f"    Found {len(updated_items)} updated items")
+        _propagate_updated_feed_signal(all_items)
     
         # If both fetches returned nothing, try cache fallback
         if not all_items:
@@ -1879,7 +1972,12 @@ def fetch_m365_video(session: requests.Session) -> dict:
         return fallback
 
 
-def build_m365_feed(raw_items: list, m365_video: dict = None, cached_retirements: list = None) -> dict:
+def build_m365_feed(
+    raw_items: list,
+    m365_video: dict = None,
+    cached_retirements: list = None,
+    previous_timeline_index: dict[str, tuple[str, str, str]] | None = None,
+) -> dict:
     """Build the complete M365 feed data structure."""
     # Convert items to article schema
     articles = [build_article_from_m365_item(item) for item in raw_items]
@@ -1887,6 +1985,7 @@ def build_m365_feed(raw_items: list, m365_video: dict = None, cached_retirements
     # Deduplicate and filter stale
     deduped = dedupe_m365_articles(articles)
     print(f"After deduplication: {len(deduped)} unique articles")
+    _apply_m365_schedule_update_flags(deduped, previous_timeline_index)
     
     # Categorize by product
     by_category = categorize_by_product(deduped)
@@ -2334,6 +2433,7 @@ def main():
     print("Starting M365 Feed Data Fetch...")
     
     session = create_http_session()
+    previous_timeline_index = _build_previous_m365_timeline_index()
     
     try:
         # Load the unified retirement calendar from fetch_feeds.py
@@ -2359,7 +2459,12 @@ def main():
         m365_video = fetch_m365_video(session)
 
         # Build feed structure (merges cached retirements into the calendar)
-        feed_data = build_m365_feed(raw_items, m365_video, cached_retirements=all_cached)
+        feed_data = build_m365_feed(
+            raw_items,
+            m365_video,
+            cached_retirements=all_cached,
+            previous_timeline_index=previous_timeline_index,
+        )
         
         # Tag M365 retirement events with source field
         m365_retirement_calendar = feed_data.get("m365RetirementCalendar", [])

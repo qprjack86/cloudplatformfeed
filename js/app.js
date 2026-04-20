@@ -2074,6 +2074,16 @@
     return (now - published) < 24 * 60 * 60 * 1000;
   }
 
+  function isUpdatedItem(article) {
+    return Boolean(
+      article && (
+        article.m365ScheduleUpdated === true ||
+        article.m365WasUpdated === true ||
+        article.azureWasUpdated === true
+      )
+    );
+  }
+
   // ===== Render Single Card =====
   function renderCard(article) {
     var isM365 = (article.source || "azure") === "m365";
@@ -2088,6 +2098,9 @@
     });
     var encodedLink = encodeURIComponent(article.link);
     var newBadge = isNew(article) ? '<span class="new-badge">NEW</span>' : "";
+    var scheduleUpdatedBadge = isUpdatedItem(article)
+      ? '<span class="schedule-updated-badge" title="This announcement was updated after initial publication">Updated</span>'
+      : "";
 
     // For M365 articles, use service name as blog tag, lifecycle as meta, m365Source for source label
     var blogTagText = isM365 ? (article.m365Service || "Microsoft 365") : article.blog;
@@ -2223,7 +2236,7 @@
       "</div>" +
       '<h3 class="article-title">' +
       '<a href="' + escapeHtml(article.link || "") + '" target="_blank" rel="noopener">' +
-      escapeHtml(article.title) + "</a>" + newBadge +
+      escapeHtml(article.title) + "</a>" + newBadge + scheduleUpdatedBadge +
       "</h3>" +
       '<div class="article-meta">' +
       metaContent +

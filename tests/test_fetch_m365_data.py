@@ -629,6 +629,56 @@ class BuildM365FeedTests(unittest.TestCase):
         self.assertEqual(len(feed["m365RetirementCalendar"]), 2)
         self.assertIn("windows", feed["m365RetirementBuckets"])
         self.assertGreaterEqual(feed["m365RetirementBuckets"]["windows"]["0_3_months"]["count"], 1)
+
+    def test_marks_schedule_updated_only_on_actual_timeline_change(self):
+        raw_items = [
+            {
+                "id": "MC1279092",
+                "title": "Microsoft Entra: Passkeys in registration campaigns update",
+                "source": "message_center",
+                "publishedDate": "2026-04-20T00:00:00.000Z",
+                "service": ["Microsoft Entra"],
+                "targetDate": "May 2026, June 2026",
+            },
+            {
+                "id": "MC1279093",
+                "title": "Another message",
+                "source": "message_center",
+                "publishedDate": "2026-04-20T00:00:00.000Z",
+                "service": ["Microsoft Entra"],
+                "targetDate": "July 2026",
+            },
+        ]
+
+        previous_timeline_index = {
+            "message_center:MC1279092": ("April 2026", "", ""),
+            "message_center:MC1279093": ("July 2026", "", ""),
+        }
+
+        feed = fetch_m365_data.build_m365_feed(
+            raw_items,
+            previous_timeline_index=previous_timeline_index,
+        )
+
+        by_id = {a["m365Id"]: a for a in feed["articles"]}
+        self.assertTrue(by_id["MC1279092"]["m365ScheduleUpdated"])
+        self.assertFalse(by_id["MC1279093"]["m365ScheduleUpdated"])
+
+    def test_exposes_updated_feed_flag_on_articles(self):
+        raw_items = [
+            {
+                "id": "MC1279094",
+                "title": "Revised communication",
+                "source": "message_center",
+                "publishedDate": "2026-04-20T00:00:00.000Z",
+                "service": ["Microsoft Entra"],
+                "targetDate": "June 2026",
+                "_m365FromUpdatedFeed": True,
+            }
+        ]
+
+        feed = fetch_m365_data.build_m365_feed(raw_items)
+        self.assertTrue(feed["articles"][0]["m365WasUpdated"])
     
     def test_does_not_trigger_without_baseline(self):
         """Failsafe should not trigger if no baseline."""
@@ -672,6 +722,72 @@ class M365ConcurrencyTests(unittest.TestCase):
         self.assertEqual(enrich_mock.call_count, 2)
         self.assertEqual(items[0].get("status"), "In Development")
         self.assertEqual(items[2].get("severity"), "high")
+
+    def test_fetch_m365_items_overwrites_stale_values_with_enrichment(self):
+        session = mock.Mock()
+
+        # Same item appears in both feeds; first copy is stale.
+        new_items = [
+            {
+                "id": "MC1279092",
+                "source": "message_center",
+                "title": "Passkeys update",
+                "targetDate": "April 2026",
+            }
+        ]
+        updated_items = [
+            {
+                "id": "MC1279092",
+                "source": "message_center",
+                "title": "Passkeys update",
+                "targetDate": "May 2026, June 2026",
+            }
+        ]
+
+        with mock.patch.object(
+            fetch_m365_data,
+            "call_mcp_tool",
+            side_effect=[new_items, updated_items],
+        ), mock.patch.object(
+            fetch_m365_data,
+            "_enrich_m365_item",
+            return_value={"targetDate": "May 2026, June 2026"},
+        ) as enrich_mock:
+            items = fetch_m365_data.fetch_m365_items(session)
+
+        self.assertEqual(enrich_mock.call_count, 1)
+        self.assertEqual(items[0].get("targetDate"), "May 2026, June 2026")
+
+    def test_fetch_m365_items_marks_duplicates_as_updated_if_seen_in_updated_feed(self):
+        session = mock.Mock()
+
+        new_items = [
+            {
+                "id": "MC1279092",
+                "source": "message_center",
+                "title": "Passkeys update",
+            }
+        ]
+        updated_items = [
+            {
+                "id": "MC1279092",
+                "source": "message_center",
+                "title": "Passkeys update",
+            }
+        ]
+
+        with mock.patch.object(
+            fetch_m365_data,
+            "call_mcp_tool",
+            side_effect=[new_items, updated_items],
+        ), mock.patch.object(
+            fetch_m365_data,
+            "_enrich_m365_item",
+            return_value={},
+        ):
+            items = fetch_m365_data.fetch_m365_items(session)
+
+        self.assertTrue(items[0].get("_m365FromUpdatedFeed"))
 
 
 class YouTubeVideoHelperTests(unittest.TestCase):

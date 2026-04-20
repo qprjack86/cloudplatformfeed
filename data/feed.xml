@@ -4,9 +4,162 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 17 Apr 2026 15:33:40 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 10:33:58 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Simplify On-prem File share Migration to Azure: Discover & assess suitability using Azure Migrate]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/simplify-on-prem-file-share-migration-to-azure-discover-assess/ba-p/4509195</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/simplify-on-prem-file-share-migration-to-azure-discover-assess/ba-p/4509195</guid>
+      <description><![CDATA[Migrating on‑premises file servers to the cloud is a complex infrastructure transformation—not just a data move. Many organizations lack the visibility needed to decide whether to rehost or modernize file shares spread across Windows and Linux servers. Azure Migrate now extends its discovery and...]]></description>
+      <dc:creator><![CDATA[bapic]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 09:49:14 GMT</pubDate>
+      <category><![CDATA[Azure Storage]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Discoverable – Observable MCP Server]]></title>
+      <link>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</link>
+      <guid>https://devblogs.microsoft.com/ise/observable_discoverable_mcp_server/</guid>
+      <description><![CDATA[How to build an observable MCP Server with discoverable tools and agents. The post Discoverable – Observable MCP Server appeared first on ISE Developer Blog.]]></description>
+      <dc:creator><![CDATA[Colin Desmond]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[ISE Developer Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Building an Enterprise HR Chatbot with Multi-Strategy RAG and Live Agent Handoff on Azure]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-enterprise-hr-chatbot-with-multi-strategy-rag-and/ba-p/4506829</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-enterprise-hr-chatbot-with-multi-strategy-rag-and/ba-p/4506829</guid>
+      <description><![CDATA[HR teams deal with thousands of employee questions every day — policy lookups, leave balances, case escalations, and sensitive topics like harassment or misconduct. AI chatbots can handle the routine stuff and free up HR advisors for the hard cases. But most chatbot projects get stuck at basic Q&A....]]></description>
+      <dc:creator><![CDATA[risthakur1213]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 05:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Network Connectivity Check APIs for Logic App Standard]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/network-connectivity-check-apis-for-logic-app-standard/ba-p/4512516</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/network-connectivity-check-apis-for-logic-app-standard/ba-p/4512516</guid>
+      <description><![CDATA[Introduction When your Logic App Standard is integrated with a Virtual Network (VNET), you can use these APIs to troubleshoot connectivity issues to downstream resources like SQL databases, Storage Accounts, Service Bus, Key Vault, and more. The checks run directly from the worker hosting your...]]></description>
+      <dc:creator><![CDATA[Mohammed_Barqawi]]></dc:creator>
+      <pubDate>Sun, 19 Apr 2026 18:40:14 GMT</pubDate>
+      <category><![CDATA[Integrations on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[AKS App Routing's Next Chapter: Gateway API with Istio]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aks-app-routing-s-next-chapter-gateway-api-with-istio/ba-p/4512729</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aks-app-routing-s-next-chapter-gateway-api-with-istio/ba-p/4512729</guid>
+      <description><![CDATA[If you've been following my previous posts on the Ingress NGINX retirement, you'll know the story so far. The community Ingress NGINX project was retired in March 2026, and Microsoft's extended support for the NGINX-based App Routing add-on runs until November 2026. I've covered migrating from...]]></description>
+      <dc:creator><![CDATA[samcogan]]></dc:creator>
+      <pubDate>Sun, 19 Apr 2026 18:25:14 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Step by Step Guide to Ontology and Plan for Financial Service]]></title>
+      <link>https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/step-by-step-guide-to-ontology-and-plan-for-financial-service/ba-p/4512708</link>
+      <guid>https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/step-by-step-guide-to-ontology-and-plan-for-financial-service/ba-p/4512708</guid>
+      <description><![CDATA[What We Will Build In this guide, we will construct a complete Fabric IQ solution that accomplishes the following: First, a Lakehouse that ingests publicly available data including bank financials, P2P lending statistics, borrower demographics, and licensing information. Second, a Semantic Model...]]></description>
+      <dc:creator><![CDATA[NaufalPrawironegoro]]></dc:creator>
+      <pubDate>Sun, 19 Apr 2026 15:06:24 GMT</pubDate>
+      <category><![CDATA[Analytics on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Virtual Desktop in the Perth Azure Extended Zone: A Real‑World Production Deployment]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-virtual-desktop-in-the-perth-azure-extended-zone-a-real/ba-p/4508550</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-virtual-desktop-in-the-perth-azure-extended-zone-a-real/ba-p/4508550</guid>
+      <description><![CDATA[Introduction Perth is one of the most geographically isolated major cities globally. For performance‑sensitive, graphics‑heavy engineering workloads, user experience can degrade significantly when desktops are hosted far from the user. For workloads such as subsurface modelling and GPU‑intensive...]]></description>
+      <dc:creator><![CDATA[akashmishra]]></dc:creator>
+      <pubDate>Sun, 19 Apr 2026 10:03:32 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Microsoft Fabric Operations Agent Step by Step Walkthrough]]></title>
+      <link>https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/microsoft-fabric-operations-agent-step-by-step-walkthrough/ba-p/4512572</link>
+      <guid>https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/microsoft-fabric-operations-agent-step-by-step-walkthrough/ba-p/4512572</guid>
+      <description><![CDATA[Fabric Capacity and Workspace You need a Microsoft Fabric workspace backed by a paid capacity. Trial capacities are not supported for Operations Agent. Your capacity must be provisioned in a supported region. As of April 2026, Operations Agent is available in all Microsoft Fabric regions except...]]></description>
+      <dc:creator><![CDATA[NaufalPrawironegoro]]></dc:creator>
+      <pubDate>Sat, 18 Apr 2026 07:00:41 GMT</pubDate>
+      <category><![CDATA[Analytics on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[MCP Demystified: Tools vs Resources vs Prompts Explained Simply]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-demystified-tools-vs-resources-vs-prompts-explained-simply/ba-p/4508057</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-demystified-tools-vs-resources-vs-prompts-explained-simply/ba-p/4508057</guid>
+      <description><![CDATA[Introduction When developers start working with Model Context Protocol (MCP), one of the most confusing parts is understanding the difference between MCP Tools, Resources, and Prompts. All three are important components in modern AI application development, but they serve completely different...]]></description>
+      <dc:creator><![CDATA[Ravindra_Kumar_Vishwakarma]]></dc:creator>
+      <pubDate>Sat, 18 Apr 2026 04:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Deploy scalable ring-fenced Purview operations with Administrative Units]]></title>
+      <link>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/deploy-scalable-ring%E2%80%91fenced-purview-operations-with-administrative-units/4512556</link>
+      <guid>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/deploy-scalable-ring%E2%80%91fenced-purview-operations-with-administrative-units/4512556</guid>
+      <description><![CDATA[As Microsoft Purview deployments mature, many organisations encounter the same scaling challenge: how do you decentralize operations without fragmenting governance or losing visibility? Administrativ...Update Type: Announcement, Services: Azure Purview, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Sat, 18 Apr 2026 01:22:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally available: Anthropic Claude Opus 4.7 on Azure Databricks]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560590/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560590/</guid>
+      <description><![CDATA[Azure Databricks now supports Anthropic Claude Opus 4.7 through Azure Databricks AI Model Serving. Claude Opus 4.7 is Anthropic's most capable hybrid reasoning model, delivering stronger performance on complex extraction and agentic reasoning tasks while using fewer output tokens than its...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 21:30:12 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Anthropic Claude Opus 4.7 on Azure Databricks]]></title>
+      <link>https://azure.microsoft.com/updates?id=560590</link>
+      <guid>https://azure.microsoft.com/updates?id=560590</guid>
+      <description><![CDATA[Azure Databricks now supports Anthropic Claude Opus 4.7 through Azure Databricks AI Model Serving. Claude Opus 4.7 is Anthropic's most capable hybrid reasoning model, delivering stronger performance on complex extraction and agentic reasoning tasks whileUpdate Type: GA, Services: Databricks,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 21:30:12 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Autonomous AKS Incident Response with Azure SRE Agent: From Alert to Verified Recovery in Minutes]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert/ba-p/4511343</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert/ba-p/4511343</guid>
+      <description><![CDATA[When a Sev1 alert fires on an AKS cluster, detection is rarely the hard part. The hard part is what comes next: proving what broke, why it broke, and fixing it without widening the blast radius, all under time pressure, often at 2 a.m. Azure SRE Agent is designed to close that gap. It connects...]]></description>
+      <dc:creator><![CDATA[hailukassa]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 20:31:11 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Retirement: Azure Functions runtime v3 on Linux Consumption will stop running September 30, 2026]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559311/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559311/</guid>
+      <description><![CDATA[Azure Functions runtime v3 was retired on December 13, 2022. As part of ongoing efforts to reduce reliance on legacy infrastructure and focus investments on supported platforms, Azure will enforce this retirement for Linux Consumption–based Function Apps still running runtime v3. After September...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 19:00:12 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Functions runtime v3 on Linux Consumption will stop running September 30, 2026]]></title>
+      <link>https://azure.microsoft.com/updates?id=559311</link>
+      <guid>https://azure.microsoft.com/updates?id=559311</guid>
+      <description><![CDATA[Azure Functions runtime v3 was retired on December 13, 2022. As part of ongoing efforts to reduce reliance on legacy infrastructure and focus investments on supported platforms, Azure will enforce this retirement for Linux Consumption–based Function Apps [Sevice: Azure Functions, Target Date: 01...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 19:00:12 GMT</pubDate>
+      <category><![CDATA[Azure Deprecations (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Configure AKS backup using a single Azure CLI command]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560521/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560521/</guid>
+      <description><![CDATA[Azure Backup now provides a simplified experience to configure backup for Azure Kubernetes Service (AKS) clusters using a single Azure CLI command.Enabling backup for AKS clusters through CLI requires multiple manual steps, including installation of the Backup extension, provisioning of storage...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 17:15:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Configure AKS backup using a single Azure CLI command]]></title>
+      <link>https://azure.microsoft.com/updates?id=560521</link>
+      <guid>https://azure.microsoft.com/updates?id=560521</guid>
+      <description><![CDATA[Azure Backup now provides a simplified experience to configure backup for Azure Kubernetes Service (AKS) clusters using a single Azure CLI command.Enabling backup for AKS clusters through CLI requires multiple manual steps, including installation of the BUpdate Type: GA, Services: Kubernetes...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 17:15:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
     <item>
       <title><![CDATA[Bringing AI to the Factory Floor with Foundry Local - Now in Public Preview on Azure Local]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</link>
@@ -287,7 +440,7 @@
       <category><![CDATA[Microsoft Sentinel]]></category>
     </item>
     <item>
-      <title><![CDATA[Retirement: End of lift reminder of HBv2/HC-Series/NP-Series Azure Virtual Machine in Azure Batch Pool]]></title>
+      <title><![CDATA[Retirement: End of life reminder of HBv2/HC-Series/NP-Series Azure Virtual Machine in Azure Batch Pool]]></title>
       <link>https://azure.microsoft.com/en-us/updates/559751/</link>
       <guid>https://azure.microsoft.com/en-us/updates/559751/</guid>
       <description><![CDATA[Microsoft Azure will retire support for HBv2-series, HC-series, and NP-series VMs in Azure Batch pools on May 31, 2027, including: HBv2-series: 120 AMD EPYC 7V12 vCPUs, 480 GB RAM, 200 Gb/s HDR InfiniBand HC-series: 44 Intel Xeon Platinum 8168 vCPUs, 352 GB RAM, 100 Gb/s EDR InfiniBand NP-series:...]]></description>
@@ -303,159 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 15 Apr 2026 17:30:33 GMT</pubDate>
       <category><![CDATA[Azure Deprecations (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure MCP tools now ship built into Visual Studio 2022 — no extension required]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/</guid>
-      <description><![CDATA[Azure MCP tools now ship built into Visual Studio 2022 — no extension required Azure MCP tools are now built into Visual Studio 2022 as part of the Azure development workload — no separate extension to find, install, or update. You can enable over 230 tools across 45 Azure services directly in...]]></description>
-      <dc:creator><![CDATA[Yun Jung Choi]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:30:28 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Encrypt Premium SSD v2 and Ultra Disks with Cross Tenant Customer Managed Keys]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559761/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559761/</guid>
-      <description><![CDATA[Cross-tenant customer-managed keys (CMK) for Premium SSD v2 and Ultra Disks are now generally available. This capability allows managed disks to be encrypted using a customer-managed key stored in an Azure Key Vault located in a different Microsoft Entra tenant than the disk resource. This enables...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:15:38 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Encrypt Premium SSD v2 and Ultra Disks with Cross Tenant Customer Managed Keys]]></title>
-      <link>https://azure.microsoft.com/updates?id=559761</link>
-      <guid>https://azure.microsoft.com/updates?id=559761</guid>
-      <description><![CDATA[Cross-tenant customer-managed keys (CMK) for Premium SSD v2 and Ultra Disks are now generally available. This capability allows managed disks to be encrypted using a customer-managed key stored in an Azure Key Vault located in a different Microsoft EntraUpdate Type: GA, Services: Azure Key Vault,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:15:38 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[From fragmented sites to consistent governance: Azure Arc patterns for adaptive cloud strategy.]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/from-fragmented-sites-to-consistent-governance-azure-arc/ba-p/4510110</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/from-fragmented-sites-to-consistent-governance-azure-arc/ba-p/4510110</guid>
-      <description><![CDATA[In Manufacturing companies, hybrid architectures aren’t transitional—they’re persistent. Most large manufacturers operate across remote plants, branch sites, private datacenters, and Azure. The main challenge manufacturers face isn’t adopting cloud services, it is preventing long‑term operational...]]></description>
-      <dc:creator><![CDATA[sakshimalhotra]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 17:11:28 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Gemma 4 on Azure Container Apps Serverless GPU]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/gemma-4-on-azure-container-apps-serverless-gpu/ba-p/4511671</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/gemma-4-on-azure-container-apps-serverless-gpu/ba-p/4511671</guid>
-      <description><![CDATA[Every prompt you send to a hosted AI service leaves your tenant. Your code, your architecture decisions, your proprietary logic — all of it crosses a network boundary you don't control. For teams building in regulated industries or handling sensitive IP, that's not a philosophical concern. It's a...]]></description>
-      <dc:creator><![CDATA[simonjj]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 16:20:22 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Stop Hunting Bugs: Meet the New Visual Studio Debugger Agent Workflow]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/</guid>
-      <description><![CDATA[We’ve all been there: a bug report lands in your inbox with a title like “App crashes sometimes” and zero reproduction steps. Your morning, which was supposed to be spent building new features, is now a forensic investigation. You’re setting scattershot breakpoints, staring at the call stack, and...]]></description>
-      <dc:creator><![CDATA[Harshada Hole]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 16:00:15 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Enabling fallback to internet for Azure Private DNS Zones in hybrid architectures]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131</guid>
-      <description><![CDATA[Introduction Azure Private Endpoint enables secure connectivity to Azure PaaS services such as: Azure SQL Managed Instance Azure Container Registry Azure Key Vault Azure Storage Account through private IP addresses within a virtual network. When Private Endpoint is enabled for a service, Azure DNS...]]></description>
-      <dc:creator><![CDATA[kirankumar_manchiwar04]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 15:57:15 GMT</pubDate>
-      <category><![CDATA[Azure Networking]]></category>
-    </item>
-    <item>
-      <title><![CDATA[One-click security scanning and org-wide alert triage come to Advanced Security]]></title>
-      <link>https://devblogs.microsoft.com/devops/one-click-security-scanning-and-org-wide-alert-triage-come-to-advanced-security/</link>
-      <guid>https://devblogs.microsoft.com/devops/one-click-security-scanning-and-org-wide-alert-triage-come-to-advanced-security/</guid>
-      <description><![CDATA[We’re shipping two major capabilities that change how security teams enable and act on application security in Azure DevOps: CodeQL default setup makes it possible to enable code scanning across your organization without configuring a single pipeline, and a new combined alerts experience in...]]></description>
-      <dc:creator><![CDATA[Laura Jiang]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 15:06:53 GMT</pubDate>
-      <category><![CDATA[Azure DevOps Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Your Oracle Data Is Sitting Next to Microsoft AI. Are You Using It?]]></title>
-      <link>https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/your-oracle-data-is-sitting-next-to-microsoft-ai-are-you-using/ba-p/4509438</link>
-      <guid>https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/your-oracle-data-is-sitting-next-to-microsoft-ai-are-you-using/ba-p/4509438</guid>
-      <description><![CDATA["Your organization runs Oracle on Azure. You've purchased Microsoft Foundry & OpenAI licenses. Why are your AI projects still stuck in proof-of-concept? "Your employees spend hours every week entering or reconciling data from documents, copying information into ERP systems. What would it mean if...]]></description>
-      <dc:creator><![CDATA[ManishChopra]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 13:27:01 GMT</pubDate>
-      <category><![CDATA[Oracle on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[A demonstration of Virtual Network TAP]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/a-demonstration-of-virtual-network-tap/ba-p/4479136</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/a-demonstration-of-virtual-network-tap/ba-p/4479136</guid>
-      <description><![CDATA[Azure Virtual Network Terminal Access Point (VTAP), at the time of writing in April 2026 in public preview in select regions, copies network traffic from source Virtual Machines to a collector or traffic analytics tool, running as a Network Virtual Appliance (NVA). VTAP creates a full copy of all...]]></description>
-      <dc:creator><![CDATA[Marc de Droog]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 10:30:01 GMT</pubDate>
-      <category><![CDATA[Azure Networking]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Choosing the Right Azure Hosting Model for AI Agents: A Deep Dive into Foundry Hosted Agents]]></title>
-      <link>https://devblogs.microsoft.com/all-things-azure/hostedagent/</link>
-      <guid>https://devblogs.microsoft.com/all-things-azure/hostedagent/</guid>
-      <description><![CDATA[AI agents are quickly moving from experiments to production‑critical components of modern applications. But while many teams know how to build agents, far fewer are confident they’re hosting them on the right foundation. Most organizations start by deploying agents the same way they deploy...]]></description>
-      <dc:creator><![CDATA[Reenu Saluja]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 05:00:56 GMT</pubDate>
-      <category><![CDATA[All Things Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Supercharge Your Dev Workflows with GitHub Copilot Custom Skills]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/supercharge-your-dev-workflows-with-github-copilot-custom-skills/ba-p/4510012</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/supercharge-your-dev-workflows-with-github-copilot-custom-skills/ba-p/4510012</guid>
-      <description><![CDATA[The Problem Every team has those repetitive, multi-step workflows that eat up time: Running a sequence of CLI commands, parsing output, and generating a report Querying multiple APIs, correlating data, and summarizing findings Executing test suites, analyzing failures, and producing actionable...]]></description>
-      <dc:creator><![CDATA[sachoudhury]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 05:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[DevOps Playbook for the Agentic Era]]></title>
-      <link>https://devblogs.microsoft.com/all-things-azure/agentic-devops-practices-principles-strategic-direction/</link>
-      <guid>https://devblogs.microsoft.com/all-things-azure/agentic-devops-practices-principles-strategic-direction/</guid>
-      <description><![CDATA[Practices, Principles, and Strategic Direction Software delivery has entered a new phase. AI agents are no longer confined to autocomplete suggestions in the editor. They are opening pull requests, generating code across multiple files, proposing infrastructure changes, responding to issues with...]]></description>
-      <dc:creator><![CDATA[David Sanchez]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 00:23:09 GMT</pubDate>
-      <category><![CDATA[All Things Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Data Security Posture Reports (Custom Workspace and Charts)]]></title>
-      <link>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/data-security-posture-reports-custom-workspace-and-charts/4511341</link>
-      <guid>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/data-security-posture-reports-custom-workspace-and-charts/4511341</guid>
-      <description><![CDATA[For more insights on OOB Reports, check out this article. Overview: NOW IN PUBLIC PREVIEW Microsoft Purview Posture Reports provide a clear, outcome‑based view of how effectively data protection ...Update Type: Announcement, Services: Azure Purview, Categories: Security]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 21:37:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing: Minimum billable object size for cooler storage tiers]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559756/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559756/</guid>
-      <description><![CDATA[For storage accounts with Azure Blob or Data Lake Storage (ADLS) we are introducing a minimum billable object size for the cool, cold and archive access tiers of 128KiB. Objects on those tiers that are smaller than 128 KiB will be billed as 128 KiB objects at the rate of the corresponding tier....]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 21:15:15 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Azure Site Recovery support for Windows Azure VMs with NVMe disk controllers.]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560241/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560241/</guid>
-      <description><![CDATA[Azure Site Recovery now supports replication and disaster recovery for Windows Azure Virtual Machines running on NVMe-enabled Generation 2 VM families, such as the Da/Ea/Fa v6-series and Ebsv5/Ebdsv5 in the Azure-to-Azure scenario. This enhancement allows customers to enable disaster recovery for...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 21:15:15 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Site Recovery support for Windows Azure VMs with NVMe disk controllers.]]></title>
-      <link>https://azure.microsoft.com/updates?id=560241</link>
-      <guid>https://azure.microsoft.com/updates?id=560241</guid>
-      <description><![CDATA[Azure Site Recovery now supports replication and disaster recovery for Windows Azure Virtual Machines running on NVMe-enabled Generation 2 VM families, such as the Da/Ea/Fa v6-series and Ebsv5/Ebdsv5 in the Azure-to-Azure scenario. This enhancement allowsUpdate Type: Preview, Services: Virtual...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 14 Apr 2026 21:15:15 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
