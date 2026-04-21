@@ -4,9 +4,108 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 20 Apr 2026 16:02:21 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 08:51:58 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Leveraging Azure Resource Graph Queries for Azure Redis Configuration]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-paas-blog/leveraging-azure-resource-graph-queries-for-azure-redis/ba-p/4509826</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-paas-blog/leveraging-azure-resource-graph-queries-for-azure-redis/ba-p/4509826</guid>
+      <description><![CDATA[Scenario Many times, we receive requests for a quick and reliable way to review Azure Redis configurations such as SKU tiers, Redis versions, TLS settings, Microsoft Entra authentication status, and public network exposure. Traditionally, these checks are performed using PowerShell, Azure CLI, or...]]></description>
+      <dc:creator><![CDATA[Soma_Sekhara_Raju]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 07:57:08 GMT</pubDate>
+      <category><![CDATA[Azure PaaS]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Leveraging Azure Resource Graph Queries for Azure Storage Configuration]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-paas-blog/leveraging-azure-resource-graph-queries-for-azure-storage/ba-p/4509184</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-paas-blog/leveraging-azure-resource-graph-queries-for-azure-storage/ba-p/4509184</guid>
+      <description><![CDATA[Scenario Many times, we receive requests for a quick and reliable way to check which Azure Storage features are enabled across subscriptions—such as SFTP, Hierarchical Namespace (HNS), or default access tiers. For such scenarios, customers can use PowerShell, Azure CLI, or REST APIs; however, these...]]></description>
+      <dc:creator><![CDATA[jainsourabh]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 07:46:00 GMT</pubDate>
+      <category><![CDATA[Azure PaaS]]></category>
+    </item>
+    <item>
+      <title><![CDATA[How to Troubleshoot Azure Functions Host Startup Issue]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-host-startup-issue/ba-p/4512966</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-host-startup-issue/ba-p/4512966</guid>
+      <description><![CDATA[Overview Azure Functions is a powerful serverless compute service that enables you to run event-driven code without managing infrastructure. When you deploy a Function App, the Azure Functions host is the runtime process responsible for discovering your functions, loading extensions and bindings,...]]></description>
+      <dc:creator><![CDATA[vikasgupta5]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 07:04:42 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[From Playwright Automation to Agent Driven Testing (GHCP in Action)]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-playwright-automation-to-agent-driven-testing-ghcp-in/ba-p/4507395</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-playwright-automation-to-agent-driven-testing-ghcp-in/ba-p/4507395</guid>
+      <description><![CDATA[What Is Agent-Driven Testing? Agent-driven testing represents a revolutionary shift from traditional, hardcoded test automation to intelligent, adaptive testing powered by AI agents. Unlike conventional Playwright tests that rely on static selectors and predefined workflows, agent-driven testing...]]></description>
+      <dc:creator><![CDATA[syedarshad]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 05:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Service Bus SBMP Retirement: What BizTalk Server 2020 Customers Need to Know]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/service-bus-sbmp-retirement-what-biztalk-server-2020-customers/ba-p/4513155</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/service-bus-sbmp-retirement-what-biztalk-server-2020-customers/ba-p/4513155</guid>
+      <description><![CDATA[On September 30, 2026, the Azure Service Bus team will retire support for the Service Bus Messaging Protocol (SBMP). This is important BizTalk Server 2020 customers who use the BizTalk Service Bus (SB-Messaging) adapter, as SBMP is the protocol that adapter relies on today. To help customers...]]></description>
+      <dc:creator><![CDATA[hcamposu]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 01:02:21 GMT</pubDate>
+      <category><![CDATA[Integrations on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[GitHub Copilot meets Azure Developer CLI: AI-assisted project setup and error troubleshooting]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/azd-copilot-integration/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/azd-copilot-integration/</guid>
+      <description><![CDATA[The Azure Developer CLI (azd) now integrates with GitHub Copilot for AI-assisted project scaffolding and intelligent deployment error troubleshooting, helping you resolve common Azure errors like MissingSubscriptionRegistration, SkuNotAvailable, and StorageAccountAlreadyTaken without leaving the...]]></description>
+      <dc:creator><![CDATA[Kristen Womack]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 00:38:49 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Troubleshoot with OpenTelemetry in Azure Monitor - Public Preview]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-observability-blog/troubleshoot-with-opentelemetry-in-azure-monitor-public-preview/ba-p/4512128</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-observability-blog/troubleshoot-with-opentelemetry-in-azure-monitor-public-preview/ba-p/4512128</guid>
+      <description><![CDATA[OpenTelemetry is fast becoming the industry standard for modern telemetry collection and ingestion pipelines. With Azure Monitor’s new OpenTelemetry Protocol (OTLP) support, you can ship logs, metrics, and traces from wherever you run workloads to analyze and act on your observability data in one...]]></description>
+      <dc:creator><![CDATA[KayodePrince]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 18:14:20 GMT</pubDate>
+      <category><![CDATA[Azure Observability]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Autonomous AKS Incident Response with Azure SRE Agent: From Alert to Verified Recovery in Minutes]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert/ba-p/4511343</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert/ba-p/4511343</guid>
+      <description><![CDATA[When a Sev1 alert fires on an AKS cluster, detection is rarely the hard part. The hard part is what comes next: proving what broke, why it broke, and fixing it without widening the blast radius, all under time pressure, often at 2 a.m. Azure SRE Agent is designed to close that gap. It connects...]]></description>
+      <dc:creator><![CDATA[hailukassa]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 18:07:34 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Secure, Keyless Application Access with Managed Identities - Now GA in Azure Files SMB]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-keyless-application-access-with-managed-identities-now-ga/ba-p/4513053</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-keyless-application-access-with-managed-identities-now-ga/ba-p/4513053</guid>
+      <description><![CDATA[As enterprises modernize applications and strengthen their security posture, identity is central to how applications access shared storage. Traditional identity models relying on account keys, stored credentials, or domain‑joined infrastructure add operational overhead and introduce security risks...]]></description>
+      <dc:creator><![CDATA[Priyanka-Gangal]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 17:57:56 GMT</pubDate>
+      <category><![CDATA[Azure Storage]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Azure Monitor supports native OTLP ingestion using the Azure Monitor Agent]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560530/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560530/</guid>
+      <description><![CDATA[Azure Monitor now supports native ingestion of OpenTelemetry Protocol (OTLP) signals. Send telemetry directly from OpenTelemetry-instrumented applications by using the Azure Monitor Agent (AMA) to receive OTLP from your apps and export it to Azure Monitor. This is supported on Azure VMs, VM scale...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 17:30:53 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Monitor supports native OTLP ingestion using the Azure Monitor Agent]]></title>
+      <link>https://azure.microsoft.com/updates?id=560530</link>
+      <guid>https://azure.microsoft.com/updates?id=560530</guid>
+      <description><![CDATA[Azure Monitor now supports native ingestion of OpenTelemetry Protocol (OTLP) signals. Send telemetry directly from OpenTelemetry-instrumented applications by using the Azure Monitor Agent (AMA) to receive OTLP from your apps and export it to Azure MonitorUpdate Type: Preview, Services: Virtual...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 17:30:53 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
     <item>
       <title><![CDATA[Announcing new hybrid deployment options for Azure Virtual Desktop]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-new-hybrid-deployment-options-for-azure-virtual/ba-p/4468781</link>
@@ -17,6 +116,24 @@
       <category><![CDATA[Azure Virtual Desktop]]></category>
     </item>
     <item>
+      <title><![CDATA[Evolving Agentic Applications on Microsoft Fabric: From Automated Deployment to Integrating Data Agents]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/evolving-agentic-applications-on-microsoft-fabric-from-automated-deployment-to-integrating-data-agents/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/evolving-agentic-applications-on-microsoft-fabric-from-automated-deployment-to-integrating-data-agents/</guid>
+      <description><![CDATA[In our previous post, Operationalizing Agentic Applications with Microsoft Fabric, we focused on a core challenge teams encounter once an agentic application moves beyond a proof of concept: operational reality. Specifically, how do you observe, govern, evaluate, and analyze what agents are doing...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 10:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Orchestrate dbt jobs activity in your Fabric pipelines]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/orchestrate-dbt-jobs-activity-in-your-fabric-pipelines-preview/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/orchestrate-dbt-jobs-activity-in-your-fabric-pipelines-preview/</guid>
+      <description><![CDATA[Coordinating dbt runs with upstream ingestion and downstream consumption often requires complex solutions and different tools. You can now add a dbt job activity (Preview) directly to your Fabric pipelines. This lets you orchestrate dbt transformations alongside other pipeline activities, so you...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 10:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
       <title><![CDATA[Simplify On-prem File share Migration to Azure: Discover & assess suitability using Azure Migrate]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/simplify-on-prem-file-share-migration-to-azure-discover-assess/ba-p/4509195</link>
       <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/simplify-on-prem-file-share-migration-to-azure-discover-assess/ba-p/4509195</guid>
@@ -24,6 +141,15 @@
       <dc:creator><![CDATA[bapic]]></dc:creator>
       <pubDate>Mon, 20 Apr 2026 09:49:14 GMT</pubDate>
       <category><![CDATA[Azure Storage]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Secure your data streams: How to choose the right network security feature in Eventstream]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/secure-your-data-streams-how-to-choose-the-right-network-security-feature-in-eventstream/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/secure-your-data-streams-how-to-choose-the-right-network-security-feature-in-eventstream/</guid>
+      <description><![CDATA[Eventstream in Fabric Real-Time Intelligence stream data from both inside and outside the Fabric platform. When your external sources sit behind firewalls or in private networks, choosing the right network security feature is essential. This post breaks down the available options in Eventstream and...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 20 Apr 2026 09:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Discoverable – Observable MCP Server]]></title>
@@ -126,12 +252,12 @@
     </item>
     <item>
       <title><![CDATA[Autonomous AKS Incident Response with Azure SRE Agent: From Alert to Verified Recovery in Minutes]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert/ba-p/4511343</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert/ba-p/4511343</guid>
-      <description><![CDATA[When a Sev1 alert fires on an AKS cluster, detection is rarely the hard part. The hard part is what comes next: proving what broke, why it broke, and fixing it without widening the blast radius, all under time pressure, often at 2 a.m. Azure SRE Agent is designed to close that gap. It connects...]]></description>
-      <dc:creator><![CDATA[hailukassa]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 20:31:11 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
+      <link>https://techcommunity.microsoft.com/blog/appsonazureblog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert-to-verified-rec/4511343</link>
+      <guid>https://techcommunity.microsoft.com/blog/appsonazureblog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert-to-verified-rec/4511343</guid>
+      <description><![CDATA[When a Sev1 alert fires on an AKS cluster, detection is rarely the hard part. The hard part is what comes next: proving what broke, why it broke, and fixing it without widening the blast radius, all ...Update Type: Announcement, Services: Kubernetes Service, SRE Agent, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 17 Apr 2026 20:31:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Retirement: Azure Functions runtime v3 on Linux Consumption will stop running September 30, 2026]]></title>
@@ -330,132 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Thu, 16 Apr 2026 16:08:00 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[App attach in Azure Virtual Desktop now supports Windows Server 2025 and Windows Server 2022]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/app-attach-in-azure-virtual-desktop-now-supports-windows-server/ba-p/4511729</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/app-attach-in-azure-virtual-desktop-now-supports-windows-server/ba-p/4511729</guid>
-      <description><![CDATA[Managing applications in virtualized desktop and server environments has traditionally required IT teams to bake apps directly into base images, driving image sprawl, slower updates, and higher operational overhead. App attach in Azure Virtual Desktop changes that model by enabling applications to...]]></description>
-      <dc:creator><![CDATA[Michelle_Moya]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 16:00:12 GMT</pubDate>
-      <category><![CDATA[Azure Virtual Desktop]]></category>
-    </item>
-    <item>
-      <title><![CDATA[From AI to .NET: 20 VS Live! Las Vegas Sessions You Can Watch Now]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/from-ai-to-net-20-vs-live-las-vegas-sessions-you-can-watch-now/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/from-ai-to-net-20-vs-live-las-vegas-sessions-you-can-watch-now/</guid>
-      <description><![CDATA[In March 2026, developers came together at VS Live! Las Vegas for a full week of technical learning, hands-on exploration, and a lot of great conversations about where software development is headed next. From AI-assisted development to modern .NET, cloud-native apps, and developer productivity,...]]></description>
-      <dc:creator><![CDATA[Jim Harrer]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 15:00:04 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[SQL Server enabled by Azure Arc Overview]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/sql-server-enabled-by-azure-arc-overview/ba-p/4496399</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/sql-server-enabled-by-azure-arc-overview/ba-p/4496399</guid>
-      <description><![CDATA[Table of Contents What is Azure Arc-enabled SQL Server? Connecting SQL Server to Azure Arc (4-step onboarding) Your SQL Server is Now in Azure (unified management) SQL Best Practices Assessment Monitoring and Governance Troubleshooting Guide Azure Arc Demo What You Can Learn from This Article This...]]></description>
-      <dc:creator><![CDATA[NaufalPrawironegoro]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 15:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
-    </item>
-    <item>
-      <title><![CDATA[How Granular Delegated Admin Privileges (GDAP) allows Sentinel customers to delegate access]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-granular-delegated-admin-privileges-gdap-allows-sentinel/ba-p/4503123</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-granular-delegated-admin-privileges-gdap-allows-sentinel/ba-p/4503123</guid>
-      <description><![CDATA[Simplifying Defender SIEM and XDR delegated access As Microsoft Sentinel and Defender converge into a unified experience, organizations face a fundamental challenge: the lack of a scalable, comprehensive, delegated access model that works seamlessly across Entra ID and Sentinel’s Azure Resource...]]></description>
-      <dc:creator><![CDATA[Yossi Basha]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 14:40:52 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Give your AI agent the keys to OneLake: OneLake MCP]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/give-your-ai-agent-the-keys-to-onelake-onelake-mcp-generally-available/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/give-your-ai-agent-the-keys-to-onelake-onelake-mcp-generally-available/</guid>
-      <description><![CDATA[Have you ever tried to understand what’s stored in your Fabric items? Would you even know where to begin? I had 92,000 UK property transactions sitting in an open mirrored database. Rather than spending hours sorting through documentation, I just asked my AI agent: “Document what’s in the House...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 10:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Architecting Secure and Trustworthy AI Agents with Microsoft Foundry]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/architecting-secure-and-trustworthy-ai-agents-with-microsoft/ba-p/4506580</guid>
-      <description><![CDATA[Co-Authored by Avneesh Kaushik Why Trust Matters for AI Agents Unlike static ML models, AI agents call tools and APIs, retrieve enterprise data, generate dynamic outputs, and can act autonomously based on their planning. This introduces expanded risk surfaces: prompt injection, data exfiltration,...]]></description>
-      <dc:creator><![CDATA[PrabhKaur]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 09:30:30 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Answers to common questions about Fabric Data Factory]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/answers-to-common-questions-about-fabric-data-factory/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/answers-to-common-questions-about-fabric-data-factory/</guid>
-      <description><![CDATA[As the Data Integration Customer Advisory Team (CAT) lead, I spent a lot of time talking to customers at the recent FabCon/SQLCon about Fabric Data Factory, and I came away with a clear picture of what’s on customers’ minds when it comes to the future of data integration. Many of the same questions...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 09:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing One‑Command Backup Configuration for AKS with Azure Backup]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-one-command-backup-configuration-for-aks-with-azure/ba-p/4511852</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-one-command-backup-configuration-for-aks-with-azure/ba-p/4511852</guid>
-      <description><![CDATA[Running production workloads on Azure Kubernetes Service (AKS) is becoming the norm for platform teams building cloud‑native applications at scale. As these environments increasingly host stateful workloads using persistent volumes, ensuring data protection and rapid recovery becomes...]]></description>
-      <dc:creator><![CDATA[shobhitgarg]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 07:50:59 GMT</pubDate>
-      <category><![CDATA[Governance & Management]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Managing Multi‑Tenant Azure Resource with SRE Agent and Lighthouse]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/managing-multi-tenant-azure-resource-with-sre-agent-and/ba-p/4511789</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/managing-multi-tenant-azure-resource-with-sre-agent-and/ba-p/4511789</guid>
-      <description><![CDATA[Azure SRE Agent is an AI‑powered reliability assistant that helps teams diagnose and resolve production issues faster while reducing operational toil. It analyzes logs, metrics, alerts, and deployment data to perform root cause analysis and recommend or execute mitigations with human approval. It’s...]]></description>
-      <dc:creator><![CDATA[Pranab_Mandal]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 04:58:53 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Using an AI Agent to Troubleshoot and Fix Azure Function App Issues]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/using-an-ai-agent-to-troubleshoot-and-fix-azure-function-app/ba-p/4511781</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/using-an-ai-agent-to-troubleshoot-and-fix-azure-function-app/ba-p/4511781</guid>
-      <description><![CDATA[TOC Preparation Troubleshooting Workflow Conclusion Preparation Topic: Required tools AI agent: for example, Copilot CLI / OpenCode / Hermes / OpenClaw, etc. In this example, we use Copilot CLI. Model access: for example, Anthropic Claude Opus. Relevant skills: this example does not use skills, but...]]></description>
-      <dc:creator><![CDATA[theringe]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 03:11:32 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Production Cutover in Cloud-Native Migrations]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-migration-and/production-cutover-in-cloud-native-migrations/ba-p/4509924</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-migration-and/production-cutover-in-cloud-native-migrations/ba-p/4509924</guid>
-      <description><![CDATA[Migration Planning vs Runtime Reality Migration to container orchestration platforms such as Azure Kubernetes Service (AKS) typically involves: Containerizing application workloads Configuring cluster networking Migrating data to managed storage services Updating application integrations Validating...]]></description>
-      <dc:creator><![CDATA[dhruti]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 00:05:46 GMT</pubDate>
-      <category><![CDATA[Azure Migration]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Databricks Delta Sharing: Enabling Cost Efficient Cross Cloud Data Access]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/databricks-delta-sharing-enabling-cost-efficient-cross-cloud/ba-p/4511400</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/databricks-delta-sharing-enabling-cost-efficient-cross-cloud/ba-p/4511400</guid>
-      <description><![CDATA[What Is Delta Sharing? Delta sharing is an open protocol for secure data sharing that allows organizations to share live data stored in Delta Lake with external consumers—across cloud providers such as Azure, AWS, and Google Cloud—while keeping the data in its original location. Consumers access...]]></description>
-      <dc:creator><![CDATA[kirankumar_manchiwar04]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 00:00:42 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Dissecting LLM Container Cold-Start: Where the Time Actually Goes]]></title>
-      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</link>
-      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</guid>
-      <description><![CDATA[Cold-start latency determines whether GPU clusters can scale to zero, how fast they can autoscale, and whether bursty or low-QPS workloads are economically viable. Most optimization effort targets the container pull path – faster registries, lazy-pull snapshotters, different compression formats....]]></description>
-      <dc:creator><![CDATA[robcronin]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 22:38:11 GMT</pubDate>
-      <category><![CDATA[Linux & Open Source]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Enforce Cost Limits on KQL Queries and Notebooks in the Microsoft Sentinel Data Lake]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/enforce-cost-limits-on-kql-queries-and-notebooks-in-the/ba-p/4511329</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/enforce-cost-limits-on-kql-queries-and-notebooks-in-the/ba-p/4511329</guid>
-      <description><![CDATA[Security teams face a constant tension: run the advanced analytics you need to stay ahead of threats, or hold back to keep costs predictable. Until now, Microsoft Sentinel let you set alerts to get notified when data lake usage approached a threshold — useful for awareness, but not enough to...]]></description>
-      <dc:creator><![CDATA[shubh_khandhadia]]></dc:creator>
-      <pubDate>Wed, 15 Apr 2026 20:26:56 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
     </item>
   </channel>
 </rss>
