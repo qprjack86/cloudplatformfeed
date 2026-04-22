@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 22 Apr 2026 12:03:01 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 16:02:21 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Understanding the Standard HDD I/O unit size update and what it means for your workloads]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-the-standard-hdd-i-o-unit-size-update-and-what-it/ba-p/4499128</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-the-standard-hdd-i-o-unit-size-update-and-what-it/ba-p/4499128</guid>
+      <description><![CDATA[As Azure continues to evolve to support modern workload patterns, we are refining how transactions are measured for Standard HDD Managed Disks. This update helps align billing more closely with actual I/O behavior while maintaining predictable cost controls for customers. In this post, we’ll walk...]]></description>
+      <dc:creator><![CDATA[austin-ma]]></dc:creator>
+      <pubDate>Wed, 22 Apr 2026 15:18:03 GMT</pubDate>
+      <category><![CDATA[Azure Storage]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Introducing the Microsoft Sentinel Training Lab. Hands-On Security Operations in Minutes]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274</guid>
+      <description><![CDATA[A huge thanks to Paul Kew - this lab wouldn't have been possible without his contributions. Security operations is one of those things that’s hard to learn from slides alone. You need to feel what it’s like to triage a multi-stage incident, tune a noisy detection rule, or trace an attacker pivoting...]]></description>
+      <dc:creator><![CDATA[AndreasKapetaniou]]></dc:creator>
+      <pubDate>Wed, 22 Apr 2026 14:45:14 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Actual Result for Manual Tests in Azure Test Plans]]></title>
+      <link>https://devblogs.microsoft.com/devops/actual-result-azure-test-plans/</link>
+      <guid>https://devblogs.microsoft.com/devops/actual-result-azure-test-plans/</guid>
+      <description><![CDATA[We’re excited to announce the public preview of the highly anticipated Actual Result (AR) feature for manual testing in Azure Test Plans! This feature has been one of the top requests of the community, and we’re thrilled to make it available for you. Why use the Actual Result feature? Manual...]]></description>
+      <dc:creator><![CDATA[Panagiotis Liaros]]></dc:creator>
+      <pubDate>Wed, 22 Apr 2026 14:35:35 GMT</pubDate>
+      <category><![CDATA[Azure DevOps Blog]]></category>
+    </item>
     <item>
       <title><![CDATA[If You're Building AI on Azure, ECS 2026 is Where You Need to Be]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/if-you-re-building-ai-on-azure-ecs-2026-is-where-you-need-to-be/ba-p/4513622</link>
@@ -428,33 +455,6 @@
       <description><![CDATA[Azure Databricks now supports Anthropic Claude Opus 4.7 through Azure Databricks AI Model Serving. Claude Opus 4.7 is Anthropic's most capable hybrid reasoning model, delivering stronger performance on complex extraction and agentic reasoning tasks while using fewer output tokens than its...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Fri, 17 Apr 2026 21:30:12 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Anthropic Claude Opus 4.7 on Azure Databricks]]></title>
-      <link>https://azure.microsoft.com/updates?id=560590</link>
-      <guid>https://azure.microsoft.com/updates?id=560590</guid>
-      <description><![CDATA[Azure Databricks now supports Anthropic Claude Opus 4.7 through Azure Databricks AI Model Serving. Claude Opus 4.7 is Anthropic's most capable hybrid reasoning model, delivering stronger performance on complex extraction and agentic reasoning tasks whileUpdate Type: GA, Services: Databricks,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 21:30:12 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Autonomous AKS Incident Response with Azure SRE Agent: From Alert to Verified Recovery in Minutes]]></title>
-      <link>https://techcommunity.microsoft.com/blog/appsonazureblog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert-to-verified-rec/4511343</link>
-      <guid>https://techcommunity.microsoft.com/blog/appsonazureblog/autonomous-aks-incident-response-with-azure-sre-agent-from-alert-to-verified-rec/4511343</guid>
-      <description><![CDATA[When a Sev1 alert fires on an AKS cluster, detection is rarely the hard part. The hard part is what comes next: proving what broke, why it broke, and fixing it without widening the blast radius, all ...Update Type: Announcement, Services: Kubernetes Service, SRE Agent, Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 20:31:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: Azure Functions runtime v3 on Linux Consumption will stop running September 30, 2026]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/559311/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/559311/</guid>
-      <description><![CDATA[Azure Functions runtime v3 was retired on December 13, 2022. As part of ongoing efforts to reduce reliance on legacy infrastructure and focus investments on supported platforms, Azure will enforce this retirement for Linux Consumption–based Function Apps still running runtime v3. After September...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 19:00:12 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
     </item>
   </channel>
