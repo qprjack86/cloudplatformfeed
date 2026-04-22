@@ -4,9 +4,144 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Tue, 21 Apr 2026 16:04:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 08:28:36 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[If You're Building AI on Azure, ECS 2026 is Where You Need to Be]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/if-you-re-building-ai-on-azure-ecs-2026-is-where-you-need-to-be/ba-p/4513622</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/if-you-re-building-ai-on-azure-ecs-2026-is-where-you-need-to-be/ba-p/4513622</guid>
+      <description><![CDATA[Let me be direct: there's a lot of noise in the conference calendar. Generic cloud events. Vendor showcases dressed up as technical content. Sessions that look great on paper but leave you with nothing you can actually ship on Monday. ECS 2026 isn't that. As someone who will be on stage at Cologne...]]></description>
+      <dc:creator><![CDATA[Lee_Stott]]></dc:creator>
+      <pubDate>Wed, 22 Apr 2026 08:18:56 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[NFS Permission Denied in Azure App Service on Linux: What It Means and What to Do]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/nfs-permission-denied-in-azure-app-service-on-linux-what-it/ba-p/4513627</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/nfs-permission-denied-in-azure-app-service-on-linux-what-it/ba-p/4513627</guid>
+      <description><![CDATA[If your Azure App Service on Linux uses an Azure Files NFS share, you may sometimes see errors like Permission denied or Errno 13 when your app tries to write to the mounted path. Azure Files supports NFS for Linux and Unix workloads, and NFS uses Unix-style numeric ownership and permissions...]]></description>
+      <dc:creator><![CDATA[michelleyau]]></dc:creator>
+      <pubDate>Wed, 22 Apr 2026 07:31:52 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[General Availability Refresh: Mirroring Azure Database for PostgreSQL in Microsoft Fabric]]></title>
+      <link>https://techcommunity.microsoft.com/blog/adforpostgresql/general-availability-refresh-mirroring-azure-database-for-postgresql-in-microsof/4511726</link>
+      <guid>https://techcommunity.microsoft.com/blog/adforpostgresql/general-availability-refresh-mirroring-azure-database-for-postgresql-in-microsof/4511726</guid>
+      <description><![CDATA[Introduction We are excited to announce the General Availability Refresh of Mirroring Azure Database for PostgreSQL in Microsoft Fabric. This update introduces several new capabilities designed to ...Update Type: GA, Services: Microsoft Fabric, Database for PostgreSQL, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 22 Apr 2026 07:21:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Getting Started with the SUSE Multi-Linux Manager MCP Server and GitHub Copilot]]></title>
+      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/getting-started-with-the-suse-multi-linux-manager-mcp-server-and/ba-p/4513494</link>
+      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/getting-started-with-the-suse-multi-linux-manager-mcp-server-and/ba-p/4513494</guid>
+      <description><![CDATA[Enterprise Linux environments are heterogeneous. That's not a problem statement - it's just the truth. SUSE, Ubuntu, RHEL, and their downstream variants coexist in every data center I've seen, and increasingly across Azure subscriptions too. AI assistants like GitHub Copilot can already connect to...]]></description>
+      <dc:creator><![CDATA[abbottkarl]]></dc:creator>
+      <pubDate>Wed, 22 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Linux & Open Source]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure SDK Release (April 2026)]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2026/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2026/</guid>
+      <description><![CDATA[Azure SDK releases every month. In this post, you'll find this month's highlights and release notes. The post Azure SDK Release (April 2026) appeared first on Azure SDK Blog.]]></description>
+      <dc:creator><![CDATA[Ronnie Geraghty]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 23:13:33 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Ingest at Scale, Securely — Azure Monitor pipeline Is Now Generally Available]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-observability-blog/ingest-at-scale-securely-azure-monitor-pipeline-is-now-generally/ba-p/4510379</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-observability-blog/ingest-at-scale-securely-azure-monitor-pipeline-is-now-generally/ba-p/4510379</guid>
+      <description><![CDATA[Today, we're thrilled to announce the general availability of Azure Monitor pipeline — a telemetry pipeline built for secure, high-scale ingestion across any environment. But the best way to understand what makes it powerful isn't to start with features. It's to start with the problems that kept...]]></description>
+      <dc:creator><![CDATA[XemaPathak]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 20:51:13 GMT</pubDate>
+      <category><![CDATA[Azure Observability]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Azure Monitor pipeline]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/559886/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/559886/</guid>
+      <description><![CDATA[Azure Monitor pipeline is now generally available.Azure Monitor pipeline provides a centralized control point for telemetry ingestion and transformation, designed specifically for secure, high‑throughput, enterprise‑scale scenarios. It's built on open-source technologies from the OpenTelemetry...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 20:30:49 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Monitor pipeline]]></title>
+      <link>https://azure.microsoft.com/updates?id=559886</link>
+      <guid>https://azure.microsoft.com/updates?id=559886</guid>
+      <description><![CDATA[Azure Monitor pipeline is now generally available.Azure Monitor pipeline provides a centralized control point for telemetry ingestion and transformation, designed specifically for secure, high‑throughput, enterprise‑scale scenarios. It's built on open-souUpdate Type: GA, Services: Azure Monitor,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 20:30:49 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[The Polyglot tax – Part 4]]></title>
+      <link>https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-4/</link>
+      <guid>https://devblogs.microsoft.com/azure-sql/the-polyglot-tax-part-4/</guid>
+      <description><![CDATA[The Agent-Ready Database: Security, Backup, and MCP Part 4 of 4 – The Multi-Model Database Series This is the final post in a four-part series on multi-model databases in SQL Server 2025 and Azure SQL – exploring how the optimizer, storage engine, and security layer treat each data model as a...]]></description>
+      <dc:creator><![CDATA[Aditya Badramraju]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 18:52:07 GMT</pubDate>
+      <category><![CDATA[Azure SQL Dev Corner]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Azure NetApp Files advanced ransomware protection]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560188/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560188/</guid>
+      <description><![CDATA[Azure NetApp Files advanced ransomware protection (ANF ARP) is now in GA (General Availability). ANF ARP is designed to help organizations proactively detect, respond to, and recover from ransomware threats on cloud volumes. ANF ARP monitors Azure NetApp Files volumes for suspicious activity using...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 18:15:14 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Transition to Entra ID (formerly known as Azure AD) to query data from Azure Monitor application insights by September 30, 2026]]></title>
+      <link>https://azure.microsoft.com/updates?id=transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026</link>
+      <guid>https://azure.microsoft.com/updates?id=transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026</guid>
+      <description><![CDATA[*Note: Previously announced to be retired March 31, 2026. We have extended the retirement date to September 30, 2026. On September 30, 2026, API keys used query application insights will be retired. ou'll need to transition to Microsoft Entra ID (formerl [Sevice: Microsoft Entra ID, Target Date: 01...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 18:15:14 GMT</pubDate>
+      <category><![CDATA[Azure Deprecations (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure NetApp Files advanced ransomware protection]]></title>
+      <link>https://azure.microsoft.com/updates?id=560188</link>
+      <guid>https://azure.microsoft.com/updates?id=560188</guid>
+      <description><![CDATA[Azure NetApp Files advanced ransomware protection (ANF ARP) is now in GA (General Availability). ANF ARP is designed to help organizations proactively detect, respond to, and recover from ransomware threats on cloud volumes. ANF ARP monitors Azure NetAppUpdate Type: GA, Services: Azure NetApp...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 18:15:14 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[I Wasted 68 Minutes a Day Re-Explaining My Code. Then I Built auto-memory.]]></title>
+      <link>https://devblogs.microsoft.com/all-things-azure/i-wasted-68-minutes-a-day-re-explaining-my-code-then-i-built-auto-memory/</link>
+      <guid>https://devblogs.microsoft.com/all-things-azure/i-wasted-68-minutes-a-day-re-explaining-my-code-then-i-built-auto-memory/</guid>
+      <description><![CDATA[~1,900 lines of Python. Zero dependencies. Saves you an hour a day. GitHub → · pip install auto-memory Now give Copilot CLI enhanced context recall. Point it at deploy/install.md and let it cook. 🍳 Are you tired of using the slash /compact command every 10 min? The Context Window Is a Lie Every AI...]]></description>
+      <dc:creator><![CDATA[Desi Villanueva]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 18:06:24 GMT</pubDate>
+      <category><![CDATA[All Things Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[General Availability: Dynamic Data Masking for Azure Cosmos DB]]></title>
+      <link>https://devblogs.microsoft.com/cosmosdb/general-availability-dynamic-data-masking-for-azure-cosmos-db/</link>
+      <guid>https://devblogs.microsoft.com/cosmosdb/general-availability-dynamic-data-masking-for-azure-cosmos-db/</guid>
+      <description><![CDATA[Protecting sensitive data is a foundational requirement for modern applications. As organizations scale their use of Azure Cosmos DB across teams, environments, and workloads, controlling who can see sensitive information becomes increasingly important. Today, we are excited to announce the general...]]></description>
+      <dc:creator><![CDATA[Sudhanshu Khera]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 17:00:14 GMT</pubDate>
+      <category><![CDATA[Azure Cosmos DB Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Aspire 13.2: Bun Support and Container Enhancements]]></title>
+      <link>https://devblogs.microsoft.com/aspire/aspire-bun-support-and-container-enhancements/</link>
+      <guid>https://devblogs.microsoft.com/aspire/aspire-bun-support-and-container-enhancements/</guid>
+      <description><![CDATA[Aspire 13.2 keeps the JavaScript story moving with Bun for Vite, more predictable containers, and small but meaningful fixes across debugging and builds. The post Aspire 13.2: Bun Support and Container Enhancements appeared first on Aspire Blog.]]></description>
+      <dc:creator><![CDATA[David Pine]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 17:00:00 GMT</pubDate>
+      <category><![CDATA[Aspire Blog]]></category>
+    </item>
     <item>
       <title><![CDATA[Announcing public preview of redundant TCP support for RDP Multipath for Azure Virtual Desktop]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-public-preview-of-redundant-tcp-support-for-rdp/ba-p/4511241</link>
@@ -24,6 +159,15 @@
       <dc:creator><![CDATA[Dan Hellem]]></dc:creator>
       <pubDate>Tue, 21 Apr 2026 14:12:23 GMT</pubDate>
       <category><![CDATA[Azure DevOps Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Agentic Fabric: How MCP is turning your data platform into an AI-native operating system]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/agentic-fabric-how-mcp-is-turning-your-data-platform-into-an-ai-native-operating-system/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/agentic-fabric-how-mcp-is-turning-your-data-platform-into-an-ai-native-operating-system/</guid>
+      <description><![CDATA[Something fundamental is changing in how developers interact with data platforms. Not a feature update, not a UI refresh, but a shift in the interface itself.Update Type: Announcement, Services: Microsoft Fabric, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 14:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Getting Started with Agentic DevOps – Part 1: Foundations]]></title>
@@ -96,6 +240,15 @@
       <dc:creator><![CDATA[Kristen Womack]]></dc:creator>
       <pubDate>Tue, 21 Apr 2026 00:38:49 GMT</pubDate>
       <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Introducing Azure Accelerate for Databases: Modernize your data for AI with experts and investments]]></title>
+      <link>https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-for-databases-modernize-your-data-for-ai-with-experts-and-investments</link>
+      <guid>https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-for-databases-modernize-your-data-for-ai-with-experts-and-investments</guid>
+      <description><![CDATA[Introducing Azure Accelerate for Databases: Modernize your data for AI with experts and investments Azure Accelerate for Databases helps organizations modernize their databases and build AI-ready capabilities.Update Type: Announcement, Services: SQL Database, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Troubleshoot with OpenTelemetry in Azure Monitor - Public Preview]]></title>
@@ -303,159 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Fri, 17 Apr 2026 19:00:12 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Functions runtime v3 on Linux Consumption will stop running September 30, 2026]]></title>
-      <link>https://azure.microsoft.com/updates?id=559311</link>
-      <guid>https://azure.microsoft.com/updates?id=559311</guid>
-      <description><![CDATA[Azure Functions runtime v3 was retired on December 13, 2022. As part of ongoing efforts to reduce reliance on legacy infrastructure and focus investments on supported platforms, Azure will enforce this retirement for Linux Consumption–based Function Apps [Sevice: Azure Functions, Target Date: 01...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 19:00:12 GMT</pubDate>
-      <category><![CDATA[Azure Deprecations (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Configure AKS backup using a single Azure CLI command]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560521/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560521/</guid>
-      <description><![CDATA[Azure Backup now provides a simplified experience to configure backup for Azure Kubernetes Service (AKS) clusters using a single Azure CLI command.Enabling backup for AKS clusters through CLI requires multiple manual steps, including installation of the Backup extension, provisioning of storage...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 17:15:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Configure AKS backup using a single Azure CLI command]]></title>
-      <link>https://azure.microsoft.com/updates?id=560521</link>
-      <guid>https://azure.microsoft.com/updates?id=560521</guid>
-      <description><![CDATA[Azure Backup now provides a simplified experience to configure backup for Azure Kubernetes Service (AKS) clusters using a single Azure CLI command.Enabling backup for AKS clusters through CLI requires multiple manual steps, including installation of the BUpdate Type: GA, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 17:15:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Bringing AI to the Factory Floor with Foundry Local - Now in Public Preview on Azure Local]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951</guid>
-      <description><![CDATA[Key capabilities in this preview Foundry Local exposes standard REST and OpenAI‑compatible APIs, enabling IT and AI teams to deploy and operate local AI workloads using familiar, cloud‑aligned patterns across edge and on‑prem environments. In this public preview, we deliver the following...]]></description>
-      <dc:creator><![CDATA[liranlyabock_microsoft]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 15:23:10 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
-    </item>
-    <item>
-      <title><![CDATA[⚡Foundry Toolkit for VS Code: A Deep Dive on GA]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-toolkit-for-vs-code-a-deep-dive-on-ga/ba-p/4509510</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-toolkit-for-vs-code-a-deep-dive-on-ga/ba-p/4509510</guid>
-      <description><![CDATA[As we shared in the announcement, Microsoft Foundry Toolkit for Visual Studio Code is now generally available. In this deep dive, we walk through everything that’s in the GA release — from the rebrand and extension consolidation, to model experimentation, agent development, evaluations, and...]]></description>
-      <dc:creator><![CDATA[junjieli]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 07:06:47 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[🏆 Agents League Winner Spotlight – Reasoning Agents Track]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-winner-spotlight-reasoning-agents-track/ba-p/4511211</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-winner-spotlight-reasoning-agents-track/ba-p/4511211</guid>
-      <description><![CDATA[Agents League was designed to showcase what agentic AI can look like when developers move beyond single‑prompt interactions and start building systems that plan, reason, verify, and collaborate. Across three competitive tracks—Creative Apps, Reasoning Agents, and Enterprise Agents—participants had...]]></description>
-      <dc:creator><![CDATA[carlottacaste]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[New in Azure SRE Agent: Log Analytics and Application Insights Connectors]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-in-azure-sre-agent-log-analytics-and-application-insights/ba-p/4509649</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-in-azure-sre-agent-log-analytics-and-application-insights/ba-p/4509649</guid>
-      <description><![CDATA[Azure SRE Agent now supports Log Analytics and Application Insights as log providers, backed by the Azure MCP Server. Connect your workspaces and App Insights resources, and the agent can query them directly during investigations. Why This Matters Log Analytics and Application Insights are common...]]></description>
-      <dc:creator><![CDATA[Dalibor_Kovacevic]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 02:14:28 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Event-Driven IaC Operations with Azure SRE Agent: Terraform Drift Detection via HTTP Triggers]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/event-driven-iac-operations-with-azure-sre-agent-terraform-drift/ba-p/4512233</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/event-driven-iac-operations-with-azure-sre-agent-terraform-drift/ba-p/4512233</guid>
-      <description><![CDATA[What Happens After terraform plan Finds Drift? If your team is like most, the answer looks something like this: A nightly terraform plan runs and finds 3 drifted resources A notification lands in Slack or Teams Someone files a ticket During the next sprint, an engineer opens 4 browser tabs —...]]></description>
-      <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 02:13:18 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Introducing the plugin marketplace for Azure API Center]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-the-plugin-marketplace-for-azure-api-center/ba-p/4512231</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-the-plugin-marketplace-for-azure-api-center/ba-p/4512231</guid>
-      <description><![CDATA[Today, we're excited to announce the public preview of the plugin marketplace endpoint for Azure API Center. This new capability makes it easier than ever for developers to discover and install AI plugins — including MCP servers and skills — directly from the tools they already use, like Claude...]]></description>
-      <dc:creator><![CDATA[Sreekanth_Thirthala]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 00:50:01 GMT</pubDate>
-      <category><![CDATA[Integrations on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Control AI spend with per-application token rate limiting using Application Network and agentgateway]]></title>
-      <link>https://blog.aks.azure.com/2026/04/17/appnet-agentgateway</link>
-      <guid>https://blog.aks.azure.com/2026/04/17/appnet-agentgateway</guid>
-      <description><![CDATA[Use Application Network identity and agentgateway to enforce per-application token rate limiting and control shared AI service spend on AKS.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate>
-      <category><![CDATA[AKS Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Best of Both Worlds for Agentic Refactoring: GitHub Copilot + MicroVMs via Docker Sandbox]]></title>
-      <link>https://devblogs.microsoft.com/all-things-azure/best-of-both-worlds-for-agentic-refactoring-github-copilot-microvms-via-docker-sandbox/</link>
-      <guid>https://devblogs.microsoft.com/all-things-azure/best-of-both-worlds-for-agentic-refactoring-github-copilot-microvms-via-docker-sandbox/</guid>
-      <description><![CDATA[Legacy codebases frequently contain hardcoded logic and complex build scripts that depend on specific filesystem structures, making them notoriously difficult to modernize in isolated environments. Docker Sandbox addresses this challenge through a bidirectional workspace sync that preserves the...]]></description>
-      <dc:creator><![CDATA[cindywang]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 22:09:53 GMT</pubDate>
-      <category><![CDATA[All Things Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Explaining what GitHub Copilot Modernization can (and cannot do)]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/explaining-what-github-copilot-modernization-can-and-cannot-do/ba-p/4511739</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/explaining-what-github-copilot-modernization-can-and-cannot-do/ba-p/4511739</guid>
-      <description><![CDATA[In the last post, we looked at the workflow: assess, plan, execute. You get reports you can review and the agent makes changes you can inspect. If you don’t know, GitHub Copilot Modernization is the new agentic tool that supports you to in modernizing older applications. Could it support you with...]]></description>
-      <dc:creator><![CDATA[PabloLopes]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 21:45:41 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Introducing the Container Network Insights Agent for AKS: Now in Public Preview]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-the-container-network-insights-agent-for-aks-now-in/ba-p/4512197</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-the-container-network-insights-agent-for-aks-now-in/ba-p/4512197</guid>
-      <description><![CDATA[We are thrilled to announce public preview of Container Network Insights Agent - Agentic AI network troubleshooting for your workloads running in Azure Kubernetes Service (AKS). The Challenge AKS networking is layered by design. Azure CNI, eBPF, Cilium, CoreDNS, NetworkPolicy, CiliumNetworkPolicy,...]]></description>
-      <dc:creator><![CDATA[chandanAggarwal]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 21:05:45 GMT</pubDate>
-      <category><![CDATA[Azure Networking]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: Azure Kubernetes Service support for Ubuntu 22.04]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/557928/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/557928/</guid>
-      <description><![CDATA[On June 30, 2027, we'll retire Ubuntu 22.04 on Azure Kubernetes Service. To avoid disruptions, transition to Ubuntu 24.04 or later by that date. Newer supported versions include kernel updates and security improvements. Until June 30, 2027, you can continue to use Ubuntu 22.04 on AKS without...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 20:30:13 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Kubernetes Service support for Ubuntu 22.04]]></title>
-      <link>https://azure.microsoft.com/updates?id=557928</link>
-      <guid>https://azure.microsoft.com/updates?id=557928</guid>
-      <description><![CDATA[On June 30, 2027, we'll retire Ubuntu 22.04 on Azure Kubernetes Service. To avoid disruptions, transition to Ubuntu 24.04 or later by that date. Newer supported versions include kernel updates and security improvements. Until June 30, 2027, you can cont [Sevice: Kubernetes Service, Target Date: 01...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 20:30:13 GMT</pubDate>
-      <category><![CDATA[Azure Deprecations (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft Foundry Toolkit for VS Code is Now Generally Available]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-foundry-toolkit-for-vs-code-is-now-generally-available/ba-p/4511831</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-foundry-toolkit-for-vs-code-is-now-generally-available/ba-p/4511831</guid>
-      <description><![CDATA[We are thrilled to announce that the Microsoft Foundry Toolkit for VS Code, formerly AI Toolkit, is now Generally Available (GA)! From first model prompt to production‑grade AI agents, Foundry Toolkit lets you build, debug, and ship AI end to end without ever leaving VS Code. Same Product. New...]]></description>
-      <dc:creator><![CDATA[junjieli]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 19:55:38 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[What’s New in Microsoft Foundry Fine-Tuning | April 2026]]></title>
-      <link>https://devblogs.microsoft.com/foundry/whats-new-in-foundry-finetune-april-2026/</link>
-      <guid>https://devblogs.microsoft.com/foundry/whats-new-in-foundry-finetune-april-2026/</guid>
-      <description><![CDATA[April 2026 brings three major Reinforcement Fine-Tuning updates: Global Training for o4-mini with lower per-token rates across 12+ regions, new GPT-4.1 model graders for richer reward signals, and a comprehensive RFT best practices guide to help you ship specialized models faster. The post What’s...]]></description>
-      <dc:creator><![CDATA[Blanca Li]]></dc:creator>
-      <pubDate>Thu, 16 Apr 2026 19:34:46 GMT</pubDate>
-      <category><![CDATA[Microsoft Foundry Blog]]></category>
     </item>
   </channel>
 </rss>
