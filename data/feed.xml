@@ -4,9 +4,27 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 23 Apr 2026 12:02:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 16:25:37 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Microsoft 365 multi-agent workflow with Microsoft Agent Framework]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-365-multi-agent-workflow-with-microsoft-agent/ba-p/4514164</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-365-multi-agent-workflow-with-microsoft-agent/ba-p/4514164</guid>
+      <description><![CDATA[Most production AI tasks are too complex for a single agent. You need specialists that collaborate, a destination expert that researches the best places to visit, a budget analyst that breaks down costs, an activities curator that finds the best experiences, all coordinated by an orchestration...]]></description>
+      <dc:creator><![CDATA[vgiraud]]></dc:creator>
+      <pubDate>Thu, 23 Apr 2026 16:16:15 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[From Oversharing to Enforcement: A Practical Guide to AI Data Security with Microsoft Purview]]></title>
+      <link>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/from-oversharing-to-enforcement-a-practical-guide-to-ai-data-security-with-micro/4513727</link>
+      <guid>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/from-oversharing-to-enforcement-a-practical-guide-to-ai-data-security-with-micro/4513727</guid>
+      <description><![CDATA[Why AI Changed the Data Security Problem AI does not create entirely new categories of risk—it supercharges existing ones. Traditional data leakage stems from ordinary behavior: sharing a document ...Update Type: Announcement, Services: Azure Purview, Categories: Security]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 23 Apr 2026 14:58:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
     <item>
       <title><![CDATA[Azure Monitor Pipeline: A Modern Approach to Telemetry Ingestion at Scale]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-monitor-pipeline-a-modern-approach-to-telemetry-ingestion/ba-p/4513980</link>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 21 Apr 2026 18:15:14 GMT</pubDate>
       <category><![CDATA[Azure Deprecations (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure NetApp Files advanced ransomware protection]]></title>
-      <link>https://azure.microsoft.com/updates?id=560188</link>
-      <guid>https://azure.microsoft.com/updates?id=560188</guid>
-      <description><![CDATA[Azure NetApp Files advanced ransomware protection (ANF ARP) is now in GA (General Availability). ANF ARP is designed to help organizations proactively detect, respond to, and recover from ransomware threats on cloud volumes. ANF ARP monitors Azure NetAppUpdate Type: GA, Services: Azure NetApp...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 21 Apr 2026 18:15:14 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[I Wasted 68 Minutes a Day Re-Explaining My Code. Then I Built auto-memory.]]></title>
-      <link>https://devblogs.microsoft.com/all-things-azure/i-wasted-68-minutes-a-day-re-explaining-my-code-then-i-built-auto-memory/</link>
-      <guid>https://devblogs.microsoft.com/all-things-azure/i-wasted-68-minutes-a-day-re-explaining-my-code-then-i-built-auto-memory/</guid>
-      <description><![CDATA[~1,900 lines of Python. Zero dependencies. Saves you an hour a day. GitHub → · pip install auto-memory Now give Copilot CLI enhanced context recall. Point it at deploy/install.md and let it cook. 🍳 Are you tired of using the slash /compact command every 10 min? The Context Window Is a Lie Every AI...]]></description>
-      <dc:creator><![CDATA[Desi Villanueva]]></dc:creator>
-      <pubDate>Tue, 21 Apr 2026 18:06:24 GMT</pubDate>
-      <category><![CDATA[All Things Azure]]></category>
     </item>
   </channel>
 </rss>
