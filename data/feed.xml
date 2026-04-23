@@ -4,9 +4,27 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 23 Apr 2026 08:51:42 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 12:02:46 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Azure Monitor Pipeline: A Modern Approach to Telemetry Ingestion at Scale]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-monitor-pipeline-a-modern-approach-to-telemetry-ingestion/ba-p/4513980</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-monitor-pipeline-a-modern-approach-to-telemetry-ingestion/ba-p/4513980</guid>
+      <description><![CDATA[Large-scale observability often fails not because of analytics, but because of ingestion. As environments grow—across regions, clouds, and on‑premises sites—traditional log forwarding architectures struggle with scale, reliability, cost, and security. Azure Monitor Pipeline, now generally...]]></description>
+      <dc:creator><![CDATA[adityakumar60]]></dc:creator>
+      <pubDate>Thu, 23 Apr 2026 10:23:43 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[How AI Agents Are Turning Threat Intelligence Into Validated Detections]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-ai-agents-are-turning-threat-intelligence-into-validated/ba-p/4513971</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-ai-agents-are-turning-threat-intelligence-into-validated/ba-p/4513971</guid>
+      <description><![CDATA[The promise of AI-assisted cybersecurity has long been hampered by a fundamental measurement problem: how do organizations validate whether an AI agent can actually perform the complex, multi-step work that security analysts do every day? Traditional benchmarks test whether models can recall MITRE...]]></description>
+      <dc:creator><![CDATA[adityakumar60]]></dc:creator>
+      <pubDate>Thu, 23 Apr 2026 10:10:04 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[Introducing the Microsoft Sentinel Training Lab. Hands-On Security Operations in Minutes]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274</link>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[Desi Villanueva]]></dc:creator>
       <pubDate>Tue, 21 Apr 2026 18:06:24 GMT</pubDate>
       <category><![CDATA[All Things Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[General Availability: Dynamic Data Masking for Azure Cosmos DB]]></title>
-      <link>https://devblogs.microsoft.com/cosmosdb/general-availability-dynamic-data-masking-for-azure-cosmos-db/</link>
-      <guid>https://devblogs.microsoft.com/cosmosdb/general-availability-dynamic-data-masking-for-azure-cosmos-db/</guid>
-      <description><![CDATA[Protecting sensitive data is a foundational requirement for modern applications. As organizations scale their use of Azure Cosmos DB across teams, environments, and workloads, controlling who can see sensitive information becomes increasingly important. Today, we are excited to announce the general...]]></description>
-      <dc:creator><![CDATA[Sudhanshu Khera]]></dc:creator>
-      <pubDate>Tue, 21 Apr 2026 17:00:14 GMT</pubDate>
-      <category><![CDATA[Azure Cosmos DB Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Aspire 13.2: Bun Support and Container Enhancements]]></title>
-      <link>https://devblogs.microsoft.com/aspire/aspire-bun-support-and-container-enhancements/</link>
-      <guid>https://devblogs.microsoft.com/aspire/aspire-bun-support-and-container-enhancements/</guid>
-      <description><![CDATA[Aspire 13.2 keeps the JavaScript story moving with Bun for Vite, more predictable containers, and small but meaningful fixes across debugging and builds. The post Aspire 13.2: Bun Support and Container Enhancements appeared first on Aspire Blog.]]></description>
-      <dc:creator><![CDATA[David Pine]]></dc:creator>
-      <pubDate>Tue, 21 Apr 2026 17:00:00 GMT</pubDate>
-      <category><![CDATA[Aspire Blog]]></category>
     </item>
   </channel>
 </rss>
