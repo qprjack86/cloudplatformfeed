@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 24 Apr 2026 12:01:20 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 15:58:25 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -101,10 +101,10 @@
       <title><![CDATA[Azure MCP Server now available as an MCP Bundle (.mcpb)]]></title>
       <link>https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-mcpb-support/</link>
       <guid>https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-mcpb-support/</guid>
-      <description><![CDATA[Azure MCP Server is now available as an MCP Bundle (.mcpb), enabling one-click installation into Claude Desktop and other MCP-compatible clients. The post Azure MCP Server now available as an MCP Bundle (.mcpb) appeared first on Azure SDK Blog.]]></description>
-      <dc:creator><![CDATA[Victor Colin Amador]]></dc:creator>
+      <description><![CDATA[Azure MCP Server is now available as an MCP Bundle (.mcpb), enabling one-click installation into Claude Desktop and other MCP-compatible clients. The post Azure MCP Server now available as an MCP Bundle (.mcpb) appeared first on Azure SDK Blog.Update Type: Announcement, Services: , Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Thu, 23 Apr 2026 20:56:27 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Generally Available: Capacity Autoscaling]]></title>
