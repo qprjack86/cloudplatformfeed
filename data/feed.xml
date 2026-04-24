@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 24 Apr 2026 08:58:49 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2026 12:01:20 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Axios npm Supply Chain Compromise – Guidance for Azure Pipelines Customers]]></title>
+      <link>https://devblogs.microsoft.com/devops/axios-npm-supply-chain-compromise-guidance-for-azure-pipelines-customers/</link>
+      <guid>https://devblogs.microsoft.com/devops/axios-npm-supply-chain-compromise-guidance-for-azure-pipelines-customers/</guid>
+      <description><![CDATA[On March 31, 2026, malicious versions of the widely used JavaScript HTTP client library Axios were briefly published to the npm registry as part of a supply chain attack. The affected versions — 1.14.1 and 0.30.4 — included a hidden malicious dependency that executed during installation and...]]></description>
+      <dc:creator><![CDATA[Josef Sin]]></dc:creator>
+      <pubDate>Fri, 24 Apr 2026 10:40:43 GMT</pubDate>
+      <category><![CDATA[Azure DevOps Blog]]></category>
+    </item>
     <item>
       <title><![CDATA[When RAG Isn’t Enough: Moving from Retrieval to Relationship-Aware Systems in Enterprise AI:]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/when-rag-isn-t-enough-moving-from-retrieval-to-relationship/ba-p/4514185</link>
@@ -165,7 +174,7 @@
       <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-365-multi-agent-workflow-with-microsoft-agent/ba-p/4514164</link>
       <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-365-multi-agent-workflow-with-microsoft-agent/ba-p/4514164</guid>
       <description><![CDATA[Most production AI tasks are too complex for a single agent. You need specialists that collaborate, a destination expert that researches the best places to visit, a budget analyst that breaks down costs, an activities curator that finds the best experiences, all coordinated by an orchestration...]]></description>
-      <dc:creator><![CDATA[vgiraud]]></dc:creator>
+      <dc:creator><![CDATA[Vincent_Giraud]]></dc:creator>
       <pubDate>Thu, 23 Apr 2026 16:16:15 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
     </item>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 22 Apr 2026 17:30:14 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Premium SSD v2 for Azure Database for PostgreSQL]]></title>
-      <link>https://azure.microsoft.com/updates?id=560336</link>
-      <guid>https://azure.microsoft.com/updates?id=560336</guid>
-      <description><![CDATA[We are excited to announce the general availability of Premium SSD v2 for Azure Database for PostgreSQL flexible server. With Premium SSD v2, you can achieve up to four times higher IOPS, significantly lower latency, and better price-performance for I/O-iUpdate Type: GA, Services: Database for...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 22 Apr 2026 17:30:14 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
