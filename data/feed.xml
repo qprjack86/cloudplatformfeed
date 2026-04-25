@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sat, 25 Apr 2026 11:42:39 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 15:32:07 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -305,6 +305,15 @@
       <category><![CDATA[Azure Architecture]]></category>
     </item>
     <item>
+      <title><![CDATA[LangChain.js for Beginners: A Free Course to Build Agentic AI Apps with JavaScript]]></title>
+      <link>https://devblogs.microsoft.com/blog/langchainjs-for-beginners</link>
+      <guid>https://devblogs.microsoft.com/blog/langchainjs-for-beginners</guid>
+      <description><![CDATA[Want to build AI agents with JavaScript that go beyond basic chat completions? Agents that reason, call tools, and pull from knowledge bases on their own? We put together a free, open source course to help you get there. LangChain.js for Beginners is 8 chapters and 70+ runnable TypeScript examples....]]></description>
+      <dc:creator><![CDATA[Yohan Lasorsa]]></dc:creator>
+      <pubDate>Thu, 23 Apr 2026 17:00:14 GMT</pubDate>
+      <category><![CDATA[Microsoft Developers Blog]]></category>
+    </item>
+    <item>
       <title><![CDATA[Single Sign-On (SSO) from Native Apps to Embedded Web Views in Microsoft Entra External ID Native Authentication]]></title>
       <link>https://devblogs.microsoft.com/identity/native-auth-sso-ga/</link>
       <guid>https://devblogs.microsoft.com/identity/native-auth-sso-ga/</guid>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Kristen Womack]]></dc:creator>
       <pubDate>Wed, 22 Apr 2026 22:04:08 GMT</pubDate>
       <category><![CDATA[Azure SDK Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft Sentinel MCP Server with external AI models (Claude) for natural language investigations]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-mcp-server-with-external-ai-models-claude-for/ba-p/4507013</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-mcp-server-with-external-ai-models-claude-for/ba-p/4507013</guid>
-      <description><![CDATA[Security teams are increasingly exploring how AI assistants support them in investigating incidents, asking questions, and exploring their data. At the same time, controlling how data is accessed remains critical. Today, we’re sharing how Sentinel can support a third-party AI assistant like Claude...]]></description>
-      <dc:creator><![CDATA[mcasgrain]]></dc:creator>
-      <pubDate>Wed, 22 Apr 2026 21:35:29 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
     </item>
   </channel>
 </rss>
