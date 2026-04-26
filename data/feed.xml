@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sat, 25 Apr 2026 15:32:07 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 08:14:46 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Dev Containers for .NET in VS Code: A Beginner‑Friendly Guide That Actually Works]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/dev-containers-for-net-in-vs-code-a-beginner-friendly-guide-that/ba-p/4507785</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/dev-containers-for-net-in-vs-code-a-beginner-friendly-guide-that/ba-p/4507785</guid>
+      <description><![CDATA[What Dev Containers are really about At a high level, Dev Containers let you use a Docker container as your development environment inside VS Code. But the real idea is not “Docker for development”. The real idea is this: Move all environment complexity out of your laptop and into...]]></description>
+      <dc:creator><![CDATA[Debapriya]]></dc:creator>
+      <pubDate>Sun, 26 Apr 2026 05:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Key Vault Auto‑Rotation Practicle Guide]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-key-vault-auto-rotation-practicle-guide/ba-p/4513816</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-key-vault-auto-rotation-practicle-guide/ba-p/4513816</guid>
+      <description><![CDATA[If you’ve ever been called into a Severity-1 issue because a certificate expired at midnight, you already understand why credential rotation matters. Keys, secrets, and certificates sit quietly in the background and when they expire, applications go dark, trust breaks, and teams scramble. This is...]]></description>
+      <dc:creator><![CDATA[ChandraHundigam_MSFT]]></dc:creator>
+      <pubDate>Sun, 26 Apr 2026 03:21:33 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[How ACR Artifact Cache Handles Multi-Arch Images: What Gets Cached and When Webhooks Fire]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-acr-artifact-cache-handles-multi-arch-images-what-gets/ba-p/4514744</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-acr-artifact-cache-handles-multi-arch-images-what-gets/ba-p/4514744</guid>
+      <description><![CDATA[By Johnson Shi (Senior Product Manager), Toddy Mladenov (Principal PM Manager), Luis Dieguez (Principal SWE Manager), Akash Singhal (Senior Software Engineer), Kiran Challa (Senior Software Engineer), Ren Shao (Senior Software Engineer) Introduction Three of the most common questions we hear from...]]></description>
+      <dc:creator><![CDATA[johnsonshi_msft]]></dc:creator>
+      <pubDate>Sat, 25 Apr 2026 19:37:56 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[Modernizing Industrial Safety and Inspection with AI-Driven Drone Automation]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/modernizing-industrial-safety-and-inspection-with-ai-driven/ba-p/4514284</link>
@@ -305,15 +332,6 @@
       <category><![CDATA[Azure Architecture]]></category>
     </item>
     <item>
-      <title><![CDATA[LangChain.js for Beginners: A Free Course to Build Agentic AI Apps with JavaScript]]></title>
-      <link>https://devblogs.microsoft.com/blog/langchainjs-for-beginners</link>
-      <guid>https://devblogs.microsoft.com/blog/langchainjs-for-beginners</guid>
-      <description><![CDATA[Want to build AI agents with JavaScript that go beyond basic chat completions? Agents that reason, call tools, and pull from knowledge bases on their own? We put together a free, open source course to help you get there. LangChain.js for Beginners is 8 chapters and 70+ runnable TypeScript examples....]]></description>
-      <dc:creator><![CDATA[Yohan Lasorsa]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 17:00:14 GMT</pubDate>
-      <category><![CDATA[Microsoft Developers Blog]]></category>
-    </item>
-    <item>
       <title><![CDATA[Single Sign-On (SSO) from Native Apps to Embedded Web Views in Microsoft Entra External ID Native Authentication]]></title>
       <link>https://devblogs.microsoft.com/identity/native-auth-sso-ga/</link>
       <guid>https://devblogs.microsoft.com/identity/native-auth-sso-ga/</guid>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[Balajiranganathan]]></dc:creator>
       <pubDate>Thu, 23 Apr 2026 04:08:55 GMT</pubDate>
       <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform]]></title>
-      <link>https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform</link>
-      <guid>https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform</guid>
-      <description><![CDATA[OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform OpenAI’s GPT-5.5 will be generally available in Microsoft Foundry, bringing OpenAI’s latest frontier model to Azure and the enterprise teams building agents for real production work.Update Type:...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Write azd hooks in Python, JavaScript, TypeScript, or .NET]]></title>
-      <link>https://devblogs.microsoft.com/azure-sdk/azd-multi-language-hooks/</link>
-      <guid>https://devblogs.microsoft.com/azure-sdk/azd-multi-language-hooks/</guid>
-      <description><![CDATA[Hooks are one of the most popular features in azd, and now you can write them in Python, JavaScript, TypeScript, or .NET, not just Bash and PowerShell. What’s new? The Azure Developer CLI (azd) hook system now supports four more languages beyond Bash and PowerShell. You can write hook scripts in...]]></description>
-      <dc:creator><![CDATA[Kristen Womack]]></dc:creator>
-      <pubDate>Wed, 22 Apr 2026 22:04:08 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
     </item>
   </channel>
 </rss>
