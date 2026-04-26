@@ -4,9 +4,27 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sun, 26 Apr 2026 11:44:11 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 15:34:07 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Microsoft’s New In‑House AI Models (MAI‑Transcribe, MAI‑Voice, MAI‑Image)]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-s-new-in-house-ai-models-mai-transcribe-mai-voice-mai/ba-p/4512731</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-s-new-in-house-ai-models-mai-transcribe-mai-voice-mai/ba-p/4512731</guid>
+      <description><![CDATA[What Are the New MAI Models? MAI‑Transcribe‑1 (Speech‑to‑Text) MAI‑Transcribe‑1 is Microsoft’s first‑generation in‑house speech recognition model. It supports 25 languages and is optimized for real‑world, noisy enterprise audio, such as meetings and call centers. Key highlights Enterprise‑grade...]]></description>
+      <dc:creator><![CDATA[kumar_rahul]]></dc:creator>
+      <pubDate>Sun, 26 Apr 2026 11:56:35 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Microsofts New In-House AI Models (MAI-Transcribe, MAI-Voice, MAI-Image)]]></title>
+      <link>https://techcommunity.microsoft.com/blog/appsonazureblog/microsoft%E2%80%99s-new-in%E2%80%91house-ai-models-mai%E2%80%91transcribe-mai%E2%80%91voice-mai%E2%80%91image/4512731</link>
+      <guid>https://techcommunity.microsoft.com/blog/appsonazureblog/microsoft%E2%80%99s-new-in%E2%80%91house-ai-models-mai%E2%80%91transcribe-mai%E2%80%91voice-mai%E2%80%91image/4512731</guid>
+      <description><![CDATA[What Are the New MAI Models? MAI‑Transcribe‑1 (Speech‑to‑Text) MAI‑Transcribe‑1 is Microsoft’s first‑generation in‑house speech recognition model. It supports 25 languages and is optimized for re...Update Type: Announcement, Services: , Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Sun, 26 Apr 2026 11:56:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
     <item>
       <title><![CDATA[Dev Containers for .NET in VS Code: A Beginner‑Friendly Guide That Actually Works]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/dev-containers-for-net-in-vs-code-a-beginner-friendly-guide-that/ba-p/4507785</link>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Thu, 23 Apr 2026 10:00:00 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Introducing the Microsoft Sentinel Training Lab. Hands-On Security Operations in Minutes]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274</guid>
-      <description><![CDATA[A huge thanks to Paul Kew - this lab wouldn't have been possible without his contributions. Security operations is one of those things that’s hard to learn from slides alone. You need to feel what it’s like to triage a multi-stage incident, tune a noisy detection rule, or trace an attacker pivoting...]]></description>
-      <dc:creator><![CDATA[AndreasKapetaniou]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 08:50:24 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Lessons Learned from Building a Well-Matching Intelligence Layer]]></title>
-      <link>https://devblogs.microsoft.com/ise/lessons-learned-building-well-matching-intelligence-layer/</link>
-      <guid>https://devblogs.microsoft.com/ise/lessons-learned-building-well-matching-intelligence-layer/</guid>
-      <description><![CDATA[Key insights from the EDA and Ground Truth journey for solving well identity resolution in the Energy industry—challenges that extend to any entity matching problem across distributed systems. The post Lessons Learned from Building a Well-Matching Intelligence Layer appeared first on ISE Developer...]]></description>
-      <dc:creator><![CDATA[Emmeline Hoops, Oscar Fimbres, Kavitha Sreenath]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[ISE Developer Blog]]></category>
     </item>
   </channel>
 </rss>
