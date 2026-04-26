@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-04-26T08:15:02.621659+00:00",
+  "generatedAt": "2026-04-26T11:44:27.749794+00:00",
   "artifacts": [
     {
       "path": "/home/runner/work/cloudplatformfeed/cloudplatformfeed/data/m365_data.json",
       "algorithm": "sha256",
-      "value": "50d5ce8600aac4b660cb5bf18a2dcff383231eed828180091538d36145dbdb52",
-      "generatedAt": "2026-04-26T08:15:02.621659+00:00"
+      "value": "7b684b361826ea4736bf1d6c84dc20d9ca15a90f2555530f8948600f92ba5ce3",
+      "generatedAt": "2026-04-26T11:44:27.749794+00:00"
     },
     {
       "path": "/home/runner/work/cloudplatformfeed/cloudplatformfeed/data/m365-retirements.ics",
       "algorithm": "sha256",
-      "value": "04b8bebe8ed2b4a233195972d10832d193408eef121bd87e5acb691ee014461e",
-      "generatedAt": "2026-04-26T08:15:02.621659+00:00"
+      "value": "7a4f56288973b6f3a497418685d0b82c73fc45d57302d8bc28d646bba3da894d",
+      "generatedAt": "2026-04-26T11:44:27.749794+00:00"
     }
   ]
 }

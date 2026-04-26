@@ -4,7 +4,7 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sun, 26 Apr 2026 08:14:46 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 11:44:11 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
     <item>
@@ -332,6 +332,15 @@
       <category><![CDATA[Azure Architecture]]></category>
     </item>
     <item>
+      <title><![CDATA[LangChain.js for Beginners: A Free Course to Build Agentic AI Apps with JavaScript]]></title>
+      <link>https://devblogs.microsoft.com/blog/langchainjs-for-beginners</link>
+      <guid>https://devblogs.microsoft.com/blog/langchainjs-for-beginners</guid>
+      <description><![CDATA[Want to build AI agents with JavaScript that go beyond basic chat completions? Agents that reason, call tools, and pull from knowledge bases on their own? We put together a free, open source course to help you get there. LangChain.js for Beginners is 8 chapters and 70+ runnable TypeScript examples....]]></description>
+      <dc:creator><![CDATA[Yohan Lasorsa]]></dc:creator>
+      <pubDate>Thu, 23 Apr 2026 17:00:14 GMT</pubDate>
+      <category><![CDATA[Microsoft Developers Blog]]></category>
+    </item>
+    <item>
       <title><![CDATA[Single Sign-On (SSO) from Native Apps to Embedded Web Views in Microsoft Entra External ID Native Authentication]]></title>
       <link>https://devblogs.microsoft.com/identity/native-auth-sso-ga/</link>
       <guid>https://devblogs.microsoft.com/identity/native-auth-sso-ga/</guid>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Emmeline Hoops, Oscar Fimbres, Kavitha Sreenath]]></dc:creator>
       <pubDate>Thu, 23 Apr 2026 07:00:00 GMT</pubDate>
       <category><![CDATA[ISE Developer Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Entra ID Login via Azure Bastion Fails After VM Recreation]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/entra-id-login-via-azure-bastion-fails-after-vm-recreation/ba-p/4509337</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/entra-id-login-via-azure-bastion-fails-after-vm-recreation/ba-p/4509337</guid>
-      <description><![CDATA[However, you may encounter a confusing scenario where: An Entra ID user attempts to sign in to a Windows VM through Azure Bastion The connection appears to succeed in the backend logs The session is disconnected within a second Bastion returns a generic sign-in error to the user At first glance,...]]></description>
-      <dc:creator><![CDATA[Balajiranganathan]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 04:08:55 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
   </channel>
 </rss>
