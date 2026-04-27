@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T12:22:36.952716+00:00",
+  "generatedAt": "2026-04-27T16:19:57.525669+00:00",
   "totalArticles": 87,
   "articles": [
     {
@@ -9246,7 +9246,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-27T12:22:36.952450+00:00",
+    "generatedAt": "2026-04-27T16:19:57.525429+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {

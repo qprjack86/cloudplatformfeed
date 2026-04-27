@@ -4,9 +4,27 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 27 Apr 2026 12:22:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 16:19:39 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</guid>
+      <description><![CDATA[Following on from months of working alongside customers, partners, and our internal product groups, we have now made two updates to the Azure landing zone (ALZ) and the Sovereign landing zone (SLZ), that I’d like to walk you through in this post: A new dedicated ‘Local’ Management Group added...]]></description>
+      <dc:creator><![CDATA[jtracey93msft]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 15:49:59 GMT</pubDate>
+      <category><![CDATA[Governance & Management]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Local expands to sovereign-scale infrastructure with disaggregated deployments]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-expands-to-sovereign-scale-infrastructure-with/ba-p/4514338</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-expands-to-sovereign-scale-infrastructure-with/ba-p/4514338</guid>
+      <description><![CDATA[As organizations accelerate digital transformation across datacenters, sovereign environments, and edge locations, infrastructure architectures must evolve to meet new operational and regulatory demands. The first feature update of Azure Local in CY 2026 (version 2604) marks a significant step...]]></description>
+      <dc:creator><![CDATA[troettinger]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 15:45:00 GMT</pubDate>
+      <category><![CDATA[Azure Arc]]></category>
+    </item>
     <item>
       <title><![CDATA[Dissecting LLM Container Cold-Start: Where the Time Actually Goes]]></title>
       <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</link>
@@ -437,24 +455,6 @@
       <description><![CDATA[Azure Monitor provides a complete set of services for monitoring the health and performance of different layers of your Kubernetes infrastructure and the applications that depend on it.Azure Monitor support for Azure Arc-enabled Kubernetes with OpenShiftUpdate Type: GA, Services: Kubernetes...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Thu, 23 Apr 2026 16:45:55 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft 365 multi-agent workflow with Microsoft Agent Framework]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-365-multi-agent-workflow-with-microsoft-agent/ba-p/4514164</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-365-multi-agent-workflow-with-microsoft-agent/ba-p/4514164</guid>
-      <description><![CDATA[Most production AI tasks are too complex for a single agent. You need specialists that collaborate, a destination expert that researches the best places to visit, a budget analyst that breaks down costs, an activities curator that finds the best experiences, all coordinated by an orchestration...]]></description>
-      <dc:creator><![CDATA[Vincent_Giraud]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 16:16:15 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[From Oversharing to Enforcement: A Practical Guide to AI Data Security with Microsoft Purview]]></title>
-      <link>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/from-oversharing-to-enforcement-a-practical-guide-to-ai-data-security-with-micro/4513727</link>
-      <guid>https://techcommunity.microsoft.com/blog/microsoft-purview-blog/from-oversharing-to-enforcement-a-practical-guide-to-ai-data-security-with-micro/4513727</guid>
-      <description><![CDATA[Why AI Changed the Data Security Problem AI does not create entirely new categories of risk—it supercharges existing ones. Traditional data leakage stems from ordinary behavior: sharing a document ...Update Type: Announcement, Services: Azure Purview, Categories: Security]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 14:58:00 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
