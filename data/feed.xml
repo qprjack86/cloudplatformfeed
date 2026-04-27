@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 27 Apr 2026 09:15:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 12:22:18 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Dissecting LLM Container Cold-Start: Where the Time Actually Goes]]></title>
+      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</link>
+      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</guid>
+      <description><![CDATA[Dissecting LLM Container Cold-Start: Where the Time Actually Goes Cold-start latency determines whether GPU clusters can scale to zero, how fast they can autoscale, and whether bursty or low-QPS workloads are economically viable. Most optimization effort targets the container pull path – faster...]]></description>
+      <dc:creator><![CDATA[robcronin]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 11:36:05 GMT</pubDate>
+      <category><![CDATA[Linux & Open Source]]></category>
+    </item>
     <item>
       <title><![CDATA[From Portal Edits to GitOps : Deploying Azure API Management Configuration with APIOps]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-portal-edits-to-gitops-deploying-azure-api-management/ba-p/4514975</link>
@@ -446,15 +455,6 @@
       <description><![CDATA[Why AI Changed the Data Security Problem AI does not create entirely new categories of risk—it supercharges existing ones. Traditional data leakage stems from ordinary behavior: sharing a document ...Update Type: Announcement, Services: Azure Purview, Categories: Security]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Thu, 23 Apr 2026 14:58:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Nested folders support in shortcut transformations]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/nested-folders-support-in-shortcut-transformations-generally-available/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/nested-folders-support-in-shortcut-transformations-generally-available/</guid>
-      <description><![CDATA[Nested folders, shortcut transformations, subfolder processing, OneLake, shortcuts, Lakehouse Data lakes rarely come in flat structures. In practice, data is organized across multi-level folder hierarchies, partitioned by date, region, source system, or business unit. Previously, shortcut...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 14:00:00 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
