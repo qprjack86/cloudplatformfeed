@@ -4,9 +4,54 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sun, 26 Apr 2026 15:34:07 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 09:15:10 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[From Portal Edits to GitOps : Deploying Azure API Management Configuration with APIOps]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-portal-edits-to-gitops-deploying-azure-api-management/ba-p/4514975</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-portal-edits-to-gitops-deploying-azure-api-management/ba-p/4514975</guid>
+      <description><![CDATA[Introduction Modern enterprise platforms are increasingly built around APIs, and Azure API Management (APIM) sits at the heart of these systems as the control plane for enforcing policies, managing access, and routing traffic. While APIM provides a powerful interface through the Azure portal, many...]]></description>
+      <dc:creator><![CDATA[aloormahesh]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 07:45:35 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Rethinking Data Modeling: How GitHub Copilot Is Changing the Way We Design Systems]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/rethinking-data-modeling-how-github-copilot-is-changing-the-way/ba-p/4509941</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/rethinking-data-modeling-how-github-copilot-is-changing-the-way/ba-p/4509941</guid>
+      <description><![CDATA[There is a point in every engineer’s journey where data modeling stops feeling intuitive. What starts as a clean schema becomes harder to reason about. Relationships blur. Query paths multiply. Small changes ripple across different steps. This is where data modeling reveals its real challenge: not...]]></description>
+      <dc:creator><![CDATA[B_Manasa]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure AI Foundry vs Traditional ML Pipelines: What’s Different and Why It Matters]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-ai-foundry-vs-traditional-ml-pipelines-what-s-different/ba-p/4508897</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-ai-foundry-vs-traditional-ml-pipelines-what-s-different/ba-p/4508897</guid>
+      <description><![CDATA[The Traditional ML Pipeline: What It Was Built For Traditional ML pipelines typically look like this: Data ingestion and preparation Model training (often batch‑oriented) Model validation and versioning Deployment via APIs or batch jobs Monitoring focused on accuracy and drift This approach worked...]]></description>
+      <dc:creator><![CDATA[Parvathy_R_Pillai]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 06:06:18 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure AI Foundry vs Traditional ML Pipelines: Whats Different and Why It Matters]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/azure-ai-foundry-vs-traditional-ml-pipelines-what%E2%80%99s-different-and-why-it-matters/4508897</link>
+      <guid>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/azure-ai-foundry-vs-traditional-ml-pipelines-what%E2%80%99s-different-and-why-it-matters/4508897</guid>
+      <description><![CDATA[The Traditional ML Pipeline: What It Was Built For Traditional ML pipelines typically look like this: Data ingestion and preparation Model training (often batch‑oriented) Model validation a...Update Type: Announcement, Services: Azure AI Services, Microsoft Foundry, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 06:06:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[How to Troubleshoot Azure Functions Service Bus Trigger Issues]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-service-bus-trigger-issues/ba-p/4514006</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-service-bus-trigger-issues/ba-p/4514006</guid>
+      <description><![CDATA[Table of Contents Overview Understanding How the Service Bus Trigger Works Message Processing Flow Key Concepts host.json Configuration Reference Issue Categories Common Causes and Solutions 1. Connection String or Configuration Errors 2. Authentication and Authorization Failures (RBAC / SAS) 3....]]></description>
+      <dc:creator><![CDATA[vikasgupta5]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 06:01:56 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[Microsoft’s New In‑House AI Models (MAI‑Transcribe, MAI‑Voice, MAI‑Image)]]></title>
       <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-s-new-in-house-ai-models-mai-transcribe-mai-voice-mai/ba-p/4512731</link>
@@ -410,51 +455,6 @@
       <description><![CDATA[Nested folders, shortcut transformations, subfolder processing, OneLake, shortcuts, Lakehouse Data lakes rarely come in flat structures. In practice, data is organized across multi-level folder hierarchies, partitioned by date, region, source system, or business unit. Previously, shortcut...]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Thu, 23 Apr 2026 14:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Monitor your Eventstreams with workspace monitoring]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/monitor-your-eventstreams-with-workspace-monitoring-preview/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/monitor-your-eventstreams-with-workspace-monitoring-preview/</guid>
-      <description><![CDATA[When something goes wrong in a streaming pipeline, the first question is always the same: what happened, and where? Previously, answering that question for Eventstreams meant finding and interpreting metrics in the Data Insights tab, checking Eventstream components one by one, or opening a support...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 12:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Resource instance rules for OneLake in Microsoft Fabric]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/resource-instance-rules-for-onelake-in-microsoft-fabric-preview/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/resource-instance-rules-for-onelake-in-microsoft-fabric-preview/</guid>
-      <description><![CDATA[As enterprises adopt OneLake as their unified data lake for analytics, securing how external services access data in OneLake becomes increasingly important—especially in environments where public internet access must be tightly controlled. Today, we’re introducing resource instance rules for...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 10:30:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Monitor Pipeline: A Modern Approach to Telemetry Ingestion at Scale]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-monitor-pipeline-a-modern-approach-to-telemetry-ingestion/ba-p/4513980</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-monitor-pipeline-a-modern-approach-to-telemetry-ingestion/ba-p/4513980</guid>
-      <description><![CDATA[Large-scale observability often fails not because of analytics, but because of ingestion. As environments grow—across regions, clouds, and on‑premises sites—traditional log forwarding architectures struggle with scale, reliability, cost, and security. Azure Monitor Pipeline, now generally...]]></description>
-      <dc:creator><![CDATA[adityakumar60]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 10:23:43 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[How AI Agents Are Turning Threat Intelligence Into Validated Detections]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-ai-agents-are-turning-threat-intelligence-into-validated/ba-p/4513971</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-ai-agents-are-turning-threat-intelligence-into-validated/ba-p/4513971</guid>
-      <description><![CDATA[The promise of AI-assisted cybersecurity has long been hampered by a fundamental measurement problem: how do organizations validate whether an AI agent can actually perform the complex, multi-step work that security analysts do every day? Traditional benchmarks test whether models can recall MITRE...]]></description>
-      <dc:creator><![CDATA[adityakumar60]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 10:10:04 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Cross-workspace logging for MLflow in Microsoft Fabric: Build MLOps workflows with confidence]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/cross-workspace-logging-for-mlflow-in-microsoft-fabric-build-mlops-workflows-with-confidence-generally-available/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/cross-workspace-logging-for-mlflow-in-microsoft-fabric-build-mlops-workflows-with-confidence-generally-available/</guid>
-      <description><![CDATA[Machine learning teams need more than a great model — they need a reliable way to move that model from experimentation to production. Cross-workspace logging for MLflow in Microsoft Fabric, is a capability that enables you to build end-to-end MLOps workflows using the standard MLflow APIs you...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 10:00:00 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>

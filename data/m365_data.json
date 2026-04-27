@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-26T15:34:25.318689+00:00",
-  "totalArticles": 89,
+  "generatedAt": "2026-04-27T09:15:26.775393+00:00",
+  "totalArticles": 87,
   "articles": [
     {
       "title": "Dynamics 365 Contact Center - Use Service Operations Agent to simplify setup tasks",
@@ -2228,39 +2228,6 @@
       "_normalized_url": "roadmap:560055"
     },
     {
-      "title": "Take action: Out-of-band updates released for Windows Server to address two issues",
-      "link": "https://deltapulse.app/item/MC1285472",
-      "published": "2026-04-19T21:13:15.637Z",
-      "summary": "<div>Microsoft has released out-of-band (OOB) updates today, April 19, 2026, to address issues introduced by the April 2026 Windows security update.</div><div><br></div><div>A limited number of Windows Server 2025 devices might experience failures installing the April 2026 security update (<a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a>). In addition, some versions of Windows Server may experience <a href=\"https://learn.microsoft.com/windows/release-health/status-windows-server-2025#4833msgdesc\" rel=\"noopener noreferrer\" target=\"_blank\">domain controllers restarting repeatedly</a> after installing the April 2026 security update.</div><div><br></div><div>To address these issues, Microsoft has released OOB updates for the Windows Server versions listed below. Note: The Windows Server 2025 OOB update (<a href=\"https://support.microsoft.com/help/5091157\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091157</a>) addresses both the installation failure issue and the domain controller restart issue. OOB updates released for other supported Windows Server versions address only the domain controller restart issue.</div><div><br></div><div>For complete guidance and installation instructions, see the relevant KB articles:</div><div><br></div><div>Standard Windows updates</div><ul><li>Windows Server 2025: <a href=\"https://support.microsoft.com/topic/13ab53cc-ccc8-4a00-89d2-823b58fa03ec\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091157 (OS Build 26100.32698) Out-of-band</a></li><li>Windows Server, version 23H2: <a href=\"https://support.microsoft.com/help/5091571\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091571 (OS Build 25398.2276) Out-of-band</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/topic/4a5a784e-e50a-4358-8093-b1654aecdbd1\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091575 (OS Build 20348.5024) Out-of-band</a></li><li>Windows Server 2019: <a href=\"https://support.microsoft.com/topic/08263e6c-c20a-423f-8d75-9c6d77a0c75e\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091573 (OS Build 17763.8647) Out-of-band</a></li><li>Windows Server 2016: <a href=\"https://support.microsoft.com/topic/5df74339-4bd0-4fd0-af74-45972f072abb\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091572 (OS Build 14393.9062) Out-of-band</a></li></ul><div><br></div><div>Windows hotpatch updates</div><ul><li>Windows Server 2025 Datacenter: Azure Edition: <a href=\"https://support.microsoft.com/topic/b09952e2-f7e1-4af0-a479-ecf2c427af56\" rel=\"noopener noreferrer\" target=\"_blank\">Hotpatch KB5091470 (OS Build 26100.32704) Out-of-band</a></li><li>Windows Server 2022 Datacenter: Azure Edition: <a href=\"https://support.microsoft.com/topic/5b2259b9-a15f-4cc4-b18f-f4f2c3b6b184\" rel=\"noopener noreferrer\" target=\"_blank\">Hotpatch KB5091576 (OS Build 20348.5029) Out-of-band</a></li></ul>",
-      "source": "m365",
-      "m365Service": "Windows",
-      "m365AllServices": [
-        "Windows"
-      ],
-      "m365Id": "MC1285472",
-      "m365Source": "message_center",
-      "m365Category": "preventOrFixIssue",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365WasUpdated": false,
-      "m365ScheduleUpdated": false,
-      "m365IsMajorChange": true,
-      "m365Tags": [
-        "Admin impact"
-      ],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementStartDate": null,
-      "m365RetirementEndDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1285472"
-    },
-    {
       "title": "Dynamics 365 Contact Center - Use Service Operations Agent to simplify setup tasks",
       "link": "https://deltapulse.app/item/MC1276450",
       "published": "2026-04-10T21:04:17.000Z",
@@ -2564,42 +2531,6 @@
       "m365RetirementDatePrecision": "day",
       "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1230889"
-    },
-    {
-      "title": "(Updated) Microsoft Teams: AI-powered live interpretation on Teams Phone devices",
-      "link": "https://deltapulse.app/item/MC1263278",
-      "published": "2026-03-27T19:40:28.000Z",
-      "summary": "AI-powered live interpretation will roll out on certified Microsoft Teams Phone devices worldwide from mid to late June 2026 for users with a Microsoft 365 Copilot license. It supports real-time interpretation in various call types, requires policy enabling, and is off by default. Pure PSTN group calls are not supported. <p>Updated April 22, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p><p>We’re adding <b>AI-powered live interpretation</b> to <b>Microsoft Teams Phone devices</b> to help organizations support multilingual collaboration during calls and meetings. This update enables users with a Microsoft 365 Copilot license to hear real-time interpreted audio directly on certified Teams Phone hardware, reducing reliance on external interpreters and improving accessibility for globally distributed teams.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=553594\" target=\"_blank\">553594</a></b>.</p><p><b>[When this will happen]</b></p><p style=\"margin-left: 25px;\"><b>General Availability (Worldwide and GCC): </b>We will begin rolling out in <b>mid-June 2026</b> (previously&nbsp;mid-May)&nbsp;and expect to complete in <b>late June 2026</b> (previously&nbsp;mid-May).</p><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Users on certified Teams Phone devices (touch and non-touch)</li><li>Users with a Microsoft 365 Copilot license</li><li>Admins managing Teams calling and meeting policies</li></ul><p><i>What will happen</i></p><ul><li>Eligible users will be able to use AI-powered live interpretation during:<ul><li>1:1 VoIP and Public Switched Telephone Network (PSTN) calls</li><li>Group VoIP calls</li><li>VoIP group calls escalated with a PSTN user</li><li>Ad-hoc and scheduled meetings</li></ul></li><li>Pure PSTN group calls are <b>not supported</b>.</li><li>On first use, users will select a preferred interpretation language; preferences and volume levels are saved automatically.</li><li>A visual indicator will appear for all participants when interpretation is active.</li><li>Users will only see the AI Interpreter option when:<ul><li>The tenant has enabled the required calling and meeting policies, and</li><li>The user holds an eligible license.</li></ul></li><li>The feature is<b> off by default</b> and does <b>not </b>change calling experiences for users without the required configuration.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/fe1d7652-e911-482a-b7a2-3ec068ecd689/36f0c789077c7f8af181642a24d41adf20574476.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Confirm that users who need this capability have a <b>Microsoft 365 Copilot license</b>.</li><li>Enable AI Interpreter in <i>your Teams policies</i>:<ul><li><i><b>Set-CsTeamsCallingPolicy</b></i></li><li><i><b>Set-CsTeamsMeetingPolicy</b></i></li></ul></li><li>Communicate the experience to your helpdesk and affected Teams Phone users.</li><li>Update internal documentation or device usage guides as needed.</li></ul><p><b>Learn more:</b> <a href=\"https://learn.microsoft.com/microsoftteams/interpreter-agent-teams\" target=\"_blank\">Manage Interpreter agent for your organization | Microsoft Teams | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p> changed 2026-04-22T20:31:23.550Z title summary lastUpdatedDate tags bodyContent New feature User impact Admin impact Microsoft Teams: AI-powered live interpretation on Teams Phone devices Microsoft Teams AI-powered live interpretation will be available on certified Microsoft Teams Phone devices for users with a Microsoft 365 Copilot license starting mid-May 2026. It supports real-time language interpretation during various call types, requires policy enablement, is off by default, and excludes pure PSTN group calls. Android <p><b>[Introduction]</b></p><p>We’re adding <b>AI-powered live interpretation</b> to <b>Microsoft Teams Phone devices</b> to help organizations support multilingual collaboration during calls and meetings. This update enables users with a Microsoft 365 Copilot license to hear real-time interpreted audio directly on certified Teams Phone hardware, reducing reliance on external interpreters and improving accessibility for globally distributed teams.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=553594\" target=\"_blank\">553594</a></b>.</p><p><b>[When this will happen]</b></p><p style=\"margin-left: 25px;\"><b>General Availability (Worldwide and GCC): </b>We will begin rolling out in <b>mid-May 2026</b> and expect to complete in&nbsp;<b>mid-May 2026</b>.</p><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Users on certified Teams Phone devices (touch and non-touch)</li><li>Users with a Microsoft 365 Copilot license</li><li>Admins managing Teams calling and meeting policies</li></ul><p><i>What will happen</i></p><ul><li>Eligible users will be able to use AI-powered live interpretation during:<ul><li>1:1 VoIP and Public Switched Telephone Network (PSTN) calls</li><li>Group VoIP calls</li><li>VoIP group calls escalated with a PSTN user</li><li>Ad-hoc and scheduled meetings</li></ul></li><li>Pure PSTN group calls are <b>not supported</b>.</li><li>On first use, users will select a preferred interpretation language; preferences and volume levels are saved automatically.</li><li>A visual indicator will appear for all participants when interpretation is active.</li><li>Users will only see the AI Interpreter option when:<ul><li>The tenant has enabled the required calling and meeting policies, and</li><li>The user holds an eligible license.</li></ul></li><li>The feature is<b> off by default</b> and does <b>not </b>change calling experiences for users without the required configuration.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/fe1d7652-e911-482a-b7a2-3ec068ecd689/36f0c789077c7f8af181642a24d41adf20574476.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Confirm that users who need this capability have a <b>Microsoft 365 Copilot license</b>.</li><li>Enable AI Interpreter in <i>your Teams policies</i>:<ul><li><i><b>Set-CsTeamsCallingPolicy</b></i></li><li><i><b>Set-CsTeamsMeetingPolicy</b></i></li></ul></li><li>Communicate the experience to your helpdesk and affected Teams Phone users.</li><li>Update internal documentation or device usage guides as needed.</li></ul><p><b>Learn more:</b> <a href=\"https://learn.microsoft.com/microsoftteams/interpreter-agent-teams\" target=\"_blank\">Manage Interpreter agent for your organization | Microsoft Teams | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p> 2026-03-27T19:41:36.933Z Updated message (Updated) Microsoft Teams: AI-powered live interpretation on Teams Phone devices 2026-04-22T18:16:29.137Z",
-      "source": "m365",
-      "m365Service": "Microsoft Teams",
-      "m365AllServices": [
-        "Microsoft Teams"
-      ],
-      "m365Id": "MC1263278",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "June 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365WasUpdated": true,
-      "m365ScheduleUpdated": false,
-      "m365IsMajorChange": false,
-      "m365Tags": [
-        "Updated message",
-        "New feature",
-        "User impact",
-        "Admin impact"
-      ],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementStartDate": null,
-      "m365RetirementEndDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1263278"
     },
     {
       "title": "(Updated) Engage is retiring live events powered by Teams Live Events effective April 27th, 2026",
@@ -3348,42 +3279,6 @@
         "_normalized_url": "message_center:MC1272546"
       },
       {
-        "title": "(Updated) Microsoft Teams: AI-powered live interpretation on Teams Phone devices",
-        "link": "https://deltapulse.app/item/MC1263278",
-        "published": "2026-03-27T19:40:28.000Z",
-        "summary": "AI-powered live interpretation will roll out on certified Microsoft Teams Phone devices worldwide from mid to late June 2026 for users with a Microsoft 365 Copilot license. It supports real-time interpretation in various call types, requires policy enabling, and is off by default. Pure PSTN group calls are not supported. <p>Updated April 22, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p><p>We’re adding <b>AI-powered live interpretation</b> to <b>Microsoft Teams Phone devices</b> to help organizations support multilingual collaboration during calls and meetings. This update enables users with a Microsoft 365 Copilot license to hear real-time interpreted audio directly on certified Teams Phone hardware, reducing reliance on external interpreters and improving accessibility for globally distributed teams.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=553594\" target=\"_blank\">553594</a></b>.</p><p><b>[When this will happen]</b></p><p style=\"margin-left: 25px;\"><b>General Availability (Worldwide and GCC): </b>We will begin rolling out in <b>mid-June 2026</b> (previously&nbsp;mid-May)&nbsp;and expect to complete in <b>late June 2026</b> (previously&nbsp;mid-May).</p><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Users on certified Teams Phone devices (touch and non-touch)</li><li>Users with a Microsoft 365 Copilot license</li><li>Admins managing Teams calling and meeting policies</li></ul><p><i>What will happen</i></p><ul><li>Eligible users will be able to use AI-powered live interpretation during:<ul><li>1:1 VoIP and Public Switched Telephone Network (PSTN) calls</li><li>Group VoIP calls</li><li>VoIP group calls escalated with a PSTN user</li><li>Ad-hoc and scheduled meetings</li></ul></li><li>Pure PSTN group calls are <b>not supported</b>.</li><li>On first use, users will select a preferred interpretation language; preferences and volume levels are saved automatically.</li><li>A visual indicator will appear for all participants when interpretation is active.</li><li>Users will only see the AI Interpreter option when:<ul><li>The tenant has enabled the required calling and meeting policies, and</li><li>The user holds an eligible license.</li></ul></li><li>The feature is<b> off by default</b> and does <b>not </b>change calling experiences for users without the required configuration.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/fe1d7652-e911-482a-b7a2-3ec068ecd689/36f0c789077c7f8af181642a24d41adf20574476.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Confirm that users who need this capability have a <b>Microsoft 365 Copilot license</b>.</li><li>Enable AI Interpreter in <i>your Teams policies</i>:<ul><li><i><b>Set-CsTeamsCallingPolicy</b></i></li><li><i><b>Set-CsTeamsMeetingPolicy</b></i></li></ul></li><li>Communicate the experience to your helpdesk and affected Teams Phone users.</li><li>Update internal documentation or device usage guides as needed.</li></ul><p><b>Learn more:</b> <a href=\"https://learn.microsoft.com/microsoftteams/interpreter-agent-teams\" target=\"_blank\">Manage Interpreter agent for your organization | Microsoft Teams | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p> changed 2026-04-22T20:31:23.550Z title summary lastUpdatedDate tags bodyContent New feature User impact Admin impact Microsoft Teams: AI-powered live interpretation on Teams Phone devices Microsoft Teams AI-powered live interpretation will be available on certified Microsoft Teams Phone devices for users with a Microsoft 365 Copilot license starting mid-May 2026. It supports real-time language interpretation during various call types, requires policy enablement, is off by default, and excludes pure PSTN group calls. Android <p><b>[Introduction]</b></p><p>We’re adding <b>AI-powered live interpretation</b> to <b>Microsoft Teams Phone devices</b> to help organizations support multilingual collaboration during calls and meetings. This update enables users with a Microsoft 365 Copilot license to hear real-time interpreted audio directly on certified Teams Phone hardware, reducing reliance on external interpreters and improving accessibility for globally distributed teams.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=553594\" target=\"_blank\">553594</a></b>.</p><p><b>[When this will happen]</b></p><p style=\"margin-left: 25px;\"><b>General Availability (Worldwide and GCC): </b>We will begin rolling out in <b>mid-May 2026</b> and expect to complete in&nbsp;<b>mid-May 2026</b>.</p><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Users on certified Teams Phone devices (touch and non-touch)</li><li>Users with a Microsoft 365 Copilot license</li><li>Admins managing Teams calling and meeting policies</li></ul><p><i>What will happen</i></p><ul><li>Eligible users will be able to use AI-powered live interpretation during:<ul><li>1:1 VoIP and Public Switched Telephone Network (PSTN) calls</li><li>Group VoIP calls</li><li>VoIP group calls escalated with a PSTN user</li><li>Ad-hoc and scheduled meetings</li></ul></li><li>Pure PSTN group calls are <b>not supported</b>.</li><li>On first use, users will select a preferred interpretation language; preferences and volume levels are saved automatically.</li><li>A visual indicator will appear for all participants when interpretation is active.</li><li>Users will only see the AI Interpreter option when:<ul><li>The tenant has enabled the required calling and meeting policies, and</li><li>The user holds an eligible license.</li></ul></li><li>The feature is<b> off by default</b> and does <b>not </b>change calling experiences for users without the required configuration.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/fe1d7652-e911-482a-b7a2-3ec068ecd689/36f0c789077c7f8af181642a24d41adf20574476.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Confirm that users who need this capability have a <b>Microsoft 365 Copilot license</b>.</li><li>Enable AI Interpreter in <i>your Teams policies</i>:<ul><li><i><b>Set-CsTeamsCallingPolicy</b></i></li><li><i><b>Set-CsTeamsMeetingPolicy</b></i></li></ul></li><li>Communicate the experience to your helpdesk and affected Teams Phone users.</li><li>Update internal documentation or device usage guides as needed.</li></ul><p><b>Learn more:</b> <a href=\"https://learn.microsoft.com/microsoftteams/interpreter-agent-teams\" target=\"_blank\">Manage Interpreter agent for your organization | Microsoft Teams | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p> 2026-03-27T19:41:36.933Z Updated message (Updated) Microsoft Teams: AI-powered live interpretation on Teams Phone devices 2026-04-22T18:16:29.137Z",
-        "source": "m365",
-        "m365Service": "Microsoft Teams",
-        "m365AllServices": [
-          "Microsoft Teams"
-        ],
-        "m365Id": "MC1263278",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Updated message",
-          "New feature",
-          "User impact",
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1263278"
-      },
-      {
         "title": "(Updated) Microsoft Teams: Badging updates to help users find messages that count",
         "link": "https://deltapulse.app/item/MC1268911",
         "published": "2026-04-02T20:35:45.000Z",
@@ -3897,39 +3792,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1287361"
-      },
-      {
-        "title": "Take action: Out-of-band updates released for Windows Server to address two issues",
-        "link": "https://deltapulse.app/item/MC1285472",
-        "published": "2026-04-19T21:13:15.637Z",
-        "summary": "<div>Microsoft has released out-of-band (OOB) updates today, April 19, 2026, to address issues introduced by the April 2026 Windows security update.</div><div><br></div><div>A limited number of Windows Server 2025 devices might experience failures installing the April 2026 security update (<a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a>). In addition, some versions of Windows Server may experience <a href=\"https://learn.microsoft.com/windows/release-health/status-windows-server-2025#4833msgdesc\" rel=\"noopener noreferrer\" target=\"_blank\">domain controllers restarting repeatedly</a> after installing the April 2026 security update.</div><div><br></div><div>To address these issues, Microsoft has released OOB updates for the Windows Server versions listed below. Note: The Windows Server 2025 OOB update (<a href=\"https://support.microsoft.com/help/5091157\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091157</a>) addresses both the installation failure issue and the domain controller restart issue. OOB updates released for other supported Windows Server versions address only the domain controller restart issue.</div><div><br></div><div>For complete guidance and installation instructions, see the relevant KB articles:</div><div><br></div><div>Standard Windows updates</div><ul><li>Windows Server 2025: <a href=\"https://support.microsoft.com/topic/13ab53cc-ccc8-4a00-89d2-823b58fa03ec\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091157 (OS Build 26100.32698) Out-of-band</a></li><li>Windows Server, version 23H2: <a href=\"https://support.microsoft.com/help/5091571\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091571 (OS Build 25398.2276) Out-of-band</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/topic/4a5a784e-e50a-4358-8093-b1654aecdbd1\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091575 (OS Build 20348.5024) Out-of-band</a></li><li>Windows Server 2019: <a href=\"https://support.microsoft.com/topic/08263e6c-c20a-423f-8d75-9c6d77a0c75e\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091573 (OS Build 17763.8647) Out-of-band</a></li><li>Windows Server 2016: <a href=\"https://support.microsoft.com/topic/5df74339-4bd0-4fd0-af74-45972f072abb\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091572 (OS Build 14393.9062) Out-of-band</a></li></ul><div><br></div><div>Windows hotpatch updates</div><ul><li>Windows Server 2025 Datacenter: Azure Edition: <a href=\"https://support.microsoft.com/topic/b09952e2-f7e1-4af0-a479-ecf2c427af56\" rel=\"noopener noreferrer\" target=\"_blank\">Hotpatch KB5091470 (OS Build 26100.32704) Out-of-band</a></li><li>Windows Server 2022 Datacenter: Azure Edition: <a href=\"https://support.microsoft.com/topic/5b2259b9-a15f-4cc4-b18f-f4f2c3b6b184\" rel=\"noopener noreferrer\" target=\"_blank\">Hotpatch KB5091576 (OS Build 20348.5029) Out-of-band</a></li></ul>",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1285472",
-        "m365Source": "message_center",
-        "m365Category": "preventOrFixIssue",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": false,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": true,
-        "m365Tags": [
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1285472"
       },
       {
         "title": "(Updated) Microsoft Entra: Passkeys in registration campaigns update",
@@ -7956,39 +7818,6 @@
         "_normalized_url": "roadmap:560055"
       },
       {
-        "title": "Take action: Out-of-band updates released for Windows Server to address two issues",
-        "link": "https://deltapulse.app/item/MC1285472",
-        "published": "2026-04-19T21:13:15.637Z",
-        "summary": "<div>Microsoft has released out-of-band (OOB) updates today, April 19, 2026, to address issues introduced by the April 2026 Windows security update.</div><div><br></div><div>A limited number of Windows Server 2025 devices might experience failures installing the April 2026 security update (<a href=\"https://support.microsoft.com/help/5082063\" rel=\"noopener noreferrer\" target=\"_blank\">KB5082063</a>). In addition, some versions of Windows Server may experience <a href=\"https://learn.microsoft.com/windows/release-health/status-windows-server-2025#4833msgdesc\" rel=\"noopener noreferrer\" target=\"_blank\">domain controllers restarting repeatedly</a> after installing the April 2026 security update.</div><div><br></div><div>To address these issues, Microsoft has released OOB updates for the Windows Server versions listed below. Note: The Windows Server 2025 OOB update (<a href=\"https://support.microsoft.com/help/5091157\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091157</a>) addresses both the installation failure issue and the domain controller restart issue. OOB updates released for other supported Windows Server versions address only the domain controller restart issue.</div><div><br></div><div>For complete guidance and installation instructions, see the relevant KB articles:</div><div><br></div><div>Standard Windows updates</div><ul><li>Windows Server 2025: <a href=\"https://support.microsoft.com/topic/13ab53cc-ccc8-4a00-89d2-823b58fa03ec\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091157 (OS Build 26100.32698) Out-of-band</a></li><li>Windows Server, version 23H2: <a href=\"https://support.microsoft.com/help/5091571\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091571 (OS Build 25398.2276) Out-of-band</a></li><li>Windows Server 2022: <a href=\"https://support.microsoft.com/topic/4a5a784e-e50a-4358-8093-b1654aecdbd1\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091575 (OS Build 20348.5024) Out-of-band</a></li><li>Windows Server 2019: <a href=\"https://support.microsoft.com/topic/08263e6c-c20a-423f-8d75-9c6d77a0c75e\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091573 (OS Build 17763.8647) Out-of-band</a></li><li>Windows Server 2016: <a href=\"https://support.microsoft.com/topic/5df74339-4bd0-4fd0-af74-45972f072abb\" rel=\"noopener noreferrer\" target=\"_blank\">KB5091572 (OS Build 14393.9062) Out-of-band</a></li></ul><div><br></div><div>Windows hotpatch updates</div><ul><li>Windows Server 2025 Datacenter: Azure Edition: <a href=\"https://support.microsoft.com/topic/b09952e2-f7e1-4af0-a479-ecf2c427af56\" rel=\"noopener noreferrer\" target=\"_blank\">Hotpatch KB5091470 (OS Build 26100.32704) Out-of-band</a></li><li>Windows Server 2022 Datacenter: Azure Edition: <a href=\"https://support.microsoft.com/topic/5b2259b9-a15f-4cc4-b18f-f4f2c3b6b184\" rel=\"noopener noreferrer\" target=\"_blank\">Hotpatch KB5091576 (OS Build 20348.5029) Out-of-band</a></li></ul>",
-        "source": "m365",
-        "m365Service": "Windows",
-        "m365AllServices": [
-          "Windows"
-        ],
-        "m365Id": "MC1285472",
-        "m365Source": "message_center",
-        "m365Category": "preventOrFixIssue",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": false,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": true,
-        "m365Tags": [
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1285472"
-      },
-      {
         "title": "Dynamics 365 Contact Center - Use Service Operations Agent to simplify setup tasks",
         "link": "https://deltapulse.app/item/MC1276450",
         "published": "2026-04-10T21:04:17.000Z",
@@ -8256,42 +8085,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1273444"
-      },
-      {
-        "title": "(Updated) Microsoft Teams: AI-powered live interpretation on Teams Phone devices",
-        "link": "https://deltapulse.app/item/MC1263278",
-        "published": "2026-03-27T19:40:28.000Z",
-        "summary": "AI-powered live interpretation will roll out on certified Microsoft Teams Phone devices worldwide from mid to late June 2026 for users with a Microsoft 365 Copilot license. It supports real-time interpretation in various call types, requires policy enabling, and is off by default. Pure PSTN group calls are not supported. <p>Updated April 22, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p><p>We’re adding <b>AI-powered live interpretation</b> to <b>Microsoft Teams Phone devices</b> to help organizations support multilingual collaboration during calls and meetings. This update enables users with a Microsoft 365 Copilot license to hear real-time interpreted audio directly on certified Teams Phone hardware, reducing reliance on external interpreters and improving accessibility for globally distributed teams.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=553594\" target=\"_blank\">553594</a></b>.</p><p><b>[When this will happen]</b></p><p style=\"margin-left: 25px;\"><b>General Availability (Worldwide and GCC): </b>We will begin rolling out in <b>mid-June 2026</b> (previously&nbsp;mid-May)&nbsp;and expect to complete in <b>late June 2026</b> (previously&nbsp;mid-May).</p><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Users on certified Teams Phone devices (touch and non-touch)</li><li>Users with a Microsoft 365 Copilot license</li><li>Admins managing Teams calling and meeting policies</li></ul><p><i>What will happen</i></p><ul><li>Eligible users will be able to use AI-powered live interpretation during:<ul><li>1:1 VoIP and Public Switched Telephone Network (PSTN) calls</li><li>Group VoIP calls</li><li>VoIP group calls escalated with a PSTN user</li><li>Ad-hoc and scheduled meetings</li></ul></li><li>Pure PSTN group calls are <b>not supported</b>.</li><li>On first use, users will select a preferred interpretation language; preferences and volume levels are saved automatically.</li><li>A visual indicator will appear for all participants when interpretation is active.</li><li>Users will only see the AI Interpreter option when:<ul><li>The tenant has enabled the required calling and meeting policies, and</li><li>The user holds an eligible license.</li></ul></li><li>The feature is<b> off by default</b> and does <b>not </b>change calling experiences for users without the required configuration.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/fe1d7652-e911-482a-b7a2-3ec068ecd689/36f0c789077c7f8af181642a24d41adf20574476.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Confirm that users who need this capability have a <b>Microsoft 365 Copilot license</b>.</li><li>Enable AI Interpreter in <i>your Teams policies</i>:<ul><li><i><b>Set-CsTeamsCallingPolicy</b></i></li><li><i><b>Set-CsTeamsMeetingPolicy</b></i></li></ul></li><li>Communicate the experience to your helpdesk and affected Teams Phone users.</li><li>Update internal documentation or device usage guides as needed.</li></ul><p><b>Learn more:</b> <a href=\"https://learn.microsoft.com/microsoftteams/interpreter-agent-teams\" target=\"_blank\">Manage Interpreter agent for your organization | Microsoft Teams | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p> changed 2026-04-22T20:31:23.550Z title summary lastUpdatedDate tags bodyContent New feature User impact Admin impact Microsoft Teams: AI-powered live interpretation on Teams Phone devices Microsoft Teams AI-powered live interpretation will be available on certified Microsoft Teams Phone devices for users with a Microsoft 365 Copilot license starting mid-May 2026. It supports real-time language interpretation during various call types, requires policy enablement, is off by default, and excludes pure PSTN group calls. Android <p><b>[Introduction]</b></p><p>We’re adding <b>AI-powered live interpretation</b> to <b>Microsoft Teams Phone devices</b> to help organizations support multilingual collaboration during calls and meetings. This update enables users with a Microsoft 365 Copilot license to hear real-time interpreted audio directly on certified Teams Phone hardware, reducing reliance on external interpreters and improving accessibility for globally distributed teams.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=553594\" target=\"_blank\">553594</a></b>.</p><p><b>[When this will happen]</b></p><p style=\"margin-left: 25px;\"><b>General Availability (Worldwide and GCC): </b>We will begin rolling out in <b>mid-May 2026</b> and expect to complete in&nbsp;<b>mid-May 2026</b>.</p><p><b>[How this affects your organization]</b></p><p><i>Who is affected</i></p><ul><li>Users on certified Teams Phone devices (touch and non-touch)</li><li>Users with a Microsoft 365 Copilot license</li><li>Admins managing Teams calling and meeting policies</li></ul><p><i>What will happen</i></p><ul><li>Eligible users will be able to use AI-powered live interpretation during:<ul><li>1:1 VoIP and Public Switched Telephone Network (PSTN) calls</li><li>Group VoIP calls</li><li>VoIP group calls escalated with a PSTN user</li><li>Ad-hoc and scheduled meetings</li></ul></li><li>Pure PSTN group calls are <b>not supported</b>.</li><li>On first use, users will select a preferred interpretation language; preferences and volume levels are saved automatically.</li><li>A visual indicator will appear for all participants when interpretation is active.</li><li>Users will only see the AI Interpreter option when:<ul><li>The tenant has enabled the required calling and meeting policies, and</li><li>The user holds an eligible license.</li></ul></li><li>The feature is<b> off by default</b> and does <b>not </b>change calling experiences for users without the required configuration.</li></ul><p><img src=\"https://cxcs.microsoft.net/static/public/messagecenter/neutral/fe1d7652-e911-482a-b7a2-3ec068ecd689/36f0c789077c7f8af181642a24d41adf20574476.png\" style=\"width: 400px;\" alt=\"user settings\"></p><p><b>[What you can do to prepare]</b></p><ul><li>Confirm that users who need this capability have a <b>Microsoft 365 Copilot license</b>.</li><li>Enable AI Interpreter in <i>your Teams policies</i>:<ul><li><i><b>Set-CsTeamsCallingPolicy</b></i></li><li><i><b>Set-CsTeamsMeetingPolicy</b></i></li></ul></li><li>Communicate the experience to your helpdesk and affected Teams Phone users.</li><li>Update internal documentation or device usage guides as needed.</li></ul><p><b>Learn more:</b> <a href=\"https://learn.microsoft.com/microsoftteams/interpreter-agent-teams\" target=\"_blank\">Manage Interpreter agent for your organization | Microsoft Teams | Microsoft Learn</a></p><p><b>[Compliance considerations]</b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p> 2026-03-27T19:41:36.933Z Updated message (Updated) Microsoft Teams: AI-powered live interpretation on Teams Phone devices 2026-04-22T18:16:29.137Z",
-        "source": "m365",
-        "m365Service": "Microsoft Teams",
-        "m365AllServices": [
-          "Microsoft Teams"
-        ],
-        "m365Id": "MC1263278",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Updated message",
-          "New feature",
-          "User impact",
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1263278"
       },
       {
         "title": "(Updated) Microsoft Outlook: Copilot Chat available in shared and delegate mailboxes",
@@ -9453,7 +9246,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-26T15:34:25.318493+00:00",
+    "generatedAt": "2026-04-27T09:15:26.775143+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {
@@ -9646,8 +9439,7 @@
     "2026-04-23",
     "2026-04-22",
     "2026-04-21",
-    "2026-04-20",
-    "2026-04-19"
+    "2026-04-20"
   ],
   "source": "m365"
 }
