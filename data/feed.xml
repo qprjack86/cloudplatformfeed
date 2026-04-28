@@ -4,9 +4,45 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Tue, 28 Apr 2026 12:26:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 16:47:20 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[How Microsoft 1ES uses agentic AI to take on security and compliance at scale]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-microsoft-1es-uses-agentic-ai-to-take-on-security-and/ba-p/4515191</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-microsoft-1es-uses-agentic-ai-to-take-on-security-and/ba-p/4515191</guid>
+      <description><![CDATA[Microsoft’s Customer Zero blog series gives an insider view of how Microsoft builds and operates Microsoft using our trusted, enterprise-grade IQ platform. Learn best practices from our engineering teams with real-world lessons, architectural patterns, and operational strategies for pressure-tested...]]></description>
+      <dc:creator><![CDATA[JennyF]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 16:15:00 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Update host keys to use SFTP on Azure Blob Storage]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-paas-blog/update-host-keys-to-use-sftp-on-azure-blob-storage/ba-p/4515483</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-paas-blog/update-host-keys-to-use-sftp-on-azure-blob-storage/ba-p/4515483</guid>
+      <description><![CDATA[Update host keys to use SFTP on Azure Blob Storage Some Azure Storage users may have received an alert informing that Microsoft will change the public key, like this. This article describes the impact this will have on the SFTP blob service and what are the changes needed.On this article: What is...]]></description>
+      <dc:creator><![CDATA[LuisFilipe]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 14:44:02 GMT</pubDate>
+      <category><![CDATA[Azure PaaS]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-your-ai-agents-before-they-ship-red-teaming-with/ba-p/4515514</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-your-ai-agents-before-they-ship-red-teaming-with/ba-p/4515514</guid>
+      <description><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT You wouldn't ship a web app without running OWASP ZAP or Snyk. So why are AI agents going to production without a single security scan? Prompt injection, data leakage, system prompt theft — the OWASP Top 10 for LLM...]]></description>
+      <dc:creator><![CDATA[vsriramdas]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 13:48:33 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Project Pavilion Presence at KubeCon EU 2026]]></title>
+      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-eu-2026/ba-p/4515518</link>
+      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-eu-2026/ba-p/4515518</guid>
+      <description><![CDATA[KubeCon + CloudNativeCon Europe 2026 took place from 23 to 26 March at RAI Amsterdam, and it was a strong one. The themes running through the week reflected where the cloud native community is right now: AI moving from experimentation into production, platform engineering continuing to mature, and...]]></description>
+      <dc:creator><![CDATA[lexinadolski]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 12:50:16 GMT</pubDate>
+      <category><![CDATA[Linux & Open Source]]></category>
+    </item>
     <item>
       <title><![CDATA[Istio‑Based Weighted Traffic Management on AKS for Enterprise Workloads]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/istio-based-weighted-traffic-management-on-aks-for-enterprise/ba-p/4511520</link>
@@ -51,6 +87,15 @@
       <dc:creator><![CDATA[Niels Laute]]></dc:creator>
       <pubDate>Tue, 28 Apr 2026 11:32:59 GMT</pubDate>
       <category><![CDATA[Windows Command Line]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Simplify Real-Time Pipelines with the Fabric Eventstreams SQL Operator]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/simplify-real-time-pipelines-with-the-fabric-eventstreams-sql-operator-generally-available/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/simplify-real-time-pipelines-with-the-fabric-eventstreams-sql-operator-generally-available/</guid>
+      <description><![CDATA[The SQL operator was first introduced in preview to give customers an early look at a code‑first transformation experience in Fabric Eventstreams. During preview, customers used the SQL operator to simplify real-time pipelines, consolidate transformation logic, and unlock advanced scenarios using...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 09:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Deploying Azure Redis Enterprise with Geo-Replication Using Terraform]]></title>
@@ -411,51 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Fri, 24 Apr 2026 16:45:30 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Designing a Medallion Framework — A Decision Guide]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-a-medallion-framework-a-decision-guide/ba-p/4514349</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-a-medallion-framework-a-decision-guide/ba-p/4514349</guid>
-      <description><![CDATA[Everyone draws the same picture: Bronze → Silver → Gold. Three boxes, three arrows. Done. What that picture hides is the dozen design decisions you have to make inside each box — and the ones you make at the boundaries between them. Get those right and onboarding the 200th table feels like...]]></description>
-      <dc:creator><![CDATA[Subhajit1994]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 16:11:09 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Enhancing Enterprise AI Deployments with Zero Trust Networking]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/enhancing-enterprise-ai-deployments-with-zero-trust-networking/ba-p/4513662</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/enhancing-enterprise-ai-deployments-with-zero-trust-networking/ba-p/4513662</guid>
-      <description><![CDATA[Problem Statement Azure OpenAI is publicly accessible by default Azure OpenAI frequently asked questions | Microsoft Learn Any application with API access can call it from anywhere Violates: Enterprise security policies Zero Trust architecture Key principles of the Zero Trust network model...]]></description>
-      <dc:creator><![CDATA[kirankumar_manchiwar04]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 16:08:22 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Axios npm Supply Chain Compromise – Guidance for Azure Pipelines Customers]]></title>
-      <link>https://devblogs.microsoft.com/devops/axios-npm-supply-chain-compromise-guidance-for-azure-pipelines-customers/</link>
-      <guid>https://devblogs.microsoft.com/devops/axios-npm-supply-chain-compromise-guidance-for-azure-pipelines-customers/</guid>
-      <description><![CDATA[On March 31, 2026, malicious versions of the widely used JavaScript HTTP client library Axios were briefly published to the npm registry as part of a supply chain attack. The affected versions — 1.14.1 and 0.30.4 — included a hidden malicious dependency that executed during installation and...]]></description>
-      <dc:creator><![CDATA[Josef Sin]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 10:40:43 GMT</pubDate>
-      <category><![CDATA[Azure DevOps Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Fabric Influencers Spotlight April 2026]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-april-2026/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-april-2026/</guid>
-      <description><![CDATA[Welcome to the April 2026 edition of the Fabric Influencers Spotlight, a recurring monthly post here to shine a bright light on the places on the internet where Microsoft MVPs & Fabric Super Users are doing some amazing work on all aspects of Microsoft Fabric. The Microsoft Fabric Community team...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 09:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[When RAG Isn’t Enough: Moving from Retrieval to Relationship-Aware Systems in Enterprise AI:]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/when-rag-isn-t-enough-moving-from-retrieval-to-relationship/ba-p/4514185</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/when-rag-isn-t-enough-moving-from-retrieval-to-relationship/ba-p/4514185</guid>
-      <description><![CDATA[The Problem In an enterprise AI scenario, the goal was to map structured feature data to relevant sections within large technical documents. At a glance, this appears to be a straightforward semantic matching problem. Initial results using semantic search were promising. However, as the system was...]]></description>
-      <dc:creator><![CDATA[ankitasarkar]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 07:04:57 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
     </item>
   </channel>
 </rss>
