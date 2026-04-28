@@ -4,9 +4,54 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Tue, 28 Apr 2026 09:18:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 12:26:15 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Istio‑Based Weighted Traffic Management on AKS for Enterprise Workloads]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/istio-based-weighted-traffic-management-on-aks-for-enterprise/ba-p/4511520</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/istio-based-weighted-traffic-management-on-aks-for-enterprise/ba-p/4511520</guid>
+      <description><![CDATA[Istio‑Based Weighted Traffic Management Pre-Requisites: AKS containers (internal pods, no Envoy sidecar) Istio Installed and Configured at AKS Cluster (Ingress Gateway–based traffic management) Section 1 — Overview & Why Istio Is Required In modern distributed systems, traffic control is no longer...]]></description>
+      <dc:creator><![CDATA[Amreen]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 12:23:21 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Welcome to Azure Cosmos DB Conf 2026]]></title>
+      <link>https://devblogs.microsoft.com/cosmosdb/welcome-to-azure-cosmos-db-conf-2026/</link>
+      <guid>https://devblogs.microsoft.com/cosmosdb/welcome-to-azure-cosmos-db-conf-2026/</guid>
+      <description><![CDATA[Today is the day. Azure Cosmos DB Conf 2026, in partnership with AMD, is a free virtual developer event focused on building modern, scalable applications with Azure Cosmos DB. The agenda features Microsoft engineers, product team leaders, and members of the global developer community sharing...]]></description>
+      <dc:creator><![CDATA[Jay Gordon]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 12:00:07 GMT</pubDate>
+      <category><![CDATA[Azure Cosmos DB Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</guid>
+      <description><![CDATA[Following on from months of working alongside customers, partners, and our internal product groups, we have now made two updates to the Azure landing zone (ALZ) and the Sovereign landing zone (SLZ), that I’d like to walk you through in this post: A new dedicated ‘Local’ Management Group added...]]></description>
+      <dc:creator><![CDATA[jtracey93msft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 11:37:32 GMT</pubDate>
+      <category><![CDATA[Governance & Management]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Troubleshooting SQL MI Failover Group Creation in Hub–Spoke Network with Centralized Firewall]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/troubleshooting-sql-mi-failover-group-creation-in-hub-spoke/ba-p/4515482</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/troubleshooting-sql-mi-failover-group-creation-in-hub-spoke/ba-p/4515482</guid>
+      <description><![CDATA[Overview Failover groups for Azure SQL Managed Instance provide a managed way to replicate all user databases from a primary managed instance to a secondary managed instance in another region, with stable listener endpoints that remain constant across geo-failovers. In this post, we share a field...]]></description>
+      <dc:creator><![CDATA[YogeshwaranKannaiyan]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 11:34:48 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[PowerToys 0.99 is here: new monitor controls, easier window management, and Dock upgrades]]></title>
+      <link>https://devblogs.microsoft.com/commandline/powertoys-0-99-is-here-new-monitor-controls-easier-window-management-and-dock-upgrades/</link>
+      <guid>https://devblogs.microsoft.com/commandline/powertoys-0-99-is-here-new-monitor-controls-easier-window-management-and-dock-upgrades/</guid>
+      <description><![CDATA[We’re back with a fresh PowerToys release! This month introduces Power Display for controlling your monitors from the system tray, Grab And Move for quickly moving and resizing windows, and a wave of improvements to Command Palette and the Dock, along with updates across the utility suite. You can...]]></description>
+      <dc:creator><![CDATA[Niels Laute]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 11:32:59 GMT</pubDate>
+      <category><![CDATA[Windows Command Line]]></category>
+    </item>
     <item>
       <title><![CDATA[Deploying Azure Redis Enterprise with Geo-Replication Using Terraform]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-azure-redis-enterprise-with-geo-replication-using/ba-p/4515317</link>
@@ -90,12 +135,12 @@
     </item>
     <item>
       <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</guid>
-      <description><![CDATA[Following on from months of working alongside customers, partners, and our internal product groups, we have now made two updates to the Azure landing zone (ALZ) and the Sovereign landing zone (SLZ), that I’d like to walk you through in this post: A new dedicated ‘Local’ Management Group added...]]></description>
-      <dc:creator><![CDATA[jtracey93msft]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 15:49:59 GMT</pubDate>
-      <category><![CDATA[Governance & Management]]></category>
+      <link>https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/new-local-management-group-for-alz--updated-sovereign-policies-for-slz/4515156</link>
+      <guid>https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/new-local-management-group-for-alz--updated-sovereign-policies-for-slz/4515156</guid>
+      <description><![CDATA[Following on from months of working alongside customers, partners, and our internal product groups, we have now made two updates to the Azure landing zone (ALZ) and the Sovereign landing zone (SLZ), ...Update Type: Announcement, Services: , Categories: Management]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 15:49:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Azure Local expands to sovereign-scale infrastructure with disaggregated deployments]]></title>
@@ -411,51 +456,6 @@
       <dc:creator><![CDATA[ankitasarkar]]></dc:creator>
       <pubDate>Fri, 24 Apr 2026 07:04:57 GMT</pubDate>
       <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[When RAG Isnt Enough: Moving from Retrieval to Relationship-Aware Systems in Enterprise AI:]]></title>
-      <link>https://techcommunity.microsoft.com/blog/azurearchitectureblog/when-rag-isn%E2%80%99t-enough-moving-from-retrieval-to-relationship-aware-systems-in-ent/4514185</link>
-      <guid>https://techcommunity.microsoft.com/blog/azurearchitectureblog/when-rag-isn%E2%80%99t-enough-moving-from-retrieval-to-relationship-aware-systems-in-ent/4514185</guid>
-      <description><![CDATA[The Problem In an enterprise AI scenario, the goal was to map structured feature data to relevant sections within large technical documents. At a glance, this appears to be a straightforward sema...Update Type: Announcement, Services: Azure AI Services, Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 07:04:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[When Anthropic’s Managed Agents Meet Microsoft Hosted Agents]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/when-anthropic-s-managed-agents-meet-microsoft-hosted-agents/ba-p/4514337</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/when-anthropic-s-managed-agents-meet-microsoft-hosted-agents/ba-p/4514337</guid>
-      <description><![CDATA[Let’s start from a real engineering pain point. In their engineering blog Managed Agents, Anthropic describes a sobering observation: while building the agent scaffolding (the “harness”) for Claude Sonnet 4.5, they noticed the model suffered from “context anxiety,” so they added context-reset logic...]]></description>
-      <dc:creator><![CDATA[kinfey]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Stop Experimenting, Start Building: AI Apps & Agents Dev Days Has You Covered]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/stop-experimenting-start-building-ai-apps-agents-dev-days-has/ba-p/4513651</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/stop-experimenting-start-building-ai-apps-agents-dev-days-has/ba-p/4513651</guid>
-      <description><![CDATA[The AI landscape has shifted. The question is no longer “Can we build AI applications?” it’s “Can we build AI applications that actually work in production?” Demos are easy. Reliable, scalable, resilient AI systems that handle real-world complexity? That’s where most teams struggle. If you’re an AI...]]></description>
-      <dc:creator><![CDATA[Lee_Stott]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 05:57:58 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Join our free livestream series on hosting agents in Microsoft Foundry]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-hosting-agents-in-microsoft/ba-p/4508479</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-hosting-agents-in-microsoft/ba-p/4508479</guid>
-      <description><![CDATA[Join us for a new 3‑part livestream series where we deploy AI agents on Microsoft Foundry using Microsoft Agent Framework and LangChain/LangGraph, then level them up with tools, observability, and evals. You'll learn how to: Deploy Python agents to Foundry Hosted agents using the Azure Developer...]]></description>
-      <dc:creator><![CDATA[Pamela_Fox]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 05:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[How to Troubleshoot Azure Functions Host Startup Issue]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-host-startup-issue/ba-p/4512966</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-host-startup-issue/ba-p/4512966</guid>
-      <description><![CDATA[Table of Contents Overview Understanding How the Host Starts Up Host Startup Sequence Host States Key Settings That Affect Startup Startup Failure Categories Common Causes and Solutions 1. Missing or Invalid FUNCTIONS_EXTENSION_VERSION 2. Missing or Mismatched FUNCTIONS_WORKER_RUNTIME 3. Storage...]]></description>
-      <dc:creator><![CDATA[vikasgupta5]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 03:50:54 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
     </item>
   </channel>
 </rss>
