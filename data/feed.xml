@@ -4,9 +4,90 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 27 Apr 2026 16:19:39 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 09:18:16 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Deploying Azure Redis Enterprise with Geo-Replication Using Terraform]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-azure-redis-enterprise-with-geo-replication-using/ba-p/4515317</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-azure-redis-enterprise-with-geo-replication-using/ba-p/4515317</guid>
+      <description><![CDATA[This post walks through a production‑proven pattern for running stateful services across Azure regions using Terraform. We’ll cover a primary–replica Redis architecture, regional isolation with Key Vault and networking, and a clean Terraform parameterization strategy that scales from development to...]]></description>
+      <dc:creator><![CDATA[vsakash]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 07:03:41 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[The Future of Agentic AI: Inside Microsoft Agent Framework 1.0]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-future-of-agentic-ai-inside-microsoft-agent-framework-1-0/ba-p/4510698</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-future-of-agentic-ai-inside-microsoft-agent-framework-1-0/ba-p/4510698</guid>
+      <description><![CDATA[Agentic AI is rapidly moving beyond demos and chatbots toward long‑running, autonomous systems that reason, call tools, collaborate with other agents, and operate reliably in production. On April 3, 2026, Microsoft marked a major milestone with the General Availability (GA) release of Microsoft...]]></description>
+      <dc:creator><![CDATA[rajesh-yadav]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Why Does Azure App Service Return HTTP 404?]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/why-does-azure-app-service-return-http-404/ba-p/4514004</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/why-does-azure-app-service-return-http-404/ba-p/4514004</guid>
+      <description><![CDATA[When an application deployed to Azure App Service suddenly starts returning HTTP 404 – Not Found, it can be confusing —especially when: The deployment completed successfully The App Service shows as Running No obvious errors appear in the portal This behaviour is more common than it appears and is...]]></description>
+      <dc:creator><![CDATA[AmritpalSinghNaroo]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 06:39:38 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Introducing AI Skill Assessment in Azure API Center]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-ai-skill-assessment-in-azure-api-center/ba-p/4515243</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-ai-skill-assessment-in-azure-api-center/ba-p/4515243</guid>
+      <description><![CDATA[As AI skills become central to enterprise automation and intelligent workflows, ensuring their quality, safety, and discoverability at scale is a growing challenge. Today, we're excited to announce skills assessment in Azure API Center — a built-in, automated quality scoring system powered by the...]]></description>
+      <dc:creator><![CDATA[Sreekanth_Thirthala]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 23:33:09 GMT</pubDate>
+      <category><![CDATA[Integrations on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Data Studio is retired: Move your Azure SQL workflow to VS Code in 10 minutes]]></title>
+      <link>https://devblogs.microsoft.com/azure-sql/azure-data-studio-is-retired-move-your-azure-sql-workflow-to-vs-code-in-10-minutes/</link>
+      <guid>https://devblogs.microsoft.com/azure-sql/azure-data-studio-is-retired-move-your-azure-sql-workflow-to-vs-code-in-10-minutes/</guid>
+      <description><![CDATA[Azure Data Studio (ADS) retired on February 6, 2025, and support ended on February 28, 2026. The recommended path forward is Visual Studio Code with the MSSQL extension. If you used ADS daily, this guide gets you productive quickly in VS Code. The focus is on importing your existing setup,...]]></description>
+      <dc:creator><![CDATA[Iqra Shaikh]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 18:20:58 GMT</pubDate>
+      <category><![CDATA[Azure SQL Dev Corner]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Bring your own AI Gateway in Foundry Agent Service]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/561002/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/561002/</guid>
+      <description><![CDATA[Foundry Agent Service now supports bring‑your‑own‑model scenarios, allowing agents to use AI models deployed and managed outside of Foundry, including models hosted behind enterprise AI gateways such as Azure API Management. This enables organizations to integrate custom, fine‑tuned, open‑source,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 18:00:52 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Bring your own AI Gateway in Foundry Agent Service]]></title>
+      <link>https://azure.microsoft.com/updates?id=561002</link>
+      <guid>https://azure.microsoft.com/updates?id=561002</guid>
+      <description><![CDATA[Foundry Agent Service now supports bring‑your‑own‑model scenarios, allowing agents to use AI models deployed and managed outside of Foundry, including models hosted behind enterprise AI gateways such as Azure API Management. This enables organizations toUpdate Type: GA, Services: API Management,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 18:00:52 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Retirement: Prompt Flow in Azure ML and Foundry]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/502936/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/502936/</guid>
+      <description><![CDATA[Prompt Flow will be retired from Microsoft Foundry and Azure Machine Learning on April 20, 2027 and replaced by a single, modern orchestration platform: Microsoft Agent Framework. This change unlocks powerful new capabilities, including a unified, future-proof foundation for building intelligent...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 16:15:55 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Prompt Flow in Azure ML and Foundry]]></title>
+      <link>https://azure.microsoft.com/updates?id=502936</link>
+      <guid>https://azure.microsoft.com/updates?id=502936</guid>
+      <description><![CDATA[Prompt Flow will be retired from Microsoft Foundry and Azure Machine Learning on April 20, 2027 and replaced by a single, modern orchestration platform: Microsoft Agent Framework. This change unlocks powerful new capabilities, including a unified, future-Update Type: Deprecation, Services: Machine...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 16:15:55 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
     <item>
       <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</link>
@@ -24,6 +105,15 @@
       <dc:creator><![CDATA[troettinger]]></dc:creator>
       <pubDate>Mon, 27 Apr 2026 15:45:00 GMT</pubDate>
       <category><![CDATA[Azure Arc]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Bring your Dremio data into OneLake]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/bring-your-dremio-data-into-onelake-preview/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/bring-your-dremio-data-into-onelake-preview/</guid>
+      <description><![CDATA[Starting today, Fabric customers who use Dremio can seamlessly bring their Dremio-managed data into Microsoft OneLake — with zero data duplication — and unlock the full suite of Fabric workloads and integrations. Figure: Creating a new Mirrored Dremio catalog item in Fabric. Bringing Dremio data...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Mon, 27 Apr 2026 12:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Dissecting LLM Container Cold-Start: Where the Time Actually Goes]]></title>
@@ -366,96 +456,6 @@
       <dc:creator><![CDATA[vikasgupta5]]></dc:creator>
       <pubDate>Fri, 24 Apr 2026 03:50:54 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Host a Microsoft Build //local host Event in Your City]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-events/host-a-microsoft-build-local-host-event-in-your-city/ba-p/4514274</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-events/host-a-microsoft-build-local-host-event-in-your-city/ba-p/4514274</guid>
-      <description><![CDATA[Content at Microsoft Build will be grounded in technical depth, developer credibility, and hands-on learning and creation. There are a total of 16 sessions available to build your agenda, including 4 labs and 12 breakout sessions, listed below. Labs are approximately 75 minutes in length, while...]]></description>
-      <dc:creator><![CDATA[GalimahB]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 22:18:07 GMT</pubDate>
-      <category><![CDATA[Azure Events]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Centralizing Enterprise API Access for Agent-Based Architectures]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/centralizing-enterprise-api-access-for-agent-based-architectures/ba-p/4511792</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/centralizing-enterprise-api-access-for-agent-based-architectures/ba-p/4511792</guid>
-      <description><![CDATA[Problem Statement When building AI agents or automation solutions, calling enterprise APIs directly often means configuring individual HTTP actions within each agent for every API. While this works for simple scenarios, it quickly becomes repetitive and difficult to manage as complexity grows. The...]]></description>
-      <dc:creator><![CDATA[sbaskaran]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 21:43:23 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Automatic SSO Takeover in Azure AD B2C Custom Policies]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/automatic-sso-takeover-in-azure-ad-b2c-custom-policies/ba-p/4514167</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/automatic-sso-takeover-in-azure-ad-b2c-custom-policies/ba-p/4514167</guid>
-      <description><![CDATA[Why This Matters As organizations modernize authentication, many shift toward Single Sign-On (SSO) using providers like Microsoft EntraID. But if you already have users in Azure AD B2C using local accounts (email + password), the transition isn’t straightforward. You’ll run into: Duplicate...]]></description>
-      <dc:creator><![CDATA[anammalu]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 21:34:55 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Capacity Autoscaling]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560919/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560919/</guid>
-      <description><![CDATA[Capacity Autoscaling support is now generally available on Elastic SAN. Customers can avoid the constraints of overprovisioning and manual capacity management by setting a policy to automatically expand SAN Capacity based on usage. Autoscaling provides the ability to specify scaling increments for...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 18:30:11 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Capacity Autoscaling]]></title>
-      <link>https://azure.microsoft.com/updates?id=560919</link>
-      <guid>https://azure.microsoft.com/updates?id=560919</guid>
-      <description><![CDATA[Capacity Autoscaling support is now generally available on Elastic SAN. Customers can avoid the constraints of overprovisioning and manual capacity management by setting a policy to automatically expand SAN Capacity based on usage. Autoscaling provides thUpdate Type: GA, Services: Azure Elastic...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 18:30:11 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Enabling Agentic Data Governance with Hybrid Cloud Flexibility in Azure]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/enabling-agentic-data-governance-with-hybrid-cloud-flexibility/ba-p/4513511</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/enabling-agentic-data-governance-with-hybrid-cloud-flexibility/ba-p/4513511</guid>
-      <description><![CDATA[The “Why” Do you manage data in a complex multi-cloud environment? Are you struggling with data silos, evolving regulations, and the pressure to maintain control and compliance across on-prem and multiple clouds? Do you ever wish an intelligent assistant could help shoulder the load of data...]]></description>
-      <dc:creator><![CDATA[Moaz_Mirza]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 18:17:35 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[LangChain.js for Beginners: A Free Course to Build Agentic AI Apps with JavaScript]]></title>
-      <link>https://devblogs.microsoft.com/blog/langchainjs-for-beginners</link>
-      <guid>https://devblogs.microsoft.com/blog/langchainjs-for-beginners</guid>
-      <description><![CDATA[Want to build AI agents with JavaScript that go beyond basic chat completions? Agents that reason, call tools, and pull from knowledge bases on their own? We put together a free, open source course to help you get there. LangChain.js for Beginners is 8 chapters and 70+ runnable TypeScript examples....]]></description>
-      <dc:creator><![CDATA[Yohan Lasorsa]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 17:00:14 GMT</pubDate>
-      <category><![CDATA[Microsoft Developers Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Single Sign-On (SSO) from Native Apps to Embedded Web Views in Microsoft Entra External ID Native Authentication]]></title>
-      <link>https://devblogs.microsoft.com/identity/native-auth-sso-ga/</link>
-      <guid>https://devblogs.microsoft.com/identity/native-auth-sso-ga/</guid>
-      <description><![CDATA[We’re excited to announce the General Availability (GA) of Single Sign-On (SSO) from Native Apps to Embedded Web Views for Microsoft Entra External ID (EEID) Native Authentication. This release marks a major milestone in delivering end-to-end seamless authentication experiences for modern CIAM...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 16:51:24 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Azure Monitor for Azure Arc-enabled Kubernetes with OpenShift and Azure Red Hat OpenShift]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560358/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560358/</guid>
-      <description><![CDATA[Azure Monitor provides a complete set of services for monitoring the health and performance of different layers of your Kubernetes infrastructure and the applications that depend on it.Azure Monitor support for Azure Arc-enabled Kubernetes with OpenShift and Azure Red Hat OpenShift with Container...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 16:45:55 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Monitor for Azure Arc-enabled Kubernetes with OpenShift and Azure Red Hat OpenShift]]></title>
-      <link>https://azure.microsoft.com/updates?id=560358</link>
-      <guid>https://azure.microsoft.com/updates?id=560358</guid>
-      <description><![CDATA[Azure Monitor provides a complete set of services for monitoring the health and performance of different layers of your Kubernetes infrastructure and the applications that depend on it.Azure Monitor support for Azure Arc-enabled Kubernetes with OpenShiftUpdate Type: GA, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 23 Apr 2026 16:45:55 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
