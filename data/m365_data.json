@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-29T12:20:38.186555+00:00",
-  "totalArticles": 86,
+  "generatedAt": "2026-04-29T16:24:23.820350+00:00",
+  "totalArticles": 85,
   "articles": [
     {
       "title": "Microsoft Copilot (Microsoft 365): Additional meeting results in Copilot responses",
@@ -2219,41 +2219,6 @@
       "_normalized_url": "message_center:MC1288264"
     },
     {
-      "title": "Microsoft Security Exposure Management Secure Now",
-      "link": "https://deltapulse.app/item/MC1288236",
-      "published": "2026-04-22T15:49:36.000Z",
-      "summary": "Microsoft will integrate advanced AI models into its Security Development Lifecycle by April 2026 to identify vulnerabilities and provide mitigations. Customers should follow guidance via Microsoft Security Exposure Management to reduce exposure in key areas like patching and baseline security hygiene. <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\">AI-powered defense for an AI-accelerated threat landscape</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance captured in <a href=\"https://security.microsoft.com/securenow\" target=\"_blank\">https://security.microsoft.com/securenow</a> and take action to reduce their exposure in areas where autonomous AI‑driven attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp; </p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.</p> changed 2026-04-24T16:30:53.767Z lastUpdatedDate bodyContent Feature update Admin impact Microsoft Security Exposure Management Secure Now Microsoft Copilot (Microsoft 365) Microsoft 365 Copilot Chat <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">https://aka.ms/prioritizingdefense</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance and&nbsp;take action to reduce&nbsp;their exposure to&nbsp;the five dimensions where autonomous&nbsp;AI‑driven&nbsp;attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp;&nbsp;</p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.&nbsp;</p> 2026-04-24T00:21:41.607Z 2026-04-24T15:25:52.590Z",
-      "source": "m365",
-      "m365Service": "Microsoft Copilot (Microsoft 365)",
-      "m365AllServices": [
-        "Microsoft Copilot (Microsoft 365)",
-        "Microsoft 365 Copilot Chat"
-      ],
-      "m365Id": "MC1288236",
-      "m365Source": "message_center",
-      "m365Category": "planForChange",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365WasUpdated": false,
-      "m365ScheduleUpdated": false,
-      "m365IsMajorChange": false,
-      "m365Tags": [
-        "Feature update",
-        "Admin impact"
-      ],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementStartDate": null,
-      "m365RetirementEndDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1288236"
-    },
-    {
       "title": "Power Apps - Information regarding the end of support for embedding model-driven apps (preview) in Microsoft Teams",
       "link": "https://deltapulse.app/item/MC1273328",
       "published": "2026-04-07T19:29:05.000Z",
@@ -2426,6 +2391,41 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1272546"
+    },
+    {
+      "title": "Microsoft Security Exposure Management Secure Now",
+      "link": "https://deltapulse.app/item/MC1288236",
+      "published": "2026-04-22T15:49:36.000Z",
+      "summary": "Microsoft will integrate advanced AI models into its Security Development Lifecycle by April 2026 to identify vulnerabilities and provide mitigations. Customers should follow guidance via Microsoft Security Exposure Management to reduce exposure in key areas like patching and baseline security hygiene. <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\">AI-powered defense for an AI-accelerated threat landscape</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance captured in <a href=\"https://security.microsoft.com/securenow\" target=\"_blank\">https://security.microsoft.com/securenow</a> and take action to reduce their exposure in areas where autonomous AI‑driven attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp; </p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.</p> changed 2026-04-24T16:30:53.767Z lastUpdatedDate bodyContent Feature update Admin impact Microsoft Security Exposure Management Secure Now Microsoft Copilot (Microsoft 365) Microsoft 365 Copilot Chat <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">https://aka.ms/prioritizingdefense</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance and&nbsp;take action to reduce&nbsp;their exposure to&nbsp;the five dimensions where autonomous&nbsp;AI‑driven&nbsp;attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp;&nbsp;</p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.&nbsp;</p> 2026-04-24T00:21:41.607Z 2026-04-24T15:25:52.590Z",
+      "source": "m365",
+      "m365Service": "Microsoft Copilot (Microsoft 365)",
+      "m365AllServices": [
+        "Microsoft Copilot (Microsoft 365)",
+        "Microsoft 365 Copilot Chat"
+      ],
+      "m365Id": "MC1288236",
+      "m365Source": "message_center",
+      "m365Category": "planForChange",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "April 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365WasUpdated": true,
+      "m365ScheduleUpdated": false,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "Feature update",
+        "Admin impact"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementStartDate": null,
+      "m365RetirementEndDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1288236"
     },
     {
       "title": "(Updated) Microsoft Entra: Passkeys in registration campaigns update",
@@ -2755,41 +2755,6 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1287370"
-    },
-    {
-      "title": "(Updated) Engage is retiring live events powered by Teams Live Events effective April 27th, 2026",
-      "link": "https://deltapulse.app/item/MC1227085",
-      "published": "2026-02-05T00:07:04.000Z",
-      "summary": "Engage will retire live events powered by Teams Live Events on April 27, 2026, stopping new event scheduling then but supporting existing events until February 28, 2027. Organizations should migrate to Engage events powered by Teams town halls and update documentation accordingly. <p>Updated April 21, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p><p>Engage will retire <b>live events powered by Teams Live Events</b>&nbsp;effective April 27, 2026. Existing live events already scheduled will continue to be supported through February 28, 2027. We encourage customers to transition to events in <b>Engage </b>powered by <b>Teams town halls</b>, which offer an improved experience for large-scale digital and hybrid events.</p><p><b>[When this will happen:]</b></p><ul><li><b>Effective April 27, 2026: </b>You will no longer have the option to schedule a <b>live event in Engage </b>powered by <b>Teams Live Events</b>.</li><li><b>Through February 28, 2027: Engage </b>will continue to support<b> any live events powered by Teams Live Events </b>that were scheduled before April 27, 2026.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected: </b>Organizations using<b> live events in Engage</b> powered by <b>Teams Live Events</b>.</p> <p><b>What will happen: </b></p><ul><li>You will no longer be able to schedule a <b>live event in Engage</b> powered by<b> Teams Live Events</b> starting April 27, 2026.</li><li><b>Engage </b>will continue to support already scheduled <b>live events powered by Teams Live Events</b> through February 28, 2027.</li></ul><p><b>[What you can do to prepare:]</b></p><ul><li>Migrate to events in <b>Engage </b>powered by <b>Teams town halls</b>.</li><li>Review and update internal documentation to reflect this change. </li></ul><p>Explore these resources:</p><ul><li><a href=\"https://support.microsoft.com/office/organize-a-live-event-with-teams-town-hall-197dcfbb-14d8-4b8e-a038-5bc730c726d1\" target=\"_blank\">Organize a Live event with Teams town hall&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/microsoftteams/plan-town-halls\" target=\"_blank\">Plan for Teams town halls</a> </li><li><a href=\"https://learn.microsoft.com/graph/cloud-communications-virtual-events-townhall-usecases\" target=\"_blank\">Virtual Events Graph APIs</a> </li><li><a href=\"https://adoption.microsoft.com/customer-hub/microsoft-teams-events-readiness/\" target=\"_blank\">Customer Hub events readiness sessions</a> - recommended sessions for Teams live event users transitioning to Teams town halls:<ul><li><i>What’s new in Microsoft Teams town halls and webinars</i></li><li><i>Migrating from Teams live events to town halls</i></li><li><i>Tips, tricks, and traps for town halls and webinars in Microsoft Teams</i></li></ul></li></ul><p><b>[Compliance considerations:] </b></p><p>No compliance considerations identified; review as appropriate for your organization. </p><p></p> changed 2026-04-22T16:30:56.650Z title summary lastUpdatedDate tags bodyContent User impact Retirement Engage is retiring live events powered by Teams Live Events effective April 15th, 2026 Microsoft Viva Engage will retire live events powered by Teams Live Events on April 15, 2026. Existing events scheduled before this date will be supported until February 28, 2027. Users should migrate to Engage events powered by Teams town halls and update internal documentation accordingly. <p><b>[Introduction]</b></p><p>Engage will retire <b>live events powered by Teams Live Events</b>&nbsp;effective April 15, 2026. Existing live events already scheduled will continue to be supported through February 28, 2027. We encourage customers to transition to events in <b>Engage </b>powered by <b>Teams town halls</b>, which offer an improved experience for large-scale digital and hybrid events.</p><p><b>[When this will happen:]</b></p><ul><li><b>Effective April 15, 2026: </b>You will no longer have the option to schedule a <b>live event in Engage </b>powered by <b>Teams Live Events</b>.</li><li><b>Through February 28, 2027: Engage </b>will continue to support<b> any live events powered by Teams Live Events </b>that were scheduled before April 15, 2026.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected: </b>Organizations using<b> live events in Engage</b> powered by <b>Teams Live Events</b>.</p> <p><b>What will happen: </b></p><ul><li>You will no longer be able to schedule a <b>live event in Engage</b> powered by<b> Teams Live Events</b> starting April 15, 2026.</li><li><b>Engage </b>will continue to support already scheduled <b>live events powered by Teams Live Events</b> through February 28, 2027.</li></ul><p><b>[What you can do to prepare:]</b></p><ul><li>Migrate to events in <b>Engage </b>powered by <b>Teams town halls</b>.</li><li>Review and update internal documentation to reflect this change. </li></ul><p>Explore these resources:</p><ul><li><a href=\"https://support.microsoft.com/office/organize-a-live-event-with-teams-town-hall-197dcfbb-14d8-4b8e-a038-5bc730c726d1\" target=\"_blank\">Organize a Live event with Teams town hall&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/microsoftteams/plan-town-halls\" target=\"_blank\">Plan for Teams town halls</a> </li><li><a href=\"https://learn.microsoft.com/graph/cloud-communications-virtual-events-townhall-usecases\" target=\"_blank\">Virtual Events Graph APIs</a> </li><li><a href=\"https://adoption.microsoft.com/customer-hub/microsoft-teams-events-readiness/\" target=\"_blank\">Customer Hub events readiness sessions</a> - recommended sessions for Teams live event users transitioning to Teams town halls:<ul><li><i>What’s new in Microsoft Teams town halls and webinars</i></li><li><i>Migrating from Teams live events to town halls</i></li><li><i>Tips, tricks, and traps for town halls and webinars in Microsoft Teams</i></li></ul></li></ul><p><b>[Compliance considerations:] </b></p><p>No compliance considerations identified; review as appropriate for your organization. </p><p></p> 2026-02-05T00:07:23.170Z Updated message (Updated) Engage is retiring live events powered by Teams Live Events effective April 27th, 2026 2026-04-22T16:14:04.883Z",
-      "source": "m365",
-      "m365Service": "Microsoft Viva",
-      "m365AllServices": [
-        "Microsoft Viva"
-      ],
-      "m365Id": "MC1227085",
-      "m365Source": "message_center",
-      "m365Category": "planForChange",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026, February 2027",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365WasUpdated": true,
-      "m365ScheduleUpdated": false,
-      "m365IsMajorChange": true,
-      "m365Tags": [
-        "Updated message",
-        "User impact",
-        "Retirement"
-      ],
-      "m365RetirementSignal": true,
-      "m365ActByDate": null,
-      "m365RetirementStartDate": "2026-04-27",
-      "m365RetirementEndDate": "2027-04-15",
-      "m365RetirementDate": "2027-04-15",
-      "m365RetirementDatePrecision": "day",
-      "lifecycle": "retiring",
-      "_normalized_url": "message_center:MC1227085"
     }
   ],
   "byCategory": {
@@ -3490,41 +3455,6 @@
         "_normalized_url": "message_center:MC1289783"
       },
       {
-        "title": "Microsoft Security Exposure Management Secure Now",
-        "link": "https://deltapulse.app/item/MC1288236",
-        "published": "2026-04-22T15:49:36.000Z",
-        "summary": "Microsoft will integrate advanced AI models into its Security Development Lifecycle by April 2026 to identify vulnerabilities and provide mitigations. Customers should follow guidance via Microsoft Security Exposure Management to reduce exposure in key areas like patching and baseline security hygiene. <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\">AI-powered defense for an AI-accelerated threat landscape</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance captured in <a href=\"https://security.microsoft.com/securenow\" target=\"_blank\">https://security.microsoft.com/securenow</a> and take action to reduce their exposure in areas where autonomous AI‑driven attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp; </p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.</p> changed 2026-04-24T16:30:53.767Z lastUpdatedDate bodyContent Feature update Admin impact Microsoft Security Exposure Management Secure Now Microsoft Copilot (Microsoft 365) Microsoft 365 Copilot Chat <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">https://aka.ms/prioritizingdefense</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance and&nbsp;take action to reduce&nbsp;their exposure to&nbsp;the five dimensions where autonomous&nbsp;AI‑driven&nbsp;attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp;&nbsp;</p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.&nbsp;</p> 2026-04-24T00:21:41.607Z 2026-04-24T15:25:52.590Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Microsoft 365)",
-        "m365AllServices": [
-          "Microsoft Copilot (Microsoft 365)",
-          "Microsoft 365 Copilot Chat"
-        ],
-        "m365Id": "MC1288236",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": false,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Feature update",
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1288236"
-      },
-      {
         "title": "(Updated) Use Copilot to create and edit Pages in the Microsoft 365 Copilot mobile app",
         "link": "https://deltapulse.app/item/MC1266900",
         "published": "2026-03-31T22:54:28.000Z",
@@ -3558,6 +3488,41 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1266900"
+      },
+      {
+        "title": "Microsoft Security Exposure Management Secure Now",
+        "link": "https://deltapulse.app/item/MC1288236",
+        "published": "2026-04-22T15:49:36.000Z",
+        "summary": "Microsoft will integrate advanced AI models into its Security Development Lifecycle by April 2026 to identify vulnerabilities and provide mitigations. Customers should follow guidance via Microsoft Security Exposure Management to reduce exposure in key areas like patching and baseline security hygiene. <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\">AI-powered defense for an AI-accelerated threat landscape</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance captured in <a href=\"https://security.microsoft.com/securenow\" target=\"_blank\">https://security.microsoft.com/securenow</a> and take action to reduce their exposure in areas where autonomous AI‑driven attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp; </p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.</p> changed 2026-04-24T16:30:53.767Z lastUpdatedDate bodyContent Feature update Admin impact Microsoft Security Exposure Management Secure Now Microsoft Copilot (Microsoft 365) Microsoft 365 Copilot Chat <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">https://aka.ms/prioritizingdefense</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance and&nbsp;take action to reduce&nbsp;their exposure to&nbsp;the five dimensions where autonomous&nbsp;AI‑driven&nbsp;attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp;&nbsp;</p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.&nbsp;</p> 2026-04-24T00:21:41.607Z 2026-04-24T15:25:52.590Z",
+        "source": "m365",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
+        "m365AllServices": [
+          "Microsoft Copilot (Microsoft 365)",
+          "Microsoft 365 Copilot Chat"
+        ],
+        "m365Id": "MC1288236",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365WasUpdated": true,
+        "m365ScheduleUpdated": false,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Feature update",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementStartDate": null,
+        "m365RetirementEndDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1288236"
       }
     ],
     "Security & Compliance": [
@@ -5557,41 +5522,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1287370"
-      },
-      {
-        "title": "(Updated) Engage is retiring live events powered by Teams Live Events effective April 27th, 2026",
-        "link": "https://deltapulse.app/item/MC1227085",
-        "published": "2026-02-05T00:07:04.000Z",
-        "summary": "Engage will retire live events powered by Teams Live Events on April 27, 2026, stopping new event scheduling then but supporting existing events until February 28, 2027. Organizations should migrate to Engage events powered by Teams town halls and update documentation accordingly. <p>Updated April 21, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p><p>Engage will retire <b>live events powered by Teams Live Events</b>&nbsp;effective April 27, 2026. Existing live events already scheduled will continue to be supported through February 28, 2027. We encourage customers to transition to events in <b>Engage </b>powered by <b>Teams town halls</b>, which offer an improved experience for large-scale digital and hybrid events.</p><p><b>[When this will happen:]</b></p><ul><li><b>Effective April 27, 2026: </b>You will no longer have the option to schedule a <b>live event in Engage </b>powered by <b>Teams Live Events</b>.</li><li><b>Through February 28, 2027: Engage </b>will continue to support<b> any live events powered by Teams Live Events </b>that were scheduled before April 27, 2026.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected: </b>Organizations using<b> live events in Engage</b> powered by <b>Teams Live Events</b>.</p> <p><b>What will happen: </b></p><ul><li>You will no longer be able to schedule a <b>live event in Engage</b> powered by<b> Teams Live Events</b> starting April 27, 2026.</li><li><b>Engage </b>will continue to support already scheduled <b>live events powered by Teams Live Events</b> through February 28, 2027.</li></ul><p><b>[What you can do to prepare:]</b></p><ul><li>Migrate to events in <b>Engage </b>powered by <b>Teams town halls</b>.</li><li>Review and update internal documentation to reflect this change. </li></ul><p>Explore these resources:</p><ul><li><a href=\"https://support.microsoft.com/office/organize-a-live-event-with-teams-town-hall-197dcfbb-14d8-4b8e-a038-5bc730c726d1\" target=\"_blank\">Organize a Live event with Teams town hall&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/microsoftteams/plan-town-halls\" target=\"_blank\">Plan for Teams town halls</a> </li><li><a href=\"https://learn.microsoft.com/graph/cloud-communications-virtual-events-townhall-usecases\" target=\"_blank\">Virtual Events Graph APIs</a> </li><li><a href=\"https://adoption.microsoft.com/customer-hub/microsoft-teams-events-readiness/\" target=\"_blank\">Customer Hub events readiness sessions</a> - recommended sessions for Teams live event users transitioning to Teams town halls:<ul><li><i>What’s new in Microsoft Teams town halls and webinars</i></li><li><i>Migrating from Teams live events to town halls</i></li><li><i>Tips, tricks, and traps for town halls and webinars in Microsoft Teams</i></li></ul></li></ul><p><b>[Compliance considerations:] </b></p><p>No compliance considerations identified; review as appropriate for your organization. </p><p></p> changed 2026-04-22T16:30:56.650Z title summary lastUpdatedDate tags bodyContent User impact Retirement Engage is retiring live events powered by Teams Live Events effective April 15th, 2026 Microsoft Viva Engage will retire live events powered by Teams Live Events on April 15, 2026. Existing events scheduled before this date will be supported until February 28, 2027. Users should migrate to Engage events powered by Teams town halls and update internal documentation accordingly. <p><b>[Introduction]</b></p><p>Engage will retire <b>live events powered by Teams Live Events</b>&nbsp;effective April 15, 2026. Existing live events already scheduled will continue to be supported through February 28, 2027. We encourage customers to transition to events in <b>Engage </b>powered by <b>Teams town halls</b>, which offer an improved experience for large-scale digital and hybrid events.</p><p><b>[When this will happen:]</b></p><ul><li><b>Effective April 15, 2026: </b>You will no longer have the option to schedule a <b>live event in Engage </b>powered by <b>Teams Live Events</b>.</li><li><b>Through February 28, 2027: Engage </b>will continue to support<b> any live events powered by Teams Live Events </b>that were scheduled before April 15, 2026.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected: </b>Organizations using<b> live events in Engage</b> powered by <b>Teams Live Events</b>.</p> <p><b>What will happen: </b></p><ul><li>You will no longer be able to schedule a <b>live event in Engage</b> powered by<b> Teams Live Events</b> starting April 15, 2026.</li><li><b>Engage </b>will continue to support already scheduled <b>live events powered by Teams Live Events</b> through February 28, 2027.</li></ul><p><b>[What you can do to prepare:]</b></p><ul><li>Migrate to events in <b>Engage </b>powered by <b>Teams town halls</b>.</li><li>Review and update internal documentation to reflect this change. </li></ul><p>Explore these resources:</p><ul><li><a href=\"https://support.microsoft.com/office/organize-a-live-event-with-teams-town-hall-197dcfbb-14d8-4b8e-a038-5bc730c726d1\" target=\"_blank\">Organize a Live event with Teams town hall&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/microsoftteams/plan-town-halls\" target=\"_blank\">Plan for Teams town halls</a> </li><li><a href=\"https://learn.microsoft.com/graph/cloud-communications-virtual-events-townhall-usecases\" target=\"_blank\">Virtual Events Graph APIs</a> </li><li><a href=\"https://adoption.microsoft.com/customer-hub/microsoft-teams-events-readiness/\" target=\"_blank\">Customer Hub events readiness sessions</a> - recommended sessions for Teams live event users transitioning to Teams town halls:<ul><li><i>What’s new in Microsoft Teams town halls and webinars</i></li><li><i>Migrating from Teams live events to town halls</i></li><li><i>Tips, tricks, and traps for town halls and webinars in Microsoft Teams</i></li></ul></li></ul><p><b>[Compliance considerations:] </b></p><p>No compliance considerations identified; review as appropriate for your organization. </p><p></p> 2026-02-05T00:07:23.170Z Updated message (Updated) Engage is retiring live events powered by Teams Live Events effective April 27th, 2026 2026-04-22T16:14:04.883Z",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1227085",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026, February 2027",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": true,
-        "m365Tags": [
-          "Updated message",
-          "User impact",
-          "Retirement"
-        ],
-        "m365RetirementSignal": true,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": "2026-04-27",
-        "m365RetirementEndDate": "2027-04-15",
-        "m365RetirementDate": "2027-04-15",
-        "m365RetirementDatePrecision": "day",
-        "lifecycle": "retiring",
-        "_normalized_url": "message_center:MC1227085"
       }
     ]
   },
@@ -7714,41 +7644,6 @@
         "_normalized_url": "message_center:MC1288264"
       },
       {
-        "title": "Microsoft Security Exposure Management Secure Now",
-        "link": "https://deltapulse.app/item/MC1288236",
-        "published": "2026-04-22T15:49:36.000Z",
-        "summary": "Microsoft will integrate advanced AI models into its Security Development Lifecycle by April 2026 to identify vulnerabilities and provide mitigations. Customers should follow guidance via Microsoft Security Exposure Management to reduce exposure in key areas like patching and baseline security hygiene. <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\">AI-powered defense for an AI-accelerated threat landscape</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance captured in <a href=\"https://security.microsoft.com/securenow\" target=\"_blank\">https://security.microsoft.com/securenow</a> and take action to reduce their exposure in areas where autonomous AI‑driven attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp; </p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.</p> changed 2026-04-24T16:30:53.767Z lastUpdatedDate bodyContent Feature update Admin impact Microsoft Security Exposure Management Secure Now Microsoft Copilot (Microsoft 365) Microsoft 365 Copilot Chat <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">https://aka.ms/prioritizingdefense</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance and&nbsp;take action to reduce&nbsp;their exposure to&nbsp;the five dimensions where autonomous&nbsp;AI‑driven&nbsp;attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp;&nbsp;</p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.&nbsp;</p> 2026-04-24T00:21:41.607Z 2026-04-24T15:25:52.590Z",
-        "source": "m365",
-        "m365Service": "Microsoft Copilot (Microsoft 365)",
-        "m365AllServices": [
-          "Microsoft Copilot (Microsoft 365)",
-          "Microsoft 365 Copilot Chat"
-        ],
-        "m365Id": "MC1288236",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": false,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Feature update",
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1288236"
-      },
-      {
         "title": "(Updated) Team site homepages will automatically collapse inactive News web parts",
         "link": "https://deltapulse.app/item/MC1287368",
         "published": "2026-04-21T22:50:22.000Z",
@@ -7887,6 +7782,41 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1272546"
+      },
+      {
+        "title": "Microsoft Security Exposure Management Secure Now",
+        "link": "https://deltapulse.app/item/MC1288236",
+        "published": "2026-04-22T15:49:36.000Z",
+        "summary": "Microsoft will integrate advanced AI models into its Security Development Lifecycle by April 2026 to identify vulnerabilities and provide mitigations. Customers should follow guidance via Microsoft Security Exposure Management to reduce exposure in key areas like patching and baseline security hygiene. <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\">AI-powered defense for an AI-accelerated threat landscape</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance captured in <a href=\"https://security.microsoft.com/securenow\" target=\"_blank\">https://security.microsoft.com/securenow</a> and take action to reduce their exposure in areas where autonomous AI‑driven attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp; </p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.</p> changed 2026-04-24T16:30:53.767Z lastUpdatedDate bodyContent Feature update Admin impact Microsoft Security Exposure Management Secure Now Microsoft Copilot (Microsoft 365) Microsoft 365 Copilot Chat <p>[Introduction]</p><p></p><p>Microsoft is taking steps to help keep customers safe as AI models become more advanced&nbsp;including&nbsp;plans&nbsp;to incorporate advanced AI models directly into&nbsp;our&nbsp;<a href=\"https://www.microsoft.com/en-us/securityengineering/sdl/\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">Security Development Lifecycle (SDL)</a>&nbsp;to&nbsp;identify&nbsp;vulnerabilities and develop mitigations and updates. We are also sharing guidance&nbsp;through Microsoft Security Exposure Management&nbsp;on&nbsp;how customers can&nbsp;reduce their exposure&nbsp;as well as capabilities they can use to&nbsp;take action.&nbsp;You can learn more in our blog here:&nbsp;<a href=\"https://aka.ms/prioritizingdefense\" style=\"background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\">https://aka.ms/prioritizingdefense</a>&nbsp;</p><p>[When this will happen:]</p><p>General Availability (Worldwide): We will begin rolling out on late April 2026 and expect to complete by late April 2026.</p><p>[How this will affect your organization:]</p><p></p><p>Customers should review the guidance and&nbsp;take action to reduce&nbsp;their exposure to&nbsp;the five dimensions where autonomous&nbsp;AI‑driven&nbsp;attacks gain disproportionate advantage - patching, open-source software, customer source code, internet-facing assets, and baseline security hygiene.&nbsp;&nbsp;</p><p>[What you need to do to prepare:]</p><p></p><p>Customers can review the guidance&nbsp;in&nbsp;Microsoft Security Exposure Management at&nbsp;<a href=\"https://security.microsoft.com/securenow\">https://security.microsoft.com/securenow</a>&nbsp;and use the capabilities provided to take action.&nbsp;</p> 2026-04-24T00:21:41.607Z 2026-04-24T15:25:52.590Z",
+        "source": "m365",
+        "m365Service": "Microsoft Copilot (Microsoft 365)",
+        "m365AllServices": [
+          "Microsoft Copilot (Microsoft 365)",
+          "Microsoft 365 Copilot Chat"
+        ],
+        "m365Id": "MC1288236",
+        "m365Source": "message_center",
+        "m365Category": "planForChange",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "April 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365WasUpdated": true,
+        "m365ScheduleUpdated": false,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Feature update",
+          "Admin impact"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementStartDate": null,
+        "m365RetirementEndDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1288236"
       },
       {
         "title": "(Updated) Microsoft Entra: Passkeys in registration campaigns update",
@@ -8355,41 +8285,6 @@
         "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1230889"
-      },
-      {
-        "title": "(Updated) Engage is retiring live events powered by Teams Live Events effective April 27th, 2026",
-        "link": "https://deltapulse.app/item/MC1227085",
-        "published": "2026-02-05T00:07:04.000Z",
-        "summary": "Engage will retire live events powered by Teams Live Events on April 27, 2026, stopping new event scheduling then but supporting existing events until February 28, 2027. Organizations should migrate to Engage events powered by Teams town halls and update documentation accordingly. <p>Updated April 21, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p><p>Engage will retire <b>live events powered by Teams Live Events</b>&nbsp;effective April 27, 2026. Existing live events already scheduled will continue to be supported through February 28, 2027. We encourage customers to transition to events in <b>Engage </b>powered by <b>Teams town halls</b>, which offer an improved experience for large-scale digital and hybrid events.</p><p><b>[When this will happen:]</b></p><ul><li><b>Effective April 27, 2026: </b>You will no longer have the option to schedule a <b>live event in Engage </b>powered by <b>Teams Live Events</b>.</li><li><b>Through February 28, 2027: Engage </b>will continue to support<b> any live events powered by Teams Live Events </b>that were scheduled before April 27, 2026.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected: </b>Organizations using<b> live events in Engage</b> powered by <b>Teams Live Events</b>.</p> <p><b>What will happen: </b></p><ul><li>You will no longer be able to schedule a <b>live event in Engage</b> powered by<b> Teams Live Events</b> starting April 27, 2026.</li><li><b>Engage </b>will continue to support already scheduled <b>live events powered by Teams Live Events</b> through February 28, 2027.</li></ul><p><b>[What you can do to prepare:]</b></p><ul><li>Migrate to events in <b>Engage </b>powered by <b>Teams town halls</b>.</li><li>Review and update internal documentation to reflect this change. </li></ul><p>Explore these resources:</p><ul><li><a href=\"https://support.microsoft.com/office/organize-a-live-event-with-teams-town-hall-197dcfbb-14d8-4b8e-a038-5bc730c726d1\" target=\"_blank\">Organize a Live event with Teams town hall&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/microsoftteams/plan-town-halls\" target=\"_blank\">Plan for Teams town halls</a> </li><li><a href=\"https://learn.microsoft.com/graph/cloud-communications-virtual-events-townhall-usecases\" target=\"_blank\">Virtual Events Graph APIs</a> </li><li><a href=\"https://adoption.microsoft.com/customer-hub/microsoft-teams-events-readiness/\" target=\"_blank\">Customer Hub events readiness sessions</a> - recommended sessions for Teams live event users transitioning to Teams town halls:<ul><li><i>What’s new in Microsoft Teams town halls and webinars</i></li><li><i>Migrating from Teams live events to town halls</i></li><li><i>Tips, tricks, and traps for town halls and webinars in Microsoft Teams</i></li></ul></li></ul><p><b>[Compliance considerations:] </b></p><p>No compliance considerations identified; review as appropriate for your organization. </p><p></p> changed 2026-04-22T16:30:56.650Z title summary lastUpdatedDate tags bodyContent User impact Retirement Engage is retiring live events powered by Teams Live Events effective April 15th, 2026 Microsoft Viva Engage will retire live events powered by Teams Live Events on April 15, 2026. Existing events scheduled before this date will be supported until February 28, 2027. Users should migrate to Engage events powered by Teams town halls and update internal documentation accordingly. <p><b>[Introduction]</b></p><p>Engage will retire <b>live events powered by Teams Live Events</b>&nbsp;effective April 15, 2026. Existing live events already scheduled will continue to be supported through February 28, 2027. We encourage customers to transition to events in <b>Engage </b>powered by <b>Teams town halls</b>, which offer an improved experience for large-scale digital and hybrid events.</p><p><b>[When this will happen:]</b></p><ul><li><b>Effective April 15, 2026: </b>You will no longer have the option to schedule a <b>live event in Engage </b>powered by <b>Teams Live Events</b>.</li><li><b>Through February 28, 2027: Engage </b>will continue to support<b> any live events powered by Teams Live Events </b>that were scheduled before April 15, 2026.</li></ul><p><b>[How this affects your organization:]</b></p> <p><b>Who is affected: </b>Organizations using<b> live events in Engage</b> powered by <b>Teams Live Events</b>.</p> <p><b>What will happen: </b></p><ul><li>You will no longer be able to schedule a <b>live event in Engage</b> powered by<b> Teams Live Events</b> starting April 15, 2026.</li><li><b>Engage </b>will continue to support already scheduled <b>live events powered by Teams Live Events</b> through February 28, 2027.</li></ul><p><b>[What you can do to prepare:]</b></p><ul><li>Migrate to events in <b>Engage </b>powered by <b>Teams town halls</b>.</li><li>Review and update internal documentation to reflect this change. </li></ul><p>Explore these resources:</p><ul><li><a href=\"https://support.microsoft.com/office/organize-a-live-event-with-teams-town-hall-197dcfbb-14d8-4b8e-a038-5bc730c726d1\" target=\"_blank\">Organize a Live event with Teams town hall&nbsp;</a></li><li><a href=\"https://learn.microsoft.com/microsoftteams/plan-town-halls\" target=\"_blank\">Plan for Teams town halls</a> </li><li><a href=\"https://learn.microsoft.com/graph/cloud-communications-virtual-events-townhall-usecases\" target=\"_blank\">Virtual Events Graph APIs</a> </li><li><a href=\"https://adoption.microsoft.com/customer-hub/microsoft-teams-events-readiness/\" target=\"_blank\">Customer Hub events readiness sessions</a> - recommended sessions for Teams live event users transitioning to Teams town halls:<ul><li><i>What’s new in Microsoft Teams town halls and webinars</i></li><li><i>Migrating from Teams live events to town halls</i></li><li><i>Tips, tricks, and traps for town halls and webinars in Microsoft Teams</i></li></ul></li></ul><p><b>[Compliance considerations:] </b></p><p>No compliance considerations identified; review as appropriate for your organization. </p><p></p> 2026-02-05T00:07:23.170Z Updated message (Updated) Engage is retiring live events powered by Teams Live Events effective April 27th, 2026 2026-04-22T16:14:04.883Z",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1227085",
-        "m365Source": "message_center",
-        "m365Category": "planForChange",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026, February 2027",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": true,
-        "m365Tags": [
-          "Updated message",
-          "User impact",
-          "Retirement"
-        ],
-        "m365RetirementSignal": true,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": "2026-04-27",
-        "m365RetirementEndDate": "2027-04-15",
-        "m365RetirementDate": "2027-04-15",
-        "m365RetirementDatePrecision": "day",
-        "lifecycle": "retiring",
-        "_normalized_url": "message_center:MC1227085"
       }
     ]
   },
@@ -9238,30 +9133,6 @@
       "retirementEndDate": "2027-03-20"
     },
     {
-      "title": "(Updated) Engage is retiring live events powered by Teams Live Events effective April 27th, 2026",
-      "link": "https://deltapulse.app/item/MC1227085",
-      "retirementDate": "2027-04-15",
-      "datePrecision": "day",
-      "retirementStartDate": "2026-04-27",
-      "retirementEndDate": "2027-04-15",
-      "published": "2026-02-05T00:07:04.000Z",
-      "blog": "Microsoft Viva",
-      "blogId": "m365",
-      "announcementType": "retirement",
-      "sources": [
-        "Microsoft Viva"
-      ],
-      "sourceCount": 1,
-      "primaryCategory": "planForChange",
-      "categories": [
-        "planForChange"
-      ],
-      "categorySourceMap": {
-        "m365": "planForChange"
-      },
-      "source": "m365"
-    },
-    {
       "title": "Engage is retiring live events powered by Teams Live Events effective April 15th, 2026",
       "link": "https://deltapulse.app/item/MC1227085",
       "retirementDate": "2027-04-15",
@@ -9297,7 +9168,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-04-29T12:20:38.186363+00:00",
+    "generatedAt": "2026-04-29T16:24:23.820084+00:00",
     "referenceMonth": "2026-04",
     "windows": {
       "0_3_months": {

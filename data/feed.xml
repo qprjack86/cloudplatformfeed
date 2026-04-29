@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 29 Apr 2026 12:20:18 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 16:24:03 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Azure Monitor Service Level Indicators (SLI)]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-service-level-indicators-sli/ba-p/4507445</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-service-level-indicators-sli/ba-p/4507445</guid>
+      <description><![CDATA[Announcing Public Preview of Azure Monitor SLIs Today, we are excited to introduce Service Level Indicators (SLI) and Service Level Objectives (SLO) in Azure Monitor a step forward in helping teams measure how customers are experiencing their applications. SLI: A quantitative measure of how well an...]]></description>
+      <dc:creator><![CDATA[Sokuma]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 16:16:56 GMT</pubDate>
+      <category><![CDATA[Azure Observability]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Refresh Token (RT) Transfer to Apple Watch in Microsoft Entra External ID Native Authentication]]></title>
+      <link>https://devblogs.microsoft.com/identity/native-auth-refresh-token-transfer-ga/</link>
+      <guid>https://devblogs.microsoft.com/identity/native-auth-refresh-token-transfer-ga/</guid>
+      <description><![CDATA[We’re excited to announce the General Availability (GA) of Single Sign-On (SSO) from Native Apps to Embedded Web Views for Microsoft Entra External ID (EEID) Native Authentication. This release marks a major milestone in delivering end-to-end seamless authentication experiences for modern CIAM...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 15:13:11 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[SDK-Style Support for Extension Projects]]></title>
+      <link>https://devblogs.microsoft.com/visualstudio/sdk-style-support-for-extension-projects/</link>
+      <guid>https://devblogs.microsoft.com/visualstudio/sdk-style-support-for-extension-projects/</guid>
+      <description><![CDATA[Starting in Visual Studio 18.5, you can create and build Visual Studio extensions (VSIX) using an officially supported SDK-style project. This brings VSIX projects into the modern build and deployment pipeline, improving incremental build performance and making the build → deploy → debug workflow...]]></description>
+      <dc:creator><![CDATA[Matt Clark]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 14:00:36 GMT</pubDate>
+      <category><![CDATA[Visual Studio Blog]]></category>
+    </item>
     <item>
       <title><![CDATA[Migrating Splunk Logs to Azure Application Insights on VMs]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-splunk-logs-to-azure-application-insights-on-vms/ba-p/4515866</link>
@@ -429,33 +456,6 @@
       <dc:creator><![CDATA[aloormahesh]]></dc:creator>
       <pubDate>Mon, 27 Apr 2026 07:45:35 GMT</pubDate>
       <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Rethinking Data Modeling: How GitHub Copilot Is Changing the Way We Design Systems]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/rethinking-data-modeling-how-github-copilot-is-changing-the-way/ba-p/4509941</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/rethinking-data-modeling-how-github-copilot-is-changing-the-way/ba-p/4509941</guid>
-      <description><![CDATA[There is a point in every engineer’s journey where data modeling stops feeling intuitive. What starts as a clean schema becomes harder to reason about. Relationships blur. Query paths multiply. Small changes ripple across different steps. This is where data modeling reveals its real challenge: not...]]></description>
-      <dc:creator><![CDATA[B_Manasa]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure AI Foundry vs Traditional ML Pipelines: What’s Different and Why It Matters]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-ai-foundry-vs-traditional-ml-pipelines-what-s-different/ba-p/4508897</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-ai-foundry-vs-traditional-ml-pipelines-what-s-different/ba-p/4508897</guid>
-      <description><![CDATA[The Traditional ML Pipeline: What It Was Built For Traditional ML pipelines typically look like this: Data ingestion and preparation Model training (often batch‑oriented) Model validation and versioning Deployment via APIs or batch jobs Monitoring focused on accuracy and drift This approach worked...]]></description>
-      <dc:creator><![CDATA[Parvathy_R_Pillai]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 06:06:18 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure AI Foundry vs Traditional ML Pipelines: Whats Different and Why It Matters]]></title>
-      <link>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/azure-ai-foundry-vs-traditional-ml-pipelines-what%E2%80%99s-different-and-why-it-matters/4508897</link>
-      <guid>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/azure-ai-foundry-vs-traditional-ml-pipelines-what%E2%80%99s-different-and-why-it-matters/4508897</guid>
-      <description><![CDATA[The Traditional ML Pipeline: What It Was Built For Traditional ML pipelines typically look like this: Data ingestion and preparation Model training (often batch‑oriented) Model validation a...Update Type: Announcement, Services: Azure AI Services, Microsoft Foundry, Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 06:06:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
