@@ -4,9 +4,216 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Tue, 28 Apr 2026 16:47:20 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 12:20:18 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Migrating Splunk Logs to Azure Application Insights on VMs]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-splunk-logs-to-azure-application-insights-on-vms/ba-p/4515866</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-splunk-logs-to-azure-application-insights-on-vms/ba-p/4515866</guid>
+      <description><![CDATA[Phase 0 – Understanding the Current Environment Before touching any code or agents, map out the existing architecture. Current setup: Applications write logs via log4net → local log files on VMs Splunk Universal Forwarders read logs → send to Splunk Indexers Splunk dashboards, alerts, and...]]></description>
+      <dc:creator><![CDATA[skundapura]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 11:35:03 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[AG-UI: The Future of Agent-Driven User Interfaces]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ag-ui-the-future-of-agent-driven-user-interfaces/ba-p/4515769</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ag-ui-the-future-of-agent-driven-user-interfaces/ba-p/4515769</guid>
+      <description><![CDATA[As AI agents evolve from simple chatbots into workflow engines, decision-makers, and copilots, one challenge has remained stubbornly unsolved: How do we connect intelligent agents to rich, dynamic, user-facing interfaces without custom plumbing every single time? Introducing AG-UI (Agent–User...]]></description>
+      <dc:creator><![CDATA[VaidhyaP]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 09:30:48 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Upcoming Compute API Change: Always return non-null securityType]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387</guid>
+      <description><![CDATA[Overview Starting with Azure Compute API version 2025‑11‑01, responses for Azure Virtual Machines (VMs) and Virtual Machine Scale Sets (VMSS) will include a non‑null securityType value in all operations. While this is a small behavioral change, it can impact deployments if they rely on null checks...]]></description>
+      <dc:creator><![CDATA[AjKundnani]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 09:02:08 GMT</pubDate>
+      <category><![CDATA[Azure Compute]]></category>
+    </item>
+    <item>
+      <title><![CDATA[General availability of Default Ruleset (DRS) 2.2 for Web Application Firewall]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-network-security-blog/general-availability-of-default-ruleset-drs-2-2-for-web/ba-p/4515762</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-network-security-blog/general-availability-of-default-ruleset-drs-2-2-for-web/ba-p/4515762</guid>
+      <description><![CDATA[Introduction As attackers continue to evolve their techniques, organizations require web application security that keeps pace with emerging threats without disrupting legitimate traffic. Azure Web Application Firewall (WAF) continues to evolve to meet these demands and now supports Default Rule Set...]]></description>
+      <dc:creator><![CDATA[andrewmathu]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 08:31:47 GMT</pubDate>
+      <category><![CDATA[Azure Network Security]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-your-ai-agents-before-they-ship-red-teaming-with/ba-p/4515514</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-your-ai-agents-before-they-ship-red-teaming-with/ba-p/4515514</guid>
+      <description><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT You wouldn't ship a web app without running OWASP ZAP or Snyk. So why are AI agents going to production without a single security scan? Prompt injection, data leakage, system prompt theft — the OWASP Top 10 for LLM...]]></description>
+      <dc:creator><![CDATA[vsriramdas]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 08:22:53 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Making Sense of Azure AI Foundry IQ]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/making-sense-of-azure-ai-foundry-iq/ba-p/4513131</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/making-sense-of-azure-ai-foundry-iq/ba-p/4513131</guid>
+      <description><![CDATA[As enterprise teams build AI agents, the hardest design decisions often have nothing to do with models. Instead, they revolve around a more fundamental question: How should an agent access organizational knowledge in a way that is accurate, secure, and sustainable over time? Azure AI Foundry IQ is...]]></description>
+      <dc:creator><![CDATA[Samarpitaa]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Building an Enterprise Knowledge Copilot with Foundry IQ and Agentic Retrieval on Azure AI]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-enterprise-knowledge-copilot-with-foundry-iq-and/ba-p/4512308</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-enterprise-knowledge-copilot-with-foundry-iq-and/ba-p/4512308</guid>
+      <description><![CDATA[Every enterprise has the same problem: knowledge scattered across SharePoint, file shares, wikis, and email. This article walks through building a knowledge copilot that unifies that data behind a single conversational interface — using Microsoft's Foundry IQ knowledge bases and the agentic...]]></description>
+      <dc:creator><![CDATA[Shah_Viral]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Transforming Video Content into Structured SOPs Using Graph-based RAG]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/transforming-video-content-into-structured-sops-using-graph/ba-p/4515038</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/transforming-video-content-into-structured-sops-using-graph/ba-p/4515038</guid>
+      <description><![CDATA[Introduction In today’s digital-first environments, a large portion of enterprise knowledge lives inside video content, training sessions, onboarding walkthroughs, and recorded operational procedures. While videos are great for learning, they are not ideal for quick reference, compliance, or...]]></description>
+      <dc:creator><![CDATA[dikshashakya]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 01:04:53 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Building a Scalable IoT Platform for Facility Management with Azure Serverless Services]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-scalable-iot-platform-for-facility-management-with/ba-p/4495263</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-scalable-iot-platform-for-facility-management-with/ba-p/4495263</guid>
+      <description><![CDATA[Business Requirements The business required a platform that could: - Handle multi-provider device telemetry ingestion - Apply configurable business rules in real-time - Send automated notifications via email and SMS - Provide operations teams with a modern portal for monitoring and control -...]]></description>
+      <dc:creator><![CDATA[nishantmv]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 01:01:56 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Flexible Cooling for AI Growth: How Zonal Architecture Supports Diverse Hardware Needs]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/flexible-cooling-for-ai-growth-how-zonal-architecture-supports/ba-p/4514042</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/flexible-cooling-for-ai-growth-how-zonal-architecture-supports/ba-p/4514042</guid>
+      <description><![CDATA[By: Ricardo Bianchini, Steve Solomon, Brijesh Warrier, Martin Herbert, Jay Jochim, Husam Alissa, Pulkit Misra, Eric Peterson and Cam Turner Context - Microsoft is pioneering zonal cooling in its next-generation AI datacenters, enabling flexible, performant, efficient, and sustainable thermal...]]></description>
+      <dc:creator><![CDATA[stsolo]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 00:58:54 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Memory in Foundry Agent Service]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560992/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560992/</guid>
+      <description><![CDATA[Foundry’s memory (preview) is a managed long-term memory capability built directly into Foundry Agent Service and now integrates natively with Microsoft Agent Framework and LangGraph— no external databases to provision, scale, or secure.]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 00:00:55 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Memory in Foundry Agent Service]]></title>
+      <link>https://azure.microsoft.com/updates?id=560992</link>
+      <guid>https://azure.microsoft.com/updates?id=560992</guid>
+      <description><![CDATA[Foundry’s memory (preview) is a managed long-term memory capability built directly into Foundry Agent Service and now integrates natively with Microsoft Agent Framework and LangGraph— no external databases to provision, scale, or secure.Update Type: Preview, Services: Microsoft Foundry, Categories:...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 00:00:55 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Container Network Insights Agent]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/561020/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/561020/</guid>
+      <description><![CDATA[Troubleshooting Kubernetes networking issues is often slowed by logs and metrics scattered across multiple tools, requiring engineers to manually correlate signals during incidents. The Container Network Insights Agent provides a lightweight, web‑based interface that translates natural‑language...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 21:30:30 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Container Network Insights Agent]]></title>
+      <link>https://azure.microsoft.com/updates?id=561020</link>
+      <guid>https://azure.microsoft.com/updates?id=561020</guid>
+      <description><![CDATA[Troubleshooting Kubernetes networking issues is often slowed by logs and metrics scattered across multiple tools, requiring engineers to manually correlate signals during incidents. The Container Network Insights Agent provides a lightweight, web‑based inUpdate Type: Preview, Services: Kubernetes...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 21:30:30 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Connect to Elastic SAN from Windows VM via VM Extension]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560914/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560914/</guid>
+      <description><![CDATA[Azure Elastic SAN now supports volume connectivity for Windows Virtual Machines using the Elastic SAN VM extension, directly from the Azure Portal. This capability enables customers to connect Elastic SAN volumes during virtual machine deployment, simplifying setup by reducing the need for manual...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 20:30:56 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Connect to Elastic SAN from Windows VM via VM Extension]]></title>
+      <link>https://azure.microsoft.com/updates?id=560914</link>
+      <guid>https://azure.microsoft.com/updates?id=560914</guid>
+      <description><![CDATA[Azure Elastic SAN now supports volume connectivity for Windows Virtual Machines using the Elastic SAN VM extension, directly from the Azure Portal. This capability enables customers to connect Elastic SAN volumes during virtual machine deployment, simplifUpdate Type: GA, Services: Virtual Machines,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 20:30:56 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Visual Studio April Update – Cloud Agent Integration]]></title>
+      <link>https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/</link>
+      <guid>https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/</guid>
+      <description><![CDATA[GitHub Copilot in Visual Studio is becoming more agentic with every release. This update brings cloud agent integration front and center, letting you start remote coding sessions without leaving the IDE. The post Visual Studio April Update – Cloud Agent Integration appeared first on Visual Studio...]]></description>
+      <dc:creator><![CDATA[Mark Downie]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 19:00:04 GMT</pubDate>
+      <category><![CDATA[Visual Studio Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[The problem: All-or-nothing batch processing in Azure Service Bus]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/per-message-settlement-azure-service-bus/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/per-message-settlement-azure-service-bus/</guid>
+      <description><![CDATA[Azure Functions lets you settle each Service Bus message on its own within a batch. Complete, abandon, dead-letter, or defer messages one by one to avoid duplicate processing and handle errors with precision. The post The problem: All-or-nothing batch processing in Azure Service Bus appeared first...]]></description>
+      <dc:creator><![CDATA[Swapnil Nagar]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 18:47:37 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[HashiCorp Vault Integration with Terraform — Secure Secret Management]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/hashicorp-vault-integration-with-terraform-secure-secret/ba-p/4508444</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/hashicorp-vault-integration-with-terraform-secure-secret/ba-p/4508444</guid>
+      <description><![CDATA[Introduction When provisioning cloud infrastructure using Terraform, it is common to require sensitive values such as: Administrative credentials (usernames, passwords) API keys and tokens SSH keys Database connection strings Domain join credentials In most environments, these secrets are commonly:...]]></description>
+      <dc:creator><![CDATA[singhshub]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 17:55:27 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Cross-region IPAM pool association in Azure Virtual Network Manager]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/561067/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/561067/</guid>
+      <description><![CDATA[Managing IP address space across multiple regions can be difficult to scale and prone to configuration mistakes.With cross-region IPAM pool association, you can associate a single IPAM pool with virtual networks across multiple Azure regions. This helps centralize address planning, simplify...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 17:45:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Public Preview: Microsoft HTTP DDoS Ruleset for Azure WAF on Azure Front Door Premium]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/561148/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/561148/</guid>
+      <description><![CDATA[Announcing the public preview of the HTTP DDoS Ruleset on Azure Front Door Premium.HTTP-layer DDoS attacks remain a leading cause of application downtime, and traditional static controls often fall short against evolving botnets. The new HTTP DDoS Ruleset for Azure WAF introduces automated,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 17:45:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Microsoft HTTP DDoS Ruleset for Azure WAF on Azure Front Door Premium]]></title>
+      <link>https://azure.microsoft.com/updates?id=561148</link>
+      <guid>https://azure.microsoft.com/updates?id=561148</guid>
+      <description><![CDATA[Announcing the public preview of the HTTP DDoS Ruleset on Azure Front Door Premium.HTTP-layer DDoS attacks remain a leading cause of application downtime, and traditional static controls often fall short against evolving botnets. The new HTTP DDoS RulesetUpdate Type: Preview, Services: App Service,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 17:45:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Cross-region IPAM pool association in Azure Virtual Network Manager]]></title>
+      <link>https://azure.microsoft.com/updates?id=561067</link>
+      <guid>https://azure.microsoft.com/updates?id=561067</guid>
+      <description><![CDATA[Managing IP address space across multiple regions can be difficult to scale and prone to configuration mistakes.With cross-region IPAM pool association, you can associate a single IPAM pool with virtual networks across multiple Azure regions. This helps cUpdate Type: GA, Services: Virtual Network,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 17:45:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
     <item>
       <title><![CDATA[How Microsoft 1ES uses agentic AI to take on security and compliance at scale]]></title>
       <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-microsoft-1es-uses-agentic-ai-to-take-on-security-and/ba-p/4515191</link>
@@ -27,12 +234,12 @@
     </item>
     <item>
       <title><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-your-ai-agents-before-they-ship-red-teaming-with/ba-p/4515514</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-your-ai-agents-before-they-ship-red-teaming-with/ba-p/4515514</guid>
-      <description><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT You wouldn't ship a web app without running OWASP ZAP or Snyk. So why are AI agents going to production without a single security scan? Prompt injection, data leakage, system prompt theft — the OWASP Top 10 for LLM...]]></description>
-      <dc:creator><![CDATA[vsriramdas]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 13:48:33 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
+      <link>https://techcommunity.microsoft.com/blog/appsonazureblog/securing-your-ai-agents-before-they-ship-red-teaming-with-microsoft-pyrit/4515514</link>
+      <guid>https://techcommunity.microsoft.com/blog/appsonazureblog/securing-your-ai-agents-before-they-ship-red-teaming-with-microsoft-pyrit/4515514</guid>
+      <description><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT You wouldn't ship a web app without running OWASP ZAP or Snyk. So why are AI agents going to production without a sing...Update Type: Announcement, Services: , Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Tue, 28 Apr 2026 13:48:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Project Pavilion Presence at KubeCon EU 2026]]></title>
@@ -248,213 +455,6 @@
       <description><![CDATA[The Traditional ML Pipeline: What It Was Built For Traditional ML pipelines typically look like this: Data ingestion and preparation Model training (often batch‑oriented) Model validation a...Update Type: Announcement, Services: Azure AI Services, Microsoft Foundry, Categories:]]></description>
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Mon, 27 Apr 2026 06:06:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[How to Troubleshoot Azure Functions Service Bus Trigger Issues]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-service-bus-trigger-issues/ba-p/4514006</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-service-bus-trigger-issues/ba-p/4514006</guid>
-      <description><![CDATA[Table of Contents Overview Understanding How the Service Bus Trigger Works Message Processing Flow Key Concepts host.json Configuration Reference Issue Categories Common Causes and Solutions 1. Connection String or Configuration Errors 2. Authentication and Authorization Failures (RBAC / SAS) 3....]]></description>
-      <dc:creator><![CDATA[vikasgupta5]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 06:01:56 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft’s New In‑House AI Models (MAI‑Transcribe, MAI‑Voice, MAI‑Image)]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-s-new-in-house-ai-models-mai-transcribe-mai-voice-mai/ba-p/4512731</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-s-new-in-house-ai-models-mai-transcribe-mai-voice-mai/ba-p/4512731</guid>
-      <description><![CDATA[What Are the New MAI Models? MAI‑Transcribe‑1 (Speech‑to‑Text) MAI‑Transcribe‑1 is Microsoft’s first‑generation in‑house speech recognition model. It supports 25 languages and is optimized for real‑world, noisy enterprise audio, such as meetings and call centers. Key highlights Enterprise‑grade...]]></description>
-      <dc:creator><![CDATA[kumar_rahul]]></dc:creator>
-      <pubDate>Sun, 26 Apr 2026 11:56:35 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsofts New In-House AI Models (MAI-Transcribe, MAI-Voice, MAI-Image)]]></title>
-      <link>https://techcommunity.microsoft.com/blog/appsonazureblog/microsoft%E2%80%99s-new-in%E2%80%91house-ai-models-mai%E2%80%91transcribe-mai%E2%80%91voice-mai%E2%80%91image/4512731</link>
-      <guid>https://techcommunity.microsoft.com/blog/appsonazureblog/microsoft%E2%80%99s-new-in%E2%80%91house-ai-models-mai%E2%80%91transcribe-mai%E2%80%91voice-mai%E2%80%91image/4512731</guid>
-      <description><![CDATA[What Are the New MAI Models? MAI‑Transcribe‑1 (Speech‑to‑Text) MAI‑Transcribe‑1 is Microsoft’s first‑generation in‑house speech recognition model. It supports 25 languages and is optimized for re...Update Type: Announcement, Services: , Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Sun, 26 Apr 2026 11:56:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Dev Containers for .NET in VS Code: A Beginner‑Friendly Guide That Actually Works]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/dev-containers-for-net-in-vs-code-a-beginner-friendly-guide-that/ba-p/4507785</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/dev-containers-for-net-in-vs-code-a-beginner-friendly-guide-that/ba-p/4507785</guid>
-      <description><![CDATA[What Dev Containers are really about At a high level, Dev Containers let you use a Docker container as your development environment inside VS Code. But the real idea is not “Docker for development”. The real idea is this: Move all environment complexity out of your laptop and into...]]></description>
-      <dc:creator><![CDATA[Debapriya]]></dc:creator>
-      <pubDate>Sun, 26 Apr 2026 05:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Key Vault Auto‑Rotation Practicle Guide]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-key-vault-auto-rotation-practicle-guide/ba-p/4513816</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/azure-key-vault-auto-rotation-practicle-guide/ba-p/4513816</guid>
-      <description><![CDATA[If you’ve ever been called into a Severity-1 issue because a certificate expired at midnight, you already understand why credential rotation matters. Keys, secrets, and certificates sit quietly in the background and when they expire, applications go dark, trust breaks, and teams scramble. This is...]]></description>
-      <dc:creator><![CDATA[ChandraHundigam_MSFT]]></dc:creator>
-      <pubDate>Sun, 26 Apr 2026 03:21:33 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[How ACR Artifact Cache Handles Multi-Arch Images: What Gets Cached and When Webhooks Fire]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-acr-artifact-cache-handles-multi-arch-images-what-gets/ba-p/4514744</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-acr-artifact-cache-handles-multi-arch-images-what-gets/ba-p/4514744</guid>
-      <description><![CDATA[By Johnson Shi (Senior Product Manager), Toddy Mladenov (Principal PM Manager), Luis Dieguez (Principal SWE Manager), Akash Singhal (Senior Software Engineer), Kiran Challa (Senior Software Engineer), Ren Shao (Senior Software Engineer) Introduction Three of the most common questions we hear from...]]></description>
-      <dc:creator><![CDATA[johnsonshi_msft]]></dc:creator>
-      <pubDate>Sat, 25 Apr 2026 19:37:56 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Modernizing Industrial Safety and Inspection with AI-Driven Drone Automation]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/modernizing-industrial-safety-and-inspection-with-ai-driven/ba-p/4514284</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/modernizing-industrial-safety-and-inspection-with-ai-driven/ba-p/4514284</guid>
-      <description><![CDATA[In large-scale manufacturing and infrastructure environments, maintaining structural integrity is a continuous operational challenge. Industrial facilities—from automotive plants to energy and infrastructure sites—depend on thousands of structural connection points such as bolts and fasteners to...]]></description>
-      <dc:creator><![CDATA[PeterTHLee]]></dc:creator>
-      <pubDate>Sat, 25 Apr 2026 00:07:31 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure MCP Server now available as an MCP Bundle (.mcpb)]]></title>
-      <link>https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-mcpb-support/</link>
-      <guid>https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-mcpb-support/</guid>
-      <description><![CDATA[Azure MCP Server is now available as an MCP Bundle (.mcpb), enabling one-click installation into Claude Desktop and other MCP-compatible clients. The post Azure MCP Server now available as an MCP Bundle (.mcpb) appeared first on Azure SDK Blog.]]></description>
-      <dc:creator><![CDATA[Victor Colin Amador]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 20:32:49 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[AI-Powered Downtime Investigation for Azure VMs: Automating Root Cause Analysis]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-compute-blog/ai-powered-downtime-investigation-for-azure-vms-automating-root/ba-p/4513473</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-compute-blog/ai-powered-downtime-investigation-for-azure-vms-automating-root/ba-p/4513473</guid>
-      <description><![CDATA[Co-authors: Jie Su, Abhinav Dua, Mukthar Ahmed, Dhruv Joshi, Dibyendu Mondal In a previous post, we shared how Azure Automated VM Recovery works to minimize virtual machine downtime through a three-stage approach: Detection, Diagnosis, and Mitigation. This post goes one layer deeper into how our...]]></description>
-      <dc:creator><![CDATA[Jon_Andoni_Baranda]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:35:28 GMT</pubDate>
-      <category><![CDATA[Azure Compute]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Azure Backup for Elastic SAN]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560904/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560904/</guid>
-      <description><![CDATA[Azure Backup now supports Elastic SAN, offering a fully managed solution for backing up and restoring Elastic SAN volumes. This integration helps protect data against accidental deletions, ransomware attacks, and application updates by exporting Elastic SAN volumes to independent Managed Disk...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:30:50 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Backup for Elastic SAN]]></title>
-      <link>https://azure.microsoft.com/updates?id=560904</link>
-      <guid>https://azure.microsoft.com/updates?id=560904</guid>
-      <description><![CDATA[Azure Backup now supports Elastic SAN, offering a fully managed solution for backing up and restoring Elastic SAN volumes. This integration helps protect data against accidental deletions, ransomware attacks, and application updates by exporting Elastic SUpdate Type: Preview, Services: Azure...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:30:50 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: WireGuard In‑Transit Encryption for Azure Kubernetes Service (AKS)]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560015/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560015/</guid>
-      <description><![CDATA[WireGuard in‑transit encryption is now generally available for Azure Kubernetes Service (AKS) clusters using Azure CNI powered by Cilium and Advanced Container Networking Services (ACNS). This capability enables transparent, node‑level encryption for inter‑node pod traffic using WireGuard’s modern...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:15:17 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Foundry Toolkit for Visual Studio Code (formerly AI Toolkit for VS Code)]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560987/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560987/</guid>
-      <description><![CDATA[Foundry Toolkit for VS Code is now generally available and provides VS Code tooling for Microsoft Agent Framework, including agent creation from templates or via GitHub Copilot, local test/debug with visualization and traces, and direct deployment to Foundry Agent Service from VS Code.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:15:17 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Hosted Agents in Foundry Agent Service]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560997/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560997/</guid>
-      <description><![CDATA[Hosted agents run in an isolated execution sandbox that provides a dedicated, secure runtime per agent session. Sessions start with a clean environment with no shared state between sessions, no cross-session data leakage, and strong compute boundaries between tenants.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:15:17 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Hosted Agents in Foundry Agent Service]]></title>
-      <link>https://azure.microsoft.com/updates?id=560997</link>
-      <guid>https://azure.microsoft.com/updates?id=560997</guid>
-      <description><![CDATA[Hosted agents run in an isolated execution sandbox that provides a dedicated, secure runtime per agent session. Sessions start with a clean environment with no shared state between sessions, no cross-session data leakage, and strong compute boundaries betUpdate Type: Preview, Services: Microsoft...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:15:17 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Foundry Toolkit for Visual Studio Code (formerly AI Toolkit for VS Code)]]></title>
-      <link>https://azure.microsoft.com/updates?id=560987</link>
-      <guid>https://azure.microsoft.com/updates?id=560987</guid>
-      <description><![CDATA[Foundry Toolkit for VS Code is now generally available and provides VS Code tooling for Microsoft Agent Framework, including agent creation from templates or via GitHub Copilot, local test/debug with visualization and traces, and direct deployment to FounUpdate Type: GA, Services: Microsoft...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:15:17 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[WireGuard In‑Transit Encryption for Azure Kubernetes Service (AKS)]]></title>
-      <link>https://azure.microsoft.com/updates?id=560015</link>
-      <guid>https://azure.microsoft.com/updates?id=560015</guid>
-      <description><![CDATA[WireGuard in‑transit encryption is now generally available for Azure Kubernetes Service (AKS) clusters using Azure CNI powered by Cilium and Advanced Container Networking Services (ACNS). This capability enables transparent, node‑level encryption for inteUpdate Type: GA, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 18:15:17 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: Support for .NET 8 (LTS) ends on November 10, 2026—upgrade your apps to .NET 10 (LTS)]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/558033/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/558033/</guid>
-      <description><![CDATA[On November 10, 2026, support for .NET 8 (LTS) will end. Your apps that are hosted on App Service will continue to run, but security updates will no longer be available and we'll no longer provide customer service for .NET 8 (LTS). Required action: To avoid potential security vulnerabilities and...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 17:45:05 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Support for .NET 8 (LTS) ends on November 10, 2026—upgrade your apps to .NET 10 (LTS)]]></title>
-      <link>https://azure.microsoft.com/updates?id=558033</link>
-      <guid>https://azure.microsoft.com/updates?id=558033</guid>
-      <description><![CDATA[On November 10, 2026, support for .NET 8 (LTS) will end. Your apps that are hosted on App Service will continue to run, but security updates will no longer be available and we'll no longer provide customer service for .NET 8 (LTS). Required action: To avo [Sevice: App Service, Target Date: 01 Nov...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 17:45:05 GMT</pubDate>
-      <category><![CDATA[Azure Deprecations (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: CRC Protection]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560889/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560889/</guid>
-      <description><![CDATA[Azure Elastic SAN now supports CRC-32C checksum verification when enabled on the client side for connections to Elastic SAN volumes. You can enable CRC protection when creating an Elastic SAN or enable it on an existing Elastic SAN. Elastic SAN also offers the ability to enforce this error...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 16:45:30 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Cascading read replicas in Azure Database for PostgreSQL]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560939/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560939/</guid>
-      <description><![CDATA[Cascading read replicas are now generally available in Azure Database for PostgreSQL, giving you greater flexibility to scale read‑intensive workloads. You can now create read replicas from existing ones, creating up to 30 across two levels of replication. Each source supports up to five read...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 16:45:30 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Cascading read replicas in Azure Database for PostgreSQL]]></title>
-      <link>https://azure.microsoft.com/updates?id=560939</link>
-      <guid>https://azure.microsoft.com/updates?id=560939</guid>
-      <description><![CDATA[Cascading read replicas are now generally available in Azure Database for PostgreSQL, giving you greater flexibility to scale read‑intensive workloads. You can now create read replicas from existing ones, creating up to 30 across two levels of replicationUpdate Type: GA, Services: Database for...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 16:45:30 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[CRC Protection]]></title>
-      <link>https://azure.microsoft.com/updates?id=560889</link>
-      <guid>https://azure.microsoft.com/updates?id=560889</guid>
-      <description><![CDATA[Azure Elastic SAN now supports CRC-32C checksum verification when enabled on the client side for connections to Elastic SAN volumes. You can enable CRC protection when creating an Elastic SAN or enable it on an existing Elastic SAN. Elastic SAN also offerUpdate Type: GA, Services: Azure Elastic...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Fri, 24 Apr 2026 16:45:30 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
