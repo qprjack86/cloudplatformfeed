@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 30 Apr 2026 12:18:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 16:13:01 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Public Preview: Managed Identity support for graphical session recording]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-network-security-blog/public-preview-managed-identity-support-for-graphical-session/ba-p/4513139</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-network-security-blog/public-preview-managed-identity-support-for-graphical-session/ba-p/4513139</guid>
+      <description><![CDATA[Overview Azure Bastion provides secure RDP and SSH access to Azure virtual machines directly via the Azure portal or via the native SSH/RDP client already installed on your local computer. Today, we are introducing public preview for managed identity support for session recording, giving...]]></description>
+      <dc:creator><![CDATA[aarontsang]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 14:05:12 GMT</pubDate>
+      <category><![CDATA[Azure Network Security]]></category>
+    </item>
     <item>
       <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</link>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Tue, 28 Apr 2026 13:48:00 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Project Pavilion Presence at KubeCon EU 2026]]></title>
-      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-eu-2026/ba-p/4515518</link>
-      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-eu-2026/ba-p/4515518</guid>
-      <description><![CDATA[KubeCon + CloudNativeCon Europe 2026 took place from 23 to 26 March at RAI Amsterdam, and it was a strong one. The themes running through the week reflected where the cloud native community is right now: AI moving from experimentation into production, platform engineering continuing to mature, and...]]></description>
-      <dc:creator><![CDATA[lexinadolski]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 12:50:16 GMT</pubDate>
-      <category><![CDATA[Linux & Open Source]]></category>
     </item>
   </channel>
 </rss>
