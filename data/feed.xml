@@ -4,9 +4,180 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Wed, 29 Apr 2026 16:24:03 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 09:10:02 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</guid>
+      <description><![CDATA[Following on from months of working alongside customers, partners, and our internal product groups, we have now made two updates to the Azure landing zone (ALZ) and the Sovereign landing zone (SLZ), that I’d like to walk you through in this post: A new dedicated ‘Local’ Management Group added...]]></description>
+      <dc:creator><![CDATA[jtracey93msft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 07:58:07 GMT</pubDate>
+      <category><![CDATA[Governance & Management]]></category>
+    </item>
+    <item>
+      <title><![CDATA[🚀 From Drift to Diagnosis: AI‑Powered Root Cause Analysis for Azure Infrastructure]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-drift-to-diagnosis-ai-powered-root-cause-analysis-for-azure/ba-p/4515436</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-drift-to-diagnosis-ai-powered-root-cause-analysis-for-azure/ba-p/4515436</guid>
+      <description><![CDATA[🌍 A Real-World Scenario During a recent production deployment of an enterprise AI platform, everything looked perfectly aligned from an infrastructure perspective: ✅ Infrastructure deployed via IaC (Terraform)✅ Private endpoints enforced✅ Public access disabled for all AI services A few hours...]]></description>
+      <dc:creator><![CDATA[Pooja_Pradhan]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 07:08:53 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[🖼️Streamline Image Generation Workflow in Foundry Toolkit]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/%EF%B8%8Fstreamline-image-generation-workflow-in-foundry-toolkit/ba-p/4516055</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/%EF%B8%8Fstreamline-image-generation-workflow-in-foundry-toolkit/ba-p/4516055</guid>
+      <description><![CDATA[Integrating image generation into a production AI application has historically meant juggling multiple surfaces — browsing models in the Foundry portal, setting up deployments via the Azure CLI, testing prompts in a separate tool, then stitching together API credentials before writing a single line...]]></description>
+      <dc:creator><![CDATA[junjieli]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Fixing Broken Markdown in AI Translation: Hardening a Production Pipeline]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/fixing-broken-markdown-in-ai-translation-hardening-a-production/ba-p/4511378</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/fixing-broken-markdown-in-ai-translation-hardening-a-production/ba-p/4511378</guid>
+      <description><![CDATA[By Minseok Song and Hiroshi Yoshioka (Microsoft MVPs) TL;DR Recent community feedback, especially from Japanese translations, revealed that many translation failures were not semantic, but structural. Through detailed issue reports and discussions, we identified recurring patterns such as broken...]]></description>
+      <dc:creator><![CDATA[MinseokSong]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Propagating SharePoint Document Permissions to AI Search and RAG Pipelines]]></title>
+      <link>https://devblogs.microsoft.com/ise/sharepoint-doc-level-access/</link>
+      <guid>https://devblogs.microsoft.com/ise/sharepoint-doc-level-access/</guid>
+      <description><![CDATA[A security-first architecture that propagates SharePoint document permissions into downstream AI systems, using Microsoft Entra ID object IDs (GUIDs) for safe, query-time filtering in Azure AI Search, RAG pipelines, and Copilot extensions. The post Propagating SharePoint Document Permissions to AI...]]></description>
+      <dc:creator><![CDATA[Elena Vavilova]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[ISE Developer Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[From ServiceNow to Self-Healing Infrastructure: A Multi-Repo Azure AI Platform]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-servicenow-to-self-healing-infrastructure-a-multi-repo/ba-p/4515315</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-servicenow-to-self-healing-infrastructure-a-multi-repo/ba-p/4515315</guid>
+      <description><![CDATA[A question before we begin Quick — what version of infrastructure is running in your production subscription right now? Not what your pipeline last deployed. Not what your tracking spreadsheet says. What's actually running — right now, this second — and can you prove it? If you had to think about...]]></description>
+      <dc:creator><![CDATA[Valini_Sunthwal]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 06:00:06 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Running Diffusion Models at Scale on AKS]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/running-diffusion-models-at-scale-on-aks/ba-p/4513687</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/running-diffusion-models-at-scale-on-aks/ba-p/4513687</guid>
+      <description><![CDATA[Diffusion workloads are simple at prototype scale and unforgiving in production. A single demo can run on one GPU-backed VM, but a real platform has to handle bursty demand, long-running jobs, model artifact distribution, secure public access, rollout safety, and hardware-level observability. Azure...]]></description>
+      <dc:creator><![CDATA[PrabalDeb]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 04:38:08 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure SRE Agent for Azure Monitor Alerts: Reduce Alert Fatigue, Investigate What Matters]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-for-azure-monitor-alerts-reduce-alert-fatigue/ba-p/4513458</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-for-azure-monitor-alerts-reduce-alert-fatigue/ba-p/4513458</guid>
+      <description><![CDATA[The Alert Problem Organizations running Azure Monitor tend to land in one of two situations: Alert fatigue has set in. Alert rules tend to grow over time — a CPU threshold from two years ago, a health probe check from a migration, a disk alert from an outage that never got cleaned up. These rules...]]></description>
+      <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 01:28:49 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Plugin Marketplace for Azure SRE Agent: Build Once, Install Anywhere]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/plugin-marketplace-for-azure-sre-agent-build-once-install/ba-p/4513501</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/plugin-marketplace-for-azure-sre-agent-build-once-install/ba-p/4513501</guid>
+      <description><![CDATA[What's a Plugin? A plugin bundles two things: Skills — Operational knowledge (triage runbooks, policy rules, known issues) the agent reads at runtime to guide its reasoning MCP Connectors — Live integrations to your internal APIs (deployment tracker, cost dashboard, CMDB) the agent can query during...]]></description>
+      <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 22:25:23 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Microsoft Azure Red Hat OpenShift is now available in Austria East]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/561135/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/561135/</guid>
+      <description><![CDATA[The Austria East region is now generally available to Azure Red Hat OpenShift customers and partners. The region includes three availability zones, supporting resilient and scalable operations. Why it matters: In-country data residency: Data stored in Austria East remains within Austria, helping...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 21:00:48 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Microsoft Azure Red Hat OpenShift is now available in Austria East]]></title>
+      <link>https://azure.microsoft.com/updates?id=561135</link>
+      <guid>https://azure.microsoft.com/updates?id=561135</guid>
+      <description><![CDATA[The Austria East region is now generally available to Azure Red Hat OpenShift customers and partners. The region includes three availability zones, supporting resilient and scalable operations. Why it matters: In-country data residency: Data stored inUpdate Type: GA, Services: Azure Red Hat...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 21:00:48 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Use Data Wrangler to Streamline Your Microsoft Sentinel data lake Notebook Development]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/use-data-wrangler-to-streamline-your-microsoft-sentinel-data/ba-p/4490214</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/use-data-wrangler-to-streamline-your-microsoft-sentinel-data/ba-p/4490214</guid>
+      <description><![CDATA[One of the many exciting features of the Microsoft Sentinel data lake is a built-in advanced analytics engine, powered by Apache Spark. This Spark cluster has access to data that is within Sentinel data lake, and can work with this data through Jupyter notebooks in Visual Studio Code. As with any...]]></description>
+      <dc:creator><![CDATA[David Hoerster]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 19:18:17 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Operating AI Agents on Azure: Observability with Azure AI Foundry]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operating-ai-agents-on-azure-observability-with-azure-ai-foundry/ba-p/4515975</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operating-ai-agents-on-azure-observability-with-azure-ai-foundry/ba-p/4515975</guid>
+      <description><![CDATA[Azure AI Foundry is Microsoft’s enterprise platform for building, deploying, and operating AI applications and intelligent agents as first‑class Azure workloads. From an infrastructure perspective, Foundry acts as a control plane that brings together model hosting, agent execution, tooling,...]]></description>
+      <dc:creator><![CDATA[skundapura]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 19:15:11 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Microsoft Agent Framework 1.0]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560982/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560982/</guid>
+      <description><![CDATA[Microsoft Agent Framework is now version 1.0 for both .NET and Python, with stable APIs and a long-term support commitment. Agent Framework 1.0 supports multi-agent orchestration, multi-provider model support, and cross-runtime interoperability via A2A and MCP.]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 18:15:05 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Microsoft Agent Framework 1.0]]></title>
+      <link>https://azure.microsoft.com/updates?id=560982</link>
+      <guid>https://azure.microsoft.com/updates?id=560982</guid>
+      <description><![CDATA[Microsoft Agent Framework is now version 1.0 for both .NET and Python, with stable APIs and a long-term support commitment. Agent Framework 1.0 supports multi-agent orchestration, multi-provider model support, and cross-runtime interoperability via A2A anUpdate Type: GA, Services: Microsoft...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 18:15:05 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Announcing the Private Preview of Cosmos DB Azure RBAC Integration]]></title>
+      <link>https://devblogs.microsoft.com/cosmosdb/announcing-the-private-preview-of-cosmos-db-azure-rbac-integration/</link>
+      <guid>https://devblogs.microsoft.com/cosmosdb/announcing-the-private-preview-of-cosmos-db-azure-rbac-integration/</guid>
+      <description><![CDATA[Introduction Managing access to Azure resources often means dealing with two separate permission models: one for management operations and another for data access. For Azure Cosmos DB customers, this split can increase complexity, slow down onboarding, and create confusion around governance and...]]></description>
+      <dc:creator><![CDATA[Sudhanshu Khera]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 18:13:59 GMT</pubDate>
+      <category><![CDATA[Azure Cosmos DB Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure DocumentDB (with MongoDB compatibility) for Banking: A Modern Customer 360 Approach]]></title>
+      <link>https://devblogs.microsoft.com/cosmosdb/azure-documentdb-with-mongodb-compatibility-for-banking-a-modern-customer-360-approach/</link>
+      <guid>https://devblogs.microsoft.com/cosmosdb/azure-documentdb-with-mongodb-compatibility-for-banking-a-modern-customer-360-approach/</guid>
+      <description><![CDATA[Introduction: Transforming Customer Intelligence in Banking Every day, people interact with their bank across mobile apps, branches, call centers, ATMs, chatbots, and partner ecosystems. Each touchpoint holds a piece of the customer story but rarely the whole picture. For many institutions, these...]]></description>
+      <dc:creator><![CDATA[Srikanth Sridhar]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 18:10:34 GMT</pubDate>
+      <category><![CDATA[Azure Cosmos DB Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Get started with the New Relic MCP server in Azure SRE Agent]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-the-new-relic-mcp-server-in-azure-sre-agent/ba-p/4515268</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-the-new-relic-mcp-server-in-azure-sre-agent/ba-p/4515268</guid>
+      <description><![CDATA[Overview The New Relic MCP server is a cloud-hosted bridge between your New Relic account and Azure SRE Agent. Once configured, it enables real-time interaction with your observability data—APM traces, distributed traces, logs, metrics, alerts, incidents, dashboards, and entities—through natural...]]></description>
+      <dc:creator><![CDATA[dbandaru]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 17:35:44 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Building an Enterprise-Grade SQL Platform on Kubernetes using Crossplane and Azure PostgreSQL]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-enterprise-grade-sql-platform-on-kubernetes-using/ba-p/4515635</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-enterprise-grade-sql-platform-on-kubernetes-using/ba-p/4515635</guid>
+      <description><![CDATA[Strategic Overview Build a Kubernetes-native SQL platform using Crossplane-based database operator to provision Azure PostgreSQL Flexible Server. Active–Passive, multi-region database architecture using read replicas and manual promotion for failover. Private networking, DNS abstraction, and...]]></description>
+      <dc:creator><![CDATA[prabhattomar]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 16:58:37 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[Azure Monitor Service Level Indicators (SLI)]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-service-level-indicators-sli/ba-p/4507445</link>
@@ -42,6 +213,15 @@
       <dc:creator><![CDATA[skundapura]]></dc:creator>
       <pubDate>Wed, 29 Apr 2026 11:35:03 GMT</pubDate>
       <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[On-premises data gateway April 2026 release]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-april-2026-release/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-april-2026-release/</guid>
+      <description><![CDATA[The April 2026 release of the on-premises data gateway is (version 3000.314). New Features On-premises Data Gateway Auto-Update (Admin Triggered) | (Generally Available) With this capability, gateway administrators now have greater control and flexibility over gateway lifecycle management. Instead...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Wed, 29 Apr 2026 10:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[AG-UI: The Future of Agent-Driven User Interfaces]]></title>
@@ -276,186 +456,6 @@
       <dc:creator><![CDATA[lexinadolski]]></dc:creator>
       <pubDate>Tue, 28 Apr 2026 12:50:16 GMT</pubDate>
       <category><![CDATA[Linux & Open Source]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Istio‑Based Weighted Traffic Management on AKS for Enterprise Workloads]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/istio-based-weighted-traffic-management-on-aks-for-enterprise/ba-p/4511520</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/istio-based-weighted-traffic-management-on-aks-for-enterprise/ba-p/4511520</guid>
-      <description><![CDATA[Istio‑Based Weighted Traffic Management Pre-Requisites: AKS containers (internal pods, no Envoy sidecar) Istio Installed and Configured at AKS Cluster (Ingress Gateway–based traffic management) Section 1 — Overview & Why Istio Is Required In modern distributed systems, traffic control is no longer...]]></description>
-      <dc:creator><![CDATA[Amreen]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 12:23:21 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Welcome to Azure Cosmos DB Conf 2026]]></title>
-      <link>https://devblogs.microsoft.com/cosmosdb/welcome-to-azure-cosmos-db-conf-2026/</link>
-      <guid>https://devblogs.microsoft.com/cosmosdb/welcome-to-azure-cosmos-db-conf-2026/</guid>
-      <description><![CDATA[Today is the day. Azure Cosmos DB Conf 2026, in partnership with AMD, is a free virtual developer event focused on building modern, scalable applications with Azure Cosmos DB. The agenda features Microsoft engineers, product team leaders, and members of the global developer community sharing...]]></description>
-      <dc:creator><![CDATA[Jay Gordon]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 12:00:07 GMT</pubDate>
-      <category><![CDATA[Azure Cosmos DB Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-governance-and-management/new-local-management-group-for-alz-updated-sovereign-policies/ba-p/4515156</guid>
-      <description><![CDATA[Following on from months of working alongside customers, partners, and our internal product groups, we have now made two updates to the Azure landing zone (ALZ) and the Sovereign landing zone (SLZ), that I’d like to walk you through in this post: A new dedicated ‘Local’ Management Group added...]]></description>
-      <dc:creator><![CDATA[jtracey93msft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 11:37:32 GMT</pubDate>
-      <category><![CDATA[Governance & Management]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Troubleshooting SQL MI Failover Group Creation in Hub–Spoke Network with Centralized Firewall]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/troubleshooting-sql-mi-failover-group-creation-in-hub-spoke/ba-p/4515482</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/troubleshooting-sql-mi-failover-group-creation-in-hub-spoke/ba-p/4515482</guid>
-      <description><![CDATA[Overview Failover groups for Azure SQL Managed Instance provide a managed way to replicate all user databases from a primary managed instance to a secondary managed instance in another region, with stable listener endpoints that remain constant across geo-failovers. In this post, we share a field...]]></description>
-      <dc:creator><![CDATA[YogeshwaranKannaiyan]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 11:34:48 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[PowerToys 0.99 is here: new monitor controls, easier window management, and Dock upgrades]]></title>
-      <link>https://devblogs.microsoft.com/commandline/powertoys-0-99-is-here-new-monitor-controls-easier-window-management-and-dock-upgrades/</link>
-      <guid>https://devblogs.microsoft.com/commandline/powertoys-0-99-is-here-new-monitor-controls-easier-window-management-and-dock-upgrades/</guid>
-      <description><![CDATA[We’re back with a fresh PowerToys release! This month introduces Power Display for controlling your monitors from the system tray, Grab And Move for quickly moving and resizing windows, and a wave of improvements to Command Palette and the Dock, along with updates across the utility suite. You can...]]></description>
-      <dc:creator><![CDATA[Niels Laute]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 11:32:59 GMT</pubDate>
-      <category><![CDATA[Windows Command Line]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Simplify Real-Time Pipelines with the Fabric Eventstreams SQL Operator]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/simplify-real-time-pipelines-with-the-fabric-eventstreams-sql-operator-generally-available/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/simplify-real-time-pipelines-with-the-fabric-eventstreams-sql-operator-generally-available/</guid>
-      <description><![CDATA[The SQL operator was first introduced in preview to give customers an early look at a code‑first transformation experience in Fabric Eventstreams. During preview, customers used the SQL operator to simplify real-time pipelines, consolidate transformation logic, and unlock advanced scenarios using...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 09:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Deploying Azure Redis Enterprise with Geo-Replication Using Terraform]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-azure-redis-enterprise-with-geo-replication-using/ba-p/4515317</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-azure-redis-enterprise-with-geo-replication-using/ba-p/4515317</guid>
-      <description><![CDATA[This post walks through a production‑proven pattern for running stateful services across Azure regions using Terraform. We’ll cover a primary–replica Redis architecture, regional isolation with Key Vault and networking, and a clean Terraform parameterization strategy that scales from development to...]]></description>
-      <dc:creator><![CDATA[vsakash]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 07:03:41 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[The Future of Agentic AI: Inside Microsoft Agent Framework 1.0]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-future-of-agentic-ai-inside-microsoft-agent-framework-1-0/ba-p/4510698</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-future-of-agentic-ai-inside-microsoft-agent-framework-1-0/ba-p/4510698</guid>
-      <description><![CDATA[Agentic AI is rapidly moving beyond demos and chatbots toward long‑running, autonomous systems that reason, call tools, collaborate with other agents, and operate reliably in production. On April 3, 2026, Microsoft marked a major milestone with the General Availability (GA) release of Microsoft...]]></description>
-      <dc:creator><![CDATA[rajesh-yadav]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Why Does Azure App Service Return HTTP 404?]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/why-does-azure-app-service-return-http-404/ba-p/4514004</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/why-does-azure-app-service-return-http-404/ba-p/4514004</guid>
-      <description><![CDATA[When an application deployed to Azure App Service suddenly starts returning HTTP 404 – Not Found, it can be confusing —especially when: The deployment completed successfully The App Service shows as Running No obvious errors appear in the portal This behaviour is more common than it appears and is...]]></description>
-      <dc:creator><![CDATA[AmritpalSinghNaroo]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 06:39:38 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Introducing AI Skill Assessment in Azure API Center]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-ai-skill-assessment-in-azure-api-center/ba-p/4515243</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-ai-skill-assessment-in-azure-api-center/ba-p/4515243</guid>
-      <description><![CDATA[As AI skills become central to enterprise automation and intelligent workflows, ensuring their quality, safety, and discoverability at scale is a growing challenge. Today, we're excited to announce skills assessment in Azure API Center — a built-in, automated quality scoring system powered by the...]]></description>
-      <dc:creator><![CDATA[Sreekanth_Thirthala]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 23:33:09 GMT</pubDate>
-      <category><![CDATA[Integrations on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Data Studio is retired: Move your Azure SQL workflow to VS Code in 10 minutes]]></title>
-      <link>https://devblogs.microsoft.com/azure-sql/azure-data-studio-is-retired-move-your-azure-sql-workflow-to-vs-code-in-10-minutes/</link>
-      <guid>https://devblogs.microsoft.com/azure-sql/azure-data-studio-is-retired-move-your-azure-sql-workflow-to-vs-code-in-10-minutes/</guid>
-      <description><![CDATA[Azure Data Studio (ADS) retired on February 6, 2025, and support ended on February 28, 2026. The recommended path forward is Visual Studio Code with the MSSQL extension. If you used ADS daily, this guide gets you productive quickly in VS Code. The focus is on importing your existing setup,...]]></description>
-      <dc:creator><![CDATA[Iqra Shaikh]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 18:20:58 GMT</pubDate>
-      <category><![CDATA[Azure SQL Dev Corner]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Bring your own AI Gateway in Foundry Agent Service]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/561002/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/561002/</guid>
-      <description><![CDATA[Foundry Agent Service now supports bring‑your‑own‑model scenarios, allowing agents to use AI models deployed and managed outside of Foundry, including models hosted behind enterprise AI gateways such as Azure API Management. This enables organizations to integrate custom, fine‑tuned, open‑source,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 18:00:52 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Bring your own AI Gateway in Foundry Agent Service]]></title>
-      <link>https://azure.microsoft.com/updates?id=561002</link>
-      <guid>https://azure.microsoft.com/updates?id=561002</guid>
-      <description><![CDATA[Foundry Agent Service now supports bring‑your‑own‑model scenarios, allowing agents to use AI models deployed and managed outside of Foundry, including models hosted behind enterprise AI gateways such as Azure API Management. This enables organizations toUpdate Type: GA, Services: API Management,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 18:00:52 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Retirement: Prompt Flow in Azure ML and Foundry]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/502936/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/502936/</guid>
-      <description><![CDATA[Prompt Flow will be retired from Microsoft Foundry and Azure Machine Learning on April 20, 2027 and replaced by a single, modern orchestration platform: Microsoft Agent Framework. This change unlocks powerful new capabilities, including a unified, future-proof foundation for building intelligent...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 16:15:55 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Prompt Flow in Azure ML and Foundry]]></title>
-      <link>https://azure.microsoft.com/updates?id=502936</link>
-      <guid>https://azure.microsoft.com/updates?id=502936</guid>
-      <description><![CDATA[Prompt Flow will be retired from Microsoft Foundry and Azure Machine Learning on April 20, 2027 and replaced by a single, modern orchestration platform: Microsoft Agent Framework. This change unlocks powerful new capabilities, including a unified, future-Update Type: Deprecation, Services: Machine...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 16:15:55 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
-      <link>https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/new-local-management-group-for-alz--updated-sovereign-policies-for-slz/4515156</link>
-      <guid>https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/new-local-management-group-for-alz--updated-sovereign-policies-for-slz/4515156</guid>
-      <description><![CDATA[Following on from months of working alongside customers, partners, and our internal product groups, we have now made two updates to the Azure landing zone (ALZ) and the Sovereign landing zone (SLZ), ...Update Type: Announcement, Services: , Categories: Management]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 15:49:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Local expands to sovereign-scale infrastructure with disaggregated deployments]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-expands-to-sovereign-scale-infrastructure-with/ba-p/4514338</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-expands-to-sovereign-scale-infrastructure-with/ba-p/4514338</guid>
-      <description><![CDATA[As organizations accelerate digital transformation across datacenters, sovereign environments, and edge locations, infrastructure architectures must evolve to meet new operational and regulatory demands. The first feature update of Azure Local in CY 2026 (version 2604) marks a significant step...]]></description>
-      <dc:creator><![CDATA[troettinger]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 15:45:00 GMT</pubDate>
-      <category><![CDATA[Azure Arc]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Bring your Dremio data into OneLake]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/bring-your-dremio-data-into-onelake-preview/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/bring-your-dremio-data-into-onelake-preview/</guid>
-      <description><![CDATA[Starting today, Fabric customers who use Dremio can seamlessly bring their Dremio-managed data into Microsoft OneLake — with zero data duplication — and unlock the full suite of Fabric workloads and integrations. Figure: Creating a new Mirrored Dremio catalog item in Fabric. Bringing Dremio data...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 12:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Dissecting LLM Container Cold-Start: Where the Time Actually Goes]]></title>
-      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</link>
-      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dissecting-llm-container-cold-start-where-the-time-actually-goes/ba-p/4508831</guid>
-      <description><![CDATA[Dissecting LLM Container Cold-Start: Where the Time Actually Goes Cold-start latency determines whether GPU clusters can scale to zero, how fast they can autoscale, and whether bursty or low-QPS workloads are economically viable. Most optimization effort targets the container pull path – faster...]]></description>
-      <dc:creator><![CDATA[robcronin]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 11:36:05 GMT</pubDate>
-      <category><![CDATA[Linux & Open Source]]></category>
-    </item>
-    <item>
-      <title><![CDATA[From Portal Edits to GitOps : Deploying Azure API Management Configuration with APIOps]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-portal-edits-to-gitops-deploying-azure-api-management/ba-p/4514975</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-portal-edits-to-gitops-deploying-azure-api-management/ba-p/4514975</guid>
-      <description><![CDATA[Introduction Modern enterprise platforms are increasingly built around APIs, and Azure API Management (APIM) sits at the heart of these systems as the control plane for enforcing policies, managing access, and routing traffic. While APIM provides a powerful interface through the Azure portal, many...]]></description>
-      <dc:creator><![CDATA[aloormahesh]]></dc:creator>
-      <pubDate>Mon, 27 Apr 2026 07:45:35 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
     </item>
   </channel>
 </rss>
