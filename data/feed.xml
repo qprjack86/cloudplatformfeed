@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 01 May 2026 12:02:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 15:45:50 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[AI‑Accelerated AVM Refactoring: Modernizing Legacy IaC Safely and Swiftly]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-accelerated-avm-refactoring-modernizing-legacy-iac-safely-and/ba-p/4516437</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-accelerated-avm-refactoring-modernizing-legacy-iac-safely-and/ba-p/4516437</guid>
+      <description><![CDATA[Why AVM refactoring is harder in brownfield Greenfield AVM adoption is straightforward: pick the module, deploy, and iterate. Brownfield is different. You’re refactoring *live* infrastructure — where state, naming conventions, diagnostic settings, and policy baselines already exist. In one...]]></description>
+      <dc:creator><![CDATA[HimanshuYadav]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 12:14:29 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[From Terminal to Autonomous Coding: Mastering GitHub Copilot CLI ACP Server]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-terminal-to-autonomous-coding-mastering-github-copilot-cli/ba-p/4508604</link>
@@ -447,15 +456,6 @@
       <dc:creator><![CDATA[AjKundnani]]></dc:creator>
       <pubDate>Wed, 29 Apr 2026 09:02:08 GMT</pubDate>
       <category><![CDATA[Azure Compute]]></category>
-    </item>
-    <item>
-      <title><![CDATA[General availability of Default Ruleset (DRS) 2.2 for Web Application Firewall]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-network-security-blog/general-availability-of-default-ruleset-drs-2-2-for-web/ba-p/4515762</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-network-security-blog/general-availability-of-default-ruleset-drs-2-2-for-web/ba-p/4515762</guid>
-      <description><![CDATA[Introduction As attackers continue to evolve their techniques, organizations require web application security that keeps pace with emerging threats without disrupting legitimate traffic. Azure Web Application Firewall (WAF) continues to evolve to meet these demands and now supports Default Rule Set...]]></description>
-      <dc:creator><![CDATA[andrewmathu]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 08:31:47 GMT</pubDate>
-      <category><![CDATA[Azure Network Security]]></category>
     </item>
   </channel>
 </rss>
