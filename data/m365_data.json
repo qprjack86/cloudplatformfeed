@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-01T08:58:15.612129+00:00",
+  "generatedAt": "2026-05-01T12:02:39.312232+00:00",
   "totalArticles": 116,
   "articles": [
     {
@@ -3417,7 +3417,7 @@
       "m365PreviewDate": null,
       "m365GeneralAvailabilityDate": null,
       "m365WasUpdated": true,
-      "m365ScheduleUpdated": true,
+      "m365ScheduleUpdated": false,
       "m365IsMajorChange": true,
       "m365Tags": [
         "Updated message",
@@ -7481,7 +7481,7 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365WasUpdated": true,
-        "m365ScheduleUpdated": true,
+        "m365ScheduleUpdated": false,
         "m365IsMajorChange": true,
         "m365Tags": [
           "Updated message",
@@ -10864,7 +10864,7 @@
         "m365PreviewDate": null,
         "m365GeneralAvailabilityDate": null,
         "m365WasUpdated": true,
-        "m365ScheduleUpdated": true,
+        "m365ScheduleUpdated": false,
         "m365IsMajorChange": true,
         "m365Tags": [
           "Updated message",
@@ -12134,7 +12134,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-05-01T08:58:15.611790+00:00",
+    "generatedAt": "2026-05-01T12:02:39.311912+00:00",
     "referenceMonth": "2026-05",
     "windows": {
       "0_3_months": {
