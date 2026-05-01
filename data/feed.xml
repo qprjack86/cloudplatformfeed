@@ -4,9 +4,162 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Thu, 30 Apr 2026 16:13:01 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 08:57:56 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[From Terminal to Autonomous Coding: Mastering GitHub Copilot CLI ACP Server]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-terminal-to-autonomous-coding-mastering-github-copilot-cli/ba-p/4508604</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-terminal-to-autonomous-coding-mastering-github-copilot-cli/ba-p/4508604</guid>
+      <description><![CDATA[Introduction The rise of AI-powered development is no longer just about autocomplete—it’s about autonomous agents that can think, act, and collaborate. At the center of this transformation is the Agent Client Protocol (ACP) and its integration with GitHub Copilot CLI. If you’ve ever wanted to:...]]></description>
+      <dc:creator><![CDATA[Ravindra_Kumar_Vishwakarma]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Developer CLI (azd) – April 2026]]></title>
+      <link>https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-april-2026/</link>
+      <guid>https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-april-2026/</guid>
+      <description><![CDATA[The Azure Developer CLI (azd) shipped five releases in April 2026. The biggest theme this month is multi-language hook support: write azd hooks in Python, JavaScript, TypeScript, or .NET alongside the existing Bash and PowerShell options. Here’s what’s in versions 1.23.14, 1.23.15, 1.24.0, 1.24.1,...]]></description>
+      <dc:creator><![CDATA[Kristen Womack]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 00:53:08 GMT</pubDate>
+      <category><![CDATA[Azure SDK Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[AHEAD helps us launch the Strategic Azure Storage Services Partner Program]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/ahead-helps-us-launch-the-strategic-azure-storage-services/ba-p/4516355</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/ahead-helps-us-launch-the-strategic-azure-storage-services/ba-p/4516355</guid>
+      <description><![CDATA[Authors: Aung Oo, Vice President Azure Storage Product Management Parker Leavitt, Partner Account Manager, AHEAD Special thanks to: Michael Johnson, Vice President, Cloud, AHEAD AHEAD background AHEAD was formed in 2007 and possesses deep expertise in Infrastructure, Cloud Platforms, AI, Analytics,...]]></description>
+      <dc:creator><![CDATA[karautenMSFT]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 00:49:28 GMT</pubDate>
+      <category><![CDATA[Azure Storage]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Introducing DeepSeek V4 Flash and V4 Pro in Microsoft Foundry]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-deepseek-v4-flash-and-v4-pro-in-microsoft-foundry/4515174</link>
+      <guid>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-deepseek-v4-flash-and-v4-pro-in-microsoft-foundry/4515174</guid>
+      <description><![CDATA[As AI adoption matures, the conversation is shifting from model capability to system design, how to orchestrate models that deliver the right balance of quality, speed, and cost. Today, we’re expa...Update Type: Announcement, Services: Azure AI Services, Microsoft Foundry, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 00:09:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Prompt flow is being retired]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/prompt-flow-is-being-retired/4513587</link>
+      <guid>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/prompt-flow-is-being-retired/4513587</guid>
+      <description><![CDATA[Prompt Flow in Microsoft Foundry and Azure Machine Learning will be retired on 20 April 2027. Customers should begin migrating existing Prompt Flow applications and deployments to Microsoft Agent Fra...Update Type: Announcement, Services: Machine Learning, Microsoft Foundry, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 21:15:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[What’s new in Microsoft Sentinel: April 2026]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-april-2026/ba-p/4516354</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-in-microsoft-sentinel-april-2026/ba-p/4516354</guid>
+      <description><![CDATA[Welcome to the April 2026 edition of What's new in Microsoft Sentinel. April brings a broad set of updates, with RSAC 2026 announcements rolling out alongside new features. Highlights include cost limit enforcement to prevent runaway query costs, curated open-source intelligence in Threat...]]></description>
+      <dc:creator><![CDATA[vkokkengada]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 20:59:31 GMT</pubDate>
+      <category><![CDATA[Microsoft Sentinel]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Whats new in Microsoft Sentinel: April 2026]]></title>
+      <link>https://techcommunity.microsoft.com/blog/microsoftsentinelblog/what%E2%80%99s-new-in-microsoft-sentinel-april-2026/4516354</link>
+      <guid>https://techcommunity.microsoft.com/blog/microsoftsentinelblog/what%E2%80%99s-new-in-microsoft-sentinel-april-2026/4516354</guid>
+      <description><![CDATA[Welcome to the April 2026 edition of What's new in Microsoft Sentinel. April brings a broad set of updates, with RSAC 2026 announcements rolling out alongside new features. Highlights include cost li...Update Type: Announcement, Services: Microsoft Sentinel, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 20:58:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Explaining what GitHub Copilot Modernization can (and cannot do)]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/explaining-what-github-copilot-modernization-can-and-cannot-do/ba-p/4511739</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/explaining-what-github-copilot-modernization-can-and-cannot-do/ba-p/4511739</guid>
+      <description><![CDATA[In the last post, we looked at the workflow: assess, plan, execute. You get reports you can review and the agent makes changes you can inspect. If you don’t know, GitHub Copilot Modernization is the new agentic tool that supports you to in modernizing older applications. Could it support you with...]]></description>
+      <dc:creator><![CDATA[PabloLopes]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 19:52:23 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure NCv6 Virtual Machines: Enhancements and GA Transition]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-virtual-machines-enhancements-and-ga-transition/ba-p/4503578</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-virtual-machines-enhancements-and-ga-transition/ba-p/4503578</guid>
+      <description><![CDATA[NCv6 Virtual Machines are Azure's flexible, next generation platform enabling both leading-edge graphics and generative AI compute workloads. Featuring NVIDIA RTX PRO 6000 Blackwell Server Edition (BSE) GPUs, Intel Xeon™ 6 "Granite Rapids" 6900P series CPUs, and a suite of Microsoft Azure...]]></description>
+      <dc:creator><![CDATA[Fernando_Aznar]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 18:00:24 GMT</pubDate>
+      <category><![CDATA[High Performance Computing]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Prefix-scoped access for User Delegation SAS]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/561257/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/561257/</guid>
+      <description><![CDATA[Support for prefix-scoped access for User Delegation SAS for Azure Blob Storage is generally available in all Azure regions. SAS tokens for Blob Storage have historically supported two levels of scope: container and individual blob. With this release, you can now scope access to a prefix or virtual...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 18:00:11 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Prefix-scoped access for User Delegation SAS]]></title>
+      <link>https://azure.microsoft.com/updates?id=561257</link>
+      <guid>https://azure.microsoft.com/updates?id=561257</guid>
+      <description><![CDATA[Support for prefix-scoped access for User Delegation SAS for Azure Blob Storage is generally available in all Azure regions. SAS tokens for Blob Storage have historically supported two levels of scope: container and individual blob. With this release, youUpdate Type: GA, Services: Azure Storage,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 18:00:11 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Generally Available: Azure Functions support for Java 25]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/560879/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/560879/</guid>
+      <description><![CDATA[Azure Functions support for Java 25 is now generally available. You can now develop apps using Java 25 locally and deploy them to supported Azure Functions plans on Linux and Windows, including the Flex Consumption plan. Learn more: Update your app to Java 25 Learn more about Java 25 Azure...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 17:15:44 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Functions support for Java 25]]></title>
+      <link>https://azure.microsoft.com/updates?id=560879</link>
+      <guid>https://azure.microsoft.com/updates?id=560879</guid>
+      <description><![CDATA[Azure Functions support for Java 25 is now generally available. You can now develop apps using Java 25 locally and deploy them to supported Azure Functions plans on Linux and Windows, including the Flex Consumption plan. Learn more: Update your appUpdate Type: GA, Services: Azure Functions,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 17:15:44 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[TypeScript 7 Beta Now Enabled by Default in Visual Studio 2026 18.6 Insiders 3]]></title>
+      <link>https://devblogs.microsoft.com/visualstudio/typescript-7-beta-now-enabled-by-default-in-visual-studio-2026-18-6-insiders-3/</link>
+      <guid>https://devblogs.microsoft.com/visualstudio/typescript-7-beta-now-enabled-by-default-in-visual-studio-2026-18-6-insiders-3/</guid>
+      <description><![CDATA[TypeScript 7 Beta Now Enabled by Default in Visual Studio 2026 18.6 Insiders 3 In Visual Studio 2026 18.6 Insiders 3 we have updated the built-in TypeScript SDK to TypeScript 7 Beta (native preview). The TypeScript SDK provides the compiler and language service used for TypeScript and JavaScript...]]></description>
+      <dc:creator><![CDATA[Sayed Ibrahim Hashimi]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 17:08:44 GMT</pubDate>
+      <category><![CDATA[Visual Studio Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Prefix-scoped access for User Delegation SAS is now generally available for Azure Blob Storage]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-storage-blog/prefix-scoped-access-for-user-delegation-sas-is-now-generally/ba-p/4516010</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-storage-blog/prefix-scoped-access-for-user-delegation-sas-is-now-generally/ba-p/4516010</guid>
+      <description><![CDATA[We would like to share that prefix-scoped access for User Delegation SAS for Azure Blob Storage is generally available in all Azure regions. SAS tokens for Blob Storage have historically supported two levels of scope: container and individual blob. With this release, you can now scope access to a...]]></description>
+      <dc:creator><![CDATA[despindola]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 17:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Storage]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Introducing Post-Stream Refinement: Higher-Accuracy Real-Time Transcription]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-post-stream-refinement-higher-accuracy-real-time-transcription/4510038</link>
+      <guid>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-post-stream-refinement-higher-accuracy-real-time-transcription/4510038</guid>
+      <description><![CDATA[Real-time speech recognition has always been defined by a fundamental trade-off: speed versus accuracy. Applications that need instant, streaming transcription — live captions, voice agents, real-tim...Update Type: Announcement, Services: Microsoft Foundry, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 15:05:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Voice Live API now supports WebRTC (Preview)]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/voice-live-api-now-supports-webrtc-preview/4516002</link>
+      <guid>https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/voice-live-api-now-supports-webrtc-preview/4516002</guid>
+      <description><![CDATA[We are thrilled to announce that Voice Live API now supports WebRTC (Web Real-Time Communication) connection, enabling low‑latency, real‑time voice interactions directly from web and mobile clients. ...Update Type: Announcement, Services: Microsoft Foundry, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 15:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
     <item>
       <title><![CDATA[Public Preview: Managed Identity support for graphical session recording]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-network-security-blog/public-preview-managed-identity-support-for-graphical-session/ba-p/4513139</link>
@@ -15,6 +168,42 @@
       <dc:creator><![CDATA[aarontsang]]></dc:creator>
       <pubDate>Thu, 30 Apr 2026 14:05:12 GMT</pubDate>
       <category><![CDATA[Azure Network Security]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Discover Fabric items across workspaces with the OneLake Catalog Search API, MCP and CLI tools]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/discover-fabric-items-across-workspaces-with-the-onelake-catalog-search-api-mcp-and-cli-tools-preview/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/discover-fabric-items-across-workspaces-with-the-onelake-catalog-search-api-mcp-and-cli-tools-preview/</guid>
+      <description><![CDATA[The OneLake Catalog helps people find, explore, and curate Fabric items across their organization. With OneLake Catalog Search API, MCP and CLI tools, that same discovery experience is now available programmatically, making it possible to build search directly into scripts, internal tools, and...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 14:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Azure Data Studio to VS Code: What it means for SQL database in Fabric developers]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/azure-data-studio-to-vs-code-what-it-means-for-sql-database-in-fabric-developers/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/azure-data-studio-to-vs-code-what-it-means-for-sql-database-in-fabric-developers/</guid>
+      <description><![CDATA[Azure Data Studio (ADS) has been a familiar tool for SQL developers, but with its retirement on February 6, 2025, and end of support on February 28, 2026, teams need a clear path forward. For those working with SQL database in Microsoft Fabric, the transition to Visual Studio Code (VS Code) is not...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 13:27:04 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Pipelines are evolving beyond ETL]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/pipelines-are-evolving-beyond-etl/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/pipelines-are-evolving-beyond-etl/</guid>
+      <description><![CDATA[For years, data pipelines have been synonymous with ETL (Extract, Transform, Load): extract data from one place, transform it, and load it somewhere else. That model worked well when analytics workflows were mostly batch driven and isolated from the rest of the business. But that world has changed....]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 12:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Fabric April 2026 Feature Summary]]></title>
+      <link>https://blog.fabric.microsoft.com/en-US/blog/fabric-april-2026-feature-summary/</link>
+      <guid>https://blog.fabric.microsoft.com/en-US/blog/fabric-april-2026-feature-summary/</guid>
+      <description><![CDATA[Welcome to the April 2026 Microsoft Fabric update! This month’s update brings a broad set of new capabilities across Microsoft Fabric, spanning the platform experience, Data Engineering, Data Science, Data Warehouse, and Real-Time Intelligence. Read on to learn about improvements to the Fabric...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 09:01:26 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[New Local Management Group for ALZ & Updated Sovereign Policies for SLZ]]></title>
@@ -87,6 +276,15 @@
       <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
       <pubDate>Thu, 30 Apr 2026 01:28:49 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Enforcing trust and transparency: Open-sourcing the Azure Integrated HSM]]></title>
+      <link>https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm</link>
+      <guid>https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm</guid>
+      <description><![CDATA[Enforcing trust and transparency: Open-sourcing the Azure Integrated HSM As cloud workloads become more agentic and AI systems handle increasingly sensitive data, trust must be engineered directly into infrastructure. Azure Integrated HSM brings hardware‑enforced key protection into Azure,...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Plugin Marketplace for Azure SRE Agent: Build Once, Install Anywhere]]></title>
@@ -258,204 +456,6 @@
       <dc:creator><![CDATA[andrewmathu]]></dc:creator>
       <pubDate>Wed, 29 Apr 2026 08:31:47 GMT</pubDate>
       <category><![CDATA[Azure Network Security]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-your-ai-agents-before-they-ship-red-teaming-with/ba-p/4515514</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-your-ai-agents-before-they-ship-red-teaming-with/ba-p/4515514</guid>
-      <description><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT You wouldn't ship a web app without running OWASP ZAP or Snyk. So why are AI agents going to production without a single security scan? Prompt injection, data leakage, system prompt theft — the OWASP Top 10 for LLM...]]></description>
-      <dc:creator><![CDATA[vsriramdas]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 08:22:53 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Making Sense of Azure AI Foundry IQ]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/making-sense-of-azure-ai-foundry-iq/ba-p/4513131</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/making-sense-of-azure-ai-foundry-iq/ba-p/4513131</guid>
-      <description><![CDATA[As enterprise teams build AI agents, the hardest design decisions often have nothing to do with models. Instead, they revolve around a more fundamental question: How should an agent access organizational knowledge in a way that is accurate, secure, and sustainable over time? Azure AI Foundry IQ is...]]></description>
-      <dc:creator><![CDATA[Samarpitaa]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Building an Enterprise Knowledge Copilot with Foundry IQ and Agentic Retrieval on Azure AI]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-enterprise-knowledge-copilot-with-foundry-iq-and/ba-p/4512308</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-enterprise-knowledge-copilot-with-foundry-iq-and/ba-p/4512308</guid>
-      <description><![CDATA[Every enterprise has the same problem: knowledge scattered across SharePoint, file shares, wikis, and email. This article walks through building a knowledge copilot that unifies that data behind a single conversational interface — using Microsoft's Foundry IQ knowledge bases and the agentic...]]></description>
-      <dc:creator><![CDATA[Shah_Viral]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 07:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Dev Community]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Transforming Video Content into Structured SOPs Using Graph-based RAG]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/transforming-video-content-into-structured-sops-using-graph/ba-p/4515038</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/transforming-video-content-into-structured-sops-using-graph/ba-p/4515038</guid>
-      <description><![CDATA[Introduction In today’s digital-first environments, a large portion of enterprise knowledge lives inside video content, training sessions, onboarding walkthroughs, and recorded operational procedures. While videos are great for learning, they are not ideal for quick reference, compliance, or...]]></description>
-      <dc:creator><![CDATA[dikshashakya]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 01:04:53 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Building a Scalable IoT Platform for Facility Management with Azure Serverless Services]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-scalable-iot-platform-for-facility-management-with/ba-p/4495263</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-scalable-iot-platform-for-facility-management-with/ba-p/4495263</guid>
-      <description><![CDATA[Business Requirements The business required a platform that could: - Handle multi-provider device telemetry ingestion - Apply configurable business rules in real-time - Send automated notifications via email and SMS - Provide operations teams with a modern portal for monitoring and control -...]]></description>
-      <dc:creator><![CDATA[nishantmv]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 01:01:56 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Flexible Cooling for AI Growth: How Zonal Architecture Supports Diverse Hardware Needs]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/flexible-cooling-for-ai-growth-how-zonal-architecture-supports/ba-p/4514042</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/flexible-cooling-for-ai-growth-how-zonal-architecture-supports/ba-p/4514042</guid>
-      <description><![CDATA[By: Ricardo Bianchini, Steve Solomon, Brijesh Warrier, Martin Herbert, Jay Jochim, Husam Alissa, Pulkit Misra, Eric Peterson and Cam Turner Context - Microsoft is pioneering zonal cooling in its next-generation AI datacenters, enabling flexible, performant, efficient, and sustainable thermal...]]></description>
-      <dc:creator><![CDATA[stsolo]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 00:58:54 GMT</pubDate>
-      <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Memory in Foundry Agent Service]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560992/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560992/</guid>
-      <description><![CDATA[Foundry’s memory (preview) is a managed long-term memory capability built directly into Foundry Agent Service and now integrates natively with Microsoft Agent Framework and LangGraph— no external databases to provision, scale, or secure.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 00:00:55 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Memory in Foundry Agent Service]]></title>
-      <link>https://azure.microsoft.com/updates?id=560992</link>
-      <guid>https://azure.microsoft.com/updates?id=560992</guid>
-      <description><![CDATA[Foundry’s memory (preview) is a managed long-term memory capability built directly into Foundry Agent Service and now integrates natively with Microsoft Agent Framework and LangGraph— no external databases to provision, scale, or secure.Update Type: Preview, Services: Microsoft Foundry, Categories:...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 00:00:55 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Container Network Insights Agent]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/561020/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/561020/</guid>
-      <description><![CDATA[Troubleshooting Kubernetes networking issues is often slowed by logs and metrics scattered across multiple tools, requiring engineers to manually correlate signals during incidents. The Container Network Insights Agent provides a lightweight, web‑based interface that translates natural‑language...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 21:30:30 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Container Network Insights Agent]]></title>
-      <link>https://azure.microsoft.com/updates?id=561020</link>
-      <guid>https://azure.microsoft.com/updates?id=561020</guid>
-      <description><![CDATA[Troubleshooting Kubernetes networking issues is often slowed by logs and metrics scattered across multiple tools, requiring engineers to manually correlate signals during incidents. The Container Network Insights Agent provides a lightweight, web‑based inUpdate Type: Preview, Services: Kubernetes...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 21:30:30 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Connect to Elastic SAN from Windows VM via VM Extension]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560914/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560914/</guid>
-      <description><![CDATA[Azure Elastic SAN now supports volume connectivity for Windows Virtual Machines using the Elastic SAN VM extension, directly from the Azure Portal. This capability enables customers to connect Elastic SAN volumes during virtual machine deployment, simplifying setup by reducing the need for manual...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 20:30:56 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Connect to Elastic SAN from Windows VM via VM Extension]]></title>
-      <link>https://azure.microsoft.com/updates?id=560914</link>
-      <guid>https://azure.microsoft.com/updates?id=560914</guid>
-      <description><![CDATA[Azure Elastic SAN now supports volume connectivity for Windows Virtual Machines using the Elastic SAN VM extension, directly from the Azure Portal. This capability enables customers to connect Elastic SAN volumes during virtual machine deployment, simplifUpdate Type: GA, Services: Virtual Machines,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 20:30:56 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Visual Studio April Update – Cloud Agent Integration]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/visual-studio-april-update-cloud-agent-integration/</guid>
-      <description><![CDATA[GitHub Copilot in Visual Studio is becoming more agentic with every release. This update brings cloud agent integration front and center, letting you start remote coding sessions without leaving the IDE. The post Visual Studio April Update – Cloud Agent Integration appeared first on Visual Studio...]]></description>
-      <dc:creator><![CDATA[Mark Downie]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 19:00:04 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[The problem: All-or-nothing batch processing in Azure Service Bus]]></title>
-      <link>https://devblogs.microsoft.com/azure-sdk/per-message-settlement-azure-service-bus/</link>
-      <guid>https://devblogs.microsoft.com/azure-sdk/per-message-settlement-azure-service-bus/</guid>
-      <description><![CDATA[Azure Functions lets you settle each Service Bus message on its own within a batch. Complete, abandon, dead-letter, or defer messages one by one to avoid duplicate processing and handle errors with precision. The post The problem: All-or-nothing batch processing in Azure Service Bus appeared first...]]></description>
-      <dc:creator><![CDATA[Swapnil Nagar]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 18:47:37 GMT</pubDate>
-      <category><![CDATA[Azure SDK Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[HashiCorp Vault Integration with Terraform — Secure Secret Management]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/hashicorp-vault-integration-with-terraform-secure-secret/ba-p/4508444</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/hashicorp-vault-integration-with-terraform-secure-secret/ba-p/4508444</guid>
-      <description><![CDATA[Introduction When provisioning cloud infrastructure using Terraform, it is common to require sensitive values such as: Administrative credentials (usernames, passwords) API keys and tokens SSH keys Database connection strings Domain join credentials In most environments, these secrets are commonly:...]]></description>
-      <dc:creator><![CDATA[singhshub]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 17:55:27 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Cross-region IPAM pool association in Azure Virtual Network Manager]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/561067/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/561067/</guid>
-      <description><![CDATA[Managing IP address space across multiple regions can be difficult to scale and prone to configuration mistakes.With cross-region IPAM pool association, you can associate a single IPAM pool with virtual networks across multiple Azure regions. This helps centralize address planning, simplify...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 17:45:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Public Preview: Microsoft HTTP DDoS Ruleset for Azure WAF on Azure Front Door Premium]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/561148/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/561148/</guid>
-      <description><![CDATA[Announcing the public preview of the HTTP DDoS Ruleset on Azure Front Door Premium.HTTP-layer DDoS attacks remain a leading cause of application downtime, and traditional static controls often fall short against evolving botnets. The new HTTP DDoS Ruleset for Azure WAF introduces automated,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 17:45:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft HTTP DDoS Ruleset for Azure WAF on Azure Front Door Premium]]></title>
-      <link>https://azure.microsoft.com/updates?id=561148</link>
-      <guid>https://azure.microsoft.com/updates?id=561148</guid>
-      <description><![CDATA[Announcing the public preview of the HTTP DDoS Ruleset on Azure Front Door Premium.HTTP-layer DDoS attacks remain a leading cause of application downtime, and traditional static controls often fall short against evolving botnets. The new HTTP DDoS RulesetUpdate Type: Preview, Services: App Service,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 17:45:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Cross-region IPAM pool association in Azure Virtual Network Manager]]></title>
-      <link>https://azure.microsoft.com/updates?id=561067</link>
-      <guid>https://azure.microsoft.com/updates?id=561067</guid>
-      <description><![CDATA[Managing IP address space across multiple regions can be difficult to scale and prone to configuration mistakes.With cross-region IPAM pool association, you can associate a single IPAM pool with virtual networks across multiple Azure regions. This helps cUpdate Type: GA, Services: Virtual Network,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 17:45:04 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[How Microsoft 1ES uses agentic AI to take on security and compliance at scale]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-microsoft-1es-uses-agentic-ai-to-take-on-security-and/ba-p/4515191</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-microsoft-1es-uses-agentic-ai-to-take-on-security-and/ba-p/4515191</guid>
-      <description><![CDATA[Microsoft’s Customer Zero blog series gives an insider view of how Microsoft builds and operates Microsoft using our trusted, enterprise-grade IQ platform. Learn best practices from our engineering teams with real-world lessons, architectural patterns, and operational strategies for pressure-tested...]]></description>
-      <dc:creator><![CDATA[JennyF]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 16:15:00 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Update host keys to use SFTP on Azure Blob Storage]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-paas-blog/update-host-keys-to-use-sftp-on-azure-blob-storage/ba-p/4515483</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-paas-blog/update-host-keys-to-use-sftp-on-azure-blob-storage/ba-p/4515483</guid>
-      <description><![CDATA[Update host keys to use SFTP on Azure Blob Storage Some Azure Storage users may have received an alert informing that Microsoft will change the public key, like this. This article describes the impact this will have on the SFTP blob service and what are the changes needed.On this article: What is...]]></description>
-      <dc:creator><![CDATA[LuisFilipe]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 14:44:02 GMT</pubDate>
-      <category><![CDATA[Azure PaaS]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT]]></title>
-      <link>https://techcommunity.microsoft.com/blog/appsonazureblog/securing-your-ai-agents-before-they-ship-red-teaming-with-microsoft-pyrit/4515514</link>
-      <guid>https://techcommunity.microsoft.com/blog/appsonazureblog/securing-your-ai-agents-before-they-ship-red-teaming-with-microsoft-pyrit/4515514</guid>
-      <description><![CDATA[Securing Your AI Agents Before They Ship: Red Teaming with Microsoft PyRIT You wouldn't ship a web app without running OWASP ZAP or Snyk. So why are AI agents going to production without a sing...Update Type: Announcement, Services: , Categories:]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Tue, 28 Apr 2026 13:48:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
