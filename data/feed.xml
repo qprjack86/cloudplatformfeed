@@ -4,9 +4,63 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Fri, 01 May 2026 15:45:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 07:33:58 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Update: Egress and data transfer with Azure in the United Kingdom]]></title>
+      <link>https://azure.microsoft.com/en-us/updates/561392/</link>
+      <guid>https://azure.microsoft.com/en-us/updates/561392/</guid>
+      <description><![CDATA[We support customer choice, including the choice to transfer your data between Azure and environments outside of Azure. Azure has offered free egress and at-cost data transfer for customers and CSP partners in Europe transferring data via the internet between Azure to another data processing...]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 21:45:13 GMT</pubDate>
+      <category><![CDATA[Azure Updates]]></category>
+    </item>
+    <item>
+      <title><![CDATA[High-Fidelity Network Observability at Scale— ACNS Metrics Filtering and Log Aggregation Now GA]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-networking-blog/high-fidelity-network-observability-at-scale-acns-metrics/ba-p/4516508</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-networking-blog/high-fidelity-network-observability-at-scale-acns-metrics/ba-p/4516508</guid>
+      <description><![CDATA[We are thrilled to announce that Advanced Container Networking Services (ACNS) for Azure Kubernetes Service (AKS) now delivers two powerful observability features in General Availability: container network metrics filtering and container network log filtering and aggregation. Together, these...]]></description>
+      <dc:creator><![CDATA[chandanAggarwal]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 20:29:20 GMT</pubDate>
+      <category><![CDATA[Azure Networking]]></category>
+    </item>
+    <item>
+      <title><![CDATA[The new Run dialog: faster, cleaner, and more capable]]></title>
+      <link>https://devblogs.microsoft.com/commandline/the-new-run-dialog-faster-cleaner-and-more-capable/</link>
+      <guid>https://devblogs.microsoft.com/commandline/the-new-run-dialog-faster-cleaner-and-more-capable/</guid>
+      <description><![CDATA[We’ve shipped the new Run dialog – and we want to say thanks. As the team behind Windows Terminal and PowerToys, we’re excited to bring this to Windows 11, and your feedback helped shape it! Run has been rebuilt from the ground up: Modern design: A refreshed look that matches Fluent Design and...]]></description>
+      <dc:creator><![CDATA[Clint Rutkas]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 17:00:39 GMT</pubDate>
+      <category><![CDATA[Windows Command Line]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Shift-Left Governance for AI Agents: How the Agent Governance Toolkit Helps You Catch Violations]]></title>
+      <link>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/shift-left-governance-for-ai-agents-how-the-agent-governance/ba-p/4516481</link>
+      <guid>https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/shift-left-governance-for-ai-agents-how-the-agent-governance/ba-p/4516481</guid>
+      <description><![CDATA[In part one of this series, we covered AGT’s runtime governance: the policy engine, zero-trust identity, execution sandboxing, and the OWASP Agentic AI risk mapping. That post focused on what happens when an agent acts: policy evaluation at the moment a tool call fires, trust scoring when agents...]]></description>
+      <dc:creator><![CDATA[mosiddi]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 16:48:09 GMT</pubDate>
+      <category><![CDATA[Linux & Open Source]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Introducing langchain-azure-cosmosdb: Build Agentic Apps and RAG with One Database]]></title>
+      <link>https://devblogs.microsoft.com/cosmosdb/langchain-azure-cosmos-db-agents-rag/</link>
+      <guid>https://devblogs.microsoft.com/cosmosdb/langchain-azure-cosmos-db-agents-rag/</guid>
+      <description><![CDATA[Build AI Agents and RAG Applications with the New LangChain + LangGraph Connector for Azure Cosmos DB Building AI agents and RAG applications today means stitching together half a dozen services, a vector database, a chat history store, a checkpointer for agent state, a semantic cache, a long-term...]]></description>
+      <dc:creator><![CDATA[James Codella, Aayush Kataria]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 16:43:29 GMT</pubDate>
+      <category><![CDATA[Azure Cosmos DB Blog]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Protect Your Streaming Data in Use: Confidential Computing for Azure Event Hubs Dedicated]]></title>
+      <link>https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/protect-your-streaming-data-in-use-confidential-computing-for/ba-p/4515219</link>
+      <guid>https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/protect-your-streaming-data-in-use-confidential-computing-for/ba-p/4515219</guid>
+      <description><![CDATA[For organizations in regulated industries — financial services, healthcare, government, defense — the security conversation around data has always revolved around two states: data at rest and data in transit. Encrypt your storage. Encrypt your network traffic. Check, check. But there's a third...]]></description>
+      <dc:creator><![CDATA[ashish-chhabria]]></dc:creator>
+      <pubDate>Fri, 01 May 2026 16:11:46 GMT</pubDate>
+      <category><![CDATA[Messaging on Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[AI‑Accelerated AVM Refactoring: Modernizing Legacy IaC Safely and Swiftly]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-accelerated-avm-refactoring-modernizing-legacy-iac-safely-and/ba-p/4516437</link>
@@ -402,60 +456,6 @@
       <dc:creator><![CDATA[Sokuma]]></dc:creator>
       <pubDate>Wed, 29 Apr 2026 16:16:56 GMT</pubDate>
       <category><![CDATA[Azure Observability]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Refresh Token (RT) Transfer to Apple Watch in Microsoft Entra External ID Native Authentication]]></title>
-      <link>https://devblogs.microsoft.com/identity/native-auth-refresh-token-transfer-ga/</link>
-      <guid>https://devblogs.microsoft.com/identity/native-auth-refresh-token-transfer-ga/</guid>
-      <description><![CDATA[We’re excited to announce the General Availability (GA) of Single Sign-On (SSO) from Native Apps to Embedded Web Views for Microsoft Entra External ID (EEID) Native Authentication. This release marks a major milestone in delivering end-to-end seamless authentication experiences for modern CIAM...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 15:13:11 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[SDK-Style Support for Extension Projects]]></title>
-      <link>https://devblogs.microsoft.com/visualstudio/sdk-style-support-for-extension-projects/</link>
-      <guid>https://devblogs.microsoft.com/visualstudio/sdk-style-support-for-extension-projects/</guid>
-      <description><![CDATA[Starting in Visual Studio 18.5, you can create and build Visual Studio extensions (VSIX) using an officially supported SDK-style project. This brings VSIX projects into the modern build and deployment pipeline, improving incremental build performance and making the build → deploy → debug workflow...]]></description>
-      <dc:creator><![CDATA[Matt Clark]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 14:00:36 GMT</pubDate>
-      <category><![CDATA[Visual Studio Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Migrating Splunk Logs to Azure Application Insights on VMs]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-splunk-logs-to-azure-application-insights-on-vms/ba-p/4515866</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-splunk-logs-to-azure-application-insights-on-vms/ba-p/4515866</guid>
-      <description><![CDATA[Phase 0 – Understanding the Current Environment Before touching any code or agents, map out the existing architecture. Current setup: Applications write logs via log4net → local log files on VMs Splunk Universal Forwarders read logs → send to Splunk Indexers Splunk dashboards, alerts, and...]]></description>
-      <dc:creator><![CDATA[skundapura]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 11:35:03 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[On-premises data gateway April 2026 release]]></title>
-      <link>https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-april-2026-release/</link>
-      <guid>https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-april-2026-release/</guid>
-      <description><![CDATA[The April 2026 release of the on-premises data gateway is (version 3000.314). New Features On-premises Data Gateway Auto-Update (Admin Triggered) | (Generally Available) With this capability, gateway administrators now have greater control and flexibility over gateway lifecycle management. Instead...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 10:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[AG-UI: The Future of Agent-Driven User Interfaces]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ag-ui-the-future-of-agent-driven-user-interfaces/ba-p/4515769</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ag-ui-the-future-of-agent-driven-user-interfaces/ba-p/4515769</guid>
-      <description><![CDATA[As AI agents evolve from simple chatbots into workflow engines, decision-makers, and copilots, one challenge has remained stubbornly unsolved: How do we connect intelligent agents to rich, dynamic, user-facing interfaces without custom plumbing every single time? Introducing AG-UI (Agent–User...]]></description>
-      <dc:creator><![CDATA[VaidhyaP]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 09:30:48 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Upcoming Compute API Change: Always return non-null securityType]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387</guid>
-      <description><![CDATA[Overview Starting with Azure Compute API version 2025‑11‑01, responses for Azure Virtual Machines (VMs) and Virtual Machine Scale Sets (VMSS) will include a non‑null securityType value in all operations. While this is a small behavioral change, it can impact deployments if they rely on null checks...]]></description>
-      <dc:creator><![CDATA[AjKundnani]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 09:02:08 GMT</pubDate>
-      <category><![CDATA[Azure Compute]]></category>
     </item>
   </channel>
 </rss>
