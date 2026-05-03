@@ -1,7 +1,40 @@
 {
-  "generatedAt": "2026-05-02T15:14:34.237691+00:00",
-  "totalArticles": 117,
+  "generatedAt": "2026-05-03T07:38:07.452881+00:00",
+  "totalArticles": 114,
   "articles": [
+    {
+      "title": "Power Platform – Backup retention of Production environments is changing from 28 to 7 days",
+      "link": "https://deltapulse.app/item/MC1298714",
+      "published": "2026-05-02T17:48:59.000Z",
+      "summary": "Starting May 11, 2026, the default backup retention for Power Platform environments will be changed from 28 days to 7.<br><br>All environments will continue to be automatically protected with a <a target=\"_blank\" href=\"https://aka.ms/14441-3\"> 7‑day default backup</a>, ensuring reliable recovery for day‑to‑day scenarios. For customers with higher compliance, governance, or operational needs, enabling Managed Environments unlocks the ability to extend backup retention up to 28 days, putting control directly in administrators’ hands. Managed environments will support up to 28 days of backup retention if increased by administrator; otherwise, the default is 7 days.<br><br><b>How does this affect me?</b><br>This change impacts the point in time restore window available for active environments and will not impact deleted environments. Currently, when a production environment with Dynamics 365 apps is deleted, the data will continue to be restorable for up to 28 days and when a production environment without Dynamics 365 apps is deleted, the data will continue to be restorable for up to 7 days. These are not changing.<br><br>For users with higher compliance, governance, or operational needs, enabling <a target=\"_blank\" href=\"https://aka.ms/14441-2\">Managed Environments</a> can extend its <a target=\"_blank\" href=\"https://aka.ms/14441\">backup retention</a> up to 28 days.<br><br><b>What action do I need to take?</b><br>This message is for awareness, and no action is required.<br><br>For environments that you want to extend the backup to 28 days, you will need to enable managed environment and change the backup retention period.",
+      "source": "m365",
+      "m365Service": "Power Platform",
+      "m365AllServices": [
+        "Power Platform"
+      ],
+      "m365Id": "MC1298714",
+      "m365Source": "message_center",
+      "m365Category": "stayInformed",
+      "m365Severity": "normal",
+      "m365Status": null,
+      "m365TargetDate": "May 2026",
+      "m365PreviewDate": null,
+      "m365GeneralAvailabilityDate": null,
+      "m365WasUpdated": false,
+      "m365ScheduleUpdated": false,
+      "m365IsMajorChange": false,
+      "m365Tags": [
+        "Feature update"
+      ],
+      "m365RetirementSignal": false,
+      "m365ActByDate": null,
+      "m365RetirementStartDate": null,
+      "m365RetirementEndDate": null,
+      "m365RetirementDate": null,
+      "m365RetirementDatePrecision": null,
+      "lifecycle": "launched_ga",
+      "_normalized_url": "message_center:MC1298714"
+    },
     {
       "title": "Exchange admin dashboard adds provider list export for Actionable Messages",
       "link": "https://deltapulse.app/item/MC1297983",
@@ -143,39 +176,6 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "launched_ga",
       "_normalized_url": "message_center:MC1297979"
-    },
-    {
-      "title": "Power Platform – Enable Managed Environment to extend storage retention period",
-      "link": "https://deltapulse.app/item/MC1297538",
-      "published": "2026-05-01T13:15:43.000Z",
-      "summary": "As of April 30, 2026, the default system backup retention period for Power Platform environments is 7 days.<br><br><b>How does this affect me?</b><br>System backups are automatically created for environments that have a database with a default backup retention period of 7 days. Admins can enable Managed Environments and extend the retention period to 28 days using PowerShell. All Dynamics 365 & Power Platform licenses that allow you to create an environment in production with Dataverse qualifies for Managed Environment.<br><br><b>What action do I need to take?</b><br>To extend the default system backup retention period for your Power Platform environments, please enable Managed Environments.<br><br>If you would like more information on this feature, please visit <a target=\"_blank\" href=\"https://aka.ms/14441\">Back up and restore environments </a> and <a target=\"_blank\" href=\"https://aka.ms/14441-2\">Managed Environments</a>. changed 2026-05-01T20:30:21.203Z lastUpdatedDate tags Admin impact Power Platform – Enable Managed Environment to extend storage retention period Power Platform 2026-05-01T14:01:45.863Z Feature update 2026-05-01T16:32:19.173Z",
-      "source": "m365",
-      "m365Service": "Power Platform",
-      "m365AllServices": [
-        "Power Platform"
-      ],
-      "m365Id": "MC1297538",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "April 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365WasUpdated": false,
-      "m365ScheduleUpdated": false,
-      "m365IsMajorChange": false,
-      "m365Tags": [
-        "Feature update"
-      ],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementStartDate": null,
-      "m365RetirementEndDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1297538"
     },
     {
       "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -3186,35 +3186,6 @@
       "_normalized_url": "roadmap:560322"
     },
     {
-      "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
-      "link": "https://deltapulse.app/item/559611",
-      "published": "2026-04-02T23:15:15.000Z",
-      "summary": "Presenters can now share a single application window and enable participants to annotate directly on top of that content, without exposing their entire desktop. This means cleaner presentations, protected privacy, and more engaging discussions across training sessions, workshops, and client meetings.",
-      "source": "m365",
-      "m365Service": "Microsoft 365",
-      "m365AllServices": [],
-      "m365Id": "559611",
-      "m365Source": "roadmap",
-      "m365Category": "",
-      "m365Severity": null,
-      "m365Status": null,
-      "m365TargetDate": "May 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365WasUpdated": true,
-      "m365ScheduleUpdated": false,
-      "m365IsMajorChange": false,
-      "m365Tags": [],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementStartDate": null,
-      "m365RetirementEndDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "roadmap:559611"
-    },
-    {
       "title": "(Updated) Microsoft 365 Copilot: Change in accessing additional agents in Excel",
       "link": "https://deltapulse.app/item/MC1287365",
       "published": "2026-04-21T22:49:21.000Z",
@@ -3354,42 +3325,6 @@
       "m365RetirementDatePrecision": "day",
       "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1227085"
-    },
-    {
-      "title": "(Updated) Viva Engage: Pinned resources and related communities in Teams for iOS",
-      "link": "https://deltapulse.app/item/MC1268933",
-      "published": "2026-04-02T21:02:30.000Z",
-      "summary": "Viva Engage in Microsoft Teams for iOS will add pinned resources and related communities by early June 2026, aligning with other platforms. This improves content access and community discovery, is enabled by default, requires no admin action, and affects users and community admins. <p>Updated April 30, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p> <p>We're improving the Viva Engage experience in Microsoft Teams for iOS by bringing <b>pinned resources</b> and <b>related communities</b> into the Teams mobile app. Pinned resources highlight important links and files within a community, while related communities help users discover other relevant Viva Engage communities. These are two separate features that work together to improve information access and community discovery.</p><p>This update aligns the iOS experience with Engage on the web, the Engage mobile app, and Teams for Android, helping users discover important content and related communities more easily—especially those who rely on Teams on iOS as their primary communication tool.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559107\" target=\"_blank\">559107</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li><b>General Availability (Worldwide):</b> Rollout begins in <b>early May 2026</b> (previously&nbsp;late April)&nbsp;and is expected to complete by <b>early June 2026</b> (previously&nbsp;late April).</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Users who access Viva Engage communities in Microsoft Teams on iOS</li> <li><b>Community admins</b> who manage Viva Engage communities</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Users will see<b> pinned resources</b> for a community directly within Teams on iOS.</li> <li>Users will see <b>related communities</b> surfaced within the community experience.</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/8aca528a-aaf3-414f-9c52-19fa98f32dcb\" style=\"width: 400px;\" alt=\"user settings\"></p> <li>The experience will match what is already available in the Viva Engage mobile app, Viva Engage on the web, and Teams for Android.</li> <li>The feature is <b>enabled by default</b>.</li> <li>There are no changes to existing admin policies or configurations.</li> </ul> <p><b>[What you can do to prepare:]</b></p> <p>No admin action is required.</p> <ul> <li>Communicate this update to end users who use Teams on iOS.</li> <li>Encourage Viva Engage <b>community admins</b> to review pinned resources and related communities.</li> <li>Update internal documentation or helpdesk guidance, if applicable.</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> changed 2026-04-30T22:30:51.717Z title summary lastUpdatedDate tags bodyContent Feature update User impact Admin impact Viva Engage: Pinned resources and related communities in Teams for iOS Microsoft Viva Viva Engage in Microsoft Teams for iOS will add pinned resources and related communities by late April 2026, matching other platforms. This enhances content access and community discovery, is enabled by default, requires no admin action, and affects users and community admins. iOS <p><b>[Introduction]</b></p> <p>We're improving the Viva Engage experience in Microsoft Teams for iOS by bringing <b>pinned resources</b> and <b>related communities</b> into the Teams mobile app. Pinned resources highlight important links and files within a community, while related communities help users discover other relevant Viva Engage communities. These are two separate features that work together to improve information access and community discovery.</p><p>This update aligns the iOS experience with Engage on the web, the Engage mobile app, and Teams for Android, helping users discover important content and related communities more easily—especially those who rely on Teams on iOS as their primary communication tool.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559107\" target=\"_blank\">559107</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li><b>General Availability (Worldwide):</b> Rollout begins in <b>late April 2026</b> and is expected to complete by <b>late April 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Users who access Viva Engage communities in Microsoft Teams on iOS</li> <li><b>Community admins</b> who manage Viva Engage communities</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Users will see<b> pinned resources</b> for a community directly within Teams on iOS.</li> <li>Users will see <b>related communities</b> surfaced within the community experience.</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/8aca528a-aaf3-414f-9c52-19fa98f32dcb\" style=\"width: 400px;\" alt=\"user settings\"></p> <li>The experience will match what is already available in the Viva Engage mobile app, Viva Engage on the web, and Teams for Android.</li> <li>The feature is <b>enabled by default</b>.</li> <li>There are no changes to existing admin policies or configurations.</li> </ul> <p><b>[What you can do to prepare:]</b></p> <p>No admin action is required.</p> <ul> <li>Communicate this update to end users who use Teams on iOS.</li> <li>Encourage Viva Engage <b>community admins</b> to review pinned resources and related communities.</li> <li>Update internal documentation or helpdesk guidance, if applicable.</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> 2026-04-02T21:02:36.207Z Updated message (Updated) Viva Engage: Pinned resources and related communities in Teams for iOS 2026-04-30T21:29:42.690Z",
-      "source": "m365",
-      "m365Service": "Microsoft Viva",
-      "m365AllServices": [
-        "Microsoft Viva"
-      ],
-      "m365Id": "MC1268933",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "May 2026, June 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365WasUpdated": true,
-      "m365ScheduleUpdated": false,
-      "m365IsMajorChange": false,
-      "m365Tags": [
-        "Updated message",
-        "Feature update",
-        "User impact",
-        "Admin impact"
-      ],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementStartDate": null,
-      "m365RetirementEndDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1268933"
     },
     {
       "title": "(Updated) Microsoft 365 Copilot transition to the cloud.microsoft domain",
@@ -3589,41 +3524,6 @@
       "m365RetirementDatePrecision": null,
       "lifecycle": "retiring",
       "_normalized_url": "message_center:MC1245635"
-    },
-    {
-      "title": "(Updated) Clearer RSVP selection in Outlook Mobile",
-      "link": "https://deltapulse.app/item/MC1269211",
-      "published": "2026-04-03T05:13:19.000Z",
-      "summary": "Outlook Mobile will visually highlight users' RSVP responses (Yes, Maybe, No) to meeting invites, improving clarity. This rollout begins early June 2026 and completes by end of June 2026, affecting all iOS and Android users worldwide, GCC, and GCC High tenants. No admin action needed; feature enabled by default. <p>Updated April 29, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p> <p>We’re improving the RSVP experience in Outlook Mobile by visually highlighting the response a user has selected (Yes, Maybe, or No). This makes it easier for users to quickly see how they’ve responded to a meeting invitation.</p><p><b>[When this will happen:]</b></p> <ul> </ul><p>General Availability (Worldwide, GCC, GCC High): Rollout begins in<b> early June 2026</b> (previously&nbsp;late April)<b>&nbsp;</b>and is expected to complete by <b>end of June 2026</b> (previously&nbsp;early June)<b>.</b><b><br></b></p><p><b>[How this affects your organization:]</b><b><br></b></p><p><b>Who is affected:</b></p> <ul> <li>All users who access <b>Outlook Mobile</b> on iOS or Android</li> <li>Applies to Worldwide, GCC, and GCC High tenants</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The selected RSVP option (Yes, Maybe, or No) will be visually highlighted</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/000bb42e-36b8-4be3-a07a-e655bb749319\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>Users can quickly confirm how they responded to a meeting invitation and edit as needed</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bc41e3aa-02bc-442d-8564-80a8cd937a51\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>The feature is <b>enabled by default</b></li> <li>No changes to existing meeting workflows or policies</li> <li>No impact to Outlook on the web or Outlook desktop clients</li> </ul> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required; the update will roll out automatically</li> <li>Consider notifying helpdesk staff of the visual change</li> <li>Update internal documentation if needed</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> changed 2026-04-29T20:30:25.707Z title summary lastUpdatedDate tags bodyContent Feature update User impact Clearer RSVP selection in Outlook Mobile Exchange Online Outlook Mobile will visually highlight users' RSVP responses (Yes, Maybe, No) to meeting invitations starting late April 2026, completing by early June 2026. This applies to all iOS and Android users worldwide, GCC, and GCC High tenants. The feature is enabled by default with no admin action needed. <p><b>[Introduction]</b></p> <p>We’re improving the RSVP experience in Outlook Mobile by visually highlighting the response a user has selected (Yes, Maybe, or No). This makes it easier for users to quickly see how they’ve responded to a meeting invitation.</p><p><b>[When this will happen:]</b></p> <ul> </ul><p>General Availability (Worldwide, GCC, GCC High): Rollout begins in <b>late April 2026</b> and is expected to complete by <b>early June 2026.</b><b><br></b></p><p><b>[How this affects your organization:]</b><b><br></b></p><p><b>Who is affected:</b></p> <ul> <li>All users who access <b>Outlook Mobile</b> on iOS or Android</li> <li>Applies to Worldwide, GCC, and GCC High tenants</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The selected RSVP option (Yes, Maybe, or No) will be visually highlighted</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/000bb42e-36b8-4be3-a07a-e655bb749319\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>Users can quickly confirm how they responded to a meeting invitation and edit as needed</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bc41e3aa-02bc-442d-8564-80a8cd937a51\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>The feature is <b>enabled by default</b></li> <li>No changes to existing meeting workflows or policies</li> <li>No impact to Outlook on the web or Outlook desktop clients</li> </ul> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required; the update will roll out automatically</li> <li>Consider notifying helpdesk staff of the visual change</li> <li>Update internal documentation if needed</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> 2026-04-03T05:13:27.737Z Updated message (Updated) Clearer RSVP selection in Outlook Mobile 2026-04-29T17:10:00.623Z",
-      "source": "m365",
-      "m365Service": "Exchange Online",
-      "m365AllServices": [
-        "Exchange Online"
-      ],
-      "m365Id": "MC1269211",
-      "m365Source": "message_center",
-      "m365Category": "stayInformed",
-      "m365Severity": "normal",
-      "m365Status": null,
-      "m365TargetDate": "June 2026",
-      "m365PreviewDate": null,
-      "m365GeneralAvailabilityDate": null,
-      "m365WasUpdated": true,
-      "m365ScheduleUpdated": false,
-      "m365IsMajorChange": false,
-      "m365Tags": [
-        "Updated message",
-        "Feature update",
-        "User impact"
-      ],
-      "m365RetirementSignal": false,
-      "m365ActByDate": null,
-      "m365RetirementStartDate": null,
-      "m365RetirementEndDate": null,
-      "m365RetirementDate": null,
-      "m365RetirementDatePrecision": null,
-      "lifecycle": "launched_ga",
-      "_normalized_url": "message_center:MC1269211"
     },
     {
       "title": "(Updated) Microsoft Teams: AI meeting recap without transcript to meet compliance policies",
@@ -4313,41 +4213,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1245635"
-      },
-      {
-        "title": "(Updated) Clearer RSVP selection in Outlook Mobile",
-        "link": "https://deltapulse.app/item/MC1269211",
-        "published": "2026-04-03T05:13:19.000Z",
-        "summary": "Outlook Mobile will visually highlight users' RSVP responses (Yes, Maybe, No) to meeting invites, improving clarity. This rollout begins early June 2026 and completes by end of June 2026, affecting all iOS and Android users worldwide, GCC, and GCC High tenants. No admin action needed; feature enabled by default. <p>Updated April 29, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p> <p>We’re improving the RSVP experience in Outlook Mobile by visually highlighting the response a user has selected (Yes, Maybe, or No). This makes it easier for users to quickly see how they’ve responded to a meeting invitation.</p><p><b>[When this will happen:]</b></p> <ul> </ul><p>General Availability (Worldwide, GCC, GCC High): Rollout begins in<b> early June 2026</b> (previously&nbsp;late April)<b>&nbsp;</b>and is expected to complete by <b>end of June 2026</b> (previously&nbsp;early June)<b>.</b><b><br></b></p><p><b>[How this affects your organization:]</b><b><br></b></p><p><b>Who is affected:</b></p> <ul> <li>All users who access <b>Outlook Mobile</b> on iOS or Android</li> <li>Applies to Worldwide, GCC, and GCC High tenants</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The selected RSVP option (Yes, Maybe, or No) will be visually highlighted</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/000bb42e-36b8-4be3-a07a-e655bb749319\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>Users can quickly confirm how they responded to a meeting invitation and edit as needed</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bc41e3aa-02bc-442d-8564-80a8cd937a51\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>The feature is <b>enabled by default</b></li> <li>No changes to existing meeting workflows or policies</li> <li>No impact to Outlook on the web or Outlook desktop clients</li> </ul> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required; the update will roll out automatically</li> <li>Consider notifying helpdesk staff of the visual change</li> <li>Update internal documentation if needed</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> changed 2026-04-29T20:30:25.707Z title summary lastUpdatedDate tags bodyContent Feature update User impact Clearer RSVP selection in Outlook Mobile Exchange Online Outlook Mobile will visually highlight users' RSVP responses (Yes, Maybe, No) to meeting invitations starting late April 2026, completing by early June 2026. This applies to all iOS and Android users worldwide, GCC, and GCC High tenants. The feature is enabled by default with no admin action needed. <p><b>[Introduction]</b></p> <p>We’re improving the RSVP experience in Outlook Mobile by visually highlighting the response a user has selected (Yes, Maybe, or No). This makes it easier for users to quickly see how they’ve responded to a meeting invitation.</p><p><b>[When this will happen:]</b></p> <ul> </ul><p>General Availability (Worldwide, GCC, GCC High): Rollout begins in <b>late April 2026</b> and is expected to complete by <b>early June 2026.</b><b><br></b></p><p><b>[How this affects your organization:]</b><b><br></b></p><p><b>Who is affected:</b></p> <ul> <li>All users who access <b>Outlook Mobile</b> on iOS or Android</li> <li>Applies to Worldwide, GCC, and GCC High tenants</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The selected RSVP option (Yes, Maybe, or No) will be visually highlighted</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/000bb42e-36b8-4be3-a07a-e655bb749319\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>Users can quickly confirm how they responded to a meeting invitation and edit as needed</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bc41e3aa-02bc-442d-8564-80a8cd937a51\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>The feature is <b>enabled by default</b></li> <li>No changes to existing meeting workflows or policies</li> <li>No impact to Outlook on the web or Outlook desktop clients</li> </ul> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required; the update will roll out automatically</li> <li>Consider notifying helpdesk staff of the visual change</li> <li>Update internal documentation if needed</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> 2026-04-03T05:13:27.737Z Updated message (Updated) Clearer RSVP selection in Outlook Mobile 2026-04-29T17:10:00.623Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1269211",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Updated message",
-          "Feature update",
-          "User impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1269211"
       },
       {
         "title": "(Updated) Microsoft Teams: AI meeting recap without transcript to meet compliance policies",
@@ -5998,6 +5863,39 @@
     ],
     "Uncategorised": [
       {
+        "title": "Power Platform – Backup retention of Production environments is changing from 28 to 7 days",
+        "link": "https://deltapulse.app/item/MC1298714",
+        "published": "2026-05-02T17:48:59.000Z",
+        "summary": "Starting May 11, 2026, the default backup retention for Power Platform environments will be changed from 28 days to 7.<br><br>All environments will continue to be automatically protected with a <a target=\"_blank\" href=\"https://aka.ms/14441-3\"> 7‑day default backup</a>, ensuring reliable recovery for day‑to‑day scenarios. For customers with higher compliance, governance, or operational needs, enabling Managed Environments unlocks the ability to extend backup retention up to 28 days, putting control directly in administrators’ hands. Managed environments will support up to 28 days of backup retention if increased by administrator; otherwise, the default is 7 days.<br><br><b>How does this affect me?</b><br>This change impacts the point in time restore window available for active environments and will not impact deleted environments. Currently, when a production environment with Dynamics 365 apps is deleted, the data will continue to be restorable for up to 28 days and when a production environment without Dynamics 365 apps is deleted, the data will continue to be restorable for up to 7 days. These are not changing.<br><br>For users with higher compliance, governance, or operational needs, enabling <a target=\"_blank\" href=\"https://aka.ms/14441-2\">Managed Environments</a> can extend its <a target=\"_blank\" href=\"https://aka.ms/14441\">backup retention</a> up to 28 days.<br><br><b>What action do I need to take?</b><br>This message is for awareness, and no action is required.<br><br>For environments that you want to extend the backup to 28 days, you will need to enable managed environment and change the backup retention period.",
+        "source": "m365",
+        "m365Service": "Power Platform",
+        "m365AllServices": [
+          "Power Platform"
+        ],
+        "m365Id": "MC1298714",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365WasUpdated": false,
+        "m365ScheduleUpdated": false,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Feature update"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementStartDate": null,
+        "m365RetirementEndDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1298714"
+      },
+      {
         "title": "Exchange admin dashboard adds provider list export for Actionable Messages",
         "link": "https://deltapulse.app/item/MC1297983",
         "published": "2026-05-01T22:49:22.000Z",
@@ -6102,39 +6000,6 @@
         "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1297981"
-      },
-      {
-        "title": "Power Platform – Enable Managed Environment to extend storage retention period",
-        "link": "https://deltapulse.app/item/MC1297538",
-        "published": "2026-05-01T13:15:43.000Z",
-        "summary": "As of April 30, 2026, the default system backup retention period for Power Platform environments is 7 days.<br><br><b>How does this affect me?</b><br>System backups are automatically created for environments that have a database with a default backup retention period of 7 days. Admins can enable Managed Environments and extend the retention period to 28 days using PowerShell. All Dynamics 365 & Power Platform licenses that allow you to create an environment in production with Dataverse qualifies for Managed Environment.<br><br><b>What action do I need to take?</b><br>To extend the default system backup retention period for your Power Platform environments, please enable Managed Environments.<br><br>If you would like more information on this feature, please visit <a target=\"_blank\" href=\"https://aka.ms/14441\">Back up and restore environments </a> and <a target=\"_blank\" href=\"https://aka.ms/14441-2\">Managed Environments</a>. changed 2026-05-01T20:30:21.203Z lastUpdatedDate tags Admin impact Power Platform – Enable Managed Environment to extend storage retention period Power Platform 2026-05-01T14:01:45.863Z Feature update 2026-05-01T16:32:19.173Z",
-        "source": "m365",
-        "m365Service": "Power Platform",
-        "m365AllServices": [
-          "Power Platform"
-        ],
-        "m365Id": "MC1297538",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": false,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Feature update"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1297538"
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -7336,35 +7201,6 @@
         "_normalized_url": "roadmap:560322"
       },
       {
-        "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
-        "link": "https://deltapulse.app/item/559611",
-        "published": "2026-04-02T23:15:15.000Z",
-        "summary": "Presenters can now share a single application window and enable participants to annotate directly on top of that content, without exposing their entire desktop. This means cleaner presentations, protected privacy, and more engaging discussions across training sessions, workshops, and client meetings.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559611",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559611"
-      },
-      {
         "title": "(Updated) Microsoft 365 Copilot: Change in accessing additional agents in Excel",
         "link": "https://deltapulse.app/item/MC1287365",
         "published": "2026-04-21T22:49:21.000Z",
@@ -7504,42 +7340,6 @@
         "m365RetirementDatePrecision": "day",
         "lifecycle": "retiring",
         "_normalized_url": "message_center:MC1227085"
-      },
-      {
-        "title": "(Updated) Viva Engage: Pinned resources and related communities in Teams for iOS",
-        "link": "https://deltapulse.app/item/MC1268933",
-        "published": "2026-04-02T21:02:30.000Z",
-        "summary": "Viva Engage in Microsoft Teams for iOS will add pinned resources and related communities by early June 2026, aligning with other platforms. This improves content access and community discovery, is enabled by default, requires no admin action, and affects users and community admins. <p>Updated April 30, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p> <p>We're improving the Viva Engage experience in Microsoft Teams for iOS by bringing <b>pinned resources</b> and <b>related communities</b> into the Teams mobile app. Pinned resources highlight important links and files within a community, while related communities help users discover other relevant Viva Engage communities. These are two separate features that work together to improve information access and community discovery.</p><p>This update aligns the iOS experience with Engage on the web, the Engage mobile app, and Teams for Android, helping users discover important content and related communities more easily—especially those who rely on Teams on iOS as their primary communication tool.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559107\" target=\"_blank\">559107</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li><b>General Availability (Worldwide):</b> Rollout begins in <b>early May 2026</b> (previously&nbsp;late April)&nbsp;and is expected to complete by <b>early June 2026</b> (previously&nbsp;late April).</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Users who access Viva Engage communities in Microsoft Teams on iOS</li> <li><b>Community admins</b> who manage Viva Engage communities</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Users will see<b> pinned resources</b> for a community directly within Teams on iOS.</li> <li>Users will see <b>related communities</b> surfaced within the community experience.</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/8aca528a-aaf3-414f-9c52-19fa98f32dcb\" style=\"width: 400px;\" alt=\"user settings\"></p> <li>The experience will match what is already available in the Viva Engage mobile app, Viva Engage on the web, and Teams for Android.</li> <li>The feature is <b>enabled by default</b>.</li> <li>There are no changes to existing admin policies or configurations.</li> </ul> <p><b>[What you can do to prepare:]</b></p> <p>No admin action is required.</p> <ul> <li>Communicate this update to end users who use Teams on iOS.</li> <li>Encourage Viva Engage <b>community admins</b> to review pinned resources and related communities.</li> <li>Update internal documentation or helpdesk guidance, if applicable.</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> changed 2026-04-30T22:30:51.717Z title summary lastUpdatedDate tags bodyContent Feature update User impact Admin impact Viva Engage: Pinned resources and related communities in Teams for iOS Microsoft Viva Viva Engage in Microsoft Teams for iOS will add pinned resources and related communities by late April 2026, matching other platforms. This enhances content access and community discovery, is enabled by default, requires no admin action, and affects users and community admins. iOS <p><b>[Introduction]</b></p> <p>We're improving the Viva Engage experience in Microsoft Teams for iOS by bringing <b>pinned resources</b> and <b>related communities</b> into the Teams mobile app. Pinned resources highlight important links and files within a community, while related communities help users discover other relevant Viva Engage communities. These are two separate features that work together to improve information access and community discovery.</p><p>This update aligns the iOS experience with Engage on the web, the Engage mobile app, and Teams for Android, helping users discover important content and related communities more easily—especially those who rely on Teams on iOS as their primary communication tool.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559107\" target=\"_blank\">559107</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li><b>General Availability (Worldwide):</b> Rollout begins in <b>late April 2026</b> and is expected to complete by <b>late April 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Users who access Viva Engage communities in Microsoft Teams on iOS</li> <li><b>Community admins</b> who manage Viva Engage communities</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Users will see<b> pinned resources</b> for a community directly within Teams on iOS.</li> <li>Users will see <b>related communities</b> surfaced within the community experience.</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/8aca528a-aaf3-414f-9c52-19fa98f32dcb\" style=\"width: 400px;\" alt=\"user settings\"></p> <li>The experience will match what is already available in the Viva Engage mobile app, Viva Engage on the web, and Teams for Android.</li> <li>The feature is <b>enabled by default</b>.</li> <li>There are no changes to existing admin policies or configurations.</li> </ul> <p><b>[What you can do to prepare:]</b></p> <p>No admin action is required.</p> <ul> <li>Communicate this update to end users who use Teams on iOS.</li> <li>Encourage Viva Engage <b>community admins</b> to review pinned resources and related communities.</li> <li>Update internal documentation or helpdesk guidance, if applicable.</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> 2026-04-02T21:02:36.207Z Updated message (Updated) Viva Engage: Pinned resources and related communities in Teams for iOS 2026-04-30T21:29:42.690Z",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1268933",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026, June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Updated message",
-          "Feature update",
-          "User impact",
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268933"
       },
       {
         "title": "(Updated) Microsoft Viva - Copilot Analytics: Export agent data from the Agent Dashboard",
@@ -7968,6 +7768,39 @@
     ],
     "launched_ga": [
       {
+        "title": "Power Platform – Backup retention of Production environments is changing from 28 to 7 days",
+        "link": "https://deltapulse.app/item/MC1298714",
+        "published": "2026-05-02T17:48:59.000Z",
+        "summary": "Starting May 11, 2026, the default backup retention for Power Platform environments will be changed from 28 days to 7.<br><br>All environments will continue to be automatically protected with a <a target=\"_blank\" href=\"https://aka.ms/14441-3\"> 7‑day default backup</a>, ensuring reliable recovery for day‑to‑day scenarios. For customers with higher compliance, governance, or operational needs, enabling Managed Environments unlocks the ability to extend backup retention up to 28 days, putting control directly in administrators’ hands. Managed environments will support up to 28 days of backup retention if increased by administrator; otherwise, the default is 7 days.<br><br><b>How does this affect me?</b><br>This change impacts the point in time restore window available for active environments and will not impact deleted environments. Currently, when a production environment with Dynamics 365 apps is deleted, the data will continue to be restorable for up to 28 days and when a production environment without Dynamics 365 apps is deleted, the data will continue to be restorable for up to 7 days. These are not changing.<br><br>For users with higher compliance, governance, or operational needs, enabling <a target=\"_blank\" href=\"https://aka.ms/14441-2\">Managed Environments</a> can extend its <a target=\"_blank\" href=\"https://aka.ms/14441\">backup retention</a> up to 28 days.<br><br><b>What action do I need to take?</b><br>This message is for awareness, and no action is required.<br><br>For environments that you want to extend the backup to 28 days, you will need to enable managed environment and change the backup retention period.",
+        "source": "m365",
+        "m365Service": "Power Platform",
+        "m365AllServices": [
+          "Power Platform"
+        ],
+        "m365Id": "MC1298714",
+        "m365Source": "message_center",
+        "m365Category": "stayInformed",
+        "m365Severity": "normal",
+        "m365Status": null,
+        "m365TargetDate": "May 2026",
+        "m365PreviewDate": null,
+        "m365GeneralAvailabilityDate": null,
+        "m365WasUpdated": false,
+        "m365ScheduleUpdated": false,
+        "m365IsMajorChange": false,
+        "m365Tags": [
+          "Feature update"
+        ],
+        "m365RetirementSignal": false,
+        "m365ActByDate": null,
+        "m365RetirementStartDate": null,
+        "m365RetirementEndDate": null,
+        "m365RetirementDate": null,
+        "m365RetirementDatePrecision": null,
+        "lifecycle": "launched_ga",
+        "_normalized_url": "message_center:MC1298714"
+      },
+      {
         "title": "Exchange admin dashboard adds provider list export for Actionable Messages",
         "link": "https://deltapulse.app/item/MC1297983",
         "published": "2026-05-01T22:49:22.000Z",
@@ -8073,39 +7906,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1297979"
-      },
-      {
-        "title": "Power Platform – Enable Managed Environment to extend storage retention period",
-        "link": "https://deltapulse.app/item/MC1297538",
-        "published": "2026-05-01T13:15:43.000Z",
-        "summary": "As of April 30, 2026, the default system backup retention period for Power Platform environments is 7 days.<br><br><b>How does this affect me?</b><br>System backups are automatically created for environments that have a database with a default backup retention period of 7 days. Admins can enable Managed Environments and extend the retention period to 28 days using PowerShell. All Dynamics 365 & Power Platform licenses that allow you to create an environment in production with Dataverse qualifies for Managed Environment.<br><br><b>What action do I need to take?</b><br>To extend the default system backup retention period for your Power Platform environments, please enable Managed Environments.<br><br>If you would like more information on this feature, please visit <a target=\"_blank\" href=\"https://aka.ms/14441\">Back up and restore environments </a> and <a target=\"_blank\" href=\"https://aka.ms/14441-2\">Managed Environments</a>. changed 2026-05-01T20:30:21.203Z lastUpdatedDate tags Admin impact Power Platform – Enable Managed Environment to extend storage retention period Power Platform 2026-05-01T14:01:45.863Z Feature update 2026-05-01T16:32:19.173Z",
-        "source": "m365",
-        "m365Service": "Power Platform",
-        "m365AllServices": [
-          "Power Platform"
-        ],
-        "m365Id": "MC1297538",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "April 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": false,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Feature update"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1297538"
       },
       {
         "title": "Updates available for Microsoft 365 Apps for Current Channel",
@@ -10737,35 +10537,6 @@
         "_normalized_url": "roadmap:560322"
       },
       {
-        "title": "Microsoft Teams: Annotations on Teams Single Window Sharing on macOS",
-        "link": "https://deltapulse.app/item/559611",
-        "published": "2026-04-02T23:15:15.000Z",
-        "summary": "Presenters can now share a single application window and enable participants to annotate directly on top of that content, without exposing their entire desktop. This means cleaner presentations, protected privacy, and more engaging discussions across training sessions, workshops, and client meetings.",
-        "source": "m365",
-        "m365Service": "Microsoft 365",
-        "m365AllServices": [],
-        "m365Id": "559611",
-        "m365Source": "roadmap",
-        "m365Category": "",
-        "m365Severity": null,
-        "m365Status": null,
-        "m365TargetDate": "May 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "roadmap:559611"
-      },
-      {
         "title": "(Updated) Microsoft 365 Copilot: Change in accessing additional agents in Excel",
         "link": "https://deltapulse.app/item/MC1287365",
         "published": "2026-04-21T22:49:21.000Z",
@@ -10872,42 +10643,6 @@
         "_normalized_url": "message_center:MC1282554"
       },
       {
-        "title": "(Updated) Viva Engage: Pinned resources and related communities in Teams for iOS",
-        "link": "https://deltapulse.app/item/MC1268933",
-        "published": "2026-04-02T21:02:30.000Z",
-        "summary": "Viva Engage in Microsoft Teams for iOS will add pinned resources and related communities by early June 2026, aligning with other platforms. This improves content access and community discovery, is enabled by default, requires no admin action, and affects users and community admins. <p>Updated April 30, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p> <p>We're improving the Viva Engage experience in Microsoft Teams for iOS by bringing <b>pinned resources</b> and <b>related communities</b> into the Teams mobile app. Pinned resources highlight important links and files within a community, while related communities help users discover other relevant Viva Engage communities. These are two separate features that work together to improve information access and community discovery.</p><p>This update aligns the iOS experience with Engage on the web, the Engage mobile app, and Teams for Android, helping users discover important content and related communities more easily—especially those who rely on Teams on iOS as their primary communication tool.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559107\" target=\"_blank\">559107</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li><b>General Availability (Worldwide):</b> Rollout begins in <b>early May 2026</b> (previously&nbsp;late April)&nbsp;and is expected to complete by <b>early June 2026</b> (previously&nbsp;late April).</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Users who access Viva Engage communities in Microsoft Teams on iOS</li> <li><b>Community admins</b> who manage Viva Engage communities</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Users will see<b> pinned resources</b> for a community directly within Teams on iOS.</li> <li>Users will see <b>related communities</b> surfaced within the community experience.</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/8aca528a-aaf3-414f-9c52-19fa98f32dcb\" style=\"width: 400px;\" alt=\"user settings\"></p> <li>The experience will match what is already available in the Viva Engage mobile app, Viva Engage on the web, and Teams for Android.</li> <li>The feature is <b>enabled by default</b>.</li> <li>There are no changes to existing admin policies or configurations.</li> </ul> <p><b>[What you can do to prepare:]</b></p> <p>No admin action is required.</p> <ul> <li>Communicate this update to end users who use Teams on iOS.</li> <li>Encourage Viva Engage <b>community admins</b> to review pinned resources and related communities.</li> <li>Update internal documentation or helpdesk guidance, if applicable.</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> changed 2026-04-30T22:30:51.717Z title summary lastUpdatedDate tags bodyContent Feature update User impact Admin impact Viva Engage: Pinned resources and related communities in Teams for iOS Microsoft Viva Viva Engage in Microsoft Teams for iOS will add pinned resources and related communities by late April 2026, matching other platforms. This enhances content access and community discovery, is enabled by default, requires no admin action, and affects users and community admins. iOS <p><b>[Introduction]</b></p> <p>We're improving the Viva Engage experience in Microsoft Teams for iOS by bringing <b>pinned resources</b> and <b>related communities</b> into the Teams mobile app. Pinned resources highlight important links and files within a community, while related communities help users discover other relevant Viva Engage communities. These are two separate features that work together to improve information access and community discovery.</p><p>This update aligns the iOS experience with Engage on the web, the Engage mobile app, and Teams for Android, helping users discover important content and related communities more easily—especially those who rely on Teams on iOS as their primary communication tool.</p><p>This message is associated with Roadmap ID&nbsp;<a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=559107\" target=\"_blank\">559107</a>.</p> <p><b>[When this will happen:]</b></p> <ul> <li><b>General Availability (Worldwide):</b> Rollout begins in <b>late April 2026</b> and is expected to complete by <b>late April 2026</b>.</li> </ul> <p><b>[How this affects your organization:]</b></p> <p><b>Who is affected:</b></p> <ul> <li>Users who access Viva Engage communities in Microsoft Teams on iOS</li> <li><b>Community admins</b> who manage Viva Engage communities</li> </ul> <p><b>What will happen:</b></p> <ul> <li>Users will see<b> pinned resources</b> for a community directly within Teams on iOS.</li> <li>Users will see <b>related communities</b> surfaced within the community experience.</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/8aca528a-aaf3-414f-9c52-19fa98f32dcb\" style=\"width: 400px;\" alt=\"user settings\"></p> <li>The experience will match what is already available in the Viva Engage mobile app, Viva Engage on the web, and Teams for Android.</li> <li>The feature is <b>enabled by default</b>.</li> <li>There are no changes to existing admin policies or configurations.</li> </ul> <p><b>[What you can do to prepare:]</b></p> <p>No admin action is required.</p> <ul> <li>Communicate this update to end users who use Teams on iOS.</li> <li>Encourage Viva Engage <b>community admins</b> to review pinned resources and related communities.</li> <li>Update internal documentation or helpdesk guidance, if applicable.</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> 2026-04-02T21:02:36.207Z Updated message (Updated) Viva Engage: Pinned resources and related communities in Teams for iOS 2026-04-30T21:29:42.690Z",
-        "source": "m365",
-        "m365Service": "Microsoft Viva",
-        "m365AllServices": [
-          "Microsoft Viva"
-        ],
-        "m365Id": "MC1268933",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "May 2026, June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Updated message",
-          "Feature update",
-          "User impact",
-          "Admin impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1268933"
-      },
-      {
         "title": "(Updated) Microsoft 365 Copilot transition to the cloud.microsoft domain",
         "link": "https://deltapulse.app/item/MC1286300",
         "published": "2026-04-20T21:32:04.000Z",
@@ -11012,41 +10747,6 @@
         "m365RetirementDatePrecision": null,
         "lifecycle": "launched_ga",
         "_normalized_url": "message_center:MC1254553"
-      },
-      {
-        "title": "(Updated) Clearer RSVP selection in Outlook Mobile",
-        "link": "https://deltapulse.app/item/MC1269211",
-        "published": "2026-04-03T05:13:19.000Z",
-        "summary": "Outlook Mobile will visually highlight users' RSVP responses (Yes, Maybe, No) to meeting invites, improving clarity. This rollout begins early June 2026 and completes by end of June 2026, affecting all iOS and Android users worldwide, GCC, and GCC High tenants. No admin action needed; feature enabled by default. <p>Updated April 29, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b>[Introduction]</b></p> <p>We’re improving the RSVP experience in Outlook Mobile by visually highlighting the response a user has selected (Yes, Maybe, or No). This makes it easier for users to quickly see how they’ve responded to a meeting invitation.</p><p><b>[When this will happen:]</b></p> <ul> </ul><p>General Availability (Worldwide, GCC, GCC High): Rollout begins in<b> early June 2026</b> (previously&nbsp;late April)<b>&nbsp;</b>and is expected to complete by <b>end of June 2026</b> (previously&nbsp;early June)<b>.</b><b><br></b></p><p><b>[How this affects your organization:]</b><b><br></b></p><p><b>Who is affected:</b></p> <ul> <li>All users who access <b>Outlook Mobile</b> on iOS or Android</li> <li>Applies to Worldwide, GCC, and GCC High tenants</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The selected RSVP option (Yes, Maybe, or No) will be visually highlighted</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/000bb42e-36b8-4be3-a07a-e655bb749319\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>Users can quickly confirm how they responded to a meeting invitation and edit as needed</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bc41e3aa-02bc-442d-8564-80a8cd937a51\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>The feature is <b>enabled by default</b></li> <li>No changes to existing meeting workflows or policies</li> <li>No impact to Outlook on the web or Outlook desktop clients</li> </ul> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required; the update will roll out automatically</li> <li>Consider notifying helpdesk staff of the visual change</li> <li>Update internal documentation if needed</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> changed 2026-04-29T20:30:25.707Z title summary lastUpdatedDate tags bodyContent Feature update User impact Clearer RSVP selection in Outlook Mobile Exchange Online Outlook Mobile will visually highlight users' RSVP responses (Yes, Maybe, No) to meeting invitations starting late April 2026, completing by early June 2026. This applies to all iOS and Android users worldwide, GCC, and GCC High tenants. The feature is enabled by default with no admin action needed. <p><b>[Introduction]</b></p> <p>We’re improving the RSVP experience in Outlook Mobile by visually highlighting the response a user has selected (Yes, Maybe, or No). This makes it easier for users to quickly see how they’ve responded to a meeting invitation.</p><p><b>[When this will happen:]</b></p> <ul> </ul><p>General Availability (Worldwide, GCC, GCC High): Rollout begins in <b>late April 2026</b> and is expected to complete by <b>early June 2026.</b><b><br></b></p><p><b>[How this affects your organization:]</b><b><br></b></p><p><b>Who is affected:</b></p> <ul> <li>All users who access <b>Outlook Mobile</b> on iOS or Android</li> <li>Applies to Worldwide, GCC, and GCC High tenants</li> </ul> <p><b>What will happen:</b></p> <ul> <li>The selected RSVP option (Yes, Maybe, or No) will be visually highlighted</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/000bb42e-36b8-4be3-a07a-e655bb749319\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>Users can quickly confirm how they responded to a meeting invitation and edit as needed</li><p><img src=\"https://cxcs.microsoft.net/file/ccp/en-us/bc41e3aa-02bc-442d-8564-80a8cd937a51\" style=\"width: 300px;\" alt=\"user settings\"></p> <li>The feature is <b>enabled by default</b></li> <li>No changes to existing meeting workflows or policies</li> <li>No impact to Outlook on the web or Outlook desktop clients</li> </ul> <p><b>[What you can do to prepare:]</b></p> <ul> <li>No admin action is required; the update will roll out automatically</li> <li>Consider notifying helpdesk staff of the visual change</li> <li>Update internal documentation if needed</li> </ul> <p><b>[Compliance considerations:]</b></p> <p>No compliance considerations identified, review as appropriate for your organization.</p> 2026-04-03T05:13:27.737Z Updated message (Updated) Clearer RSVP selection in Outlook Mobile 2026-04-29T17:10:00.623Z",
-        "source": "m365",
-        "m365Service": "Exchange Online",
-        "m365AllServices": [
-          "Exchange Online"
-        ],
-        "m365Id": "MC1269211",
-        "m365Source": "message_center",
-        "m365Category": "stayInformed",
-        "m365Severity": "normal",
-        "m365Status": null,
-        "m365TargetDate": "June 2026",
-        "m365PreviewDate": null,
-        "m365GeneralAvailabilityDate": null,
-        "m365WasUpdated": true,
-        "m365ScheduleUpdated": false,
-        "m365IsMajorChange": false,
-        "m365Tags": [
-          "Updated message",
-          "Feature update",
-          "User impact"
-        ],
-        "m365RetirementSignal": false,
-        "m365ActByDate": null,
-        "m365RetirementStartDate": null,
-        "m365RetirementEndDate": null,
-        "m365RetirementDate": null,
-        "m365RetirementDatePrecision": null,
-        "lifecycle": "launched_ga",
-        "_normalized_url": "message_center:MC1269211"
       },
       {
         "title": "(Updated) Microsoft Teams: AI meeting recap without transcript to meet compliance policies",
@@ -12314,7 +12014,7 @@
     }
   ],
   "m365RetirementBuckets": {
-    "generatedAt": "2026-05-02T15:14:34.237380+00:00",
+    "generatedAt": "2026-05-03T07:38:07.452553+00:00",
     "referenceMonth": "2026-05",
     "windows": {
       "0_3_months": {
@@ -12496,6 +12196,7 @@
     "thumbnail": "https://i1.ytimg.com/vi/H9zJ5x99q98/hqdefault.jpg"
   },
   "summaryPublishingDays": [
+    "2026-05-02",
     "2026-05-01",
     "2026-04-30",
     "2026-04-29",

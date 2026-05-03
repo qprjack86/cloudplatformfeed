@@ -4,9 +4,45 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sat, 02 May 2026 15:14:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 07:37:48 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Automating Azure Naming Standards using API and DevOps Pipelines]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/automating-azure-naming-standards-using-api-and-devops-pipelines/ba-p/4516628</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/automating-azure-naming-standards-using-api-and-devops-pipelines/ba-p/4516628</guid>
+      <description><![CDATA[Introduction In large Azure environments, one of the most overlooked yet critical governance challenges is resource naming consistency. While organizations define naming standards, enforcing them at scale across multiple subscriptions, teams, and pipelines often becomes a manual and inconsistent...]]></description>
+      <dc:creator><![CDATA[sameenamohammed]]></dc:creator>
+      <pubDate>Sun, 03 May 2026 05:53:03 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Modernizing Terraform Pipelines on Azure: OIDC Federation for GitHub Actions and Azure DevOps]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/modernizing-terraform-pipelines-on-azure-oidc-federation-for/ba-p/4516620</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/modernizing-terraform-pipelines-on-azure-oidc-federation-for/ba-p/4516620</guid>
+      <description><![CDATA[The secret nobody wants to rotate Most Terraform-on-Azure pipelines we see still authenticate the same way they did three years ago. A long-lived ARM_CLIENT_SECRET sitting in GitHub Actions or Azure DevOps, set once, copied around, and rotated only when something breaks. It's the most ignored...]]></description>
+      <dc:creator><![CDATA[ssinghkalra]]></dc:creator>
+      <pubDate>Sat, 02 May 2026 20:34:19 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Automating Azure Naming Standards using API and DevOps Pipelines]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/automating-azure-naming-standards-using-api-and-devops-pipelines/4516628</link>
+      <guid>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/automating-azure-naming-standards-using-api-and-devops-pipelines/4516628</guid>
+      <description><![CDATA[Introduction In large Azure environments, one of the most overlooked yet critical governance challenges is resource naming consistency. While organizations define naming standards, enforcing them...Update Type: Announcement, Services: , Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Sat, 02 May 2026 19:45:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Reimagining Azure Governance with Automation & EPAC]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-azure-governance-with-automation-epac/ba-p/4516626</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-azure-governance-with-automation-epac/ba-p/4516626</guid>
+      <description><![CDATA[🧩 The Challenge: Governance at Scale Managing Azure environments manually introduces: ❌ Policy drift across subscriptions ❌ Inconsistent naming conventions ❌ Delays in compliance enforcement ❌ Human errors in deployments 🔍 Insight: Governance gaps are often not due to lack of policies—but lack of...]]></description>
+      <dc:creator><![CDATA[sameenamohammed]]></dc:creator>
+      <pubDate>Sat, 02 May 2026 19:26:11 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[Update: Egress and data transfer with Azure in the United Kingdom]]></title>
       <link>https://azure.microsoft.com/en-us/updates/561392/</link>
@@ -420,42 +456,6 @@
       <dc:creator><![CDATA[Sudhanshu Khera]]></dc:creator>
       <pubDate>Wed, 29 Apr 2026 18:13:59 GMT</pubDate>
       <category><![CDATA[Azure Cosmos DB Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure DocumentDB (with MongoDB compatibility) for Banking: A Modern Customer 360 Approach]]></title>
-      <link>https://devblogs.microsoft.com/cosmosdb/azure-documentdb-with-mongodb-compatibility-for-banking-a-modern-customer-360-approach/</link>
-      <guid>https://devblogs.microsoft.com/cosmosdb/azure-documentdb-with-mongodb-compatibility-for-banking-a-modern-customer-360-approach/</guid>
-      <description><![CDATA[Introduction: Transforming Customer Intelligence in Banking Every day, people interact with their bank across mobile apps, branches, call centers, ATMs, chatbots, and partner ecosystems. Each touchpoint holds a piece of the customer story but rarely the whole picture. For many institutions, these...]]></description>
-      <dc:creator><![CDATA[Srikanth Sridhar]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 18:10:34 GMT</pubDate>
-      <category><![CDATA[Azure Cosmos DB Blog]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Get started with the New Relic MCP server in Azure SRE Agent]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-the-new-relic-mcp-server-in-azure-sre-agent/ba-p/4515268</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-the-new-relic-mcp-server-in-azure-sre-agent/ba-p/4515268</guid>
-      <description><![CDATA[Overview The New Relic MCP server is a cloud-hosted bridge between your New Relic account and Azure SRE Agent. Once configured, it enables real-time interaction with your observability data—APM traces, distributed traces, logs, metrics, alerts, incidents, dashboards, and entities—through natural...]]></description>
-      <dc:creator><![CDATA[dbandaru]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 17:35:44 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Building an Enterprise-Grade SQL Platform on Kubernetes using Crossplane and Azure PostgreSQL]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-enterprise-grade-sql-platform-on-kubernetes-using/ba-p/4515635</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-enterprise-grade-sql-platform-on-kubernetes-using/ba-p/4515635</guid>
-      <description><![CDATA[Strategic Overview Build a Kubernetes-native SQL platform using Crossplane-based database operator to provision Azure PostgreSQL Flexible Server. Active–Passive, multi-region database architecture using read replicas and manual promotion for failover. Private networking, DNS abstraction, and...]]></description>
-      <dc:creator><![CDATA[prabhattomar]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 16:58:37 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure Monitor Service Level Indicators (SLI)]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-service-level-indicators-sli/ba-p/4507445</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-service-level-indicators-sli/ba-p/4507445</guid>
-      <description><![CDATA[Announcing Public Preview of Azure Monitor SLIs Today, we are excited to introduce Service Level Indicators (SLI) and Service Level Objectives (SLO) in Azure Monitor a step forward in helping teams measure how customers are experiencing their applications. SLI: A quantitative measure of how well an...]]></description>
-      <dc:creator><![CDATA[Sokuma]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 16:16:56 GMT</pubDate>
-      <category><![CDATA[Azure Observability]]></category>
     </item>
   </channel>
 </rss>
