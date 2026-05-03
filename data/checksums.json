@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-05-03T07:37:48.744187+00:00",
+  "generatedAt": "2026-05-03T11:20:07.709629+00:00",
   "artifacts": [
     {
       "path": "data/feeds.json",
       "algorithm": "sha256",
-      "value": "cebdf5d0a95df8886a7f49e19a975e2a1b64d2d08a599d7fdc5358b9983de72c",
-      "generatedAt": "2026-05-03T07:37:48.744187+00:00"
+      "value": "e7f2bed164f706bf96c06777a1d4cdd6ef16c5ae28f9834b9ee5cc9ebc2724d7",
+      "generatedAt": "2026-05-03T11:20:07.709629+00:00"
     },
     {
       "path": "data/feed.xml",
       "algorithm": "sha256",
-      "value": "fe5b59c95dc26a942f5d43f4b0cec5824d180ff2a5db13674e48d9fca8870239",
-      "generatedAt": "2026-05-03T07:37:48.744187+00:00"
+      "value": "c7de2a8c129524151db086b716f38c88c9859440e0b3cb4ca4e3414dcdbb8afb",
+      "generatedAt": "2026-05-03T11:20:07.709629+00:00"
     },
     {
       "path": "data/azure-retirements.ics",
       "algorithm": "sha256",
-      "value": "4cb5adbcbfb1d7b89da8a654a8cd544e5d9589dd6b997da02c361b182d1b41fd",
-      "generatedAt": "2026-05-03T07:37:48.744187+00:00"
+      "value": "70a4a61ff8f2987d81ad02977e517a9ca92bc962b1e0263221c2de05ced08952",
+      "generatedAt": "2026-05-03T11:20:07.709629+00:00"
     }
   ]
 }
