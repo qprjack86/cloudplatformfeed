@@ -4,9 +4,27 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sun, 03 May 2026 11:20:07 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 15:14:15 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Running GitHub Actions Runners on Azure Container Apps with KEDA Autoscaling]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/running-github-actions-runners-on-azure-container-apps-with-keda/ba-p/4512980</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/running-github-actions-runners-on-azure-container-apps-with-keda/ba-p/4512980</guid>
+      <description><![CDATA[GitHub-hosted runners work well for most scenarios. But as workloads grow, teams often need: Better cost optimization — pay only when jobs run More control over execution environments and installed tools Scalable parallel execution — run 10, 20, or 50 jobs simultaneously Network access to private...]]></description>
+      <dc:creator><![CDATA[shubhijain]]></dc:creator>
+      <pubDate>Sun, 03 May 2026 13:47:09 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[How MS Discovery Is Empowering Scientists to Do More]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-ms-discovery-is-empowering-scientists-to-do-more/ba-p/4516670</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-ms-discovery-is-empowering-scientists-to-do-more/ba-p/4516670</guid>
+      <description><![CDATA[Research and development has traditionally been a slow, sequential, and largely manual endeavour. Scientists formulate hypotheses, design experiments, run computations in constrained environments, and document results, each stage dependent on the last, each transition requiring human review and...]]></description>
+      <dc:creator><![CDATA[sameeraman]]></dc:creator>
+      <pubDate>Sun, 03 May 2026 12:05:56 GMT</pubDate>
+      <category><![CDATA[Azure Architecture]]></category>
+    </item>
     <item>
       <title><![CDATA[Automating Azure Naming Standards using API and DevOps Pipelines]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/automating-azure-naming-standards-using-api-and-devops-pipelines/ba-p/4516628</link>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 29 Apr 2026 18:15:05 GMT</pubDate>
       <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft Agent Framework 1.0]]></title>
-      <link>https://azure.microsoft.com/updates?id=560982</link>
-      <guid>https://azure.microsoft.com/updates?id=560982</guid>
-      <description><![CDATA[Microsoft Agent Framework is now version 1.0 for both .NET and Python, with stable APIs and a long-term support commitment. Agent Framework 1.0 supports multi-agent orchestration, multi-provider model support, and cross-runtime interoperability via A2A anUpdate Type: GA, Services: Microsoft...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 18:15:05 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Announcing the Private Preview of Cosmos DB Azure RBAC Integration]]></title>
-      <link>https://devblogs.microsoft.com/cosmosdb/announcing-the-private-preview-of-cosmos-db-azure-rbac-integration/</link>
-      <guid>https://devblogs.microsoft.com/cosmosdb/announcing-the-private-preview-of-cosmos-db-azure-rbac-integration/</guid>
-      <description><![CDATA[Introduction Managing access to Azure resources often means dealing with two separate permission models: one for management operations and another for data access. For Azure Cosmos DB customers, this split can increase complexity, slow down onboarding, and create confusion around governance and...]]></description>
-      <dc:creator><![CDATA[Sudhanshu Khera]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 18:13:59 GMT</pubDate>
-      <category><![CDATA[Azure Cosmos DB Blog]]></category>
     </item>
   </channel>
 </rss>
