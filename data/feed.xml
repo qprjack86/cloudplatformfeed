@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Sun, 03 May 2026 15:14:15 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 07:58:27 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[High Availability Testing for Azure Kubernetes Service in a Single Region with Availability Zones]]></title>
+      <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/high-availability-testing-for-azure-kubernetes-service-in-a/ba-p/4509825</link>
+      <guid>https://techcommunity.microsoft.com/t5/microsoft-developer-community/high-availability-testing-for-azure-kubernetes-service-in-a/ba-p/4509825</guid>
+      <description><![CDATA[During migration testing engagements for enterprise workloads moving to Azure Kubernetes Service (AKS), we frequently validate high availability behavior under simulated infrastructure failures within a single Azure region using Availability Zones. In one such workload migration scenario involving...]]></description>
+      <dc:creator><![CDATA[jiteshhp]]></dc:creator>
+      <pubDate>Mon, 04 May 2026 07:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Dev Community]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Announcing the public preview of Oracle Database built-in connector for Azure Logic Apps Standard]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-public-preview-of-oracle-database-built-in/ba-p/4516714</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-public-preview-of-oracle-database-built-in/ba-p/4516714</guid>
+      <description><![CDATA[Announcing the public preview of Oracle Database built-in connector for Azure Logic Apps Standard Run Oracle Database operations natively in your Logic Apps Standard workflows. Today we’re excited to announce the public preview of Oracle Database built-in connector for Azure Logic Apps (Standard)....]]></description>
+      <dc:creator><![CDATA[Shree_Divya_M_V]]></dc:creator>
+      <pubDate>Mon, 04 May 2026 05:45:01 GMT</pubDate>
+      <category><![CDATA[Integrations on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Removing The Monkey Work of Migration]]></title>
+      <link>https://devblogs.microsoft.com/all-things-azure/removing-the-monkey-work-of-migration-using-agentic-platform-engineering/</link>
+      <guid>https://devblogs.microsoft.com/all-things-azure/removing-the-monkey-work-of-migration-using-agentic-platform-engineering/</guid>
+      <description><![CDATA[Removing The Monkey Work of Migration; in this post we show how Git-Ape analyses an AWS deployment repo and generates an Azure-native replacement, with design critique built in. This post walks through a real migration workflow: start with an AWS deployment repo and end with an Azure deployment...]]></description>
+      <dc:creator><![CDATA[davidwright, Arnaud Lheureux, Suzanne Daniels]]></dc:creator>
+      <pubDate>Sun, 03 May 2026 22:49:02 GMT</pubDate>
+      <category><![CDATA[All Things Azure]]></category>
+    </item>
     <item>
       <title><![CDATA[Running GitHub Actions Runners on Azure Container Apps with KEDA Autoscaling]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/running-github-actions-runners-on-azure-container-apps-with-keda/ba-p/4512980</link>
@@ -429,33 +456,6 @@
       <dc:creator><![CDATA[Microsoft]]></dc:creator>
       <pubDate>Wed, 29 Apr 2026 21:00:48 GMT</pubDate>
       <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Use Data Wrangler to Streamline Your Microsoft Sentinel data lake Notebook Development]]></title>
-      <link>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/use-data-wrangler-to-streamline-your-microsoft-sentinel-data/ba-p/4490214</link>
-      <guid>https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/use-data-wrangler-to-streamline-your-microsoft-sentinel-data/ba-p/4490214</guid>
-      <description><![CDATA[One of the many exciting features of the Microsoft Sentinel data lake is a built-in advanced analytics engine, powered by Apache Spark. This Spark cluster has access to data that is within Sentinel data lake, and can work with this data through Jupyter notebooks in Visual Studio Code. As with any...]]></description>
-      <dc:creator><![CDATA[David Hoerster]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 19:18:17 GMT</pubDate>
-      <category><![CDATA[Microsoft Sentinel]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Operating AI Agents on Azure: Observability with Azure AI Foundry]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operating-ai-agents-on-azure-observability-with-azure-ai-foundry/ba-p/4515975</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operating-ai-agents-on-azure-observability-with-azure-ai-foundry/ba-p/4515975</guid>
-      <description><![CDATA[Azure AI Foundry is Microsoft’s enterprise platform for building, deploying, and operating AI applications and intelligent agents as first‑class Azure workloads. From an infrastructure perspective, Foundry acts as a control plane that brings together model hosting, agent execution, tooling,...]]></description>
-      <dc:creator><![CDATA[skundapura]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 19:15:11 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Microsoft Agent Framework 1.0]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/560982/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/560982/</guid>
-      <description><![CDATA[Microsoft Agent Framework is now version 1.0 for both .NET and Python, with stable APIs and a long-term support commitment. Agent Framework 1.0 supports multi-agent orchestration, multi-provider model support, and cross-runtime interoperability via A2A and MCP.]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 18:15:05 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
     </item>
   </channel>
 </rss>
