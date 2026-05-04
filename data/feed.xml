@@ -4,9 +4,36 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 04 May 2026 11:40:16 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 15:36:46 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[Logic Apps Newsletter - May 2026]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-newsletter-may-2026/ba-p/4516698</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-newsletter-may-2026/ba-p/4516698</guid>
+      <description><![CDATA[In this issue: Ace Aviator of the Month News from our product group News from our community Ace Aviator of the Month May 2026's Ace Aviator: Yahya Ajwad Yahya Ajwad - Chief Architect Cloud Integration @ Epical What's your role and title? What are your responsibilities? I work as Chief Architect and...]]></description>
+      <dc:creator><![CDATA[WSilveira]]></dc:creator>
+      <pubDate>Mon, 04 May 2026 15:00:00 GMT</pubDate>
+      <category><![CDATA[Integrations on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Performance Tuning and Scaling Optimization for Large-Scale Azure Workloads]]></title>
+      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/performance-tuning-and-scaling-optimization-for-large-scale/ba-p/4516788</link>
+      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/performance-tuning-and-scaling-optimization-for-large-scale/ba-p/4516788</guid>
+      <description><![CDATA[Summary As cloud-native systems scale, performance challenges rarely stem from a single bottleneck. Instead, they emerge from the interaction between compute, orchestration, and data layers under load. This article captures a practical optimization journey of a high-volume Azure-based workload and...]]></description>
+      <dc:creator><![CDATA[ruchitapradhan]]></dc:creator>
+      <pubDate>Mon, 04 May 2026 13:41:07 GMT</pubDate>
+      <category><![CDATA[Apps on Azure]]></category>
+    </item>
+    <item>
+      <title><![CDATA[Running GitHub Actions Runners on Azure Container Apps with KEDA Autoscaling]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/running-github-actions-runners-on-azure-container-apps-with-keda/ba-p/4512980</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/running-github-actions-runners-on-azure-container-apps-with-keda/ba-p/4512980</guid>
+      <description><![CDATA[GitHub-hosted runners work well for most scenarios. But as workloads grow, teams often need: Better cost optimization — pay only when jobs run More control over execution environments and installed tools Scalable parallel execution — run 10, 20, or 50 jobs simultaneously Network access to private...]]></description>
+      <dc:creator><![CDATA[shubhijain]]></dc:creator>
+      <pubDate>Mon, 04 May 2026 13:03:30 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[From Drift to Self-Healing: Building a Multi-Repo Azure AI Infrastructure You Can Actually Trust]]></title>
       <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-drift-to-self-healing-building-a-multi-repo-azure-ai/ba-p/4515315</link>
@@ -45,12 +72,12 @@
     </item>
     <item>
       <title><![CDATA[Running GitHub Actions Runners on Azure Container Apps with KEDA Autoscaling]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/running-github-actions-runners-on-azure-container-apps-with-keda/ba-p/4512980</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/running-github-actions-runners-on-azure-container-apps-with-keda/ba-p/4512980</guid>
-      <description><![CDATA[GitHub-hosted runners work well for most scenarios. But as workloads grow, teams often need: Better cost optimization — pay only when jobs run More control over execution environments and installed tools Scalable parallel execution — run 10, 20, or 50 jobs simultaneously Network access to private...]]></description>
-      <dc:creator><![CDATA[shubhijain]]></dc:creator>
-      <pubDate>Sun, 03 May 2026 13:47:09 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
+      <link>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/running-github-actions-runners-on-azure-container-apps-with-keda-autoscaling/4512980</link>
+      <guid>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/running-github-actions-runners-on-azure-container-apps-with-keda-autoscaling/4512980</guid>
+      <description><![CDATA[GitHub-hosted runners work well for most scenarios. But as workloads grow, teams often need: Better cost optimization — pay only when jobs run More control over execution environments and insta...Update Type: Announcement, Services: Container Apps, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Sun, 03 May 2026 13:47:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[How MS Discovery Is Empowering Scientists to Do More]]></title>
@@ -429,33 +456,6 @@
       <dc:creator><![CDATA[PrabalDeb]]></dc:creator>
       <pubDate>Thu, 30 Apr 2026 04:38:08 GMT</pubDate>
       <category><![CDATA[Azure Architecture]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Azure SRE Agent for Azure Monitor Alerts: Reduce Alert Fatigue, Investigate What Matters]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-for-azure-monitor-alerts-reduce-alert-fatigue/ba-p/4513458</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-for-azure-monitor-alerts-reduce-alert-fatigue/ba-p/4513458</guid>
-      <description><![CDATA[The Alert Problem Organizations running Azure Monitor tend to land in one of two situations: Alert fatigue has set in. Alert rules tend to grow over time — a CPU threshold from two years ago, a health probe check from a migration, a disk alert from an outage that never got cleaned up. These rules...]]></description>
-      <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
-      <pubDate>Thu, 30 Apr 2026 01:28:49 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Enforcing trust and transparency: Open-sourcing the Azure Integrated HSM]]></title>
-      <link>https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm</link>
-      <guid>https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm</guid>
-      <description><![CDATA[Enforcing trust and transparency: Open-sourcing the Azure Integrated HSM As cloud workloads become more agentic and AI systems handle increasingly sensitive data, trust must be engineered directly into infrastructure. Azure Integrated HSM brings hardware‑enforced key protection into Azure,...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Plugin Marketplace for Azure SRE Agent: Build Once, Install Anywhere]]></title>
-      <link>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/plugin-marketplace-for-azure-sre-agent-build-once-install/ba-p/4513501</link>
-      <guid>https://techcommunity.microsoft.com/t5/apps-on-azure-blog/plugin-marketplace-for-azure-sre-agent-build-once-install/ba-p/4513501</guid>
-      <description><![CDATA[What's a Plugin? A plugin bundles two things: Skills — Operational knowledge (triage runbooks, policy rules, known issues) the agent reads at runtime to guide its reasoning MCP Connectors — Live integrations to your internal APIs (deployment tracker, cost dashboard, CMDB) the agent can query during...]]></description>
-      <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 22:25:23 GMT</pubDate>
-      <category><![CDATA[Apps on Azure]]></category>
     </item>
   </channel>
 </rss>
