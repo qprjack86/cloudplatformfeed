@@ -4,9 +4,18 @@
     <title>Microsoft Cloud Platform Feed</title>
     <link>https://cpfeed.cloud</link>
     <description>Aggregated daily updates from Azure and Microsoft 365 blogs</description>
-    <lastBuildDate>Mon, 04 May 2026 07:58:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 11:40:16 GMT</lastBuildDate>
     <generator>Microsoft Cloud Platform Feed</generator>
     <language>en</language>
+    <item>
+      <title><![CDATA[From Drift to Self-Healing: Building a Multi-Repo Azure AI Infrastructure You Can Actually Trust]]></title>
+      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-drift-to-self-healing-building-a-multi-repo-azure-ai/ba-p/4515315</link>
+      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-drift-to-self-healing-building-a-multi-repo-azure-ai/ba-p/4515315</guid>
+      <description><![CDATA[A question before we begin Quick — what version of infrastructure is running in your production subscription right now? Not what your pipeline last deployed. Not what your tracking spreadsheet says. What's actually running — right now, this second — and can you prove it? If you had to think about...]]></description>
+      <dc:creator><![CDATA[Valini_Sunthwal]]></dc:creator>
+      <pubDate>Mon, 04 May 2026 09:58:14 GMT</pubDate>
+      <category><![CDATA[Azure Infrastructure]]></category>
+    </item>
     <item>
       <title><![CDATA[High Availability Testing for Azure Kubernetes Service in a Single Region with Availability Zones]]></title>
       <link>https://techcommunity.microsoft.com/t5/microsoft-developer-community/high-availability-testing-for-azure-kubernetes-service-in-a/ba-p/4509825</link>
@@ -396,12 +405,21 @@
     </item>
     <item>
       <title><![CDATA[From ServiceNow to Self-Healing Infrastructure: A Multi-Repo Azure AI Platform]]></title>
-      <link>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-servicenow-to-self-healing-infrastructure-a-multi-repo/ba-p/4515315</link>
-      <guid>https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-servicenow-to-self-healing-infrastructure-a-multi-repo/ba-p/4515315</guid>
-      <description><![CDATA[A question before we begin Quick — what version of infrastructure is running in your production subscription right now? Not what your pipeline last deployed. Not what your tracking spreadsheet says. What's actually running — right now, this second — and can you prove it? If you had to think about...]]></description>
-      <dc:creator><![CDATA[Valini_Sunthwal]]></dc:creator>
-      <pubDate>Thu, 30 Apr 2026 06:00:06 GMT</pubDate>
-      <category><![CDATA[Azure Infrastructure]]></category>
+      <link>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/from-servicenow-to-self-healing-infrastructure-a-multi-repo-azure-ai-platform/4515315</link>
+      <guid>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/from-servicenow-to-self-healing-infrastructure-a-multi-repo-azure-ai-platform/4515315</guid>
+      <description><![CDATA[How we built a self-verifying Azure platform that deploys infrastructure across multiple markets, tracks every change with three independent records, and catches drift, whether it comes from a failed...Update Type: Announcement, Services: Azure AI Services, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 06:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
+    </item>
+    <item>
+      <title><![CDATA[From Drift to Self-Healing: Building a Multi-Repo Azure AI Infrastructure You Can Actually Trust]]></title>
+      <link>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/from-drift-to-self-healing-building-a-multi-repo-azure-ai-infrastructure-you-can/4515315</link>
+      <guid>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/from-drift-to-self-healing-building-a-multi-repo-azure-ai-infrastructure-you-can/4515315</guid>
+      <description><![CDATA[How we built a self-verifying Azure platform that deploys infrastructure across multiple markets, tracks every change with three independent records, and catches drift, whether it comes from a failed...Update Type: Announcement, Services: Azure AI Services, Categories:]]></description>
+      <dc:creator><![CDATA[Microsoft]]></dc:creator>
+      <pubDate>Thu, 30 Apr 2026 06:00:00 GMT</pubDate>
+      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
     <item>
       <title><![CDATA[Running Diffusion Models at Scale on AKS]]></title>
@@ -438,24 +456,6 @@
       <dc:creator><![CDATA[Vineela-Suri]]></dc:creator>
       <pubDate>Wed, 29 Apr 2026 22:25:23 GMT</pubDate>
       <category><![CDATA[Apps on Azure]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Generally Available: Microsoft Azure Red Hat OpenShift is now available in Austria East]]></title>
-      <link>https://azure.microsoft.com/en-us/updates/561135/</link>
-      <guid>https://azure.microsoft.com/en-us/updates/561135/</guid>
-      <description><![CDATA[The Austria East region is now generally available to Azure Red Hat OpenShift customers and partners. The region includes three availability zones, supporting resilient and scalable operations. Why it matters: In-country data residency: Data stored in Austria East remains within Austria, helping...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 21:00:48 GMT</pubDate>
-      <category><![CDATA[Azure Updates]]></category>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft Azure Red Hat OpenShift is now available in Austria East]]></title>
-      <link>https://azure.microsoft.com/updates?id=561135</link>
-      <guid>https://azure.microsoft.com/updates?id=561135</guid>
-      <description><![CDATA[The Austria East region is now generally available to Azure Red Hat OpenShift customers and partners. The region includes three availability zones, supporting resilient and scalable operations. Why it matters: In-country data residency: Data stored inUpdate Type: GA, Services: Azure Red Hat...]]></description>
-      <dc:creator><![CDATA[Microsoft]]></dc:creator>
-      <pubDate>Wed, 29 Apr 2026 21:00:48 GMT</pubDate>
-      <category><![CDATA[Azure Updates (aztty)]]></category>
     </item>
   </channel>
 </rss>
